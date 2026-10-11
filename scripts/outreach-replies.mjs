@@ -78,6 +78,8 @@ for (const [repo, m] of Object.entries(metrics)) {
 }
 
 // 3) delta vs previous snapshot -> digest issue (emails the maintainer only on activity)
+const outDir = path.join(root, 'trust-data', 'metrics');
+fs.mkdirSync(outDir, { recursive: true });
 const prevReplied = (p, repo) => !!(p[repo] && p[repo].replied);
 const snapPath = path.join(outDir, 'replies.json');
 let prev = {};
