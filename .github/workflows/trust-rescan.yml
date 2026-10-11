@@ -1,0 +1,30 @@
+name: Weekly Trust Directory rescan
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rescan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Scan registry
+        run: node scripts/trust-scan-all.mjs
+      - name: Generate directory
+        run: |
+          node scripts/trust-convert.mjs
+          node scripts/trust-gen.mjs
+          node scripts/gen-sitemap.mjs
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs trust-data
+          git diff --cached --quiet || git commit -m "trust: weekly rescan $(date -u +%F) [skip ci]"
+          git push

@@ -1,8 +1,11 @@
-// Generate static Trust Directory pages + JSON API + badges from scan.json.
+// Generate static Trust Directory pages + JSON API + badges from trust-data/scan.json.
+// Path-agnostic: run from anywhere (repo root resolved relative to this file).
 import fs from 'node:fs';
 import path from 'node:path';
+import url from 'node:url';
 
-const root = 'C:\\Users\\eqzyz\\agenttoll-master\\mcpdoctor';
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const root = path.resolve(__dirname, '..');
 const dataDir = path.join(root, 'trust-data');
 const outDir = path.join(root, 'docs', 'trust');
 const scan = JSON.parse(fs.readFileSync(path.join(dataDir, 'scan.json'), 'utf8'));
@@ -10,6 +13,7 @@ const results = scan.results;
 
 const BASE = '/mcp-doctor/trust';
 const SITE = 'https://xka0085-byte.github.io';
+const PAGE_SIZE = 500;
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 function slugify(name) {
@@ -24,16 +28,17 @@ for (const r of results) {
   used.set(s, true); r.slug = s;
 }
 
-const CSS = `:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}code{background:transparent}}`;
+const CSS = `:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}code{background:transparent}}`;
 
-const page = (title, desc, body) => `<!DOCTYPE html>
+// page(): per-page canonical (fixes duplicate-content SEO bug)
+const page = (title, desc, body, canonicalPath = `${BASE}/`) => `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<link rel="canonical" href="${SITE}${BASE}/">
+<link rel="canonical" href="${SITE}${canonicalPath}">
 <style>${CSS}</style>
 </head>
 <body>
@@ -52,23 +57,41 @@ fs.mkdirSync(path.join(outDir, 'badge'), { recursive: true });
 const tally = results.reduce((m, r) => ((m[r.finalStatus] = (m[r.finalStatus] ?? 0) + 1), m), {});
 const total = results.length;
 
-// ---- index page ----
-const rows = results.map((r) => `<tr><td><a href="${BASE}/p/${r.slug}.html">${esc(r.title)}</a><br><span class="muted" style="font-size:.8rem">${esc(r.name)}</span></td><td><span class="pill ${r.finalStatus}">${r.finalStatus}</span></td><td>${esc(r.protocolVersion ?? '—')}</td><td>${r.toolCount ?? '—'}</td></tr>`).join('\n');
-const indexHtml = page(
-  'MCP Server Trust Directory — read-only schema reports for official registry servers',
-  `Independent read-only trust reports for ${total} remote MCP servers listed in the official MCP Registry. Protocol version, tool schema validity, and deterministic checks. No tool calls, no payments.`,
-  `<p><span class="muted">MCP Server Trust Directory</span></p>
-<h1>Trust reports for official MCP Registry servers</h1>
+// ---- paginated index ----
+const pager = (i, pages) => {
+  const links = [];
+  for (let k = 0; k < pages; k++) {
+    const href = k === 0 ? 'index.html' : `index-${k + 1}.html`;
+    links.push(k === i ? `<b>${k + 1}</b>` : `<a href="${href}">${k + 1}</a>`);
+  }
+  return `<nav class="pager">Pages: ${links.join(' · ')}</nav>`;
+};
+const chunks = [];
+for (let i = 0; i < results.length; i += PAGE_SIZE) chunks.push(results.slice(i, i + PAGE_SIZE));
+
+chunks.forEach((chunk, i) => {
+  const rows = chunk.map((r) => `<tr><td><a href="${BASE}/p/${r.slug}.html">${esc(r.title)}</a><br><span class="muted" style="font-size:.8rem">${esc(r.name)}</span></td><td><span class="pill ${r.finalStatus}">${r.finalStatus}</span></td><td>${esc(r.protocolVersion ?? '—')}</td><td>${r.toolCount ?? '—'}</td></tr>`).join('\n');
+  const nav = chunks.length > 1 ? pager(i, chunks.length) : '';
+  const body = `<h1>Trust reports for official MCP Registry servers</h1>
 <p class="muted">${total} remote servers scanned · read-only · reproducible with one CLI command · no tool calls, no payments</p>
 <p><span class="pill PASS">PASS ${tally.PASS ?? 0}</span> <span class="pill FAIL">FAIL ${tally.FAIL ?? 0}</span> <span class="pill UNKNOWN">UNKNOWN ${tally.UNKNOWN ?? 0}</span></p>
 <p>Every report below was produced by <a href="${SITE}/mcp-doctor/">mcpdoctor</a> sending only MCP <code>initialize</code> and <code>tools/list</code> to the server's official registry endpoint, then checking protocol version and JSON Schema consistency deterministically. Reproduce any report yourself:</p>
 <pre>npx @eidonze/mcpdoctor schema &lt;endpoint-url&gt;</pre>
-<h2>Directory</h2>
+${i === 0 ? '<h2>Directory</h2>' : `<h2>Directory (page ${i + 1})</h2>`}
+${nav}
 <table>
 <tr><th>Server</th><th>Status</th><th>Protocol</th><th>Tools</th></tr>
 ${rows}
-</table>`);
-fs.writeFileSync(path.join(outDir, 'index.html'), indexHtml);
+</table>
+${nav}`;
+  const fname = i === 0 ? 'index.html' : `index-${i + 1}.html`;
+  fs.writeFileSync(path.join(outDir, fname), page(
+    'MCP Server Trust Directory — read-only schema reports for official registry servers',
+    `Independent read-only trust reports for ${total} remote MCP servers listed in the official MCP Registry. Protocol version, tool schema validity, and deterministic checks. No tool calls, no payments.`,
+    body,
+    `${BASE}/${fname}`
+  ));
+});
 
 // ---- report pages + api + badges ----
 for (const r of results) {
@@ -104,10 +127,12 @@ for (const r of results) {
 <ul class="findings">${findings}</ul>
 <h2>Reproduce this report</h2>
 <pre>npx @eidonze/mcpdoctor schema ${esc(r.url)}</pre>
-<p>Embed status: <code>&lt;img src="${SITE}${BASE}/badge/${r.slug}.svg"&gt;</code> · Machine-readable: <a href="${SITE}${BASE}/api/${r.slug}.json"><code>/api/${r.slug}.json</code></a></p>`);
+<p>Embed status: <code>&lt;img src="${SITE}${BASE}/badge/${r.slug}.svg"&gt;</code> · Machine-readable: <a href="${SITE}${BASE}/api/${r.slug}.json"><code>/api/${r.slug}.json</code></a></p>`,
+    `${BASE}/p/${r.slug}.html`);
   fs.writeFileSync(path.join(outDir, 'p', `${r.slug}.html`), html);
 }
 
-// ---- summary for logs ----
-console.log(`generated: ${1 + results.length} pages, ${results.length} api, ${results.length} badges`);
+// ---- summary ----
+fs.writeFileSync(path.join(root, 'trust-data', 'tally.json'), JSON.stringify(tally));
+console.log(`generated: ${chunks.length} index pages + ${results.length} reports, ${results.length} api, ${results.length} badges`);
 console.log(JSON.stringify(tally));
