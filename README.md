@@ -20,13 +20,13 @@ Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before 
 Check an MCP server without calling any tools:
 
 ```bash
-npx @eidonze/mcpdoctor@0.1.5 schema https://your-mcp-server.example/mcp --json
+npx @eidonze/mcpdoctor@0.1.6 schema https://your-mcp-server.example/mcp --json
 ```
 
 Check an x402 endpoint without paying:
 
 ```bash
-npx @eidonze/mcpdoctor@0.1.5 inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpdoctor@0.1.6 inspect https://your-api.example/paid --method=POST --json
 ```
 
 Requires Node.js 18+. No API key or wallet is needed.
@@ -56,6 +56,18 @@ The exact same run against a healthy server prints `Status: PASS` and exits 0, s
 | `inspect` | HTTP 402, x402 v1/v2 payment document, `accepts[]`, discovery manifests, latency and response digest | Does not sign, pay, settle, retry, or verify delivery |
 
 Exit codes are stable for automation: `0` PASS, `1` FAIL, `2` UNKNOWN/network error, `3` usage error.
+
+## What it does NOT check
+
+mcpdoctor is a protocol- and schema-level preflight, not a security audit. It does not:
+
+- Detect malicious code, prompt injection, or supply-chain risk in the server's implementation
+- Call tools, so it cannot prove runtime behavior, data handling, or permission scope
+- Bypass, test, or evaluate authentication and authorization
+- Verify payment settlement or delivery for x402 endpoints
+- Certify compliance with any spec beyond the response shapes it inspects
+
+A `PASS` means the observed handshake and schemas were well-formed at scan time. Nothing more.
 
 ## GitHub Actions
 
