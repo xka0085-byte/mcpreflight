@@ -96,7 +96,29 @@ for (const [repo, v] of Object.entries(snapshot)) {
 fs.writeFileSync(snapPath, JSON.stringify({ generatedAt: new Date().toISOString(), snapshot }, null, 1));
 fs.writeFileSync(metricsPath, JSON.stringify(metrics, null, 1));
 
-if (delta.length) {
+// 4) PR watch: template-integration PRs + x402 docs PR -> same digest
+const PR_WATCH = [
+  ['iceener/streamable-mcp-server-template', 4],
+  ['do-community/do-remote-mcp-server-template', 3],
+  ['achetronic/mcp-forge', 2],
+  ['x402-foundation/x402', 3766],
+];
+const prStatePath = path.join(outDir, 'pr-states.json');
+let prPrev = {};
+try { prPrev = JSON.parse(fs.readFileSync(prStatePath, 'utf8')); } catch { /* first run */ }
+const prNow = {}; const prLines = [];
+for (const [repo, n] of PR_WATCH) {
+  const p = await gh(['api', `repos/${repo}/issues/${n}`, '-q', '{s:.state,c:.comments,u:.updated_at}']);
+  if (!p) continue;
+  prNow[`${repo}#${n}`] = p;
+  const prev = prPrev[`${repo}#${n}`] ?? {};
+  if (!prev.u || prev.u !== p.u || prev.s !== p.s) {
+    prLines.push(`- [${repo}#${n}](https://github.com/${repo}/pull/${n}) state=${p.s} comments=${p.c} updated=${p.u}`);
+  }
+}
+fs.writeFileSync(prStatePath, JSON.stringify(prNow, null, 1));
+
+if (delta.length || prLines.length) {
   const replied = delta.filter((d) => d.replied).length;
   const closed = delta.filter((d) => d.state === 'closed' && d.prevState !== 'closed').length;
   const lines = delta.map((d) => {
@@ -106,8 +128,8 @@ if (delta.length) {
     else if (d.lastAt && d.lastAt !== (prev[d.repo]?.lastAt ?? '')) parts.push(`activity at ${d.lastAt} (last by ${d.lastAuthor})`);
     return parts.join(' | ');
   });
-  const title = `outreach digest ${new Date().toISOString().slice(0, 10)}: ${replied} new replies, ${closed} newly closed`;
-  const body = `${delta.length} tracked issue(s) changed since the last snapshot:\n\n${lines.join('\n')}\n\n_snapshot: trust-data/metrics/replies.json_`;
+  const title = `outreach digest ${new Date().toISOString().slice(0, 10)}: ${replied} new replies, ${closed} newly closed, ${prLines.length} PR updates`;
+  const body = `${delta.length} tracked issue(s) changed since the last snapshot:\n\n${lines.join('\n')}\n\nPR watch:\n${prLines.join('\n') || '(no changes)'}\n\n_snapshot: trust-data/metrics/replies.json_`;
   const bp = path.join(root, 'trust-data', '.digest.md');
   fs.writeFileSync(bp, body);
   const r = await gh(['issue', 'create', '-R', 'xka0085-byte/mcp-doctor', '-t', title, '--body-file', bp]);

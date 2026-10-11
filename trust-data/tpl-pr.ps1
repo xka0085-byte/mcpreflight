@@ -2,8 +2,7 @@
 # Usage: powershell -File tpl-pr.ps1
 $ErrorActionPreference = 'Stop'
 $targets = @(
-  @{ repo = 'iceener/streamable-mcp-server-template' },
-  @{ repo = 'do-community/do-remote-mcp-server-template' }
+  @{ repo = 'achetronic/mcp-forge' }
 )
 
 $workflow = @'
