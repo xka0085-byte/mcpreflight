@@ -20,9 +20,10 @@ function slugify(name) {
   const base = name.toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '');
   return base || 'server';
 }
-// dedupe slugs
+// dedupe slugs — reuse slugs persisted in scan.json; compute only if missing
 const used = new Map();
 for (const r of results) {
+  if (r.slug && !used.has(r.slug)) { used.set(r.slug, true); continue; }
   let s = slugify(r.name);
   if (used.has(s)) { let i = 2; while (used.has(`${s}-${i}`)) i++; s = `${s}-${i}`; }
   used.set(s, true); r.slug = s;

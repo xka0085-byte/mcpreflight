@@ -12,6 +12,19 @@ for (const line of lines) {
   try { const r = JSON.parse(line); byName.set(r.name, r); } catch {}
 }
 const results = [...byName.values()];
+
+// Persist slugs into scan.json (single source of truth for gen + sitemap).
+function slugify(name) {
+  const base = String(name ?? '').toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '');
+  return base || 'server';
+}
+const used = new Map();
+for (const r of results) {
+  let s = slugify(r.name);
+  if (used.has(s)) { let i = 2; while (used.has(`${s}-${i}`)) i++; s = `${s}-${i}`; }
+  used.set(s, true); r.slug = s;
+}
+
 let latest = '';
 for (const r of results) if (r.checkedAt && r.checkedAt > latest) latest = r.checkedAt;
 fs.writeFileSync(path.join(dataDir, 'scan.json'), JSON.stringify({ scannedAt: latest || new Date().toISOString(), results }, null, 1));
