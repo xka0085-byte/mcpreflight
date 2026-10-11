@@ -29,7 +29,7 @@ for (const [repo, status] of Object.entries(blind)) {
   const key = repo.toLowerCase();
   if (!metrics[key]) metrics[key] = { group: 'BLIND', issueUrl: '', filedAt: '' };
   if (metrics[key].issueUrl) continue;
-  const s = await gh(['api', 'search/issues', '-f', `q=repo:${repo} author:${ME} type:issue in:title "read-only MCP health check"`, '-f', 'per_page=1']);
+  const s = await gh(['api', `search/issues?q=repo:${repo}+author:${ME}+type:issue+handshake+in:title`]);
   if (s.err) { console.log(`SEARCH-ERR ${repo} :: ${String(s.err.message).slice(0, 120)}`); continue; }
   try {
     const items = JSON.parse(s.stdout).items ?? [];
