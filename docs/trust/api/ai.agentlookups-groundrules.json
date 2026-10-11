@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:24.558Z",
+  "server": {
+    "registryName": "ai.agentlookups/groundrules",
+    "title": "GroundRules - US Law Text",
+    "description": "The original text of US federal and state law, with official sources; never a summary or advice.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://law.agentlookups.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "GroundRules",
+      "version": "0.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lon has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://law.agentlookups.ai/mcp"
+}

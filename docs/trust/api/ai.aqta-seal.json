@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:31.936Z",
+  "server": {
+    "registryName": "ai.aqta/seal",
+    "title": "ai.aqta/seal",
+    "description": "Verify Seal AI decision receipts: signed evidence anyone can check, no account needed.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.aqta.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "seal",
+      "title": "Seal records",
+      "version": "1.1.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].receipt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].attestation_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.aqta.ai/api/mcp"
+}

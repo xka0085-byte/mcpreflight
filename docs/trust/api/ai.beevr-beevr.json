@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:38.550Z",
+  "server": {
+    "registryName": "ai.beevr/beevr",
+    "title": "BeevR",
+    "description": "Read-only access to BeevR's services, fixed-price MVP packages, case studies and articles (EN/VI).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://beevr.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "beevr",
+      "title": "BeevR",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://beevr.ai/mcp"
+}

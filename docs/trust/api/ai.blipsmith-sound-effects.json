@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:38.774Z",
+  "server": {
+    "registryName": "ai.blipsmith/sound-effects",
+    "title": "Blipsmith Sound Effects",
+    "description": "Game sound effects from a text prompt: game-ready WAVs with seamless loops and variations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://blipsmith.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "blipsmith",
+      "title": "Blipsmith Sound Effects",
+      "version": "1.0.0",
+      "websiteUrl": "https://blipsmith.ai"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].count has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].sound_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://blipsmith.ai/api/mcp"
+}

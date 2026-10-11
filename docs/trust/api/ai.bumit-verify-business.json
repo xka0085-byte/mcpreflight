@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:43.513Z",
+  "server": {
+    "registryName": "ai.bumit/verify-business",
+    "title": "BUMIT",
+    "description": "Swiss business verification with per-check source provenance and evidence freshness.",
+    "registryVersion": "1.0.0-phase13.2"
+  },
+  "endpoint": "https://bumit.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bumit",
+      "title": "BUMIT",
+      "version": "1.0.0-phase13.2"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].address has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bumit.ai/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:32.143Z",
+  "server": {
+    "registryName": "ai.askmiles/catalog",
+    "title": "ai.askmiles/catalog",
+    "description": "Miles' public credit-card catalog: facts, transfer partners, valuations. Keyless, read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.askmiles.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "askmiles-catalog",
+      "title": "Miles Catalog",
+      "version": "1.0.0",
+      "websiteUrl": "https://askmiles.ai",
+      "icons": [
+        {
+          "src": "https://askmiles.ai/static/images/mcp-icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.askmiles.ai/mcp"
+}

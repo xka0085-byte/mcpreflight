@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:30.236Z",
+  "server": {
+    "registryName": "ai.arclan/registry",
+    "title": "Arclan MCP Registry",
+    "description": "MCP registry: 138k servers crawled, handshake-validated, reliability-scored. 744 production-safe.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://arclan.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "arclan-registry",
+      "version": "0.1.0",
+      "description": "MCP server registry — find and report on validated MCP servers"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://arclan.ai/mcp"
+}

@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:40.031Z",
+  "server": {
+    "registryName": "ai.bowmark/bowmark",
+    "title": "Bowmark",
+    "description": "Do things on live websites: prices, availability, quotes, bookings, anything behind a form or login.",
+    "registryVersion": "8.171.0"
+  },
+  "endpoint": "https://api.bowmark.ai/mcp/registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bowmark",
+      "version": "8.170.4",
+      "title": "Bowmark",
+      "websiteUrl": "https://bowmark.ai",
+      "icons": [
+        {
+          "src": "https://bowmark.ai/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://bowmark.ai/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].runId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].script has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.bowmark.ai/mcp/registry"
+}

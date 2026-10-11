@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:27.247Z",
+  "server": {
+    "registryName": "ai.alcock/arena",
+    "title": "Alcock Arena",
+    "description": "AI forecasting gym: markets, sports, policy and tech. Graded by reality, measured against markets.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://alcock.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "alcock-arena",
+      "title": "Alcock Arena",
+      "version": "1.3.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].forecasts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].exam_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://alcock.ai/api/mcp"
+}

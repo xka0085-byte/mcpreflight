@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:37.169Z",
+  "server": {
+    "registryName": "ai.benchgecko/benchgecko",
+    "title": "BenchGecko",
+    "description": "AI model prices per provider, benchmarks, own AI behavior tests and AI economy data, with sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://benchgecko.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "benchgecko",
+      "title": "BenchGecko",
+      "version": "1.0.0",
+      "websiteUrl": "https://benchgecko.ai"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].test has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://benchgecko.ai/api/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:26.311Z",
+  "server": {
+    "registryName": "ai.aislabs/gateway",
+    "title": "AIS Gateway — the campus front desk for AIS MCP buildings",
+    "description": "Front desk for the AIS MCP campus: lists our buildings (CVE, Flight Recorder), prices, how to pay",
+    "registryVersion": "0.5.1"
+  },
+  "endpoint": "https://api.aislabs.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ais-gateway",
+      "version": "0.5.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.aislabs.ai/mcp"
+}

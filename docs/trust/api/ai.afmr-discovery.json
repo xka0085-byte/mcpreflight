@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:22.900Z",
+  "server": {
+    "registryName": "ai.afmr/discovery",
+    "title": "AFMR Discovery",
+    "description": "Read AFMR failure modes and discover scoped attestation and lift-evidence contracts.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://afmr.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ai.afmr/discovery",
+      "title": "AFMR Discovery",
+      "version": "1.0.0",
+      "websiteUrl": "https://afmr.ai/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://afmr.ai/mcp"
+}

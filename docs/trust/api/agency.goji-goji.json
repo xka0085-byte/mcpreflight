@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:20.190Z",
+  "server": {
+    "registryName": "agency.goji/goji",
+    "title": "agency.goji/goji",
+    "description": "Answers on AEO, SEO, web and brand from GOJI's published material. Melbourne, Australia.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.goji.agency/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "goji",
+      "version": "1.0.1"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].company has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].budget has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].timeline has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.goji.agency/mcp"
+}

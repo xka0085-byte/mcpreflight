@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:20.596Z",
+  "server": {
+    "registryName": "agency.thebureauoflostcontext/bureau-public",
+    "title": "Bureau public reader",
+    "description": "Bureau-operated public read-only MCP service for public Context Packets and Cases.",
+    "registryVersion": "3.0.0"
+  },
+  "endpoint": "https://thebureauoflostcontext.agency/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://thebureauoflostcontext.agency/mcp"
+}

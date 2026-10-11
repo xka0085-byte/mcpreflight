@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:18.536Z",
+  "server": {
+    "registryName": "ae.propick/propick",
+    "title": "Propick Integration MCP",
+    "description": "Manage your real-estate stock on Propick (Dubai): bulk listing sync, lookups and run reports.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://propick.ae/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://propick.ae/mcp"
+}

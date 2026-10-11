@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:25.818Z",
+  "server": {
+    "registryName": "ai.ai-akari/agent-trust-receipt",
+    "title": "AIﾉアカリ☆ Agent Trust Receipt",
+    "description": "Read-only Remote MCP for externally grounded AI agent trust receipts.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://ai-akari.ai/mcp-trust",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai-akari-agent-trust-receipt",
+      "version": "2026.08.06.3"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].claim has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].metric_hint has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].evidence has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].amount_jpy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].minutes_reclaimed has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].intent_contract has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].observed_outcome has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://ai-akari.ai/mcp-trust"
+}

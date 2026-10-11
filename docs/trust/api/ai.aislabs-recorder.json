@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:26.527Z",
+  "server": {
+    "registryName": "ai.aislabs/recorder",
+    "title": "AIS Agent Flight Recorder — dead-man alerts & resume for AI agents",
+    "description": "Dead-man switch for AI agents & cron jobs: heartbeat with state capsule, alerts + resume links",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.aislabs.ai/recorder/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ais-recorder",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].monitor_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].monitor_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].secret has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].monitor_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].secret has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.aislabs.ai/recorder/mcp"
+}

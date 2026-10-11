@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T02:32:24.993Z",
+  "server": {
+    "registryName": "ai.agentroam/agentroam",
+    "title": "AgentRoam",
+    "description": "Buy travel eSIMs, gift cards and mobile top-ups with crypto — user confirms before any order.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agentroam.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agentroam",
+      "title": "AgentRoam — travel gift cards, eSIM & top-ups for crypto",
+      "version": "0.2.0",
+      "icon": "https://agentroam.ai/brand/app-icon.png"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].external_order_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].country_code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentroam.ai/api/mcp"
+}
