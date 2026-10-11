@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State of MCP Servers — October 2026: 9,991 remote servers checked</title>
+<meta name="description" content="We ran a read-only MCP handshake check against all 9,991 remote servers in the official MCP Registry: 48.8% pass, 50.7% do not complete a clean handshake, 43 fail outright. Full methodology, per-server reports, and reproducible commands.">
+<link rel="canonical" href="https://xka0085-byte.github.io/mcp-doctor/state-of-mcp-2026-10.html">
+<style>
+:root{color-scheme:light dark}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.65 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}
+main{max-width:860px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+h1{font-size:1.9rem;line-height:1.25;margin:.2rem 0 .5rem}
+h2{font-size:1.25rem;margin:2.2rem 0 .6rem}
+.muted{color:#57606a;font-size:.95rem}
+a{color:#0969da;text-decoration:none}
+a:hover{text-decoration:underline}
+.kpi{display:flex;gap:1rem;flex-wrap:wrap;margin:1.4rem 0}
+.kpi div{flex:1;min-width:150px;border:1px solid #d8dee4;border-radius:10px;padding:1rem 1.2rem}
+.kpi b{display:block;font-size:1.9rem;line-height:1.2}
+.bar{height:10px;border-radius:5px;background:#e2e5ea;overflow:hidden;margin:.35rem 0 1rem}
+.bar i{display:block;height:100%}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}
+pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:8px;padding:.9rem;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:1rem 0}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4}
+.card{border:1px solid #d8dee4;border-radius:10px;padding:1rem 1.3rem;margin:1.2rem 0}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}
+@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}.muted,.foot,th{color:#8b949e}th,td{border-color:#30363d}pre,.card,.kpi div{background:#161b22;border-color:#30363d}.bar{background:#21262d}}
+</style>
+</head>
+<body>
+<main>
+<h1>State of MCP Servers — October 2026</h1>
+<p class="muted">9,991 remote servers from the official MCP Registry, checked read-only. Published 2026-10-11 · <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">full per-server directory</a></p>
+
+<div class="kpi">
+<div><b>9,991</b>remote servers scanned</div>
+<div><b style="color:#1a7f37">48.8%</b>pass clean handshake</div>
+<div><b style="color:#9a6700">50.7%</b>no anonymous handshake</div>
+<div><b style="color:#cf222e">43</b>fail outright</div>
+</div>
+
+<h2>What we did</h2>
+<p>We enumerated every <em>active</em> server with a remote (HTTP) transport in the <a href="https://github.com/modelcontextprotocol/registry">official MCP Registry</a> and sent exactly two JSON-RPC requests to each registered endpoint: <code>initialize</code> and <code>tools/list</code>. We validated protocol negotiation and every tool's input/output JSON Schema. No tool was ever called, no authentication was attempted, no data beyond the handshake was read. The whole thing is <a href="https://github.com/xka0085-byte/mcp-doctor">open source</a> and one command reproduces any single result:</p>
+<pre>npx @eidonze/mcpdoctor schema &lt;endpoint-url&gt;</pre>
+
+<h2>Findings</h2>
+
+<div class="card">
+<b>1. Half of the official registry is not usable anonymously.</b> 5,069 of 9,991 remote endpoints (50.7%) did not complete a clean <code>initialize</code> + <code>tools/list</code> handshake. This bucket mixes genuinely broken servers, temporarily down ones, and endpoints that require auth by design — an anonymous check cannot distinguish them, which is itself part of the story: <strong>an agent consuming the registry today cannot tell "requires OAuth" from "dead on arrival" without trying and failing.</strong>
+</div>
+
+<div class="card">
+<b>2. Protocol adoption is badly fragmented.</b> Of the 4,899 servers that negotiated a protocol version, 86% are still on <code>2025-03-26</code>. Only 101 servers (1% of the registry) run the newest revision (<code>2026-07-28</code>).
+<table><tr><th>Protocol revision</th><th>Servers</th><th></th></tr>
+<tr><td>no handshake</td><td>5,092</td><td><div class="bar"><i style="width:100%;background:#9a6700"></i></div></td></tr>
+<tr><td>2025-03-26</td><td>4,207</td><td><div class="bar"><i style="width:83%;background:#0969da"></i></div></td></tr>
+<tr><td>2025-06-18</td><td>379</td><td><div class="bar"><i style="width:7%;background:#0969da"></i></div></td></tr>
+<tr><td>2024-11-05</td><td>143</td><td><div class="bar"><i style="width:3%;background:#8250df"></i></div></td></tr>
+<tr><td>2026-07-28 (latest)</td><td>101</td><td><div class="bar"><i style="width:2%;background:#1a7f37"></i></div></td></tr>
+<tr><td>2025-11-25 / 2025-11-05</td><td>69</td><td><div class="bar"><i style="width:1.4%;background:#8250df"></i></div></td></tr>
+</table>
+</div>
+
+<div class="card">
+<b>3. Schema hygiene is the quiet tax.</b> Among servers that did respond, the dominant schema finding was missing <code>description</code> on input properties — 46,216 property-level findings across the registry. Tool descriptions are what an LLM reads to decide when and how to call a tool; missing ones measurably degrade agent tool selection. 37 servers returned a <code>tools/list</code> that fails JSON Schema validation outright, 23 returned an invalid <code>initialize</code> response.
+</div>
+
+<div class="card">
+<b>4. The community index and the official registry disagree.</b> We cross-checked the largest community awesome-list (4,150 GitHub repo links) against registry data: only 202 of its links correspond to servers we have registry scan coverage for, and 95 of those currently fail a clean handshake. Discovery is fragmented across at least two inconsistent indexes.
+</div>
+
+<h2>Limitations (read this before quoting us)</h2>
+<ul>
+<li>Anonymous handshake only. Servers behind OAuth are <em>not</em> broken — but the registry does not label them, so the 50.7% figure is an upper bound on breakage, not an exact count.</li>
+<li>Static schema checks do not predict model tool selection and do not prove behavior across clients.</li>
+<li>One point in time (2026-10-11), re-scanned weekly; per-server history and diffs are planned.</li>
+<li>If your server is listed as "no handshake" and requires auth by design: that's expected — you can ignore it, or reply on the directory to be excluded.</li>
+</ul>
+
+<h2>For server maintainers</h2>
+<p>Check your server in one command. If your endpoint is auth-gated, nothing to do. If it should be reachable anonymously and isn't, the report shows the failing step. A green badge is available for every passing server:</p>
+<pre>npx @eidonze/mcpdoctor schema https://your-server.example.com/mcp</pre>
+<p>Browse all 9,991 reports in the <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">Trust Directory</a>, or read the <a href="https://xka0085-byte.github.io/mcp-doctor/">mcpdoctor docs</a>. The directory is regenerated weekly from the live registry.</p>
+
+<div class="foot">Produced by <a href="https://github.com/xka0085-byte/mcp-doctor">mcpdoctor</a> — read-only trust checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Corrections welcome via issues.</div>
+</main>
+</body>
+</html>
