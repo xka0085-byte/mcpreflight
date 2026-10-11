@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:58.096Z",
+  "server": {
+    "registryName": "ch.busik/fahrten",
+    "title": "busik.ch – Minibusfahrten Ukraine, Deutschland, Schweiz",
+    "description": "Search minibus trips between Ukraine, Germany and Switzerland. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://busik.ch/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "busik.ch",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://busik.ch/api/mcp"
+}

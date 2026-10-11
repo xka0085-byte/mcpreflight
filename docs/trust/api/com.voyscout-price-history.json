@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:57.772Z",
+  "server": {
+    "registryName": "com.voyscout/price-history",
+    "title": "Voyscout Price History",
+    "description": "Historical flight and package price series for Czech origins. Honest stats, no verdicts. CC BY 4.0",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://voyscout.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "voyscout-price-series",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://voyscout.com/mcp"
+}

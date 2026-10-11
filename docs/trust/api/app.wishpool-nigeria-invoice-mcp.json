@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:35.654Z",
+  "server": {
+    "registryName": "app.wishpool/nigeria-invoice-mcp",
+    "title": "Nigeria Invoices (FIRS / NRS MBS e-invoicing IRN)",
+    "description": "Nigeria FIRS/NRS MBS e-invoicing for AI agents - validate, sign, confirm invoices (IRN + QR).",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://inv-ng.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-ng.wishpool.app/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:08.136Z",
+  "server": {
+    "registryName": "com.bmikit/body-composition",
+    "title": "BMI Kit",
+    "description": "Body composition for AI: BMI, body fat, FFMI, waist-to-height, plus saved measurement trends.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://bmikit.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bmikit.com/api/mcp"
+}

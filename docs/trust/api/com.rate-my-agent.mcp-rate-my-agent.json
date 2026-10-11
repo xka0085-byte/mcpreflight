@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:10.918Z",
+  "server": {
+    "registryName": "com.rate-my-agent.mcp/rate-my-agent",
+    "title": "Rate-My-Agent",
+    "description": "Get matched with a top-rated, review-verified real estate agent in the US or Canada.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.rate-my-agent.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.rate-my-agent.com/mcp"
+}

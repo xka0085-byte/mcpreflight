@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:10.536Z",
+  "server": {
+    "registryName": "co.cookie-compliance/cookie-consent",
+    "title": "Cookie Compliance",
+    "description": "Add a cookie consent banner that blocks trackers before consent and records proof of consent.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.cookie-compliance.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hu-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].currentLanguage has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].blocking has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].globalCookie has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.cookie-compliance.co/mcp"
+}

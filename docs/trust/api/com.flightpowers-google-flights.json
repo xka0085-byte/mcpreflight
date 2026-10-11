@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:18.905Z",
+  "server": {
+    "registryName": "com.flightpowers/google-flights",
+    "title": "Google Flights Search (Real-Time Fares)",
+    "description": "Real-time Google Flights: one-way and round-trip fares over date ranges, with price verdicts.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://flights.flightpowers.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "google-flights-mcp",
+      "version": "1.0.0",
+      "websiteUrl": "https://flights.flightpowers.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://flights.flightpowers.com/mcp"
+}

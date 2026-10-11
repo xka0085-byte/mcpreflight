@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:09.069Z",
+  "server": {
+    "registryName": "com.xtracticle/xtracticle",
+    "title": "Xtracticle",
+    "description": "Read public X (Twitter) posts, threads and X Articles as clean Markdown. Read-only, no auth.",
+    "registryVersion": "3.2.0"
+  },
+  "endpoint": "https://xtracticle.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "xtracticle",
+      "title": "Xtracticle — X Articles & threads as Markdown",
+      "version": "3.2.0",
+      "websiteUrl": "https://xtracticle.com/mcp-server"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_chars has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://xtracticle.com/mcp"
+}

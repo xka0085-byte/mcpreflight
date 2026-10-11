@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:41.748Z",
+  "server": {
+    "registryName": "ai.spendline/spendline",
+    "title": "Spendline",
+    "description": "Enforce AI budgets before the model call and track cost per customer across 10 providers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.spendline.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "spendline",
+      "title": "Spendline",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].group_by has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].monthly_limit_usd has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.spendline.ai/mcp"
+}

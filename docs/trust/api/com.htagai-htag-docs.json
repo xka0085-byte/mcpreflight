@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:03.332Z",
+  "server": {
+    "registryName": "com.htagai/htag-docs",
+    "title": "com.htagai/htag-docs",
+    "description": "Public HTAG discovery for MCP tools, API endpoints, OpenAPI ops, and agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.htagai.com/mcp/v1/servers/htag-docs/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "htag-docs",
+      "version": "1.14.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].server has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tag has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].path has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].method has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.htagai.com/mcp/v1/servers/htag-docs/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:20.616Z",
+  "server": {
+    "registryName": "de.fluvigil/pegel",
+    "title": "de.fluvigil/pegel",
+    "description": "German and Swiss river gauges, groundwater and flood levels from ten official sources",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fluvigil.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fluvigil",
+      "version": "1.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fluvigil.de/mcp"
+}

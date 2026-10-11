@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:08.130Z",
+  "server": {
+    "registryName": "com.x402supply/page-extract",
+    "title": "com.x402supply/page-extract",
+    "description": "URL to clean article markdown/text + metadata and links. Deterministic. $0.001/call via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://page-extract.x402supply.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "page-extract",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].format has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://page-extract.x402supply.com/mcp"
+}

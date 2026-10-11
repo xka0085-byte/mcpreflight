@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:57.252Z",
+  "server": {
+    "registryName": "com.stopovercity/stopover-planner",
+    "title": "com.stopovercity/stopover-planner",
+    "description": "Live Google Flights search: stopover itineraries, country sweeps, explore anywhere, booking links",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.stopovercity.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "stopover-planner",
+      "title": "Stopover Planner: live Google Flights search",
+      "version": "4.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].jobId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.stopovercity.com/mcp"
+}

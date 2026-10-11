@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:09.582Z",
+  "server": {
+    "registryName": "com.xweather/weather",
+    "title": "Xweather Weather MCP",
+    "description": "Hosted MCP server for Xweather weather data: conditions, forecasts, alerts, and more.",
+    "registryVersion": "1.2.2"
+  },
+  "endpoint": "https://mcp.api.xweather.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.api.xweather.com/mcp"
+}

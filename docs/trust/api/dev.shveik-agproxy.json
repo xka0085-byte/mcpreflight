@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:52.677Z",
+  "server": {
+    "registryName": "dev.shveik/agproxy",
+    "title": "agproxy",
+    "description": "Residential proxy traffic and raw fetch for agents, 190+ countries, sticky sessions. Pay per call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agproxy.shveik.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agproxy",
+      "title": "agproxy",
+      "version": "1.0.0",
+      "websiteUrl": "https://agproxy.shveik.dev"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].method has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agproxy.shveik.dev/mcp"
+}

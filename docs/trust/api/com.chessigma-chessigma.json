@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:24.068Z",
+  "server": {
+    "registryName": "com.chessigma/chessigma",
+    "title": "Chessigma",
+    "description": "Chess opening guides and names, FEN and PGN checks, the daily chess puzzle and Elo estimates.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://www.chessigma.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "chessigma-mcp",
+      "title": "Chessigma",
+      "version": "2.0.0",
+      "websiteUrl": "https://www.chessigma.com/developers/mcp",
+      "icons": [
+        {
+          "src": "https://www.chessigma.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "500x500"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].yourRating has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].opponentRating has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].result has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].system has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].kFactor has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.chessigma.com/api/mcp"
+}

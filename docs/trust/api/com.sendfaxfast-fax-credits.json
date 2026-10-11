@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:34.992Z",
+  "server": {
+    "registryName": "com.sendfaxfast/fax-credits",
+    "title": "SendFaxFast (AI Fax Credits)",
+    "description": "Send faxes from AI chat with prepaid credits (1 credit = 1 fax, up to 100 pages). PDF, JPG, PNG.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://sendfaxfast.com/api/mcp-credits.php",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "SendFaxFast Credits MCP",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sendfaxfast.com/api/mcp-credits.php"
+}

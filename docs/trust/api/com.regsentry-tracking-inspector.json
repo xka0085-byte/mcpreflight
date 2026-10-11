@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:12.604Z",
+  "server": {
+    "registryName": "com.regsentry/tracking-inspector",
+    "title": "RegSentry Website Tracking Inspector",
+    "description": "Inspect a public site's tracking signals, grade consent evidence, and get remediation playbooks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://regsentry.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "regsentry",
+      "title": "RegSentry Website Tracking Inspector",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].consentBannerPresent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].observations has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tracker has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://regsentry.com/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:18.898Z",
+  "server": {
+    "registryName": "app.openkrill/cars",
+    "title": "Car Check",
+    "description": "Check a US car: decode a VIN, see recalls, crash ratings, owner complaints and fuel economy.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://cars.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cars",
+      "title": "Car Check: Recalls, ratings and mpg",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cars.openkrill.app/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:14.467Z",
+  "server": {
+    "registryName": "com.tamgara/tamgara",
+    "title": "Tamgara",
+    "description": "Fill in 1,000+ legal PDF templates in many languages, get a signed PDF back. Free, no API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.tamgara.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tamgara",
+      "version": "1.0.0"
+    },
+    "toolCount": 33,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].manualPlacement has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].extraText has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].recipient has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.tamgara.com/api/mcp"
+}

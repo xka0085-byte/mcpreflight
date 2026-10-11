@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:06.795Z",
+  "server": {
+    "registryName": "app.fakto/fakturownia",
+    "title": "Fakto.app — Fakturownia MCP Server",
+    "description": "Fakturownia.pl (Polish invoicing) via MCP: invoices, clients, products, warehouse. Full read-write.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fakto.app/fakturownia/stream",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fakto.app/fakturownia/stream"
+}

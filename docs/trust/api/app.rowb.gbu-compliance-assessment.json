@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:24.640Z",
+  "server": {
+    "registryName": "app.rowb.gbu-compliance/assessment",
+    "title": "GBU Compliance",
+    "description": "German Gefaehrdungsbeurteilung: assess against the ArbSchG s5(3) checklist and build the s6 record.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://gbu-compliance.rowb.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gbu-compliance",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sector has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gbu-compliance.rowb.app/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:49.621Z",
+  "server": {
+    "registryName": "ai.troquel/troquel",
+    "title": "Troquel MCP Server",
+    "description": "Generate images, video and voice, and read Meta ad libraries, paying per generation.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://troquel.ai/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://troquel.ai/api/mcp"
+}

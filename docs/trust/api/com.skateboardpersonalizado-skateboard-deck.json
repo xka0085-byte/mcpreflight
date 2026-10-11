@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:44.138Z",
+  "server": {
+    "registryName": "com.skateboardpersonalizado/skateboard-deck",
+    "title": "Skateboard Personalizado",
+    "description": "Turn your artwork into a real custom skateboard deck, shown assembled in 3D, with a link to order.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://skateboardpersonalizado.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "skateboard-personalizado",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].locale has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://skateboardpersonalizado.com/api/mcp"
+}

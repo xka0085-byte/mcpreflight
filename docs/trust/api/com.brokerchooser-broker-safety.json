@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:12.751Z",
+  "server": {
+    "registryName": "com.brokerchooser/broker-safety",
+    "title": "com.brokerchooser/broker-safety",
+    "description": "MCP server offering regulator-sourced legitimacy checks on investment entities by name or URL.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.brokerchooser.com/servers/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "BrokerChooser.com MCP Server",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.brokerchooser.com/servers/mcp"
+}

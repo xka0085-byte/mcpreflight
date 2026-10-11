@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:58.645Z",
+  "server": {
+    "registryName": "al.toyshub/catalog",
+    "title": "Toys Hub",
+    "description": "Browse Toys Hub: products, prices in ALL, stock, delivery and checkout links. Read-only, no sign-in.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://toyshub.al/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "toyshub.al",
+      "title": "Toys Hub",
+      "version": "2.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].in_stock_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].quantity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://toyshub.al/mcp"
+}

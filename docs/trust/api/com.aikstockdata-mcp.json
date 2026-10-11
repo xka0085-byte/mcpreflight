@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:40.409Z",
+  "server": {
+    "registryName": "com.aikstockdata/mcp",
+    "title": "aikstockdata — Korean Stock Data",
+    "description": "Korean stocks: median price path after each DART filing type, T+1 closes, earnings. 12 tools, no key",
+    "registryVersion": "2.1.2"
+  },
+  "endpoint": "https://mcp.aikstockdata.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aikstockdata-mcp",
+      "title": "한국주식데이터 (aikstockdata.com)",
+      "version": "2.1.2"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "12 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.aikstockdata.com/mcp"
+}

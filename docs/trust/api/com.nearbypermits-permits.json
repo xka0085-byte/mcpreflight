@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:06.242Z",
+  "server": {
+    "registryName": "com.nearbypermits/permits",
+    "title": "Nearby Permits",
+    "description": "Building permits by address for a growing list of US cities and counties, from city open data.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://nearbypermits.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "nearby-permits",
+      "title": "Nearby Permits",
+      "version": "0.1.0",
+      "websiteUrl": "https://nearbypermits.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].permit_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nearbypermits.com/mcp"
+}

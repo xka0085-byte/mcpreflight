@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:30.810Z",
+  "server": {
+    "registryName": "com.tokenofesteem/token-of-esteem",
+    "title": "com.tokenofesteem/token-of-esteem",
+    "description": "A press your agent can commission: a funny, personalized printed booklet, mailed as a gift.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.tokenofesteem.com/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Token of Esteem",
+      "version": "0.1.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].return_url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.tokenofesteem.com/v1/mcp"
+}

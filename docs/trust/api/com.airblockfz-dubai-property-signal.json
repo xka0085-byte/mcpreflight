@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:42.857Z",
+  "server": {
+    "registryName": "com.airblockfz/dubai-property-signal",
+    "title": "com.airblockfz/dubai-property-signal",
+    "description": "Dubai property signals: 42 areas, AED/sqft index, verdict + rankings. Pay-per-call x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dubai-property-signal.airblock2026.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "dubai-property-signal",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].phase has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].interest has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].pros has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].cons has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://dubai-property-signal.airblock2026.workers.dev/mcp"
+}

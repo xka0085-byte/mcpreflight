@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:24.407Z",
+  "server": {
+    "registryName": "com.run402.chiefofstaff-solana/token-safety",
+    "title": "chiefofstaff Hyperliquid perp data + token safety",
+    "description": "Hyperliquid perp data (funding, whale liq levels, positioning, brief) + token safety, x402 per call.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://chiefofstaff-solana.run402.com/mcp/remote",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "chiefofstaff-token-safety",
+      "title": "chiefofstaff Hyperliquid perp data + token safety",
+      "version": "0.2.0",
+      "websiteUrl": "https://chiefofstaff-solana.run402.com/mcp/"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].chain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://chiefofstaff-solana.run402.com/mcp/remote"
+}

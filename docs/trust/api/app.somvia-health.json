@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:27.682Z",
+  "server": {
+    "registryName": "app.somvia/health",
+    "title": "Somvia",
+    "description": "Apple Health training load, recovery, HRV and workout detail for Claude, ChatGPT and any MCP client.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://somvia.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://somvia.app/mcp"
+}

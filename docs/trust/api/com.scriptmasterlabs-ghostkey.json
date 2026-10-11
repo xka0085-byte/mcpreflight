@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:32.105Z",
+  "server": {
+    "registryName": "com.scriptmasterlabs/ghostkey",
+    "title": "GhostKey — Route Paid APIs with x402",
+    "description": "Find paid APIs, check access policy and price, and route x402 requests. No autonomous spending.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://squeezeos-api.onrender.com/mcp/ghostkey",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Free pre-spend discovery and payment-policy front door for SML x402 APIs. GhostKey does not itself charge or execute paid work; paid execution occurs on canonical SqueezeOS routes.",
+      "name": "ghostkey",
+      "title": "ScriptMasterLabs GhostKey",
+      "version": "1.0.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].capability has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://squeezeos-api.onrender.com/mcp/ghostkey"
+}

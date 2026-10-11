@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:02.125Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/leafmelt",
+    "title": "Leafmelt",
+    "description": "PDF/Word/Excel/HTML to clean Markdown for LLMs and RAG. Keys $19/mo; 50 free calls a day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://leafmelt.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "leafmelt",
+      "title": "Leafmelt by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://leafmelt.cybermaxtools.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].files has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maxChars has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://leafmelt.cybermaxtools.com/mcp?via=mcp-registry"
+}

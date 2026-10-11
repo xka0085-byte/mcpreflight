@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:13.150Z",
+  "server": {
+    "registryName": "com.familyofficeregistry/registry",
+    "title": "Family Office Registry",
+    "description": "Sourced, dated records of family offices in Switzerland, Liechtenstein, Austria, Germany and Dubai.",
+    "registryVersion": "2"
+  },
+  "endpoint": "https://familyofficeregistry.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "family-office-registry",
+      "version": "2",
+      "title": "Family Office Registry"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://familyofficeregistry.com/api/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:02.741Z",
+  "server": {
+    "registryName": "ai.gtfi/groundtruth",
+    "title": "GroundTruth — subsurface scan QA & trade estimating",
+    "description": "Two independent AI models read a GPR, locate or pipe scan and flag the do-not-core call.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gtfi.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "groundtruth",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gtfi.ai/mcp"
+}

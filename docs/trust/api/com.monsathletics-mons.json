@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:01.177Z",
+  "server": {
+    "registryName": "com.monsathletics/mons",
+    "title": "MONS Athletics",
+    "description": "Find your next endurance challenge and train for it with your MONS coach.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://monsathletics.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mons-athletics",
+      "title": "MONS Athletics",
+      "version": "1.0.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].weekly has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].challenge_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].message has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://monsathletics.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:16.279Z",
+  "server": {
+    "registryName": "ai.noevant/fidenta-verify",
+    "title": "Fidenta Verify",
+    "description": "Independent fact-checking for AI answers: a verdict and sources for every claim.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://verify.noevant.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fidenta-verify",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].claim has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://verify.noevant.ai/mcp"
+}

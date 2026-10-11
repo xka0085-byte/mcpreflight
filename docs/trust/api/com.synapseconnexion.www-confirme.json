@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:08.918Z",
+  "server": {
+    "registryName": "com.synapseconnexion.www/confirme",
+    "title": "Confirme, by Synapse",
+    "description": "Did it really happen? Independent signed receipts for AI agents: page, domain, email, heartbeat.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.synapseconnexion.com/ia/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "synapse-confirme",
+      "title": "Confirme, by Synapse",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].courriel has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].cle has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.synapseconnexion.com/ia/mcp"
+}

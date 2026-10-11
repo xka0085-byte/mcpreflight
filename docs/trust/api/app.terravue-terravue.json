@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:29.734Z",
+  "server": {
+    "registryName": "app.terravue/terravue",
+    "title": "TerraVue",
+    "description": "Analyze any US home: buy vs rent Monte Carlo, affordability, and ZIP-level appreciation data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.terravue.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.terravue.app/mcp"
+}

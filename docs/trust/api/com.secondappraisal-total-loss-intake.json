@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:32.945Z",
+  "server": {
+    "registryName": "com.secondappraisal/total-loss-intake",
+    "title": "SecondAppraisal Total-Loss Intake",
+    "description": "Submit a vehicle owner's total loss to SecondAppraisal; preliminary market read; state rules.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://secondappraisal.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.secondappraisal/total-loss-intake",
+      "title": "SecondAppraisal Total-Loss Intake",
+      "version": "1.0.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].make has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].trim has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].odometer has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://secondappraisal.com/mcp"
+}

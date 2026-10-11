@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:36.789Z",
+  "server": {
+    "registryName": "com.countersignatory/mcp",
+    "title": "Countersignatory",
+    "description": "Buy a verified human's approval, verification or judgment at a published price, paid by x402 or card",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://countersignatory.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "countersignatory",
+      "version": "0.4.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].task_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://countersignatory.com/mcp"
+}

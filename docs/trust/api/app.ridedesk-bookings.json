@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:23.190Z",
+  "server": {
+    "registryName": "app.ridedesk/bookings",
+    "title": "RideDesk Bookings",
+    "description": "Quote and book airport transfers on a RideDesk operator's live desk. Agents never set prices.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://{tenant_domain}/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{tenant_domain}/api/mcp"
+}

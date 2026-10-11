@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:05.475Z",
+  "server": {
+    "registryName": "app.devmargin/devmargin",
+    "title": "DevMargin",
+    "description": "Read-only MCP over your own revenue and net margin across 14 billing rails",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://devmargin.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://devmargin.app/api/mcp"
+}

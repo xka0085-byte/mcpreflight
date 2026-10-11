@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:46.585Z",
+  "server": {
+    "registryName": "com.pinsvit/api",
+    "title": "Pinsvit",
+    "description": "Find and book local businesses, or run yours with Pinsvit Business: bookings, front desk, bills.",
+    "registryVersion": "1.12.0"
+  },
+  "endpoint": "https://pinsvit.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pinsvit",
+      "version": "1.12.0",
+      "title": "Pinsvit",
+      "description": "Find and book local businesses, or run yours with Pinsvit Business: bookings, front desk, bills.",
+      "websiteUrl": "https://pinsvit.com/developers",
+      "icons": [
+        {
+          "src": "https://cdn.pinsvit.com/pinsvit1024.jpg",
+          "mimeType": "image/jpeg",
+          "sizes": [
+            "1024x1024"
+          ]
+        },
+        {
+          "src": "https://pinsvit.com/site/mcp/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://pinsvit.com/site/mcp/icon-48.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "48x48"
+          ]
+        }
+      ]
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pinsvit.com/api/v1/mcp"
+}

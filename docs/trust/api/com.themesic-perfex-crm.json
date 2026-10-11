@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:20.072Z",
+  "server": {
+    "registryName": "com.themesic/perfex-crm",
+    "title": "Perfex CRM",
+    "description": "Read and write a self-hosted Perfex CRM from an AI agent: 148 permission-filtered tools.",
+    "registryVersion": "3.1.0"
+  },
+  "endpoint": "https://{perfex_host}/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{perfex_host}/api/mcp"
+}

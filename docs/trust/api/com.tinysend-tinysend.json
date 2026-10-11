@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:29.777Z",
+  "server": {
+    "registryName": "com.tinysend/tinysend",
+    "title": "com.tinysend/tinysend",
+    "description": "Email for agents: newsletters, subscribers, contacts, broadcasts. OAuth sign-in, no API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.tinysend.com",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.tinysend.com"
+}

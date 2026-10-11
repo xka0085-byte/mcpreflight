@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:03.289Z",
+  "server": {
+    "registryName": "dev.workers.ekelund-apps.custody-calendar/custody-calendar-maker",
+    "title": "Custody Calendar Maker",
+    "description": "Custody schedules (2-2-3, 2-2-5-5, week on/off) as a year calendar both co-parents can subscribe to",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://custody-calendar.ekelund-apps.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "custody-calendar-maker",
+      "title": "Custody Calendar Maker",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].months has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].parent_a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].parent_b has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].holidays has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://custody-calendar.ekelund-apps.workers.dev/mcp"
+}

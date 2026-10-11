@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:51.550Z",
+  "server": {
+    "registryName": "ca.creditgps/canadian-credit",
+    "title": "Credit GPS — Canadian credit",
+    "description": "Canadian credit: statement-cycle and utilization math, plus bureau and reporting reference data.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.creditgps.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "creditgps",
+      "version": "0.3.1",
+      "title": "Credit GPS",
+      "websiteUrl": "https://creditgps.ca",
+      "description": "Calculate credit-card utilization, compare payment scenarios, and estimate payoff timelines from figures you provide. Includes Canadian credit-reporting reference information. No bank or credit-bureau access.",
+      "icons": [
+        {
+          "src": "https://mcp.creditgps.ca/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ],
+          "theme": "dark"
+        },
+        {
+          "src": "https://mcp.creditgps.ca/icon-light.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ],
+          "theme": "light"
+        }
+      ]
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "16 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.creditgps.ca/mcp"
+}

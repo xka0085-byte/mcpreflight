@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:26.288Z",
+  "server": {
+    "registryName": "com.frontofgoal/odds-api",
+    "title": "com.frontofgoal/odds-api",
+    "description": "Live soccer prediction-market odds and order-book depth from Polymarket.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.frontofgoal.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2026-07-28",
+    "serverInfo": {
+      "name": "frontofgoal",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].token_ids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].token_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.frontofgoal.com/mcp"
+}

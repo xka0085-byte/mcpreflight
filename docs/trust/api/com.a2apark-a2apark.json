@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:21.252Z",
+  "server": {
+    "registryName": "com.a2apark/a2apark",
+    "title": "A2APark",
+    "description": "Public behavioral test environment for AI agents with stateful rides and signed scorecards.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://a2apark.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "a2apark",
+      "version": "0.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].rideId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].runId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].runId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://a2apark.com/mcp"
+}

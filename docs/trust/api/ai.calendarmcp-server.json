@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:12:56.564Z",
+  "server": {
+    "registryName": "ai.calendarmcp/server",
+    "title": "CalendarMCP",
+    "description": "Hosted Google Calendar MCP server for AI agents. No self-hosting or Google Cloud setup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://calendarmcp.ai/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://calendarmcp.ai/api/mcp"
+}

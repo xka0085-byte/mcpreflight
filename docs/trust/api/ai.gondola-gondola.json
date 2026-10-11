@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:02.568Z",
+  "server": {
+    "registryName": "ai.gondola/gondola",
+    "title": "Gondola Award Travel Search",
+    "description": "Compare cash vs points on hotels, flights, and cars. Checkout supported hotels and rental cars.",
+    "registryVersion": "0.1.6"
+  },
+  "endpoint": "https://mcp.gondola.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gondola",
+      "title": "Gondola",
+      "version": "0.1.6-go",
+      "websiteUrl": "https://www.gondola.ai",
+      "icons": [
+        {
+          "src": "https://www.gondola.ai/assets/logos/logomark-gold.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "2048x2048"
+          ]
+        }
+      ]
+    },
+    "toolCount": 46,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].radius has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].radius_unit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.gondola.ai/mcp"
+}

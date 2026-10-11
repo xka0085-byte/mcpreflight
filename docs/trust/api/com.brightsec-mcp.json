@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:11.603Z",
+  "server": {
+    "registryName": "com.brightsec/mcp",
+    "title": "Bright Security",
+    "description": "Enables AI agents to access Bright Security tools for app discovery and security testing.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://{instance}.brightsec.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{instance}.brightsec.com/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:12.779Z",
+  "server": {
+    "registryName": "com.tallyfern/rates",
+    "title": "Tallyfern Rates (Canada)",
+    "description": "Read-only Canadian GST/HST rates, small-supplier check and CRA allowance rates, with CRA sources.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.tallyfern.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tallyfern-rates",
+      "version": "0.3.0",
+      "title": "Tallyfern Rates (Canada)"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.tallyfern.com/mcp"
+}

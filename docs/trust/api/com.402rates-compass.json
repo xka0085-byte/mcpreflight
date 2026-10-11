@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:19.741Z",
+  "server": {
+    "registryName": "com.402rates/compass",
+    "title": "Compass by 402rates",
+    "description": "Free agent tests (no account or payment); paid ping.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://api.402rates.com/mcp/compass",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "402rates-compass",
+      "title": "Compass by 402rates",
+      "version": "0.3.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].baseline has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].current has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.402rates.com/mcp/compass"
+}

@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:47.005Z",
+  "server": {
+    "registryName": "ai.tokenos/tokenomics-designer",
+    "title": "TokenOS Tokenomics Designer",
+    "description": "Allocation & vesting design",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://tokenos.ai/api/mcp/apps/tokenomics-designer",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tokenos-tokenomics-designer",
+      "title": "Tokenomics Designer by TokenOS — allocation, vesting & supply schedule",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].label has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tge_unlock_pct has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].cliff_months has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].vesting_months has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tokenos.ai/api/mcp/apps/tokenomics-designer"
+}

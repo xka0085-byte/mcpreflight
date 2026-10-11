@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:21.804Z",
+  "server": {
+    "registryName": "app.performix/performix-site",
+    "title": "app.performix/performix-site",
+    "description": "Performix public corpus over MCP: guides, books, evidence, outcome models, plus a computing tool.",
+    "registryVersion": "3.1.0"
+  },
+  "endpoint": "https://performix.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "performix-site",
+      "version": "3.1.0",
+      "description": "Read-only MCP access to performix.app's performance-science book corpus, evidence-source library, outcome-models register, and Team Performance Science Guide — no auth, no paid content.",
+      "websiteUrl": "https://performix.app"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].situation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].seat has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://performix.app/api/mcp"
+}

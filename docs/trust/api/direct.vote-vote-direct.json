@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:10.448Z",
+  "server": {
+    "registryName": "direct.vote/vote-direct",
+    "title": "vote.direct",
+    "description": "Run a real election or board vote: price it, check state HOA rules, draft the ballot and voter list.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://vote.direct/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "vote-direct",
+      "title": "vote.direct",
+      "version": "1.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].questions has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://vote.direct/api/mcp"
+}

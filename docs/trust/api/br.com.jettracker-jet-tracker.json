@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:48.088Z",
+  "server": {
+    "registryName": "br.com.jettracker/jet-tracker",
+    "title": "Jet Tracker",
+    "description": "Brazilian business aviation: registry, owner, flights, base, market, maintenance and sale signals.",
+    "registryVersion": "0.11.0"
+  },
+  "endpoint": "https://jettracker.com.br/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://jettracker.com.br/api/mcp"
+}

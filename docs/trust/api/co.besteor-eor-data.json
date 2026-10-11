@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:06.909Z",
+  "server": {
+    "registryName": "co.besteor/eor-data",
+    "title": "BestEOR: EOR pricing and employment costs",
+    "description": "Cited EOR provider fees, coverage and models, plus employer costs in 139 countries.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://besteor.co/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "besteor-eor-data",
+      "title": "BestEOR.co EOR data",
+      "version": "1.0.0",
+      "websiteUrl": "https://besteor.co/mcp-server"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://besteor.co/api/mcp"
+}

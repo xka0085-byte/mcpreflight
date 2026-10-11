@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:15.065Z",
+  "server": {
+    "registryName": "com.filtrous/mcp-catalog",
+    "title": "Filtrous MCP Catalog Server",
+    "description": "Search Filtrous lab-filtration products by spec, get prices, and request quotes from your AI agent.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://filtrous-mcp-catalog.filtrous.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "filtrous-mcp-catalog",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].contact has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://filtrous-mcp-catalog.filtrous.workers.dev/mcp"
+}

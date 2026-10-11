@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:36.169Z",
+  "server": {
+    "registryName": "app.wishpool/taiwan-logistics-mcp",
+    "title": "Taiwan Logistics (CVS pickup + home delivery via ECPay)",
+    "description": "Taiwan CVS pickup + home delivery for AI agents: create, track, print labels via ECPay.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://logi-tw.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://logi-tw.wishpool.app/mcp"
+}

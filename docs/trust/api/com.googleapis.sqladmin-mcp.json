@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:44.199Z",
+  "server": {
+    "registryName": "com.googleapis.sqladmin/mcp",
+    "title": "com.googleapis.sqladmin/mcp",
+    "description": "Create, manage, and query your Google Cloud SQL resources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sqladmin.googleapis.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "StatelessServer",
+      "version": "ESF"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].body has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].body has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sqladmin.googleapis.com/mcp"
+}

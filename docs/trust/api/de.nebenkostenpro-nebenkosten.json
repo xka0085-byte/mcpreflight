@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:21.973Z",
+  "server": {
+    "registryName": "de.nebenkostenpro/nebenkosten",
+    "title": "NebenkostenPro",
+    "description": "German housing costs: utility costs of 400 cities, property tax rates, housing benefit, deadlines.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nebenkostenpro.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Nebenkostenabrechnung prüfen lassen und erstellen, dazu öffentliche Daten zu Nebenkosten, Grundsteuer, Wohngeld und Fristen in Deutschland.",
+      "icons": [
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ],
+          "src": "https://nebenkostenpro.de/icon-192.png"
+        },
+        {
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ],
+          "src": "https://nebenkostenpro.de/icon.svg"
+        }
+      ],
+      "name": "nebenkostenpro",
+      "title": "NebenkostenPro",
+      "version": "1.0.0",
+      "websiteUrl": "https://nebenkostenpro.de/mcp"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nebenkostenpro.de/mcp"
+}

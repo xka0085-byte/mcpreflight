@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:30.204Z",
+  "server": {
+    "registryName": "com.coinfuty/coinfuty",
+    "title": "Coinfuty",
+    "description": "Free crypto futures data: open interest, funding, long/short, liquidations, volume. No API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.coinfuty.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "coinfuty",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].metric has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].metric has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.coinfuty.com/api/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:27.750Z",
+  "server": {
+    "registryName": "com.sarkoa/mcp",
+    "title": "Sarkoa",
+    "description": "Host and serve geospatial files: list, upload, download, and share via Sarkoa.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.sarkoa.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sarkoa",
+      "title": "Sarkoa",
+      "version": "1.7.0",
+      "icons": [
+        {
+          "src": "https://mcp.sarkoa.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "378x378"
+          ]
+        }
+      ]
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.sarkoa.com/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:42.376Z",
+  "server": {
+    "registryName": "com.daedalmap/earthquakes",
+    "title": "DaedalMap Earthquake Data",
+    "description": "Global earthquake events from the USGS, 2150 BC-present: magnitude, depth, location, counts.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://app.daedalmap.com/mcp/earthquakes",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.daedalmap.com/mcp/earthquakes"
+}

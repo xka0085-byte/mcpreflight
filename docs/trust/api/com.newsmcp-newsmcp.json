@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:11.209Z",
+  "server": {
+    "registryName": "com.newsmcp/newsmcp",
+    "title": "NewsMCP",
+    "description": "Live world news deduplicated into story events, with corroboration counts and source links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.newsmcp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "NewsMCP",
+      "version": "0.6.4",
+      "icons": [
+        {
+          "src": "https://www.newsmcp.com/logo.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "light"
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.newsmcp.com/mcp"
+}

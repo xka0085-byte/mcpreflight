@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:34.418Z",
+  "server": {
+    "registryName": "com.linkorasource/sourcing",
+    "title": "Linkora Source",
+    "description": "China sourcing, inspection and supplier verification: published rates, scope and fee estimates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://linkorasource.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "linkora-source",
+      "title": "Linkora Source",
+      "version": "1.0.0",
+      "websiteUrl": "https://linkorasource.com"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].primary_need has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://linkorasource.com/mcp"
+}

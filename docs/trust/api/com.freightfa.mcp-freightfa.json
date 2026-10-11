@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:27.445Z",
+  "server": {
+    "registryName": "com.freightfa.mcp/freightfa",
+    "title": "FreightFA",
+    "description": "Freight rate benchmarks (truckload, LTL, rail, intermodal, barge), market outlooks, FMCSA checks.",
+    "registryVersion": "0.4.1"
+  },
+  "endpoint": "https://mcp.freightfa.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.freightfa.com/mcp"
+}

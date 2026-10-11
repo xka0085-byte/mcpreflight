@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:04.785Z",
+  "server": {
+    "registryName": "com.whenisbins/bin-collections",
+    "title": "WhenIsBins",
+    "description": "UK household bin collection dates by address, council-sourced. Free anonymous use, with limits",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://whenisbins.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "whenisbins",
+      "version": "1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lookup_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].property_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://whenisbins.com/mcp"
+}

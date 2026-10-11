@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:36.086Z",
+  "server": {
+    "registryName": "app.wishpool/sweden-invoice-mcp",
+    "title": "Sweden Invoices (Peppol BIS 3.0 via Storecove)",
+    "description": "Sweden Peppol BIS 3.0 e-invoices for AI agents: send, check recipient, get delivery proof.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://inv-se.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-se.wishpool.app/mcp"
+}

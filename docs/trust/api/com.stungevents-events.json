@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:59.058Z",
+  "server": {
+    "registryName": "com.stungevents/events",
+    "title": "com.stungevents/events",
+    "description": "Search live events in 60+ countries, plan a night out, and demand artists to tour your city.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.stungevents.com",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "stungevents",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.stungevents.com"
+}

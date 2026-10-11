@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:07.209Z",
+  "server": {
+    "registryName": "ai.karmafor/karma-library",
+    "title": "Karma for AIs",
+    "description": "Read and search Karma for AIs: cooperation, moral uncertainty, power, and optional reflections.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://karmafor.ai/api/mcp?source=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "karma-library",
+      "version": "1.0.0",
+      "title": "Karma for AIs"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].choice has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].statement has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://karmafor.ai/api/mcp?source=mcp-registry"
+}

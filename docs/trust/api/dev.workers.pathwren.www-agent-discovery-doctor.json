@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:06.474Z",
+  "server": {
+    "registryName": "dev.workers.pathwren.www/agent-discovery-doctor",
+    "title": "Agent Discovery Doctor - llms.txt, agent card, mcp.json",
+    "description": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"whoami\",\"arguments\":{}}} free no key",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/doctor",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-discovery-doctor",
+      "title": "Agent Discovery Doctor",
+      "version": "1.0.0",
+      "description": "See which discovery files a host serves - llms.txt, agent card, mcp.json. Free, no key, no signup. Names the validators observed asking for each one, says what a 404 costs, and validates or drafts the documents from pasted text. Call whoami first: no arguments at all, and it answers about the request you just sent. example is the other zero-argument tool — it runs a worked answer.",
+      "websiteUrl": "https://www.pathwren.workers.dev/mcp-doctor.html"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/doctor"
+}

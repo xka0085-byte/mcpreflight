@@ -1,0 +1,65 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:15.959Z",
+  "server": {
+    "registryName": "cz.studionatali-ricany/booking",
+    "title": "Studio Natali – hair salon booking (Říčany, CZ)",
+    "description": "Book a haircut with Vilma Strakatá, Studio Natali Říčany (CZ): prices, free times, SMS-verified.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://studionatali-ricany.cz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "studio-natali-booking",
+      "title": "Studio Natali – rezervace u kadeřnice Vilmy Strakaté",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].serviceIds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].hairdresserId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].customerName has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].customerEmail has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].note has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].verificationToken has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].smsCode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://studionatali-ricany.cz/mcp"
+}

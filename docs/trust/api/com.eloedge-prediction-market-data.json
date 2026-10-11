@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:00.634Z",
+  "server": {
+    "registryName": "com.eloedge/prediction-market-data",
+    "title": "EloEdge Data: prediction-market and price history",
+    "description": "SQL over 2.2B rows: settled Kalshi and Polymarket markets, 1-second crypto prices, sports and more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://eloedge.com/api/mcp-data/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://eloedge.com/api/mcp-data/mcp"
+}

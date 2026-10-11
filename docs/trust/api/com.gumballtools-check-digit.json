@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:49.590Z",
+  "server": {
+    "registryName": "com.gumballtools/check-digit",
+    "title": "Check Digit Validator",
+    "description": "Validates IBAN/ISBN/EAN/Luhn checksums and finds the one wrong digit",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://check-digit.gumballtools.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "check-digit",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://check-digit.gumballtools.com/api/mcp"
+}

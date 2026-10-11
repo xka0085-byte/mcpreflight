@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:04.728Z",
+  "server": {
+    "registryName": "com.whichtrim/vehicle-records",
+    "title": "WhichTrim vehicle records",
+    "description": "US vehicle recalls, complaints, EPA figures, VIN decode and trouble codes, with sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://whichtrim.com/portal/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "whichtrim",
+      "title": "WhichTrim vehicle records",
+      "version": "1.2.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://whichtrim.com/portal/mcp"
+}

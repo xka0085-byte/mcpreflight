@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:50.069Z",
+  "server": {
+    "registryName": "com.diglabo/kanji-prints",
+    "title": "diglabo 漢字プリント",
+    "description": "Kanji worksheets (Kanken 10-2, radicals, antonyms, yojijukugo, wrong kanji). Review link, no login.",
+    "registryVersion": "0.2.24"
+  },
+  "endpoint": "https://api.diglabo.com/kanji/mcp-guest",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "diglabo-kanji",
+      "version": "0.2.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].chars has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.diglabo.com/kanji/mcp-guest"
+}

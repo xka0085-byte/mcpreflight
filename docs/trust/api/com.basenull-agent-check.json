@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:02.882Z",
+  "server": {
+    "registryName": "com.basenull/agent-check",
+    "title": "agent-check",
+    "description": "Process monitoring for AI agents: start runs, submit per-task evidence, complete runs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agent-check.basenull.com/api/mcp/{token}",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agent-check.basenull.com/api/mcp/{token}"
+}

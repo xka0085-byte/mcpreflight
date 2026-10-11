@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:52.975Z",
+  "server": {
+    "registryName": "by.ai-belarus/registry",
+    "title": "AI-BELARUS — Belarus business registry",
+    "description": "Belarusian companies by UNP: state registry answers with source and sha256 for every fact.",
+    "registryVersion": "1.19.0"
+  },
+  "endpoint": "https://ai-belarus.by/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Belarusian business entities by UNP with provenance: state registry answers, source and sha256 for every statement, withheld fields named.",
+      "name": "by.ai-belarus/registry",
+      "title": "AI-BELARUS — Belarus business registry",
+      "version": "1.20.0",
+      "websiteUrl": "https://ai-belarus.by"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].unp has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].unp has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://ai-belarus.by/mcp"
+}

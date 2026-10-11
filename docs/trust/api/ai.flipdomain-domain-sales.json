@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:17.259Z",
+  "server": {
+    "registryName": "ai.flipdomain/domain-sales",
+    "title": "FlipDomain Domain Sales",
+    "description": "Search 2,972 premium domains by keyword, category, TLD, and budget, then submit offers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://flipdomain.ai/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://flipdomain.ai/mcp"
+}

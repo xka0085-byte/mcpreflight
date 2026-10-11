@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:30.872Z",
+  "server": {
+    "registryName": "com.lazyweb/discovery",
+    "title": "Lazyweb Public Discovery",
+    "description": "Keyless, read-only Lazyweb discovery for agents evaluating fit or researching public evidence.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.lazyweb.com/mcp/public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Lazyweb",
+      "version": "0.1.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].payload has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.lazyweb.com/mcp/public"
+}

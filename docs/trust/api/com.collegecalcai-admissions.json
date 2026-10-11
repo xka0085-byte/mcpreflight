@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:30.259Z",
+  "server": {
+    "registryName": "com.collegecalcai/admissions",
+    "title": "CollegeCalcAI",
+    "description": "Admission chances at 1,100+ U.S. colleges, college list scoring, and federal admissions data.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://collegecalcai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "collegecalcai",
+      "title": "CollegeCalcAI",
+      "version": "1.1.0",
+      "websiteUrl": "https://collegecalcai.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://collegecalcai.com/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:27.743Z",
+  "server": {
+    "registryName": "com.gamerspilot/steam",
+    "title": "GamersPilot — Steam library tools",
+    "description": "Steam backlog, account value, buy-or-skip verdicts and Steam Machine checks. Hosted, keyless.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.gamerspilot.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gamerspilot",
+      "title": "GamersPilot",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].profiles has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.gamerspilot.com/mcp"
+}

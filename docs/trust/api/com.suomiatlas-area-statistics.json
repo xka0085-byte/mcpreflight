@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:03.036Z",
+  "server": {
+    "registryName": "com.suomiatlas/area-statistics",
+    "title": "Suomiatlas — Finnish area statistics",
+    "description": "Finnish postal-area and municipality statistics; rank, compare, history, air quality, nearby places",
+    "registryVersion": "0.8.0"
+  },
+  "endpoint": "https://suomiatlas.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "suomiatlas",
+      "version": "0.8.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://suomiatlas.com/api/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:48.455Z",
+  "server": {
+    "registryName": "br.com.babacerta/babacerta",
+    "title": "Babá Certa",
+    "description": "Encontre babás por cidade e calcule o custo da contratação e o salário líquido no Brasil.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://plugin.babacerta.com.br/claude/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "babacerta",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].dependentes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].dependentes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://plugin.babacerta.com.br/claude/mcp"
+}

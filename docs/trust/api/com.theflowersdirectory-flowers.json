@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:20.079Z",
+  "server": {
+    "registryName": "com.theflowersdirectory/flowers",
+    "title": "com.theflowersdirectory/flowers",
+    "description": "Find flower arrangements, check US florist delivery by ZIP and date, get a purchase link + pricing",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.theflowersdirectory.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "the-flowers-directory",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.theflowersdirectory.com/mcp"
+}

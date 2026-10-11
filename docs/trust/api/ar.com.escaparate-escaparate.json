@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:38.183Z",
+  "server": {
+    "registryName": "ar.com.escaparate/escaparate",
+    "title": "ar.com.escaparate/escaparate",
+    "description": "Conectá tu cuenta de Escaparate y manejá catálogo, ventas, novedades e imágenes conversando.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://escaparate.com.ar/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "escaparate",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].pagina has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].por_pagina has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://escaparate.com.ar/mcp"
+}

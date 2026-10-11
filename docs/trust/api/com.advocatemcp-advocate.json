@@ -1,0 +1,42 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:34.530Z",
+  "server": {
+    "registryName": "com.advocatemcp/advocate",
+    "title": "AdvocateMCP",
+    "description": "MCP layer for local businesses: discover, query, book, and transact with verified SMB AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.advocatemcp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "advocate",
+      "version": "1.5.0",
+      "title": "Advocate",
+      "description": "Find participating local businesses, read their published services and policies, and request a quote or callback. Eligible businesses offer a quote-request form. Other tools support configured availability, reservation requests, pending subscriptions and human handoffs. Price estimates and business-agent answers may use AI; a quote request does not confirm a price or booking.",
+      "websiteUrl": "https://app.advocatemcp.com"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].contact_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].contact_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].contact_phone has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.advocatemcp.com/mcp"
+}

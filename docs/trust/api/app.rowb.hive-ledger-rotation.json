@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:24.631Z",
+  "server": {
+    "registryName": "app.rowb.hive-ledger/rotation",
+    "title": "Hive Ledger — deterministic varroa treatment rotation",
+    "description": "Checks a beekeeping varroa treatment rotation for resistance risk and withdrawal-period conflicts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hive-ledger.rowb.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "hive-ledger",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hive-ledger.rowb.app/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:10.439Z",
+  "server": {
+    "registryName": "app.hadl/portfolio",
+    "title": "HADL — портфельный трекер",
+    "description": "Учёт инвестиций в HADL: портфель, доходность, сделки, импорт отчётов брокеров, скринеры Мосбиржи",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://back.hadl.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://back.hadl.app/mcp"
+}

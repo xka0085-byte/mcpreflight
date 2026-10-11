@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:59.878Z",
+  "server": {
+    "registryName": "ch.servicekuhn/service-rechner",
+    "title": "Porsche Service Calculator (Garage Kuhn)",
+    "description": "Next Porsche service date, mileage and scope from public Porsche maintenance plans. Read-only.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://servicekuhn.ch/wp-json/kuhn-sr/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kuhn-service-rechner",
+      "title": "Garage Kuhn Service-Rechner",
+      "version": "1.2.0",
+      "websiteUrl": "https://servicekuhn.ch/leistungen/service-rechner/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://servicekuhn.ch/wp-json/kuhn-sr/v1/mcp"
+}

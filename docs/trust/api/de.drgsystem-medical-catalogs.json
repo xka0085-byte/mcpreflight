@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:19.842Z",
+  "server": {
+    "registryName": "de.drgsystem/medical-catalogs",
+    "title": "DRGSystem — German medical coding catalogs",
+    "description": "ICD-10-GM, OPS, DRG, ZE, PEPP, DKR, SEG-4, ATC lookup for German coding, 2010-2027",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.drgsystem.de/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.drgsystem.de/mcp"
+}

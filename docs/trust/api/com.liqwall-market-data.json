@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:34.404Z",
+  "server": {
+    "registryName": "com.liqwall/market-data",
+    "title": "Liqwall market data",
+    "description": "Crypto market data: order-book walls of 14 exchanges, liquidations, Hyperliquid whales and stops.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://liqwall.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://liqwall.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:40.537Z",
+  "server": {
+    "registryName": "com.penguindriver/travel",
+    "title": "2027 連假與訂票指南",
+    "description": "2027 連假與訂票指南：2027 連假請假攻略與訂票時程。台灣繁體中文 MCP 工具。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://travel.penguindriver.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tw-travel-2027",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://travel.penguindriver.com/mcp"
+}

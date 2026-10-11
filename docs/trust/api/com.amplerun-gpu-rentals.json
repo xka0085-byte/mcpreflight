@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:48.376Z",
+  "server": {
+    "registryName": "com.amplerun/gpu-rentals",
+    "title": "AmpleRun GPU rentals",
+    "description": "Find, price, rent and stop GPUs on AmpleRun. Paid in USDC or USDT on Base. Flat 5% fee.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://amplerun.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "amplerun",
+      "title": "AmpleRun GPU rentals",
+      "version": "0.1.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].agent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].scopes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://amplerun.com/api/mcp"
+}

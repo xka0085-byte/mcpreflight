@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:02.187Z",
+  "server": {
+    "registryName": "com.homeoceutics/catalog",
+    "title": "Catalogue Homeoceutics / Homeoceutics Catalog",
+    "description": "Catalogue public anonyme en lecture seule. Anonymous, read-only public catalog.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://homeoceutics.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "homeoceutics-catalog",
+      "title": "Catalogue Homeoceutics / Homeoceutics Catalog",
+      "version": "1.1.0",
+      "websiteUrl": "https://homeoceutics.com/fr/mcp",
+      "description": "FR : Consultation anonyme, en lecture seule, des titres et métadonnées du catalogue Homeoceutics. EN: Anonymous, read-only access to Homeoceutics catalog titles and metadata."
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://homeoceutics.com/api/v1/mcp"
+}

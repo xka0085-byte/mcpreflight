@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:12.625Z",
+  "server": {
+    "registryName": "co.lovie/company-formation",
+    "title": "Lovie Company Formation",
+    "description": "Form companies, manage bank accounts, cards, invoices and more — directly from your AI coding tools.",
+    "registryVersion": "1.0.10"
+  },
+  "endpoint": "https://mcp.lovie.co/mcp/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "lovie",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.lovie.co/mcp/mcp"
+}

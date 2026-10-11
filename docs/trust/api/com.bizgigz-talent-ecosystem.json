@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:07.301Z",
+  "server": {
+    "registryName": "com.bizgigz/talent-ecosystem",
+    "title": "com.bizgigz/talent-ecosystem",
+    "description": "BizGigz Talent Ecosystem - AI-powered recruiting, interviews, onboarding, learning, and deal rooms",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://bizgigz.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bizgigz.com/mcp"
+}

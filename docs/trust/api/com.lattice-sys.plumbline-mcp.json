@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:30.025Z",
+  "server": {
+    "registryName": "com.lattice-sys.plumbline/mcp",
+    "title": "Plumbline — a trust layer for LLM answers",
+    "description": "Every figure re-checked against SQL-computed facts; unsupported questions refused with the reason.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://plumbline.lattice-sys.com/mcp/demo",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "prompto:plumbline",
+      "version": "0.2.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://plumbline.lattice-sys.com/mcp/demo"
+}

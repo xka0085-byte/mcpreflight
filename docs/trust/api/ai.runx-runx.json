@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:28.232Z",
+  "server": {
+    "registryName": "ai.runx/runx",
+    "title": "runx",
+    "description": "The governed runtime for agent skills. Search the catalog and inspect a skill before running it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.runx.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "runx",
+      "version": "1.0.0",
+      "title": "runx",
+      "description": "Search the runx skill catalog and read what a skill actually is before running it: its manifest, the authority it requests, its trust signals, and the exact command to install it. runx is the governed runtime for agent skills, where the skill being run is explicit, the authority granted to it is bounded, consequential actions pass through a gate, and every run leaves a signed receipt.",
+      "websiteUrl": "https://runx.ai",
+      "icons": [
+        {
+          "src": "https://runx.ai/assets/logo/runx-symbol-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://runx.ai/assets/logo/runx-symbol-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.runx.ai/mcp"
+}

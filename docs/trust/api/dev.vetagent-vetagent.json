@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:59.436Z",
+  "server": {
+    "registryName": "dev.vetagent/vetagent",
+    "title": "dev.vetagent/vetagent",
+    "description": "Pre-trade safety check for AI agents: honeypot, tax, liquidity and rug risk before you buy.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://vetagent.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "vetagent",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://vetagent.dev/mcp"
+}

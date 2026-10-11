@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:28.380Z",
+  "server": {
+    "registryName": "com.satmarin/catalog",
+    "title": "com.satmarin/catalog",
+    "description": "Maritime VSAT spares: part search, fitment, supersession and quote requests for satmarin.com",
+    "registryVersion": "0.2"
+  },
+  "endpoint": "https://satmarin.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "satmarin-catalog",
+      "version": "0.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].contact has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://satmarin.com/mcp"
+}

@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:06.286Z",
+  "server": {
+    "registryName": "ai.justbidit/bidit",
+    "title": "Bidit",
+    "description": "Get private offers from local businesses in Canada for a job you describe, then choose on Bidit.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://justbidit.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Post a local service request to Bidit; local businesses compete with private offers.",
+      "name": "bidit",
+      "title": "Bidit",
+      "version": "0.1.0",
+      "websiteUrl": "https://justbidit.ai"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].urgency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].urgency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://justbidit.ai/mcp"
+}

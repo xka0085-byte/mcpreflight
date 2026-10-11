@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:57.039Z",
+  "server": {
+    "registryName": "dev.turva/turva-mcp",
+    "title": "dev.turva/turva-mcp",
+    "description": "Read-only MCP server for turva.dev, an agent-readiness audit and advisory service.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.turva.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "turva-mcp",
+      "title": "turva.dev",
+      "version": "1.6.16",
+      "description": "Public read-only MCP server for turva.dev. Exposes the service catalog (Shopify agent storefront check, audit, advisory, implementation, agent operations, MCP server design) with prices, own-domain agent-readiness and web-security scan evidence, and engagement principles (async-only, no calls, no calendar links). No authentication, no write operations.",
+      "websiteUrl": "https://turva.dev/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.turva.dev/mcp"
+}

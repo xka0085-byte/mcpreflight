@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:28.668Z",
+  "server": {
+    "registryName": "dev.aieph/aieph",
+    "title": "dev.aieph/aieph",
+    "description": "Shared knowledge cache for AI coding agents — reuse an answer once it exists.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://aieph.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aieph-search",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].session has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://aieph.dev/mcp"
+}

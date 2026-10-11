@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:45.377Z",
+  "server": {
+    "registryName": "dev.pages.ronventures/local-pros",
+    "title": "Local Pros by Ron Ventures",
+    "description": "Find owner-operated plumbers, HVAC techs, electricians and roofers in OK, KS, NE, IA and MO.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ronventures.pages.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ron-ventures-local-pros",
+      "version": "0.3.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].customer_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://ronventures.pages.dev/mcp"
+}

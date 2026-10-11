@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:56.941Z",
+  "server": {
+    "registryName": "com.virtualdataroomcompare/site",
+    "title": "com.virtualdataroomcompare/site",
+    "description": "Virtual Data Room Compare: the site's own MCP server — compare; every answer cites the site.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://virtualdataroomcompare.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Virtual Data Room Compare (virtualdataroomcompare.com)",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].filterKey has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].filterValue has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://virtualdataroomcompare.com/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:02.557Z",
+  "server": {
+    "registryName": "cloud.freebase/freebase",
+    "title": "freebase.cloud",
+    "description": "Free cloud databases over MCP: query, store, list and annotate across 15 engines.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://freebase.cloud/api/mcp/{token}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://freebase.cloud/api/mcp/{token}"
+}

@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:33.544Z",
+  "server": {
+    "registryName": "app.veteranhq/va-disability-benefits",
+    "title": "VeteranHQ",
+    "description": "VA disability rating and compensation calculations, condition lookup, and 38 CFR authority search",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.veteranhq.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "veteranhq",
+      "version": "0.1.0",
+      "websiteUrl": "https://veteranhq.app",
+      "icons": [
+        {
+          "src": "https://api.veteranhq.app/mcp/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        },
+        {
+          "src": "https://api.veteranhq.app/mcp/icon-64.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "64x64"
+          ]
+        }
+      ]
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "13 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.veteranhq.app/mcp"
+}

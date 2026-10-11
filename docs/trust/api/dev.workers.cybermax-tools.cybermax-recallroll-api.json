@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:03.057Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/recallroll-api",
+    "title": "Recallroll",
+    "description": "VIN recall API + MCP: VIN decode + every NHTSA recall, Do Not Drive first. $19/mo; 50 free/day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://recallroll-api.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "recallroll-api",
+      "title": "Recallroll by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://recallroll-api.cybermaxtools.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].full has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].full has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://recallroll-api.cybermaxtools.com/mcp?via=mcp-registry"
+}

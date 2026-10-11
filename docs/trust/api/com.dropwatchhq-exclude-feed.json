@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:55.019Z",
+  "server": {
+    "registryName": "com.dropwatchhq/exclude-feed",
+    "title": "com.dropwatchhq/exclude-feed",
+    "description": "Screen a business for federal exclusions & sanctions: OFAC SDN, HHS-OIG LEIE, SAM.gov debarment.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://exclude.dropwatchhq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "exclude-feed",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].npi has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://exclude.dropwatchhq.com/mcp"
+}

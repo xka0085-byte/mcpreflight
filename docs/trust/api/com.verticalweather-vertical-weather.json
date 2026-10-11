@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:53.075Z",
+  "server": {
+    "registryName": "com.verticalweather/vertical-weather",
+    "title": "Vertical Weather",
+    "description": "Wind, temperature, pressure, humidity and air density at chosen heights, from NOAA GFS.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.verticalweather.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Vertical Weather",
+      "version": "",
+      "websiteUrl": "https://verticalweather.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.verticalweather.com/mcp"
+}

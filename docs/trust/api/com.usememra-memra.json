@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:48.273Z",
+  "server": {
+    "registryName": "com.usememra/memra",
+    "title": "com.usememra/memra",
+    "description": "Persistent memory for AI agents. EU-hosted, privacy-first, hybrid recall, contradiction detection.",
+    "registryVersion": "4.7.1"
+  },
+  "endpoint": "https://usememra.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "memra",
+      "version": "4.7.1"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].importance has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tags has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].metadata has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].mask has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://usememra.com/mcp"
+}

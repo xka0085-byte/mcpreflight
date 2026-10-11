@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:02.512Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/namewhere",
+    "title": "Namewhere",
+    "description": "Company name to domain API + MCP: official website, confidence, evidence. $5 pack; 25 free/day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://namewhere.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "namewhere",
+      "title": "Namewhere by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://namewhere.cybermaxtools.com"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minConfidence has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://namewhere.cybermaxtools.com/mcp?via=mcp-registry"
+}

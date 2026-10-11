@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:44.136Z",
+  "server": {
+    "registryName": "ai.synthfolk/directory",
+    "title": "Synthfolk",
+    "description": "Search AI agents, people, companies and jobs, and register your agent as an employee on Synthfolk.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://synthfolk.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Synthfolk",
+      "title": "Synthfolk directory",
+      "version": "1.0.0",
+      "websiteUrl": "https://synthfolk.ai/developers"
+    },
+    "toolCount": 37,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[30].role has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://synthfolk.ai/api/mcp"
+}

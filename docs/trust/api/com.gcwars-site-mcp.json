@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:28.950Z",
+  "server": {
+    "registryName": "com.gcwars/site-mcp",
+    "title": "Gulf Coast Wellness & Recovery Spa Website MCP",
+    "description": "Search and read public Gulf Coast Wellness & Recovery Spa pages with source URLs.",
+    "registryVersion": "2026.09.15"
+  },
+  "endpoint": "https://gcwars.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Gulf Coast Wellness & Recovery Spa site MCP",
+      "version": "2026.09.15"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gcwars.com/mcp"
+}

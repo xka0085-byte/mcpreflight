@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:45.265Z",
+  "server": {
+    "registryName": "ai.theautomators/mcp",
+    "title": "The Automators",
+    "description": "Read-only MCP server for The Automators: services, pricing, industries, case studies, calculators.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.theautomators.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ai.theautomators/mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].processes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.theautomators.ai/mcp"
+}

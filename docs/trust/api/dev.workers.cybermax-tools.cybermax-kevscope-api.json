@@ -1,0 +1,61 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:02.604Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/kevscope-api",
+    "title": "Kevscope",
+    "description": "CVE patch-priority API + MCP: CISA KEV, EPSS, CVSS, SSVC. Keys $19/mo; 200 free calls/day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://kevscope-api.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kevscope-api",
+      "title": "Kevscope API by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://kevscope-api.cybermaxtools.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].full has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].vendor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ransomware has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].minEpss has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://kevscope-api.cybermaxtools.com/mcp?via=mcp-registry"
+}

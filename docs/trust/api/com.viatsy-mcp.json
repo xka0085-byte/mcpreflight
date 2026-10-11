@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:54.509Z",
+  "server": {
+    "registryName": "com.viatsy/mcp",
+    "title": "Viatsy",
+    "description": "Search Asia travel tours, browse guides, request quotes, find upcoming group departures.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://viatsy.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "viatsy-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].featured has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://viatsy.com/mcp"
+}

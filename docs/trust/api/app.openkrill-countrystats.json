@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:19.184Z",
+  "server": {
+    "registryName": "app.openkrill/countrystats",
+    "title": "Country Stats Facts",
+    "description": "Official economic and demographic figures for a country, with IMF projections and World Bank data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://countrystats.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "countrystats",
+      "title": "Country Stats Facts: Country data: World Bank, IMF",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://countrystats.openkrill.app/mcp"
+}

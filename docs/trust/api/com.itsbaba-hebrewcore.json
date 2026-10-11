@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:13.693Z",
+  "server": {
+    "registryName": "com.itsbaba/hebrewcore",
+    "title": "HebrewCore by baba Hebrew",
+    "description": "Hebrew translation that keeps prices, names and dates exact, RTL display, nikud, clinical Hebrew.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hc.itsbaba.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hebrewcore",
+      "version": "1.0.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].terms has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hc.itsbaba.com/mcp"
+}

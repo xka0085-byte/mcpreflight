@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:40.861Z",
+  "server": {
+    "registryName": "dev.kaneky/depcheck",
+    "title": "Depcheck",
+    "description": "Known vulnerabilities for exact package versions from OSV, with fixes. Paid per call, x402.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://depcheck.kaneky.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "depcheck",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].packages has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://depcheck.kaneky.dev/mcp"
+}

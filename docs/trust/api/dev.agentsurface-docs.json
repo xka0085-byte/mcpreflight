@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:28.206Z",
+  "server": {
+    "registryName": "dev.agentsurface/docs",
+    "title": "Agent Surface",
+    "description": "Search and read the Agent Surface guide to making websites, apps, APIs and CLIs work with AI agents.",
+    "registryVersion": "2.3.0"
+  },
+  "endpoint": "https://agentsurface.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agentsurface-docs",
+      "version": "2.3.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].locale has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentsurface.dev/mcp"
+}

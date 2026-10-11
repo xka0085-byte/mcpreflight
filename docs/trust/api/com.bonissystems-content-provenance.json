@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:09.926Z",
+  "server": {
+    "registryName": "com.bonissystems/content-provenance",
+    "title": "Content Provenance",
+    "description": "Anchor a content-creation event to the Knox chain; returns a C2PA-aligned, FRE 902-shaped bundle.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bonissystems.com/api/knox/agents/content-provenance/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "content-provenance",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bonissystems.com/api/knox/agents/content-provenance/mcp"
+}

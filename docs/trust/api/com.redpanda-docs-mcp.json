@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:12.107Z",
+  "server": {
+    "registryName": "com.redpanda/docs-mcp",
+    "title": "com.redpanda/docs-mcp",
+    "description": "Get authoritative answers about Redpanda documentation and search API references.",
+    "registryVersion": "2026.907.213"
+  },
+  "endpoint": "https://docs.redpanda.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Redpanda Docs MCP",
+      "version": "1.3.2"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].question has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://docs.redpanda.com/mcp"
+}

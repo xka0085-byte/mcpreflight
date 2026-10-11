@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:40.331Z",
+  "server": {
+    "registryName": "com.aidemos/catalogue",
+    "title": "FutureSmart AI Demos",
+    "description": "Search evidence-backed AI-tool reviews, rankings, use cases, comparisons & toolkits (read-only).",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://mcp.aidemos.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aidemos-mcp",
+      "version": "2.0.0"
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].verdict has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].evidence has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.aidemos.com/mcp"
+}

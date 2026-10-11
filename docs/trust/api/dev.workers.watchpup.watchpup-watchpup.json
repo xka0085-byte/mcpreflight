@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:07.357Z",
+  "server": {
+    "registryName": "dev.workers.watchpup.watchpup/watchpup",
+    "title": "Watchpup",
+    "description": "Free uptime monitoring: HTTP/TCP/TLS/DNS + MCP server checks, cron heartbeats, status pages, alerts.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://watchpup.watchpup.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://watchpup.watchpup.workers.dev/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:17.892Z",
+  "server": {
+    "registryName": "com.canhelpto/support",
+    "title": "canhelpto support inbox",
+    "description": "Customer support for MCP servers: work your tickets from Claude or any MCP client. Service key auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://canhelpto.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://canhelpto.com/api/mcp"
+}

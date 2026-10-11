@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:37.794Z",
+  "server": {
+    "registryName": "ar.com.consignatarias/cattle-market",
+    "title": "ar.com.consignatarias/cattle-market",
+    "description": "Mercado ganadero argentino y la brecha de precio contra EE.UU., Uruguay y Australia.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://www.consignatarias.com.ar/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "consignatarias",
+      "title": "Consignatarias — Mercado Ganadero Argentino",
+      "version": "1.7.0",
+      "websiteUrl": "https://www.consignatarias.com.ar/mcp"
+    },
+    "toolCount": 28,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].categoria has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].grupo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].categoria has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.consignatarias.com.ar/api/mcp"
+}

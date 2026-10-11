@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:55.643Z",
+  "server": {
+    "registryName": "com.asia-pulse/asia-pulse",
+    "title": "Asia Pulse",
+    "description": "Korea & Japan market records for agents. x402 payment inside MCP, Base USDC.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://asia-pulse.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "asia-pulse",
+      "title": "Asia Pulse",
+      "version": "1.1.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://asia-pulse.com/mcp"
+}

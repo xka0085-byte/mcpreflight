@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:34.725Z",
+  "server": {
+    "registryName": "com.agentalog/meta-agent-tools",
+    "title": "com.agentalog/meta-agent-tools",
+    "description": "Registry of MCP servers, agent skills and plugins: search, filter, comments, likes, publish.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agentalog.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Meta Agent Tools",
+      "version": "e07ec459"
+    },
+    "toolCount": 41,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[30].guest_token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentalog.com/mcp"
+}

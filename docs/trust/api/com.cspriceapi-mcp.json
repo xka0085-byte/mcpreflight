@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:40.486Z",
+  "server": {
+    "registryName": "com.cspriceapi/mcp",
+    "title": "CSPriceAPI – CS2 skin prices",
+    "description": "Live CS2 skin prices: BUFF163, YouPin, Skinport, CSFloat, Steam and 8 more markets, Doppler phases",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.cspriceapi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cspriceapi",
+      "title": "CSPriceAPI – CS2 skin prices",
+      "version": "0.1.0",
+      "websiteUrl": "https://cspriceapi.com/docs/mcp"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].phase has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].market_hash_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].market_hash_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].marketplace has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].float_min has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].float_max has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.cspriceapi.com/mcp"
+}

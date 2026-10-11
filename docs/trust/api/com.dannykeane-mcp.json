@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:43.610Z",
+  "server": {
+    "registryName": "com.dannykeane/mcp",
+    "title": "Danny Keane",
+    "description": "Danny Keane's profile as read-only tools: background, work history, contact, and site pages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dannykeane.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "dannykeane.com",
+      "title": "Danny Keane",
+      "version": "1.0.0",
+      "description": "Danny Keane's profile as typed, read-only tools: background, work history, contact, and site pages. The site's documentation has its own server at https://dannykeane.com/docs/mcp.",
+      "websiteUrl": "https://dannykeane.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://dannykeane.com/mcp"
+}

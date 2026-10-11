@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:53.731Z",
+  "server": {
+    "registryName": "dev.specpilot/specpilot",
+    "title": "SpecPilot",
+    "description": "Generate and validate a .specs/ bundle for your repo, then hand it to your AI coding agent",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://init.specpilot.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "specpilot",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].answers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].answers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://init.specpilot.dev/mcp"
+}

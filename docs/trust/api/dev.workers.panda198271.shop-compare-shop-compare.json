@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:05.134Z",
+  "server": {
+    "registryName": "dev.workers.panda198271.shop-compare/shop-compare",
+    "title": "購物比價紀錄",
+    "description": "台灣購物網站 3C、美妝、家電商品目前售價（新台幣）與歷史價格查詢。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://shop-compare.panda198271.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tw-shop-prices",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://shop-compare.panda198271.workers.dev/mcp"
+}

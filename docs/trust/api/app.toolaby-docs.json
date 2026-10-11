@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:32.295Z",
+  "server": {
+    "registryName": "app.toolaby/docs",
+    "title": "Toolaby docs",
+    "description": "Search and read Toolaby's docs: payments, licences and paywalls for Chrome extensions.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://toolaby.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "toolaby",
+      "title": "Toolaby docs",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://toolaby.app/api/mcp"
+}

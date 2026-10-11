@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:06.270Z",
+  "server": {
+    "registryName": "app.eurocomply/compliance",
+    "title": "EuroComply — EU Regulatory Compliance",
+    "description": "EU regulatory compliance data: 17 regulations, deadlines, enforcement actions. EU-hosted.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://eurocomply.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "eurocomply",
+      "version": "0.5.0",
+      "description": "Canonical EU regulatory compliance dataset covering 20+ regulations (GDPR, AI Act, NIS2, DORA, CRA, Data Act, DMA, DSA, EAA, Pay Transparency, ePrivacy, Whistleblower, MiCA, eIDAS 2, Product Liability, CSRD, CSDDD). Quarterly-reviewed, EUR-Lex sourced. EU-hosted.",
+      "homepage": "https://eurocomply.app"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "12 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://eurocomply.app/api/mcp"
+}

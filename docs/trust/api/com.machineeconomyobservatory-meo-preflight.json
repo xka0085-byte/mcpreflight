@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:39.874Z",
+  "server": {
+    "registryName": "com.machineeconomyobservatory/meo-preflight",
+    "title": "MEO Preflight",
+    "description": "Read-only machine payment preflight using dated MEO evidence, with explicit unknowns.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://api.machineeconomyobservatory.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "meo-preflight",
+      "version": "0.2.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.machineeconomyobservatory.com/mcp"
+}

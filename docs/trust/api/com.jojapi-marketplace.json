@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:19.345Z",
+  "server": {
+    "registryName": "com.jojapi/marketplace",
+    "title": "com.jojapi/marketplace",
+    "description": "Search the JoJ API marketplace, read endpoint docs, and call any API with one key via one gateway.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.jojapi.com",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "jojapi",
+      "title": "JoJ API Marketplace",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.jojapi.com"
+}

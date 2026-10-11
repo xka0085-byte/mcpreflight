@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:09.693Z",
+  "server": {
+    "registryName": "ai.last-price/pricing",
+    "title": "Last Price",
+    "description": "Compute and verify prices from an agent, metered per call. Works keyless on a demo tenant.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://api.last-price.ai/api/mcp/rpc",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "lastprice-mcp",
+      "version": "0.5.0"
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].answers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.last-price.ai/api/mcp/rpc"
+}

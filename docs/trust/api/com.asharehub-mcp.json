@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:54.056Z",
+  "server": {
+    "registryName": "com.asharehub/mcp",
+    "title": "AShareHub — Chinese A-Share Market Data",
+    "description": "Cloud MCP server for Chinese A-share and ETF market data, news, financials and capital flows.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://asharehub.com/mcp/sse?api_key={api_key}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://asharehub.com/mcp/sse?api_key={api_key}"
+}

@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:44.218Z",
+  "server": {
+    "registryName": "com.datakoot/koot-briefings",
+    "title": "Koot by Datakoot",
+    "description": "One-call briefings for AI agents: dependency risk (KEV/EPSS), SEC companies, domains, US places.",
+    "registryVersion": "1.2.2"
+  },
+  "endpoint": "https://koot.datakoot.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "koot",
+      "title": "Koot by Datakoot",
+      "version": "1.2.2"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].packages has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].companies has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].all has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].stop_alerts has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://koot.datakoot.com/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:17.586Z",
+  "server": {
+    "registryName": "com.o11r/daleel",
+    "title": "com.o11r/daleel",
+    "description": "Halal stock screening with receipts: every Sharia verdict cites its SEC filing. 5 methodologies.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://daleel.o11r.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Daleel Halal Screening",
+      "version": "0.3.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].ticker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].use_case has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://daleel.o11r.com/mcp"
+}

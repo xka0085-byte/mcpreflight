@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:48.095Z",
+  "server": {
+    "registryName": "br.com.juspronto/conector",
+    "title": "Conector Juspronto",
+    "description": "Juspronto connector for Claude and ChatGPT: Brazilian law-firm cases, deadlines, agenda, case files.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.juspronto.com.br/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.juspronto.com.br/api/mcp"
+}

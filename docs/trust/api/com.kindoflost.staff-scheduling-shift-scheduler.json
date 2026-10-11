@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:25.316Z",
+  "server": {
+    "registryName": "com.kindoflost.staff-scheduling/shift-scheduler",
+    "title": "Shift Scheduler",
+    "description": "Builds optimal 24/7 staff rosters with a real MILP solver: rest rules, skills, nights, fairness.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://staff-scheduling.kindoflost.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kindoflost-shift-scheduler",
+      "title": "Kind of Lost — Staff Shift Scheduler",
+      "version": "1.0.0",
+      "websiteUrl": "https://staff-scheduling.kindoflost.com/mcp-server"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].people has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].job_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].wait_seconds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://staff-scheduling.kindoflost.com/mcp"
+}

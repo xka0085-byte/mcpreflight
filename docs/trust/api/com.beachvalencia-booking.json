@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:03.661Z",
+  "server": {
+    "registryName": "com.beachvalencia/booking",
+    "title": "com.beachvalencia/booking",
+    "description": "Beach Valencia holiday apartments (Valencia, Spain): availability, pricing, cancellation policy.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.beachvalencia.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "beachvalencia",
+      "title": "Beach Valencia — Direct booking (read-only)",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].adults has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].children has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.beachvalencia.com/api/mcp"
+}

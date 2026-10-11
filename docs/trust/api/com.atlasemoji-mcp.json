@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:57.044Z",
+  "server": {
+    "registryName": "com.atlasemoji/mcp",
+    "title": "Atlasemoji",
+    "description": "AI-ready GIS, geofencing, DataSynch, CRM, inventory, routing, APIs, telemetry and workflows.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://atlasemoji.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Atlasemoji MCP",
+      "version": "0.2.0"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].companyId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].agentId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].connectionId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].manifestId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://atlasemoji.com/api/mcp"
+}

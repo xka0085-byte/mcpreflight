@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:48.869Z",
+  "server": {
+    "registryName": "com.anchoredip/anchoredip",
+    "title": "AnchoredIP",
+    "description": "Dedicated static outbound IPv4 over WireGuard. Free 7-day trial, no card, no sales call.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.anchoredip.com/api/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "anchoredip",
+      "version": "1.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].organization_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].billing_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].address has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.anchoredip.com/api/mcp/"
+}

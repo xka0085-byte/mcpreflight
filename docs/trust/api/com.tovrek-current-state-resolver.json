@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:33.573Z",
+  "server": {
+    "registryName": "com.tovrek/current-state-resolver",
+    "title": "TOVREK Current-State Resolver",
+    "description": "Verify DOI metadata before autonomous action; preserve conflicts, provenance, and UNKNOWN.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://tovrek.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Pre-action evidence gate for Crossref records whose record type is standard: determine what the currently available technical/industry-standard DOI metadata supports before an autonomous system cites, stores, publishes, ingests, or otherwise acts, while preserving provenance, conflicts, unresolved evidence, and explicit UNKNOWN.",
+      "name": "TOVREK",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tovrek.com/mcp"
+}

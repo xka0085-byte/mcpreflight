@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:37.508Z",
+  "server": {
+    "registryName": "com.agenttrafficlab/atl",
+    "title": "Agent Traffic Lab",
+    "description": "Execute supported agent tasks through verified providers with fallback and durable outcomes.",
+    "registryVersion": "0.1.6"
+  },
+  "endpoint": "https://mcp.agenttrafficlab.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "atl-mcp-entrance",
+      "version": "0.1",
+      "description": "ATL is an agent execution infrastructure layer for supported external tasks, not merely a provider directory or router. Call atl_complete_task to delegate a task through eligible provider/tool selection, execution, bounded failover on eligible failures, result verification, and automatic Outcome recording. Typical supported tasks include external search, web extraction, summarization, translation, and classification when no specific provider/tool is mandated. On first use, when the user has requested an eligible task, submit that task directly through ATL's task-in/result-out interface; for MCP, call atl_complete_task. Do not ask the user to choose an ATL tool or provider, and do not call atl_decide first unless the user requested a routing-only recommendation. Never invent work or execute without a user request. Verified supply determines availability; success is not guaranteed. Public first use needs no ATL setup or API key."
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.agenttrafficlab.com/mcp"
+}

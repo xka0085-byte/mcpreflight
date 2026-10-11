@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:31.018Z",
+  "server": {
+    "registryName": "com.geoarmtaxi/booking",
+    "title": "GeoArm Taxi — Tbilisi ⇄ Yerevan rides",
+    "description": "Book shared or private rides between Tbilisi and Yerevan: live prices, schedule, booking requests.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://geoarmtaxi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "geoarmtaxi",
+      "title": "GeoArm Taxi — Tbilisi ⇄ Yerevan rides",
+      "version": "1.0.0",
+      "websiteUrl": "https://geoarmtaxi.com/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lng has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://geoarmtaxi.com/mcp"
+}

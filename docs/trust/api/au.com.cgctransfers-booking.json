@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:41.481Z",
+  "server": {
+    "registryName": "au.com.cgctransfers/booking",
+    "title": "CGC Airport Transfers",
+    "description": "Fixed-price quotes and bookings for private airport transfers: Gold Coast, Brisbane, Byron Bay.",
+    "registryVersion": "1.2.5"
+  },
+  "endpoint": "https://cgctransfers.com.au/wp-json/cgc-gateway/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cgc-agent-gateway",
+      "title": "CGC Airport Transfers",
+      "version": "1.2.6",
+      "websiteUrl": "https://cgctransfers.com.au/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].pickup has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].dropoff has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].pax has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].flight has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].notes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cgctransfers.com.au/wp-json/cgc-gateway/v1/mcp"
+}

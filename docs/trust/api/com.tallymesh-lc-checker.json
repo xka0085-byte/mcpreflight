@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:12.755Z",
+  "server": {
+    "registryName": "com.tallymesh/lc-checker",
+    "title": "com.tallymesh/lc-checker",
+    "description": "Check a letter-of-credit document set for UCP600/ISBP discrepancies before the bank does.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tallymesh.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tallymesh",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].job_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tallymesh.com/mcp"
+}

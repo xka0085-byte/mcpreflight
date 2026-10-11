@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:32.395Z",
+  "server": {
+    "registryName": "app.vercel.krankenkasse-copilot/krankenkasse-copilot",
+    "title": "Krankenkasse Copilot",
+    "description": "Swiss health insurance 2027: rank every insurer, model and deductible with official BAG data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://krankenkasse-copilot.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "krankenkasse-copilot",
+      "title": "Krankenkasse Copilot",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].full_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].street has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].current_insurer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].insurer_address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].insurance_number has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].birth_date has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://krankenkasse-copilot.vercel.app/api/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:09.213Z",
+  "server": {
+    "registryName": "app.fryd/mcp-server",
+    "title": "Fryd - Your Garden Companion",
+    "description": "Search crops, check companion planting, explore seasonal calendars, and find planting plans.",
+    "registryVersion": "1.0.10"
+  },
+  "endpoint": "https://mcp.fryd.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fryd",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.fryd.app/mcp"
+}

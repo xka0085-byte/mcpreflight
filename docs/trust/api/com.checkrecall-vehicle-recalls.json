@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:22.773Z",
+  "server": {
+    "registryName": "com.checkrecall/vehicle-recalls",
+    "title": "RecallChecker — Vehicle Safety Recalls",
+    "description": "Check U.S. NHTSA vehicle safety recall campaigns by make, model, and year. Live official data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.checkrecall.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "recallchecker",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.checkrecall.com/mcp"
+}

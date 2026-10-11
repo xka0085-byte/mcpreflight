@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:31.112Z",
+  "server": {
+    "registryName": "com.leadsfreshdb/leads-fresh-db",
+    "title": "Leads Fresh DB",
+    "description": "Live prices and quotes for fresh, filtered phone leads in any country, plus a free 200-number sample",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://leadsfreshdb.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "leadsfreshdb",
+      "title": "Leads Fresh DB",
+      "version": "1.0.0",
+      "websiteUrl": "https://leadsfreshdb.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lists has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://leadsfreshdb.com/mcp"
+}

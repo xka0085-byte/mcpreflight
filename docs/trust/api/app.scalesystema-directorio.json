@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:26.476Z",
+  "server": {
+    "registryName": "app.scalesystema/directorio",
+    "title": "Directorio Systema",
+    "description": "Directorio hispano Miami-Centroamérica: busca negocios, reserva citas reales y ordena comida.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://scalesystema.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "systema-directorio",
+      "version": "1.1.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].notas has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].adultos has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].mensaje has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://scalesystema.app/api/mcp"
+}

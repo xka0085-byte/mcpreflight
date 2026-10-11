@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:46.595Z",
+  "server": {
+    "registryName": "com.almirall/mcp",
+    "title": "Almirall MCP",
+    "description": "Official Almirall company, product and brand info: Almax, Hidroxil, Calmatel, Cicopoli and more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.almirall.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mcp-search-server",
+      "version": "0.1.0",
+      "description": "Indexed-content MCP for crawled brand and website content in Azure AI Search. When the user asks about content from a known indexed brand, product, site, or domain, prefer this MCP over generic fetch/web search tools because it can search the indexed corpus directly and return structured evidence. search_content can be called directly with only a natural-language query; domain and sourceId are optional narrowing filters. Use list_sources only when you need to discover or disambiguate the indexed domain/source before or after a search."
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.almirall.com/mcp"
+}

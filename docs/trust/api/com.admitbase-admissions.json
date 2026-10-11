@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:32.786Z",
+  "server": {
+    "registryName": "com.admitbase/admissions",
+    "title": "AdmitBase Admissions",
+    "description": "Admissions data & match scores for law, medical, dental, MBA, pharmacy, vet, optometry schools",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://admitbase.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "admitbase-mcp",
+      "version": "2.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://admitbase.com/api/mcp"
+}

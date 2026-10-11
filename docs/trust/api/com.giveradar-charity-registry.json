@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:38.994Z",
+  "server": {
+    "registryName": "com.giveradar/charity-registry",
+    "title": "com.giveradar/charity-registry",
+    "description": "Search, verify and compare 7.9M+ nonprofits from official charity registries in 100+ countries.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://giveradar.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "giveradar-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://giveradar.com/mcp/"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:32.938Z",
+  "server": {
+    "registryName": "app.vercel.triageshield/triageshield",
+    "title": "app.vercel.triageshield/triageshield",
+    "description": "Verify a vuln report's file/line/function claims against a real GitHub repo.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://triageshield.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "triageshield",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://triageshield.vercel.app/api/mcp"
+}

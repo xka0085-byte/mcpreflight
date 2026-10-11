@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:01.201Z",
+  "server": {
+    "registryName": "ai.com.mcp/hapi-mcp",
+    "title": "HAPI MCP Server",
+    "description": "HAPI MCP server: Dynamically exposes OpenAPI REST APIs as MCP tools for AI assistants",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://{HAPI_FQDN}:{HAPI_PORT}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{HAPI_FQDN}:{HAPI_PORT}/mcp"
+}

@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:42.857Z",
+  "server": {
+    "registryName": "com.airblockfz/stock-signal-kr",
+    "title": "com.airblockfz/stock-signal-kr",
+    "description": "Korea stock (KOSPI/KOSDAQ) bottom/top signals: verdict + score, scans. Pay-per-call x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://stock-signal-kr.airblock2026.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "stock-signal-kr",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].phase has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].interest has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].pros has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].cons has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://stock-signal-kr.airblock2026.workers.dev/mcp"
+}

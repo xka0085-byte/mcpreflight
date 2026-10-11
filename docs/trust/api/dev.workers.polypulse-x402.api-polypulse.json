@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:06.551Z",
+  "server": {
+    "registryName": "dev.workers.polypulse-x402.api/polypulse",
+    "title": "PolyPulse: Polymarket odds & movers",
+    "description": "Live Polymarket odds, 1h/24h movers, top markets. Free previews; full data via x402 USDC on Base.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.polypulse-x402.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "polypulse",
+      "title": "PolyPulse — Polymarket odds & movers",
+      "version": "1.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].window has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.polypulse-x402.workers.dev/mcp"
+}

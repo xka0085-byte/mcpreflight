@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:11.792Z",
+  "server": {
+    "registryName": "com.instaveil/agent-commerce",
+    "title": "InstaVeil Agent Commerce",
+    "description": "Instagram research, Story monitoring and creator comparison. MCP x402 paid calls, USDC on Solana.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://instaveil.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "instaveil-agent-commerce",
+      "version": "1.4.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].product_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].username has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].usernames has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].question has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://instaveil.com/mcp"
+}

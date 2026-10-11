@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:01.300Z",
+  "server": {
+    "registryName": "com.elopstudio.aiwave/ai-wave",
+    "title": "AI Wave",
+    "description": "AI model releases, price changes and deprecations in one feed: chat, embedding, speech, video.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://aiwave.elopstudio.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "ai-wave",
+      "version": "1.0.3"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].minContext has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://aiwave.elopstudio.com/api/mcp"
+}

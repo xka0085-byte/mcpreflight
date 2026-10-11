@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:04.226Z",
+  "server": {
+    "registryName": "app.chimpanseo/chimpanseo",
+    "title": "ChimpanSEO",
+    "description": "Generate GEO/AEO-optimized articles and publish them to WordPress from your AI agent.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://chimpanseo.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "chimpanseo",
+      "version": "1.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].siteId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].publishStatus has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://chimpanseo.app/api/mcp"
+}

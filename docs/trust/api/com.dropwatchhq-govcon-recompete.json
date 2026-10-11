@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:55.113Z",
+  "server": {
+    "registryName": "com.dropwatchhq/govcon-recompete",
+    "title": "com.dropwatchhq/govcon-recompete",
+    "description": "Predict federal contract recompetes: expiring contracts, likely competitors, win odds.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://recompete.dropwatchhq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "govcon-recompete",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].agency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].naics has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].agency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://recompete.dropwatchhq.com/mcp"
+}

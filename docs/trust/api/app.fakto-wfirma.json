@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:06.773Z",
+  "server": {
+    "registryName": "app.fakto/wfirma",
+    "title": "Fakto.app — wFirma MCP Server",
+    "description": "wFirma.pl (Polish accounting) via MCP: invoices, contractors, payments, reports. Full read-write.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fakto.app/wfirma/stream",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fakto.app/wfirma/stream"
+}

@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:36.954Z",
+  "server": {
+    "registryName": "com.coverage-rights/coverage-rights",
+    "title": "com.coverage-rights/coverage-rights",
+    "description": "Insurer denial rates, appeal outcomes by treatment and condition, and appeal rights lookups.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.coverage-rights.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "coverage-rights",
+      "title": "Coverage Rights — health-insurance denial data",
+      "version": "1.2.0",
+      "description": "Read-only access to U.S. health-insurance denial data: insurer CMS-0057-F prior-authorization metrics and 42,749 published California independent-medical-review decisions, plus appeal rights by program and state.",
+      "websiteUrl": "https://www.coverage-rights.com"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].regulatory_marker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].regulatory_state_basis has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].appeal_stage has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].current_status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.coverage-rights.com/api/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:05.723Z",
+  "server": {
+    "registryName": "com.sushi-tanji/reservations",
+    "title": "Oku-Akasaka Sushi Tanji",
+    "description": "Omakase courses at a sushi counter in Akasaka, Tokyo, with a pre-filled link to the booking page.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://sushi-tanji.com/wp-json/bmp/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sushi-tanji",
+      "title": "Oku-Akasaka Sushi Tanji",
+      "version": "0.2.0",
+      "websiteUrl": "https://sushi-tanji.com/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].course has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].people has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sushi-tanji.com/wp-json/bmp/v1/mcp"
+}

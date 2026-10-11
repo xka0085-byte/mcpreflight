@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:30.102Z",
+  "server": {
+    "registryName": "com.geiant/mcp-agentcore",
+    "title": "com.geiant/mcp-agentcore",
+    "description": "AI governance MCP server for EU AI Act compliance and jurisdiction verification",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://geiant-agentcore-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://geiant-agentcore-production.up.railway.app/mcp"
+}

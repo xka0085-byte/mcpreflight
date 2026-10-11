@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:15.457Z",
+  "server": {
+    "registryName": "com.bitvoya/bitvoya-mcp",
+    "title": "Bitvoya MCP",
+    "description": "Luxury hotel search, rate comparison, booking quotes, and secure checkout handoff.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://bitvoya.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bitvoya.com/api/mcp"
+}

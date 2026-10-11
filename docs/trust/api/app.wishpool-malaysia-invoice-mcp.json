@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:35.291Z",
+  "server": {
+    "registryName": "app.wishpool/malaysia-invoice-mcp",
+    "title": "Malaysia Invoices (LHDN MyInvois submit, query & cancel)",
+    "description": "Malaysia LHDN MyInvois: AI agents submit, query and cancel e-invoices, stateless BYO.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://inv-my.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-my.wishpool.app/mcp"
+}

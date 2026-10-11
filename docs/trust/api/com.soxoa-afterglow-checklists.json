@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:50.941Z",
+  "server": {
+    "registryName": "com.soxoa/afterglow-checklists",
+    "title": "Afterglow Checklists",
+    "description": "Read your practical Afterglow checklists and save confirmed task progress in your linked account.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://afterglow-lime.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Afterglow",
+      "version": "1.0.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].module_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].item_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].confirmed has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://afterglow-lime.vercel.app/mcp"
+}

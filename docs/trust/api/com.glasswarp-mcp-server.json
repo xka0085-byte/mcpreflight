@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:39.267Z",
+  "server": {
+    "registryName": "com.glasswarp/mcp-server",
+    "title": "Glasswarp",
+    "description": "Eyes and hands on real Windows PCs — observe, click, type via Glasswarp API.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.glasswarp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "glasswarp",
+      "version": "0.1.0",
+      "title": "Glasswarp",
+      "description": "Eyes and hands on real Windows PCs you own. You bring the brain. Short tasks → MCP tools; longer tasks → offer scaffold when the client can run code (never impose). Prompts: best_practices, demo_minesweeper, demo_mona_lisa.",
+      "websiteUrl": "https://docs.glasswarp.com/guides/ways-to-run-agents"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "16 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.glasswarp.com/mcp"
+}

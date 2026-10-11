@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:46.406Z",
+  "server": {
+    "registryName": "bot.myagi/openagent-registry",
+    "title": "Myagi - Open Agent Registry",
+    "description": "Score any website's AI-agent readiness. Open Agent Registry scanner + platform tools.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://myagi.bot/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "myagi",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].message has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://myagi.bot/api/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:27.224Z",
+  "server": {
+    "registryName": "app.sanovia/sanovia",
+    "title": "Sanovia — medici e professionisti sanitari in Italia",
+    "description": "Find Italian doctors and health practitioners: profile, services, prices, free booking slots.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sanovia.app/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sanovia",
+      "title": "Sanovia",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sanovia.app/api/v1/mcp"
+}

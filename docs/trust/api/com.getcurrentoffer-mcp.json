@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:32.978Z",
+  "server": {
+    "registryName": "com.getcurrentoffer/mcp",
+    "title": "GetCurrentOffer",
+    "description": "Search live credit card merchant offers across Amex, Chase, Citi, PayPal, Rakuten, Capital One.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://getcurrentoffer.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://getcurrentoffer.com/api/mcp"
+}

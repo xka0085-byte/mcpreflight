@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:04.642Z",
+  "server": {
+    "registryName": "club.parser/parser-club",
+    "title": "Parser Club",
+    "description": "Telegram/VK audience scraping, marketplaces, Russian government registers. Free open dataset.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://parser.club/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "parser-club",
+      "version": "1.0.0",
+      "title": "Parser Club"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].task_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://parser.club/api/mcp"
+}

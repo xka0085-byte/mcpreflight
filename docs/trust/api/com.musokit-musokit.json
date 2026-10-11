@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:02.697Z",
+  "server": {
+    "registryName": "com.musokit/musokit",
+    "title": "MusoKit music tools",
+    "description": "Chords, scales, transposition, capo and tempo maths, with links to free interactive music tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://musokit.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "musokit",
+      "title": "MusoKit music tools",
+      "version": "1.0.0",
+      "websiteUrl": "https://musokit.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].bpm has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].tool has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://musokit.com/mcp"
+}

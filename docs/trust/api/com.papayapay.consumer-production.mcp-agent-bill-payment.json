@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:34.680Z",
+  "server": {
+    "registryName": "com.papayapay.consumer-production.mcp-agent/bill-payment",
+    "title": "Papaya Pay Any Bill (US)",
+    "description": "Pay any US bill in a snap, right from your chat — utilities, medical, rent, parking tickets & more.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp-agent.consumer-production.papayapay.com/payagent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Papaya Pay Any Bill",
+      "version": "1.29.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].bill_description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].confirm_input has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].new_token_input has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].bill_status_input has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].bill_cancel_input has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-agent.consumer-production.papayapay.com/payagent/mcp"
+}

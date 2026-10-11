@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:37.205Z",
+  "server": {
+    "registryName": "app.work-handler/work-handler",
+    "title": "Work Handler",
+    "description": "AI から使えるクラウドグループウェア Work Handler の MCP サーバー。組織・メンバーの参照、出退勤の共有、タイムカード、承認フロー等を本人の権限の範囲で操作できる。",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://work-handler.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://work-handler.app/mcp"
+}

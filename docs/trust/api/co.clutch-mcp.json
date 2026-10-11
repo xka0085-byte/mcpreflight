@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:09.231Z",
+  "server": {
+    "registryName": "co.clutch/mcp",
+    "title": "Clutch.co",
+    "description": "Trusted B2B service providers with verified client reviews",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://bot.clutch.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Clutch",
+      "version": "3.4.2"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].focus_areas has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].location has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bot.clutch.co/mcp"
+}

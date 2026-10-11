@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:47.022Z",
+  "server": {
+    "registryName": "dev.pdfmd/pdf-to-markdown",
+    "title": "dev.pdfmd/pdf-to-markdown",
+    "description": "Convert public PDF links into Markdown with page counts and explicit excerpt limits.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pdfmd.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pdfmd",
+      "title": "PDF to Markdown",
+      "version": "1.0.1",
+      "websiteUrl": "https://pdfmd.dev/docs?utm_source=mcp&utm_medium=agent#agents",
+      "icons": [
+        {
+          "src": "https://pdfmd.dev/brand/icon-512x512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pdfmd.dev/mcp"
+}

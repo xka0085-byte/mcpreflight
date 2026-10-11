@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:05.914Z",
+  "server": {
+    "registryName": "dev.workers.panda198271.twostroke-db/twostroke-db",
+    "title": "二行程經典車資料庫",
+    "description": "經典二行程機車規格、零件對照與保養資料，附維基百科出處。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://twostroke-db.panda198271.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "twostroke-db",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://twostroke-db.panda198271.workers.dev/mcp"
+}

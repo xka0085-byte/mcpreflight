@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:37.625Z",
+  "server": {
+    "registryName": "com.agiscorecard/agi-scorecard",
+    "title": "com.agiscorecard/agi-scorecard",
+    "description": "8 graded AGI-2027 predictions, the 0-100 Thesis Tracker, and a public market-call ledger. Free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agiscorecard.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agiscorecard",
+      "version": "0.2.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].include_history has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agiscorecard.com/mcp"
+}

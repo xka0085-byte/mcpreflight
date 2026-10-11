@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:35.847Z",
+  "server": {
+    "registryName": "com.travcozy/mcp-server",
+    "title": "TravCozy",
+    "description": "Read and update TravCozy trips: flights, hotels, trains, car rentals and transfers.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://travcozy.com/v1/mcp-server",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://travcozy.com/v1/mcp-server"
+}

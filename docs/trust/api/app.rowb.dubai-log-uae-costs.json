@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:24.842Z",
+  "server": {
+    "registryName": "app.rowb.dubai-log/uae-costs",
+    "title": "Dubai Log",
+    "description": "UAE travel and living cost calculators with the published source behind every number.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dubai-log.rowb.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dubai-log",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].fuel has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://dubai-log.rowb.app/mcp"
+}

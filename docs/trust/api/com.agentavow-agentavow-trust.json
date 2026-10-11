@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:34.266Z",
+  "server": {
+    "registryName": "com.agentavow/agentavow-trust",
+    "title": "AgentAvow Trust",
+    "description": "Signed, offline-verifiable safety scores for the MCP servers, packages & tools an agent connects to",
+    "registryVersion": "0.6.2"
+  },
+  "endpoint": "https://agentavow.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agentavow-trust",
+      "version": "0.16.0",
+      "websiteUrl": "https://agentavow.com"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].interaction_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentavow.com/mcp"
+}

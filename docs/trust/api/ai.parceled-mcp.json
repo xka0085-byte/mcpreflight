@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:19.754Z",
+  "server": {
+    "registryName": "ai.parceled/mcp",
+    "title": "ai.parceled/mcp",
+    "description": "Real estate data for AI agents: US parcel boundaries (tiles), owners, sale history, permits, hail.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://parceled.ai/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://parceled.ai/api/mcp"
+}

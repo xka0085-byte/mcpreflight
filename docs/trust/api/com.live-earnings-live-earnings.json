@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:34.741Z",
+  "server": {
+    "registryName": "com.live-earnings/live-earnings",
+    "title": "Live Earnings",
+    "description": "Speaker-attributed earnings call transcripts, live and after the call: who said what, by name.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://live-earnings.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://live-earnings.com/api/mcp"
+}

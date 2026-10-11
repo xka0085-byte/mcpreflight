@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:19.772Z",
+  "server": {
+    "registryName": "com.402rates/rates",
+    "title": "Rates by 402rates",
+    "description": "Source-backed treasury data, settlement costs. Free instrument records and history.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://api.402rates.com/mcp/rates",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "402rates-rates",
+      "title": "Rates by 402rates",
+      "version": "0.4.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].calls has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].profiles has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.402rates.com/mcp/rates"
+}

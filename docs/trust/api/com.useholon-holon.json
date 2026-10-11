@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:47.143Z",
+  "server": {
+    "registryName": "com.useholon/holon",
+    "title": "Holon",
+    "description": "One MCP server for every measured agent: search, compare, call agents paid per success, on a budget",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.useholon.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.useholon.com/mcp"
+}

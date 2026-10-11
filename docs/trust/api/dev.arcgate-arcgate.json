@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:29.052Z",
+  "server": {
+    "registryName": "dev.arcgate/arcgate",
+    "title": "arcgate",
+    "description": "Arc gateway for agents: token checks and swaps, the ERC-8004 agent directory, agent boxes. x402",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.arcgate.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "arcgate",
+      "version": "0.1.0"
+    },
+    "toolCount": 32,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.arcgate.dev/mcp"
+}

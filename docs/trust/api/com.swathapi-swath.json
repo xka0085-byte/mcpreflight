@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:06.122Z",
+  "server": {
+    "registryName": "com.swathapi/swath",
+    "title": "Swath API",
+    "description": "Radar-verified hail/wind storm detection and affected-property intelligence for the continental US.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://swathapi.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://swathapi.com/mcp"
+}

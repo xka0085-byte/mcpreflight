@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:56.439Z",
+  "server": {
+    "registryName": "com.ashareapi/ashare-data-api",
+    "title": "A股数据 API (A-Share Data API)",
+    "description": "A-share data over MCP: quotes, profile, order book, K-line, financials, money flow, boards. 31 tools",
+    "registryVersion": "2026.10.8"
+  },
+  "endpoint": "https://api.ashareapi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ashare-data-api",
+      "version": "2026.10.10"
+    },
+    "toolCount": 35,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "35 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.ashareapi.com/mcp"
+}

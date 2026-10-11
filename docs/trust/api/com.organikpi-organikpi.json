@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:28.353Z",
+  "server": {
+    "registryName": "com.organikpi/organikpi",
+    "title": "com.organikpi/organikpi",
+    "description": "OrganiKPI MCP: search and fetch services, posts and tools as clean markdown (read-only).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://organikpi.com/.well-known/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "organikpi-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTIES_INVALID",
+        "severity": "FAIL",
+        "message": "tools[2].inputSchema.properties must be an object"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://organikpi.com/.well-known/mcp"
+}

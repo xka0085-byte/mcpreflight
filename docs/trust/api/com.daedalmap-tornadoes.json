@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:42.437Z",
+  "server": {
+    "registryName": "com.daedalmap/tornadoes",
+    "title": "DaedalMap Tornado Events",
+    "description": "US tornado events 1950-present from the NOAA Storm Prediction Center: EF rating, tracks, damage.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://app.daedalmap.com/mcp/tornadoes",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.daedalmap.com/mcp/tornadoes"
+}

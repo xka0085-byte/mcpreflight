@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:59.210Z",
+  "server": {
+    "registryName": "com.probe402/endpoint-history",
+    "title": "probe402",
+    "description": "Independent health, price and history for x402/MPP endpoints. Metered over x402; free grade on web.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://probe402.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://probe402.com/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:07.507Z",
+  "server": {
+    "registryName": "com.work-pick/press",
+    "title": "WorkPick Press",
+    "description": "Verified Japanese company press releases with provenance (corporate number, source URL) and jobs.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://work-pick.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "workpick-press",
+      "title": "WorkPick Press",
+      "version": "0.3.0",
+      "websiteUrl": "https://work-pick.com/press",
+      "icons": [
+        {
+          "src": "https://work-pick.com/icon-64.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "64x64"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://work-pick.com/api/mcp"
+}

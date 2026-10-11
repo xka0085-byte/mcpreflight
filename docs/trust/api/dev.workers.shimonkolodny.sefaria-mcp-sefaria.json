@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:07.593Z",
+  "server": {
+    "registryName": "dev.workers.shimonkolodny.sefaria-mcp/sefaria",
+    "title": "Sefaria Library",
+    "description": "Access Sefaria's library of Jewish texts, commentaries, and learning schedules via MCP",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sefaria-mcp.shimonkolodny.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Sefaria",
+      "title": "Sefaria Library",
+      "websiteUrl": "https://www.sefaria.org",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://sefaria-mcp.shimonkolodny.workers.dev/logo.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "32x32"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sefaria-mcp.shimonkolodny.workers.dev/mcp"
+}

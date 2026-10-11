@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:22.384Z",
+  "server": {
+    "registryName": "de.openwein/mcp",
+    "title": "openwein.de — deutsche Weingüter und Weinfeste",
+    "description": "German wineries, wine towns and wine festivals: 5.900 entries in 13 regions. Read-only, no key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.openwein.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "openwein.de",
+      "title": "openwein.de — offenes Verzeichnis deutscher Winzer",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.openwein.de"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].lng has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.openwein.de/mcp"
+}

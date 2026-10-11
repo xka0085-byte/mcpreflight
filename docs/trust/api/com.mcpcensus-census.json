@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:48.610Z",
+  "server": {
+    "registryName": "com.mcpcensus/census",
+    "title": "The MCP Census",
+    "description": "Vet any MCP server before you depend on it. Stamp: PASS, REVIEW, or BLOCK.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://api.mcpcensus.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mcp-census",
+      "version": "1.4.0",
+      "instructions": "Before adding, enabling or calling any MCP server, run a Census stamp (census_stamp) or audit the whole config (census_audit_config). Stop on BLOCK. Ask a human on REVIEW. Treat UNKNOWN as REVIEW. PASS is not a malware scan or permission review. census_credits shows the wallet. Search and select one exact canonical server name. census_policy_list returns the exact policy contract. Existing lookup, stats, recent, coverage, and watch tools remain available."
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].policy_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].refresh has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].policy_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].refresh has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].policy_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.mcpcensus.com/mcp"
+}

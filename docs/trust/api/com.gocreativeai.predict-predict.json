@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:42.000Z",
+  "server": {
+    "registryName": "com.gocreativeai.predict/predict",
+    "title": "Predict — Prediction Market Data for AI Agents",
+    "description": "Live prediction markets: Polymarket + Kalshi prices, odds, order books. Pay-per-call USDC, no key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://predict.gocreativeai.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://predict.gocreativeai.com/mcp"
+}

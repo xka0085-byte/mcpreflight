@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:12:58.120Z",
+  "server": {
+    "registryName": "ai.catalystproject/evidence-graph",
+    "title": "Catalyst evidence graph",
+    "description": "Findings on what compounds and supplements do in the body, with evidence strength, quote and paper.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://catalystproject.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "catalyst-evidence-graph",
+      "version": "0.2.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://catalystproject.ai/mcp"
+}

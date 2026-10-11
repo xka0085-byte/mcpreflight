@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:28.579Z",
+  "server": {
+    "registryName": "dev.approvekit/approvekit",
+    "title": "ApproveKit",
+    "description": "Audit apps against App Store, Google Play and Google OAuth review rules; get the required docs.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://approvekit.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "approvekit",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].inventory has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://approvekit.dev/mcp"
+}

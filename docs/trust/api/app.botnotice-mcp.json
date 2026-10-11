@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:02.659Z",
+  "server": {
+    "registryName": "app.botnotice/mcp",
+    "title": "app.botnotice/mcp",
+    "description": "AI disclosure laws by business and state, each law in full, and a website AI-notice check.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://botnotice.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "botnotice",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://botnotice.app/mcp"
+}

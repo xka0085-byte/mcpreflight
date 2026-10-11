@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:46.731Z",
+  "server": {
+    "registryName": "bo.paralelo/mcp",
+    "title": "paralelo.bo — Bolivia parallel-dollar exchange rate",
+    "description": "Real-time + historical Bolivia parallel-market USD/BOB rate. P2P-aggregated. Free, CC-BY 4.0.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://paralelo.bo/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paralelo-bo",
+      "title": "paralelo.bo — Bolivia parallel-dollar exchange rate",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].from has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].to has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://paralelo.bo/mcp"
+}

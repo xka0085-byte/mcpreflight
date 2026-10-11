@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:36.411Z",
+  "server": {
+    "registryName": "com.localselections/mcp",
+    "title": "LocalSelections",
+    "description": "Real local places, events, and movie/TV picks, plus decision-maker games (wheel, dice, bracket).",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://localselections.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://localselections.com/api/mcp"
+}

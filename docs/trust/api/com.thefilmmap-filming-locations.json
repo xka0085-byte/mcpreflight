@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:20.117Z",
+  "server": {
+    "registryName": "com.thefilmmap/filming-locations",
+    "title": "com.thefilmmap/filming-locations",
+    "description": "Where films and TV were shot, and where games, anime and manga are set. Wikidata, read only, CC0.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://thefilmmap.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "filmmap",
+      "title": "FilmMap — where films and TV were actually shot",
+      "version": "1.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].longitude has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://thefilmmap.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:51.885Z",
+  "server": {
+    "registryName": "com.veridionmarkets/disclosures",
+    "title": "Veridion Disclosures",
+    "description": "Congressional stock-trade reports and the President's OGE reports, each row linked to its filing.",
+    "registryVersion": "1.14.0"
+  },
+  "endpoint": "https://www.veridionmarkets.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "veridion-disclosure-api",
+      "version": "1.17.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.veridionmarkets.com/api/mcp"
+}

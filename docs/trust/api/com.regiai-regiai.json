@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:13.011Z",
+  "server": {
+    "registryName": "com.regiai/regiai",
+    "title": "RegiAI",
+    "description": "AI image, video and audio tools: generate, edit, face swap, upscale, remove backgrounds, make video.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://regiai.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "regiai",
+      "title": "RegiAI",
+      "version": "1.0.0"
+    },
+    "toolCount": 51,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].aspect_ratio has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://regiai.com/api/mcp"
+}

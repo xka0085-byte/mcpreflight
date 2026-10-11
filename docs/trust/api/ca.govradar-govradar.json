@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:51.863Z",
+  "server": {
+    "registryName": "ca.govradar/govradar",
+    "title": "Government Radar",
+    "description": "Official Canadian federal and provincial government news releases from the last 7 days.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.govradar.ca/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "govradar",
+      "title": "Government Radar",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.govradar.ca"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.govradar.ca/api/mcp"
+}

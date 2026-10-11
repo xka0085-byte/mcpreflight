@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:11.152Z",
+  "server": {
+    "registryName": "ai.machinerelations/mri",
+    "title": "Machine Relations Index",
+    "description": "Which source domains AI answer engines cite, by buyer category and question shape.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://machinerelations.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "machinerelations-mri",
+      "title": "Machine Relations Index",
+      "version": "1.0.0",
+      "websiteUrl": "https://machinerelations.ai/index"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://machinerelations.ai/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:03.461Z",
+  "server": {
+    "registryName": "cn.com.grapecity/gcexcel",
+    "title": "GrapeCity GcExcel",
+    "description": "GrapeCity Software MCP for GcExcel docs, examples, and product assistance.",
+    "registryVersion": "1.0.0-beta.2"
+  },
+  "endpoint": "https://mcp.grapecity.com.cn/mcp/gcexcel",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.grapecity.com.cn/mcp/gcexcel"
+}

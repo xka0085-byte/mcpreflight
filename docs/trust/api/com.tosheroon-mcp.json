@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:33.312Z",
+  "server": {
+    "registryName": "com.tosheroon/mcp",
+    "title": "Tosheroon",
+    "description": "Real-time Amazon prices, product search, 90-day history, AI forecasts, and price drop alerts.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://tosheroon.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tosheroon",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tosheroon.com/mcp"
+}

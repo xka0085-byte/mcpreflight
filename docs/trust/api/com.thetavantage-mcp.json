@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:24.282Z",
+  "server": {
+    "registryName": "com.thetavantage/mcp",
+    "title": "Theta Vantage",
+    "description": "Remote MCP for options GEX, flow, IV, and wheel. Pro tvk_ key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://thetavantage.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://thetavantage.com/api/mcp"
+}

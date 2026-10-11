@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:57.183Z",
+  "server": {
+    "registryName": "com.vithanco/vgraph-mcp",
+    "title": "com.vithanco/vgraph-mcp",
+    "description": "Concept Maps, IBIS, Causal Loop Diagrams and Timelines as images. Runs locally via WebAssembly.",
+    "registryVersion": "1.0.9"
+  },
+  "endpoint": "https://mcp.vithanco.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.vithanco.com/mcp"
+}

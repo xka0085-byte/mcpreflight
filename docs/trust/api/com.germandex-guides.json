@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:31.275Z",
+  "server": {
+    "registryName": "com.germandex/guides",
+    "title": "Germandex Student Guides",
+    "description": "Read-only student guides to Germany: ten cities, housing, banking, jobs and everyday life.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://germandex.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "germandex",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].route has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://germandex.com/mcp"
+}

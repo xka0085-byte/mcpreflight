@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:18.788Z",
+  "server": {
+    "registryName": "app.openkrill/business-days",
+    "title": "Business Days and Holidays",
+    "description": "Count working days between two dates, add business days to a date, or list public holidays.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://businessdays.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "business-days",
+      "title": "Business Days & Workday Calc: Workdays, holidays, SLA & PTO",
+      "version": "1.0.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://businessdays.openkrill.app/mcp"
+}

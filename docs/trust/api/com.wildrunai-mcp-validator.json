@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:05.385Z",
+  "server": {
+    "registryName": "com.wildrunai/mcp-validator",
+    "title": "MCP Validator",
+    "description": "Score MCP tool definitions 0-100. Checks names, schemas, annotations, and uniqueness.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://wildrunai.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://wildrunai.com/api/mcp"
+}

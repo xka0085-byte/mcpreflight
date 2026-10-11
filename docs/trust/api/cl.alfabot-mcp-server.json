@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:01.455Z",
+  "server": {
+    "registryName": "cl.alfabot/mcp-server",
+    "title": "Alfabot MCP Server",
+    "description": "Consulta de planes de productos Alfabot y agendamiento de reuniones para colegios y empresas",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://alfabot.cl/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "alfabot-web",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].email has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://alfabot.cl/mcp"
+}

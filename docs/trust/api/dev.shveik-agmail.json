@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:53.160Z",
+  "server": {
+    "registryName": "dev.shveik/agmail",
+    "title": "agmail",
+    "description": "Email inboxes for agents by the hour: wait for a mail, get the code or link. Pay per call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agmail.shveik.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agmail",
+      "title": "agmail",
+      "version": "1.0.0",
+      "websiteUrl": "https://agmail.shveik.dev"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agmail.shveik.dev/mcp"
+}

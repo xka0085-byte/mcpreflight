@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:31.652Z",
+  "server": {
+    "registryName": "com.achivx/stablescan",
+    "title": "Stablecoin Scanner",
+    "description": "Stablecoin risk for agents: freezes, OFAC, exposure, allowances, transfers, graph. 7 chains.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://stablescan.achivx.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "stablescan",
+      "title": "Stablecoin Scanner — onchain dollar telemetry for humans and AI agents",
+      "version": "1.4.0",
+      "websiteUrl": "https://stablescan.achivx.com",
+      "icons": [
+        {
+          "src": "https://stablescan.achivx.com/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://stablescan.achivx.com/icon-maskable-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://stablescan.achivx.com/mcp"
+}

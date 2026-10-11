@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:27.776Z",
+  "server": {
+    "registryName": "com.cloudflare.mcp/mcp",
+    "title": "com.cloudflare.mcp/mcp",
+    "description": "Cloudflare MCP servers",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://docs.mcp.cloudflare.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "docs-ai-search",
+      "version": "0.4.13"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://docs.mcp.cloudflare.com/mcp"
+}

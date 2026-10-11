@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:27.104Z",
+  "server": {
+    "registryName": "ai.rosterresolve/roster",
+    "title": "Roster",
+    "description": "Self-hosted participant resolution agent with an MCP server for agent workflows.",
+    "registryVersion": "1.2.3"
+  },
+  "endpoint": "https://{roster_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{roster_host}/mcp"
+}

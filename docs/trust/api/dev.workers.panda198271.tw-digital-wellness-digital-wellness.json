@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:05.305Z",
+  "server": {
+    "registryName": "dev.workers.panda198271.tw-digital-wellness/digital-wellness",
+    "title": "數位健康與遠距醫療指南",
+    "description": "睡眠時間計算、情緒量表自評與台灣遠距醫療資訊。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tw-digital-wellness.panda198271.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tw-digital-wellness",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].situation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].answers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].suicide has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].answers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].answers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].latency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tw-digital-wellness.panda198271.workers.dev/mcp"
+}

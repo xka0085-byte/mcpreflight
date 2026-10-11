@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:03.554Z",
+  "server": {
+    "registryName": "com.bespree/resumes",
+    "title": "Bespree Resumes",
+    "description": "Create and edit saved resumes, make tailored or translated copies, and export PDF or Word.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bespree.com/api/v1/resume/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bespree.com/api/v1/resume/mcp"
+}

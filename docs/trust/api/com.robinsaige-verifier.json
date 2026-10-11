@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:19.441Z",
+  "server": {
+    "registryName": "com.robinsaige/verifier",
+    "title": "com.robinsaige/verifier",
+    "description": "MCP tool observatory: do registry servers answer, and are their answers true? No key.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://robinsaige.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "robinsaige-verifier",
+      "version": "0.1"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].tool has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].ok has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].latency_ms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].cost_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].call_hash has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://robinsaige.com/mcp"
+}

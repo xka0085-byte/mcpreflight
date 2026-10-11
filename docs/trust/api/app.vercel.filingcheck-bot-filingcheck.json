@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:32.021Z",
+  "server": {
+    "registryName": "app.vercel.filingcheck-bot/filingcheck",
+    "title": "app.vercel.filingcheck-bot/filingcheck",
+    "description": "Real SEC EDGAR filing metrics: margin-of-safety, EPS growth, going-concern flags.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://filingcheck-bot.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "filingcheck",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://filingcheck-bot.vercel.app/mcp"
+}

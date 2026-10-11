@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:18.041Z",
+  "server": {
+    "registryName": "de.blitzbuchen/reiseplaner",
+    "title": "Blitzbuchen Reiseplaner",
+    "description": "Reisepläne, Last-Minute-Checks und Vergleich eigener Angebote. Keine Livepreise oder Buchungen.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://blitzbuchen.de/reise-mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "blitzbuchen-reiseplaner",
+      "version": "1.0.2"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].travelers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].interests has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].travelers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].interests has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].offers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://blitzbuchen.de/reise-mcp"
+}

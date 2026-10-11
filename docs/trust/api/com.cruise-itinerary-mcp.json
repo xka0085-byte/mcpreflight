@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:39.095Z",
+  "server": {
+    "registryName": "com.cruise-itinerary/mcp",
+    "title": "Cruise Itinerary",
+    "description": "Cruise sailings, itineraries, weekly fare history, port capacity and the Cruise Price Index.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://cruise-itinerary.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cruise-itinerary.com/mcp"
+}

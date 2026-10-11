@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:36.138Z",
+  "server": {
+    "registryName": "com.transipal/mcp-server",
+    "title": "Transipal WMS",
+    "description": "Warehouse management for warehouses, missions, tasks, packs, products, and shipments.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.transipal.com/_mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.transipal.com/_mcp"
+}

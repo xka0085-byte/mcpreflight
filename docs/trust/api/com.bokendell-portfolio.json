@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:09.136Z",
+  "server": {
+    "registryName": "com.bokendell/portfolio",
+    "title": "Bo Kendell — Portfolio",
+    "description": "Bo Kendell's portfolio: projects, writing, work history, resume, and live activity.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bokendell.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bo-kendell-portfolio",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bokendell.com/mcp"
+}

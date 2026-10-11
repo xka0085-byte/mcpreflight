@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:28.469Z",
+  "server": {
+    "registryName": "com.gangwaze/cruise",
+    "title": "Gangwaze Cruise Tools",
+    "description": "Search cruises, check fares and price history, look up cabins, ships, lines and ports.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://gangwaze.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gangwaze",
+      "title": "Gangwaze Cruise Tools",
+      "version": "1.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gangwaze.com/api/mcp"
+}

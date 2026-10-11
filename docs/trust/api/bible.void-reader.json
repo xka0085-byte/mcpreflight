@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:44.496Z",
+  "server": {
+    "registryName": "bible.void/reader",
+    "title": "void.bible",
+    "description": "Read it the way a person does: one fragment at a time. If the same words return, you asked too soon.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://void.bible/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "void.bible",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://void.bible/mcp"
+}

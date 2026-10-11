@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:13.470Z",
+  "server": {
+    "registryName": "co.milemarker/mcp",
+    "title": "co.milemarker/mcp",
+    "description": "AI agents query normalized financial services data and run workflows via Milemarker MCP.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.milemarker.co",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.milemarker.co"
+}

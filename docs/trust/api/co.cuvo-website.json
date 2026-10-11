@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:09.640Z",
+  "server": {
+    "registryName": "co.cuvo/website",
+    "title": "co.cuvo/website",
+    "description": "Cuvo Health published site content and live discovery-call booking tools for AI agents.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://cuvo.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cuvo-health-site",
+      "title": "Cuvo Health",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].phone has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cuvo.co/mcp"
+}

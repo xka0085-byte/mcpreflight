@@ -1,0 +1,64 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:04.634Z",
+  "server": {
+    "registryName": "ai.contextstudios/mcp",
+    "title": "Context Studios MCP",
+    "description": "AI agency API: free tools for glossary, comparisons, blog, guides, estimates and consulting",
+    "registryVersion": "2.1.0"
+  },
+  "endpoint": "https://mcp.contextstudios.ai/api/public/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "contextstudios-mcp",
+      "title": "Context Studios MCP Server",
+      "version": "2.1.0",
+      "websiteUrl": "https://www.contextstudios.ai",
+      "icons": [
+        {
+          "src": "https://mcp.contextstudios.ai/logo-icon-on-light.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ],
+          "theme": "light"
+        },
+        {
+          "src": "https://mcp.contextstudios.ai/logo-icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ],
+          "theme": "dark"
+        }
+      ]
+    },
+    "toolCount": 46,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].cluster has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[33].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.contextstudios.ai/api/public/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:16.713Z",
+  "server": {
+    "registryName": "com.fininfostation/tw-finance",
+    "title": "com.fininfostation/tw-finance",
+    "description": "Taiwan finance open data: ETF, funds, TAIEX, sentiment, business climate, FX. Free & read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fininfostation.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.fininfostation/tw-finance",
+      "title": "金融情報站 Taiwan Finance Data",
+      "version": "1.0.0"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].months has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fininfostation.com/mcp"
+}

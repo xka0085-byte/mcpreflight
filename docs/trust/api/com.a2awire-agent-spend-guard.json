@@ -1,0 +1,65 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:21.841Z",
+  "server": {
+    "registryName": "com.a2awire/agent-spend-guard",
+    "title": "Agent Spend Guard — owner-set purchasing guardrails",
+    "description": "Free spend guardrails for AI agents: approve/deny/ask_user, caps, dupes.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://a2awire.com/mcp/connectors/spend-guard/http",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "a2awire-spend-guard",
+      "version": "0.1.0",
+      "websiteUrl": "https://a2awire.com/api/v1/docs"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].merchant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].amount_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].merchant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].amount_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].description has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://a2awire.com/mcp/connectors/spend-guard/http"
+}

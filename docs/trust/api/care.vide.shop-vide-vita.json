@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:56.054Z",
+  "server": {
+    "registryName": "care.vide.shop/vide-vita",
+    "title": "Vidé Vita",
+    "description": "Vidé Vita supplements — live prices, stock, label amounts, warnings, reviews and checkout",
+    "registryVersion": "1.12.1"
+  },
+  "endpoint": "https://shop.vide.care/wp-json/vide/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "vide-shop",
+      "version": "2.7.282"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].order_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://shop.vide.care/wp-json/vide/v1/mcp"
+}

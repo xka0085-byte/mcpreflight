@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:37.522Z",
+  "server": {
+    "registryName": "com.giftstoprint/poster-connector",
+    "title": "GiftsToPrint",
+    "description": "Order personalised newspaper-style birthday, anniversary and retirement posters as print files.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.giftstoprint.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "giftstoprint",
+      "title": "GiftsToPrint",
+      "version": "1.1.0",
+      "websiteUrl": "https://giftstoprint.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].buyer has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.giftstoprint.com/mcp"
+}

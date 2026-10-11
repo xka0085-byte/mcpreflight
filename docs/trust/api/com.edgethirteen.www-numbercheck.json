@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:59.737Z",
+  "server": {
+    "registryName": "com.edgethirteen.www/numbercheck",
+    "title": "com.edgethirteen.www/numbercheck",
+    "description": "Checks $TICKER numeric claims in financial writing against SEC EDGAR XBRL data from the latest 10-K.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.edgethirteen.com/api/mcp/numbercheck",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "numbercheck",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.edgethirteen.com/api/mcp/numbercheck"
+}

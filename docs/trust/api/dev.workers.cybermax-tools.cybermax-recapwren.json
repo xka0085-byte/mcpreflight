@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:03.115Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/recapwren",
+    "title": "Recapwren Client Reports",
+    "description": "Weekly client reports: change, % change, targets, status, printable page and email text. Free.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gpt-recapwren.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cybermax-recapwren",
+      "title": "Recapwren Client Reports",
+      "version": "1.0.0",
+      "websiteUrl": "https://gpt-recapwren.cybermaxtools.com"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].preparedBy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].metrics has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].wins has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].nextSteps has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gpt-recapwren.cybermaxtools.com/mcp?via=mcp-registry"
+}

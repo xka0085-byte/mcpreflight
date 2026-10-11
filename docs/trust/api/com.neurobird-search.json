@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:08.070Z",
+  "server": {
+    "registryName": "com.neurobird/search",
+    "title": "com.neurobird/search",
+    "description": "Web search for AI agents. Ranked results with page passages already extracted, plus URL to markdown.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://search.neurobird.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "neurobird-search",
+      "title": "Neurobird Search",
+      "version": "1.0.0",
+      "description": "Web search for AI agents. Ranked results with page passages already extracted, plus clean markdown extraction of any URL. $2 per 1,000 searches, 1,000 free credits a month, no signup.",
+      "websiteUrl": "https://search.neurobird.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].include_answer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].exclude_domains has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].format has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://search.neurobird.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:12.457Z",
+  "server": {
+    "registryName": "com.zhijipaipan/zhiji-bazi",
+    "title": "知己排盘 BaZi",
+    "description": "BaZi (Chinese Four Pillars) chart calculator. Structured chart data only, no predictions.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://zhijipaipan.com/bazi-api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "zhiji-bazi",
+      "version": "1.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lunarInput has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://zhijipaipan.com/bazi-api/mcp"
+}

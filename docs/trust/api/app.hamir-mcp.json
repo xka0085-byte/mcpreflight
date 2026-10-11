@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:09.893Z",
+  "server": {
+    "registryName": "app.hamir/mcp",
+    "title": "hamir",
+    "description": "News search, article lookup, story coverage and save links for hamir's RSS catalogue",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://hamir.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hamir",
+      "version": "0.3.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].articles has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hamir.app/mcp"
+}

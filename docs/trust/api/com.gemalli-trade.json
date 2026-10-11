@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:32.055Z",
+  "server": {
+    "registryName": "com.gemalli/trade",
+    "title": "Gemalli B2B Trade",
+    "description": "Global B2B trade: verified manufacturers, product search, sanctions screening, HS codes.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://gemalli.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gemalli-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].locale has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].locale has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].locale has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gemalli.com/api/mcp"
+}

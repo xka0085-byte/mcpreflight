@@ -1,0 +1,38 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:12.968Z",
+  "server": {
+    "registryName": "co.macrocyber/attack-surface",
+    "title": "MacroCyber",
+    "description": "Scan what a public site or AI-built app exposes. Returns a signed, exploitability-graded claim.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://macrocyber.co/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "MacroCyber",
+      "title": "MacroCyber",
+      "version": "1.2",
+      "description": "Passive external attack-surface scanner that returns a signed, exploitability-graded exposure claim.",
+      "websiteUrl": "https://macrocyber.co",
+      "icons": [
+        {
+          "src": "https://macrocyber.co/brand/icon.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://macrocyber.co/api/mcp"
+}

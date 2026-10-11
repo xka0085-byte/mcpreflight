@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:57.084Z",
+  "server": {
+    "registryName": "ch.firmenwatch/firmenwatch",
+    "title": "Firmenwatch — Swiss Company Register",
+    "description": "Search and verify Swiss companies, UID status and register changes with dated official sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://firmenwatch.ch/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "firmenwatch",
+      "title": "Firmenwatch — Schweizer Handelsregister",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].anzahl has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://firmenwatch.ch/api/mcp"
+}

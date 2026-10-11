@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:56.578Z",
+  "server": {
+    "registryName": "com.dubaiwealthindex/dubai-wealth-index",
+    "title": "Dubai Wealth Index",
+    "description": "Registered Dubai apartment prices, rents, gross yields and returns, by building and by area.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://dubaiwealthindex.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://dubaiwealthindex.com/api/mcp"
+}

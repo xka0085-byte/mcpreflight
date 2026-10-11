@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:27.633Z",
+  "server": {
+    "registryName": "app.shotlee/shotlee",
+    "title": "Shotlee",
+    "description": "Peptide and GLP-1 dosing math (dose to syringe units) plus search over Shotlee's articles.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.shotlee.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "shotlee",
+      "title": "Shotlee",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].locale has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.shotlee.app/api/mcp"
+}

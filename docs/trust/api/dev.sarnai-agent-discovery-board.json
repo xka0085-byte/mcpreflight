@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:51.358Z",
+  "server": {
+    "registryName": "dev.sarnai/agent-discovery-board",
+    "title": "Agent Discovery Board by SarnAI",
+    "description": "Free directory to find AI agents: search MCP servers and x402 services, then connect, pay, verify.",
+    "registryVersion": "0.4.9"
+  },
+  "endpoint": "https://board.sarnai.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Agent Discovery Board",
+      "version": "0.4.9",
+      "websiteUrl": "https://board.sarnai.dev/guide",
+      "icons": [
+        {
+          "src": "https://board.sarnai.dev/static/sarnai-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://board.sarnai.dev/static/sarnai-icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://board.sarnai.dev/static/sarnai-favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://board.sarnai.dev/mcp"
+}

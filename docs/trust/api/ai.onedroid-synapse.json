@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:17.792Z",
+  "server": {
+    "registryName": "ai.onedroid/synapse",
+    "title": "OneDroid Synapse",
+    "description": "Governed MCP gateway: one endpoint for your tools, with credential custody and audit log.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://synapse.onedroid.ai/hub/{hub}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://synapse.onedroid.ai/hub/{hub}/mcp"
+}

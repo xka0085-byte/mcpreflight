@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:53.980Z",
+  "server": {
+    "registryName": "dev.starwell/world-data-statistics",
+    "title": "Starwell: World Data & Statistics",
+    "description": "Statistics from 28 agencies: FRED, Eurostat, ECB, World Bank, OECD. Cited values, computed answers.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://starwell.dev/api/starwell/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Starwell",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].source has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].seriesId has no description"
+      },
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8] has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].question has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].question has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://starwell.dev/api/starwell/mcp"
+}

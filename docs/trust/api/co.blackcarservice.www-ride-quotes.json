@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:09.403Z",
+  "server": {
+    "registryName": "co.blackcarservice.www/ride-quotes",
+    "title": "Black Car Service — Bay Area Ride Quotes",
+    "description": "Bay Area SUV quotes, tentative availability and pending ride requests with secure web checkout.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://www.blackcarservice.co/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bcs-crm-quote",
+      "title": "Black Car Service — Bay Area Ride Quotes and Availability",
+      "version": "1.3.0",
+      "websiteUrl": "https://www.blackcarservice.co/ai"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].trip_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].passengers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].trip_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].passengers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.blackcarservice.co/api/mcp"
+}

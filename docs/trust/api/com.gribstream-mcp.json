@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:47.083Z",
+  "server": {
+    "registryName": "com.gribstream/mcp",
+    "title": "GribStream Weather MCP",
+    "description": "NOAA and ECMWF weather forecast MCP for discovery, validation, and GribStream OAuth queries.",
+    "registryVersion": "1.1.4"
+  },
+  "endpoint": "https://gribstream.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gribstream",
+      "version": "1.1.1"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "12 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gribstream.com/mcp"
+}

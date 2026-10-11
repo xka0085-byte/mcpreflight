@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:01.469Z",
+  "server": {
+    "registryName": "com.elshwork/agent-network",
+    "title": "ELSHWORK Agent Network",
+    "description": "MCP access to ELSHWORK agents, repositories, isolated runs, discovery and tasks.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://elshwork.com/api/agent/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://elshwork.com/api/agent/v1/mcp"
+}

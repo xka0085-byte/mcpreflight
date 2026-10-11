@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:37.372Z",
+  "server": {
+    "registryName": "com.coversignalai/jevan-nfl-picks",
+    "title": "Cover Signal — Jevan NFL Picks",
+    "description": "Free NFL ATS, moneyline and over/under picks, separate track records, and Jevan AI methodology.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://coversignalai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cover-signal",
+      "title": "Cover Signal · Jevan NFL picks",
+      "version": "1.0.0",
+      "websiteUrl": "https://coversignalai.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].season has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].pick_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://coversignalai.com/mcp"
+}

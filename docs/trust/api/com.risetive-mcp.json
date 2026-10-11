@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:20.166Z",
+  "server": {
+    "registryName": "com.risetive/mcp",
+    "title": "Risetive",
+    "description": "Find competitors for any AI idea or product",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://risetive.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "risetive",
+      "version": "2.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].savedItemId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://risetive.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:16.702Z",
+  "server": {
+    "registryName": "co.sailrides/sail",
+    "title": "Sail",
+    "description": "Search places, compare ride-hailing options, and plan trotro minibus journeys.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sailrides.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sail-rides",
+      "version": "1.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].radiusMeters has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sailrides.co/mcp"
+}

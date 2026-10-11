@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:09.099Z",
+  "server": {
+    "registryName": "com.everstake/mcp",
+    "title": "com.everstake/mcp",
+    "description": "MCP server connecting AI agents to non-custodial staking data across 130+ networks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.everstake.com",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Everstake MCP",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.everstake.com"
+}

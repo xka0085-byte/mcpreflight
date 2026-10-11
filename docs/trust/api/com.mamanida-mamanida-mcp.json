@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:44.972Z",
+  "server": {
+    "registryName": "com.mamanida/mamanida-mcp",
+    "title": "Mamanida Maternity Catalogue",
+    "description": "Public read-only MCP server to discover and compare maternity and nursing fashion.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mamanida.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mamanida-mcp",
+      "version": "1.0.0",
+      "title": "Mamanida Maternity Catalogue"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mamanida.com/mcp"
+}

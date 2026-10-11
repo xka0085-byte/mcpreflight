@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:27.522Z",
+  "server": {
+    "registryName": "com.koskamo/koskamo",
+    "title": "Koskamo",
+    "description": "Cited, versioned knowledge for agents: retrieve sourced passages and propose owner-approved fixes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://koskamo.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.koskamo/koskamo",
+      "title": "Koskamo",
+      "version": "1.0.0",
+      "description": "Cited, versioned knowledge for agents: retrieve sourced passages and propose owner-approved fixes.",
+      "websiteUrl": "https://koskamo.com/connect"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].top_k has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].rationale has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].source_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].dataset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].decision has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://koskamo.com/api/mcp"
+}

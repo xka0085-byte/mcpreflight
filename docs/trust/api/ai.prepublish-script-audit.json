@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:23.782Z",
+  "server": {
+    "registryName": "ai.prepublish/script-audit",
+    "title": "PrePublish - YouTube script QA",
+    "description": "Audit a YouTube script before recording: hook, pacing, drop-off risk, copy-paste rewrites.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.prepublish.ai",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "prepublish",
+      "title": "Prepublish: YouTube script QA",
+      "version": "1.0.0",
+      "description": "Audit a YouTube script before recording: hook, structure and pacing scores, the passages most likely to lose attention, an inauthentic-content check, a policy pre-flight, and words to runtime.",
+      "websiteUrl": "https://prepublish.ai/mcp-server",
+      "icons": [
+        {
+          "src": "https://prepublish.ai/icon-192x192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.prepublish.ai"
+}

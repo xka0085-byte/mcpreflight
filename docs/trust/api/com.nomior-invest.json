@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:12.231Z",
+  "server": {
+    "registryName": "com.nomior/invest",
+    "title": "Nomior Invest",
+    "description": "Primary-source equity research: scores, screens, filings, insider trades and 13F holdings.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://invest.nomior.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://invest.nomior.com/mcp"
+}

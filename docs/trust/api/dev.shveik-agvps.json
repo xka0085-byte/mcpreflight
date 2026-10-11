@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:53.033Z",
+  "server": {
+    "registryName": "dev.shveik/agvps",
+    "title": "agvps",
+    "description": "Servers for agents, rented by the month: Linux with root and a public IPv4. Pay per call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agvps.shveik.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agvps",
+      "title": "agvps",
+      "version": "1.0.0",
+      "websiteUrl": "https://agvps.shveik.dev"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agvps.shveik.dev/mcp"
+}

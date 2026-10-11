@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:33.885Z",
+  "server": {
+    "registryName": "com.convexvalue/cvserver",
+    "title": "com.convexvalue/cvserver",
+    "description": "Live US options chains with Greeks and IV, a screener, SQL, and FMP fundamentals.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tap.convexvalue.com/api/data/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tap.convexvalue.com/api/data/mcp"
+}

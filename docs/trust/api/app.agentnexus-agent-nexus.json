@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:01.179Z",
+  "server": {
+    "registryName": "app.agentnexus/agent-nexus",
+    "title": "Agent Nexus",
+    "description": "Agent-native registry to discover APIs, MCP servers and CLIs, with live health checks.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://agentnexus.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-nexus",
+      "title": "Agent Nexus",
+      "version": "1.0.0",
+      "description": "Registry of 650+ human-reviewed APIs, MCP servers and CLIs that AI agents can call, each health-checked daily on a rolling schedule, with endpoint, auth parameters, formats, rate limits and a 0-100 reliability score. Whole catalogue downloadable in one call at https://agentnexus.app/api/public/entries.ndjson; new interfaces feed at https://agentnexus.app/feed.xml.",
+      "websiteUrl": "https://agentnexus.app",
+      "icons": [
+        {
+          "src": "https://agentnexus.app/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        },
+        {
+          "src": "https://agentnexus.app/favicon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentnexus.app/mcp"
+}

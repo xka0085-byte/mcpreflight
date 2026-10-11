@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:34.079Z",
+  "server": {
+    "registryName": "com.lionx402/lion-x402",
+    "title": "LION — Verified Company & Compliance Data",
+    "description": "Keyless x402 compliance on Base: $0.001 OFAC wallet screen, $0.05 pack, $0.95 company file.",
+    "registryVersion": "1.13.0"
+  },
+  "endpoint": "https://lionx402.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "lion-x402",
+      "version": "bible-cdp-1"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].entity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].domain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://lionx402.com/api/mcp"
+}

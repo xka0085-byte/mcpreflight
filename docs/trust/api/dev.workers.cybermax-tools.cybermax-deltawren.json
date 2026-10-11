@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:01.816Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/deltawren",
+    "title": "Deltawren",
+    "description": "Daily data feeds MCP: CISA KEV+EPSS, SEC Form 4, 10-K sections, domain ranks. Keys $19/mo.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://deltawren.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "deltawren",
+      "title": "Deltawren by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://deltawren.cybermaxtools.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].feed has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://deltawren.cybermaxtools.com/mcp?via=mcp-registry"
+}

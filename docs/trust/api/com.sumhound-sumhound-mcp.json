@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:01.151Z",
+  "server": {
+    "registryName": "com.sumhound/sumhound-mcp",
+    "title": "Sumhound — e-commerce platform changes & seller deadlines",
+    "description": "Curated Amazon/Shopify/TikTok Shop changes (fees, policies, APIs) & upcoming seller deadlines.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://sumhound.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sumhound",
+      "version": "1.29.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].platform has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].platform has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sumhound.com/mcp"
+}

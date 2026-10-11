@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:50.003Z",
+  "server": {
+    "registryName": "com.mcpscores/usage-bill-reconstructor",
+    "title": "Usage Bill Reconstructor",
+    "description": "Recomputes a usage-based bill from a customer-supplied tariff (graduated per-meter tiers, optiona...",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-factory.bowling-anthony.workers.dev/usage-bill-reconstructor/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.mcpscores/usage-bill-reconstructor",
+      "title": "Usage Bill Reconstructor",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minor_unit_digits has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].meters has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].fixed_charges has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-factory.bowling-anthony.workers.dev/usage-bill-reconstructor/mcp"
+}

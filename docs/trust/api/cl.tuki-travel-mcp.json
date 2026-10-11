@@ -1,0 +1,66 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:01.741Z",
+  "server": {
+    "registryName": "cl.tuki/travel-mcp",
+    "title": "Tuki — Travel Marketplace (Chile y Latinoamérica)",
+    "description": "Tours, alojamientos y traslados en Chile/LATAM con checkout único y precios de operadores locales.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://tuki.cl/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tuki-travel-mcp",
+      "title": "Tuki — Travel Marketplace + Tourism Software (Chile y Latinoamérica)",
+      "version": "0.2.0",
+      "description": "Read-only travel catalog + B2B tourism-software directory for Chile & LATAM."
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].response_format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].max_results has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tuki.cl/mcp/"
+}

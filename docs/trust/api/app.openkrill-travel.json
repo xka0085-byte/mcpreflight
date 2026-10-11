@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:20.398Z",
+  "server": {
+    "registryName": "app.openkrill/travel",
+    "title": "Travel Check",
+    "description": "UK and US government travel advice for a country, plus live delays and weather at an airport.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://travel.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "travel",
+      "title": "Travel Check: Travel advice and airports",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://travel.openkrill.app/mcp"
+}

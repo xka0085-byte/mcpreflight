@@ -1,0 +1,64 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:08.504Z",
+  "server": {
+    "registryName": "com.bloomyesim/esim",
+    "title": "Bloomy eSIM",
+    "description": "Recommend the right travel eSIM for any trip (200+ countries) and hand the traveler a checkout link.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://bloomyesim.com/wp-json/bloomy/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bloomy-esim",
+      "title": "Bloomy eSIM",
+      "version": "1.3.0",
+      "websiteUrl": "https://bloomyesim.com/ai-agents/",
+      "icons": [
+        {
+          "src": "https://bloomyesim.com/wp-content/uploads/2026/04/花アイコン.png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].activities has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].wifi has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].plan_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].plan_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].device has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bloomyesim.com/wp-json/bloomy/v1/mcp"
+}

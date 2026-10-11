@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:01.109Z",
+  "server": {
+    "registryName": "dev.workers.bhazarstudio.datoqa/historical-exchange-rates",
+    "title": "DatoQA — Historical Exchange Rates",
+    "description": "Historical reference FX and dated conversions across 30 currencies, with source dates and evidence.",
+    "registryVersion": "0.6.15"
+  },
+  "endpoint": "https://datoqa.bhazarstudio.workers.dev/mcp/fx",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "datoqa",
+      "title": "DatoQA — Historical Exchange Rates",
+      "icons": [
+        {
+          "src": "https://datoqa.bhazarstudio.workers.dev/assets/datoqa-logo.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "1254x1254"
+          ]
+        }
+      ],
+      "websiteUrl": "https://datoqa.bhazarstudio.workers.dev/docs/fx/",
+      "version": "0.6.14"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].rows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].rounding has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].target_currency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://datoqa.bhazarstudio.workers.dev/mcp/fx"
+}

@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:21.572Z",
+  "server": {
+    "registryName": "com.chateaupedia/chateaux",
+    "title": "Chateaupedia",
+    "description": "Search 10,500 French castles and read verified entries: hours, prices, accessibility.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://chateaupedia.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "chateaupedia",
+      "title": "Chateaupedia : les châteaux de France et d'Allemagne, vérifiés",
+      "version": "1.0.0",
+      "websiteUrl": "https://chateaupedia.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://chateaupedia.com/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:32.101Z",
+  "server": {
+    "registryName": "com.complyonsite/tools",
+    "title": "ComplyOnSite",
+    "description": "UK waste codes, HAVS, noise, first aid, paperwork and construction statistics.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp.complyonsite.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "complyonsite",
+      "title": "ComplyOnSite",
+      "version": "0.3.0",
+      "websiteUrl": "https://complyonsite.com/docs/mcp",
+      "icons": [
+        {
+          "src": "https://complyonsite.com/brand/complyonsite-logo-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.complyonsite.com/mcp"
+}

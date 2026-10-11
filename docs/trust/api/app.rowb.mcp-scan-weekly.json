@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:25.041Z",
+  "server": {
+    "registryName": "app.rowb.mcp-scan/weekly",
+    "title": "MCP Scan — weekly registry health scans",
+    "description": "Weekly scans of MCP servers for availability and consistency, with a public dashboard.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp-scan.rowb.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-scan",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-scan.rowb.app/mcp"
+}

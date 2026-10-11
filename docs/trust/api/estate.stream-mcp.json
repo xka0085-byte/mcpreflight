@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:12.980Z",
+  "server": {
+    "registryName": "estate.stream/mcp",
+    "title": "Stream Estate",
+    "description": "French real estate listings, market data and property alerts (Stream Estate API v2).",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://api-v2.stream.estate/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api-v2.stream.estate/mcp"
+}

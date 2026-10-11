@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:00.622Z",
+  "server": {
+    "registryName": "click.toolcall/toolcall",
+    "title": "Toolcall",
+    "description": "30 pay-per-call APIs for AI agents: compliance, trade, safety, web, data. USDC on Base via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://toolcall.click/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Toolsmith",
+      "version": "1.0.0"
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://toolcall.click/mcp"
+}

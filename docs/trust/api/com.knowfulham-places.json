@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:26.579Z",
+  "server": {
+    "registryName": "com.knowfulham/places",
+    "title": "KnowFulham",
+    "description": "Handpicked places in Fulham, London: restaurants, coffee, pubs, parks and shops.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://knowfulham.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.knowfulham/places",
+      "title": "KnowFulham",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].longitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://knowfulham.com/mcp"
+}

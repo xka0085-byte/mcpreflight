@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:16.237Z",
+  "server": {
+    "registryName": "com.finchnode/health-records-demo",
+    "title": "FinchNode Synthetic Health Records",
+    "description": "Synthetic EHR: medications, labs, conditions, allergies, immunizations, FHIR R4. No API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.finchnode.com/demo/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "finchnode-public-demo",
+      "version": "2026-09-10"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].categories has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.finchnode.com/demo/mcp"
+}

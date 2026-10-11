@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:51.056Z",
+  "server": {
+    "registryName": "ca.artsdata/mcp",
+    "title": "Artsdata",
+    "description": "Search Artsdata for authoritative data on Canadian events, artists, organizations, and places.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.artsdata.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "artsdata_mcp_server",
+      "version": "0.0.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.artsdata.ca/mcp"
+}

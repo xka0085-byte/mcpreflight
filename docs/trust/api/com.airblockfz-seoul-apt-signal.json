@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:42.824Z",
+  "server": {
+    "registryName": "com.airblockfz/seoul-apt-signal",
+    "title": "com.airblockfz/seoul-apt-signal",
+    "description": "Seoul apartment signals: 25 districts from official transactions, scans. Pay-per-call x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://seoul-apt-signal.airblock2026.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "seoul-apt-signal",
+      "version": "0.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].phase has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].interest has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].pros has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].cons has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://seoul-apt-signal.airblock2026.workers.dev/mcp"
+}

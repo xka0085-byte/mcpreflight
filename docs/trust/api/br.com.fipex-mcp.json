@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:48.907Z",
+  "server": {
+    "registryName": "br.com.fipex/mcp",
+    "title": "fipeX MCP",
+    "description": "Brazilian FIPE vehicle reference prices: search, current price, history and comparison. Keyless.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.fipex.com.br/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fipeX",
+      "title": "fipeX",
+      "version": "2.18.2"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.fipex.com.br/mcp"
+}

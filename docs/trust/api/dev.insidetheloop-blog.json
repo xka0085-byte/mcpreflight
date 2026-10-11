@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:40.933Z",
+  "server": {
+    "registryName": "dev.insidetheloop/blog",
+    "title": "Inside the Loop",
+    "description": "Verified latest versions, changes and exact-error fixes for agent dev tools. Read-only.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://insidetheloop.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "insidetheloop",
+      "title": "Inside the Loop",
+      "version": "2.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://insidetheloop.dev/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:14.374Z",
+  "server": {
+    "registryName": "app.malinois/scan",
+    "title": "Malinois",
+    "description": "Check a live app you own for public databases, leaked keys and exposed files.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://malinois.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "malinois",
+      "title": "Malinois",
+      "version": "1.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://malinois.app/mcp"
+}

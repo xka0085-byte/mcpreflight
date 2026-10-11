@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:40.971Z",
+  "server": {
+    "registryName": "com.mahastrategies/context-review",
+    "title": "Maha Context Review",
+    "description": "Reduce supplied context and check caller-declared, source-specific exact evidence retention.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://www.mahastrategies.com/api/mcp/context-review?channel=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "maha-context-review",
+      "version": "1.0.2"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].task has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tokenBudget has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].documents has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.mahastrategies.com/api/mcp/context-review?channel=registry"
+}

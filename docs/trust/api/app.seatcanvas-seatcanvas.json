@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:26.845Z",
+  "server": {
+    "registryName": "app.seatcanvas/seatcanvas",
+    "title": "app.seatcanvas/seatcanvas",
+    "description": "SeatCanvas MCP server: pricing, venue capacity estimates, and prefilled seating plans.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.seatcanvas.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "seatcanvas",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.seatcanvas.app/api/mcp"
+}

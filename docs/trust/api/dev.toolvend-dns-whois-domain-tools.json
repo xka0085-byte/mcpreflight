@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:56.663Z",
+  "server": {
+    "registryName": "dev.toolvend/dns-whois-domain-tools",
+    "title": "toolvend - utility APIs for agents",
+    "description": "30-day x402 history, calendar, DNS, RDAP, LEI, URLs, scraping, text, VAT, QR. Pay-per-call USDC.",
+    "registryVersion": "0.1.5"
+  },
+  "endpoint": "https://toolvend.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "toolvend",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].operation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].amount has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://toolvend.dev/mcp"
+}

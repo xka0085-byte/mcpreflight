@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:01.637Z",
+  "server": {
+    "registryName": "cloud.iox/iox-cloud",
+    "title": "IOX Cloud",
+    "description": "Deploy MCP servers and AI agents in seconds. AI generates code, deploy globally.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://iox-dispatch.matt-merutech.workers.dev/mcp?worker={project_slug}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://iox-dispatch.matt-merutech.workers.dev/mcp?worker={project_slug}"
+}

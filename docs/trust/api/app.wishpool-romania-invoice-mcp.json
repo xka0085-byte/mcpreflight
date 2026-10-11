@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:35.820Z",
+  "server": {
+    "registryName": "app.wishpool/romania-invoice-mcp",
+    "title": "Romania Invoices (ANAF e-Factura national API)",
+    "description": "Romania e-Factura invoices for AI agents: build UBL 2.1 CIUS-RO, upload to ANAF/SPV, query.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://inv-ro.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-ro.wishpool.app/mcp"
+}

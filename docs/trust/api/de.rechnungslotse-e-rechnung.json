@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:23.678Z",
+  "server": {
+    "registryName": "de.rechnungslotse/e-rechnung",
+    "title": "Rechnungslotse: deutsche E-Rechnung",
+    "description": "XRechnung/ZUGFeRD erstellen, gegen EN 16931 prüfen, Fehler mit Regel-ID erklären. Ohne Konto.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rechnungslotse.de/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "rechnungslotse",
+      "title": "Rechnungslotse",
+      "version": "1.0.0"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].rechnungsnummer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].empfaenger has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].iban has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].positionen has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://rechnungslotse.de/api/mcp"
+}

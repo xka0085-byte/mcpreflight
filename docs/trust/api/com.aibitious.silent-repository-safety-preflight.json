@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:41.284Z",
+  "server": {
+    "registryName": "com.aibitious.silent/repository-safety-preflight",
+    "title": "Silent Door Repository Handoff Planner",
+    "description": "Choose files for an agent handoff using filename decisions. No file contents or credentials.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://silent.aibitious.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "silent-door",
+      "version": "0.5.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].entries has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].entries has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://silent.aibitious.com/mcp"
+}

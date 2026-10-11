@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:05.526Z",
+  "server": {
+    "registryName": "cn.savantcat/answers",
+    "title": "AI 客服国标合规知识库 (GB/T 47746—2026)",
+    "description": "中国 AI 客服国标 GB/T 47746—2026 合规知识库：条款级问答 + 全部 61 项达标自查清单（48 应 + 4 宜 + 9 可，含 5 项一票否决），答案标注条款依据。",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://savantcat.cn/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "savantcat-answers",
+      "version": ""
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].cluster has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].top_k has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://savantcat.cn/mcp"
+}

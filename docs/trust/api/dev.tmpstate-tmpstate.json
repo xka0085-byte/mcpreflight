@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:56.439Z",
+  "server": {
+    "registryName": "dev.tmpstate/tmpstate",
+    "title": "dev.tmpstate/tmpstate",
+    "description": "Zero-key temporary JSON database for agents: one tool call, no signup, no OAuth, no API keys.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tmpstate.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tmpstate",
+      "version": "1.0.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].plan has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].accept_overage_usd has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tmpstate.dev/mcp"
+}

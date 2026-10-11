@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:46.433Z",
+  "server": {
+    "registryName": "br.com.acorridadosbairros/metro-quadrado",
+    "title": "A Corrida dos Bairros: preço do m² por bairro",
+    "description": "Preço do m² por bairro em 109 cidades do Brasil, nos 27 estados. Dados abertos, todo mês.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://corrida.metroquadrado.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Metro Quadrado",
+      "title": "Metro Quadrado: preço do m² por bairro (A Corrida dos Bairros)",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://corrida.metroquadrado.workers.dev/mcp"
+}

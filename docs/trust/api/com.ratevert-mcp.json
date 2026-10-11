@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:10.711Z",
+  "server": {
+    "registryName": "com.ratevert/mcp",
+    "title": "Ratevert MCP",
+    "description": "Read-only Ratevert MCP for asset search, pair rates, and conversions.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://ratevert.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Ratevert",
+      "version": "0.3.1",
+      "icons": [
+        {
+          "src": "https://ratevert.com/favicon.ico",
+          "mimeType": "image/x-icon"
+        }
+      ],
+      "websiteUrl": "https://ratevert.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://ratevert.com/api/mcp"
+}

@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:25.739Z",
+  "server": {
+    "registryName": "com.kintoolkit/label-reference",
+    "title": "KinToolkit: Medicine Dosage Calculator Label References for Children and Infants",
+    "description": "Tylenol (acetaminophen), Motrin (ibuprofen), Zyrtec (cetirizine): US pediatric dose labels.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://kintoolkit.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kintoolkit-calculator",
+      "version": "1.1.0",
+      "websiteUrl": "https://kintoolkit.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ingredient has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].product_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].concentration has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].label_band has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://kintoolkit.com/api/mcp"
+}

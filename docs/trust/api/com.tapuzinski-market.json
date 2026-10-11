@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:14.596Z",
+  "server": {
+    "registryName": "com.tapuzinski/market",
+    "title": "com.tapuzinski/market",
+    "description": "Israel hyperlocal marketplace for second-hand home goods: read-only listing search.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.tapuzinski.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tapuzinski-market",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.tapuzinski.com/api/mcp"
+}

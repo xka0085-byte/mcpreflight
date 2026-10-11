@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:46.146Z",
+  "server": {
+    "registryName": "com.datalastic/vessel-tracking",
+    "title": "Datalastic Vessel Tracking & Maritime Intelligence",
+    "description": "Vessel tracking for 750,000+ ships, with ownership, inspections, port records, routes, and more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.datalastic.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "datalastic-mcp",
+      "title": "Datalastic Vessel Tracking",
+      "version": "0.1.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.datalastic.com/mcp"
+}

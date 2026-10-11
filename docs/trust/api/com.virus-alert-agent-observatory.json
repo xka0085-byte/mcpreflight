@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:57.083Z",
+  "server": {
+    "registryName": "com.virus-alert/agent-observatory",
+    "title": "Agent Observatory Digital Twin",
+    "description": "Public MCP digital twin with synthetic systems and an agent firewall. No customer data.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://virus-alert.com/api/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-observatory-digital-twin",
+      "version": "0.6.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://virus-alert.com/api/mcp"
+}

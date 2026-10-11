@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:05.350Z",
+  "server": {
+    "registryName": "com.biodnd/agent-fin",
+    "title": "com.biodnd/agent-fin",
+    "description": "Agent Fin: finance MCP server with market data tools",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://agent-fin.biodnd.com/sse",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agent-fin.biodnd.com/sse"
+}

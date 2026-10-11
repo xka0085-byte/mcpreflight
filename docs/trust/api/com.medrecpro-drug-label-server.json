@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:51.083Z",
+  "server": {
+    "registryName": "com.medrecpro/drug-label-server",
+    "title": "MedRecPro Drug Label Server",
+    "description": "Search and export FDA drug labels by brand name, generic ingredient, or UNII code.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://www.medrecpro.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.medrecpro.com/mcp"
+}

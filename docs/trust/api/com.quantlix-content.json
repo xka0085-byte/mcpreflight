@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:06.120Z",
+  "server": {
+    "registryName": "com.quantlix/content",
+    "title": "Quantlix public content",
+    "description": "Search and read published Quantlix services, company information and insights.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://quantlix.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.quantlix/content",
+      "version": "2.0.0",
+      "title": "Quantlix public content",
+      "description": "Search and read published Quantlix services, company information and insights.",
+      "websiteUrl": "https://quantlix.com/en/",
+      "icons": [
+        {
+          "src": "https://quantlix.com/brand/mark.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://quantlix.com/mcp/"
+}

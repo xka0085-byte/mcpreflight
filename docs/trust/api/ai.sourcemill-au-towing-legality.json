@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:41.032Z",
+  "server": {
+    "registryName": "ai.sourcemill/au-towing-legality",
+    "title": "Australian Towing Legality Check",
+    "description": "Legal towing check for ~46 AU vehicles — compliant/marginal/illegal + the binding constraint.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://towing.sourcemill.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "au-towing-legality",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://towing.sourcemill.ai/mcp"
+}

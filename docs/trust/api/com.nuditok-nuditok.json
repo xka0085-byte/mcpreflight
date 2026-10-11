@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:15.516Z",
+  "server": {
+    "registryName": "com.nuditok/nuditok",
+    "title": "com.nuditok/nuditok",
+    "description": "Search adult porn video (NSFW, 18+): nude clips, creators, hashtags. Read-only, no API key.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://nuditok.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "NudiTok MCP",
+      "title": "NudiTok",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].per_page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].per_page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nuditok.com/mcp"
+}

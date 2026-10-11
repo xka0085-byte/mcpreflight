@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:06.113Z",
+  "server": {
+    "registryName": "com.queuesim/public",
+    "title": "QueueSim",
+    "description": "Run M/M/c queue simulations and four scenarios (call center, ER, coffee shop, single server).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://queuesim.com/mcp/v1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "queuesim-v1",
+      "title": "QueueSim",
+      "version": "1.0.1",
+      "websiteUrl": "https://queuesim.com/claude"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].arrivalDistribution has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].serviceDistribution has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].arrivalDistribution has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].serviceDistribution has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].serviceCoV has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://queuesim.com/mcp/v1"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:22.680Z",
+  "server": {
+    "registryName": "com.formgong/mcp",
+    "title": "Formgong",
+    "description": "Create contact forms, get HTML/React/Next.js snippets and read recent submissions on Formgong.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://formgong.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "formgong",
+      "title": "Formgong",
+      "version": "1.0.1"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].framework has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].include_spam has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://formgong.com/mcp"
+}

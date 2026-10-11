@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:04.059Z",
+  "server": {
+    "registryName": "dev.workers.mattskowronis.sec-filing-proof/verify-sec-filing-claim",
+    "title": "SEC Filing Proof",
+    "description": "Verify whether an official SEC filing supports a specific financial claim.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sec-filing-proof.mattskowronis.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sec-filing-proof",
+      "title": "SEC Filing Proof",
+      "version": "1.0.0",
+      "description": "Verify whether an official SEC filing supports a specific financial claim before an agent relies on it.",
+      "websiteUrl": "https://sec-filing-proof.mattskowronis.workers.dev"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sec-filing-proof.mattskowronis.workers.dev/mcp"
+}

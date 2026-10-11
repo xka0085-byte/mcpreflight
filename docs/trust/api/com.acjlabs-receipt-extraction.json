@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:30.529Z",
+  "server": {
+    "registryName": "com.acjlabs/receipt-extraction",
+    "title": "Receipt Extraction",
+    "description": "AU GST/ABN receipt extraction — assigns entertainment/ITC tax codes per line, not just OCR.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://receipt-extraction.acjlabs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "receipt-extraction",
+      "version": "0.1.6",
+      "description": "AU GST/ABN-aware receipt & invoice extraction — applies documented AU entertainment/ITC tax-code rules per line item, returning a tax_code, a confidence and a rationale for each, not just OCR text. You supply the document; get validated structured JSON: vendor, line items, tax, totals.",
+      "websiteUrl": "https://github.com/acjlabs/receipt-extraction"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].document_base64 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].mime_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://receipt-extraction.acjlabs.com/mcp"
+}

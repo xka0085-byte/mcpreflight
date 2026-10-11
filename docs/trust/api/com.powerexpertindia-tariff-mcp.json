@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:51.664Z",
+  "server": {
+    "registryName": "com.powerexpertindia/tariff-mcp",
+    "title": "Power Expert India Regulatory Tariff MCP",
+    "description": "Indian electricity tariff and bill-verification MCP with fail-closed regulatory execution.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://powerexpertindia.com/api/mcp/index.php",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://powerexpertindia.com/api/mcp/index.php"
+}

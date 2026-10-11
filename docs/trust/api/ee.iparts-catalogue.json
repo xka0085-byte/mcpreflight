@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:10.737Z",
+  "server": {
+    "registryName": "ee.iparts/catalogue",
+    "title": "iParts Estonia Parts Catalogue",
+    "description": "Read-only iParts Estonia auto parts catalogue: numbers, vehicles, categories, fitment, offers, oils.",
+    "registryVersion": "0.9.0"
+  },
+  "endpoint": "https://iparts.ee/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://iparts.ee/mcp"
+}

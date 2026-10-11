@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:18.876Z",
+  "server": {
+    "registryName": "com.catalogapi/catalogapi",
+    "title": "com.catalogapi/catalogapi",
+    "description": "Check reward coverage by country, search real catalog items, and ask how CatalogAPI works.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.catalogapi.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.catalogapi.com/mcp"
+}

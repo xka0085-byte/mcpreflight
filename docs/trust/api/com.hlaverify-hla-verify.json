@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:59.417Z",
+  "server": {
+    "registryName": "com.hlaverify/hla-verify",
+    "title": "HLA-Verify",
+    "description": "HLA nomenclature and match checks against a pinned IPD-IMGT/HLA release. No patient identifiers.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.hlaverify.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hla-verify",
+      "version": "1.0.1"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].framework has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.hlaverify.com/mcp"
+}

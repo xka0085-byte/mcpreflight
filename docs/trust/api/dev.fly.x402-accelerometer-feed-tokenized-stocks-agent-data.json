@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:36.436Z",
+  "server": {
+    "registryName": "dev.fly.x402-accelerometer-feed/tokenized-stocks-agent-data",
+    "title": "Tokenized Stocks & Agent Data (x402)",
+    "description": "x402-paid data for agents: tokenized stocks on Base, Solana token verdicts, AI-progress readings",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://x402-accelerometer-feed.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Tokenized Stocks & Agent Data",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://x402-accelerometer-feed.fly.dev/mcp"
+}

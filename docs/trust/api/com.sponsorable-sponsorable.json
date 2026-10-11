@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:52.090Z",
+  "server": {
+    "registryName": "com.sponsorable/sponsorable",
+    "title": "com.sponsorable/sponsorable",
+    "description": "Find brands that already sponsor podcasts like yours, then reveal the buyer to pitch.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.sponsorable.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sponsorable",
+      "version": "1.0.0"
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].item_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.sponsorable.com/mcp"
+}

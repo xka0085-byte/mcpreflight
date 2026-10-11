@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:19.920Z",
+  "server": {
+    "registryName": "de.foodtruck-nation/foodtruck-nation",
+    "title": "FoodtruckNation",
+    "description": "Search food trucks in Germany and request catering quotes on foodtruck-nation.de",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://foodtruck-nation.de/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://foodtruck-nation.de/api/mcp"
+}

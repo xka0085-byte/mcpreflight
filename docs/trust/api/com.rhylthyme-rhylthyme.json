@@ -1,0 +1,71 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:18.104Z",
+  "server": {
+    "registryName": "com.rhylthyme/rhylthyme",
+    "title": "Rhylthyme",
+    "description": "Real-time multi-track schedules for cooking, lab protocols, events and workouts. Validate and share.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://mcp.rhylthyme.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "rhylthyme-mcp",
+      "title": "Rhylthyme",
+      "version": "1.3.0",
+      "description": "Schedule real-time, multi-track work (recipes, lab protocols, events, workouts) as timed tracks with dependencies and resource limits; validate, analyze and share a live timeline.",
+      "websiteUrl": "https://www.rhylthyme.com",
+      "icons": [
+        {
+          "src": "https://www.rhylthyme.com/static/favicon-192x192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].source has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].resourceConstraints has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.rhylthyme.com/mcp"
+}

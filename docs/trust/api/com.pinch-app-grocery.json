@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:46.615Z",
+  "server": {
+    "registryName": "com.pinch-app/grocery",
+    "title": "Pinch Grocery Prices (Australia)",
+    "description": "Live Australian grocery prices from Woolworths, Coles, Aldi and Harris Farm.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pinch-app.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pinch-grocery-data",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].retailer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].retailer has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pinch-app.com/api/mcp"
+}

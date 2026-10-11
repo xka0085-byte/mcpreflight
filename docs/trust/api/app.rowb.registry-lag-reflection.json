@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:25.278Z",
+  "server": {
+    "registryName": "app.rowb.registry-lag/reflection",
+    "title": "Registry Lag — how fast MCP directories reflect a new server",
+    "description": "Checks whether an MCP server is listed in MCP directories right now, and how long the listing took.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://registry-lag.rowb.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "registry-lag",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://registry-lag.rowb.app/mcp"
+}

@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:31.254Z",
+  "server": {
+    "registryName": "com.generategreetings/greetings",
+    "title": "Generate Greetings",
+    "description": "Create family-friendly greeting text and downloadable cards in 13 languages, including Hindi.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://generategreetings.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "generate-greetings",
+      "version": "1.0.0",
+      "title": "Generate Greetings",
+      "websiteUrl": "https://generategreetings.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].occasion has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].occasion has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].style has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].decorations has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://generategreetings.com/api/mcp"
+}

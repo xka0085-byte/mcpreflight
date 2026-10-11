@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:33.805Z",
+  "server": {
+    "registryName": "app.wishpool/chile-invoice-mcp",
+    "title": "Chile Invoices (DTE boleta/factura electrónica via OpenFactura)",
+    "description": "Chile DTE for AI agents - boleta/factura electronica via OpenFactura or LibreDTE. Stateless BYO.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://inv-cl.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-cl.wishpool.app/mcp"
+}

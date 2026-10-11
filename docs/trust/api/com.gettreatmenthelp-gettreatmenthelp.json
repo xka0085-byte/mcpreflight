@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:35.845Z",
+  "server": {
+    "registryName": "com.gettreatmenthelp/gettreatmenthelp",
+    "title": "GTH Intelligence - Substance Abuse Treatment Finder",
+    "description": "Search 12,338 curated, SAMHSA-sourced addiction treatment facilities across all 50 US states.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://gth-mcp-server.pages.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "gettreatmenthelp",
+      "version": "1.1.1",
+      "description": "Find US addiction treatment facilities. 12,338 curated, SAMHSA-sourced. Filter by location, treatment type, and insurance accepted."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gth-mcp-server.pages.dev/mcp"
+}

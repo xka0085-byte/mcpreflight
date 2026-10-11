@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:40.384Z",
+  "server": {
+    "registryName": "com.aikizi/mcp",
+    "title": "AIKIZI",
+    "description": "Search decoded art styles and their prompts; decode or make images with your own account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aikizi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aikizi",
+      "title": "AIKIZI",
+      "version": "1.0.0",
+      "websiteUrl": "https://aikizi.com"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].aspect_ratio has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].resolution has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].model has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://aikizi.com/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:48.806Z",
+  "server": {
+    "registryName": "br.com.scrypta/compraracoes",
+    "title": "br.com.scrypta/compraracoes",
+    "description": "Catálogo de 130 produtos em 7 categorias e 4 planos — servido via Scrypta.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://scrypta.com.br/mcp/compraracoes",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "scrypta-compraracoes",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].categoria has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://scrypta.com.br/mcp/compraracoes"
+}

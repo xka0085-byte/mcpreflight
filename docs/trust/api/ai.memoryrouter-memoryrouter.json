@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:13.560Z",
+  "server": {
+    "registryName": "ai.memoryrouter/memoryrouter",
+    "title": "MemoryRouter",
+    "description": "Persistent AI memory shared across Claude, ChatGPT, coding agents, and compatible MCP clients.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.memoryrouter.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "MemoryRouter",
+      "version": "1.1.0",
+      "description": "Persistent semantic memory shared across AI platforms.",
+      "websiteUrl": "https://memoryrouter.ai"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].batch_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].entries has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.memoryrouter.ai/mcp"
+}

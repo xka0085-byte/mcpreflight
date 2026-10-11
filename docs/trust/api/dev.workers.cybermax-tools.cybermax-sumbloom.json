@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:03.479Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/sumbloom",
+    "title": "Sumbloom",
+    "description": "Number puzzle API + MCP: solver-checked puzzles as JSON/SVG, daily puzzle. $5/mo; 50 free/day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://sumbloom.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sumbloom-puzzles",
+      "title": "Sumbloom Puzzles by CyberMax",
+      "version": "1.1.0",
+      "websiteUrl": "https://sumbloom.cybermaxtools.com"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].level has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].include_solution has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sumbloom.cybermaxtools.com/mcp?via=mcp-registry"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:02.582Z",
+  "server": {
+    "registryName": "com.basenull/polls",
+    "title": "polls",
+    "description": "One-link team polls: create polls, vote, fetch results, and close polls.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://polls.basenull.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://polls.basenull.com/api/mcp"
+}

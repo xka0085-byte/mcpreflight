@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:33.988Z",
+  "server": {
+    "registryName": "com.converttoit/converter",
+    "title": "Convert To It",
+    "description": "Check which file formats convert to which, and get links that open the converter.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://converttoit.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "converttoit",
+      "title": "Convert To It",
+      "version": "1.0.0",
+      "websiteUrl": "https://converttoit.com/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://converttoit.com/mcp"
+}

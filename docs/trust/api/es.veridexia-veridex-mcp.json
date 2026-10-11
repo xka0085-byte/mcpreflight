@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:13.792Z",
+  "server": {
+    "registryName": "es.veridexia/veridex-mcp",
+    "title": "VERIDEX",
+    "description": "Verify Spanish companies by CIF: registry data, status and BORME filings, paid per call over x402.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://mcp.veridexia.es/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.veridexia.es/mcp"
+}

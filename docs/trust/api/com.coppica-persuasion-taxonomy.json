@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:35.116Z",
+  "server": {
+    "registryName": "com.coppica/persuasion-taxonomy",
+    "title": "Persuasion Taxonomy",
+    "description": "Plan and check marketing copy against the nine questions every reader asks. Free, no API key.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://taxonomy.coppica.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "persuasion-taxonomy",
+      "version": "1.0.3",
+      "title": "The Persuasion Taxonomy (Coppica)"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].lines has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].claims has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].confidence has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].power has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].confidence has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://taxonomy.coppica.com/mcp"
+}

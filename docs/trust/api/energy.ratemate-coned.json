@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:11.543Z",
+  "server": {
+    "registryName": "energy.ratemate/coned",
+    "title": "RateMate for Con Edison",
+    "description": "Con Edison electricity usage: 15-minute meter readings, daily and monthly totals, and bill history.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.ratemate.energy/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.ratemate.energy/mcp"
+}

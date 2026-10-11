@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:25.857Z",
+  "server": {
+    "registryName": "com.theservicemarketingguys/audit",
+    "title": "The Service Marketing Guys Audit",
+    "description": "Read-only audit of any local service business, Open Service Profile conformance first.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.theservicemarketingguys.com/api/audit-mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "The Service Marketing Guys Audit",
+      "version": "0.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].city has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.theservicemarketingguys.com/api/audit-mcp"
+}

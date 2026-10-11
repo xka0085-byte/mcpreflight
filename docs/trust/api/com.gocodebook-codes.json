@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:42.276Z",
+  "server": {
+    "registryName": "com.gocodebook/codes",
+    "title": "GoCodebook — California Building Codes",
+    "description": "Verbatim California Title 24 and local zoning code lookup by section number, with citations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://gocodebook.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gocodebook-codes",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gocodebook.com/api/mcp"
+}

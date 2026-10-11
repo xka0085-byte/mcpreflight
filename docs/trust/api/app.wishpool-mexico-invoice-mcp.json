@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:35.353Z",
+  "server": {
+    "registryName": "app.wishpool/mexico-invoice-mcp",
+    "title": "Mexico Invoices (CFDI 4.0 factura electrónica)",
+    "description": "Mexico CFDI 4.0 invoices for AI agents - issue, query, cancel facturas via Facturapi.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://inv-mx.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-mx.wishpool.app/mcp"
+}

@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:52.579Z",
+  "server": {
+    "registryName": "com.hamptonsverified/hamptons-verified",
+    "title": "Hamptons Verified",
+    "description": "Verified Hamptons & North Fork data: open now, events, beaches, permits, closures.",
+    "registryVersion": "6.540.0"
+  },
+  "endpoint": "https://hamptonsverified.com/api/ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Hamptons Verified",
+      "version": "6.540"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].budget has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].energy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hamptonsverified.com/api/ai/mcp"
+}

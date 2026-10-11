@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:16.502Z",
+  "server": {
+    "registryName": "cz.rychlahypo/mortgages",
+    "title": "Rychlá Hypo – Czech mortgages",
+    "description": "Czech mortgage rates, payment comparison and max loan per bank for 6 major Czech banks.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://rychlahypo.cz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "rychlahypo",
+      "title": "Rychlá Hypo – české hypotéky",
+      "version": "1.0.0",
+      "websiteUrl": "https://rychlahypo.cz"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://rychlahypo.cz/mcp"
+}

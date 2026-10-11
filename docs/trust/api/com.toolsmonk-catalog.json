@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:32.611Z",
+  "server": {
+    "registryName": "com.toolsmonk/catalog",
+    "title": "ToolsMonk tool catalog",
+    "description": "Find the right ToolsMonk tool for a task: 255 free browser-based tools, read-only lookups.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://toolsmonk.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "toolsmonk",
+      "title": "ToolsMonk tool catalog",
+      "version": "1.1.0",
+      "websiteUrl": "https://toolsmonk.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://toolsmonk.com/api/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:11.608Z",
+  "server": {
+    "registryName": "ai.makememoneynomistakes/scoreboard",
+    "title": "makememoneynomistakes.ai: ERC-8004 agent scoreboard",
+    "description": "Check before you hire: independent scores and fraud flags for ERC-8004 agents on Base.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://makememoneynomistakes.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "makememoneynomistakes",
+      "title": "makememoneynomistakes.ai: scoreboard and bouncer for ERC-8004 agents",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].state has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].board has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].verdict has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://makememoneynomistakes.ai/mcp"
+}

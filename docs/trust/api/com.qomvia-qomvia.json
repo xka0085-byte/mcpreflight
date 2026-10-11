@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:03.606Z",
+  "server": {
+    "registryName": "com.qomvia/qomvia",
+    "title": "Qomvia — agent-readiness score and agentic checkout",
+    "description": "Search Qomvia Market shops and buy on the merchant's checkout; score any site's agent readiness.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://qomvia.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "Qomvia Market and AI readiness",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://qomvia.com/mcp-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ],
+      "websiteUrl": "https://qomvia.com/mcp"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://qomvia.com/api/mcp"
+}

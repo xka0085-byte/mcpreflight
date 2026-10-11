@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:47.835Z",
+  "server": {
+    "registryName": "dev.provinglab/browser-citation-capture",
+    "title": "Proving Lab",
+    "description": "Cite or capture a web page; installs the capture extension in Firefox and Chrome.",
+    "registryVersion": "1.24.2"
+  },
+  "endpoint": "https://provinglab.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "provinglab",
+      "version": "1.25.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://provinglab.dev/mcp"
+}

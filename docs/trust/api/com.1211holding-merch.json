@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:18.228Z",
+  "server": {
+    "registryName": "com.1211holding/merch",
+    "title": "1211 - your picture on a shirt",
+    "description": "Put any picture on a shirt, hoodie, cap, tumbler or tote; get the link where the person buys it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://1211holding.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "1211",
+      "title": "1211 - your picture on a shirt",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://1211holding.com/mcp"
+}

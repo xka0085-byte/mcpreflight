@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:24.900Z",
+  "server": {
+    "registryName": "com.runningunattended/agent-lint",
+    "title": "agent-lint",
+    "description": "Checks CLAUDE.md, AGENTS.md or a system prompt for 12 safeguards unattended agents need.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://runningunattended.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-lint",
+      "title": "agent-lint",
+      "version": "0.1.0",
+      "websiteUrl": "https://runningunattended.com/mcp"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://runningunattended.com/api/mcp"
+}

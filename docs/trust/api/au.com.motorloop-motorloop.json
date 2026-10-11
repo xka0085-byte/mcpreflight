@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:42.371Z",
+  "server": {
+    "registryName": "au.com.motorloop/motorloop",
+    "title": "MotorLoop",
+    "description": "Australian vehicle marketplace: search listings, buy/sell guides, and manage your own.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.motorloop.com.au/{storefront}/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.motorloop.com.au/{storefront}/api/mcp"
+}

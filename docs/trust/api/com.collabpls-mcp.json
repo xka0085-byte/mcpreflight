@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:30.193Z",
+  "server": {
+    "registryName": "com.collabpls/mcp",
+    "title": "CollabPls",
+    "description": "SFW MCP to find verified creator scene partners: search, schedule, overlaps, open calls.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://collabpls.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "collabpls",
+      "version": "0.1.0",
+      "title": "CollabPls",
+      "description": "Find verified adult creators for SFW collabs — search, schedule windows, open calls."
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://collabpls.com/mcp"
+}

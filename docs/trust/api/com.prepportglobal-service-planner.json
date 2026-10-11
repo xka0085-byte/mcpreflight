@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:55.056Z",
+  "server": {
+    "registryName": "com.prepportglobal/service-planner",
+    "title": "PrepPort Global Service Planner",
+    "description": "Ecommerce sourcing, inspection and fulfillment planning. Base-cost estimates; no private data.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://prepportglobal.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "prepport-global-public-services",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sampleChecks has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].units has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].orders has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://prepportglobal.com/mcp"
+}

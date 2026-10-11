@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:08.722Z",
+  "server": {
+    "registryName": "com.neuronto/x402-payments-facilitator",
+    "title": "Neuronto Payments: x402 facilitator and API gateway",
+    "description": "Put any API behind x402 in one call, settle USDC on Base, buy credits, find paid resources",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://pay.neuronto.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "neuronto-payments",
+      "version": "1.1.0",
+      "title": "Neuronto Payments: x402 facilitator"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].framework has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].pack has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pay.neuronto.com/mcp"
+}

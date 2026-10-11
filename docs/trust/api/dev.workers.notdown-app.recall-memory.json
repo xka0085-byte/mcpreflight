@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:04.888Z",
+  "server": {
+    "registryName": "dev.workers.notdown-app.recall/memory",
+    "title": "Recall — persistent memory for agents",
+    "description": "Persistent memory for AI agents. Free, no LLM, no SDK. Open Worker you can self-host in 2 commands.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://recall.notdown-app.workers.dev/mcp/{key}",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Recall",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://recall.notdown-app.workers.dev/mcp/{key}"
+}

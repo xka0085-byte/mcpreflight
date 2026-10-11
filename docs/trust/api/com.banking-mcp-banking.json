@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:01.940Z",
+  "server": {
+    "registryName": "com.banking-mcp/banking",
+    "title": "BankingMCP",
+    "description": "Read-only access to your bank balances and transactions in Germany and the EU. Free trial.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://banking-mcp.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://banking-mcp.com/api/mcp"
+}

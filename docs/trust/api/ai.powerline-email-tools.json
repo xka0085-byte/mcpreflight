@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:22.205Z",
+  "server": {
+    "registryName": "ai.powerline/email-tools",
+    "title": "Powerline Email Tools",
+    "description": "Email deliverability checks: SPF, DKIM, DMARC, BIMI, MTA-STS, blacklists, headers, spam words",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://powerline.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "powerline-email-tools",
+      "title": "Powerline Email Tools",
+      "version": "1.0.0",
+      "websiteUrl": "https://powerline.ai/tools/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].record has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].subject has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://powerline.ai/mcp"
+}

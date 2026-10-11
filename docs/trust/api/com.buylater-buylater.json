@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:14.084Z",
+  "server": {
+    "registryName": "com.buylater/buylater",
+    "title": "BuyLater",
+    "description": "Save products to buy later; get notified on restock, price drop, or new release.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://buylater.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://buylater.com/api/mcp"
+}

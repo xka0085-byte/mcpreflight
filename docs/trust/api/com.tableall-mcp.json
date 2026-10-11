@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:11.794Z",
+  "server": {
+    "registryName": "com.tableall/mcp",
+    "title": "com.tableall/mcp",
+    "description": "Access Japan's finest Michelin-starred restaurants. Search, check availability, and browse menus.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.tableall.com/sse",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "TableAll MCP Server",
+      "version": "2.0.0",
+      "description": "TableAll MCP Server - Japan's premier Michelin-starred restaurant reservation service"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.tableall.com/sse"
+}

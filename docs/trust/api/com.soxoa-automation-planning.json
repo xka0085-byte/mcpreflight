@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:49.081Z",
+  "server": {
+    "registryName": "com.soxoa/automation-planning",
+    "title": "Soxoa Automation Planner",
+    "description": "Estimate illustrative automation ROI and rank recurring workflows to automate. Read-only, no auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://soxoa.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "soxoa-automation-planner",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].workflows has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://soxoa.com/mcp"
+}

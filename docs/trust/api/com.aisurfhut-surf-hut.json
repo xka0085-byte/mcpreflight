@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:44.146Z",
+  "server": {
+    "registryName": "com.aisurfhut/surf-hut",
+    "title": "Surf Hut",
+    "description": "Signed proof-of-time, 30-day stash, live NOAA surf data. No auth. The hut keeps honest clocks.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://aisurfhut.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "surf-hut",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].message has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://aisurfhut.com/mcp"
+}

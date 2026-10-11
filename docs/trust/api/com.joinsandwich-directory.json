@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:18.686Z",
+  "server": {
+    "registryName": "com.joinsandwich/directory",
+    "title": "Sandwich Public Care Directory",
+    "description": "Read-only MCP server for Sandwich aging-parent care resources and cost data.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://www.joinsandwich.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.joinsandwich/directory",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.joinsandwich.com/api/mcp"
+}

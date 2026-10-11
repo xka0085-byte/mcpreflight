@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:32.079Z",
+  "server": {
+    "registryName": "com.compensationprofessional/discovery",
+    "title": "Compensation Professional — compensation library, answers, and wage-compliance data",
+    "description": "Read-only access to Compensation Professional's compensation-focused book library, query-shaped...",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://compensationprofessional.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "compensationprofessional-discovery",
+      "version": "1.0.0",
+      "description": "Read-only MCP access to Compensation Professional's compensation library, query-shaped practitioner answers, and effective-dated minimum-wage records by jurisdiction.",
+      "websiteUrl": "https://compensationprofessional.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://compensationprofessional.com/api/mcp"
+}

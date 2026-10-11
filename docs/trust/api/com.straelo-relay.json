@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:57.737Z",
+  "server": {
+    "registryName": "com.straelo/relay",
+    "title": "Straelo Relay",
+    "description": "MCP tools for agents: web research, content extraction, email, DNS, and blockchain intelligence.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://relay.straelo.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Straelo Relay",
+      "version": "1.30.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].intent has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://relay.straelo.com/mcp/"
+}

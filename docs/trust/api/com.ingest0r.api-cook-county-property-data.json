@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:10.831Z",
+  "server": {
+    "registryName": "com.ingest0r.api/cook-county-property-data",
+    "title": "Cook County / Chicago Property Data (free tier, no wallet needed)",
+    "description": "Cook County / Chicago property by address or PIN: sales, permits, assessments, comps. 25 free/day.",
+    "registryVersion": "0.4.2"
+  },
+  "endpoint": "https://api.ingest0r.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cook-county-chicago-property-data",
+      "version": "1.27.2",
+      "websiteUrl": "https://api.ingest0r.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.ingest0r.com/mcp"
+}

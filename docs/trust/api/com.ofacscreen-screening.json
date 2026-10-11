@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:17.886Z",
+  "server": {
+    "registryName": "com.ofacscreen/screening",
+    "title": "OFACScreen Sanctions Screening",
+    "description": "Screen names against US, UN, EU, UK, Canadian and Swiss sanctions and export-control lists. Free.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.ofacscreen.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ofacscreen",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.ofacscreen.com/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:53.195Z",
+  "server": {
+    "registryName": "com.stackerscan/stackerscan",
+    "title": "StackerScan",
+    "description": "Five read-only tools: spot prices, observed premiums, price history, Goldback rate, and currencies.",
+    "registryVersion": "1.5.2"
+  },
+  "endpoint": "https://www.stackerscan.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "StackerScan",
+      "version": "1.5.2"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.stackerscan.com/mcp"
+}

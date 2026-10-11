@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:04.567Z",
+  "server": {
+    "registryName": "app.cellarion/wine-registry",
+    "title": "Cellarion Wine Registry",
+    "description": "Public wine registry and guides: search wines, grapes, regions, appellations. No account.",
+    "registryVersion": "1.82.4"
+  },
+  "endpoint": "https://cellarion.app/api/mcp/public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cellarion-public",
+      "version": "1.258.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cellarion.app/api/mcp/public"
+}

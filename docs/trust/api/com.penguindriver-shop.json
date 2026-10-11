@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:39.996Z",
+  "server": {
+    "registryName": "com.penguindriver/shop",
+    "title": "購物比價紀錄",
+    "description": "購物比價紀錄：3C、美妝、家電價格比較。台灣繁體中文 MCP 工具。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://shop.penguindriver.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tw-shop-prices",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://shop.penguindriver.com/mcp"
+}

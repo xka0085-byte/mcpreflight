@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:05.197Z",
+  "server": {
+    "registryName": "ai.infrabase/directory",
+    "title": "Infrabase",
+    "description": "Hand-verified AI infrastructure directory: tools, alternatives, EU providers, LLM API prices.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://infrabase.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "infrabase",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].message has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://infrabase.ai/mcp"
+}

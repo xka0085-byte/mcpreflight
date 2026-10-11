@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:03.737Z",
+  "server": {
+    "registryName": "app.cardog/mcp",
+    "title": "Cardog",
+    "description": "VIN decode, Canadian listings, market quotes, TC+NHTSA recalls. Full API: https://cardog.app/docs.md",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://mcp.cardog.io/mcp?api_key={api_key}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.cardog.io/mcp?api_key={api_key}"
+}

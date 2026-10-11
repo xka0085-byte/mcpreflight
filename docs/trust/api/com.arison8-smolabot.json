@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:53.972Z",
+  "server": {
+    "registryName": "com.arison8/smolabot",
+    "title": "Smolabot",
+    "description": "Deterministic decision guardrail for AI agents and bots. Verifies pre-trade economics (long-only).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://smolabot.arison8.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "smolabot-trade-check",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].entry_liquidity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].exit_liquidity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maker_fee_bps has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].taker_fee_bps has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://smolabot.arison8.com/mcp"
+}

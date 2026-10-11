@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:08.132Z",
+  "server": {
+    "registryName": "com.x402supply/entity-resolve",
+    "title": "com.x402supply/entity-resolve",
+    "description": "Fuzzy entity resolution and dedupe for names, addresses, and company records. $0.02/call via x402.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://entity-resolve.x402supply.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "entity-resolve",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].records has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].options has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://entity-resolve.x402supply.com/mcp"
+}

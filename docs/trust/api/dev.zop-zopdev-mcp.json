@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:08.518Z",
+  "server": {
+    "registryName": "dev.zop/zopdev-mcp",
+    "title": "ZopDev MCP",
+    "description": "Cloud cost, inventory and governance on AWS/Azure/GCP. Read-only by default, optional scoped writes",
+    "registryVersion": "1.8.0"
+  },
+  "endpoint": "https://api.zop.dev/mcp-server",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.zop.dev/mcp-server"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:44.302Z",
+  "server": {
+    "registryName": "com.aitwire/authority",
+    "title": "AITWIRE",
+    "description": "Business-published entity records with confirmation dates: look up, page feeds, check claims.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.aitwire.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aitwire-authority",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].feed_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.aitwire.com/mcp"
+}

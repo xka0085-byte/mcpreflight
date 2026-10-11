@@ -1,0 +1,71 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:16.801Z",
+  "server": {
+    "registryName": "com.jithox/jithox",
+    "title": "Jithox",
+    "description": "8 invoice/payment tools; 5 free, no login. IBAN, bank changes, Peppol. Paid VAT and invoice review.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://jithox.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "jithox",
+      "title": "Jithox",
+      "websiteUrl": "https://jithox.com",
+      "icons": [
+        {
+          "src": "https://jithox.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ],
+      "description": "Jithox's read-only checks before a payment: one preflight of the payment itself, a changed supplier bank account, an IBAN, Peppol invoice rules and receivers, EU VAT numbers in VIES and Belgian companies in the KBO. No tool on this endpoint sends, posts, pays or delivers anything. Before you pay an invoice, call preflight_payment once. No verdict (an error or 429) means: do not pay.",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].issueDate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].dueDate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].note has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lines has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].lines has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].mandate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].payment has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://jithox.com/api/mcp"
+}

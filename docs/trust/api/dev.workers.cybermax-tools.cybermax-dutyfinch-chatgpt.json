@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:02.052Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/dutyfinch-chatgpt",
+    "title": "Dutyfinch Tariff Lookup",
+    "description": "US import duty and HTS codes from the official USITC schedule, plus Section 301 China status. Free.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gpt-dutyfinch.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cybermax-dutyfinch",
+      "title": "Dutyfinch Tariff Lookup",
+      "version": "1.0.0",
+      "websiteUrl": "https://gpt-dutyfinch.cybermaxtools.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gpt-dutyfinch.cybermaxtools.com/mcp?via=mcp-registry"
+}

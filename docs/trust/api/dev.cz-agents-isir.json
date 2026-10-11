@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:33.516Z",
+  "server": {
+    "registryName": "dev.cz-agents/isir",
+    "title": "dev.cz-agents/isir",
+    "description": "Czech insolvency register (ISIR) — active/historical insolvency & bankruptcy by IČO or person.",
+    "registryVersion": "0.2.4"
+  },
+  "endpoint": "https://isir.cz-agents.dev/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://isir.cz-agents.dev/mcp"
+}

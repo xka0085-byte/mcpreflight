@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:09.998Z",
+  "server": {
+    "registryName": "com.experiencebamfield/experience-bamfield",
+    "title": "Experience Bamfield",
+    "description": "Plan and price trips to Bamfield, BC, and build the guest's cart link. Read-only; no key to connect.",
+    "registryVersion": "2026.10.8"
+  },
+  "endpoint": "https://experiencebamfield.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "experience-bamfield",
+      "title": "Experience Bamfield — trips to Bamfield, British Columbia",
+      "version": "2026.10.8"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lines has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].lines has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://experiencebamfield.com/mcp"
+}

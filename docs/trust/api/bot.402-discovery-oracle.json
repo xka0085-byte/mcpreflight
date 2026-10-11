@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:55.073Z",
+  "server": {
+    "registryName": "bot.402/discovery-oracle",
+    "title": "bot.402/discovery-oracle",
+    "description": "Discover live agent APIs, ranked endpoints, trust, payment telemetry, and x402 surfaces.",
+    "registryVersion": "1.0.1-beta"
+  },
+  "endpoint": "https://api.402.bot/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.402.bot/mcp"
+}

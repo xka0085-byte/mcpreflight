@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:17.139Z",
+  "server": {
+    "registryName": "co.yachtfinder/yachtfinder",
+    "title": "YachtFinder",
+    "description": "Search about 20,000 yachts for sale, charter and sold, with where AIS last placed each one.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.yachtfinder.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "yachtfinder",
+      "title": "YachtFinder",
+      "version": "1.0.0",
+      "description": "Read-only search of the YachtFinder yacht catalogue: yachts for sale, for charter and reported sold, their published AIS positions, and a link to each yacht's page.",
+      "websiteUrl": "https://mcp.yachtfinder.co"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.yachtfinder.co/mcp"
+}

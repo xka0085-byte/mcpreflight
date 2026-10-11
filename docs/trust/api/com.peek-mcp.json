@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:38.127Z",
+  "server": {
+    "registryName": "com.peek/mcp",
+    "title": "com.peek/mcp",
+    "description": "Build travel itineraries with Peek's 300k+ experiences. Search, details, and availability.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.peek.com",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Experiences MCP",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.peek.com"
+}

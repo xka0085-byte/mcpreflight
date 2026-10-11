@@ -1,0 +1,76 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:55.374Z",
+  "server": {
+    "registryName": "com.preshiftiq/shiftiq-mcp",
+    "title": "PreShiftIQ",
+    "description": "Independent buyer-side matching for supply chain technology selection.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.preshiftiq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "shiftiq-mcp",
+      "version": "0.1.0+798dd590.d192475b",
+      "title": "PreShiftIQ",
+      "websiteUrl": "https://preshiftiq.com",
+      "description": "Independent buyer-side matching for supply chain technology selection.",
+      "icons": [
+        {
+          "src": "https://app.preshiftiq.com/favicon.ico",
+          "mimeType": "image/x-icon",
+          "sizes": [
+            "16x16",
+            "32x32"
+          ]
+        },
+        {
+          "src": "https://app.preshiftiq.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "64x64"
+          ]
+        },
+        {
+          "src": "https://app.preshiftiq.com/preshiftiq-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].vertical_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].vertical_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].vertical_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].assessment_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].match_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.preshiftiq.com/mcp"
+}

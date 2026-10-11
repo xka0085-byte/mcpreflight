@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:02.884Z",
+  "server": {
+    "registryName": "ai.hanria/agent-mandate-check",
+    "title": "HANRIA agent mandate check",
+    "description": "Check an agent action against its operator's mandate before acting: permit, deny or escalate.",
+    "registryVersion": "0.7.4"
+  },
+  "endpoint": "https://check.hanria.ai/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hanria-check",
+      "version": "0.7.4"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://check.hanria.ai/v1/mcp"
+}

@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:42.409Z",
+  "server": {
+    "registryName": "ai.stealthstack/discovery",
+    "title": "StealthStack ARD Discovery",
+    "description": "Search a public index of agents, MCP servers and skills found on the open web. Free, no auth.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://stealthstack.ai/mcp?src=mcpregistry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "stealthstack-discovery",
+      "version": "0.2.0",
+      "websiteUrl": "https://stealthstack.ai/",
+      "icons": [
+        {
+          "src": "https://stealthstack.ai/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://stealthstack.ai/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://stealthstack.ai/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://stealthstack.ai/mcp?src=mcpregistry"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:43.963Z",
+  "server": {
+    "registryName": "com.slashyear/mcp",
+    "title": "slashyear - sourced history",
+    "description": "Sourced history: dated events, each quoted from a citable Wikipedia revision id.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://slashyear.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "slashyear",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].from_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].to_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].starts_with has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://slashyear.com/mcp"
+}

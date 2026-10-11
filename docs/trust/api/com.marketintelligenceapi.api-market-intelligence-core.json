@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:46.166Z",
+  "server": {
+    "registryName": "com.marketintelligenceapi.api/market-intelligence-core",
+    "title": "Market Intelligence API (core)",
+    "description": "Compact 18-tool x402 market data server: token safety, Fed odds, DeFi yields, swap quotes, decisions",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.marketintelligenceapi.com/mcp/core",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "icons": [
+        {
+          "sizes": [
+            "512x512"
+          ],
+          "mimeType": "image/png",
+          "src": "https://api.marketintelligenceapi.com/logo.png"
+        }
+      ],
+      "websiteUrl": "https://api.marketintelligenceapi.com",
+      "name": "market-intelligence-core",
+      "title": "Market Intelligence API (core)",
+      "version": "1.8.0"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].protocol has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.marketintelligenceapi.com/mcp/core"
+}

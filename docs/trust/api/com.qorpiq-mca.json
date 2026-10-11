@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:04.207Z",
+  "server": {
+    "registryName": "com.qorpiq/mca",
+    "title": "QorpIQ: Indian company and director data (MCA)",
+    "description": "Indian company and director lookups from the MCA registry: CIN, LLPIN, DIN, MCA status, new firms.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://mcp.qorpiq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "qorpiq-mca",
+      "version": "0.1.2",
+      "title": "QorpIQ: Indian company and director data (MCA)"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.qorpiq.com/mcp"
+}

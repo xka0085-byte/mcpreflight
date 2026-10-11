@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:53.006Z",
+  "server": {
+    "registryName": "ca.structureclerk/mcp",
+    "title": "StructureClerk",
+    "description": "AI agent policy decisions: ALLOW, DENY, APPROVE, ESCALATE. 192 jurisdictions, signed evidence.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://structureclerk.ca/api/mcp-http",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "structureclerk",
+      "version": "2.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].processes_personal_data has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].uses_ai has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sector has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].agent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].context has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://structureclerk.ca/api/mcp-http"
+}

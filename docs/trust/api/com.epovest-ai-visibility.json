@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:05.966Z",
+  "server": {
+    "registryName": "com.epovest/ai-visibility",
+    "title": "Epovest",
+    "description": "With Epovest, businesses make AIs recommend them.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.epovest.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "epovest",
+      "title": "Epovest",
+      "version": "1.0.0"
+    },
+    "toolCount": 67,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[62].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[62].per_page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.epovest.com/mcp"
+}

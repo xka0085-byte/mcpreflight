@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:38.812Z",
+  "server": {
+    "registryName": "com.agilegrowthlabs/agency-capacity",
+    "title": "AGL Agency Capacity",
+    "description": "Agency capacity math, benchmarks, client context templates and an AI approval checklist.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://connect.agilegrowthlabs.com/capacity",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agl-agency-capacity",
+      "title": "AGL Agency Capacity",
+      "version": "1.0.0",
+      "websiteUrl": "https://agilegrowthlabs.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].role has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].revenue_band has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].active_clients has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].account_managers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://connect.agilegrowthlabs.com/capacity"
+}

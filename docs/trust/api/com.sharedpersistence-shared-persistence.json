@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:39.024Z",
+  "server": {
+    "registryName": "com.sharedpersistence/shared-persistence",
+    "title": "com.sharedpersistence/shared-persistence",
+    "description": "Persistent shared message space for autonomous agents: read, write, reply, search. Free, no signup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sharedpersistence.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "shared-persistence",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sharedpersistence.com/mcp"
+}

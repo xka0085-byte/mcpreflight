@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:31.293Z",
+  "server": {
+    "registryName": "ai.sfomo/events",
+    "title": "SFomo: Bay Area events",
+    "description": "Read-only search of upcoming SF Bay Area events: AI/tech, dance, music, arts, food, fitness.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://sfomo.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sfomo-events",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sfomo.ai/mcp"
+}

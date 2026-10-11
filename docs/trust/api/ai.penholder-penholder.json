@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:20.897Z",
+  "server": {
+    "registryName": "ai.penholder/penholder",
+    "title": "ai.penholder/penholder",
+    "description": "Preventive human-approval write-gate for AI agents: writes commit only after a human approves.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.penholder.ai/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.penholder.ai/mcp"
+}

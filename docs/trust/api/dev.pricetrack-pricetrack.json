@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:47.919Z",
+  "server": {
+    "registryName": "dev.pricetrack/pricetrack",
+    "title": "PriceTrack",
+    "description": "Live SaaS pricing: current plans, verified price changes, and comparisons for 33,000+ products.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://pricetrack.dev/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pricetrack",
+      "title": "PriceTrack — SaaS pricing",
+      "version": "0.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pricetrack.dev/api/mcp"
+}

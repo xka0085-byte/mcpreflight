@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:12.441Z",
+  "server": {
+    "registryName": "es.embals/embalses",
+    "title": "es.embals/embalses",
+    "description": "Nivel actual e histórico de los embalses de España (MITECO/SAIH). Datos abiertos CC BY 4.0.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://embals.es/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "embals-es",
+      "title": "embals.es — Embalses de España",
+      "version": "1.0.0",
+      "websiteUrl": "https://embals.es/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].provincia has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].orden has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ambito has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://embals.es/mcp"
+}

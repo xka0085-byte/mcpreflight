@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:22.767Z",
+  "server": {
+    "registryName": "com.thenextgennexus/redfin-mcp-server",
+    "title": "com.thenextgennexus/redfin-mcp-server",
+    "description": "Single-property deep-dive: history, price/sqft, days-on-market, comps from a Redfin URL.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nexgendata-mcp-proxy.steve-corbeil.workers.dev/redfin-mcp-server/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nexgendata-mcp-proxy.steve-corbeil.workers.dev/redfin-mcp-server/mcp"
+}

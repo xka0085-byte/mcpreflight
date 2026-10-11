@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:55.261Z",
+  "server": {
+    "registryName": "cc.placetobe/events",
+    "title": "Place to Be",
+    "description": "What's on in any city: live, ranked concerts, sport, festivals, nightlife and culture.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://placetobe.cc/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cc.placetobe/events",
+      "title": "Place to Be",
+      "version": "1.0.0",
+      "description": "Live, ranked events worldwide: what's on tonight, this weekend and this week in hundreds of cities.",
+      "websiteUrl": "https://placetobe.cc",
+      "icons": [
+        {
+          "src": "https://placetobe.cc/brand/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        },
+        {
+          "src": "https://placetobe.cc/brand/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://placetobe.cc/mcp"
+}

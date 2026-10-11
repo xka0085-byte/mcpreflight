@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:30.063Z",
+  "server": {
+    "registryName": "dev.certdesk/certdesk",
+    "title": "certdesk",
+    "description": "TLS cert verdict (OK/WARN/CRITICAL/UNKNOWN) from the served chain: expiry, revocation, alerts",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://certdesk.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "certdesk",
+      "title": "certdesk — TLS certificate diagnostics",
+      "version": "0.6.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://certdesk.dev/mcp"
+}

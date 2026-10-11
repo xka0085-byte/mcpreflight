@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:43.982Z",
+  "server": {
+    "registryName": "au.com.staylonger/mcp",
+    "title": "Staylonger",
+    "description": "Search, check availability and quote furnished extended-stay rentals (30+ nights) in Australia.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://staylonger.com.au/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "au.com.staylonger/mcp",
+      "title": "Staylonger",
+      "version": "1.0.0",
+      "description": "Search, check availability and quote furnished extended-stay rentals (30+ nights) in Australia.",
+      "websiteUrl": "https://staylonger.com.au/agents",
+      "icons": [
+        {
+          "src": "https://staylonger.com.au/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].children has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].babies has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].pets has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://staylonger.com.au/mcp"
+}

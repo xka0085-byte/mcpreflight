@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:52.086Z",
+  "server": {
+    "registryName": "com.venuetoll/toll",
+    "title": "Venue Toll Facts",
+    "description": "Measured venue tolls: fee, spread, slippage, with evidence. list_venues free; get_toll paid.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://venuetoll.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "venuetoll",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://venuetoll.com/mcp"
+}

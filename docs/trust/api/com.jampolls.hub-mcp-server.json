@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:15.483Z",
+  "server": {
+    "registryName": "com.jampolls.hub/mcp-server",
+    "title": "Jampolls",
+    "description": "Real-time polls, surveys, quizzes, trivia, Q&A, and word clouds for teams, educators, and creators.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hub.jampolls.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "jampolls-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hub.jampolls.com/mcp"
+}

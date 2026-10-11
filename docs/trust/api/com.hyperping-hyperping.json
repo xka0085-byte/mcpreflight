@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:06.161Z",
+  "server": {
+    "registryName": "com.hyperping/hyperping",
+    "title": "com.hyperping/hyperping",
+    "description": "Uptime, API and server monitoring with outages, reporting, on-call and status pages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.hyperping.io/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hyperping-monitors",
+      "version": "1.1.0"
+    },
+    "toolCount": 69,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[34].theme has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[34].font has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[34].hide_from_search_engines has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.hyperping.io/v1/mcp"
+}

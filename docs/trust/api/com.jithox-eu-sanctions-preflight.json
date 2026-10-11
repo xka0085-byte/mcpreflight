@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:17.610Z",
+  "server": {
+    "registryName": "com.jithox/eu-sanctions-preflight",
+    "title": "Jithox EU Counterparty Sanctions Preflight",
+    "description": "Read-only EU sanctions preflight: screen names/IDs against EU list. Evidence, not a verdict.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://sanctions.mcp.jithox.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.jithox/eu-sanctions-preflight",
+      "title": "Jithox EU Counterparty Sanctions Preflight",
+      "version": "0.2.2"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sanctions.mcp.jithox.com/mcp"
+}

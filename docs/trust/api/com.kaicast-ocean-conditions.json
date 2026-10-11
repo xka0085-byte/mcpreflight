@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:22.934Z",
+  "server": {
+    "registryName": "com.kaicast/ocean-conditions",
+    "title": "KaiCast Ocean Conditions",
+    "description": "Ocean conditions by location: water visibility, swell, wind, tide, plus dive and snorkel spot picks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://kaicast.com/mcp?ref=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kaicast",
+      "title": "KaiCast Ocean Conditions",
+      "version": "1.0.0",
+      "websiteUrl": "https://kaicast.com/developers",
+      "description": "Ocean conditions and dive/snorkel decisions: water visibility, swell, wind, tide and water temperature per spot, plus ranked spot picks and best-day answers."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://kaicast.com/mcp?ref=mcp-registry"
+}

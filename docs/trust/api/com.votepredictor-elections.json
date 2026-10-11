@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:57.974Z",
+  "server": {
+    "registryName": "com.votepredictor/elections",
+    "title": "VotePredictor Elections",
+    "description": "2026 US election forecasts with a public accuracy record, plus congressional voting records.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://votepredictor.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "votepredictor",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://votepredictor.com/api/mcp"
+}

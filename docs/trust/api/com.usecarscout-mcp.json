@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:47.236Z",
+  "server": {
+    "registryName": "com.usecarscout/mcp",
+    "title": "CarScout",
+    "description": "Search used car inventory, check NHTSA recalls, decode VINs, and manage automated search scouts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.usecarscout.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.usecarscout/mcp",
+      "title": "CarScout",
+      "version": "1.0.0",
+      "description": "Benchmark market prices, check recalls, decode VINs, and manage automated scouts.",
+      "websiteUrl": "https://usecarscout.com/tools/mcp",
+      "icons": [
+        {
+          "src": "https://usecarscout.com/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usecarscout.com/favicon-96x96.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "96x96"
+          ]
+        }
+      ]
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "12 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.usecarscout.com/mcp"
+}

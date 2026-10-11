@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:19.943Z",
+  "server": {
+    "registryName": "de.choov/mcp",
+    "title": "Choov MCP",
+    "description": "Strom- und Gastarife sowie Produktinformationen für Energievergleiche, live per MCP-Tool.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.choov.de/mcp.php",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "mcp-adserver",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.choov.de/mcp.php"
+}

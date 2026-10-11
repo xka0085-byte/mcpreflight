@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:26.601Z",
+  "server": {
+    "registryName": "dev.agent-module/mcp",
+    "title": "Agent Module",
+    "description": "Deterministic compliance and vertical knowledge bases for autonomous agents. Free 24hr trial.",
+    "registryVersion": "0.9.9"
+  },
+  "endpoint": "https://api.agent-module.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-module",
+      "version": "0.9.23"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].architecture_assessment has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.agent-module.dev/mcp"
+}

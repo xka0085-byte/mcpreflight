@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:42.846Z",
+  "server": {
+    "registryName": "com.tradealmanac/mcp-server",
+    "title": "TradeAlmanac",
+    "description": "TradeAlmanac market data: dividends, screener, sentiment indicators, calendar effects, stock lists.",
+    "registryVersion": "2026.10.7"
+  },
+  "endpoint": "https://tradealmanac.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tradealmanac.com/mcp"
+}

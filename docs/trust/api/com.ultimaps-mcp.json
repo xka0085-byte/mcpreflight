@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:45.332Z",
+  "server": {
+    "registryName": "com.ultimaps/mcp",
+    "title": "Ultimaps",
+    "description": "Create choropleth, category and pin maps of countries, states, counties and ZIP codes as images.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.ultimaps.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ultimaps",
+      "title": "Ultimaps",
+      "version": "1.0.0",
+      "websiteUrl": "https://ultimaps.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].legend has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].style has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.ultimaps.com/mcp"
+}

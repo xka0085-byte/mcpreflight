@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:04.868Z",
+  "server": {
+    "registryName": "com.bettrails/bettrails",
+    "title": "Bettrails",
+    "description": "eSoccer, esports and NBA 2K stats: head-to-heads, player profiles, today's matches, standings.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://bettrails.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bettrails",
+      "title": "Bettrails",
+      "version": "0.5.0",
+      "websiteUrl": "https://bettrails.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].player1 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].player2 has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bettrails.com/mcp"
+}

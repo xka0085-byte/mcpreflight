@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:39.842Z",
+  "server": {
+    "registryName": "com.globalfinreg/lei",
+    "title": "Global FinReg",
+    "description": "Look up LEIs in the global LEI register, and view, renew and transfer a Global FinReg user's LEIs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api2.globalfinreg.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "globalfinreg",
+      "title": "Global FinReg",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.globalfinreg.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api2.globalfinreg.com/mcp"
+}

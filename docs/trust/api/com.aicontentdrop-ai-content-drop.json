@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:40.131Z",
+  "server": {
+    "registryName": "com.aicontentdrop/ai-content-drop",
+    "title": "com.aicontentdrop/ai-content-drop",
+    "description": "Make AI videos, images, ads and short dramas from a description, priced first. Sign in to create.",
+    "registryVersion": "1.3.4"
+  },
+  "endpoint": "https://aicontentdrop.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aicontentdrop",
+      "version": "1.3.4",
+      "title": "AI Content Drop"
+    },
+    "toolCount": 42,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[26].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[32].layout has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://aicontentdrop.com/mcp"
+}

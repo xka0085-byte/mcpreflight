@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:15.925Z",
+  "server": {
+    "registryName": "app.merron/ai-act-check",
+    "title": "Merron",
+    "description": "Inspect selected project excerpts and screen user-confirmed facts for bounded EU AI Act readiness.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://merron.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Merron",
+      "version": "0.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].files has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].facts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].facts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].system has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://merron.app/mcp"
+}

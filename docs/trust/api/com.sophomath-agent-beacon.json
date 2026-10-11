@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:47.519Z",
+  "server": {
+    "registryName": "com.sophomath/agent-beacon",
+    "title": "Agent Beacon",
+    "description": "Report capabilities needed and not found. Requests aren't fulfilled.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://beacon.sophomath.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-beacon",
+      "title": "Agent Beacon",
+      "version": "0.1.1",
+      "websiteUrl": "https://beacon.sophomath.com/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].request_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].return_token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://beacon.sophomath.com/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:50.071Z",
+  "server": {
+    "registryName": "com.vectelos/duty",
+    "title": "Vectelos Duty",
+    "description": "US import duty from the live HTS: Section 301/232 stacking, MPF, HMF. Refuses what it cannot price.",
+    "registryVersion": "0.4.2"
+  },
+  "endpoint": "https://mcp.vectelos.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.vectelos.com/mcp"
+}

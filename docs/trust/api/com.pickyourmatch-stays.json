@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:44.539Z",
+  "server": {
+    "registryName": "com.pickyourmatch/stays",
+    "title": "pickyourmatch",
+    "description": "Find exact, directly bookable hotel rooms and apartments with live availability and prices.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://pym-mcp.gauvendi.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pickyourmatch",
+      "title": "Pick Your Match — Direct Hotel Search",
+      "version": "1.2.0",
+      "websiteUrl": "https://pickyourmatch.com",
+      "icons": [
+        {
+          "src": "https://pickyourmatch.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://pickyourmatch.com/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pym-mcp.gauvendi.workers.dev/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:48.793Z",
+  "server": {
+    "registryName": "com.spaghettiandsummits/outdoors",
+    "title": "Spaghetti and Summits — First-Hand Dolomites Adventures",
+    "description": "Dolomites climbing, ski, and rifugio guides; limited anonymous inbox for plain-text owner messages.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.spaghettiandsummits.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "spaghetti-and-summits",
+      "version": "0.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].subject has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].message has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.spaghettiandsummits.com/mcp"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:58.868Z",
+  "server": {
+    "registryName": "com.vulnrable/vulnrable",
+    "title": "com.vulnrable/vulnrable",
+    "description": "Security grades for MCP servers and npm/PyPI packages, ranked by CISA KEV and EPSS.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vulnrable.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vulnrable",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].ecosystem has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kev_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_severity has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://vulnrable.com/api/mcp"
+}

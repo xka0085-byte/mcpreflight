@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:24.192Z",
+  "server": {
+    "registryName": "de.stellenonline/jobsearch",
+    "title": "stellenonline.de Jobsuche",
+    "description": "Read-only search across current job listings on stellenonline.de (German job portal).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.stellenonline.de/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.stellenonline.de/mcp"
+}

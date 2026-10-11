@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:50.790Z",
+  "server": {
+    "registryName": "business.hesoyam/inference-discovery",
+    "title": "1NFER Inference Discovery",
+    "description": "Inspect 1NFER models, crypto funding terms and task cost without keys or paid calls.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hesoyam.business/agent-tools/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "1NFER inference discovery",
+      "version": "1.26.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].input_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].output_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].framework has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hesoyam.business/agent-tools/mcp"
+}

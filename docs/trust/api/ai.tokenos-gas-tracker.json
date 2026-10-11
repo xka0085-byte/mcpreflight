@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:47.666Z",
+  "server": {
+    "registryName": "ai.tokenos/gas-tracker",
+    "title": "TokenOS Gas & Fee Tracker",
+    "description": "Live fees on five chains",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://tokenos.ai/api/mcp/apps/gas-tracker",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tokenos-gas-tracker",
+      "title": "Gas & Fee Tracker by TokenOS — Ethereum, Base, Arbitrum, Robinhood Chain, Solana",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].chain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tx_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].speed has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].speed has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tokenos.ai/api/mcp/apps/gas-tracker"
+}

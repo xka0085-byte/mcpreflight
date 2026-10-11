@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:04.908Z",
+  "server": {
+    "registryName": "app.everjust/mcp",
+    "title": "EVERJUST",
+    "description": "Operate your EVERJUST workspace: CRM, sales, projects, mail, documents, calendar, invoicing.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://{workspace}.everjust.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{workspace}.everjust.app/mcp"
+}

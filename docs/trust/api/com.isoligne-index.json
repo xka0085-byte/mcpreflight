@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:14.690Z",
+  "server": {
+    "registryName": "com.isoligne/index",
+    "title": "com.isoligne/index",
+    "description": "Ce qu'une IA lit des sites web français : note, axes, secteur, questions sans réponse.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://isoligne.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "isoligne-index",
+      "title": "Isoligne Index : ce qu'une IA lit des sites",
+      "version": "0.2.2"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].domaine has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://isoligne.com/mcp"
+}

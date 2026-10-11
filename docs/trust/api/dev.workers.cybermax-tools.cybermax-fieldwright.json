@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:01.927Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/fieldwright",
+    "title": "Fieldwright",
+    "description": "Fieldwright: web page to clean Markdown, metadata, JSON-LD, emails, phones.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://fieldwright.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fieldwright",
+      "title": "Fieldwright by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://fieldwright.cybermaxtools.com"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].include_markdown has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fieldwright.cybermaxtools.com/mcp?via=mcp-registry"
+}

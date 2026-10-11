@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:08.271Z",
+  "server": {
+    "registryName": "co.civai.nova/music-agent",
+    "title": "Music Agent by Nova (CIVAI)",
+    "description": "I do everything related to music and lyrics",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nova.civai.co/mcp/agents/music-agent",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Music Agent by Nova (CIVAI)",
+      "version": "1.0.0",
+      "websiteUrl": "https://nova.civai.co/agent/music-agent",
+      "icons": [
+        {
+          "src": "https://nova.civai.co/catalog-icons/SongIcon.svg",
+          "mimeType": "image/svg+xml"
+        },
+        {
+          "src": "https://nova.civai.co/catalog-icons/SongIcon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "48x48"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nova.civai.co/mcp/agents/music-agent"
+}

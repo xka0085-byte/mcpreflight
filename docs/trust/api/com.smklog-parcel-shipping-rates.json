@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:45.129Z",
+  "server": {
+    "registryName": "com.smklog/parcel-shipping-rates",
+    "title": "SMKlog Parcel Shipping Rates",
+    "description": "Live USPS, UPS, FedEx and DHL rates from the US: domestic, Canada, UK, Germany, Australia. No scale.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://quote-api.smklog.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "smklog-quotes",
+      "title": "SMKlog Parcel Shipping Rates",
+      "version": "1.4.0",
+      "description": "Live USPS, UPS, FedEx and DHL Express shipping rates for a parcel sent from a US address — inside the US, or to Canada, the UK, Germany or Australia — described in plain words. No scale, no account and no API key. Also reports how a checkout it prepared is going, tracks shipments bought on SMKlog and serves a monthly US parcel shipping price index.",
+      "websiteUrl": "https://smklog.com",
+      "icons": [
+        {
+          "src": "https://smklog.com/assets/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://smklog.com/assets/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://quote-api.smklog.com/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:14.311Z",
+  "server": {
+    "registryName": "com.taxact/taxact-mcp",
+    "title": "com.taxact/taxact-mcp",
+    "description": "Tax filing guidance, cost comparison, document checklists, and refund estimates by TaxAct.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.taxact.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "taxact",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].is_blind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].spouse_is_blind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.taxact.com/mcp"
+}

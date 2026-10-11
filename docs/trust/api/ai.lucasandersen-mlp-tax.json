@@ -1,0 +1,109 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:10.568Z",
+  "server": {
+    "registryName": "ai.lucasandersen/mlp-tax",
+    "title": "MLP Tax Computation Engine",
+    "description": "Deterministic MLP tax engine with IRS citations. 6 tools: basis, §751, estate, projections.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.lucasandersen.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "lucasandersen.ai MLP & Partnership Tax Tools",
+      "version": "0.1.0",
+      "description": "Authoritative MLP and partnership K-1 tax computation. IRC-cited methodology, transparent assumptions, maintained by an MLP investor and finance professional.",
+      "homepage": "https://lucasandersen.ai/?src=mcp&tool=none&surface=description",
+      "documentation": "https://lucasandersen.ai/api?src=mcp&tool=none&surface=description",
+      "support_url": "https://lucasandersen.ai/api?src=mcp&tool=none&surface=description",
+      "license": "Proprietary — free tier with paid upgrades",
+      "maintainer": {
+        "name": "Lucas Andersen",
+        "credentials": "MS Finance",
+        "url": "https://lucasandersen.ai/?src=mcp&tool=none&surface=description"
+      }
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tax_bracket has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ticker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].units has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].purchase_price has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tax_bracket has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].community_property has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].ticker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].ticker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].units has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].tax_bracket has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].ticker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].units has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].purchase_price has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].purchase_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].tax_bracket has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.lucasandersen.ai/mcp"
+}

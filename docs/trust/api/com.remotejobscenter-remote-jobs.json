@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:13.560Z",
+  "server": {
+    "registryName": "com.remotejobscenter/remote-jobs",
+    "title": "com.remotejobscenter/remote-jobs",
+    "description": "Search current remote / work-from-home jobs by category, region, perk, or company.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://remotejobscenter.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Remote Jobs Center",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://remotejobscenter.com/mcp"
+}

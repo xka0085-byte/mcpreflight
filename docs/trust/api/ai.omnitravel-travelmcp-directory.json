@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:18.575Z",
+  "server": {
+    "registryName": "ai.omnitravel/travelmcp-directory",
+    "title": "travelMCP Directory",
+    "description": "Search MCP servers, agent skills and APIs for travel: hotel ID mapping, rates, rooms.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://omnitravel.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "travelmcp-directory",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://omnitravel.ai/mcp"
+}

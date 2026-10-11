@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:16.589Z",
+  "server": {
+    "registryName": "com.callstay/hotels",
+    "title": "Callstay Hotels",
+    "description": "Live hotel rates worldwide: search stays, property detail, all-in room prices, human phone desk.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://callstay.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "callstay",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_results has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://callstay.com/api/mcp"
+}

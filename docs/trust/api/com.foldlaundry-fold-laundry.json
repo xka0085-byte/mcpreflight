@@ -1,0 +1,128 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:20.344Z",
+  "server": {
+    "registryName": "com.foldlaundry/fold-laundry",
+    "title": "Fold Laundry",
+    "description": "Book, track and manage laundry & dry-cleaning pickup in Los Angeles and San Francisco.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://foldlaundry.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fold-laundry",
+      "version": "1.0.0",
+      "description": "Fold Laundry — premium laundry & dry cleaning with door-to-door pickup in LA and SF. Use these tools to book residential pickups, book hotel-guest laundry (with optional ⚡ Express same-day service for a $30 surcharge between 9 AM and noon), purchase Fold Semester Passes for college students at UCLA / USC / UC Berkeley / UCSF (parent buys, student claims), check service area, get itemized estimates, apply promo codes, manage existing orders (track / reschedule / cancel / list), enroll in Fold Club subscriptions, share Fold referral codes with friends (give $25, get $25), and look up pricing. Booking tools support idempotency keys for safe retry.",
+      "title": "Fold Laundry",
+      "icons": [
+        {
+          "src": "https://foldlaundry.com/icons/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://foldlaundry.com/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ],
+      "websiteUrl": "https://foldlaundry.com"
+    },
+    "toolCount": 34,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].turnovers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].detergent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].waterTemp has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[25].addressId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[28].recurringId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[28].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].orderCode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].issueType has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[30].orderCode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[30].stars has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[31].orderCode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[32].orderCode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[33].roomNumber has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[33].guestFirstName has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[33].guestLastName has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[33].services has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[33].returnPreference has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://foldlaundry.com/mcp"
+}

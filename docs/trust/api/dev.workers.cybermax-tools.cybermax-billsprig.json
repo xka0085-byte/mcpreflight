@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:01.073Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/billsprig",
+    "title": "Billsprig Invoice Maker",
+    "description": "Make invoice, quote and receipt PDFs from a chat: totals, tax, 26 currencies. Free, nothing stored.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gpt-billsprig.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cybermax-billsprig",
+      "title": "Billsprig Invoice Maker",
+      "version": "1.0.0",
+      "websiteUrl": "https://gpt-billsprig.cybermaxtools.com"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].shipping has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].style has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].paperSize has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gpt-billsprig.cybermaxtools.com/mcp?via=mcp-registry"
+}

@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:17.826Z",
+  "server": {
+    "registryName": "com.texasratedpros/rankings",
+    "title": "TexasRatedPros Rankings",
+    "description": "Texas service-company rankings, profiles, comparisons, score breakdowns, and methodology.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.texasratedpros.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "com.texasratedpros/rankings",
+      "title": "TexasRatedPros Rankings",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.texasratedpros.com/mcp",
+      "description": "Read-only rankings, profiles, comparisons, score breakdowns, and methodology for independent Texas service companies."
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].metro has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].min_score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].slugs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.texasratedpros.com/api/mcp"
+}

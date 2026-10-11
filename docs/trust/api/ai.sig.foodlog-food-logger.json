@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:31.865Z",
+  "server": {
+    "registryName": "ai.sig.foodlog/food-logger",
+    "title": "Food Logger MCP",
+    "description": "Food logging, nutrition summaries, and meal photo calorie and macro estimates.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://foodlog.sig.ai/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://foodlog.sig.ai/api/mcp"
+}

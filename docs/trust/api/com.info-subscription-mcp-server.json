@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:10.042Z",
+  "server": {
+    "registryName": "com.info-subscription/mcp-server",
+    "title": "INFO-Subscription",
+    "description": "Exposes tools for querying subscriptions and billing data from the INFO-Subscription platform",
+    "registryVersion": "0.0.6"
+  },
+  "endpoint": "https://s4mcp-prod.azurewebsites.net/{tenantId}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://s4mcp-prod.azurewebsites.net/{tenantId}"
+}

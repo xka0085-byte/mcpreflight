@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:15.007Z",
+  "server": {
+    "registryName": "ai.myporta/myporta",
+    "title": "MyPorta",
+    "description": "Find UK homes for sale and to rent, matched to your wishes, with nearby schools and area guides.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.myporta.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "myporta",
+      "title": "MyPorta",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.myporta.ai",
+      "icons": [
+        {
+          "src": "https://www.myporta.ai/myporta-app-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].min_beds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_beds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].property_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.myporta.ai/mcp"
+}

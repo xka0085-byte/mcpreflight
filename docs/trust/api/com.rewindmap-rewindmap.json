@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:17.392Z",
+  "server": {
+    "registryName": "com.rewindmap/rewindmap",
+    "title": "RewindMap",
+    "description": "Historical borders and dated map events with source attribution and coverage limits.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://rewindmap.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "rewindmap",
+      "title": "RewindMap",
+      "version": "1.4.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].layer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].seconds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://rewindmap.com/mcp"
+}

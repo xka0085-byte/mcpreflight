@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:48.969Z",
+  "server": {
+    "registryName": "com.detourmap/places",
+    "title": "com.detourmap/places",
+    "description": "Places worth a detour, from Wikidata: search, nearby lookup, fame rankings, stats. No key, CC0.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://detourmap.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "detourmap",
+      "title": "Detourmap — every place worth the detour",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].longitude has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://detourmap.com/mcp"
+}

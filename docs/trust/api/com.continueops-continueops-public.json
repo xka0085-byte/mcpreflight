@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:36.324Z",
+  "server": {
+    "registryName": "com.continueops/continueops-public",
+    "title": "ContinueOps Public MCP",
+    "description": "BC/DR & compliance tools: DORA, NIS2, NIST CSF, GDPR, SOC 2, CMMC, CAF, ISO 27001, FCA/PRA.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://tjcjvxibsrxizwuajypz.supabase.co/functions/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "continueops-public",
+      "version": "0.2.0",
+      "title": "ContinueOps"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].org_size has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tjcjvxibsrxizwuajypz.supabase.co/functions/v1/mcp"
+}

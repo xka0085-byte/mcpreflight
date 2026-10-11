@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:52.853Z",
+  "server": {
+    "registryName": "com.mentioned-on/ai-discovery-readiness",
+    "title": "MentionedOn Discovery Evidence Tools",
+    "description": "Assess AI-discovery readiness, plan visibility fixes, and summarize scan evidence. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mentioned-on.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mentionedon-discovery-evidence",
+      "title": "MentionedOn Discovery Evidence Tools",
+      "version": "1.0.0",
+      "description": "Deterministic, read-only tools for evaluating supplied AI discovery signals and captured response evidence.",
+      "websiteUrl": "https://mentioned-on.com/developers/mcp"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].businessName has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].businessName has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mentioned-on.com/mcp"
+}

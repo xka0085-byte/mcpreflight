@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:29.055Z",
+  "server": {
+    "registryName": "com.coachwatts/coach-watts",
+    "title": "Coach Watts",
+    "description": "Remote MCP server for training, nutrition, wellness, and performance data with OAuth 2.0.",
+    "registryVersion": "0.5.25"
+  },
+  "endpoint": "https://coachwatts.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://coachwatts.com/mcp"
+}

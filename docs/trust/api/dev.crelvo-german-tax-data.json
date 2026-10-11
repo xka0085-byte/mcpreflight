@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:33.758Z",
+  "server": {
+    "registryName": "dev.crelvo/german-tax-data",
+    "title": "dev.crelvo/german-tax-data",
+    "description": "German municipal tax data (Hundesteuer, Zweitwohnungsteuer, Pfaendung), cited to the source",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://data.crelvo.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "crelvo-german-tax-data",
+      "version": "1.2.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].order has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].order has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://data.crelvo.dev/mcp"
+}

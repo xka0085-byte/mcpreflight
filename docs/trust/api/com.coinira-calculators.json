@@ -1,0 +1,62 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:29.914Z",
+  "server": {
+    "registryName": "com.coinira/calculators",
+    "title": "Coin IRA Crypto Calculators",
+    "description": "Historical crypto investment and retirement calculators with cited market data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://coinira.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Read-only tools for historical cryptocurrency investment estimates and hypothetical retirement projections.",
+      "name": "com.coinira.calculators",
+      "title": "Coin IRA Calculators",
+      "version": "1.0.0",
+      "websiteUrl": "https://coinira.com/"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].asset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].asset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].starting_balance has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].monthly_contribution has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].years has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].annual_return has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://coinira.com/mcp"
+}

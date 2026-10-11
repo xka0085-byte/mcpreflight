@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:46.709Z",
+  "server": {
+    "registryName": "com.pixelgust/mcp",
+    "title": "com.pixelgust/mcp",
+    "description": "Weather, climate, terrain, fire and flood risk data for any point or polygon on Earth. Free tier.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pixelgust.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pixelgust",
+      "title": "PixelGust Environmental Data",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].mode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pixelgust.com/mcp"
+}

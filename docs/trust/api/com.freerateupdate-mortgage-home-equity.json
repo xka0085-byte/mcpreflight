@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:24.214Z",
+  "server": {
+    "registryName": "com.freerateupdate/mortgage-home-equity",
+    "title": "FreeRateUpdate Mortgage & Home Equity Shopping",
+    "description": "Today's mortgage and home equity rates (HELOC, home equity loan, cash-out), lenders, start links.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://fru-api.freerateupdate.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "freerateupdate",
+      "title": "FreeRateUpdate mortgage and home equity shopping",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.freerateupdate.com/mortgage-home-equity-mcp"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].series_key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fru-api.freerateupdate.com/mcp"
+}

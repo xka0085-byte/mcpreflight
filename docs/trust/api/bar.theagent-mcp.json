@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:45.835Z",
+  "server": {
+    "registryName": "bar.theagent/mcp",
+    "title": "The Agent Bar",
+    "description": "An agent-native paid bar with four house drinks, a free 256-bottle Cellar, notes, and receipts.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://theagent.bar/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://theagent.bar/mcp"
+}

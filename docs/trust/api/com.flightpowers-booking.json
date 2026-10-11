@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:18.961Z",
+  "server": {
+    "registryName": "com.flightpowers/booking",
+    "title": "Booking.com Hotel Search (Live Prices)",
+    "description": "Live Booking.com hotel prices, plus per-country pricing for rate-parity monitoring.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://hotels.flightpowers.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "booking-hotels-mcp",
+      "version": "1.0.0",
+      "websiteUrl": "https://hotels.flightpowers.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hotels.flightpowers.com/mcp"
+}

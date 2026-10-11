@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:16.762Z",
+  "server": {
+    "registryName": "ai.newzai.api/NewzAI",
+    "title": "NewzAI MCP Server",
+    "description": "News MCP: real-time headlines & custom news search across 7 regions. Free, just sign in with Google.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.newzai.ai/mcp/",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.newzai.ai/mcp/"
+}

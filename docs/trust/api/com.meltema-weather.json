@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:01.092Z",
+  "server": {
+    "registryName": "com.meltema/weather",
+    "title": "Meltema Weather",
+    "description": "Multi-model weather forecasts: point series, model scoreboard, and gridded fields. No auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://meltema.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://meltema.com/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:05.597Z",
+  "server": {
+    "registryName": "com.wildorangecharters/site-mcp",
+    "title": "Wild Orange Charters Website MCP",
+    "description": "Search and read public Wild Orange Charters pages with source URLs.",
+    "registryVersion": "2026.09.15"
+  },
+  "endpoint": "https://wildorangecharters.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Wild Orange Charters site MCP",
+      "version": "2026.09.15"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://wildorangecharters.com/mcp"
+}

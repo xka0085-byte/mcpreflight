@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:42.777Z",
+  "server": {
+    "registryName": "com.uncountable/mcp",
+    "title": "Uncountable",
+    "description": "Read and write recipes, inputs, experiments and files in the Uncountable R&D platform.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://{deployment_domain}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{deployment_domain}/mcp"
+}

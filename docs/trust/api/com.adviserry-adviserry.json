@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:33.198Z",
+  "server": {
+    "registryName": "com.adviserry/adviserry",
+    "title": "Adviserry",
+    "description": "Search your newsletter and YouTube archive, drafted actions and working context from any MCP client.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://adviserry.com/api/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://adviserry.com/api/mcp"
+}

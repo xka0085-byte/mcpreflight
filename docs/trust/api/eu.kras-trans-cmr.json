@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:16.714Z",
+  "server": {
+    "registryName": "eu.kras-trans/cmr",
+    "title": "Kras-Trans: CMR, WZ and interest note generator",
+    "description": "CMR consignment notes in 25 EU languages, Polish WZ and interest notes: link to a ready PDF.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://kras-trans.eu/cmr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kras-trans-dokumenty",
+      "title": "Kras-Trans: CMR, WZ and interest note generator",
+      "version": "1.0.0",
+      "websiteUrl": "https://kras-trans.eu/cmr/asystent-ai/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].notes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].order_number has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://kras-trans.eu/cmr/mcp"
+}

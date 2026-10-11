@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:17.439Z",
+  "server": {
+    "registryName": "com.jobcrawls/connector",
+    "title": "JobCrawls",
+    "description": "Search jobs in Finland and calculate net salary. Read-only, no login. English, Finnish, Swedish.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.jobcrawls.com/api/connector",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "jobcrawls",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.jobcrawls.com/api/connector"
+}

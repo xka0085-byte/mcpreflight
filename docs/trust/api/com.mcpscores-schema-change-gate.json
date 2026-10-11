@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:50.326Z",
+  "server": {
+    "registryName": "com.mcpscores/schema-change-gate",
+    "title": "Schema Change Gate",
+    "description": "Replay supplied records against old and new bounded JSON Schema draft-07 contracts. Receive exact...",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-factory.bowling-anthony.workers.dev/schema-change-gate/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.mcpscores/schema-change-gate",
+      "title": "Schema Change Gate",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].old_schema has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].new_schema has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].examples has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-factory.bowling-anthony.workers.dev/schema-change-gate/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:04.220Z",
+  "server": {
+    "registryName": "app.courtrules/court-rules",
+    "title": "Court Rules",
+    "description": "Judge-level filing rules, court holidays and enforcement data for US federal and state courts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.courtrules.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.courtrules.app/mcp"
+}

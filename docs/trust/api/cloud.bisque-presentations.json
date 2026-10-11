@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:01.149Z",
+  "server": {
+    "registryName": "cloud.bisque/presentations",
+    "title": "Bisque Presentations",
+    "description": "Create narrated presentations from HTML, poll build status, list them, read one back as text.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://bisque.cloud/presentations/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "bisque-presentations",
+      "title": "Bisque Presentations",
+      "version": "1.0.0"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].body has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].resolved has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bisque.cloud/presentations/mcp"
+}

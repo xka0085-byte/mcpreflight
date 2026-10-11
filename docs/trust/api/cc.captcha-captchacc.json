@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:54.370Z",
+  "server": {
+    "registryName": "cc.captcha/captchacc",
+    "title": "captcha.cc Human Verification",
+    "description": "Human verification CAPTCHA with visual and selective-listening audio challenges.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://captcha.cc/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "captcha-cc-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].secret_env_var has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].proof_token_expression has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://captcha.cc/mcp"
+}

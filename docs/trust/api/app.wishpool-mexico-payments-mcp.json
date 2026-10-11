@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:35.392Z",
+  "server": {
+    "registryName": "app.wishpool/mexico-payments-mcp",
+    "title": "Mexico Payments (Mercado Pago — OXXO cash)",
+    "description": "Mexico payments for AI agents — OXXO cash via Mercado Pago. Never holds funds.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-mx.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-mx.wishpool.app/mcp"
+}

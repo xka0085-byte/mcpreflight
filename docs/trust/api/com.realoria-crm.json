@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:10.911Z",
+  "server": {
+    "registryName": "com.realoria/crm",
+    "title": "Oria CRM",
+    "description": "Read-only MCP for Oria CRM: properties, contacts, deals, viewings, agents, auctions.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://realoria.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://realoria.com/api/mcp"
+}

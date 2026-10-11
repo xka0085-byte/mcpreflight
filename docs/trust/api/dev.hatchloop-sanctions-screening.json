@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:38.930Z",
+  "server": {
+    "registryName": "dev.hatchloop/sanctions-screening",
+    "title": "Sanctions Screening",
+    "description": "Screen a name or entity against OFAC SDN, the EU Consolidated list and the UK list.",
+    "registryVersion": "0.2.13"
+  },
+  "endpoint": "https://hatchloop.dev/mcp/sanctions-screening",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sanctions-screening",
+      "version": "0.2.16"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].operation_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].operation_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].operation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hatchloop.dev/mcp/sanctions-screening"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:02.568Z",
+  "server": {
+    "registryName": "ai.go-rocket/go-rocket",
+    "title": "Go Rocket",
+    "description": "Turn a website URL into a 9:16 AI UGC video ad: see a sample, or create finished videos.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://www.go-rocket.ai/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "go-rocket",
+      "version": "2.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].claim_token has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].claim_token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.go-rocket.ai/mcp/"
+}

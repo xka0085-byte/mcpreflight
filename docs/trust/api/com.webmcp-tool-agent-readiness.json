@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:01.596Z",
+  "server": {
+    "registryName": "com.webmcp-tool/agent-readiness",
+    "title": "com.webmcp-tool/agent-readiness",
+    "description": "Scores any public website on how usable it is by AI agents, with per-check evidence.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://webmcp-tool.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://webmcp-tool.com/api/mcp"
+}

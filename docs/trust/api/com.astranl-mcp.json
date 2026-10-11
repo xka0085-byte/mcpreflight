@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:57.388Z",
+  "server": {
+    "registryName": "com.astranl/mcp",
+    "title": "AstraNL",
+    "description": "Dutch construction facts with measured accuracy + NL coordination. Never holds third-party funds.",
+    "registryVersion": "1.37.0"
+  },
+  "endpoint": "https://astranl.com/mcp/streamable",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "astranl-mcp",
+      "version": "1.37.0"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].budget_ms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].max_age_seconds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://astranl.com/mcp/streamable"
+}

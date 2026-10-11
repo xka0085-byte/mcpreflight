@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:07.459Z",
+  "server": {
+    "registryName": "dev.workers.source-80.source-80/source-80",
+    "title": "SOURCE/80 Discovery",
+    "description": "Read SOURCE/80 continuity status and invite-gated encrypted handoff contracts.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://source-80.source-80.workers.dev/mcp?entry=mcp_registry_v1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "source-80",
+      "version": "0.1.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].signing_key_jwk has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].encryption_key_jwk has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].agent_card_url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://source-80.source-80.workers.dev/mcp?entry=mcp_registry_v1"
+}

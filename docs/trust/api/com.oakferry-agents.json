@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:15.727Z",
+  "server": {
+    "registryName": "com.oakferry/agents",
+    "title": "Oakferry Agents",
+    "description": "Search and compare Oakferry's apps with dated, sourced facts: platforms, prices, ratings, limits.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agents.oakferry.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Oakferry Agents",
+      "title": "Oakferry Agents",
+      "version": "0.1.0",
+      "websiteUrl": "https://agents.oakferry.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].product_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agents.oakferry.com/mcp"
+}

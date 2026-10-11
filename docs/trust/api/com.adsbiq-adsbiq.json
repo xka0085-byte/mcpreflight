@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:32.751Z",
+  "server": {
+    "registryName": "com.adsbiq/adsbiq",
+    "title": "com.adsbiq/adsbiq",
+    "description": "Read-only access to live ADSBiq aircraft and network state, with community contribution metadata.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://adsbiq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "adsbiq-mcp",
+      "title": "ADSBiq MCP",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].hex has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lon has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].radius_nm has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://adsbiq.com/mcp"
+}

@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:54.996Z",
+  "server": {
+    "registryName": "com.mhsbloom/neutral-skincare-reference",
+    "title": "com.mhsbloom/neutral-skincare-reference",
+    "description": "Neutral, payment-blind reference of 1,682 dermacosmetic products: lookup, search, alternatives.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://europe-west3-mhs-bloom.cloudfunctions.net/bloomMcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mhs-bloom",
+      "title": "MHS BLOOM — Neutral Skincare Reference",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ingredient has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].concern has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].fragrance_free has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://europe-west3-mhs-bloom.cloudfunctions.net/bloomMcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:37.326Z",
+  "server": {
+    "registryName": "com.crashstory/crashstory",
+    "title": "CrashStory MCP",
+    "description": "Colorado personal injury attorney directory, AI-analyzed review intelligence, and crash data",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://crashstory-mcp-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "crashstory",
+      "version": "1.0.0",
+      "description": "Hosted, read-only Streamable HTTP MCP server for Colorado crash data, attorney search, AI-analyzed review intelligence, and CrashStory research datasets.",
+      "websiteUrl": "https://crashstory.com/mcp"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "18 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://crashstory-mcp-production.up.railway.app/mcp"
+}

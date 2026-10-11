@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:35.428Z",
+  "server": {
+    "registryName": "com.agentdistributionservices/agent-distribution",
+    "title": "Agent Distribution",
+    "description": "Free distribution preflight: channel candidates and permissions. No paid orders or publishing.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agentdistributionservices.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Agent Distribution",
+      "version": "0.1.0",
+      "websiteUrl": "https://agentdistributionservices.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].product has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentdistributionservices.com/mcp"
+}

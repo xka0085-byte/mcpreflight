@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:50.934Z",
+  "server": {
+    "registryName": "com.disclosedby/record",
+    "title": "disclosedby, the subprocessor record",
+    "description": "Dated quotes of GDPR art. 28 subprocessor lists: who lists whom, fourth parties, what changed, when.",
+    "registryVersion": "2"
+  },
+  "endpoint": "https://disclosedby.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "disclosedby",
+      "version": "2",
+      "title": "disclosedby, the subprocessor record"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].companies has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://disclosedby.com/api/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:59.878Z",
+  "server": {
+    "registryName": "ch.opencaselaw/swiss-caselaw",
+    "title": "OpenCaseLaw — Swiss Caselaw, Statutes & Doctrine",
+    "description": "1M+ Swiss court decisions, statutes & doctrine with citation graph (DE/FR/IT). CC0, free, 42 tools.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://mcp.opencaselaw.ch/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "swiss-caselaw",
+      "version": "1.27.0"
+    },
+    "toolCount": 42,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.opencaselaw.ch/mcp"
+}

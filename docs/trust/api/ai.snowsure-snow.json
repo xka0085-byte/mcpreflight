@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:41.364Z",
+  "server": {
+    "registryName": "ai.snowsure/snow",
+    "title": "SnowSure — Snow & Ski",
+    "description": "Live ski snow, multi-model forecasts, powder rankings & a grounded Answer Engine for 500+ resorts.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://www.snowsure.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "snowsure-mcp",
+      "version": "3.12.7"
+    },
+    "toolCount": 48,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.snowsure.ai/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:00.254Z",
+  "server": {
+    "registryName": "com.holydb/holydb-mcp",
+    "title": "com.holydb/holydb-mcp",
+    "description": "Read-only MCP server for HolyDB: find Catholic parish Mass times by location and time.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.holydb.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "holydb",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.holydb.com/mcp"
+}

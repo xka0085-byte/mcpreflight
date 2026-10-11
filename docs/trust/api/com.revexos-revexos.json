@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:17.608Z",
+  "server": {
+    "registryName": "com.revexos/revexos",
+    "title": "RevExOS",
+    "description": "Quote-to-cash tools: parse invoices and POs, match POs to invoices, collection emails, billing math.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://revexos.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "revexos",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].mode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].terms has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://revexos.com/api/mcp"
+}

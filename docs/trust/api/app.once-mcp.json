@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:17.868Z",
+  "server": {
+    "registryName": "app.once/mcp",
+    "title": "ONCE",
+    "description": "Music distribution for agents: upload, AI-check, submit and track releases on ONCE.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://beta.once.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://beta.once.app/api/mcp"
+}

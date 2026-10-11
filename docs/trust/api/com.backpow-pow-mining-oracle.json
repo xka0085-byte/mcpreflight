@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:00.942Z",
+  "server": {
+    "registryName": "com.backpow/pow-mining-oracle",
+    "title": "BackPow PoW Oracle",
+    "description": "Proof of Work oracle: solo mining odds, cost of production, hashrate, mining hardware",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.backpow.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "backpow-mcp",
+      "title": "BackPow — The Proof of Work Oracle",
+      "version": "1.0.0",
+      "websiteUrl": "https://backpow.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.backpow.com/mcp"
+}

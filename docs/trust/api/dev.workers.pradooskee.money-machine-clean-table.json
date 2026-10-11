@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:06.805Z",
+  "server": {
+    "registryName": "dev.workers.pradooskee.money-machine/clean-table",
+    "title": "Clean Table",
+    "description": "Normalize messy CSV into your schema; ambiguous values return as exceptions. $0.02 USDC via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://money-machine.pradooskee.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "money-machine-mm-agent-001",
+      "title": "Money Machine MM-AGENT-001 — clean_table (LIVE, receive-only)",
+      "version": "0.2.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://money-machine.pradooskee.workers.dev/mcp"
+}

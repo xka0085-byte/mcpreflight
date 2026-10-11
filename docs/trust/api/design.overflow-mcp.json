@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:26.931Z",
+  "server": {
+    "registryName": "design.overflow/mcp",
+    "title": "Overflow Design",
+    "description": "Search and fetch hand-drawn icons, illustrations and isometric drawings. The free set needs no key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.overflow.design/api/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "overflow-design",
+      "title": "Overflow Design",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.overflow.design/mcp/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.overflow.design/api/mcp/"
+}

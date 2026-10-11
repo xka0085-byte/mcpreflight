@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:26.252Z",
+  "server": {
+    "registryName": "com.tickerdb/mcp-server",
+    "title": "TickerDB",
+    "description": "Pre-computed market data that improves agent reasoning, reduces token usage, and replaces pipelines.",
+    "registryVersion": "1.8.6"
+  },
+  "endpoint": "https://mcp.tickerdb.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "TickerDB",
+      "version": "1.9.2",
+      "description": "Pre-computed financial market intelligence for AI agents. Stocks, crypto, and ETFs.",
+      "websiteUrl": "https://tickerdb.com"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.tickerdb.com/mcp"
+}

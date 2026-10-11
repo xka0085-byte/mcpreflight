@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:25.404Z",
+  "server": {
+    "registryName": "ai.radiomatic/radiomatic",
+    "title": "RadioMatic: AI-achtergrondmuziek en muzieklicenties voor bedrijven",
+    "description": "AI-muziek voor je winkel of zaak, en wat Buma/Stemra en Sena nu kosten (tarieven 2026).",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://radiomatic.ai/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "radiomatic",
+      "title": "RadioMatic: achtergrondmuziek en muzieklicenties voor bedrijven",
+      "version": "1.0.2",
+      "websiteUrl": "https://radiomatic.ai/"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].geluidsbron has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].wie_hoort_het has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].oppervlakte_m2 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].fte has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].behandelruimtes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].wachtruimte_m2 has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://radiomatic.ai/mcp/"
+}

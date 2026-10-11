@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:42.907Z",
+  "server": {
+    "registryName": "com.skillmd/skillmd",
+    "title": "com.skillmd/skillmd",
+    "description": "Search, fetch, lint, and install Agent Skills (SKILL.md) from the SkillMD registry.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.skillmd.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "skillmd",
+      "version": "1.1.1",
+      "title": "SkillMD",
+      "description": "The open registry of Agent Skills: search, inspect and download 860,000+ linted, security-reviewed SKILL.md files for Claude Code, Cursor, Codex and 60+ other agents.",
+      "websiteUrl": "https://skillmd.com",
+      "icons": [
+        {
+          "src": "https://api.skillmd.com/favicon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://api.skillmd.com/favicon.ico",
+          "mimeType": "image/x-icon",
+          "sizes": [
+            "16x16",
+            "32x32",
+            "48x48"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.skillmd.com/mcp"
+}

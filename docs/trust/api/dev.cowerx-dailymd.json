@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:32.032Z",
+  "server": {
+    "registryName": "dev.cowerx/dailymd",
+    "title": "The Daily Markdown",
+    "description": "Free AI news, ranked stories by section, and trending topics. No authentication required.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dailymd.cowerx.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "dailymd",
+      "title": "The Daily Markdown",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].window has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://dailymd.cowerx.dev/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:58.551Z",
+  "server": {
+    "registryName": "com.aurelianflo/core",
+    "title": "AurelianFlo",
+    "description": "Remote MCP server for OFAC screening, EDD memos, exposure forecasts, queues, and reports.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://api.aurelianflo.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "AurelianFlo",
+      "version": "0.4.0",
+      "icons": [
+        {
+          "src": "https://api.aurelianflo.com/aurelianflo-icon.png",
+          "mimeType": "image/png"
+        }
+      ],
+      "websiteUrl": "https://api.aurelianflo.com/mcp/docs"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].report_meta has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].report_meta has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.aurelianflo.com/mcp"
+}

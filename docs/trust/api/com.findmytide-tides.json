@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:16.473Z",
+  "server": {
+    "registryName": "com.findmytide/tides",
+    "title": "Find My Tide",
+    "description": "Tide times and heights for about 4,600 US and Canadian stations. Not for navigation.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.findmytide.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "findmytide",
+      "title": "Find My Tide",
+      "version": "97cf4d18e191f7da89d088cbc198832446138230"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].units has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.findmytide.com/mcp"
+}

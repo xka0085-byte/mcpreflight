@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:09.052Z",
+  "server": {
+    "registryName": "com.bonissystems/compliance-batch",
+    "title": "Compliance Batch Alignment",
+    "description": "Check whether a NAICS code aligns with a vertical: a routing-for-review signal, not a determination.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bonissystems.com/api/knox/agents/compliance-batch/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "knox-compliance-naics",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bonissystems.com/api/knox/agents/compliance-batch/mcp"
+}

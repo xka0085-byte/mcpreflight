@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:37.931Z",
+  "server": {
+    "registryName": "com.lowtoxgear/scanner",
+    "title": "Lowtoxgear Scanner",
+    "description": "Australian ingredient scanner MCP — 21k+ AU products, 237 chemical rules, 17 condition tags.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp-scan.lowtoxgear.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.lowtoxgear/scanner",
+      "version": "1.0.0",
+      "title": "Lowtoxgear Scanner"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].product_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-scan.lowtoxgear.com/mcp"
+}

@@ -1,0 +1,64 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:24.156Z",
+  "server": {
+    "registryName": "com.fplcat/fpl-cat",
+    "title": "FPL Cat",
+    "description": "Fantasy Premier League tools: rate a team, captains, player points, fixtures, injuries. No login.",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://fplcat.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fpl-cat",
+      "title": "FPL Cat",
+      "version": "1.2.2",
+      "websiteUrl": "https://fplcat.com",
+      "icons": [
+        {
+          "src": "https://fplcat.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "64x64"
+          ]
+        },
+        {
+          "src": "https://fplcat.com/icons/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://fplcat.com/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].position has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].position has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].club has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fplcat.com/mcp"
+}

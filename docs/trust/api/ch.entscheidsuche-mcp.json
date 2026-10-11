@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:58.686Z",
+  "server": {
+    "registryName": "ch.entscheidsuche/mcp",
+    "title": "Entscheidsuche — Schweizer Gerichtsentscheide",
+    "description": "Suche in Schweizer Gerichtsentscheiden aller Instanzen (Bund, Kantone) in DE/FR/IT.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.entscheidsuche.ch/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "entscheidsuche",
+      "version": "1.27.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.entscheidsuche.ch/mcp"
+}

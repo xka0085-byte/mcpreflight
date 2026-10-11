@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:06.552Z",
+  "server": {
+    "registryName": "dev.workers.pathwren.www/mcp-endpoint-lint",
+    "title": "MCP Endpoint Lint - handshake, tool schemas, JSON-RPC errors",
+    "description": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"whoami\",\"arguments\":{}}} free no key",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/lint",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mcp-endpoint-lint",
+      "title": "MCP Endpoint Lint",
+      "version": "1.0.0",
+      "description": "Lint an MCP endpoint you name: handshake, tool schemas, JSON-RPC error conformance, pre-dial discovery, one score card. Free, no key. Built for monitors, graders and registries — the caller supplies the URL, we never lint ourselves. Call whoami first: no arguments at all, and it answers about the request you just sent. example is the other zero-argument tool — it runs a worked answer.",
+      "websiteUrl": "https://www.pathwren.workers.dev/mcp-lint.html"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/lint"
+}

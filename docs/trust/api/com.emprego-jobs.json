@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:01.845Z",
+  "server": {
+    "registryName": "com.emprego/jobs",
+    "title": "emprego.com job search",
+    "description": "Search live job openings in many countries and languages, and read a full job ad.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://emprego.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://emprego.com/api/mcp"
+}

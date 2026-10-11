@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:17.457Z",
+  "server": {
+    "registryName": "com.ogenalabs/gate402-x402",
+    "title": "gate402 merchant checkout",
+    "description": "Drop-in x402 checkout for merchants: issue terms, verify payment. $0.01 each.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.ogenalabs.com/api/gate402/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "gate402-x402",
+      "version": "0.2.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.ogenalabs.com/api/gate402/mcp"
+}

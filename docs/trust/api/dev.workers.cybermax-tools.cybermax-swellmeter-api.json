@@ -1,0 +1,71 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:03.217Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/swellmeter-api",
+    "title": "Swellmeter Trending",
+    "description": "Google trending searches API + MCP: 30 countries, day lists, 30-day history. $5 pack; 50 free/day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://swellmeter-api.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "swellmeter-api",
+      "title": "Swellmeter Trending API by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://swellmeter-api.cybermaxtools.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].geo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].minTraffic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].minCountries has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].q has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].geo has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://swellmeter-api.cybermaxtools.com/mcp?via=mcp-registry"
+}

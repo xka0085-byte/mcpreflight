@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:24.005Z",
+  "server": {
+    "registryName": "com.citationsafe/verifier",
+    "title": "Citation Safe Verifier",
+    "description": "Verifies legal citations vs primary sources: existence, quote match, proposition support.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://citationsafe.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "citationsafe-verifier",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://citationsafe.com/api/mcp"
+}

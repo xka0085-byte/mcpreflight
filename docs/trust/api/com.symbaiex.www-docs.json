@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:07.684Z",
+  "server": {
+    "registryName": "com.symbaiex.www/docs",
+    "title": "SYMBaiEX Documentation MCP",
+    "description": "Public read-only SYMBaiEX developer and agent documentation.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.symbaiex.com/api/docs/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "symbaiex-docs",
+      "version": "v1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].uri has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.symbaiex.com/api/docs/mcp"
+}

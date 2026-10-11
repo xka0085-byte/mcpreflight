@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:54.666Z",
+  "server": {
+    "registryName": "cc.accrue/mcp",
+    "title": "cc.accrue/mcp",
+    "description": "Stablecoin Yield Index (SYX) and live USDC vault APYs across Ethereum, Base, Arbitrum.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://accrue.cc/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "accrue-mcp",
+      "version": "2.1.0",
+      "description": "MCP server for the ACCRUE stablecoin yield platform. Exposes the Stablecoin Yield Index (SYX), all yield vaults, model portfolios, yield calculations and platform metadata, plus unsigned deposit and withdrawal transactions for the agent's own wallet — gas in ETH or in USDC. ACCRUE never signs or custodies funds. Live onchain data on Ethereum and Base. SYX additionally benchmarks Arbitrum lending markets, which are not ACCRUE products."
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].chain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].chain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://accrue.cc/mcp"
+}

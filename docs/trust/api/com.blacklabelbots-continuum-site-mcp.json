@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:06.804Z",
+  "server": {
+    "registryName": "com.blacklabelbots/continuum-site-mcp",
+    "title": "Black Label Continuum Website MCP",
+    "description": "Search and read public Black Label Continuum pages with source URLs.",
+    "registryVersion": "2026.09.15"
+  },
+  "endpoint": "https://continuum.blacklabelbots.com/agent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Black Label Continuum site MCP",
+      "version": "2026.09.15"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://continuum.blacklabelbots.com/agent/mcp"
+}

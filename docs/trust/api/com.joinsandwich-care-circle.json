@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:17.303Z",
+  "server": {
+    "registryName": "com.joinsandwich/care-circle",
+    "title": "Sandwich Care Circle",
+    "description": "Authenticated MCP for a user's care circle: read CareEvents, list loved ones, inspect workspace.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://app.joinsandwich.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.joinsandwich.com/api/mcp"
+}

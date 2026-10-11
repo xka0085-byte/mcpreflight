@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:55.468Z",
+  "server": {
+    "registryName": "com.vigilnotary/vigil",
+    "title": "Vigil — an outside witness for AI agents",
+    "description": "Agent leases, signed receipts, watchdogs, and optional paid source-verification evidence.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://vigilnotary.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "vigil",
+      "title": "Vigil — an outside witness for AI agents",
+      "version": "0.1-mvp"
+    },
+    "toolCount": 26,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[25].source_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[25].claim has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[25].options has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://vigilnotary.com/mcp"
+}

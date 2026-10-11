@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:28.967Z",
+  "server": {
+    "registryName": "com.gccbrokers/market-data",
+    "title": "GCC Brokers",
+    "description": "GCC Brokers instrument specs, swaps, trading hours, quotes, accounts and economic calendar.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://gccbrokers.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gccbrokers",
+      "title": "GCC Brokers",
+      "version": "1.0.0",
+      "websiteUrl": "https://gccbrokers.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gccbrokers.com/mcp"
+}

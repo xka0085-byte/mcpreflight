@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:15.313Z",
+  "server": {
+    "registryName": "eu.hlido/mcp",
+    "title": "Hlido Agent Reviews",
+    "description": "Independent AI-agent reviews: trust checks, evidence scorecards, incident registry, recommendations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hlido.eu/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hlido-agent-reviews",
+      "version": "3.3.0-workers"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].constraints has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].audience has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].maturity has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hlido.eu/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:03.450Z",
+  "server": {
+    "registryName": "app.cellarion/cellarion",
+    "title": "Cellarion",
+    "description": "Wine cellar manager: bottles, racks, drink windows, pairings and a shared wine registry.",
+    "registryVersion": "1.82.4"
+  },
+  "endpoint": "https://cellarion.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cellarion.app/api/mcp"
+}

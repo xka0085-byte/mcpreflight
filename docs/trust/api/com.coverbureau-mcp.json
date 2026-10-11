@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:36.875Z",
+  "server": {
+    "registryName": "com.coverbureau/mcp",
+    "title": "CoverBureau",
+    "description": "Checks certificates of insurance (ACORD 25) against your requirements. Pay per call, x402 USDC.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://coverbureau.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "coi-validator-core",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].options has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://coverbureau.com/mcp"
+}

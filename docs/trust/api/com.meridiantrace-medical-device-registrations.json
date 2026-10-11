@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:53.489Z",
+  "server": {
+    "registryName": "com.meridiantrace/medical-device-registrations",
+    "title": "Meridian Trace — Medical Device Registrations",
+    "description": "Medical device registrations across 25 markets: coverage gaps, 510(k) predicates, classification",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://meridiantrace.com/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "meridian-trace-medical-devices",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].manufacturer_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].manufacturer_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://meridiantrace.com/v1/mcp"
+}

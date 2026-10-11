@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:01.136Z",
+  "server": {
+    "registryName": "clinic.enmente/mcp",
+    "title": "clinic.enmente/mcp",
+    "description": "Chilean online mental-health clinic (Spanish): articles, professionals, availability, tests.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://enmente.clinic/api/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "enmente-clinic-mcp",
+      "version": "0.4.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].days_ahead has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://enmente.clinic/api/mcp/"
+}

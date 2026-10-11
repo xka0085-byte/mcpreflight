@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:20.348Z",
+  "server": {
+    "registryName": "app.openkrill/tariffs",
+    "title": "Tariff Code Finder",
+    "description": "Find candidate customs tariff codes for a product and read the import duty on a code.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tariffs.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tariffs",
+      "title": "Tariff & HS Code Duty Finder: HS codes, customs duty & tax",
+      "version": "1.0.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tariffs.openkrill.app/mcp"
+}

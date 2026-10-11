@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:06.466Z",
+  "server": {
+    "registryName": "dev.workers.pathwren.www/crawler-log-triage",
+    "title": "Crawler Log Triage",
+    "description": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"whoami\",\"arguments\":{}}} free no key",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/triage",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "crawler-log-triage",
+      "title": "Crawler Log Triage",
+      "version": "1.0.0",
+      "description": "Paste access-log lines: every bot named, fakes flagged, robots.txt and WAF rules. Free, no key. Aggregates by operator and category and flags the lines whose claim their address contradicts. Call triage_my_request first: it takes no arguments at all and triages the request you just sent as one line of a log. whoami and example are the other two zero-argument calls.",
+      "websiteUrl": "https://www.pathwren.workers.dev/mcp-triage.html"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/triage"
+}

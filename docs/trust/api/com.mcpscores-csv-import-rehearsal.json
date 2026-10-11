@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:49.103Z",
+  "server": {
+    "registryName": "com.mcpscores/csv-import-rehearsal",
+    "title": "CSV Import Rehearsal",
+    "description": "Simulate a CSV import against a supplied typed column contract and return exact accepted rows, re...",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-factory.bowling-anthony.workers.dev/csv-import-rehearsal/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.mcpscores/csv-import-rehearsal",
+      "title": "CSV Import Rehearsal",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].csv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].delimiter has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].columns has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].allow_extra_columns has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-factory.bowling-anthony.workers.dev/csv-import-rehearsal/mcp"
+}

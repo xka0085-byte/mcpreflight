@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:32.831Z",
+  "server": {
+    "registryName": "com.trackberry/trackberry",
+    "title": "Trackberry",
+    "description": "Read-only access to your fresh produce shipments: ETAs, tracking, free time, alerts and documents.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://trackberry.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://trackberry.com/mcp"
+}

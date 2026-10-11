@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:37.433Z",
+  "server": {
+    "registryName": "com.loopxxi/loop-mcp",
+    "title": "loop-mcp",
+    "description": "15 pay-per-call Bitcoin and developer tools, paid in sats over Lightning (L402).",
+    "registryVersion": "2.4.0"
+  },
+  "endpoint": "https://mcp.loopxxi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "loop-mcp",
+      "version": "2.4.0"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].action has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.loopxxi.com/mcp"
+}

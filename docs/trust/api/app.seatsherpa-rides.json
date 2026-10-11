@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:26.983Z",
+  "server": {
+    "registryName": "app.seatsherpa/rides",
+    "title": "Seat Sherpa",
+    "description": "Find carpool rides in California and Nevada: live seats, times and all-in seat prices. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://seatsherpa.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "seat-sherpa",
+      "title": "Seat Sherpa",
+      "version": "1.0.0",
+      "websiteUrl": "https://seatsherpa.app"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://seatsherpa.app/mcp"
+}

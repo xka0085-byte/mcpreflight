@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:27.778Z",
+  "server": {
+    "registryName": "com.gatewayinformationgroup/agent-tip-jar",
+    "title": "Gateway Agent Tip Jar",
+    "description": "Optional creator-support terms and private contribution receipt tools for Gateway.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://gateway-wallet-payments.jerryrnapier.workers.dev/agent-tools",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gateway-optional-tips",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ownerAuthorized has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].idempotencyKey has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].jobId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].includeResult has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gateway-wallet-payments.jerryrnapier.workers.dev/agent-tools"
+}

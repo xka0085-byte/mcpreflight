@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:07.874Z",
+  "server": {
+    "registryName": "com.rackwarehouse/fitment",
+    "title": "Rack Warehouse fitment",
+    "description": "What fits your vehicle at Rack Warehouse: roof racks, carriers, truck and ladder racks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.rackwarehouse.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "rack-warehouse-fitment",
+      "title": "Rack Warehouse fitment",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.rackwarehouse.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].product has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.rackwarehouse.com/mcp"
+}

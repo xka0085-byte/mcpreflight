@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:13.657Z",
+  "server": {
+    "registryName": "co.lumman/mail",
+    "title": "Multi Mail",
+    "description": "Gmail, Outlook, Hotmail, iCloud and Fastmail mailboxes - several at once, one search across all.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://lumman.co/mcp/mail",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "lumman-mailboxes",
+      "title": "Multi Mail",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://lumman.co/mail-mark.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].maxResults has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].addLabelIds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].removeLabelIds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://lumman.co/mcp/mail"
+}

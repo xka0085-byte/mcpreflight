@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:41.388Z",
+  "server": {
+    "registryName": "com.cymosoft/cymosoft",
+    "title": "Cymosoft",
+    "description": "Cymosoft JSC profile and case studies (EN/JA) plus Japanese text utilities (文字数・全角半角・和暦)",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://cymosoft.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cymosoft",
+      "title": "Cymosoft — AI-first software development",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].direction has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cymosoft.com/mcp"
+}

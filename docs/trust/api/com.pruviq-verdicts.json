@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:02.697Z",
+  "server": {
+    "registryName": "com.pruviq/verdicts",
+    "title": "PRUVIQ strategy verdicts (read-only)",
+    "description": "Read-only crypto strategy backtest & verification verdicts. No trading tools; every result is cited.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pruviq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pruviq-verdicts",
+      "title": "PRUVIQ strategy verdicts (read-only)",
+      "version": "1.0.0",
+      "description": "Neutral, read-only backtest and verification verdicts for crypto trading strategies. The market and data source differ by file — each result states its own in citation.data_scope. No trading, no referrals.",
+      "websiteUrl": "https://pruviq.com/"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pruviq.com/mcp"
+}

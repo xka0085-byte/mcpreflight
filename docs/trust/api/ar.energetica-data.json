@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:39.246Z",
+  "server": {
+    "registryName": "ar.energetica/data",
+    "title": "Energetica — Argentine Oil & Gas Data",
+    "description": "Argentine oil & gas data — 40+ curated tables: production, wells, prices, investments, trade.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://energetica.ar/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://energetica.ar/api/mcp"
+}

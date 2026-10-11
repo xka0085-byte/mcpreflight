@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:38.431Z",
+  "server": {
+    "registryName": "dev.hatchloop/company-verification",
+    "title": "Verify a Company",
+    "description": "Verify a company on GLEIF LEI and SEC EDGAR, screen sanctions. No key; quota-free data.",
+    "registryVersion": "0.2.13"
+  },
+  "endpoint": "https://hatchloop.dev/mcp/company-verification",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "company-verification",
+      "version": "0.2.16"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].operation_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].operation_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].operation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hatchloop.dev/mcp/company-verification"
+}

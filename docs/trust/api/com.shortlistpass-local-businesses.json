@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:39.741Z",
+  "server": {
+    "registryName": "com.shortlistpass/local-businesses",
+    "title": "Shortlist Pass Local Businesses",
+    "description": "Myrtle Beach food trucks, restaurants, shops and HOAs: live menus, stops, pickup times, order links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.shortlistpass.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "shortlist-pass",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.shortlistpass.com/mcp"
+}

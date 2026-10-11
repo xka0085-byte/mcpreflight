@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:49.316Z",
+  "server": {
+    "registryName": "br.com.sinthoma/conector",
+    "title": "Sinthoma",
+    "description": "Read-only Sinthoma clinical connector: patients, sessions and prep; OAuth consent and audit.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sinthoma.com.br/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sinthoma.com.br/api/mcp"
+}

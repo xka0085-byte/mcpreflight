@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:18.354Z",
+  "server": {
+    "registryName": "com.flexonthejob/mcp",
+    "title": "Flex on the Job",
+    "description": "MCP server for Flex on the Job: inventory, jobs, customers, invoices, purchasing, sales orders.",
+    "registryVersion": "1.0.0-beta.50"
+  },
+  "endpoint": "https://app.flexonthejob.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.flexonthejob.com/mcp"
+}

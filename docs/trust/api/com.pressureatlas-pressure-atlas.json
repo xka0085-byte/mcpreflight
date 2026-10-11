@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:55.388Z",
+  "server": {
+    "registryName": "com.pressureatlas/pressure-atlas",
+    "title": "Pressure Atlas",
+    "description": "Daily 0-5 Pressure readings of the global macro field for AI agents, plus a way to send feedback.",
+    "registryVersion": "0.1.72"
+  },
+  "endpoint": "https://api.pressureatlas.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.pressureatlas.com/mcp"
+}

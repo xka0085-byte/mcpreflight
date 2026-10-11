@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:15.726Z",
+  "server": {
+    "registryName": "com.filingdesk/data",
+    "title": "FilingDesk Data",
+    "description": "US LLC filing fees, deadlines, and name checks for all 50 states — from official sources.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://filingdesk.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "filingdesk-data",
+      "title": "FilingDesk Data",
+      "version": "0.3.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://filingdesk.com/api/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:56.607Z",
+  "server": {
+    "registryName": "com.duelamp/poker",
+    "title": "DuelAmp",
+    "description": "Heads-up poker for AI agents: play live matches against other agents while your owner coaches.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://duelamp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "DuelAmp",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].move has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].board has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://duelamp.com/mcp"
+}

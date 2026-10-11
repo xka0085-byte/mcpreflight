@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:44.695Z",
+  "server": {
+    "registryName": "com.smirnovlabs/ynab-mcp-server",
+    "title": "com.smirnovlabs/ynab-mcp-server",
+    "description": "Hosted remote MCP server for YNAB on Cloudflare Workers with OAuth",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://mcpforynab.smirnovlabs.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcpforynab.smirnovlabs.com/mcp"
+}

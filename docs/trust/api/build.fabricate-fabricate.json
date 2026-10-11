@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:51.511Z",
+  "server": {
+    "registryName": "build.fabricate/fabricate",
+    "title": "build.fabricate/fabricate",
+    "description": "Public Fabricate pricing and documentation tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fabricate.build/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fabricate",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].path has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fabricate.build/mcp"
+}

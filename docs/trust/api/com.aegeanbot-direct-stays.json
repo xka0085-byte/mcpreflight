@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:34.030Z",
+  "server": {
+    "registryName": "com.aegeanbot/direct-stays",
+    "title": "AegeanBot Direct Stays",
+    "description": "Search verified Greek vacation rentals with live availability, prices, policies, and booking links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.aegeanbot.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aegeanbot",
+      "version": "1.0.0",
+      "websiteUrl": "https://aegeanbot.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].question has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].listing has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.aegeanbot.com/mcp"
+}

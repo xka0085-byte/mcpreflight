@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:01.534Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/commonkite",
+    "title": "Commonkite: Free Image Search API, Creative Commons & CC0",
+    "description": "Commonkite: free-to-use CC/public-domain images with license + credit line.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://commonkite.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "commonkite",
+      "title": "Commonkite by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://commonkite.cybermaxtools.com"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].orientation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_results has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://commonkite.cybermaxtools.com/mcp?via=mcp-registry"
+}

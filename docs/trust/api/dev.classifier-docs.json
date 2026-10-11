@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:30.563Z",
+  "server": {
+    "registryName": "dev.classifier/docs",
+    "title": "classifier.dev docs",
+    "description": "classifier.dev documentation as tools: list, read and search the reference, benchmark and guides.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://classifier.dev/mcp/docs",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "classifier.dev docs",
+      "title": "classifier.dev documentation",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://classifier.dev/mcp/docs"
+}

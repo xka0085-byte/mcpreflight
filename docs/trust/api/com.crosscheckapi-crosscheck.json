@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:38.137Z",
+  "server": {
+    "registryName": "com.crosscheckapi/crosscheck",
+    "title": "crosscheck",
+    "description": "Checks for AI agents over x402: review drafts, accept-check handoffs, scan skills before install.",
+    "registryVersion": "0.5.5"
+  },
+  "endpoint": "https://crosscheckapi.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://crosscheckapi.com/mcp"
+}

@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:52.056Z",
+  "server": {
+    "registryName": "ca.entogo/knowledge",
+    "title": "Entogo power-equipment knowledge & tools",
+    "description": "Entogo (Canada) transformers, switchgear, BESS, EV charging: catalogue, lead times, EV sizing, RFQ",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://entogo.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "entogo",
+      "title": "Entogo — power-equipment knowledge & tools",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].servicePhase has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].siteType has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].chargers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].ems has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://entogo.ca/mcp"
+}

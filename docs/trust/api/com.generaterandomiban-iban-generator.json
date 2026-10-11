@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:30.388Z",
+  "server": {
+    "registryName": "com.generaterandomiban/iban-generator",
+    "title": "Generate Random IBAN",
+    "description": "Generate valid test IBANs for 91 countries and validate any IBAN. Public, no API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://generaterandomiban.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Generate Random IBAN",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].count has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://generaterandomiban.com/mcp"
+}

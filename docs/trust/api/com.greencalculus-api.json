@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:46.463Z",
+  "server": {
+    "registryName": "com.greencalculus/api",
+    "title": "com.greencalculus/api",
+    "description": "Sourced carbon emission factors + audit-traced calculations an AI can cite.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://mcp.greencalculus.com",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "greencalculus",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].asset_class has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.greencalculus.com"
+}

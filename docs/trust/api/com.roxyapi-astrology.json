@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:22.646Z",
+  "server": {
+    "registryName": "com.roxyapi/astrology",
+    "title": "Western Astrology MCP Server by RoxyAPI",
+    "description": "Western natal charts, horoscopes, transits and synastry for AI agents, verified vs NASA JPL.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://roxyapi.com/mcp/astrology",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "roxy-astrology",
+      "title": "Western Astrology MCP Server by RoxyAPI",
+      "description": "Western natal charts, horoscopes, transits and synastry for AI agents, verified vs NASA JPL.",
+      "websiteUrl": "https://roxyapi.com/products/astrology-api",
+      "version": "2.0.0",
+      "icons": [
+        {
+          "src": "https://roxyapi.com/logo.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 39,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].person1 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].person2 has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://roxyapi.com/mcp/astrology"
+}

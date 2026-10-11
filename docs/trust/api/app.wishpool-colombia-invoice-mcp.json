@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:33.837Z",
+  "server": {
+    "registryName": "app.wishpool/colombia-invoice-mcp",
+    "title": "Colombia Invoices (DIAN factura electronica via Matias API)",
+    "description": "Colombia DIAN factura electronica: AI agents issue and query e-invoices, stateless BYO.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://inv-co.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-co.wishpool.app/mcp"
+}

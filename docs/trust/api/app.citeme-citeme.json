@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:03.672Z",
+  "server": {
+    "registryName": "app.citeme/citeme",
+    "title": "CiteMe",
+    "description": "Search papers, format citations in 60 styles, and verify bibliographies against scholarly sources.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://citeme.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "CiteMe",
+      "title": "CiteMe Citation Integrity",
+      "version": "1.2.0",
+      "description": "Search scholarly databases, format citations in 60+ styles, and verify a pasted bibliography against real academic records.",
+      "websiteUrl": "https://citeme.app/mcp",
+      "icons": [
+        {
+          "src": "https://citeme.app/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://citeme.app/api/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:58.252Z",
+  "server": {
+    "registryName": "com.auraspay/merchant-payments",
+    "title": "AurasPay Merchant MCP",
+    "description": "Review AurasPay merchant payments and prepare payment links with scoped OAuth and human approval.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://mcp.auraspay.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.auraspay.com/api/mcp"
+}

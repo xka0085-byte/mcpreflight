@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:14.607Z",
+  "server": {
+    "registryName": "com.bustup-monitor/mcp",
+    "title": "Hokyo MCP Server",
+    "description": "豊胸モニター募集サイトのMCPサーバー。クリニック検索・術式情報・悩み相談・世代別記事を提供します。",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://bustup-monitor.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hokyo-mcp",
+      "version": "1.3.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://bustup-monitor.com/mcp"
+}

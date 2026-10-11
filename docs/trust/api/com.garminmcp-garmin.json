@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:28.267Z",
+  "server": {
+    "registryName": "com.garminmcp/garmin",
+    "title": "Garmin MCP",
+    "description": "Read-only Garmin data for your AI: sleep, Body Battery, activities, laps, and training status.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://garminmcp.com/u/{user_id}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://garminmcp.com/u/{user_id}/mcp"
+}

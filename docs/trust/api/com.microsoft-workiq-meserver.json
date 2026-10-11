@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:54.641Z",
+  "server": {
+    "registryName": "com.microsoft/workiq-meserver",
+    "title": "Work IQ User MCP Server",
+    "description": "Tools for retrieving user details, manager, team or direct reportees from Microsoft Graph.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agent365.svc.cloud.microsoft/agents/tenants/{tenant_id}/servers/mcp_MeServer",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agent365.svc.cloud.microsoft/agents/tenants/{tenant_id}/servers/mcp_MeServer"
+}

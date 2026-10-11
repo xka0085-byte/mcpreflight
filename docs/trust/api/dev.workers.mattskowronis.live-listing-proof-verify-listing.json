@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:04.030Z",
+  "server": {
+    "registryName": "dev.workers.mattskowronis.live-listing-proof/verify-listing",
+    "title": "Live Listing Proof",
+    "description": "Verify a public listing URL and return source-supported facts or explicit fail-closed states.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://live-listing-proof.mattskowronis.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "live-listing-proof",
+      "title": "Live Listing Proof",
+      "version": "1.3.0",
+      "description": "Verify public marketplace, retail, classified, and auction listings before an agent relies on them; return source-supported facts or explicit safe-failure states.",
+      "websiteUrl": "https://live-listing-proof.mattskowronis.workers.dev"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://live-listing-proof.mattskowronis.workers.dev/mcp"
+}

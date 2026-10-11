@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:14.760Z",
+  "server": {
+    "registryName": "com.isitdeprecated/isitdeprecated",
+    "title": "com.isitdeprecated/isitdeprecated",
+    "description": "Check if an AI model is deprecated, retiring, or silently changed price or context window.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://isitdeprecated.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "isitdeprecated",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].within_days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_severity has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://isitdeprecated.com/mcp"
+}

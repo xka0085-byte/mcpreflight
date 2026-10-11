@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:20.604Z",
+  "server": {
+    "registryName": "com.thedploy/deployer",
+    "title": "The Deployer",
+    "description": "Check if a repo will deploy, plan a deploy to your own cloud, and see status, logs and redeploys.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://app.thedploy.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "thedeployer",
+      "title": "The Deployer",
+      "version": "0.1.1"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].offer has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.thedploy.com/api/v1/mcp"
+}

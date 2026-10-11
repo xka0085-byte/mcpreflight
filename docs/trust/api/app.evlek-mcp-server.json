@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:07.385Z",
+  "server": {
+    "registryName": "app.evlek/mcp-server",
+    "title": "Evlek — Northern Cyprus Property MCP Server",
+    "description": "Live Northern Cyprus (KKTC/TRNC) property listings and asking-price data. Read-only, 8 tools.",
+    "registryVersion": "3.0.3"
+  },
+  "endpoint": "https://evlek.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "evlek-mcp",
+      "title": "Evlek — Northern Cyprus Property",
+      "version": "3.0.3"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://evlek.app/api/mcp"
+}

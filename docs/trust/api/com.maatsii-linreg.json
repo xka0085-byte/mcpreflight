@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:40.284Z",
+  "server": {
+    "registryName": "com.maatsii/linreg",
+    "title": "Maatsii",
+    "description": "Live LinReg fan charts, 64-setup playbook, 11-section MTF TA. Remote MCP, no API key.",
+    "registryVersion": "1.5.2"
+  },
+  "endpoint": "https://mcp.maatsii.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "maatsii-linreg-connector",
+      "version": "1.5.1"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].direction has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.maatsii.com/mcp"
+}

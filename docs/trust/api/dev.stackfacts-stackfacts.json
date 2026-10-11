@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:53.709Z",
+  "server": {
+    "registryName": "dev.stackfacts/stackfacts",
+    "title": "Stackfacts",
+    "description": "Neutral, sourced, dated facts for choosing software: price, free tier, idle rules, security record.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://stackfacts.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "stackfacts",
+      "title": "Stackfacts",
+      "version": "0.3.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].need has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://stackfacts.dev/mcp"
+}

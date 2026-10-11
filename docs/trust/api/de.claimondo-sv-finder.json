@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:19.566Z",
+  "server": {
+    "registryName": "de.claimondo/sv-finder",
+    "title": "Claimondo — Kfz-Gutachter finden & Termin buchen",
+    "description": "Findet Kfz-Gutachter in Deutschland, zeigt freie Termine und bucht den Besichtigungstermin.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.claimondo.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "claimondo-mcp-server",
+      "version": "1.2.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].plz has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].radius has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.claimondo.de/mcp"
+}

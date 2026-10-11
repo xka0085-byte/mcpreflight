@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:31.936Z",
+  "server": {
+    "registryName": "com.topologyindex/topology-index",
+    "title": "Topology Index",
+    "description": "Reference for multi-agent LLM topologies: patterns, aliases, sources, starters; one gated report.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://topologyindex.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "topology-index",
+      "version": "1.4.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].ticket has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].outcome has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].note has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://topologyindex.com/mcp"
+}

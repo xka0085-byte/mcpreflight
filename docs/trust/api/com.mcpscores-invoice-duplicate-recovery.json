@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:49.277Z",
+  "server": {
+    "registryName": "com.mcpscores/invoice-duplicate-recovery",
+    "title": "Invoice Duplicate Recovery",
+    "description": "Computes exact overpayments across caller-supplied approved invoices, payments, and recorded cred...",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-factory.bowling-anthony.workers.dev/invoice-duplicate-recovery/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.mcpscores/invoice-duplicate-recovery",
+      "title": "Invoice Duplicate Recovery",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].invoices has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].payments has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].credits has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-factory.bowling-anthony.workers.dev/invoice-duplicate-recovery/mcp"
+}

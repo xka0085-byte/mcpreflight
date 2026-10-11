@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:10.526Z",
+  "server": {
+    "registryName": "app.hologallery.pocket/pokemon-tcg-pocket-catalog",
+    "title": "Pokemon TCG Pocket Catalog",
+    "description": "Look up Pokemon TCG Pocket cards, sets, packs, and evaluate decks with battle simulations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pocket.hologallery.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "pokemon-tcg-pocket-catalog",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].stage has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pocket.hologallery.app/mcp"
+}

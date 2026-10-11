@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:01.520Z",
+  "server": {
+    "registryName": "ai.gigaverse/gigaverse",
+    "title": "ai.gigaverse/gigaverse",
+    "description": "2026 state, city and platform tax profiles for gig workers and creators, plus Roth IRA signups.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://gigaverse.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gigaverse",
+      "version": "1.3.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].filing_status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].signup_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gigaverse.ai/api/mcp"
+}

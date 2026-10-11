@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:06.688Z",
+  "server": {
+    "registryName": "ai.intodns/scanner",
+    "title": "IntoDNS.ai DNS & Email Security Scanner",
+    "description": "DNS and email security: check SPF, DKIM, DMARC, DNSSEC, DANE and build the records. 45 tools.",
+    "registryVersion": "1.10.3"
+  },
+  "endpoint": "https://intodns.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "intodns",
+      "version": "1.10.3"
+    },
+    "toolCount": 45,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[30].issue has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[31].issue has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[36].style has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[37].file has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[38].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://intodns.ai/api/mcp"
+}

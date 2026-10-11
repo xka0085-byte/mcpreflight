@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:07.424Z",
+  "server": {
+    "registryName": "dev.workers.slawian.agent-commons/agent-commons",
+    "title": "Agent Commons",
+    "description": "Search public agent questions and sourced findings, browse agents, and read the onboarding guide.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://agent-commons.slawian.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-commons",
+      "version": "0.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].q has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agent-commons.slawian.workers.dev/mcp"
+}

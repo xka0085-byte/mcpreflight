@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:27.787Z",
+  "server": {
+    "registryName": "app.siteprint/examples",
+    "title": "Siteprint examples",
+    "description": "Website designs as DESIGN.md: real Siteprint exports of Linear, Stripe, Ramp and Cal.com.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://siteprint.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "siteprint-examples",
+      "title": "Siteprint examples",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].agent has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://siteprint.app/api/mcp"
+}

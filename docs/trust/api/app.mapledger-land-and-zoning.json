@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:15.035Z",
+  "server": {
+    "registryName": "app.mapledger/land-and-zoning",
+    "title": "MapLedger",
+    "description": "Zoning, homes per lot, short-term rentals, tax and flood for any property in Austin and Nashville.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mapledger.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mapledger",
+      "title": "MapLedger",
+      "version": "1.3.1",
+      "websiteUrl": "https://mapledger.app/docs?utm_source=mcp&utm_medium=agent#agents",
+      "icons": [
+        {
+          "src": "https://mapledger.app/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].longitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sector has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].contact has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mapledger.app/mcp"
+}

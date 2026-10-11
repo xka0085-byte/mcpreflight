@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:51.873Z",
+  "server": {
+    "registryName": "com.venumark/venumark",
+    "title": "com.venumark/venumark",
+    "description": "Booking decisions, scorecards, and self-checks for Florida food vendors over live DBPR data.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://www.venumark.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "venumark",
+      "version": "1.4.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.venumark.com/api/mcp"
+}

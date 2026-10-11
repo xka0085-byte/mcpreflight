@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:29.808Z",
+  "server": {
+    "registryName": "ai.satohub/onchain-agents",
+    "title": "Sato Hub: Onchain Agents",
+    "description": "Search scored onchain-agent tooling: frameworks, MCP servers, wallets, x402 rails, deploy specs.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://satohub.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "onchain-agent-mcp-server",
+      "title": "Sato Hub",
+      "version": "0.1.0",
+      "websiteUrl": "https://satohub.ai/mcp",
+      "icons": [
+        {
+          "src": "https://satohub.ai/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://satohub.ai/brand/satohub-logo-1024.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "1024x1024"
+          ]
+        }
+      ]
+    },
+    "toolCount": 42,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://satohub.ai/api/mcp"
+}

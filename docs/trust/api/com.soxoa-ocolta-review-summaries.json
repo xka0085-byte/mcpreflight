@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:49.750Z",
+  "server": {
+    "registryName": "com.soxoa/ocolta-review-summaries",
+    "title": "Ocolta Review Summaries",
+    "description": "Read categorical signals, confidence and indicator counts from your recoverable Ocolta reviews.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.ocolta.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Ocolta",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].review_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.ocolta.com/mcp"
+}

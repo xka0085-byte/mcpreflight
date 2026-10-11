@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:17.043Z",
+  "server": {
+    "registryName": "eu.nordicmcp/weather",
+    "title": "NordicMCP — Weather",
+    "description": "Hosted Weather MCP server (Open-Meteo): current, forecast, and historical weather by location.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nordicmcp.eu/mcp/weather/{token}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nordicmcp.eu/mcp/weather/{token}"
+}

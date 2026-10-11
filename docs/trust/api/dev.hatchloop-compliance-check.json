@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:38.681Z",
+  "server": {
+    "registryName": "dev.hatchloop/compliance-check",
+    "title": "Compliance Check",
+    "description": "Preview a TCPA/GDPR/CASL/10DLC gate result before spending a paid send. No key needed.",
+    "registryVersion": "0.2.13"
+  },
+  "endpoint": "https://hatchloop.dev/mcp/compliance-check",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "compliance-check",
+      "version": "0.2.16"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].operation_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].operation_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].operation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hatchloop.dev/mcp/compliance-check"
+}

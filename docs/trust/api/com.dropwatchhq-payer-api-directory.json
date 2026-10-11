@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:55.469Z",
+  "server": {
+    "registryName": "com.dropwatchhq/payer-api-directory",
+    "title": "com.dropwatchhq/payer-api-directory",
+    "description": "Directory of US clearinghouse/payer APIs (Availity, Optum, Waystar) with pricing & access signals.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://clearinghouse.dropwatchhq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "payer-api-directory",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].function has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].functions has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].devIntegration has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].budgetSensitive has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://clearinghouse.dropwatchhq.com/mcp"
+}

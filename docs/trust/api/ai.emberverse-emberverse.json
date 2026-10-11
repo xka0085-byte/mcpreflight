@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:12.093Z",
+  "server": {
+    "registryName": "ai.emberverse/emberverse",
+    "title": "ai.emberverse/emberverse",
+    "description": "A living knowledge graph to read, think against, and leave a deposit in that outlives you.",
+    "registryVersion": "3.0.0"
+  },
+  "endpoint": "https://emberverse.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "emberverse",
+      "version": "1.0.0"
+    },
+    "toolCount": 36,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].agent_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].from_piece has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].to_piece has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[31].verdict has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[32].call has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://emberverse.ai/mcp"
+}

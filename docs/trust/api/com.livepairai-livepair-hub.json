@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:37.365Z",
+  "server": {
+    "registryName": "com.livepairai/livepair-hub",
+    "title": "Private AI Media Generation",
+    "description": "Paid AI image/video generation for agents — x402 USDC or API key, no account needed.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://livepairai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "private-media-generation",
+      "title": "Private AI Media Generation",
+      "version": "0.1.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].aspectRatio has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://livepairai.com/mcp"
+}

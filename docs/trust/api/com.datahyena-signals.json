@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:44.921Z",
+  "server": {
+    "registryName": "com.datahyena/signals",
+    "title": "com.datahyena/signals",
+    "description": "Deduplicated, entity-resolved funding rounds, acquisitions, and exec moves as MCP tools.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.datahyena.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "datahyena",
+      "title": "Datahyena",
+      "version": "1.0.0",
+      "websiteUrl": "https://datahyena.com/mcp",
+      "description": "Funding rounds, acquisitions and executive hires for 90,000+ companies. Ask which companies raised this month, who invested, or what happened at a company over time."
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.datahyena.com/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:28.703Z",
+  "server": {
+    "registryName": "dev.astrocal/mcp-server",
+    "title": "Astrocal",
+    "description": "AI-native scheduling: check availability, book meetings, cancel and reschedule via MCP",
+    "registryVersion": "0.1.6"
+  },
+  "endpoint": "https://api.astrocal.dev/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.astrocal.dev/mcp"
+}

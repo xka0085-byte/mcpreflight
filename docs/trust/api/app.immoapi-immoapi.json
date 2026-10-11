@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:10.880Z",
+  "server": {
+    "registryName": "app.immoapi/immoapi",
+    "title": "Immo API — DVF immobilier France",
+    "description": "Données immobilières DVF France : transactions, comparables GPS et statistiques de marché.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://immoapi.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://immoapi.app/api/mcp"
+}

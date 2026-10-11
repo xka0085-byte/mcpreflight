@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:53.053Z",
+  "server": {
+    "registryName": "dev.stuga/stuga",
+    "title": "Stuga",
+    "description": "Agent edits await review by default in a self-hosted workspace for documents and databases.",
+    "registryVersion": "0.1.11"
+  },
+  "endpoint": "https://{stuga_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://{stuga_host}/mcp"
+}

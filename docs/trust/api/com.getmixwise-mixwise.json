@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:35.783Z",
+  "server": {
+    "registryName": "com.getmixwise/mixwise",
+    "title": "MixWise",
+    "description": "Cocktails you can make from bottles you already have, full recipes, and the best next bottle to add.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://www.getmixwise.com/mcp/apps",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mixwise",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ingredients has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.getmixwise.com/mcp/apps"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:44.301Z",
+  "server": {
+    "registryName": "com.slashtel/slashtel",
+    "title": "Slashtel",
+    "description": "Travel data eSIMs in about 200 destinations and mobile top-ups in 100+ countries, live prices.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://slashtel.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "slashtel",
+      "title": "Slashtel eSIMs and mobile top-ups",
+      "version": "1.0.0",
+      "websiteUrl": "https://slashtel.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://slashtel.com/api/mcp"
+}

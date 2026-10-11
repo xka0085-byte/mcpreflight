@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:53.825Z",
+  "server": {
+    "registryName": "com.downtester/status",
+    "title": "Downtester Status",
+    "description": "Live service status, active incidents, search, and outage history from Downtester.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dd-dp.downtester.com/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://dd-dp.downtester.com/v1/mcp"
+}

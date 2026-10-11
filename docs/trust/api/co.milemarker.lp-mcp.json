@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:13.463Z",
+  "server": {
+    "registryName": "co.milemarker.lp/mcp",
+    "title": "Milemarker MCP Server",
+    "description": "AI-native interface to Milemarker: query AUM & positions, manage advisors, run platform workflows.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.milemarker.co/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.milemarker.co/mcp"
+}

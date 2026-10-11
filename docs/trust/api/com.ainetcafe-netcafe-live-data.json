@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:41.876Z",
+  "server": {
+    "registryName": "com.ainetcafe/netcafe-live-data",
+    "title": "com.ainetcafe/netcafe-live-data",
+    "description": "Live data: weather, air quality, FX, CN/HK/US stocks, IP geo, domain, SSL, China reachability.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://ainetcafe.com/mcp/data?s=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "netcafe-live-data",
+      "title": "NetCafe Live Data",
+      "version": "1.5.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].longitude has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://ainetcafe.com/mcp/data?s=registry"
+}

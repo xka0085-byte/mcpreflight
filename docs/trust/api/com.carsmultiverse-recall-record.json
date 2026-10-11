@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:18.635Z",
+  "server": {
+    "registryName": "com.carsmultiverse/recall-record",
+    "title": "CarsMultiverse — the recall record",
+    "description": "Vehicle safety recalls from four registers, matched across borders on the maker's own code.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://carsmultiverse.com/wp-json/cmvmcp/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "carsmultiverse",
+      "title": "CarsMultiverse recall record",
+      "version": "2.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].make has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].model has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://carsmultiverse.com/wp-json/cmvmcp/v1/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:07.014Z",
+  "server": {
+    "registryName": "com.blacklabeltec/site-mcp",
+    "title": "BlackLabel Tech Website MCP",
+    "description": "Search and read public BlackLabel Tech pages with source URLs.",
+    "registryVersion": "2026.09.15"
+  },
+  "endpoint": "https://blacklabeltec.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "BlackLabel Tech site MCP",
+      "version": "2026.09.15"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://blacklabeltec.com/mcp"
+}

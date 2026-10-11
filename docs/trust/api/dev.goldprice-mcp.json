@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:37.012Z",
+  "server": {
+    "registryName": "dev.goldprice/mcp",
+    "title": "goldprice.dev",
+    "description": "Gold, silver and copper spot, 31 currencies, per-country dealer prices and nine MCP tools.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://api.goldprice.dev/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.goldprice.dev/v1/mcp"
+}

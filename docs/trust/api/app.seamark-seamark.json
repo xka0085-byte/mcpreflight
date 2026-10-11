@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:28.251Z",
+  "server": {
+    "registryName": "app.seamark/seamark",
+    "title": "Seamark",
+    "description": "Personal sailing voyage log: trips, legs, ships, crew and GPX tracks with honest statistics.",
+    "registryVersion": "1.6.0"
+  },
+  "endpoint": "https://seamark.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "seamark",
+      "version": "2.5.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].role has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].role has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].from has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].to has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://seamark.app/mcp"
+}

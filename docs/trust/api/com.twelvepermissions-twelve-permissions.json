@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:41.657Z",
+  "server": {
+    "registryName": "com.twelvepermissions/twelve-permissions",
+    "title": "Twelve Permissions",
+    "description": "Browse, verify and buy Twelve Permissions NFTs on XRP Ledger. Every claim is checkable.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://twelvepermissions.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "twelve-permissions",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://twelvepermissions.com/mcp"
+}

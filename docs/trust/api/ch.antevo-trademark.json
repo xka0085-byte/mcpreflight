@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:58.431Z",
+  "server": {
+    "registryName": "ch.antevo/trademark",
+    "title": "Antevo Trademark",
+    "description": "Is that brand name taken? Screen the registers and check the opposition window. No account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://trademark.antevo.ch/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Screen a brand name across twenty trademark registers and get each office's opposition window with the provision it comes from.",
+      "icons": [
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "src": "https://antevo.ch/assets/antevo-plugin-logo-512.png"
+        }
+      ],
+      "name": "antevo-trademark",
+      "title": "Antevo Trademark",
+      "version": "1.0.0",
+      "websiteUrl": "https://antevo.ch/mcp"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].mark has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].office has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://trademark.antevo.ch/mcp"
+}

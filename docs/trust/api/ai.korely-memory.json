@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:08.632Z",
+  "server": {
+    "registryName": "ai.korely/memory",
+    "title": "Korely Memory",
+    "description": "Memory for AI agents that knows what is still true. Typed bi-temporal facts, EU-hosted.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.korely.ai/agent/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.korely.ai/agent/mcp"
+}

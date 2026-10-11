@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:52.620Z",
+  "server": {
+    "registryName": "com.squallstudio/squall-studio",
+    "title": "Squall Studio",
+    "description": "Read, edit and generate AI microdrama scripts, shots, characters and video in Squall Studio",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://squallstudio.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "story-weaver-pro",
+      "version": "1.0.0"
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].reference_image_asset_ids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].user_notes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].reference_image_asset_ids has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://squallstudio.com/api/mcp"
+}

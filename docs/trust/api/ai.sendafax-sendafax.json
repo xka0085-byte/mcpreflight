@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:30.894Z",
+  "server": {
+    "registryName": "ai.sendafax/sendafax",
+    "title": "SendaFax",
+    "description": "Send a fax in Australia (+61). Pay only if it delivers. Email receipt. No card at send.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://sendafax.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sendafax",
+      "title": "SendaFax.ai",
+      "version": "1.0.2"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].filename has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].content_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sendafax.ai/api/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:03.176Z",
+  "server": {
+    "registryName": "com.beaubitw/services",
+    "title": "Beaubi 行動美研",
+    "description": "台灣到府美容服務（美甲、美睫、紋繡、採耳、肌膚管理、推拿；台北、新北、宜蘭、台中）：查服務項目與起跳價、單一服務細節、會員制度、怎麼預約（預約在 Beaubi App 完成）。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://beaubitw.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "beaubi",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://beaubitw.com/api/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:47.415Z",
+  "server": {
+    "registryName": "com.sonlightwindow/booking",
+    "title": "Sonlight Window Cleaning",
+    "description": "Book window & gutter cleaning in Colorado and New Mexico: instant firm quote, real calendar slot",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sonlightwindow.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sonlight-window-cleaning",
+      "version": "2026-07-06",
+      "title": "Sonlight Window Cleaning"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].preferred_time has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sonlightwindow.com/mcp"
+}

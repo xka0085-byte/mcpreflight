@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:48.279Z",
+  "server": {
+    "registryName": "br.com.brindesbrasil/catalogo",
+    "title": "BrindesBrasil.com.br",
+    "description": "Catálogo de brindes personalizados do Brasil: busca, cores, gravação e preço por quantidade.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://www.brindesbrasil.com.br/wp-json/bb/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "brindesbrasil",
+      "title": "BrindesBrasil.com.br",
+      "version": "1.4.0",
+      "websiteUrl": "https://www.brindesbrasil.com.br/"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limite has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.brindesbrasil.com.br/wp-json/bb/v1/mcp"
+}

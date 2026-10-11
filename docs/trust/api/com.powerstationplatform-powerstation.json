@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:52.529Z",
+  "server": {
+    "registryName": "com.powerstationplatform/powerstation",
+    "title": "PowerStation Platform",
+    "description": "Transmission market data and TSR actions (MISO/SPP OASIS) from the PowerStation trading platform.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.powerstationplatform.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.powerstationplatform.com/mcp"
+}

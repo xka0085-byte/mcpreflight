@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:44.194Z",
+  "server": {
+    "registryName": "com.datakoot/federal-register-rules",
+    "title": "Regulatory Intel MCP",
+    "description": "US Federal Register for AI agents: rules, notices, executive orders, agency lookup. No keys.",
+    "registryVersion": "2.1.0"
+  },
+  "endpoint": "https://regulatory.datakoot.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "regulatory-intel",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://regulatory.datakoot.com/mcp"
+}

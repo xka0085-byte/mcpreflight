@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:26.671Z",
+  "server": {
+    "registryName": "com.the-driscoll/public-ai",
+    "title": "The Driscoll Public AI",
+    "description": "Read-only property facts, indicative availability, authorised booking links and guest-safe support.",
+    "registryVersion": "2.4.1"
+  },
+  "endpoint": "https://the-driscoll.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "the-driscoll-public-ai",
+      "title": "The Driscoll Public AI",
+      "version": "2.4.3",
+      "websiteUrl": "https://the-driscoll.com/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].adults has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].children has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].infants has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://the-driscoll.com/mcp"
+}

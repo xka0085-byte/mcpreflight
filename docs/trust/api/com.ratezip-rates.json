@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:10.471Z",
+  "server": {
+    "registryName": "com.ratezip/rates",
+    "title": "RateZip Bank Deposit and Mortgage Rates",
+    "description": "Live US savings, CD, mortgage & HELOC rates with source + timestamp on every figure.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.ratezip.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ratezip-rates",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].product has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].state has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.ratezip.com/mcp"
+}

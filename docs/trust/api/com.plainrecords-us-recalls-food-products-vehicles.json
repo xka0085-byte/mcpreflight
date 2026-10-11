@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:47.317Z",
+  "server": {
+    "registryName": "com.plainrecords/us-recalls-food-products-vehicles",
+    "title": "PlainRecords: U.S. recalls in plain English",
+    "description": "U.S. FDA, CPSC and NHTSA recalls by product, brand, lot code or car, plus owner complaints. Daily.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://plainrecords.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "plainrecords",
+      "title": "PlainRecords: U.S. recalls in plain English",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].make has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].model has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://plainrecords.com/mcp"
+}

@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:13.633Z",
+  "server": {
+    "registryName": "com.btcdcaengine/btc-dca-engine",
+    "title": "BTC DCA Engine",
+    "description": "Historical dollar-cost-averaging simulator for Bitcoin and other assets.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://btcdcaengine.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "btc-dca-engine",
+      "title": "BTC DCA Engine",
+      "version": "1.4.0",
+      "websiteUrl": "https://btcdcaengine.com/docs?article=agent_access",
+      "icons": [
+        {
+          "src": "https://btcdcaengine.com/logo/btc-dca-engine-pro-tile.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "1024x1024"
+          ]
+        },
+        {
+          "src": "https://btcdcaengine.com/logo/btc-dca-engine-tile-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].include has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].as_of has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].include has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://btcdcaengine.com/mcp"
+}

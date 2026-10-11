@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:06.938Z",
+  "server": {
+    "registryName": "com.essentras/placements",
+    "title": "com.essentras/placements",
+    "description": "Buy press coverage in 3,800+ vetted media outlets. Price a basket, get a checkout link.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://essentras.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "essentras",
+      "title": "Essentras media placements",
+      "version": "1.0.0",
+      "websiteUrl": "https://essentras.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://essentras.com/api/mcp"
+}

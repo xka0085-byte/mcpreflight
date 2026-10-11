@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:16.615Z",
+  "server": {
+    "registryName": "ai.nothumansearch/search",
+    "title": "Not Human Search",
+    "description": "Search the agentic web. 4,100+ sites, 11 tools incl. check_url + verify_mcp for probe-before-use.",
+    "registryVersion": "1.7.1"
+  },
+  "endpoint": "https://nothumansearch.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nothumansearch",
+      "title": "Not Human Search",
+      "version": "1.1.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].budget_band has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].requirement_flags has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].urgency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nothumansearch.ai/mcp"
+}

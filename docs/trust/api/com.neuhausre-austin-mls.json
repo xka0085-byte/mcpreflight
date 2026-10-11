@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:07.299Z",
+  "server": {
+    "registryName": "com.neuhausre/austin-mls",
+    "title": "Austin MLS",
+    "description": "Search Austin-area MLS listings. Free with signup; comps and market stats are paid.",
+    "registryVersion": "0.17.1"
+  },
+  "endpoint": "https://mls.neuhausre.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mls.neuhausre.com/mcp"
+}

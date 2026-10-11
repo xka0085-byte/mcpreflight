@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:55.932Z",
+  "server": {
+    "registryName": "com.dropwatchhq/recall-risk",
+    "title": "com.dropwatchhq/recall-risk",
+    "description": "Check a product's recall risk: score + active CPSC/FDA/NHTSA recalls for a product or brand.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://cassandra.dropwatchhq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "cassandra-recall",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cassandra.dropwatchhq.com/mcp"
+}

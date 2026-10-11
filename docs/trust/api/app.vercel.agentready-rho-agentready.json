@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:31.603Z",
+  "server": {
+    "registryName": "app.vercel.agentready-rho/agentready",
+    "title": "app.vercel.agentready-rho/agentready",
+    "description": "Scan any website or MCP server for agent readiness: 0-100 score, a fix per failing check. Free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agentready-rho.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agentready",
+      "version": "1.1.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentready-rho.vercel.app/api/mcp"
+}

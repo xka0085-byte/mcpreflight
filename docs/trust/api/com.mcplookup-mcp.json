@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:49.654Z",
+  "server": {
+    "registryName": "com.mcplookup/mcp",
+    "title": "MCPLookup",
+    "description": "Look up independent trust ratings and security, maintenance, and adoption evidence for MCP servers.",
+    "registryVersion": "0.1.6"
+  },
+  "endpoint": "https://mcplookup.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mcplookup",
+      "version": "0.1.4"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].order_by has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcplookup.com/mcp"
+}

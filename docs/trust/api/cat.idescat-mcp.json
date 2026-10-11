@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:55.229Z",
+  "server": {
+    "registryName": "cat.idescat/mcp",
+    "title": "Idescat MCP Server",
+    "description": "Query official statistics of Catalonia (Idescat): tables, metadata and JSON-stat data via MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.idescat.cat/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cat.idescat/mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.idescat.cat/mcp"
+}

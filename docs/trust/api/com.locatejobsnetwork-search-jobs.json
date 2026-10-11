@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:36.264Z",
+  "server": {
+    "registryName": "com.locatejobsnetwork/search-jobs",
+    "title": "Locate Jobs Network Job Search",
+    "description": "Search live U.S. jobs and unemployment benefits for 13 states, by role or place. No sign-in.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://locatejobsnetwork.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "locate-jobs-network",
+      "title": "Locate Jobs Network",
+      "version": "1.2.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://locatejobsnetwork.com/api/mcp"
+}

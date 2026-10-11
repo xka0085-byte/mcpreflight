@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:57.290Z",
+  "server": {
+    "registryName": "com.astranl/counterparty-nl",
+    "title": "AstraNL Dutch counterparty check",
+    "description": "Check a Dutch supplier before you pay: KvK register, name match, VIES VAT, EU sanctions. No key.",
+    "registryVersion": "1.36.0"
+  },
+  "endpoint": "https://astranl.com/mcp/streamable?profile=counterparty",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "astranl-mcp",
+      "version": "1.37.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://astranl.com/mcp/streamable?profile=counterparty"
+}

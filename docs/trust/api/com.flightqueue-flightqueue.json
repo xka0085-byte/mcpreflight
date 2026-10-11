@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:18.192Z",
+  "server": {
+    "registryName": "com.flightqueue/flightqueue",
+    "title": "FlightQueue",
+    "description": "Airport security wait times, forecasts, FAA delays, EES border queues and baggage stats.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.flightqueue.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.flightqueue.com/mcp"
+}

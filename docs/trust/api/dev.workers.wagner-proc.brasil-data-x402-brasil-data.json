@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:08.013Z",
+  "server": {
+    "registryName": "dev.workers.wagner-proc.brasil-data-x402/brasil-data",
+    "title": "Brasil Data (pay-per-call via x402)",
+    "description": "Brazil CNPJ, CEP, Selic/IPCA/PTAX, holidays, banks/ISPB for agents. Pay per call in USDC (x402).",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://brasil-data-x402.wagner-proc.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "brasil-data-x402",
+      "version": "0.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://brasil-data-x402.wagner-proc.workers.dev/mcp"
+}

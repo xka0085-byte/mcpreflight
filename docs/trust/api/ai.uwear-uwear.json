@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:52.773Z",
+  "server": {
+    "registryName": "ai.uwear/uwear",
+    "title": "Uwear",
+    "description": "AI photoshoot studio: garments, avatars, locations, and art direction",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.uwear.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "uwear",
+      "title": "Uwear",
+      "version": "1.0.0",
+      "description": "Uwear AI photoshoot studio: turn garment photos into on-model product imagery with reusable avatars, locations, and art direction.",
+      "websiteUrl": "https://uwear.ai/mcp",
+      "icons": [
+        {
+          "src": "https://uwear.ai/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 66,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.uwear.ai/mcp"
+}

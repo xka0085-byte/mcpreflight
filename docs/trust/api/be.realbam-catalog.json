@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:43.955Z",
+  "server": {
+    "registryName": "be.realbam/catalog",
+    "title": "BAM Kaarsen catalog",
+    "description": "Search and browse the BAM Kaarsen candle catalog and white-label offering. Read-only, no auth.",
+    "registryVersion": "0.2.25"
+  },
+  "endpoint": "https://realbam.be/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bam-catalog",
+      "title": "BAM Kaarsen catalog",
+      "version": "0.2.25"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].collection_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].product_type_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].scent_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://realbam.be/mcp"
+}

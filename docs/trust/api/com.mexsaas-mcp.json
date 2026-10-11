@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:54.483Z",
+  "server": {
+    "registryName": "com.mexsaas/mcp",
+    "title": "mexsaas",
+    "description": "Software que usan los negocios en México: busca, compara y ve alternativas, con precio en pesos.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.mexsaas.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mexsaas",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].periodo has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.mexsaas.com/mcp"
+}

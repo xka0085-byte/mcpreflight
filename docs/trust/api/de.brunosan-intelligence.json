@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:19.508Z",
+  "server": {
+    "registryName": "de.brunosan/intelligence",
+    "title": "BrunoSan Intelligence Concierge",
+    "description": "Discovery MCP for 11 intelligence domains plus LENS with live tools, routing and endpoints.",
+    "registryVersion": "1.0.13"
+  },
+  "endpoint": "https://brunosan.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "BrunoSan Intelligence Concierge",
+      "version": "1.28.1"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].max_domains has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://brunosan.de/mcp"
+}

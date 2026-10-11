@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:29.048Z",
+  "server": {
+    "registryName": "app.swissdeals/mcp",
+    "title": "SwissDeals",
+    "description": "Pay-per-call Swiss retail price intelligence (22 retailers). $0.01 USDC via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.swissdeals.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.swissdeals.app/api/mcp"
+}

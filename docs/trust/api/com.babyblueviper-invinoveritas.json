@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:01.160Z",
+  "server": {
+    "registryName": "com.babyblueviper/invinoveritas",
+    "title": "com.babyblueviper/invinoveritas",
+    "description": "Second opinion before an irreversible agent action; signed proofs, free verify, public ledger.",
+    "registryVersion": "1.14.1"
+  },
+  "endpoint": "https://api.babyblueviper.com/mcp/verify",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "invinoveritas",
+      "version": "1.13.0",
+      "description": "Verification layer for autonomous agents — signed pre-action verdicts, recomputable proofs, and a public audit ledger. Free /verify-proof; /review has free try-it calls, then pay-per-use."
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].k_folds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].n_perms has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.babyblueviper.com/mcp/verify"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:14.386Z",
+  "server": {
+    "registryName": "com.feode/feode-mcp",
+    "title": "com.feode/feode-mcp",
+    "description": "FEODE: AI-accessible precision machining & testing; offshore P&A, subsea wellhead, drill-pipe",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://www.feode.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "feode-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.feode.com/mcp"
+}

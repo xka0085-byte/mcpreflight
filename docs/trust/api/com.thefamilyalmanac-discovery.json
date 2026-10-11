@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:20.465Z",
+  "server": {
+    "registryName": "com.thefamilyalmanac/discovery",
+    "title": "The Family Almanac — parenting library, guide metadata, and magazine",
+    "description": "Read-only access to The Family Almanac's parenting-focused book library, grounded guide metadata...",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://thefamilyalmanac.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "family-almanac-discovery",
+      "version": "2.0.0",
+      "description": "Remote MCP access to The Family Almanac's public parenting library, grounded guide metadata, and multi-voice magazine pieces — read-only. This surface never returns guide body/depth text (none is served here, free or gated); to read or purchase a guide, send the reader to the returned canonicalUrl — never summarize or excerpt content this tool did not return.",
+      "websiteUrl": "https://thefamilyalmanac.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://thefamilyalmanac.com/api/mcp"
+}

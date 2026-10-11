@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:21.067Z",
+  "server": {
+    "registryName": "com.jojapi/viewcaller",
+    "title": "com.jojapi/viewcaller",
+    "description": "ViewCaller: Find any phone number, have more information about your contacts & much more. Phone.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.jojapi.com/viewcaller",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "jojapi-viewcaller",
+      "title": "ViewCaller API — JoJ API",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].number has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.jojapi.com/viewcaller"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:59.832Z",
+  "server": {
+    "registryName": "dev.workers.3labsio.policy-gate/policy-gate",
+    "title": "dev.workers.3labsio.policy-gate/policy-gate",
+    "description": "Deterministic allow/require_approval/deny verdicts for agent actions, before they happen.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://policy-gate.3labsio.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fieldproof-policy-gate",
+      "version": "0.2"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].request has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://policy-gate.3labsio.workers.dev/mcp"
+}

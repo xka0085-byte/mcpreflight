@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:51.651Z",
+  "server": {
+    "registryName": "ca.ccpcrate/ccpcrate",
+    "title": "ccpcrate — Canadian CCPC corporate tax",
+    "description": "Deterministic Canadian CCPC rate stack: small business deduction and grinds, Part IV, RDTOH.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://ccpcrate.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ccpcrate",
+      "version": "0.0.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].taxYear has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].taxYear has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://ccpcrate.ca/mcp"
+}

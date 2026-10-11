@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:32.406Z",
+  "server": {
+    "registryName": "com.seatswiper/booking",
+    "title": "com.seatswiper/booking",
+    "description": "Book hard-to-get restaurant reservations on your own Resy, SevenRooms, or OpenTable account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.seatswiper.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.seatswiper.com/api/mcp"
+}

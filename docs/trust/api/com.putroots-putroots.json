@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:04.532Z",
+  "server": {
+    "registryName": "com.putroots/putroots",
+    "title": "PutRoots",
+    "description": "SF move agent: rentals with sources, no-SSN banking routes, and your move plan and drafts.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://www.putroots.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2026-07-28",
+    "serverInfo": {
+      "name": "putroots",
+      "title": "PutRoots",
+      "version": "1.0.1"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].mode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.putroots.com/mcp"
+}

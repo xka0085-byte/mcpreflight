@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:13.220Z",
+  "server": {
+    "registryName": "es.beel/mcp",
+    "title": "BeeL",
+    "description": "Spanish e-invoicing with VeriFactu (AEAT): issue invoices, manage customers, validate NIFs.",
+    "registryVersion": "0.9.0"
+  },
+  "endpoint": "https://mcp.beel.es/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.beel.es/mcp"
+}

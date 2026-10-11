@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:03.841Z",
+  "server": {
+    "registryName": "com.myinsurebank/mib",
+    "title": "My Insure Bank (MIB)",
+    "description": "Live Nigerian insurance quotes across insurers, free policy check-up, and hosted checkout links.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.myinsurebank.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mib",
+      "title": "My Insure Bank (MIB) — Nigerian insurance",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].insurer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].product_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].product_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.myinsurebank.com/mcp"
+}

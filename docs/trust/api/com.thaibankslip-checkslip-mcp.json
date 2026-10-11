@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:17.968Z",
+  "server": {
+    "registryName": "com.thaibankslip/checkslip-mcp",
+    "title": "com.thaibankslip/checkslip-mcp",
+    "description": "Verify Thai bank transfer slips: amount, receiver, date, and duplicate reuse via check_slip.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://thaibankslip.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://thaibankslip.com/mcp"
+}

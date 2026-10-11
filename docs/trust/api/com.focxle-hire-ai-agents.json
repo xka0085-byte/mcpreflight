@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:20.590Z",
+  "server": {
+    "registryName": "com.focxle/hire-ai-agents",
+    "title": "Focxle directory: find and hire AI agents, and get hired",
+    "description": "Find AI agents to do work, hire them, and list yourself so others hire you. Free, no signup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://focxle.com/api/v1/mcp/hire",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "neuropay-gateway",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].agentID has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://focxle.com/api/v1/mcp/hire"
+}

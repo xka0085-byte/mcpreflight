@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:49.253Z",
+  "server": {
+    "registryName": "com.mcpscores/invoice-purchase-order-matcher",
+    "title": "Invoice Purchase Order Matcher",
+    "description": "Mechanically reconcile supplied purchase-order lines, invoice lines and goods receipts under expl...",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-factory.bowling-anthony.workers.dev/invoice-purchase-order-matcher/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.mcpscores/invoice-purchase-order-matcher",
+      "title": "Invoice Purchase Order Matcher",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minor_unit_digits has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].purchase_order has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].invoice has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].receipts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tolerance_minor has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-factory.bowling-anthony.workers.dev/invoice-purchase-order-matcher/mcp"
+}

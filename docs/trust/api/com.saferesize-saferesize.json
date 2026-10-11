@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:27.270Z",
+  "server": {
+    "registryName": "com.saferesize/saferesize",
+    "title": "SafeResize",
+    "description": "Passport and visa photo rules for 110 documents in 60 countries, and upload limits as exact numbers.",
+    "registryVersion": "0.1.7"
+  },
+  "endpoint": "https://saferesize.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "saferesize",
+      "title": "SafeResize",
+      "version": "0.1.7"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].width has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].height has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://saferesize.com/mcp"
+}

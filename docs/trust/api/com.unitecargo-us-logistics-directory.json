@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:44.317Z",
+  "server": {
+    "registryName": "com.unitecargo/us-logistics-directory",
+    "title": "UNITECARGO U.S. Logistics Provider Directory",
+    "description": "Verified U.S. logistics provider search with canonical profiles, freshness, and read-only tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://unitecargo.com/api/agent/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://unitecargo.com/api/agent/v1/mcp"
+}

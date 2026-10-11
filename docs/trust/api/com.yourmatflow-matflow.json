@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:10.257Z",
+  "server": {
+    "registryName": "com.yourmatflow/matflow",
+    "title": "MatFlow",
+    "description": "Read-only MatFlow data: pricing, competitors, features, FAQs for combat-sports gyms.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://yourmatflow.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "matflow",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://yourmatflow.com/api/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:06.780Z",
+  "server": {
+    "registryName": "app.flaim/mcp",
+    "title": "Flaim Fantasy",
+    "description": "Fantasy analysis for your ESPN, Yahoo, and Sleeper leagues. Reads your leagues, never changes them.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://api.flaim.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fantasy-mcp",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://flaim.app/icon-light.png",
+          "mimeType": "image/png",
+          "theme": "light"
+        },
+        {
+          "src": "https://flaim.app/icon-dark.png",
+          "mimeType": "image/png",
+          "theme": "dark"
+        }
+      ]
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.flaim.app/mcp"
+}

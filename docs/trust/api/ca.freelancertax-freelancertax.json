@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:51.697Z",
+  "server": {
+    "registryName": "ca.freelancertax/freelancertax",
+    "title": "FreelancerTax — Canadian self-employed tax math",
+    "description": "Verified Canadian self-employed tax math: SE tax, CPP, GST/HST, instalments, CRA deadlines. Free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://freelancertax.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "freelancertax",
+      "title": "FreelancerTax — verified Canadian self-employed tax math",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://freelancertax.ca/mcp"
+}

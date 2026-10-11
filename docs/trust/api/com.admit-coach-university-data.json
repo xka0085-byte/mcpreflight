@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:33.099Z",
+  "server": {
+    "registryName": "com.admit-coach/university-data",
+    "title": "Admit Coach — College Search & Costs",
+    "description": "Search US colleges and compare historical admissions, costs and aid using public federal data.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://admit-coach.com/api/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Admit Coach College Data",
+      "version": "1.27.1",
+      "websiteUrl": "https://admit-coach.com/mcp-server"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].state has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].major has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_acceptance_rate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].unitids has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://admit-coach.com/api/mcp/"
+}

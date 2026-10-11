@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:02.707Z",
+  "server": {
+    "registryName": "cloud.hstgr.srv1024618.aval/trust",
+    "title": "Aval",
+    "description": "Payment-backed trust scores for AI agents on Base (ERC-8004). $0.01 per check via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aval.srv1024618.hstgr.cloud/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aval",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].agent has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://aval.srv1024618.hstgr.cloud/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:31.475Z",
+  "server": {
+    "registryName": "com.toolfeeds/sec-edgar-mcp",
+    "title": "SEC EDGAR Fundamentals",
+    "description": "Normalized SEC EDGAR fundamentals. 3 of 6 tools free; the rest $0.04-$0.10 per call in USDC.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.toolfeeds.com/sec-edgar-mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.toolfeeds.com/sec-edgar-mcp"
+}

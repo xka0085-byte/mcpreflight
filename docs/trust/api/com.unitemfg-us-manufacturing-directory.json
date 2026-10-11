@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:44.628Z",
+  "server": {
+    "registryName": "com.unitemfg/us-manufacturing-directory",
+    "title": "UNITEMFG U.S. Manufacturer Directory",
+    "description": "Search verified U.S. manufacturers with provenance, freshness, and live directory statistics.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://unitemfg.com/api/agent/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://unitemfg.com/api/agent/v1/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:25.053Z",
+  "server": {
+    "registryName": "com.kindoflost.routing/fleet-route-optimizer",
+    "title": "Fleet Route Optimizer",
+    "description": "Splits deliveries across vehicles and orders each route: time windows, capacities, road times. Free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://routing.kindoflost.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kindoflost-route-optimizer",
+      "title": "Kind of Lost — Fleet Route Optimizer",
+      "version": "1.0.0",
+      "websiteUrl": "https://routing.kindoflost.com/mcp-server"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].job_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].wait_seconds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://routing.kindoflost.com/mcp"
+}

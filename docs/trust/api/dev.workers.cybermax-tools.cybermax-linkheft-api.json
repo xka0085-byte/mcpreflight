@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:02.451Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/linkheft-api",
+    "title": "Linkheft",
+    "description": "Domain authority API + MCP: 0-100 score, rank, trend, 50/call. $19/mo; 1,000 free lookups/day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://linkheft-api.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "linkheft-api",
+      "title": "Linkheft API by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://linkheft-api.cybermaxtools.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sortBy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minScore has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://linkheft-api.cybermaxtools.com/mcp?via=mcp-registry"
+}

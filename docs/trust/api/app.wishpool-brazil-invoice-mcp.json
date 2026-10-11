@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:33.707Z",
+  "server": {
+    "registryName": "app.wishpool/brazil-invoice-mcp",
+    "title": "Brazil Invoices (NFS-e nota fiscal de serviço)",
+    "description": "Brazil NFS-e service invoices for AI agents via Focus NFe and NFe.io. Stateless, never stores data.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://inv-br.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-br.wishpool.app/mcp"
+}

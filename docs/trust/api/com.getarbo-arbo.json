@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:33.532Z",
+  "server": {
+    "registryName": "com.getarbo/arbo",
+    "title": "Arbo",
+    "description": "Site structure for client redesigns. Page tree with URL, keyword, status and redirect plan export.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://getarbo.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "arbo",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].priority has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].rationale has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].notes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://getarbo.com/api/mcp"
+}

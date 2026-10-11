@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:06.394Z",
+  "server": {
+    "registryName": "dev.workers.pathwren.www/crawler-ip-verifier",
+    "title": "Crawler IP Verifier - real Googlebot or fake",
+    "description": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"whoami\",\"arguments\":{}}} free no key",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/netcheck",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "crawler-ip-verifier",
+      "title": "Crawler IP Verifier",
+      "version": "1.0.0",
+      "description": "Tell real Googlebot/GPTBot from fake: 500 IPs a call, firewall allowlist out. Free, no key. Bulk address verification against mirrored operator prefix lists, prefix arithmetic, and paste-ready allowlists. Call verify_my_address first: no arguments at all, and it checks the address you are calling from against every mirrored operator prefix. whoami and example are the other two zero-argument calls."
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.pathwren.workers.dev/c/mcp-registry-official/mcp/netcheck"
+}

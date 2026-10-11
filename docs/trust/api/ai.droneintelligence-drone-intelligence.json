@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:10.715Z",
+  "server": {
+    "registryName": "ai.droneintelligence/drone-intelligence",
+    "title": "Drone Intelligence",
+    "description": "Drone-sector market intelligence for AI agents: free briefings and profiles, licenced tracker data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://droneintelligence.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "drone-intelligence",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].dimension has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://droneintelligence.ai/api/mcp"
+}

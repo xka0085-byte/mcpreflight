@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:21.839Z",
+  "server": {
+    "registryName": "de.lebenslaufheld/mcp",
+    "title": "LebenslaufHeld",
+    "description": "German CV builder: render real PDFs (20 templates), ATS + completeness checks. Anonymous, no auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://lebenslaufheld.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "LebenslaufHeld",
+      "version": "1.28.1",
+      "websiteUrl": "https://lebenslaufheld.de"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].daten has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].template has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].pdf_base64 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].daten has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].beruf has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://lebenslaufheld.de/mcp"
+}

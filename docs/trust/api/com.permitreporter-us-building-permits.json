@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:41.633Z",
+  "server": {
+    "registryName": "com.permitreporter/us-building-permits",
+    "title": "PermitReporter — US Building Permit Intelligence",
+    "description": "Source-linked building-permit search across 34 US states and DC, with county-level coverage.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://permitreporter.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://permitreporter.com/mcp"
+}

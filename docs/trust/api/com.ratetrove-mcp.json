@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:10.004Z",
+  "server": {
+    "registryName": "com.ratetrove/mcp",
+    "title": "RateTrove",
+    "description": "Source-linked US credit-union deposit rates and membership context. Request a key via our site.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://ratetrove.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://ratetrove.com/mcp"
+}

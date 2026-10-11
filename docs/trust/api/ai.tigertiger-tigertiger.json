@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:47.094Z",
+  "server": {
+    "registryName": "ai.tigertiger/tigertiger",
+    "title": "ai.tigertiger/tigertiger",
+    "description": "Chief of Staff, strategy and writing tools that give your Claude subscription structure and memory.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.tigertiger.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tigertiger",
+      "version": "1.27.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].plan has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.tigertiger.ai/mcp"
+}

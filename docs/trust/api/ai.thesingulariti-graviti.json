@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:45.814Z",
+  "server": {
+    "registryName": "ai.thesingulariti/graviti",
+    "title": "ai.thesingulariti/graviti",
+    "description": "Verified brand claims with receipts for agent commerce. Ranking is never paid; the engine is open.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://graviti.thesingulariti.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "graviti",
+      "version": "0.2.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].brand_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].order_value_usd has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://graviti.thesingulariti.ai/api/mcp"
+}

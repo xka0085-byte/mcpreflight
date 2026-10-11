@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:13.906Z",
+  "server": {
+    "registryName": "com.relomote/jobs",
+    "title": "Relomote",
+    "description": "Search remote jobs by the country they hire from, and jobs with relocation or visa sponsorship.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://relomote.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "relomote",
+      "title": "Relomote",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://relomote.com/logos/relomote-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://relomote.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://relomote.com/mcp"
+}

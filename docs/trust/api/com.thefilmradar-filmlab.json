@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:21.915Z",
+  "server": {
+    "registryName": "com.thefilmradar/filmlab",
+    "title": "FilmLab",
+    "description": "AI film lab for filmmakers: generate and review images/clips with input provenance, cost preflight",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://mcp-lab.thefilmradar.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "filmlab-mcp",
+      "version": "1.29.0"
+    },
+    "toolCount": 114,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[80].ziel has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[80].view has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[80].ersetzen has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-lab.thefilmradar.com/mcp"
+}

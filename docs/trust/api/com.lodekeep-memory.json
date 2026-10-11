@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:36.025Z",
+  "server": {
+    "registryName": "com.lodekeep/memory",
+    "title": "Lodekeep",
+    "description": "Memory MCP server for Claude Code. Correct a fact and the old version stops being recalled.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://lodekeep.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://lodekeep.com/mcp"
+}

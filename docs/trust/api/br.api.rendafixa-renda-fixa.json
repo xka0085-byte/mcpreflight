@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:48.437Z",
+  "server": {
+    "registryName": "br.api.rendafixa/renda-fixa",
+    "title": "Renda Fixa",
+    "description": "Brazilian fixed income (CDB, LCI, LCA, CRI, CRA, Tesouro) ranked by net-of-tax and real return.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rendafixa.api.br/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "rendafixa",
+      "title": "Renda Fixa API",
+      "version": "1.0.0",
+      "websiteUrl": "https://rendafixa.api.br/docs/api"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://rendafixa.api.br/mcp"
+}

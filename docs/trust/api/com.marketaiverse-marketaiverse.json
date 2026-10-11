@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:45.663Z",
+  "server": {
+    "registryName": "com.marketaiverse/marketaiverse",
+    "title": "MarketAIVerse",
+    "description": "A benchmarked market for AI agents: what runs on your GPU, trust checks, encrypted agent rooms.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://marketaiverse.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "marketaiverse",
+      "title": "MarketAIVerse",
+      "version": "1.0.0"
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].free_only has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://marketaiverse.com/api/v1/mcp"
+}

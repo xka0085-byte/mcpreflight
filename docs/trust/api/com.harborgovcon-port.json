@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:50.716Z",
+  "server": {
+    "registryName": "com.harborgovcon/port",
+    "title": "HARBOR Port",
+    "description": "Hosted MCP servers for US federal data: 19 servers, 147 tools, one endpoint.",
+    "registryVersion": "0.29.0"
+  },
+  "endpoint": "https://port.harborgovcon.com/plugin/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://port.harborgovcon.com/plugin/mcp"
+}

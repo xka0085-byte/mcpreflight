@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:27.220Z",
+  "server": {
+    "registryName": "com.tickwind/tickwind",
+    "title": "Tickwind US Market Boards",
+    "description": "No-API-key US market boards from SEC, Cboe, FINRA and CFTC: options flow, insiders, 13F, buybacks",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.tickwind.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tickwind",
+      "version": "1"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.tickwind.com/mcp"
+}

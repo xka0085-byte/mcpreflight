@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:33.221Z",
+  "server": {
+    "registryName": "com.contadeo/mcp",
+    "title": "com.contadeo/mcp",
+    "description": "Contadeo: emite y consulta comprobantes electrónicos del SRI (Ecuador) desde asistentes de IA",
+    "registryVersion": "0.25.0"
+  },
+  "endpoint": "https://contadeo.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://contadeo.com/api/mcp"
+}

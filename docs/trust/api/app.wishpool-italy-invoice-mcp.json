@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:34.839Z",
+  "server": {
+    "registryName": "app.wishpool/italy-invoice-mcp",
+    "title": "Italy Invoices (FatturaPA / SdI via Invoicetronic)",
+    "description": "Italy FatturaPA invoices for AI agents: build FPR12 XML, transmit to the SdI, query status.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://inv-it.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-it.wishpool.app/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:50.333Z",
+  "server": {
+    "registryName": "com.policylayer/registry",
+    "title": "com.policylayer/registry",
+    "description": "The MCP server that vets MCP servers: identity, risk grade and per-tool risk before you install.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.policylayer.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "policylayer-registry",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.policylayer.com/mcp"
+}

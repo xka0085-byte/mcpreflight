@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:41.921Z",
+  "server": {
+    "registryName": "dev.lastseen/score",
+    "title": "lastseen score",
+    "description": "Trust scores and dated liveness/drift facts for MCP servers, from the lastseen.dev notary register.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://score.lastseen.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "lastseen-score",
+      "version": "1.0.0",
+      "description": "score.lastseen.dev — liveness/drift-derived trust scores + dated facts for MCP servers, built on the lastseen.dev register."
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://score.lastseen.dev/mcp"
+}

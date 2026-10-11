@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:49.625Z",
+  "server": {
+    "registryName": "com.mcpscores/merchant-catalog-acceptance",
+    "title": "Merchant Catalog Acceptance",
+    "description": "Deterministic acceptance report for a supplied product catalog: validates price/currency/availabi...",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-factory.bowling-anthony.workers.dev/merchant-catalog-acceptance/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.mcpscores/merchant-catalog-acceptance",
+      "title": "Merchant Catalog Acceptance",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].products has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-factory.bowling-anthony.workers.dev/merchant-catalog-acceptance/mcp"
+}

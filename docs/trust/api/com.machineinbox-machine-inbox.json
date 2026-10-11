@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:39.764Z",
+  "server": {
+    "registryName": "com.machineinbox/machine-inbox",
+    "title": "com.machineinbox/machine-inbox",
+    "description": "Task-scoped email inboxes for AI agents: read mail, extract verification codes, and reply.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://machineinbox.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "machine-inbox",
+      "title": "Machine Inbox",
+      "version": "0.1.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].message_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].message_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].text has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://machineinbox.com/mcp"
+}

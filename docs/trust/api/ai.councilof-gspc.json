@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:06.290Z",
+  "server": {
+    "registryName": "ai.councilof/gspc",
+    "title": "Council of AI GSPC",
+    "description": "19 tools (14 free, 5 x402-metered): GSPC board, evidence, Ed25519 card verify. Measurement only.",
+    "registryVersion": "1.4.4"
+  },
+  "endpoint": "https://councilof.ai/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "csoai-gspc-mcp",
+      "version": "1.4.4"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].needs_write has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].objective has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://councilof.ai/mcp/"
+}

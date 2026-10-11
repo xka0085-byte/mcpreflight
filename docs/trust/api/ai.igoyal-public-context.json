@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:04.454Z",
+  "server": {
+    "registryName": "ai.igoyal/public-context",
+    "title": "Ishan Goyal public context",
+    "description": "Read-only canonical igoyal.ai Markdown resources, including MPP-paid city guides.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://igoyal.ai/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "ai.igoyal/public-context",
+      "title": "Ishan Goyal public context",
+      "version": "1.1.0",
+      "description": "Read-only access to canonical igoyal.ai Markdown; configured city-guide and place-bundle reads use Machine Payments Protocol."
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://igoyal.ai/mcp"
+}

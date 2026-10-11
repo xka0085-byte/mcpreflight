@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:08.479Z",
+  "server": {
+    "registryName": "com.immo-spot/mcp",
+    "title": "Immo Spot MCP",
+    "description": "Données immobilières officielles françaises (DVF+, cadastre, DPE, risques, urbanisme) via MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://immo-spot.com/mcp/user",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://immo-spot.com/mcp/user"
+}

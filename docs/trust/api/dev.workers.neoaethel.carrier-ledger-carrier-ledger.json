@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:04.335Z",
+  "server": {
+    "registryName": "dev.workers.neoaethel.carrier-ledger/carrier-ledger",
+    "title": "Carrier Ledger",
+    "description": "Check U.S. trucking carriers and freight brokers in FMCSA records: authority, insurance, notices.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://carrier-ledger.neoaethel.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "carrier-ledger",
+      "title": "Carrier Ledger",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://carrier-ledger.neoaethel.workers.dev/mcp"
+}

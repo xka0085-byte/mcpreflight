@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:23.927Z",
+  "server": {
+    "registryName": "ai.quickcasa/quickcasa",
+    "title": "QuickCasa",
+    "description": "Run QuickCasa, the AI leasing platform, from any MCP client: leads, follow-ups, inventory, sites.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.quickcasa.ai/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.quickcasa.ai/v1/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:31.961Z",
+  "server": {
+    "registryName": "com.legalaimcp/directory",
+    "title": "LegalAIMCP Directory",
+    "description": "Search a curated directory of AI tools and MCP servers for law firms. Read-only, free, no auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://legalaimcp.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "legalaimcp",
+      "version": "1.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://legalaimcp.com/api/mcp"
+}

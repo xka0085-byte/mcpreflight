@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:38.750Z",
+  "server": {
+    "registryName": "dev.getbureau/about",
+    "title": "Bureau (about)",
+    "description": "About Bureau, the self-hosted office for AI agents: overview, FAQ search, roadmap, install.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://www.getbureau.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "getbureau",
+      "title": "Bureau (about)",
+      "version": "0.2.0",
+      "websiteUrl": "https://www.getbureau.dev",
+      "icons": [
+        {
+          "src": "https://www.getbureau.dev/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.getbureau.dev/mcp"
+}

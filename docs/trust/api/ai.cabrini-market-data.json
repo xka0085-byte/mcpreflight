@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:12:56.693Z",
+  "server": {
+    "registryName": "ai.cabrini/market-data",
+    "title": "Cabrini Market Data",
+    "description": "US equity data for AI agents — 23 years intraday + daily, SEC filings. x402 USDC payments.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://cabrini.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cabrini.ai",
+      "version": "3.1.0",
+      "related": [
+        {
+          "name": "wikexa",
+          "mcp": "https://wikexa.com/mcp",
+          "description": "Structured knowledge API — 19M records. Free."
+        }
+      ]
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "15 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://cabrini.ai/mcp"
+}

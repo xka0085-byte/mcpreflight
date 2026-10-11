@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:27.740Z",
+  "server": {
+    "registryName": "app.shelfclub/books",
+    "title": "Shelfclub",
+    "description": "Search a catalog of 1.7 million books and find books by mood, vibe, pace or genre. Read-only.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.shelfclub.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "shelfclub",
+      "version": "0.2.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].genres has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.shelfclub.app/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:07.380Z",
+  "server": {
+    "registryName": "com.newrelic/mcp-server",
+    "title": "New Relic MCP Server",
+    "description": "Access New Relic observability data through MCP - query metrics, logs, traces, entities, and more",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.newrelic.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.newrelic.com/mcp"
+}

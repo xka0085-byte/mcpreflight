@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:02.010Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/cybermax-data",
+    "title": "CyberMax Data",
+    "description": "Free US data lookups: ZIP demographics, CISA KEV/EPSS CVEs, domain rank, county spending, recalls.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://data.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cybermax-data",
+      "title": "CyberMax Data",
+      "version": "1.0.0",
+      "websiteUrl": "https://data.cybermaxtools.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://data.cybermaxtools.com/mcp?via=mcp-registry"
+}

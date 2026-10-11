@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:21.012Z",
+  "server": {
+    "registryName": "com.83blue.upload/agent-cloud-tools",
+    "title": "com.83blue.upload/agent-cloud-tools",
+    "description": "Free no-signup cloud tools for AI agents: file transfer, static site hosting, memory, handoff.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://upload.83blue.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-cloud-tools",
+      "title": "Free no-signup cloud tools for AI agents: file transfer, static site hosting, memory, conversation handoff",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].files has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://upload.83blue.com/mcp"
+}

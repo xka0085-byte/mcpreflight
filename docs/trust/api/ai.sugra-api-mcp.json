@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:43.024Z",
+  "server": {
+    "registryName": "ai.sugra/api-mcp",
+    "title": "Sugra API",
+    "description": "Gateway between LLM agents and world data through eight tools and a bundled endpoint catalog.",
+    "registryVersion": "0.12.0"
+  },
+  "endpoint": "https://app.sugra.ai/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.sugra.ai/mcp"
+}

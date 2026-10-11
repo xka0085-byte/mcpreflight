@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:26:07.469Z",
+  "server": {
+    "registryName": "ai.kifly/mcp",
+    "title": "Kifly — Agentic Commerce & Payments",
+    "description": "Multi-seller shopping for AI agents. Settle via Stripe MPP or x402 USDC on Base. Hosted.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://kifly.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kifly",
+      "title": "Kifly — Agentic Commerce & Payments",
+      "version": "1.0.0",
+      "description": "Infrastructure layer for agent commerce. Discover products across multiple sellers, manage a cart, and check out via a secure Stripe-powered payment link on kifly.ai for physical goods. Buyer identity management: register, recover via email OTP, save shipping address — repeat buyers skip all manual data entry. Network tokens (kfn_live_) browse the full Kifly merchant network; seller tokens (kfa_live_) scope to one merchant. Hosted at https://kifly.ai — no local setup required."
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "22 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://kifly.ai/api/mcp"
+}

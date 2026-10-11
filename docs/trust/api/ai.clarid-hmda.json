@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:00.398Z",
+  "server": {
+    "registryName": "ai.clarid/hmda",
+    "title": "Clarid HMDA Validator",
+    "description": "Validate HMDA LAR files against CFPB edit checks for community banks and credit unions.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.clarid.ai/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.clarid.ai/mcp"
+}

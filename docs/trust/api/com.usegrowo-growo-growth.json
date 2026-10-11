@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:47.345Z",
+  "server": {
+    "registryName": "com.usegrowo/growo-growth",
+    "title": "Growo child growth",
+    "description": "Free child growth tools: percentiles, BMI, corrected age, target height, birth size. WHO and CDC.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://mcp.usegrowo.com/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "growo-growth",
+      "title": "Growo child growth",
+      "version": "1.5.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].metric has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].metric has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.usegrowo.com/"
+}

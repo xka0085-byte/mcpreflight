@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:24.958Z",
+  "server": {
+    "registryName": "app.rowb.mcp-health/probe",
+    "title": "MCP health — MCP directory health check diagnostics",
+    "description": "Diagnoses whether an MCP server is reachable, by live HTTP probe.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp-health.rowb.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-health",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp-health.rowb.app/mcp"
+}

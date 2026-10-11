@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:24.663Z",
+  "server": {
+    "registryName": "com.runadiva/runadiva",
+    "title": "RUNaDIVA",
+    "description": "Autonomous Decision Intelligence for evaluating economic decisions before value is committed.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://runadiva.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "runadiva",
+      "version": "0.2-native"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].case has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].proposed_option_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].constraints has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://runadiva.com/mcp"
+}

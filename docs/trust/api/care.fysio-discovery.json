@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:54.064Z",
+  "server": {
+    "registryName": "care.fysio/discovery",
+    "title": "fysio.care clinic discovery",
+    "description": "Discover Swedish MSK clinics on fysio.care: search clinics, services, and open appointment times.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://fysio.care/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fysio-care",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://fysio.care/api/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:32.845Z",
+  "server": {
+    "registryName": "com.scribblecards/handwritten-cards",
+    "title": "Scribble — Real Handwritten Cards",
+    "description": "Send real handwritten cards in the US. A machine writes each one in ink, then we mail it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://scribblecards.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://scribblecards.com/api/mcp"
+}

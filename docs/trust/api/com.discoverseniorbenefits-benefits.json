@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:50.941Z",
+  "server": {
+    "registryName": "com.discoverseniorbenefits/benefits",
+    "title": "DiscoverSeniorBenefits",
+    "description": "Find US senior benefits by ZIP and check eligibility via deterministic rules citing .gov sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.discoverseniorbenefits.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "discoverseniorbenefits",
+      "title": "DiscoverSeniorBenefits",
+      "version": "0.1.0+47f97339306b"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].household_size has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].homeownership has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].disability_status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].is_blind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].is_us_citizen has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.discoverseniorbenefits.com/mcp"
+}

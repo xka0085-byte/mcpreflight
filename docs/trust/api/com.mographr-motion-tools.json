@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:57.738Z",
+  "server": {
+    "registryName": "com.mographr/motion-tools",
+    "title": "com.mographr/motion-tools",
+    "description": "Render animated motion-graphics overlays as MP4: lower thirds, titles, callouts",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.mographr.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mographr-tools",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].renderId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.mographr.com/mcp"
+}

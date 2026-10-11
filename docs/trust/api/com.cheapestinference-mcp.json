@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:21.626Z",
+  "server": {
+    "registryName": "com.cheapestinference/mcp",
+    "title": "com.cheapestinference/mcp",
+    "description": "Discover unlimited LLM inference pools, get USDC quotes, subscribe on Base, check key status.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.cheapestinference.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cheapestinference",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].pool_slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.cheapestinference.com/mcp"
+}

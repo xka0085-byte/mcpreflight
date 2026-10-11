@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:44.109Z",
+  "server": {
+    "registryName": "com.skyalo/travel-connectivity-guide",
+    "title": "Skyalo Travel Connectivity Guide",
+    "description": "Estimate mobile-data needs and build a provider-neutral connectivity checklist for any trip.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://skyalo.com/chatgpt/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "skyalo-travel-connectivity-guide",
+      "version": "2.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].manufacturer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].carrierUnlocked has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].eidPresent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].addEsimSettingPresent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].locale has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://skyalo.com/chatgpt/mcp"
+}

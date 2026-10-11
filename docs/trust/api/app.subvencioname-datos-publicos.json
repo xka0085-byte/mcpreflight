@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:28.911Z",
+  "server": {
+    "registryName": "app.subvencioname/datos-publicos",
+    "title": "Subvencióname",
+    "description": "Subvenciones, licitaciones y contratos adjudicados de España, de fuentes oficiales. Solo lectura.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://subvencioname.app/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "subvencioname",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://subvencioname.app/api/v1/mcp"
+}

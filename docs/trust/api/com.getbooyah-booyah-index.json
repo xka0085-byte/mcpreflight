@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:32.469Z",
+  "server": {
+    "registryName": "com.getbooyah/booyah-index",
+    "title": "Booyah Index",
+    "description": "AI-readable directory + commerce layer: 3,500+ SEA businesses, plus products from verified stores.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://getbooyah.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "booyah-index",
+      "title": "Booyah Index",
+      "version": "0.5.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://getbooyah.com/api/mcp"
+}

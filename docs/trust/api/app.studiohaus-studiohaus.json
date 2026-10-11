@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:29.863Z",
+  "server": {
+    "registryName": "app.studiohaus/studiohaus",
+    "title": "Studiohaus",
+    "description": "Read-only MCP server for interior design studios: projects, overviews, weekly activity. No writes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://platform.studiohaus.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://platform.studiohaus.app/api/mcp"
+}

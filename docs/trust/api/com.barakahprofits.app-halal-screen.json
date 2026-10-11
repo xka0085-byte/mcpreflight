@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:29:01.784Z",
+  "server": {
+    "registryName": "com.barakahprofits.app/halal-screen",
+    "title": "Barakah Halal Stock Screen",
+    "description": "Check if a US stock is halal (Sharia-compliant), with the dates its verdict changed.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.barakahprofits.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "barakah-halal-screen",
+      "title": "Barakah Profits Halal Stock Screen",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.barakahprofits.com/mcp"
+}

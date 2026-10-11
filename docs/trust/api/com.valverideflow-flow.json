@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:50.837Z",
+  "server": {
+    "registryName": "com.valverideflow/flow",
+    "title": "com.valverideflow/flow",
+    "description": "Live US diesel prices and optimized stop-by-stop fuel plans for trucking. Free snapshot tool.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.valverideflow.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://app.valverideflow.com/api/mcp"
+}

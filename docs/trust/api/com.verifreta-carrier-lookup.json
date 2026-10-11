@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:51.575Z",
+  "server": {
+    "registryName": "com.verifreta/carrier-lookup",
+    "title": "Verifreta Carrier Lookup",
+    "description": "Carrier first-look for freight brokers: DOT, MC/MX/FF, and name. SAFER/L&I stay source of truth.",
+    "registryVersion": "2.2.0"
+  },
+  "endpoint": "https://verifreta.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://verifreta.com/api/mcp"
+}

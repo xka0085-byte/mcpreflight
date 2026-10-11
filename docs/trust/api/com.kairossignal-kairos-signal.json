@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:22.836Z",
+  "server": {
+    "registryName": "com.kairossignal/kairos-signal",
+    "title": "Kairos Signal — verifiable DePIN data API",
+    "description": "DePIN network telemetry with the source, as_of time and an upstream verify URL on every value.",
+    "registryVersion": "3.7.0"
+  },
+  "endpoint": "https://kairossignal.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kairos-signal-mcp",
+      "title": "Kairos Signal",
+      "version": "3.7.0",
+      "websiteUrl": "https://kairossignal.com"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].dataset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].stamp_day has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].leaf_index has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].expected_row_sha256 has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://kairossignal.com/mcp"
+}

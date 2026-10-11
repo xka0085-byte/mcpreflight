@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:38.597Z",
+  "server": {
+    "registryName": "com.lowerscript/prices",
+    "title": "LowerScript Prescription Prices",
+    "description": "Live Rx cash prices at nearby pharmacies in 8 US states + the free LowerScript card. Not insurance.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.lowerscript.com/.netlify/functions/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lowerscript-prices",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.lowerscript.com/.netlify/functions/mcp"
+}

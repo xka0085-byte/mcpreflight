@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:14.114Z",
+  "server": {
+    "registryName": "cool.payload.api/video-transcript",
+    "title": "cool.payload.api/video-transcript",
+    "description": "Any video URL to LLM-ready transcript. ASR built in, no captions needed. TikTok, X, TED and more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.payload.cool/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "description": "Turn any video URL into a clean, LLM-ready transcript. Works without captions (ASR-powered). TikTok, X/Twitter, TED & 1000+ sites.",
+      "name": "video-transcript",
+      "title": "Video Transcript",
+      "version": "",
+      "websiteUrl": "https://api.payload.cool"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.payload.cool/mcp/"
+}

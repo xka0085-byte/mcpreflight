@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:16.163Z",
+  "server": {
+    "registryName": "app.meistron/meistron",
+    "title": "Meistron",
+    "description": "Auftraege, Rechnungen, Material und Zeiten eines Handwerksbetriebs abfragen und pflegen.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://meistron.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "meistron",
+      "title": "Meistron",
+      "version": "1.1.0"
+    },
+    "toolCount": 31,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].titel has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].beschreibung has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].ort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[28].strasse has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[28].plz has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[28].ort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://meistron.app/api/mcp"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:00.589Z",
+  "server": {
+    "registryName": "cloud.agenteconomy/mcp",
+    "title": "agenteconomy.cloud",
+    "description": "x402 seller trust for AI agents: verify on-chain revenue, check delivery, diagnose listings.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.agenteconomy.cloud/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agenteconomy-mcp",
+      "title": "agenteconomy.cloud — trust hub for the agent economy",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].cursor has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.agenteconomy.cloud/mcp"
+}

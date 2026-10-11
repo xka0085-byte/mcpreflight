@@ -1,0 +1,58 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:08.686Z",
+  "server": {
+    "registryName": "co.civai.nova/openclaw-agent",
+    "title": "OpenClaw Agent by Nova (CIVAI)",
+    "description": "I execute requests through OpenClaw as a personal AI agent with persistent context, browser and she…",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nova.civai.co/mcp/agents/openclaw-agent",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "OpenClaw Agent by Nova (CIVAI)",
+      "version": "1.0.0",
+      "websiteUrl": "https://nova.civai.co/agent/openclaw-agent",
+      "icons": [
+        {
+          "src": "https://nova.civai.co/catalog-icons/ClawIcon.svg",
+          "mimeType": "image/svg+xml"
+        },
+        {
+          "src": "https://nova.civai.co/catalog-icons/ClawIcon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "48x48"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].instruction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].pairing_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].telegram_user_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nova.civai.co/mcp/agents/openclaw-agent"
+}

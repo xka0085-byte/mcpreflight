@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:44.082Z",
+  "server": {
+    "registryName": "com.ski-france/agent-search",
+    "title": "ski-france.com Agent Search",
+    "description": "Ski apartment search with one- or two-week prices, availability, destinations and ski passes.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://en.ski-france.com/api/agent/v1/mcp/",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://en.ski-france.com/api/agent/v1/mcp/"
+}

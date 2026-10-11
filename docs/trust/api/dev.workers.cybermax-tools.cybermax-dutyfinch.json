@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:01.836Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/dutyfinch",
+    "title": "Dutyfinch",
+    "description": "US tariff API + MCP: HTS duty rates, Section 301 lists. Keys $19/mo; 50 free calls a day.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://dutyfinch.cybermaxtools.com/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "dutyfinch",
+      "title": "Dutyfinch by CyberMax",
+      "version": "1.0.0",
+      "websiteUrl": "https://dutyfinch.cybermaxtools.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].q has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://dutyfinch.cybermaxtools.com/mcp?via=mcp-registry"
+}

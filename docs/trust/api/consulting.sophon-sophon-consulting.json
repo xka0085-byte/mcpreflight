@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:13.992Z",
+  "server": {
+    "registryName": "consulting.sophon/sophon-consulting",
+    "title": "Sophon Consulting",
+    "description": "Read-only, deterministic AI triage and readiness tools implementing Sophon's published rubrics.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.sophon.consulting/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sophon-consulting",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lenses has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.sophon.consulting/api/mcp"
+}

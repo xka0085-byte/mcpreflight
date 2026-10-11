@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:58.893Z",
+  "server": {
+    "registryName": "com.washlib/washlib",
+    "title": "Washlib",
+    "description": "Find car wash centers in France, compare prices, check live availability, and look up a booking.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://washlib.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://washlib.com/api/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:12.594Z",
+  "server": {
+    "registryName": "ee.kohvrimaailm/shop",
+    "title": "Kohvrimaailm luggage shop",
+    "description": "Baltic luggage shop: in-stock suitcases (Voyo, Samsonite, Travelite), EUR prices, airline cabin fit.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://kohvrimaailm.ee/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kohvrimaailm-shop",
+      "title": "Kohvrimaailm / Koferuveikals luggage shop",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://kohvrimaailm.ee/mcp"
+}

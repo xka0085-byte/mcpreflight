@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:44.483Z",
+  "server": {
+    "registryName": "com.pga/pga-golf",
+    "title": "PGA Golf",
+    "description": "PGA's official MCP Server for all things golf-related. Find a coach, play golf, improve your game.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.pga.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+      "name": "com.pga/pga-golf",
+      "description": "PGA's official MCP Server for all things golf-related. Find a coach, discover programs, play golf, improve your game.",
+      "title": "PGA Golf",
+      "websiteUrl": "https://mcp.pga.com",
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.pga.com/mcp"
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].student has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.pga.com/mcp"
+}

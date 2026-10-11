@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:47.431Z",
+  "server": {
+    "registryName": "com.somosvelora/velora",
+    "title": "com.somosvelora/velora",
+    "description": "Hosted Argentine commerce MCP: real AFIP invoicing, MercadoPago, logistics, catalog & WhatsApp.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://tools.somosvelora.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "velora-mcp-demo",
+      "version": "1.0.0"
+    },
+    "toolCount": 50,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "50 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tools.somosvelora.com/api/mcp"
+}

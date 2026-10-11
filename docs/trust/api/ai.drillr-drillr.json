@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:10.242Z",
+  "server": {
+    "registryName": "ai.drillr/drillr",
+    "title": "Drillr — The financial MCP for AI agents",
+    "description": "Financial data and research MCP for US/CN/JP equities: filings, statements, ownership, signals.",
+    "registryVersion": "2.3.0"
+  },
+  "endpoint": "https://gateway.drillr.ai/mcp/data",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "drillr-data",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].table_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gateway.drillr.ai/mcp/data"
+}

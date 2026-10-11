@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:14.741Z",
+  "server": {
+    "registryName": "cz.audioknihy/catalog",
+    "title": "audioknihy.cz Catalog",
+    "description": "Czech audiobook catalog MCP server. Search 12 000+ titles + compare prices across 5 partners.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://audioknihy.cz/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cz.audioknihy/catalog",
+      "version": "0.3.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "13 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://audioknihy.cz/api/mcp"
+}

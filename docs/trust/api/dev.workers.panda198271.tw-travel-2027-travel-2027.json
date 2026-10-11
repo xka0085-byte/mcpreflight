@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:05.737Z",
+  "server": {
+    "registryName": "dev.workers.panda198271.tw-travel-2027/travel-2027",
+    "title": "2027 連假與訂票",
+    "description": "2027 台灣連假、出國目的地擁擠度與機票訂票時機建議。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tw-travel-2027.panda198271.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "tw-travel-2027",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://tw-travel-2027.panda198271.workers.dev/mcp"
+}

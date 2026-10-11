@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:04.734Z",
+  "server": {
+    "registryName": "dev.workers.notdown-app.pulse/monitor",
+    "title": "Pulse — heartbeat & status monitor for AI agents",
+    "description": "Your agent pings once per run; get a public up/late/down status page. Auto-creates checks. One call.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://pulse.notdown-app.workers.dev/mcp/{key}",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Pulse",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].check has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://pulse.notdown-app.workers.dev/mcp/{key}"
+}

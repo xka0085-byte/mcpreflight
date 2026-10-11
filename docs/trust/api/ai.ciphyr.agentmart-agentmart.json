@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:13:00.273Z",
+  "server": {
+    "registryName": "ai.ciphyr.agentmart/agentmart",
+    "title": "AgentMart",
+    "description": "Shop for AI agents: always-on utilities and tested code kits, paid from a prepaid balance.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agentmart.ciphyr.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agentmart",
+      "version": "0.1.0"
+    },
+    "toolCount": 104,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].source_language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].target_language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://agentmart.ciphyr.ai/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:01.441Z",
+  "server": {
+    "registryName": "com.sugufax/fax-credits",
+    "title": "すぐFAX SuguFAX – AI fax credits (API key)",
+    "description": "Fax to Japan from AI with prepaid credits (Bearer sgx_ key), 1 credit = 1 fax. AIクレジットでFAX送信",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sugufax.com/api/mcp-credits.php",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sugufax",
+      "title": "すぐFAX",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sugufax.com/api/mcp-credits.php"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:24.333Z",
+  "server": {
+    "registryName": "com.fractionalteams/portal",
+    "title": "Fractional Teams Portal",
+    "description": "Fractional Teams client reports, outreach leads, lead marking, paid media and agent-readiness scans.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://portal.fractionalteams.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fractionalteams-portal",
+      "version": "1.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].section has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://portal.fractionalteams.com/mcp"
+}

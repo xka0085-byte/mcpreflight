@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:34.164Z",
+  "server": {
+    "registryName": "app.wishpool/ecuador-invoice-mcp",
+    "title": "Ecuador Invoices (factura electrónica / SRI via Datil)",
+    "description": "Ecuador factura electronica for AI agents - issue and query SRI e-invoices via Datil. Stateless BYO.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://inv-ec.wishpool.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inv-ec.wishpool.app/mcp"
+}

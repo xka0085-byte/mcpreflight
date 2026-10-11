@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:30:37.478Z",
+  "server": {
+    "registryName": "com.getvaletparking/valet-parking-directory",
+    "title": "com.getvaletparking/valet-parking-directory",
+    "description": "MCP server for valet parking: 789 US operators across 31,186 cities. 7 tools. No auth.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.getvaletparking.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "getvaletparking",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://api.getvaletparking.com/mcp"
+}

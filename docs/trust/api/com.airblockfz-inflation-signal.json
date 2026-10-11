@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:42.334Z",
+  "server": {
+    "registryName": "com.airblockfz/inflation-signal",
+    "title": "com.airblockfz/inflation-signal",
+    "description": "Inflation & Fed liquidity thermometer: 47 macro series, too_low..too_high. Pay-per-call x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://inflation-signal.airblock2026.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "inflation-signal",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].phase has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].interest has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].pros has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].cons has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://inflation-signal.airblock2026.workers.dev/mcp"
+}

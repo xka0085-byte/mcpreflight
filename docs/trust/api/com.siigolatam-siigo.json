@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:42.420Z",
+  "server": {
+    "registryName": "com.siigolatam/siigo",
+    "title": "Siigo Latam",
+    "description": "Catálogo, precios, artículos, compliance y datos de Siigo por país, en vivo para agentes de IA.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.siigolatam.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Siigo Latam",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://mcp.siigolatam.com/mcp"
+}

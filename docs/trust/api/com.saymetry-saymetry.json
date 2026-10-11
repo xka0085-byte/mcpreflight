@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:29.350Z",
+  "server": {
+    "registryName": "com.saymetry/saymetry",
+    "title": "com.saymetry/saymetry",
+    "description": "Measure what ChatGPT, Claude, Gemini and 4 more AI engines say about any business. No auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://saymetry.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mcp-typescript server on vercel",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].contact_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].payout_method has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://saymetry.com/api/mcp"
+}

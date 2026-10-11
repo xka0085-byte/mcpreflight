@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:41.972Z",
+  "server": {
+    "registryName": "com.twelvepermissions/x402-doctor",
+    "title": "x402 Doctor",
+    "description": "Diagnose x402 seller endpoints: what is wrong with your 402 challenge, and how to fix it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://x402-doctor.tsharpe.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "x402-doctor",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://x402-doctor.tsharpe.workers.dev/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:18.938Z",
+  "server": {
+    "registryName": "app.openkrill/dev-facts",
+    "title": "Dev Facts Check",
+    "description": "Software end-of-life dates, open-source licenses, browser support for web features and RFC facts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://devfacts.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "dev-facts",
+      "title": "Dev Facts Check: EOL, licences, browsers, RFCs",
+      "version": "1.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://devfacts.openkrill.app/mcp"
+}

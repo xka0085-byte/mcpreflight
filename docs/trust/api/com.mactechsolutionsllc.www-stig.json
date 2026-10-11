@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:41.072Z",
+  "server": {
+    "registryName": "com.mactechsolutionsllc.www/stig",
+    "title": "MacTech STIG",
+    "description": "2,029 DISA STIG rules with official check/fix text, CCI mappings, and .ckl checklist export.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.mactechsolutionsllc.com/api/mcp/stig",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "mactech-stig",
+      "version": "1.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].automation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].host_ip has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].host_fqdn has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://www.mactechsolutionsllc.com/api/mcp/stig"
+}

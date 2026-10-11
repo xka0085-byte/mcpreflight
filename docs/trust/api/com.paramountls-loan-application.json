@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:32:35.009Z",
+  "server": {
+    "registryName": "com.paramountls/loan-application",
+    "title": "Paramount Loan Services — Mortgage Loan Application",
+    "description": "File a Fannie Mae Form 1003 mortgage application with a licensed California broker. No API key.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://paramountls.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "paramount-loan-services",
+      "title": "Paramount Loan Services",
+      "version": "1.0.0",
+      "websiteUrl": "https://paramountls.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].acknowledgments has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].borrowers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].loan has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].property has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].assets has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].liabilities has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://paramountls.com/mcp"
+}

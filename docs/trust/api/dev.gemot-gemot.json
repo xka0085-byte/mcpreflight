@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:36.650Z",
+  "server": {
+    "registryName": "dev.gemot/gemot",
+    "title": "Gemot Deliberation Server",
+    "description": "Deliberation primitive for multi-agent coordination: cruxes, vote clustering, consensus.",
+    "registryVersion": "0.11.0"
+  },
+  "endpoint": "https://gemot.dev/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "gemot",
+      "version": "0.13.1"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://gemot.dev/mcp"
+}

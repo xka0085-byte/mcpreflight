@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:33:49.111Z",
+  "server": {
+    "registryName": "com.sourcerdesk/sourcers-desk",
+    "title": "com.sourcerdesk/sourcers-desk",
+    "description": "Recruiter-grade boolean/x-ray search strings from a 20-year sourcing playbook.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://sourcerdesk.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sourcers-desk",
+      "version": "",
+      "websiteUrl": "https://sourcerdesk.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].role_description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].location has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].target has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].constraints has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://sourcerdesk.com/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:34:22.049Z",
+  "server": {
+    "registryName": "com.thenextgennexus/enterprise-mcp-gateway",
+    "title": "com.thenextgennexus/enterprise-mcp-gateway",
+    "description": "Unified gateway exposing 150+ tools across all NexGenData MCP servers via one endpoint.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nexgendata-mcp-proxy.steve-corbeil.workers.dev/enterprise-mcp-gateway/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://nexgendata-mcp-proxy.steve-corbeil.workers.dev/enterprise-mcp-gateway/mcp"
+}

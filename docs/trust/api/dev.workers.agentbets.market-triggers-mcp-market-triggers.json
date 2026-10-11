@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:36:00.107Z",
+  "server": {
+    "registryName": "dev.workers.agentbets.market-triggers-mcp/market-triggers",
+    "title": "Market Triggers",
+    "description": "Stock watchlist alerts: 8-K filings, volume spikes, big moves, gaps, upcoming earnings. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://market-triggers-mcp.agentbets.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "market-triggers",
+      "version": "0.1.0",
+      "title": "Market Triggers"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://market-triggers-mcp.agentbets.workers.dev/mcp"
+}

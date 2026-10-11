@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:30.927Z",
+  "server": {
+    "registryName": "com.acjlabs/x402-listing-monitor",
+    "title": "x402 Bazaar Listing Monitor",
+    "description": "Checks x402 Bazaar resource listings against the public discovery catalog and flags drops.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://x402-listing-monitor.acjlabs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "x402-listing-monitor",
+      "version": "0.1.0",
+      "description": "Checks x402 Bazaar resource listings against the public discovery catalog and flags drops.",
+      "websiteUrl": "https://acjlabs.com/products"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].payTo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].resources has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://x402-listing-monitor.acjlabs.com/mcp"
+}

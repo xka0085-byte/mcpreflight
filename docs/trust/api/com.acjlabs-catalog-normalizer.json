@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:28:32.133Z",
+  "server": {
+    "registryName": "com.acjlabs/catalog-normalizer",
+    "title": "Catalog Attribute Normalizer",
+    "description": "Catalog attribute normalizer, taxonomy-grounded — no fabricated Google/Shopify category IDs.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://catalog-normalizer.acjlabs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "catalog-attribute-normalizer",
+      "version": "0.2.0",
+      "description": "Taxonomy-grounded catalog attribute normalizer — verified against the real Google Product Taxonomy, so it catches the plausible-but-wrong category IDs a generic LLM invents. Messy catalogs in; clean attributes, units, and grounded category mappings out.",
+      "websiteUrl": "https://github.com/acjlabs/catalog-normalizer"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].products has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].target_taxonomies has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://catalog-normalizer.acjlabs.com/mcp"
+}

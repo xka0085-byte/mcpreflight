@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:08.094Z",
+  "server": {
+    "registryName": "com.hiringcensus/hiring-census",
+    "title": "HiringCensus",
+    "description": "Is this company actually hiring, or is the board just still up? Real dates on 187,923 roles.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://hiringcensus.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://hiringcensus.com/api/mcp"
+}

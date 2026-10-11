@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:35:05.762Z",
+  "server": {
+    "registryName": "com.wikimedia.enterprise/docs",
+    "title": "Wikimedia Enterprise docs",
+    "description": "Wikimedia Enterprise API docs: search the guides, read every endpoint. Read-only, no account needed.",
+    "registryVersion": "1.1.11"
+  },
+  "endpoint": "https://enterprise.wikimedia.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "wikimedia-enterprise-docs",
+      "title": "Wikimedia Enterprise docs",
+      "version": "1.1.11",
+      "websiteUrl": "https://enterprise.wikimedia.com/docs/api/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://enterprise.wikimedia.com/mcp"
+}

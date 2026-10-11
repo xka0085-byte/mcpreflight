@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:27:24.552Z",
+  "server": {
+    "registryName": "app.rowb.caz-cost/zones",
+    "title": "CAZ Cost",
+    "description": "UK Clean Air Zone daily charges by council, per vehicle class, and what a trip costs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://caz-cost.rowb.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "caz-cost",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zone has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://caz-cost.rowb.app/mcp"
+}

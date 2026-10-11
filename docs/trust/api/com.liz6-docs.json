@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpdoctor",
+  "scannedAt": "2026-10-11T03:31:38.172Z",
+  "server": {
+    "registryName": "com.liz6/docs",
+    "title": "liz's doc public knowledge",
+    "description": "Read-only search and Markdown access to liz's public docs, prompts, resources, and an MCP App.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://doc.liz6.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "rmcp",
+      "version": "3.1.4"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].area has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].cursor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].locale has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tag has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].path has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpdoctor schema https://doc.liz6.com/mcp"
+}
