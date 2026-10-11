@@ -1,13 +1,13 @@
-# Weekly outreach reply check: snapshot issue states + replies into trust-data/metrics.
+# Daily outreach reply check: snapshot issue states, open a digest issue when things change.
 name: outreach-replies
 on:
   schedule:
-    - cron: '0 4 * * 1' # Mondays, after trust-rescan finishes
+    - cron: '0 4 * * *' # daily; digest issue opened only when something changed
   workflow_dispatch:
 
 permissions:
   contents: write
-  issues: read
+  issues: write
 
 jobs:
   check:

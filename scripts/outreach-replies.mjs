@@ -77,11 +77,40 @@ for (const [repo, m] of Object.entries(metrics)) {
   await sleep(700);
 }
 
-// 3) persist + digest
-const outDir = path.join(root, 'trust-data', 'metrics');
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'replies.json'), JSON.stringify({ generatedAt: new Date().toISOString(), snapshot }, null, 1));
+// 3) delta vs previous snapshot -> digest issue (emails the maintainer only on activity)
+const prevReplied = (p, repo) => !!(p[repo] && p[repo].replied);
+const snapPath = path.join(outDir, 'replies.json');
+let prev = {};
+try { prev = (JSON.parse(fs.readFileSync(snapPath, 'utf8')).snapshot) ?? {}; } catch { /* first run */ }
+const delta = [];
+for (const [repo, v] of Object.entries(snapshot)) {
+  if (!v.issueUrl) continue;
+  const p = prev[repo] ?? {};
+  if ((p.state ?? 'open') !== v.state || (v.replied && !p.replied) || (v.lastAt && v.lastAt !== p.lastAt)) {
+    delta.push({ repo, ...v, prevState: p.state ?? 'new' });
+  }
+}
+
+fs.writeFileSync(snapPath, JSON.stringify({ generatedAt: new Date().toISOString(), snapshot }, null, 1));
 fs.writeFileSync(metricsPath, JSON.stringify(metrics, null, 1));
+
+if (delta.length) {
+  const replied = delta.filter((d) => d.replied).length;
+  const closed = delta.filter((d) => d.state === 'closed' && d.prevState !== 'closed').length;
+  const lines = delta.map((d) => {
+    const parts = [`- [${d.repo}](${d.issueUrl}) group=${d.group}`];
+    if (d.prevState !== d.state) parts.push(`state: ${d.prevState} -> ${d.state}`);
+    if (d.replied && !prevReplied(prev, d.repo)) parts.push(`NEW reply by ${d.lastAuthor} at ${d.lastAt}`);
+    else if (d.lastAt && d.lastAt !== (prev[d.repo]?.lastAt ?? '')) parts.push(`activity at ${d.lastAt} (last by ${d.lastAuthor})`);
+    return parts.join(' | ');
+  });
+  const title = `outreach digest ${new Date().toISOString().slice(0, 10)}: ${replied} new replies, ${closed} newly closed`;
+  const body = `${delta.length} tracked issue(s) changed since the last snapshot:\n\n${lines.join('\n')}\n\n_snapshot: trust-data/metrics/replies.json_`;
+  const bp = path.join(root, 'trust-data', '.digest.md');
+  fs.writeFileSync(bp, body);
+  const r = await gh(['issue', 'create', '-R', 'xka0085-byte/mcp-doctor', '-t', title, '--body-file', bp]);
+  console.log('DIGEST-ISSUE', r.stdout || String(r.err?.message ?? '').slice(0, 200));
+}
 
 const byGroup = {};
 for (const v of Object.values(snapshot)) {
