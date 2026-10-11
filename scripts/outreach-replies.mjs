@@ -101,6 +101,8 @@ const PR_WATCH = [
   ['iceener/streamable-mcp-server-template', 4],
   ['do-community/do-remote-mcp-server-template', 3],
   ['achetronic/mcp-forge', 2],
+  ['hostinger/selfhosted-mcp-server-template', 2],
+  ['InteractionCo/mcp-server-template', 11],
   ['x402-foundation/x402', 3766],
 ];
 const prStatePath = path.join(outDir, 'pr-states.json');

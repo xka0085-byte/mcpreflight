@@ -2,7 +2,8 @@
 # Usage: powershell -File tpl-pr.ps1
 $ErrorActionPreference = 'Stop'
 $targets = @(
-  @{ repo = 'achetronic/mcp-forge' }
+  @{ repo = 'hostinger/selfhosted-mcp-server-template' },
+  @{ repo = 'InteractionCo/mcp-server-template' }
 )
 
 $workflow = @'
