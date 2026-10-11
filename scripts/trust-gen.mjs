@@ -115,6 +115,7 @@ for (const r of results) {
     `Read-only MCP schema trust report for ${r.name} (${r.url}): ${r.finalStatus}, protocol ${r.protocolVersion ?? 'unknown'}, ${r.toolCount ?? 'unknown'} tools. Reproducible with mcpdoctor.`,
     `<p><span class="muted"><a href="${SITE}${BASE}/">Trust Directory</a> / report</span></p>
 <h1>${esc(r.title)} <span class="pill ${r.finalStatus}">${r.finalStatus}</span></h1>
+${r.finalStatus === 'UNKNOWN' ? '<p class="muted">No anonymous handshake observed — endpoints behind authentication are expected to show this result; it does not mean the server is broken.</p>' : ''}
 <p class="muted">${esc(r.description || '')}</p>
 <table>
 <tr><th>Registry name</th><td><code>${esc(r.name)}</code> (v${esc(r.version ?? '?')})</td></tr>
