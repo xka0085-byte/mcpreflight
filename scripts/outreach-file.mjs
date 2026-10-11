@@ -44,11 +44,15 @@ for (const q of queue) {
   fs.writeFileSync(bodyPath, body(q));
   const r = await gh(['issue', 'create', '-R', q.repo, '-t',
     `[read-only MCP health check] handshake incomplete: ${q.code}`, '--body-file', bodyPath]);
-  done[key] = r.err ? (String(r.err.message).includes('404') ? 'skip-404' : 'error') : 'filed';
+  const msg = String(r.err?.message ?? '');
+  done[key] = !r.err ? 'filed'
+    : msg.includes('404') ? 'skip-404'
+    : (msg.includes('410') || /disabled/i.test(msg)) ? 'skip-disabled'
+    : (msg.includes('locked') || /archived/i.test(msg)) ? 'skip-archived'
+    : (msg.includes('403') || msg.includes('429')) ? 'retry-later'
+    : 'error';
   if (r.err) {
-    if (String(r.err.message).includes('404')) notFound++;
-    else skipped++;
-    console.log(`ERR ${q.repo} :: ${String(r.err.message).slice(0, 120)}`);
+    console.log(`ERR ${q.repo} :: ${msg.slice(0, 300)}`);
   } else {
     filed++;
     console.log(`FILED ${q.repo} ${q.code}`);
