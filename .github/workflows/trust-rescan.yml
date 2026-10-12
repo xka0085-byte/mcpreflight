@@ -19,6 +19,7 @@ jobs:
       - name: Generate directory
         run: |
           node scripts/trust-convert.mjs
+          node scripts/history-snapshot.mjs
           node scripts/trust-gen.mjs
           node scripts/gen-sitemap.mjs
       - name: Commit and push
