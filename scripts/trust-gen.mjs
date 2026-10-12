@@ -10,6 +10,9 @@ const dataDir = path.join(root, 'trust-data');
 const outDir = path.join(root, 'docs', 'trust');
 const scan = JSON.parse(fs.readFileSync(path.join(dataDir, 'scan.json'), 'utf8'));
 const results = scan.results;
+// honor maintainer opt-outs (trust-data/exclusions.json): excluded from pages/api/badges/tally
+const excluded = new Set((JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'exclusions.json'), 'utf8')).exclusions ?? []).map((x) => x.name));
+for (let i = results.length - 1; i >= 0; i--) if (excluded.has(results[i].name)) results.splice(i, 1);
 
 const BASE = '/mcp-doctor/trust';
 const SITE = 'https://xka0085-byte.github.io';

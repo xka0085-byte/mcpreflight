@@ -1,0 +1,27 @@
+﻿
+=== keithah/tessie-mcp#16 [open] keithah @ 2026-10-11T09:52:24Z ===
+They have an official one now, this is deprecated.
+
+=== saidsef/mcp-github-pr-issue-analyser#481 [closed] saidsef @ 2026-10-11T15:15:58Z ===
+Thanks for the report. Closing as not planned - we won't be adding third-party actions to CI on request. If you have a reproducible fault in the server itself, please open a new issue with details.
+
+=== mjucius/cozi_mcp#14 [closed] mjucius @ 2026-10-11T20:24:45Z ===
+Thanks for the report. The failure is real but it isn't a handshake bug: that registry entry describes the retired v1 hosted deployment on Smithery, which no longer exists (the URL returns `404 server_not_found`) and always required a Smithery API key. Cozi MCP is distributed only as a local stdio server (MCPB bundle and `npx @mjucius/cozi-mcp`), so there is no public endpoint to check; the Smithery listings are being removed. Please exclude this server from the directory. Closing.
+
+Removed in [
+
+=== 222wcnm/BiliStalkerMCP#10 [closed] 222wcnm @ 2026-10-11T22:44:50Z ===
+The Smithery-hosted deployment was intentionally discontinued some time ago due to Bilibili anti-scraping restrictions and changes to Smithery’s hosting/subscription model.
+
+BiliStalkerMCP is currently maintained as a locally executable MCP server, distributed primarily through PyPI (uvx bili-stalker-mcp). The old Smithery endpoint is no longer supported or expected to respond.
+
+Please exclude this deprecated endpoint from your public directory and future health checks.
+
+Closing as not planned.
+
+=== Cotal-AI/Cotal#3823 [closed] no comments ===
+
+=== yuna0x0/anilist-mcp#19 [closed] no comments ===
+
+=== TengByte/mcpgrade PR#13 [closed] by xka0085-byte ===
+Add optional mcpdoctor schema CI check :: Adds an opt-in workflow_dispatch check using mcpdoctor@v1. Maintainers provide a public MCP HTTP endpoint when running it. It sends initialize and tools/list only; no tools are invoked and no credentials are used. Documentation: https://xka0085-byte.github.io/mcp-doctor/

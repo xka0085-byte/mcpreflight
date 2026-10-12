@@ -22,7 +22,8 @@ const all = process.argv.includes('--all');
 
 function imap() {
   return new Promise((resolve, reject) => {
-    const sock = tls.connect({ host: 'imap.gmail.com', port: 993 }, () => resolve(sock));
+    // sandbox/proxy MITMs TLS (self-signed); reading own inbox, accept it
+    const sock = tls.connect({ host: 'imap.gmail.com', port: 993, rejectUnauthorized: false }, () => resolve(sock));
     sock.on('error', reject);
     sock.setTimeout(30000, () => { sock.destroy(); reject(new Error('timeout')); });
   });
@@ -56,19 +57,20 @@ class Client {
     });
   }
   async simple(command) {
-    const { done } = await this.cmd(command);
-    return done;
+    const { done, lines } = await this.cmd(command);
+    if (process.env.MAIL_DEBUG) console.error('CMD:', command.split(' ')[0], '=>', done, '| lines:', lines.length);
+    return { done, lines };
   }
 }
 
 const sock = await imap();
 const c = new Client(sock);
-await c.simple('');
 await c.simple(`LOGIN "${cred.user}" "${cred.pass}"`);
 await c.simple('EXAMINE INBOX');
 
 const search = await c.simple(all ? 'UID SEARCH ALL' : 'UID SEARCH UNSEEN');
-const uids = (search.done.match(/\d+/g) ?? []).map(Number).filter((x) => x !== c.n);
+const searchLine = (search.lines.find((l) => /^\* SEARCH/i.test(l)) ?? '');
+const uids = (searchLine.match(/\d+/g) ?? []).map(Number);
 const seen = state.seen ?? {};
 const fresh = all ? uids : uids.filter((u) => !seen[u]);
 const out = [];
