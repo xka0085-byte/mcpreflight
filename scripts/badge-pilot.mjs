@@ -32,8 +32,14 @@ If you want to show it off, this badge embeds in your README and updates automat
 
 If you would rather not be listed in the public directory or get badge updates, just say so here and we will exclude the server.`;
 
-// candidates: PASS with a repo, not previously contacted
-const cands = scan.filter((r) => r.finalStatus === 'PASS' && repos[r.name] && !done[String(repos[r.name]).toLowerCase()]);
+// candidates: PASS with a repo, not previously contacted (error/retry-later are retryable)
+const cands = scan.filter((r) => {
+  if (r.finalStatus !== 'PASS') return false;
+  const repo = repos[r.name];
+  if (!repo || repo.toLowerCase().startsWith('modelcontextprotocol/')) return false;
+  const d = done[String(repo).toLowerCase()];
+  return !d || d === 'error' || d === 'retry-later';
+});
 console.error('candidates:', cands.length);
 
 // score by stars, keep API usage sane
@@ -56,7 +62,7 @@ for (const t of targets) {
   const key = t.repo.toLowerCase();
   fs.writeFileSync(bp, body(t));
   const r = await new Promise((resolve) => {
-    execFile('gh', ['issue', 'create', '-R', t.repo, '-t', 'your MCP server passed a registry-wide health check (badge inside)'], { timeout: 60000, maxBuffer: 2 << 20 }, (err, stdout, stderr) => {
+    execFile('gh', ['issue', 'create', '-R', t.repo, '-t', 'your MCP server passed a registry-wide health check (badge inside)', '--body-file', bp], { timeout: 60000, maxBuffer: 2 << 20 }, (err, stdout, stderr) => {
       resolve({ err, out: (stdout ?? '').trim(), msg: String(err?.message ?? stderr ?? '').slice(0, 200) });
     });
   });
