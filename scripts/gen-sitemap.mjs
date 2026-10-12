@@ -11,6 +11,7 @@ const SITE = 'https://xka0085-byte.github.io/mcp-doctor';
 const urls = [
   `${SITE}/`,
   `${SITE}/state-of-mcp-2026-10.html`,
+  `${SITE}/agent-evidence-sample.html`,
   `${SITE}/mcp-schema-checker.html`,
   `${SITE}/x402-endpoint-inspector.html`,
   `${SITE}/mcp-security-ci.html`,
