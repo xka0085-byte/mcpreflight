@@ -23,12 +23,13 @@ async function pullServers() {
   for (let page = 0; page < 300; page++) {
     const u = REG + '?limit=100' + (cursor ? `&cursor=${encodeURIComponent(cursor)}` : '');
     let body = null;
-    for (let a = 0; a < 3; a++) {
+    for (let a = 0; a < 6; a++) {
       try {
         const res = await fetch(u, { signal: AbortSignal.timeout(30000) });
         if (res.ok) { body = await res.json(); break; }
+        if (res.status === 429 || res.status >= 500) { await sleep(4000 * (a + 1)); continue; }
       } catch {}
-      await sleep(1500);
+      await sleep(3000 * (a + 1));
     }
     if (!body) throw new Error('registry fetch failed at page ' + page);
     for (const entry of body.servers ?? []) {
