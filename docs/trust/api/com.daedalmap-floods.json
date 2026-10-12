@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpdoctor",
-  "scannedAt": "2026-10-11T03:29:42.356Z",
+  "scannedAt": "2026-10-12T09:24:54.921Z",
   "server": {
     "registryName": "com.daedalmap/floods",
     "title": "DaedalMap Flood Events",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://app.daedalmap.com/mcp/floods",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.daedalmap/floods",
+      "title": "Floods",
+      "version": "0.4.0"
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].filters has no description"
       }
     ]
   },

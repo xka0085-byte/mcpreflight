@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpdoctor",
-  "scannedAt": "2026-10-11T03:29:42.157Z",
+  "scannedAt": "2026-10-12T09:24:54.711Z",
   "server": {
     "registryName": "com.daedalmap/county-map",
     "title": "DaedalMap Disaster and Geospatial Data",
@@ -10,15 +10,39 @@
   },
   "endpoint": "https://app.daedalmap.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.daedalmap/county-map",
+      "title": "DaedalMap Disaster and Geospatial Data",
+      "version": "0.4.0"
+    },
+    "toolCount": 13,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].dataset_context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].request_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].expected has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].scope has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].filters has no description"
       }
     ]
   },
