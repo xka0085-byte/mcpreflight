@@ -21,10 +21,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/outreach-replies.mjs
+      - name: Adoption funnel metrics
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/funnel-metrics.mjs
       - name: Commit snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add trust-data/metrics/replies.json trust-data/outreach-metrics.json
-          git diff --cached --quiet || git commit -m "chore: weekly outreach reply snapshot"
+          git add trust-data/metrics trust-data/outreach-metrics.json
+          git diff --cached --quiet || git commit -m "chore: daily outreach + funnel snapshot"
           git push

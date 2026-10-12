@@ -20,13 +20,13 @@ Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before 
 Check an MCP server without calling any tools:
 
 ```bash
-npx @eidonze/mcpdoctor@0.1.6 schema https://your-mcp-server.example/mcp --json
+npx @eidonze/mcpdoctor schema https://your-mcp-server.example/mcp --json
 ```
 
 Check an x402 endpoint without paying:
 
 ```bash
-npx @eidonze/mcpdoctor@0.1.6 inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpdoctor inspect https://your-api.example/paid --method=POST --json
 ```
 
 Requires Node.js 18+. No API key or wallet is needed.
