@@ -15,7 +15,9 @@ jobs:
         with:
           node-version: 20
       - name: Scan registry
-        run: node scripts/trust-scan-all.mjs
+        run: |
+          rm -f trust-data/scan-full.jsonl trust-data/servers-full.json
+          node scripts/trust-scan-all.mjs
       - name: Generate directory
         run: |
           node scripts/trust-convert.mjs
