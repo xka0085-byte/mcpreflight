@@ -23,13 +23,18 @@ async function pullServers() {
   for (let page = 0; page < 300; page++) {
     const u = REG + '?limit=100' + (cursor ? `&cursor=${encodeURIComponent(cursor)}` : '');
     let body = null;
-    for (let a = 0; a < 6; a++) {
-      try {
-        const res = await fetch(u, { signal: AbortSignal.timeout(30000) });
-        if (res.ok) { body = await res.json(); break; }
-        if (res.status === 429 || res.status >= 500) { await sleep(4000 * (a + 1)); continue; }
-      } catch {}
-      await sleep(3000 * (a + 1));
+    // 3 rounds x 6 attempts with a 60s cooldown between rounds: survives upstream flakiness
+    // (2026-10-12 run died at page 259 when the registry API returned empty responses for ~1 min)
+    for (let round = 0; round < 3 && !body; round++) {
+      if (round > 0) await sleep(60000);
+      for (let a = 0; a < 6; a++) {
+        try {
+          const res = await fetch(u, { signal: AbortSignal.timeout(30000) });
+          if (res.ok) { body = await res.json(); break; }
+          if (res.status === 429 || res.status >= 500) { await sleep(4000 * (a + 1)); continue; }
+        } catch {}
+        await sleep(3000 * (a + 1));
+      }
     }
     if (!body) throw new Error('registry fetch failed at page ' + page);
     for (const entry of body.servers ?? []) {
