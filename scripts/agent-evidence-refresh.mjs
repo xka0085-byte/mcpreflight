@@ -307,6 +307,7 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 <h1>Agent Evidence — sample report, week of ${esc(week)}</h1>
 <p class="muted">On-chain ERC-8004 registrations cross-checked against off-chain MCP endpoints, read-only. An <a href="https://github.com/xka0085-byte/mcp-doctor">Agent Trust Infrastructure</a> project. Re-run weekly after the Trust Directory rescan. This run: ${esc(runDate.slice(0, 10))}.</p>
 ${prevLine}
+<p>This report answers one question: does an on-chain ERC-8004 agent registration resolve to the MCP endpoint it claims, right now? This week we cross-checked ${totalTokens} tokens (${verdicts.length} unique endpoints) read-only: ${tally['fully consistent'] ?? 0} fully consistent, ${tally['partially consistent'] ?? 0} partially consistent, ${tally['unverifiable'] ?? 0} unverifiable. Anonymous handshake only, no tools invoked, every verdict carries a reason and a timestamp, and one open-source command re-runs any single check. This is evidence with limits, not a trust score.</p>
 
 <div class="kpi">
 <div><b>${totalTokens}</b>tokens sampled</div>
