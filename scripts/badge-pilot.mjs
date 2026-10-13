@@ -18,13 +18,13 @@ const gh = (args) => new Promise((resolve) => {
   });
 });
 
-const BADGE = (slug) => `https://xka0085-byte.github.io/mcp-doctor/trust/badge/${slug}.svg`;
-const REPORT = (slug) => `https://xka0085-byte.github.io/mcp-doctor/trust/p/${slug}.html`;
+const BADGE = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/badge/${slug}.svg`;
+const REPORT = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/p/${slug}.html`;
 
 const body = (q) => `Good news for once: your server is one of the ${q.passCount} MCP registry endpoints that completed a clean anonymous health check in our registry-wide scan.
 
 We ran a read-only preflight (MCP initialize + tools/list, no tools called) against all 9,991 registry endpoints. Report for your server: ${REPORT(q.slug)}
-Reproduce locally: \`npx @eidonze/mcpdoctor schema ${q.url}\`
+Reproduce locally: \`npx @eidonze/mcpreflight schema ${q.url}\`
 
 If you want to show it off, this badge embeds in your README and updates automatically as our weekly rescan runs, so it always reflects the live state of your endpoint:
 

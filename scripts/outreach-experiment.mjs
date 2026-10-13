@@ -18,11 +18,11 @@ const done = fs.existsSync(donePath) ? JSON.parse(fs.readFileSync(donePath, 'utf
 // never re-file something already blind-filed in the long-tail phase
 const blindDone = JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'outreach-done.json'), 'utf8'));
 
-const REPORT = (slug) => `https://xka0085-byte.github.io/mcp-doctor/trust/p/${slug}.html`;
-const BADGE = (slug) => `https://xka0085-byte.github.io/mcp-doctor/trust/badge/${slug}.svg`;
-const SITE = 'https://xka0085-byte.github.io/mcp-doctor/';
+const REPORT = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/p/${slug}.html`;
+const BADGE = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/badge/${slug}.svg`;
+const SITE = 'https://xka0085-byte.github.io/mcpreflight/';
 
-const FOOTER = `What this is: [mcpdoctor](https://github.com/xka0085-byte/mcp-doctor) — an open-source (MIT) MCP preflight checker. It sends only MCP \`initialize\` + \`tools/list\`; no tools are called and no data is read.
+const FOOTER = `What this is: [mcpreflight](https://github.com/xka0085-byte/mcpreflight) — an open-source (MIT) MCP preflight checker. It sends only MCP \`initialize\` + \`tools/list\`; no tools are called and no data is read.
 
 - If this endpoint is intentionally auth-gated, a failed anonymous handshake is expected — please ignore this issue (the public directory marks such servers as "no anonymous handshake").
 - If it should be reachable anonymously, the report shows the exact step that failed.
@@ -36,7 +36,7 @@ const bodyA = (q) => `Read-only health check of the endpoint registered for this
 - Result: ${q.status} — \`${q.code}\`: ${q.message}
 
 Full report (updated weekly): ${REPORT(q.slug)}
-Reproduce locally: \`npx @eidonze/mcpdoctor schema ${q.url}\`
+Reproduce locally: \`npx @eidonze/mcpreflight schema ${q.url}\`
 
 ${FOOTER}`;
 
@@ -48,7 +48,7 @@ If this endpoint is meant to be reachable anonymously, this is the kind of failu
 A one-block GitHub Action re-checks it on every push or release, read-only (MCP \`initialize\` + \`tools/list\`, no tool calls):
 
 \`\`\`yaml
-- uses: xka0085-byte/mcp-doctor@v1
+- uses: xka0085-byte/mcpreflight@v1
   with:
     endpoint: ${q.url}
     mode: schema

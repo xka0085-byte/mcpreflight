@@ -1,11 +1,11 @@
 // Trust Directory scanner: pull remote servers from official MCP Registry,
-// run mcpdoctor schema (read-only) against each, save reports.
+// run mcpreflight schema (read-only) against each, save reports.
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const root = 'C:\\Users\\eqzyz\\agenttoll-master\\mcpdoctor';
-const cli = path.join(root, 'bin', 'mcpdoctor.mjs');
+const root = 'C:\\Users\\eqzyz\\agenttoll-master\\mcpreflight';
+const cli = path.join(root, 'bin', 'mcpreflight.mjs');
 const outDir = path.join(root, 'trust-data');
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -79,6 +79,6 @@ async function worker() {
 }
 await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 results.sort((a, b) => a.name.localeCompare(b.name));
-fs.writeFileSync(path.join(outDir, 'scan.json'), JSON.stringify({ scannedAt: new Date().toISOString(), tool: 'mcpdoctor', results }, null, 2));
+fs.writeFileSync(path.join(outDir, 'scan.json'), JSON.stringify({ scannedAt: new Date().toISOString(), tool: 'mcpreflight', results }, null, 2));
 const tally = results.reduce((m, r) => ((m[r.finalStatus] = (m[r.finalStatus] ?? 0) + 1), m), {});
 console.error('done', JSON.stringify(tally));

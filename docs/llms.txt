@@ -1,4 +1,4 @@
-# mcpdoctor
+# mcpreflight
 
 > Read-only preflight checker for MCP servers and x402 payment endpoints. Open source (MIT), zero dependencies, runs via npx or GitHub Actions. Maintains a public Trust Directory of all 9,991 MCP Registry endpoints with weekly rescans.
 
@@ -6,17 +6,17 @@ Key facts verified by our own scans (October 2026):
 
 - 9,991 MCP Registry endpoints scanned, 4,879 PASS, 43 FAIL, 5,069 no anonymous handshake
 - All 213 smithery-registered endpoints failed anonymous handshake (registry hygiene finding)
-- Tool: `npx @eidonze/mcpdoctor schema <url>` checks MCP handshake and tool schemas without calling tools
-- Tool: `npx @eidonze/mcpdoctor inspect <url>` validates x402 payment challenges without paying
+- Tool: `npx @eidonze/mcpreflight schema <url>` checks MCP handshake and tool schemas without calling tools
+- Tool: `npx @eidonze/mcpreflight inspect <url>` validates x402 payment challenges without paying
 
 Guides:
 
-- [Test a remote MCP server](https://xka0085-byte.github.io/mcp-doctor/test-remote-mcp-server.html): check a deployed HTTP endpoint before connecting, CLI with CI exit codes; Inspector vs mcpdoctor comparison
-- [MCP schema checker](https://xka0085-byte.github.io/mcp-doctor/mcp-schema-checker.html): what the schema check validates and how to read results
-- [x402 endpoint inspector](https://xka0085-byte.github.io/mcp-doctor/x402-endpoint-inspector.html): preflight for 402 payment endpoints
-- [MCP security CI](https://xka0085-byte.github.io/mcp-doctor/mcp-security-ci.html): gating MCP servers in CI with GitHub Actions
-- [Troubleshooting](https://xka0085-byte.github.io/mcp-doctor/troubleshooting.html): common MCP handshake and tools/list failures with fixes
-- [OAuth diagnostics](https://xka0085-byte.github.io/mcp-doctor/mcp-oauth-diagnostics.html): auth-gated servers and current limits
-- [State of MCP report](https://xka0085-byte.github.io/mcp-doctor/state-of-mcp-2026-10.html): reliability and schema quality across the registry, with reproducible data
-- [Agent Evidence report](https://xka0085-byte.github.io/mcp-doctor/agent-evidence-sample.html): weekly five-level cross-check of ERC-8004 on-chain agent registrations against their declared MCP endpoints
-- [Trust Directory](https://xka0085-byte.github.io/mcp-doctor/trust/): per-server trust reports, badges, and JSON APIs for 9,991 endpoints
+- [Test a remote MCP server](https://xka0085-byte.github.io/mcpreflight/test-remote-mcp-server.html): check a deployed HTTP endpoint before connecting, CLI with CI exit codes; Inspector vs mcpreflight comparison
+- [MCP schema checker](https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html): what the schema check validates and how to read results
+- [x402 endpoint inspector](https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html): preflight for 402 payment endpoints
+- [MCP security CI](https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html): gating MCP servers in CI with GitHub Actions
+- [Troubleshooting](https://xka0085-byte.github.io/mcpreflight/troubleshooting.html): common MCP handshake and tools/list failures with fixes
+- [OAuth diagnostics](https://xka0085-byte.github.io/mcpreflight/mcp-oauth-diagnostics.html): auth-gated servers and current limits
+- [State of MCP report](https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html): reliability and schema quality across the registry, with reproducible data
+- [Agent Evidence report](https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html): weekly five-level cross-check of ERC-8004 on-chain agent registrations against their declared MCP endpoints
+- [Trust Directory](https://xka0085-byte.github.io/mcpreflight/trust/): per-server trust reports, badges, and JSON APIs for 9,991 endpoints

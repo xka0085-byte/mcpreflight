@@ -1,4 +1,4 @@
-// mcpdoctor-mcp: run mcpdoctor as an MCP server (stdio, zero dependencies).
+// mcpreflight-mcp: run mcpreflight as an MCP server (stdio, zero dependencies).
 // Exposes two tools so AI clients can check endpoints without leaving chat:
 //   schema_check(url)  - read-only MCP handshake + tools/list validation
 //   x402_inspect(url)  - read-only 402 challenge validation, never pays
@@ -8,7 +8,7 @@ import path from 'node:path';
 import url from 'node:url';
 import readline from 'node:readline';
 
-const cliPath = path.join(path.dirname(url.fileURLToPath(import.meta.url)), 'mcpdoctor.mjs');
+const cliPath = path.join(path.dirname(url.fileURLToPath(import.meta.url)), 'mcpreflight.mjs');
 
 const TOOLS = [
   {
@@ -65,7 +65,7 @@ async function callTool(name, args) {
   throw new Error(`unknown tool: ${name}`);
 }
 
-const serverInfo = { name: 'mcpdoctor', version: '0.1.8' };
+const serverInfo = { name: 'mcpreflight', version: '0.1.8' };
 const write = (msg) => process.stdout.write(JSON.stringify(msg) + '\n');
 
 const rl = readline.createInterface({ input: process.stdin, terminal: false });

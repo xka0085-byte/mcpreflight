@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MCP Registry Weekly Pulse: how many MCP servers are alive</title>
-<meta name="description" content="Measured weekly: how many of the 9,991 MCP Registry endpoints complete a clean handshake. The only public week-over-week health tracker for the MCP registry, powered by mcpdoctor rescan data.">
+<meta name="description" content="Measured weekly: how many of the 9,991 MCP Registry endpoints complete a clean handshake. The only public week-over-week health tracker for the MCP registry, powered by mcpreflight rescan data.">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many MCP servers are alive?","acceptedAnswer":{"@type":"Answer","text":"As of 2026-10-12, 4764 of 9991 MCP Registry endpoints (48%) completed a clean anonymous MCP handshake in our weekly rescan. 41 failed checks and 5186 gave no anonymous response. Historical snapshots are on this page."}}]}</script>
 <style>:root{color-scheme:light dark}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:860px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da}table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4}code{background:#f6f8fa;border-radius:4px;padding:.1rem .35rem;font-size:.9em}.muted{color:#57606a;font-size:.92rem}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted{color:#8b949e}code{background:#161b22}}</style>
 </head>
 <body>
 <main>
-<p class="muted"><a href="https://xka0085-byte.github.io/mcp-doctor/">mcpdoctor</a> / weekly pulse</p>
+<p class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> / weekly pulse</p>
 <h1>MCP Registry Weekly Pulse</h1>
 <p>A measured answer to the question everyone asks AI and nobody can source: <strong>how many MCP servers are actually alive?</strong> Every Monday our scanner runs a read-only handshake (initialize + tools/list, nothing more) against all 9991 endpoints in the official MCP Registry. This page tracks what changed, week over week, with reproducible data.</p>
 <h2>Latest snapshot (2026-10-12)</h2>
@@ -25,8 +25,8 @@
 <tr><td>2026-10-12</td><td>4764</td><td>41</td><td>5186</td><td>first snapshot</td></tr>
 </table>
 <h2>Method</h2>
-<p>Full methodology and per-server reports live in the <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">Trust Directory</a>. Reproduce any single check with <code>npx @eidonze/mcpdoctor schema &lt;url&gt;</code>. Raw JSON per server is published next to every report. UNKNOWN is not dead: it means no anonymous handshake was observed within our timeout, and authenticated endpoints are expected to appear here.</p>
-<p class="muted">Data: <a href="https://github.com/xka0085-byte/mcp-doctor">mcpdoctor</a>, MIT. Weekly rescan automated via GitHub Actions.</p>
+<p>Full methodology and per-server reports live in the <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a>. Reproduce any single check with <code>npx @eidonze/mcpreflight schema &lt;url&gt;</code>. Raw JSON per server is published next to every report. UNKNOWN is not dead: it means no anonymous handshake was observed within our timeout, and authenticated endpoints are expected to appear here.</p>
+<p class="muted">Data: <a href="https://github.com/xka0085-byte/mcpreflight">mcpreflight</a>, MIT. Weekly rescan automated via GitHub Actions.</p>
 </main>
 </body>
 </html>

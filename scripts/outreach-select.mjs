@@ -40,7 +40,7 @@ for (const s of servers) {
   const r = byName.get(s.name);
   if (!r || !isBroken(r)) continue;
   const repo = repoOf(s.name);
-  if (!repo || repo.toLowerCase() === 'xka0085-byte/mcp-doctor') continue;
+  if (!repo || repo.toLowerCase() === 'xka0085-byte/mcpreflight') continue;
   const key = repo.toLowerCase();
   if (seen.has(key)) continue;
   seen.add(key);
@@ -59,7 +59,7 @@ const TOP = Number(process.env.OUTREACH_TOP ?? 60);
 const pending = queue.filter((q) => !filed.has(q.repo));
 const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN || '';
 async function repoMeta(full) {
-  const headers = { 'user-agent': 'mcpdoctor-outreach-select' };
+  const headers = { 'user-agent': 'mcpreflight-outreach-select' };
   if (token) headers.authorization = `Bearer ${token}`;
   try {
     const res = await fetch(`https://api.github.com/repos/${full}`, { headers, signal: AbortSignal.timeout(15000) });

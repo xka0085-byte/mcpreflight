@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>State of MCP Servers — October 2026: 9,991 remote servers checked</title>
 <meta name="description" content="We ran a read-only MCP handshake check against all 9,991 remote servers in the official MCP Registry: 48.8% pass, 50.7% do not complete a clean handshake, 43 fail outright. Full methodology, per-server reports, and reproducible commands.">
-<link rel="canonical" href="https://xka0085-byte.github.io/mcp-doctor/state-of-mcp-2026-10.html">
+<link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">
 <style>
 :root{color-scheme:light dark}
 *{box-sizing:border-box}
@@ -34,9 +34,9 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4}
 <body>
 <main>
 <h1>State of MCP Servers — October 2026</h1>
-<p class="muted">9,991 remote servers from the official MCP Registry, checked read-only. Published 2026-10-11 · updated 2026-10-13 (finding 5) · <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">full per-server directory</a></p>
+<p class="muted">9,991 remote servers from the official MCP Registry, checked read-only. Published 2026-10-11 · updated 2026-10-13 (finding 5) · <a href="https://xka0085-byte.github.io/mcpreflight/trust/">full per-server directory</a></p>
 
-<p>How healthy is the MCP server ecosystem in October 2026? We ran a read-only <code>initialize</code> + <code>tools/list</code> check against all 9,991 remote endpoints in the official MCP Registry: 4,879 (48.8%) completed a clean handshake, 5,069 (50.7%) gave no anonymous response, and 43 failed outright. Among responders we logged 46,216 property-level schema findings, and 86% still negotiate the <code>2025-03-26</code> protocol revision. Every number is reproducible with one open-source command, and per-server reports live in the <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">Trust Directory</a>.</p>
+<p>How healthy is the MCP server ecosystem in October 2026? We ran a read-only <code>initialize</code> + <code>tools/list</code> check against all 9,991 remote endpoints in the official MCP Registry: 4,879 (48.8%) completed a clean handshake, 5,069 (50.7%) gave no anonymous response, and 43 failed outright. Among responders we logged 46,216 property-level schema findings, and 86% still negotiate the <code>2025-03-26</code> protocol revision. Every number is reproducible with one open-source command, and per-server reports live in the <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a>.</p>
 
 <div class="kpi">
 <div><b>9,991</b>remote servers scanned</div>
@@ -46,8 +46,8 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4}
 </div>
 
 <h2>What we did</h2>
-<p>We enumerated every <em>active</em> server with a remote (HTTP) transport in the <a href="https://github.com/modelcontextprotocol/registry">official MCP Registry</a> and sent exactly two JSON-RPC requests to each registered endpoint: <code>initialize</code> and <code>tools/list</code>. We validated protocol negotiation and every tool's input/output JSON Schema. No tool was ever called, no authentication was attempted, no data beyond the handshake was read. The whole thing is <a href="https://github.com/xka0085-byte/mcp-doctor">open source</a> and one command reproduces any single result:</p>
-<pre>npx @eidonze/mcpdoctor schema &lt;endpoint-url&gt;</pre>
+<p>We enumerated every <em>active</em> server with a remote (HTTP) transport in the <a href="https://github.com/modelcontextprotocol/registry">official MCP Registry</a> and sent exactly two JSON-RPC requests to each registered endpoint: <code>initialize</code> and <code>tools/list</code>. We validated protocol negotiation and every tool's input/output JSON Schema. No tool was ever called, no authentication was attempted, no data beyond the handshake was read. The whole thing is <a href="https://github.com/xka0085-byte/mcpreflight">open source</a> and one command reproduces any single result:</p>
+<pre>npx @eidonze/mcpreflight schema &lt;endpoint-url&gt;</pre>
 
 <h2>Findings</h2>
 
@@ -89,10 +89,10 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4}
 
 <h2>For server maintainers</h2>
 <p>Check your server in one command. If your endpoint is auth-gated, nothing to do. If it should be reachable anonymously and isn't, the report shows the failing step. A green badge is available for every passing server:</p>
-<pre>npx @eidonze/mcpdoctor schema https://your-server.example.com/mcp</pre>
-<p>Browse all 9,991 reports in the <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">Trust Directory</a>, or read the <a href="https://xka0085-byte.github.io/mcp-doctor/">mcpdoctor docs</a>. The directory is regenerated weekly from the live registry.</p>
+<pre>npx @eidonze/mcpreflight schema https://your-server.example.com/mcp</pre>
+<p>Browse all 9,991 reports in the <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a>, or read the <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight docs</a>. The directory is regenerated weekly from the live registry.</p>
 
-<div class="foot">Produced by <a href="https://github.com/xka0085-byte/mcp-doctor">mcpdoctor</a> — read-only trust checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Corrections welcome via issues.</div>
+<div class="foot">Produced by <a href="https://github.com/xka0085-byte/mcpreflight">mcpreflight</a> — read-only trust checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Corrections welcome via issues.</div>
 </main>
 </body>
 </html>

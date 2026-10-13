@@ -15,7 +15,7 @@ This is static schema lint only. It does not predict model tool selection, prove
 ## CLI
 
 ```powershell
-node mcpdoctor/bin/mcpdoctor.mjs schema https://your-mcp-server.example/mcp --json
+node mcpreflight/bin/mcpreflight.mjs schema https://your-mcp-server.example/mcp --json
 ```
 
 ## MCP method behavior

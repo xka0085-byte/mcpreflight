@@ -11,10 +11,10 @@ const day = 86400;
 const since = Math.floor(Date.now() / 1000) - 14 * day;
 
 const DRAFTS = {
-  connect: `check if it's the server vs the client first — hit the endpoint with a plain mcp handshake and see what comes back. npx @eidonze/mcpdoctor schema <url> does this read-only. if that passes the problem's client side, if it fails it prints exactly which step died`,
-  test: `laziest way: npx @eidonze/mcpdoctor schema <your-url> — does the handshake and validates tool schemas, exits 0/1 so you can throw it in CI too. not a security audit obviously, just catches the "works in my client but broken for everyone else" stuff`,
-  schema: `usually tools/list returned something the client can't validate (missing required, empty inputSchema after zod transforms, etc). run npx @eidonze/mcpdoctor schema <url> and it points at the exact tool index`,
-  x402: `npx @eidonze/mcpdoctor inspect <url> reads the 402 challenge and validates the payment doc shape without paying — catches the "my client says 400 instead of 402" class of bugs before your first real payment attempt`,
+  connect: `check if it's the server vs the client first — hit the endpoint with a plain mcp handshake and see what comes back. npx @eidonze/mcpreflight schema <url> does this read-only. if that passes the problem's client side, if it fails it prints exactly which step died`,
+  test: `laziest way: npx @eidonze/mcpreflight schema <your-url> — does the handshake and validates tool schemas, exits 0/1 so you can throw it in CI too. not a security audit obviously, just catches the "works in my client but broken for everyone else" stuff`,
+  schema: `usually tools/list returned something the client can't validate (missing required, empty inputSchema after zod transforms, etc). run npx @eidonze/mcpreflight schema <url> and it points at the exact tool index`,
+  x402: `npx @eidonze/mcpreflight inspect <url> reads the 402 challenge and validates the payment doc shape without paying — catches the "my client says 400 instead of 402" class of bugs before your first real payment attempt`,
   watch: null, // informational, no pitch
 };
 

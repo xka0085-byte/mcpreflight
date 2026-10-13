@@ -14,9 +14,9 @@ The numbers: 4,879 endpoints (48.8%) completed a clean handshake. 43 failed vali
 
 Everything is reproducible: per-server JSON reports, methodology, and the weekly tracker are public. Tool is open source, zero deps.
 
-Report: https://xka0085-byte.github.io/mcp-doctor/state-of-mcp-2026-10.html
-Weekly pulse: https://xka0085-byte.github.io/mcp-doctor/trust/pulse.html
-Repo: https://github.com/xka0085-byte/mcp-doctor
+Report: https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html
+Weekly pulse: https://xka0085-byte.github.io/mcpreflight/trust/pulse.html
+Repo: https://github.com/xka0085-byte/mcpreflight
 
 Happy to provide the dataset if useful.
 
@@ -24,7 +24,7 @@ Happy to provide the dataset if useful.
 
 ## 投 Hacker Newsletter / changelog 类的短版
 
-We health-checked all 9,991 MCP Registry endpoints (read-only, reproducible). 48.8% pass, 50.7% no response, and all 213 smithery-registered endpoints failed. Weekly tracker: https://xka0085-byte.github.io/mcp-doctor/trust/pulse.html
+We health-checked all 9,991 MCP Registry endpoints (read-only, reproducible). 48.8% pass, 50.7% no response, and all 213 smithery-registered endpoints failed. Weekly tracker: https://xka0085-byte.github.io/mcpreflight/trust/pulse.html
 
 ## 使用规则
 

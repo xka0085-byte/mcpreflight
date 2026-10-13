@@ -5,32 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Test a Remote MCP Server Before Connecting (CLI, CI-ready)</title>
 <meta name="description" content="How to test a deployed remote MCP server (HTTP/SSE) before connecting a client: read-only CLI handshake and tools/list check, exit codes for CI, and when to use MCP Inspector instead.">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I test a remote MCP server over HTTP?","acceptedAnswer":{"@type":"Answer","text":"Run npx @eidonze/mcpdoctor schema https://your-server.example/mcp. It sends a read-only MCP initialize handshake and tools/list request to the deployed endpoint, validates tool schemas, and exits 0 on pass, 1 on fail, 2 on network error. No browser UI and no server code required."}},{"@type":"Question","name":"MCP Inspector vs mcpdoctor: which one for CI?","acceptedAnswer":{"@type":"Answer","text":"Use MCP Inspector for interactive local debugging while developing a server. Use mcpdoctor for automated checks of remote deployed endpoints: it needs no UI, no process spawn, runs in CI with stable exit codes, and can gate pull requests via the mcp-trust-check GitHub Action."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I test a remote MCP server over HTTP?","acceptedAnswer":{"@type":"Answer","text":"Run npx @eidonze/mcpreflight schema https://your-server.example/mcp. It sends a read-only MCP initialize handshake and tools/list request to the deployed endpoint, validates tool schemas, and exits 0 on pass, 1 on fail, 2 on network error. No browser UI and no server code required."}},{"@type":"Question","name":"MCP Inspector vs mcpreflight: which one for CI?","acceptedAnswer":{"@type":"Answer","text":"Use MCP Inspector for interactive local debugging while developing a server. Use mcpreflight for automated checks of remote deployed endpoints: it needs no UI, no process spawn, runs in CI with stable exit codes, and can gate pull requests via the mcp-trust-check GitHub Action."}}]}</script>
 </head>
 <body style="font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc;margin:0">
 <main style="max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem">
-<p class="muted"><a href="https://xka0085-byte.github.io/mcp-doctor/">mcpdoctor docs</a> / remote preflight</p>
+<p class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight docs</a> / remote preflight</p>
 <h1>Test a remote MCP server before connecting</h1>
 <p>Testing a remote MCP server means one thing: can this deployed endpoint complete an MCP <code>initialize</code> handshake and answer <code>tools/list</code> with valid schemas, right now, without you spawning any process? In our October 2026 scan of the official registry, only 48.8% of 9,991 remote endpoints passed that bar anonymously, and 115 endpoints that passed one week flipped to UNKNOWN the next. The command below gives you the same read-only verdict locally or in CI. Numbers: <a href="state-of-mcp-2026-10.html">State of MCP Servers</a>.</p>
 <p>Most MCP testing advice covers local servers you run yourself. A deployed remote endpoint is a different problem: you have no process to spawn, no UI process model, and what you need is an unattended verdict your CI can gate on.</p>
 <h2>One command, read-only</h2>
-<pre>npx @eidonze/mcpdoctor schema https://your-mcp-server.example/mcp
+<pre>npx @eidonze/mcpreflight schema https://your-mcp-server.example/mcp
 
 MCP Tool Schema Report
 - Status: PASS
 - Protocol: 2025-06-18
 - Tools: 12</pre>
 <p>The check sends MCP <code>initialize</code> and <code>tools/list</code> only. No tools are called, no data is read, no keys are needed. Exit codes are stable for automation: 0 pass, 1 fail, 2 network error, 3 usage error.</p>
-<h2>Inspector or mcpdoctor?</h2>
+<h2>Inspector or mcpreflight?</h2>
 <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%;font-size:.95rem">
-<tr><th></th><th>MCP Inspector</th><th>mcpdoctor</th></tr>
+<tr><th></th><th>MCP Inspector</th><th>mcpreflight</th></tr>
 <tr><td>Best at</td><td>Interactive debugging while you develop a local server</td><td>Unattended checks of remote deployed endpoints</td></tr>
 <tr><td>Runs against</td><td>A process you spawn, or a UI session</td><td>Any reachable URL, no code access needed</td></tr>
 <tr><td>CI gating</td><td>Possible with CLI smoke tests</td><td>Native: stable exit codes plus the mcp-trust-check GitHub Action</td></tr>
 <tr><td>Scale</td><td>One server at a time</td><td>Powers a public directory of all 9,991 registry endpoints, rescanned weekly</td></tr>
-<tr><td>x402 payments</td><td>Not covered</td><td><a href="https://xka0085-byte.github.io/mcp-doctor/x402-endpoint-inspector.html">402 challenge validation</a> without paying</td></tr>
+<tr><td>x402 payments</td><td>Not covered</td><td><a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">402 challenge validation</a> without paying</td></tr>
 </table>
-<p>They are complements, not rivals. Inspector while building, mcpdoctor after deploying and in CI.</p>
+<p>They are complements, not rivals. Inspector while building, mcpreflight after deploying and in CI.</p>
 <h2>Gate every pull request</h2>
 <pre>name: MCP Trust Check
 on: [pull_request]
@@ -38,12 +38,12 @@ jobs:
   mcp-trust:
     runs-on: ubuntu-latest
     steps:
-      - uses: xka0085-byte/mcp-doctor@v1
+      - uses: xka0085-byte/mcpreflight@v1
         with:
           endpoint: https://your-mcp-server.example/mcp
           mode: schema
           format: markdown</pre>
-<p>Full setup in <a href="https://xka0085-byte.github.io/mcp-doctor/mcp-security-ci.html">MCP security CI</a>. Common failures are catalogued in <a href="https://xka0085-byte.github.io/mcp-doctor/troubleshooting.html">troubleshooting</a>.</p>
+<p>Full setup in <a href="https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html">MCP security CI</a>. Common failures are catalogued in <a href="https://xka0085-byte.github.io/mcpreflight/troubleshooting.html">troubleshooting</a>.</p>
 </main>
 </body>
 </html>

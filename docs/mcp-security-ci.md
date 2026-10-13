@@ -1,6 +1,6 @@
 # MCP Server Security Checks in GitHub Actions
 
-A pull request can validate an MCP server's advertised tool surface before a client depends on it. mcpdoctor provides a credential-free, read-only check that fits an existing GitHub workflow.
+A pull request can validate an MCP server's advertised tool surface before a client depends on it. mcpreflight provides a credential-free, read-only check that fits an existing GitHub workflow.
 
 ## Add the check
 
@@ -15,7 +15,7 @@ jobs:
   mcp-trust:
     runs-on: ubuntu-latest
     steps:
-      - uses: xka0085-byte/mcp-doctor@v1
+      - uses: xka0085-byte/mcpreflight@v1
         with:
           endpoint: https://your-mcp-server.example/mcp
           mode: schema
@@ -54,4 +54,4 @@ This is not a complete MCP security audit. It does not certify prompt-injection 
 
 See [MCP Schema Checker](mcp-schema-checker.html), [x402 Inspector](x402-endpoint-inspector.html), and [Troubleshooting](troubleshooting.html).
 
-[Action source](https://github.com/xka0085-byte/mcp-doctor/blob/main/action.yml) · [npm package](https://www.npmjs.com/package/@eidonze/mcpdoctor)
+[Action source](https://github.com/xka0085-byte/mcpreflight/blob/main/action.yml) · [npm package](https://www.npmjs.com/package/@eidonze/mcpreflight)

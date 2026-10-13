@@ -18,7 +18,7 @@ Also: Coinbase Bazaar/Agent.market catalog pilot (x402-v2 route).
 
 ## Threat assessment
 
-- Direct overlap: x402 Inspector ≈ our `mcpdoctor inspect`; their scan-compare ≈ **our Schema Diff paid direction (shipped by them as CI-first)**. Urgency signal.
+- Direct overlap: x402 Inspector ≈ our `mcpreflight inspect`; their scan-compare ≈ **our Schema Diff paid direction (shipped by them as CI-first)**. Urgency signal.
 - They compose 4 products into "Agent Commerce Gate" = the Agent Trust Infrastructure layer (GPT report layer 3). Someone is already monetizing it.
 - Distribution is weak: dashboard + one 2-point HN post. No OSS, no CLI, no npm, no GitHub Action, no public directory, no community.
 - We hold what they lack: open-source CLI + Action on Marketplace, Trust Directory 9,991 endpoints w/ weekly rescan, State of MCP dataset, outreach funnel, SEO.

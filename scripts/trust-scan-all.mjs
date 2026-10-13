@@ -8,7 +8,7 @@ import url from 'node:url';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const cli = path.join(root, 'bin', 'mcpdoctor.mjs');
+const cli = path.join(root, 'bin', 'mcpreflight.mjs');
 const outDir = path.join(root, 'trust-data');
 fs.mkdirSync(outDir, { recursive: true });
 

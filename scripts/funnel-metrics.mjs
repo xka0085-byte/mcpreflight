@@ -23,7 +23,7 @@ const gh = (q) => new Promise((resolve) => {
 });
 
 const day = new Date().toISOString().slice(0, 10);
-const pkg = '@eidonze/mcpdoctor';
+const pkg = '@eidonze/mcpreflight';
 
 const [dlWeek, dlMonth, dlVersions] = await Promise.all([
   fetchJson(`https://api.npmjs.org/downloads/point/last-week/${encodeURIComponent(pkg)}`),
@@ -32,9 +32,9 @@ const [dlWeek, dlMonth, dlVersions] = await Promise.all([
 ]);
 
 const [actionRefs, repoMentions, badgeEmbeds] = await Promise.all([
-  gh('"xka0085-byte/mcp-doctor@v1"'),   // real CI integrations
-  gh('"mcpdoctor" in:file filename:.yml'), // broader workflow mentions
-  gh('"mcp-doctor/trust/badge"'),        // badge embeds anywhere on GitHub
+  gh('"xka0085-byte/mcpreflight@v1"'),   // real CI integrations
+  gh('"mcpreflight" in:file filename:.yml'), // broader workflow mentions
+  gh('"mcpreflight/trust/badge"'),        // badge embeds anywhere on GitHub
 ]);
 
 const done = JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'outreach-done.json'), 'utf8'));

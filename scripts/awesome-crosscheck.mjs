@@ -29,8 +29,8 @@ console.log('BREAKDOWN', JSON.stringify({
 }));
 const rows = broken.slice(0, 25).map((s) => {
   const e = byRepo.get(s);
-  return `| [${s}]() | ${e.name} | ${e.status} | \`${e.code}\` | [report](https://xka0085-byte.github.io/mcp-doctor/trust/p/${e.slug}.html) |`;
+  return `| [${s}]() | ${e.name} | ${e.status} | \`${e.code}\` | [report](https://xka0085-byte.github.io/mcpreflight/trust/p/${e.slug}.html) |`;
 });
 fs.writeFileSync(path.join(root, 'trust-data', 'awesome-report.md'),
-  `Cross-checked ${matched.length} of the ${slugs.size} GitHub repos in this list against the official MCP Registry scan (read-only initialize + tools/list, 9991 servers, updated weekly).\n\n${broken.length} matched servers currently do not complete a clean anonymous handshake (of which auth-gated by design is possible — the reports show the exact failing step):\n\n| repo | registry name | status | finding | report |\n|---|---|---|---|---|\n${rows.join('\n')}\n\nReproduce any line: \`npx @eidonze/mcpdoctor schema <endpoint>\` · methodology + limitations: https://xka0085-byte.github.io/mcp-doctor/trust/\n`);
+  `Cross-checked ${matched.length} of the ${slugs.size} GitHub repos in this list against the official MCP Registry scan (read-only initialize + tools/list, 9991 servers, updated weekly).\n\n${broken.length} matched servers currently do not complete a clean anonymous handshake (of which auth-gated by design is possible — the reports show the exact failing step):\n\n| repo | registry name | status | finding | report |\n|---|---|---|---|---|\n${rows.join('\n')}\n\nReproduce any line: \`npx @eidonze/mcpreflight schema <endpoint>\` · methodology + limitations: https://xka0085-byte.github.io/mcpreflight/trust/\n`);
 console.log('written trust-data/awesome-report.md');

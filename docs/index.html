@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>mcpdoctor — MCP Schema Checker and x402 Inspector</title>
+  <title>mcpreflight — MCP Schema Checker and x402 Inspector</title>
   <meta name="description" content="Read-only MCP schema checker, MCP security CI guide, and x402 HTTP 402 endpoint inspector for AI-agent developers.">
-  <link rel="canonical" href="https://xka0085-byte.github.io/mcp-doctor/">
+  <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/">
   <meta name="google-site-verification" content="googlefc84beb62afa4471" />
-  <meta property="og:title" content="mcpdoctor — MCP Schema Checker and x402 Inspector">
+  <meta property="og:title" content="mcpreflight — MCP Schema Checker and x402 Inspector">
   <meta property="og:description" content="Check MCP tool schemas and x402 payment endpoints without calling tools or making payments.">
-  <meta property="og:url" content="https://xka0085-byte.github.io/mcp-doctor/">
+  <meta property="og:url" content="https://xka0085-byte.github.io/mcpreflight/">
   <style>
     :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.55; }
     body { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
@@ -18,15 +18,15 @@
     a { color: #2563eb; } .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
     .card { border: 1px solid #9ca3af66; border-radius: .7rem; padding: 1rem; } .muted { opacity: .75; }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mcpdoctor?","acceptedAnswer":{"@type":"Answer","text":"mcpdoctor is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpdoctor schema <url>."}},{"@type":"Question","name":"Is mcpdoctor a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It validates protocol conformance and tool schema quality, not runtime behavior or code safety. A PASS means the observed responses matched the checks in that version."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mcpreflight?","acceptedAnswer":{"@type":"Answer","text":"mcpreflight is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpreflight schema <url>."}},{"@type":"Question","name":"Is mcpreflight a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It validates protocol conformance and tool schema quality, not runtime behavior or code safety. A PASS means the observed responses matched the checks in that version."}}]}</script>
 </head>
 <body>
   <header>
-    <p class="muted">@eidonze/mcpdoctor · Node.js 18+ · MIT</p>
+    <p class="muted">@eidonze/mcpreflight · Node.js 18+ · MIT</p>
     <h1>MCP Schema Checker and x402 Inspector</h1>
     <p>Read-only checks for MCP tool schemas and x402 HTTP 402 payment endpoints before an AI agent or buyer depends on them.</p>
-    <pre><code>npx @eidonze/mcpdoctor@0.1.5 schema https://your-mcp.example/mcp --json
-npx @eidonze/mcpdoctor@0.1.5 inspect https://your-api.example/paid --method=POST --json</code></pre>
+    <pre><code>npx @eidonze/mcpreflight@0.1.5 schema https://your-mcp.example/mcp --json
+npx @eidonze/mcpreflight@0.1.5 inspect https://your-api.example/paid --method=POST --json</code></pre>
   </header>
   <main>
     <section class="grid">
@@ -38,8 +38,8 @@ npx @eidonze/mcpdoctor@0.1.5 inspect https://your-api.example/paid --method=POST
     <h2>Guides</h2>
     <ul><li><a href="mcp-schema-checker.html">MCP Schema Checker</a></li><li><a href="x402-endpoint-inspector.html">x402 Endpoint Inspector</a></li><li><a href="mcp-security-ci.html">MCP Security CI</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="mcp-oauth-diagnostics.html">MCP OAuth Diagnostics and current limits</a></li><li><a href="trust/">MCP Server Trust Directory</a> — read-only schema reports for official registry servers</li></ul>
     <h2>Boundaries</h2>
-    <p>mcpdoctor does not call MCP tools, accept credentials, execute server commands, sign payments, settle payments, or prove delivery. PASS is a deterministic observed-check result, not a security certification.</p>
+    <p>mcpreflight does not call MCP tools, accept credentials, execute server commands, sign payments, settle payments, or prove delivery. PASS is a deterministic observed-check result, not a security certification.</p>
   </main>
-  <footer class="muted"><p><a href="https://github.com/xka0085-byte/mcp-doctor">Source repository</a> · <a href="https://www.npmjs.com/package/@eidonze/mcpdoctor">npm package</a> · <a href="https://github.com/xka0085-byte/mcp-doctor/issues">Feedback</a></p></footer>
+  <footer class="muted"><p><a href="https://github.com/xka0085-byte/mcpreflight">Source repository</a> · <a href="https://www.npmjs.com/package/@eidonze/mcpreflight">npm package</a> · <a href="https://github.com/xka0085-byte/mcpreflight/issues">Feedback</a></p></footer>
 </body>
 </html>

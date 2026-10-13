@@ -6,7 +6,7 @@ import url from 'node:url';
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const scan = JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'scan.json'), 'utf8'));
-const SITE = 'https://xka0085-byte.github.io/mcp-doctor';
+const SITE = 'https://xka0085-byte.github.io/mcpreflight';
 
 const urls = [
   `${SITE}/`,

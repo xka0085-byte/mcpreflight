@@ -5,14 +5,14 @@ const MAX_BODY = 1024 * 1024;
 const TIMEOUT = 10_000;
 const VERSION = '0.1.8';
 
-const help = `mcpdoctor ${VERSION}
+const help = `mcpreflight ${VERSION}
 
 Read-only MCP/x402 endpoint diagnostics.
 
 Usage:
-  mcpdoctor inspect <url> [--method=GET|POST] [--format=json|markdown]
-  mcpdoctor schema <url> [--format=json|markdown]
-  mcpdoctor --help
+  mcpreflight inspect <url> [--method=GET|POST] [--format=json|markdown]
+  mcpreflight schema <url> [--format=json|markdown]
+  mcpreflight --help
 
 This MVP never signs, pays, retries payment, or accepts a private key.`;
 
@@ -130,18 +130,18 @@ function makeReport(url, method, result) {
 }
 
 function markdown(report) {
-  const lines = [`# mcpdoctor report`, '', `- Status: **${report.finalStatus}**`, `- Endpoint: ${report.endpoint}`, `- HTTP: ${report.http.status}`, `- Response: ${report.http.elapsedMs} ms / ${report.http.bodyBytes} bytes`, `- Body SHA-256: \`${report.http.bodySha256}\``, '', '## Payment requirements', ''];
+  const lines = [`# mcpreflight report`, '', `- Status: **${report.finalStatus}**`, `- Endpoint: ${report.endpoint}`, `- HTTP: ${report.http.status}`, `- Response: ${report.http.elapsedMs} ms / ${report.http.bodyBytes} bytes`, `- Body SHA-256: \`${report.http.bodySha256}\``, '', '## Payment requirements', ''];
   if (!report.x402.accepts.length) lines.push('- None parsed', '');
   report.x402.accepts.forEach((item, i) => lines.push(`### accepts[${i}]`, '', ...Object.entries(item).map(([key, value]) => `- ${key}: ${value ?? 'missing'}`), ''));
   lines.push('## Findings', '', ...(report.findings.length ? report.findings.map((item) => `- **${item.status}** \`${item.code}\`: ${item.message}`) : ['- None']), '', '## Limitations', '', ...report.limitations.map((item) => `- ${item}`));
-  if (report.finalStatus === 'PASS') lines.push('', '## Next steps', '', 'Gate CI on this exact check (paste into .github/workflows/x402.yml):', '', '```yaml', '- uses: xka0085-byte/mcp-doctor@v1', '  with:', `    endpoint: ${report.endpoint}`, '    mode: inspect', '```', '', 'Weekly re-scan and docs: https://xka0085-byte.github.io/mcp-doctor/x402-endpoint-inspector.html');
+  if (report.finalStatus === 'PASS') lines.push('', '## Next steps', '', 'Gate CI on this exact check (paste into .github/workflows/x402.yml):', '', '```yaml', '- uses: xka0085-byte/mcpreflight@v1', '  with:', `    endpoint: ${report.endpoint}`, '    mode: inspect', '```', '', 'Weekly re-scan and docs: https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html');
   return lines.join('\n');
 }
 
 async function schemaCommand(url, format) {
   const findings = [];
   const add = (code, severity, message) => findings.push({ code, severity, message });
-  const response = await fetch(url, { method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(TIMEOUT), headers: { 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'MCP-Protocol-Version': '2025-03-26' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'mcpdoctor', version: VERSION } } }) });
+  const response = await fetch(url, { method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(TIMEOUT), headers: { 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'MCP-Protocol-Version': '2025-03-26' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'mcpreflight', version: VERSION } } }) });
   const initText = await readBody(response);
   if (!response.ok) throw new Error(`MCP initialize returned HTTP ${response.status}`);
   const init = jsonrpc(initText);
@@ -170,7 +170,7 @@ async function schemaCommand(url, format) {
   if (format === 'json') { console.log(JSON.stringify(report, null, 2)); }
   else {
     let text = `# MCP Tool Schema Report\n\n- Status: **${report.finalStatus}**\n- Endpoint: ${report.endpoint}\n- Protocol: ${report.mcp.protocolVersion ?? 'unknown'}\n- Tools: ${report.mcp.toolCount ?? 'unknown'}\n\n${findings.map(x => `- **${x.severity}** \`${x.code}\`: ${x.message}`).join('\n')}\n\n${report.limitations.map(x => `- ${x}`).join('\n')}`;
-    if (report.finalStatus === 'PASS') text += `\n\nNext steps\n- Gate CI on this exact check (paste into .github/workflows/mcp.yml):\n\n    - uses: xka0085-byte/mcp-doctor@v1\n      with:\n        endpoint: ${report.endpoint}\n        mode: schema\n\n- Weekly re-scan and a README status badge: https://xka0085-byte.github.io/mcp-doctor/trust/\n`;
+    if (report.finalStatus === 'PASS') text += `\n\nNext steps\n- Gate CI on this exact check (paste into .github/workflows/mcp.yml):\n\n    - uses: xka0085-byte/mcpreflight@v1\n      with:\n        endpoint: ${report.endpoint}\n        mode: schema\n\n- Weekly re-scan and a README status badge: https://xka0085-byte.github.io/mcpreflight/trust/\n`;
     console.log(text);
   }
   process.exitCode = report.finalStatus === 'PASS' ? 0 : 1;

@@ -1,4 +1,4 @@
-﻿# Tool Definition Quality Score (TDQS)
+# Tool Definition Quality Score (TDQS)
 
 TDQS is an open framework for scoring how well an [MCP](https://modelcontextprotocol.io) tool definition communicates to an AI agent. It is the methodology [Glama](https://glama.ai) uses to score [every tool](https://glama.ai/mcp/tools) of every [MCP server](https://glama.ai/mcp/servers) and [hosted connector](https://glama.ai/mcp/connectors) in its registry.
 

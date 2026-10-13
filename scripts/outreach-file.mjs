@@ -20,10 +20,10 @@ const body = (q) => `Read-only health check of the endpoint registered for this 
 - Endpoint: \`${q.url}\`
 - Result: ${q.status} — \`${q.code}\`: ${q.message}
 
-Full report (updated weekly): https://xka0085-byte.github.io/mcp-doctor/trust/p/${q.slug}.html
-Reproduce locally: \`npx @eidonze/mcpdoctor schema ${q.url}\`
+Full report (updated weekly): https://xka0085-byte.github.io/mcpreflight/trust/p/${q.slug}.html
+Reproduce locally: \`npx @eidonze/mcpreflight schema ${q.url}\`
 
-What this is: [mcpdoctor](https://github.com/xka0085-byte/mcp-doctor) — an open-source (MIT) MCP preflight checker. It sends only MCP \`initialize\` + \`tools/list\`; no tools are called and no data is read.
+What this is: [mcpreflight](https://github.com/xka0085-byte/mcpreflight) — an open-source (MIT) MCP preflight checker. It sends only MCP \`initialize\` + \`tools/list\`; no tools are called and no data is read.
 
 - If this endpoint is intentionally auth-gated, a failed anonymous handshake is expected — please ignore this issue (the public directory marks such servers as "no anonymous handshake").
 - If it should be reachable anonymously, the report shows the exact step that failed.

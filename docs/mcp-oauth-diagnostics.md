@@ -1,6 +1,6 @@
 # MCP OAuth Diagnostics
 
-`mcpdoctor` currently does **not** implement a complete MCP OAuth auditor. Do not use the schema or x402 commands as proof that OAuth is correctly configured.
+`mcpreflight` currently does **not** implement a complete MCP OAuth auditor. Do not use the schema or x402 commands as proof that OAuth is correctly configured.
 
 For the current tool, an OAuth-protected MCP endpoint may return `401` or another response and produce `UNKNOWN`/`FAIL`. That is an observation, not a diagnosis of the authorization flow.
 

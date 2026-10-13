@@ -134,7 +134,7 @@ if (delta.length || prLines.length) {
   const body = `${delta.length} tracked issue(s) changed since the last snapshot:\n\n${lines.join('\n')}\n\nPR watch:\n${prLines.join('\n') || '(no changes)'}\n\n_snapshot: trust-data/metrics/replies.json_`;
   const bp = path.join(root, 'trust-data', '.digest.md');
   fs.writeFileSync(bp, body);
-  const r = await gh(['issue', 'create', '-R', 'xka0085-byte/mcp-doctor', '-t', title, '--body-file', bp]);
+  const r = await gh(['issue', 'create', '-R', 'xka0085-byte/mcpreflight', '-t', title, '--body-file', bp]);
   console.log('DIGEST-ISSUE', r.stdout || String(r.err?.message ?? '').slice(0, 200));
 }
 

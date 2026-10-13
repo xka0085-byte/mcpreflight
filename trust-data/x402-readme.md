@@ -1,4 +1,4 @@
-﻿# x402
+# x402
 
 [![Slack Community](https://img.shiel
 ds.io/badge/Slack-Join%20Community-4A154B?log

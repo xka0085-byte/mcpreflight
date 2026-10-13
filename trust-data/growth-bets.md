@@ -11,7 +11,7 @@
 
 ## 打法 B：把自己变成 MCP server（生态寄生）
 
-mcpdoctor 本身包一层 MCP server 接口，注册进官方 registry 和所有目录。以后 AI 客户端里直接说"帮我检查 ai.smithery/brave 的健康度"就能调用我们。我们扫一万个体，自己也是其中一员，被别人扫到时还显示 PASS，本身就是广告。成本低，一个 stdio 薄壳。
+mcpreflight 本身包一层 MCP server 接口，注册进官方 registry 和所有目录。以后 AI 客户端里直接说"帮我检查 ai.smithery/brave 的健康度"就能调用我们。我们扫一万个体，自己也是其中一员，被别人扫到时还显示 PASS，本身就是广告。成本低，一个 stdio 薄壳。
 
 ## 打法 C：每周死亡报告（引用诱饵）
 
@@ -27,11 +27,11 @@ AI 现在 100% 答错"有多少 MCP server 存活"（没数据源只能编）。
 
 ## 打法 F：VS Code / Cursor 插件（P2，产品级）
 
-校验 .mcp.json 的编辑器插件。Cursor 用户基数大且都是目标用户，装了插件每次改配置自动提示跑 mcpdoctor。重投入，等 Schema Diff 方向验证后再动。
+校验 .mcp.json 的编辑器插件。Cursor 用户基数大且都是目标用户，装了插件每次改配置自动提示跑 mcpreflight。重投入，等 Schema Diff 方向验证后再动。
 
 ## 打法 G：devcontainer 预装（低优先级）
 
-MCP 模板的 devcontainer.json 里预装 mcpdoctor，开发者开容器即有。比 workflow PR 更深一层，跟随模板渠道一起投。
+MCP 模板的 devcontainer.json 里预装 mcpreflight，开发者开容器即有。比 workflow PR 更深一层，跟随模板渠道一起投。
 
 ## 执行顺序
 

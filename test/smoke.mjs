@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const cli = path.join(root, 'bin', 'mcpdoctor.mjs');
+const cli = path.join(root, 'bin', 'mcpreflight.mjs');
 const server = createServer(async (request, response) => {
   if (request.url === '/good') {
     response.writeHead(402, { 'content-type': 'application/json', 'payment-required': JSON.stringify({ x402Version: 2, accepts: [{ scheme: 'exact', network: 'eip155:8453', asset: 'USDC', amount: '10000', payTo: '0x1234567890123456789012345678901234567890' }] }) });
@@ -105,8 +105,8 @@ try {
     let stdout = ''; child.stdout.on('data', (chunk) => { stdout += chunk; }); child.on('close', (code) => resolve({ code, stdout }));
   });
   assert.equal(help.code, 0);
-  assert.match(help.stdout, /mcpdoctor/);
-  console.log('mcpdoctor smoke tests passed');
+  assert.match(help.stdout, /mcpreflight/);
+  console.log('mcpreflight smoke tests passed');
 } finally {
   server.close();
 }

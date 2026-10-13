@@ -1,10 +1,10 @@
-# HANDOFF：mcpdoctor 项目总交接书
+# HANDOFF：mcpreflight 项目总交接书
 
 用途：换 Trae 账号或新会话接手时，先读完本文档再动手。自包含，不需要任何历史对话。生成日期 2026-10-14。
 
 ## 一、一句话定位
 
-mcpdoctor 是开源（MIT）零依赖的 MCP 与 x402 端点只读预检工具，母品牌 Agent Trust Infrastructure，品牌承诺三词：可检查、可复核、可追踪。严禁 Trust Score 式总分，PASS 不代表 agent 可信。
+mcpreflight 是开源（MIT）零依赖的 MCP 与 x402 端点只读预检工具，母品牌 Agent Trust Infrastructure，品牌承诺三词：可检查、可复核、可追踪。严禁 Trust Score 式总分，PASS 不代表 agent 可信。
 
 ## 二、必读文件（都在仓库内）
 
@@ -19,13 +19,13 @@ mcpdoctor 是开源（MIT）零依赖的 MCP 与 x402 端点只读预检工具�
 | trust-data/geo-research-2026-10.md | AI 引用机制研究结论 |
 | trust-data/agent-evidence-outreach.md | 押注 A 外联名单（支线会话维护） |
 
-仓库外的两份关键文档：C:\Users\eqzyz\AppData\Local\Temp\mcpdoctor-strategy-brief-for-gpt.md（战略参谋书）、C:\Users\eqzyz\AppData\Local\Temp\ai-web3-future-bets-2026-10.md（web3 深度调研）。
+仓库外的两份关键文档：C:\Users\eqzyz\AppData\Local\Temp\mcpreflight-strategy-brief-for-gpt.md（战略参谋书）、C:\Users\eqzyz\AppData\Local\Temp\ai-web3-future-bets-2026-10.md（web3 深度调研）。
 
 旧账号的 Trae 项目记忆在磁盘上仍可读：c:\Users\eqzyz\.trae-cn\memory\projects\-c-Users-eqzyz-Documents-Trae-CN-temp-20261010-01--p2-effb7512b60c64c8edf7\project_memory.md，其中含全部历史纪律，新会话应主动用文件工具读一遍。
 
 ## 三、当前状态速查
 
-- 主产品：CLI 0.1.7（npx @eidonze/mcpdoctor）、GitHub Action mcp-trust-check、MCP server 模式（bin/mcpdoctor-mcp.mjs）
+- 主产品：CLI 0.1.7（npx @eidonze/mcpreflight）、GitHub Action mcp-trust-check、MCP server 模式（bin/mcpreflight-mcp.mjs）
 - 数据：Trust Directory 9,991 端点每周一自动重扫（workflow trust-rescan，UTC 02:00，已修缓存与翻页 bug）。最新周数据 PASS 4,764 / FAIL 41 / UNKNOWN 5,186，一周内 115 个端点从 PASS 翻 UNKNOWN（周流失 2.4%，独家发现）
 - 采用漏斗（每日自动测）：npm 周下载 464 基线；公开 CI 集成 0；徽章嵌入 0。口径纪律：零集成必须说未发现可验证的公开集成
 - 外联：178 条 issue 约 1% 真实互动率，两个 VIP（joxo 作者、kirbah）；5 个模板 PR 在途；x402 官方文档 PR #3766 在途
@@ -45,7 +45,7 @@ mcpdoctor 是开源（MIT）零依赖的 MCP 与 x402 端点只读预检工具�
 | GitHub CLI | gh 已登录 xka0085-byte |
 | npm | granular token，7 天后过期需续 |
 | Gmail 监控 | xka0085@gmail.com，应用密码在 ~/.mail-watch.json |
-| GSC | xka0085@gmail.com，属性 https://xka0085-byte.github.io/mcp-doctor/ |
+| GSC | xka0085@gmail.com，属性 https://xka0085-byte.github.io/mcpreflight/ |
 | 用户本人待办 | Reddit/X/MCP Discord 发帖（手动，禁止程序化） |
 
 ## 六、纪律红线（全部由三轮 GPT 评审与用户要求沉淀，违反会伤及信任资产）
@@ -56,7 +56,7 @@ mcpdoctor 是开源（MIT）零依赖的 MCP 与 x402 端点只读预检工具�
 4. token-last 不发币；按席位或按量收费不按流水抽成
 5. 里程碑 M1 技术有效、M2 问题有效、M3 使用有效、M4 商业有效，不可互相替代
 6. 话术像真人：英文外联两三句、小写开头、无列表；报告引用可溯源
-7. 双会话协作：主线（本会话）管 mcpdoctor 与数据，支线管 Agent Evidence；共用工作树，提交前 pull --rebase，只 add 自己的文件，避开周一 UTC 02:00 重扫窗口；新页面必须同步 gen-sitemap.mjs
+7. 双会话协作：主线（本会话）管 mcpreflight 与数据，支线管 Agent Evidence；共用工作树，提交前 pull --rebase，只 add 自己的文件，避开周一 UTC 02:00 重扫窗口；新页面必须同步 gen-sitemap.mjs
 
 ## 七、待办队列（按优先级）
 

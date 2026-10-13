@@ -1,11 +1,11 @@
-# Troubleshooting mcpdoctor Errors
+# Troubleshooting mcpreflight Errors
 
 ## `NO_402`
 
 The endpoint returned a status other than HTTP 402. Confirm the paid route, HTTP method, and public hostname. A gateway or body-validation middleware may be running before x402.
 
 ```bash
-npx @eidonze/mcpdoctor@0.1.5 inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpreflight@0.1.5 inspect https://your-api.example/paid --method=POST --json
 ```
 
 ## `NO_PAYMENT_DOCUMENT` or `NO_ACCEPTS`
@@ -30,6 +30,6 @@ The endpoint could not be observed within the timeout or response-size limits, o
 
 ## Report a reproducible issue
 
-Open a [GitHub issue](https://github.com/xka0085-byte/mcp-doctor/issues) with the command, redacted output, Node version, and endpoint type. Never include tokens, payment signatures, credentials, private URLs, or response data that you are not allowed to share.
+Open a [GitHub issue](https://github.com/xka0085-byte/mcpreflight/issues) with the command, redacted output, Node version, and endpoint type. Never include tokens, payment signatures, credentials, private URLs, or response data that you are not allowed to share.
 
 [Home](index.html) · [MCP schema guide](mcp-schema-checker.html) · [x402 guide](x402-endpoint-inspector.html)

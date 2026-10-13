@@ -1,15 +1,15 @@
-# mcpdoctor
+# mcpreflight
 
 Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before an agent client or buyer depends on an endpoint.
 
-[![npm](https://img.shields.io/npm/v/@eidonze/mcpdoctor?logo=npm)](https://www.npmjs.com/package/@eidonze/mcpdoctor)
-[![CI](https://github.com/xka0085-byte/mcp-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/xka0085-byte/mcp-doctor/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@eidonze/mcpreflight?logo=npm)](https://www.npmjs.com/package/@eidonze/mcpreflight)
+[![CI](https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml/badge.svg)](https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/xka0085-byte/mcp-doctor)
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/xka0085-byte/mcpreflight)
 
 ## Find the right guide
 
-- [Public documentation site](https://xka0085-byte.github.io/mcp-doctor/)
+- [Public documentation site](https://xka0085-byte.github.io/mcpreflight/)
 - [MCP schema checker](docs/mcp-schema-checker.md)
 - [x402 endpoint inspector](docs/x402-endpoint-inspector.md)
 - [MCP security CI](docs/mcp-security-ci.md)
@@ -21,13 +21,13 @@ Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before 
 Check an MCP server without calling any tools:
 
 ```bash
-npx @eidonze/mcpdoctor schema https://your-mcp-server.example/mcp --json
+npx @eidonze/mcpreflight schema https://your-mcp-server.example/mcp --json
 ```
 
 Check an x402 endpoint without paying:
 
 ```bash
-npx @eidonze/mcpdoctor inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpreflight inspect https://your-api.example/paid --method=POST --json
 ```
 
 Requires Node.js 18+. No API key or wallet is needed.
@@ -35,7 +35,7 @@ Requires Node.js 18+. No API key or wallet is needed.
 Example schema run against a live endpoint:
 
 ```text
-$ npx @eidonze/mcpdoctor schema https://your-mcp-server.example/mcp
+$ npx @eidonze/mcpreflight schema https://your-mcp-server.example/mcp
 
 MCP Tool Schema Report
 - Status: FAIL
@@ -60,7 +60,7 @@ Exit codes are stable for automation: `0` PASS, `1` FAIL, `2` UNKNOWN/network er
 
 ## What it does NOT check
 
-mcpdoctor is a protocol- and schema-level preflight, not a security audit. It does not:
+mcpreflight is a protocol- and schema-level preflight, not a security audit. It does not:
 
 - Detect malicious code, prompt injection, or supply-chain risk in the server's implementation
 - Call tools, so it cannot prove runtime behavior, data handling, or permission scope
@@ -82,7 +82,7 @@ jobs:
   mcp-trust:
     runs-on: ubuntu-latest
     steps:
-      - uses: xka0085-byte/mcp-doctor@v1
+      - uses: xka0085-byte/mcpreflight@v1
         with:
           endpoint: https://your-mcp-server.example/mcp
           mode: schema
@@ -119,11 +119,11 @@ FAIL NO_402 Expected HTTP 402, received 400
 
 The checks come from failure modes observed while building ReceiptRail: body validation that prevents an x402 challenge, payment documents in multiple headers/body shapes, and vendor hint headers that can hide the real `accepts[]` document.
 
-mcpdoctor is not an MCP server. It is an independent, read-only endpoint inspector. It is not affiliated with mcpdoctor.dev; verify the npm scope is `@eidonze/mcpdoctor`.
+mcpreflight is not an MCP server. It is an independent, read-only endpoint inspector. It is not affiliated with mcpreflight.dev; verify the npm scope is `@eidonze/mcpreflight`.
 
 ## Feedback
 
-Found a false positive or a protocol shape we should support? [Open an issue](https://github.com/xka0085-byte/mcp-doctor/issues). Include the command, redacted output, Node version, and whether the endpoint is MCP or x402. Never include tokens, payment signatures, or private URLs.
+Found a false positive or a protocol shape we should support? [Open an issue](https://github.com/xka0085-byte/mcpreflight/issues). Include the command, redacted output, Node version, and whether the endpoint is MCP or x402. Never include tokens, payment signatures, or private URLs.
 
 ## License
 

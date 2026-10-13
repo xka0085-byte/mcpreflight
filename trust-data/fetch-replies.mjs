@@ -18,9 +18,9 @@ for (const [repo, kw] of repos) {
     if (last) console.log(last.body.slice(0, 500).replace(/\r/g, ''));
   }
 }
-// TengByte/mcpgrade: check PRs mentioning mcpdoctor
+// TengByte/mcpgrade: check PRs mentioning mcpreflight
 const prs = JSON.parse(await g(['api', 'repos/TengByte/mcpgrade/pulls?state=all&per_page=10']) ?? '[]');
-for (const p of prs.filter((p) => /mcpdoctor/i.test(p.title ?? ''))) {
+for (const p of prs.filter((p) => /mcpreflight/i.test(p.title ?? ''))) {
   console.log(`\n=== TengByte/mcpgrade PR#${p.number} [${p.state}${p.merged ? ' MERGED' : ''}] by ${p.user.login} ===`);
   console.log((p.title ?? '') + ' :: ' + (p.body ?? '').slice(0, 300).replace(/\r/g, ''));
 }

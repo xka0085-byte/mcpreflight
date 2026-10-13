@@ -5,7 +5,7 @@ When an MCP client cannot select a tool, the failure is often visible before any
 ## Run a read-only check
 
 ```bash
-npx @eidonze/mcpdoctor@0.1.5 schema https://your-mcp-server.example/mcp --json
+npx @eidonze/mcpreflight@0.1.5 schema https://your-mcp-server.example/mcp --json
 ```
 
 The command sends only two JSON-RPC requests:
@@ -61,7 +61,7 @@ jobs:
   schema:
     runs-on: ubuntu-latest
     steps:
-      - uses: xka0085-byte/mcp-doctor@v1
+      - uses: xka0085-byte/mcpreflight@v1
         with:
           endpoint: https://your-mcp-server.example/mcp
           mode: schema
@@ -74,4 +74,4 @@ PASS means this version observed a valid response for the deterministic checks a
 
 See also: [MCP Security CI](mcp-security-ci.html), [Troubleshooting](troubleshooting.html), and the [MCP protocol specification](https://modelcontextprotocol.io/specification/2025-06-18).
 
-[Run mcpdoctor](https://github.com/xka0085-byte/mcp-doctor) · [npm package](https://www.npmjs.com/package/@eidonze/mcpdoctor)
+[Run mcpreflight](https://github.com/xka0085-byte/mcpreflight) · [npm package](https://www.npmjs.com/package/@eidonze/mcpreflight)

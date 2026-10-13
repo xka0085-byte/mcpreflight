@@ -1,6 +1,6 @@
 // Agent Evidence weekly refresh: resample ERC-8004 agents, re-probe endpoints, regenerate report.
 // Runs after the Monday Trust Directory rescan (separate workflow, cron later same day).
-// Pipeline: 8004scan list -> details -> unique endpoints -> mcpdoctor schema probes -> registration
+// Pipeline: 8004scan list -> details -> unique endpoints -> mcpreflight schema probes -> registration
 // file re-fetch -> five-level verdicts -> docs/agent-evidence-sample.html + trust-data/agent-evidence/.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,12 +9,12 @@ import { spawn } from 'node:child_process';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const cli = path.join(root, 'bin', 'mcpdoctor.mjs');
+const cli = path.join(root, 'bin', 'mcpreflight.mjs');
 const dataDir = path.join(root, 'trust-data', 'agent-evidence');
 fs.mkdirSync(dataDir, { recursive: true });
 
 const API = 'https://api.8004scan.io/api/v1';
-const SITE = 'https://xka0085-byte.github.io/mcp-doctor';
+const SITE = 'https://xka0085-byte.github.io/mcpreflight';
 const TARGET_ENDPOINTS = 40;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -85,7 +85,7 @@ async function pullDetails(cands) {
   return agents;
 }
 
-// ---- 3) probe endpoints with mcpdoctor schema (concurrency 2) ----
+// ---- 3) probe endpoints with mcpreflight schema (concurrency 2) ----
 function probeOne(ep) {
   return new Promise((resolve) => {
     const child = spawn(process.execPath, [cli, 'schema', ep, '--format=json'], { stdio: ['ignore', 'pipe', 'pipe'] });
@@ -305,7 +305,7 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 <body>
 <main>
 <h1>Agent Evidence — sample report, week of ${esc(week)}</h1>
-<p class="muted">On-chain ERC-8004 registrations cross-checked against off-chain MCP endpoints, read-only. An <a href="https://github.com/xka0085-byte/mcp-doctor">Agent Trust Infrastructure</a> project. Re-run weekly after the Trust Directory rescan. This run: ${esc(runDate.slice(0, 10))}.</p>
+<p class="muted">On-chain ERC-8004 registrations cross-checked against off-chain MCP endpoints, read-only. An <a href="https://github.com/xka0085-byte/mcpreflight">Agent Trust Infrastructure</a> project. Re-run weekly after the Trust Directory rescan. This run: ${esc(runDate.slice(0, 10))}.</p>
 ${prevLine}
 <p>This report answers one question: does an on-chain ERC-8004 agent registration resolve to the MCP endpoint it claims, right now? This week we cross-checked ${totalTokens} tokens (${verdicts.length} unique endpoints) read-only: ${tally['fully consistent'] ?? 0} fully consistent, ${tally['partially consistent'] ?? 0} partially consistent, ${tally['unverifiable'] ?? 0} unverifiable. Anonymous handshake only, no tools invoked, every verdict carries a reason and a timestamp, and one open-source command re-runs any single check. This is evidence with limits, not a trust score.</p>
 
@@ -341,7 +341,7 @@ ${prevLine}
 
 <h2>Results, all ${verdicts.length} unique endpoints</h2>
 <table>
-<tr><th>Agent (chain, token)</th><th>Declared MCP endpoint</th><th>Live check (mcpdoctor schema, read-only)</th><th>Verdict</th></tr>
+<tr><th>Agent (chain, token)</th><th>Declared MCP endpoint</th><th>Live check (mcpreflight schema, read-only)</th><th>Verdict</th></tr>
 ${rows}
 </table>
 <p class="muted">Verdict distribution:</p>
@@ -354,11 +354,11 @@ ${tallyRows}
 <ul>
 <li><b>Sampling.</b> Tokens pulled from the 8004scan explorer API, biased toward agents declaring MCP support plus active and top-scored cohorts, deduplicated to ${verdicts.length} unique MCP endpoints. Convenience sample, not random. Samples are re-drawn weekly.</li>
 <li><b>Declaration side.</b> On-chain registration metadata, the registration file URI, and the declared MCP service entry. Registration files independently re-fetched and compared to the index cache.</li>
-<li><b>Observation side.</b> Exactly two JSON-RPC requests per endpoint: <code>initialize</code> and <code>tools/list</code> via <code>mcpdoctor schema</code> (MIT, zero dependencies). No tool invoked, no authentication attempted, no payment signed.</li>
+<li><b>Observation side.</b> Exactly two JSON-RPC requests per endpoint: <code>initialize</code> and <code>tools/list</code> via <code>mcpreflight schema</code> (MIT, zero dependencies). No tool invoked, no authentication attempted, no payment signed.</li>
 <li><b>Cross-match.</b> All endpoints matched against the official MCP Registry scan by exact URL and host.</li>
 <li><b>Reproduce any row:</b></li>
 </ul>
-<pre>npx @eidonze/mcpdoctor schema &lt;endpoint-url&gt;</pre>
+<pre>npx @eidonze/mcpreflight schema &lt;endpoint-url&gt;</pre>
 
 <h2>Limitations (read this before quoting us)</h2>
 <ul>
@@ -372,10 +372,10 @@ ${tallyRows}
 </ul>
 
 <h2>What we would build next</h2>
-<p>This page is the v0 of a weekly loop: sample, verify, publish, diff an agent's declared self against its observed behavior over time. If you maintain an agent directory, a marketplace, or a workflow that consumes 8004 agents and pre-integration evidence would change a decision you make, we would like to hear from you — <a href="https://github.com/xka0085-byte/mcp-doctor/issues">open an issue</a>.</p>
+<p>This page is the v0 of a weekly loop: sample, verify, publish, diff an agent's declared self against its observed behavior over time. If you maintain an agent directory, a marketplace, or a workflow that consumes 8004 agents and pre-integration evidence would change a decision you make, we would like to hear from you — <a href="https://github.com/xka0085-byte/mcpreflight/issues">open an issue</a>.</p>
 
 <div class="foot">
-Produced by <a href="https://github.com/xka0085-byte/mcp-doctor">mcpdoctor</a> (Agent Trust Infrastructure) — read-only checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Data sources: 8004scan explorer API, official MCP Registry via the Trust Directory. Collected ${esc(probedMin.slice(0, 10))}. Verdicts describe verification outcomes, not agent trustworthiness. Corrections welcome via issues.
+Produced by <a href="https://github.com/xka0085-byte/mcpreflight">mcpreflight</a> (Agent Trust Infrastructure) — read-only checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Data sources: 8004scan explorer API, official MCP Registry via the Trust Directory. Collected ${esc(probedMin.slice(0, 10))}. Verdicts describe verification outcomes, not agent trustworthiness. Corrections welcome via issues.
 </div>
 </main>
 </body>
@@ -407,7 +407,7 @@ Produced by <a href="https://github.com/xka0085-byte/mcp-doctor">mcpdoctor</a> (
     sampleTokens: verdicts.reduce((s, v) => s + v.sameEndpointTokenCount, 0),
     uniqueEndpoints: verdicts.length,
     tally,
-    tool: 'mcpdoctor schema, read-only initialize + tools/list',
+    tool: 'mcpreflight schema, read-only initialize + tools/list',
   };
 
   // history: keep weekly snapshots, use the most recent previous one for the report

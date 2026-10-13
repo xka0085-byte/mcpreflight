@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Third-Party Extensions"
 description: "Packages built by ecosystem partners that extend x402 beyond the core specification."
 ---

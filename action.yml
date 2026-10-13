@@ -40,10 +40,10 @@ runs:
           exit 3
         fi
         if [ "$MODE" = "schema" ]; then
-          node "$GITHUB_ACTION_PATH/bin/mcpdoctor.mjs" schema "$ENDPOINT" "--format=$FORMAT"
+          node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" schema "$ENDPOINT" "--format=$FORMAT"
           status=$?
         elif [ "$MODE" = "inspect" ]; then
-          node "$GITHUB_ACTION_PATH/bin/mcpdoctor.mjs" inspect "$ENDPOINT" "--format=$FORMAT"
+          node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" inspect "$ENDPOINT" "--format=$FORMAT"
           status=$?
         else
           echo "Unsupported mode: $MODE" >&2

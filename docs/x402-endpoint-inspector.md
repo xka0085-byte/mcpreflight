@@ -5,7 +5,7 @@ An x402 buyer normally learns that payment is required from an HTTP `402 Payment
 ## Inspect the endpoint without paying
 
 ```bash
-npx @eidonze/mcpdoctor@0.1.5 inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpreflight@0.1.5 inspect https://your-api.example/paid --method=POST --json
 ```
 
 The probe is read-only. It does not sign a payment, contact a facilitator, retry the request, or submit a transaction.
@@ -43,7 +43,7 @@ The probe is read-only. It does not sign a payment, contact a facilitator, retry
 ## GitHub Actions
 
 ```yaml
-- uses: xka0085-byte/mcp-doctor@v1
+- uses: xka0085-byte/mcpreflight@v1
   with:
     endpoint: https://your-api.example/paid
     mode: inspect
@@ -56,4 +56,4 @@ A PASS only means the observed challenge had recognizable fields. It does not me
 
 See [x402 Endpoint Inspector](x402-endpoint-inspector.html), [Troubleshooting](troubleshooting.html), and the [x402 protocol site](https://www.x402.org/).
 
-[Source and releases](https://github.com/xka0085-byte/mcp-doctor) · [npm package](https://www.npmjs.com/package/@eidonze/mcpdoctor)
+[Source and releases](https://github.com/xka0085-byte/mcpreflight) · [npm package](https://www.npmjs.com/package/@eidonze/mcpreflight)
