@@ -5,6 +5,7 @@ Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before 
 [![npm](https://img.shields.io/npm/v/@eidonze/mcpdoctor?logo=npm)](https://www.npmjs.com/package/@eidonze/mcpdoctor)
 [![CI](https://github.com/xka0085-byte/mcp-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/xka0085-byte/mcp-doctor/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/xka0085-byte/mcp-doctor)
 
 ## Find the right guide
 
