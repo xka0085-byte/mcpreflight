@@ -49,7 +49,34 @@ for (const s of servers) {
 }
 // FAIL first, then UNKNOWN
 queue.sort((a, b) => (a.status === 'FAIL' ? -1 : b.status === 'FAIL' ? 1 : 0));
-fs.writeFileSync(path.join(root, 'trust-data', 'outreach-queue.json'), JSON.stringify(queue, null, 1));
-const failN = queue.filter((q) => q.status === 'FAIL').length;
-console.log(`QUEUE broken=${queue.length} (FAIL ${failN}, UNKNOWN ${queue.length - failN})`);
-console.log('FIRST3', JSON.stringify(queue.slice(0, 3), null, 1).slice(0, 600));
+
+// ---- activity ranking: already-outreached dropped, archived repos dropped, active maintainers first ----
+// Learned from the first 178-issue batch: replies come from repos with recent commits
+// (joxo, kirbah, mjucius all replied; archived tessie-mcp could not). Archived repos are
+// unfillable, so they are removed rather than ranked.
+const filed = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'outreach-done.json'), 'utf8'))));
+const TOP = Number(process.env.OUTREACH_TOP ?? 60);
+const pending = queue.filter((q) => !filed.has(q.repo));
+const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN || '';
+async function repoMeta(full) {
+  const headers = { 'user-agent': 'mcpdoctor-outreach-select' };
+  if (token) headers.authorization = `Bearer ${token}`;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${full}`, { headers, signal: AbortSignal.timeout(15000) });
+    if (!res.ok) return null;
+    const j = await res.json();
+    return { pushed_at: j.pushed_at ?? null, archived: Boolean(j.archived) };
+  } catch { return null; }
+}
+for (const q of pending.slice(0, TOP)) {
+  const meta = await repoMeta(q.repo);
+  if (meta) Object.assign(q, meta);
+}
+const reachable = pending.filter((q) => !q.archived);
+const active = reachable.filter((q) => q.pushed_at).sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+const rest = reachable.filter((q) => !q.pushed_at);
+const ranked = [...active, ...rest];
+fs.writeFileSync(path.join(root, 'trust-data', 'outreach-queue.json'), JSON.stringify(ranked, null, 1));
+const failN = ranked.filter((q) => q.status === 'FAIL').length;
+console.log(`QUEUE broken=${ranked.length} (FAIL ${failN}, UNKNOWN ${ranked.length - failN}) filed-filtered=${queue.length - pending.length} archived-dropped=${pending.length - reachable.length} activity-fetched=${Math.min(pending.length, TOP)}`);
+console.log('FIRST3', JSON.stringify(ranked.slice(0, 3), null, 1).slice(0, 600));
