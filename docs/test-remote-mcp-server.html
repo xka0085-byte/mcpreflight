@@ -11,6 +11,7 @@
 <main style="max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem">
 <p class="muted"><a href="https://xka0085-byte.github.io/mcp-doctor/">mcpdoctor docs</a> / remote preflight</p>
 <h1>Test a remote MCP server before connecting</h1>
+<p>Testing a remote MCP server means one thing: can this deployed endpoint complete an MCP <code>initialize</code> handshake and answer <code>tools/list</code> with valid schemas, right now, without you spawning any process? In our October 2026 scan of the official registry, only 48.8% of 9,991 remote endpoints passed that bar anonymously, and 115 endpoints that passed one week flipped to UNKNOWN the next. The command below gives you the same read-only verdict locally or in CI. Numbers: <a href="state-of-mcp-2026-10.html">State of MCP Servers</a>.</p>
 <p>Most MCP testing advice covers local servers you run yourself. A deployed remote endpoint is a different problem: you have no process to spawn, no UI process model, and what you need is an unattended verdict your CI can gate on.</p>
 <h2>One command, read-only</h2>
 <pre>npx @eidonze/mcpdoctor schema https://your-mcp-server.example/mcp
