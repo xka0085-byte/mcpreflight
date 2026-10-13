@@ -34,7 +34,7 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4}
 <body>
 <main>
 <h1>State of MCP Servers — October 2026</h1>
-<p class="muted">9,991 remote servers from the official MCP Registry, checked read-only. Published 2026-10-11 · <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">full per-server directory</a></p>
+<p class="muted">9,991 remote servers from the official MCP Registry, checked read-only. Published 2026-10-11 · updated 2026-10-13 (finding 5) · <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">full per-server directory</a></p>
 
 <div class="kpi">
 <div><b>9,991</b>remote servers scanned</div>
@@ -71,6 +71,10 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4}
 
 <div class="card">
 <b>4. The community index and the official registry disagree.</b> We cross-checked the largest community awesome-list (4,150 GitHub repo links) against registry data: only 202 of its links correspond to servers we have registry scan coverage for, and 95 of those currently fail a clean handshake. Discovery is fragmented across at least two inconsistent indexes.
+</div>
+
+<div class="card">
+<b>5. A third-party proxy sits inside the official registry.</b> 213 registry entries (2.1%) do not point at a maintainer's own server but at <code>server.smithery.ai</code> proxy URLs. All 213 refused an anonymous handshake — 0% completed <code>initialize</code> + <code>tools/list</code>, against a 49.7% no-handshake baseline across the other 9,778 endpoints. Most of that gap is by design: the proxy expects a per-server config and key. The consequence is the same either way: <strong>an agent, or any independent auditor, following the official registry cannot verify these 213 servers at all without first signing up with a third party</strong> — and cannot tell auth-by-design from dead-on-arrival, the same blindness we found registry-wide, here concentrated in one vendor's corner of the index. We started this comparison after a maintainer flagged auto-registered placeholder entries (<a href="https://github.com/kirbah/mcp-youtube/issues/290">kirbah/mcp-youtube#290</a>); our data cannot confirm or refute what sits behind the proxy, only that it is unverifiable from the outside.
 </div>
 
 <h2>Limitations (read this before quoting us)</h2>
