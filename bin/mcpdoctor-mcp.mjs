@@ -65,7 +65,7 @@ async function callTool(name, args) {
   throw new Error(`unknown tool: ${name}`);
 }
 
-const serverInfo = { name: 'mcpdoctor', version: '0.1.7' };
+const serverInfo = { name: 'mcpdoctor', version: '0.1.8' };
 const write = (msg) => process.stdout.write(JSON.stringify(msg) + '\n');
 
 const rl = readline.createInterface({ input: process.stdin, terminal: false });
