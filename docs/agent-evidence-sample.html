@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent Evidence sample report — ERC-8004 agents, off-chain proof (v0)</title>
-<meta name="description" content="We cross-checked 40 unique ERC-8004 registered agents (88 tokens sampled) against their declared off-chain MCP endpoints: 22 fully consistent, 4 partially consistent, 14 unverifiable, 0 conflicts. One endpoint was claimed by 18 separate tokens. Zero overlap with the official MCP Registry. Method, limitations, and timestamps included.">
+<title>Agent Evidence sample report — week of 2026-10-12</title>
+<meta name="description" content="Weekly re-verification of ERC-8004 registered agents against their declared off-chain MCP endpoints: 40 unique endpoints (40 tokens sampled), 39 fully consistent. Method, limitations, and timestamps included.">
 <link rel="canonical" href="https://xka0085-byte.github.io/mcp-doctor/agent-evidence-sample.html">
 <style>
 :root{color-scheme:light dark}
@@ -32,317 +32,317 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 </head>
 <body>
 <main>
-<h1>Agent Evidence — sample report (v0)</h1>
-<p class="muted">On-chain ERC-8004 registrations cross-checked against off-chain MCP endpoints, read-only. An <a href="https://github.com/xka0085-byte/mcp-doctor">Agent Trust Infrastructure</a> project. Collected 2026-10-12 to 2026-10-12, published 2026-10-12.</p>
+<h1>Agent Evidence — sample report, week of 2026-10-12</h1>
+<p class="muted">On-chain ERC-8004 registrations cross-checked against off-chain MCP endpoints, read-only. An <a href="https://github.com/xka0085-byte/mcp-doctor">Agent Trust Infrastructure</a> project. Re-run weekly after the Trust Directory rescan. This run: 2026-10-12.</p>
+
 
 <div class="kpi">
-<div><b>88</b>tokens sampled</div>
-<div><b>40</b>unique endpoints behind them</div>
-<div><b style="color:#1a7f37">22</b>fully consistent</div>
-<div><b style="color:#9a6700">4</b>partially consistent</div>
-<div><b style="color:#57606a">14</b>unverifiable</div>
+<div><b>40</b>tokens sampled</div>
+<div><b>40</b>unique endpoints</div>
+<div><b style="color:#1a7f37">39</b>fully consistent</div>
+<div><b style="color:#9a6700">1</b>partially consistent</div>
+<div><b style="color:#57606a">0</b>unverifiable</div>
 </div>
 
 <h2>Why this report exists</h2>
-<p>The ERC-8004 registry now lists hundreds of thousands of on-chain agents, and its spec deliberately leaves reputation aggregation to third parties. What is missing is the boring part: does the registered identity actually resolve to a working endpoint, does the registration file still say what the chain says it says, and can an integrator check all of that <em>before</em> plugging an agent into a workflow. This is a small sample of exactly that check. It is not a trust score, it is a list of what we could and could not verify, with reasons.</p>
-<p>Each agent gets one of five verdicts, from strongest to weakest: <b>fully consistent</b> (registration declares the endpoint, a clean anonymous MCP handshake succeeds), <b>partially consistent</b> (handshake started but did not complete cleanly), <b>conflict</b> (declared and observed facts disagree), <b>unverifiable</b> (endpoint exists but we could not complete verification, reason stated), <b>missing data</b> (nothing declared to check). A record not being found is never treated as fraud.</p>
+<p>The ERC-8004 registry lists hundreds of thousands of on-chain agents and leaves reputation aggregation to third parties. What is missing is the boring part: does a registered identity resolve to a working endpoint, does the registration file still say what the chain says, and can an integrator check that <em>before</em> wiring an agent in. Each week we redraw a small sample and publish exactly what we could and could not verify, with reasons. This is not a trust score.</p>
+<p>Five verdicts, strongest to weakest: <b>fully consistent</b> (registration declares the endpoint, clean anonymous MCP handshake succeeds), <b>partially consistent</b> (handshake started but did not complete cleanly, or declaration not independently confirmable), <b>conflict</b> (declared and observed facts disagree), <b>unverifiable</b> (endpoint exists but verification failed, reason stated), <b>missing data</b> (nothing declared to check). A record not being found is never treated as fraud.</p>
 
-<h2>Findings</h2>
+<h2>Findings this week</h2>
 
 <div class="card">
-<b>1. Batch minting inflates the on-chain agent count.</b> Our 88 sampled tokens resolve to just 40 unique MCP endpoints. One endpoint (<code>api.signalbound.art/mcp</code>) is claimed by 18 separate ERC-721 tokens; another by 16. Five endpoints account for 50 of the 88 tokens. Anyone consuming the registry by token count today overcounts distinct agents — in this sample, by more than 2×.
+<b>1. Batch minting inflates the on-chain agent count.</b> 40 sampled tokens resolve to 40 unique MCP endpoints. 
 </div>
 
 <div class="card">
-<b>2. The 8004 ecosystem and the official MCP Registry do not overlap — at all.</b> We cross-matched all 40 endpoints against the 9,991 endpoints in the <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">Trust Directory</a> (official MCP Registry scan): zero exact-URL matches, zero host-level matches in this sample. Two agent ecosystems currently index disjoint populations. A buyer checking one gets no information about the other.
+<b>2. The 8004 ecosystem and the official MCP Registry do not overlap in our sample.</b> 0 exact-URL matches and 0 host-level matches against the 9,991-endpoint <a href="https://xka0085-byte.github.io/mcp-doctor/trust/">Trust Directory</a>. A buyer checking one index gets no information about the other.
 </div>
 
 <div class="card">
-<b>3. A passing handshake is a low bar, and mostly a free-tier bar.</b> 24 of 40 endpoints completed a clean anonymous MCP handshake. 17 of those 24 run on <code>*.vercel.app</code> free-tier subdomains. Identity verification on-chain plus a working endpoint says nothing about who operates the deployment, how long it will live, or whether behavior matches claims over time. The consistent-but-cheap cohort is exactly where a behavior-evidence layer has work to do.
+<b>3. A passing handshake is a low bar, and mostly a free-tier bar.</b> 40 of 40 endpoints completed a clean anonymous MCP handshake. 0 of those 40 run on <code>*.vercel.app</code> free-tier subdomains. On-chain identity plus a working endpoint says nothing about who operates the deployment or whether behavior matches claims over time.
 </div>
 
 <div class="card">
-<b>4. Registration files are mostly live — when you can reach them.</b> 37 of 40 registration files were independently re-fetched, and all 37 still declare the same MCP endpoint as the on-chain index cache. Only 1 is byte-for-byte identical to the cache — the rest differ in JSON serialization (field order, formatting), not in declared endpoints. 3 use <code>ipfs://</code> URIs that public gateways rate-limited during our window, so their declarations rest on the index cache only and are marked unverifiable in the table.
+<b>4. Registration files are mostly live — when you can reach them.</b> 39 of 40 registration files were independently re-fetched. IPFS-hosted files behind rate-limited public gateways are marked unverifiable and rest on the index cache.
 </div>
 
 <h2>Results, all 40 unique endpoints</h2>
 <table>
 <tr><th>Agent (chain, token)</th><th>Declared MCP endpoint</th><th>Live check (mcpdoctor schema, read-only)</th><th>Verdict</th></tr>
 <tr>
-<td><b>Signalbound #998</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/52646">#52646</a> · 18 tokens share this endpoint</span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.signalbound.art/mcp</code></td>
-<td>no clean handshake · initialize → HTTP 401</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 401)</span></td>
+<td><b>CEGx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371951">#371951</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x7636244bab612264e1b2dfd4ba6e26d0311b1eb7/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Q402 Agent (by Quack AI)</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371599">#371599</a> · 16 tokens share this endpoint</span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://q402.quackai.ai/api/mcp/info</code></td>
-<td>no clean handshake · initialize → HTTP 405</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 405)</span></td>
+<td><b>CIx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371913">#371913</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x40bf69f64ee34a535568be85e80e126c4282ecf3/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Archana Dash</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/100163">#100163</a> · 8 tokens share this endpoint</span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://www.rasphia.com/mcp</code></td>
-<td>no clean handshake · initialize → HTTP 401</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 401)</span></td>
+<td><b>BTGOx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371937">#371937</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x60ae7d760a1c7b528c0384bc945fadf1438f47a5/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Zyfai Yield Agent for 0x611528E004Db5478e46A</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/98733">#98733</a> · 5 tokens share this endpoint</span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp.zyf.ai/mcp</code></td>
-<td>no clean handshake · initialize → HTTP 401</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 401)</span></td>
+<td><b>APPx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371922">#371922</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x50a1291f69d9d3853def8209cfb1af0b46927be1/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Vitals</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/367904">#367904</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://vitals.43-165-190-110.sslip.io/mcp</code></td>
-<td>pass · 2 tools · proto 2025-03-26</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (2 tools listed)</span></td>
+<td><b>CITICx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371914">#371914</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x41778f4f36b2dd8fd27c55043154ba7a3df18d83/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Onchain Outcome Verifier</b><br><span class="muted" style="font-size:.8rem">OKX Chain · <a href="https://8004scan.io/agents/196/14707">#14707</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://sangjiege.online/perp-risk/v1/onchain-outcome</code></td>
-<td>no clean handshake · initialize → HTTP 402</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 402)</span></td>
+<td><b>AVAVx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371920">#371920</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x4c9a7d337c145df80ef3d6a71bbe5650a9326e9b/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>PRONOUS</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/367667">#367667</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://github.com/wadezigh96/pronous</code></td>
-<td>no clean handshake · initialize → HTTP 422</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 422)</span></td>
+<td><b>AAONx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371945">#371945</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x6cf8a0f1e7982a2cad7f878db2bd0e1f30b49e6c/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Panda Financial</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/98568">#98568</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://pandafinancial.org/mcp</code></td>
-<td>pass · 35 tools · proto 2025-03-26</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (35 tools listed)</span></td>
+<td><b>BALLx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371936">#371936</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x60143db3b316a95771435b5cf6a1d71b7a09bbed/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>StellarFalcon</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/365900">#365900</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://app.singularry.org/api/mcp</code></td>
-<td>pass · 5 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (5 tools listed)</span></td>
+<td><b>CDEx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371952">#371952</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x769621695d9c1b8d1c88c9b973fcac6f2067a0a3/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>ACK</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/8620">#8620</a> · 3 tokens share this endpoint</span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://ack-onchain.dev/api/mcp</code></td>
-<td>pass · 5 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (5 tools listed)</span></td>
+<td><b>CLONPx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371932">#371932</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x5eac3a8128627c67a33a3d3eaa12433cbd15c783/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>aegisverify</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22396">#22396</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://aegisverify-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>CAGx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371924">#371924</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x52e35244056fbb025e7fa4dd7699ed0440acc638/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>CeloFX</b><br><span class="muted" style="font-size:.8rem">Celo · <a href="https://8004scan.io/agents/42220/10">#10</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://celofx.vercel.app/api/mcp</code></td>
-<td>no clean handshake · tools/list → HTTP 500</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">MCP initialize succeeded but tools/list returned HTTP 500</span></td>
+<td><b>BBx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371943">#371943</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x698333365809e24bb32ed0538d75ce0f92025609/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>luminaverse</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22349">#22349</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://luminaverse-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>BBYx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371916">#371916</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x44be932030afb9fccd22621f5f5f5c2fe72efc5c/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Muhammad Ashraf</b><br><span class="muted" style="font-size:.8rem">X Layer · <a href="https://8004scan.io/agents/45056/23087">#23087</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://my-ai-agent-786.vercel.app/api/architect</code></td>
-<td>no clean handshake · timeout</td>
-<td><span style="color:#fff;background:#9a6700;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">partially consistent</span><br><span class="muted" style="font-size:.8rem">MCP initialize succeeded but the check did not complete cleanly: INITIALIZE_RESPONSE_INVALID, TOOLS_LIST_INVALID</span></td>
+<td><b>BRXx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371917">#371917</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x460fb691d1e5d44db6bf92448718bcea4e863b56/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>kasim</b><br><span class="muted" style="font-size:.8rem">X Layer · <a href="https://8004scan.io/agents/45056/23495">#23495</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://my-ai-agent-world.vercel.app/api/architect</code></td>
-<td>no clean handshake · timeout</td>
-<td><span style="color:#fff;background:#9a6700;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">partially consistent</span><br><span class="muted" style="font-size:.8rem">MCP initialize succeeded but the check did not complete cleanly: INITIALIZE_RESPONSE_INVALID, TOOLS_LIST_INVALID</span></td>
+<td><b>AVYx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371942">#371942</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x66aa8475a988006c6b9e6297b2d0ca6021017a08/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Billions Architect AI</b><br><span class="muted" style="font-size:.8rem">X Layer · <a href="https://8004scan.io/agents/45056/18139">#18139</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://verified-agent-identity-4iw5.vercel.app/api/architect</code></td>
-<td>no clean handshake · initialize → HTTP 404</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 404)</span></td>
+<td><b>AVTRx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371956">#371956</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x789a8c88647015ee81ea15553bf80bb515ac6637/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>OpenOdds.Ai</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/22771">#22771</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.openodds.ai/mcp</code></td>
-<td>pass · 14 tools · proto 2025-11-25</td>
+<td><b>AALx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371908">#371908</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x379cdc0615441e180b9599a08bd40d8604d02705/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>AZNx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371930">#371930</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x5d642505fe1a28897eb3baba665f454755d8daa2/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>BA.GBx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371944">#371944</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x6acc94e8ebfacec80af8a2b8964c6c03054efd22/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>BRx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371915">#371915</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x44a81c9d99b59bcc19ee2b852ac2abdf81062869/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>CLHx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371957">#371957</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x7a1c7312aa5ab60d6ded33bb5cf23e1b15430b65/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>AUGOx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371948">#371948</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x72fe2f3a394e7a8294f6d7ad69b54751c07fbd50/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>BSXx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371933">#371933</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x5fe45d4b2cad6eb5ef6bda8626764817fdb4e940/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>ASMPTx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371928">#371928</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x5873ce319fd206789b7cf6c6ad3d17d803a10f1c/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>BSPx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371954">#371954</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x7796f4e23a62ef3653829c21032a9e24beaf4cf5/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>BOCOMx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371911">#371911</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x38c62f1e6afaa0b80eeb6f5c0a9df7cf7d6e07b1/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>AXTAx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371953">#371953</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x77157703b27511be44de5f58c5230b4963921606/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
 <td><span style="color:#fff;background:#9a6700;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">partially consistent</span><br><span class="muted" style="font-size:.8rem">clean MCP handshake observed, but the registration file could not be re-fetched for independent confirmation</span></td>
 </tr>
 <tr>
-<td><b>Clawdia</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/2290">#2290</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://work.clawplaza.ai/mcp/clawdia</code></td>
-<td>pass · 3 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#9a6700;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">partially consistent</span><br><span class="muted" style="font-size:.8rem">clean MCP handshake observed, but the registration file could not be re-fetched for independent confirmation</span></td>
+<td><b>BAx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371931">#371931</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x5e5e6aa595f5ba2e12d3120810b9fe607735ac8c/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>axedraxos</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22185">#22185</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://axedraxos-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>CARRx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371918">#371918</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x46464de7ec96039cc22b58ebbcb718ed3e7b6957/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>MARKOV</b><br><span class="muted" style="font-size:.8rem">Celo · <a href="https://8004scan.io/agents/42220/6386">#6386</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://gamearenahq.xyz/.well-known/mcp.json</code></td>
-<td>no clean handshake · initialize → HTTP 405</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 405)</span></td>
+<td><b>ADSKx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371949">#371949</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x7320ff11b32baa599d44fc8c8ecb31c7932443e1/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Surf AI</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/51085">#51085</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp.surfliquid.com/mcp</code></td>
-<td>pass · 3 tools · proto 2025-03-26</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>BARCx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371929">#371929</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x598a941bc6961e60c0d5059bb453949d2ce536a4/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>aegiszk</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22352">#22352</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://aegiszk-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>ARx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371946">#371946</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x70853c88915b95efaa7bb5c15413d3c841bfe807/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>mevguard</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22383">#22383</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mevguard-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>CATx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371925">#371925</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x54d883064b634390c30b780d0cad761be8bfaae9/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>erni</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22335">#22335</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://erni-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>APOx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371910">#371910</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x38c49e8236242ec4dce135775c2a8d525830ffc0/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>DataQuant Pro</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22455">#22455</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp-server-agents-8aui.vercel.app/mcp/agent-dataquant</code></td>
-<td>no clean handshake · initialize → HTTP 404</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 404)</span></td>
+<td><b>CINFx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371935">#371935</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x600aa2917f0223ab6623ce8bf95e9bcaffd8499d/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>DataAnalyst Pro</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22300">#22300</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp-server-agents-8aui.vercel.app/mcp/agent-dataanalyst</code></td>
-<td>no clean handshake · initialize → HTTP 404</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 404)</span></td>
+<td><b>CACCx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371926">#371926</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x57e8fe92392c473975e6fae59799e3f26d957b0d/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>aurasight</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22357">#22357</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://aurasight-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>AYIx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371940">#371940</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x6578dcb57279a63bcc1193db79b46ddba6b2d0ce/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>governancex</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22387">#22387</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://governancex-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>APHx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371955">#371955</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x7848475161802da675c321b250e0b25658fdf96c/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>cipheraudit</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22400">#22400</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://cipheraudit-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>BPOPx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371927">#371927</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x5866f125b00bf3d123586d26681362c110553262/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>nexarion</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22393">#22393</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://nexarion-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>AeroDropX</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22332">#22332</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://aero-drop-x-api.vercel.app/mcp</code></td>
-<td>pass · 4 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (4 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>quantumswap</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22338">#22338</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://quantumswap-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>oraclemind</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22381">#22381</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://oraclemind-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>InsightForge AI</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22398">#22398</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp-server-agents-8aui.vercel.app/mcp/agent-insightforge</code></td>
-<td>no clean handshake · initialize → HTTP 404</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 404)</span></td>
-</tr>
-<tr>
-<td><b>Nexora Analytics AI</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22497">#22497</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp-server-agents-8aui.vercel.app/mcp/agent-nexora</code></td>
-<td>no clean handshake · initialize → HTTP 404</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 404)</span></td>
-</tr>
-<tr>
-<td><b>castmind</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22353">#22353</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://castmind-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>Quantiva Intelligence</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22524">#22524</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp-server-agents-8aui.vercel.app/mcp/agent-quantiva</code></td>
-<td>no clean handshake · initialize → HTTP 404</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 404)</span></td>
-</tr>
-<tr>
-<td><b>quantrax</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22385">#22385</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://quantrax-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>nexusnode</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22362">#22362</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://nexusnode-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>zephyrax</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/22414">#22414</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://zephyrax-api.vercel.app/mcp</code></td>
-<td>pass · 3 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (3 tools listed)</span></td>
+<td><b>BROSx</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/371950">#371950</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/56/0x734034b8903f23c709927377154a13d8f85e1f79/mcp</code></td>
+<td>pass · 9 tools · proto 2025-03-26</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 </table>
 <p class="muted">Verdict distribution:</p>
 <table>
 <tr><th>Verdict</th><th>Endpoints</th><th></th></tr>
-<tr><td>fully consistent</td><td>22</td><td><div class="bar"><i style="width:55%;background:#1a7f37"></i></div></td></tr>
-<tr><td>unverifiable</td><td>14</td><td><div class="bar"><i style="width:35%;background:#57606a"></i></div></td></tr>
-<tr><td>partially consistent</td><td>4</td><td><div class="bar"><i style="width:10%;background:#9a6700"></i></div></td></tr>
+<tr><td>fully consistent</td><td>39</td><td><div class="bar"><i style="width:98%;background:#1a7f37"></i></div></td></tr>
+<tr><td>partially consistent</td><td>1</td><td><div class="bar"><i style="width:3%;background:#9a6700"></i></div></td></tr>
 </table>
 
 <h2>Method</h2>
 <ul>
-<li><b>Sampling.</b> 88 tokens pulled from the 8004scan explorer API (<code>api.8004scan.io</code>), biased toward agents declaring MCP support (<code>has_mcp=true</code>, mainnets only) plus active and top-scored cohorts. 40 unique MCP endpoints remained after deduplication. This is a convenience sample, not a random one.</li>
-<li><b>Declaration side.</b> For each agent: on-chain registration metadata (via 8004scan), the registration file URI it points to, and the declared MCP service entry. Registration files were independently re-fetched and compared against the index cache.</li>
-<li><b>Observation side.</b> Each declared endpoint received exactly two JSON-RPC requests: <code>initialize</code> and <code>tools/list</code>, via <code>mcpdoctor schema</code> 0.1.5 (MIT, zero dependencies). No tool was ever called, no authentication attempted, no payment signed.</li>
-<li><b>Cross-match.</b> All 40 endpoints were matched against the 9,991-endpoint Trust Directory scan by exact URL and by host.</li>
+<li><b>Sampling.</b> Tokens pulled from the 8004scan explorer API, biased toward agents declaring MCP support plus active and top-scored cohorts, deduplicated to 40 unique MCP endpoints. Convenience sample, not random. Samples are re-drawn weekly.</li>
+<li><b>Declaration side.</b> On-chain registration metadata, the registration file URI, and the declared MCP service entry. Registration files independently re-fetched and compared to the index cache.</li>
+<li><b>Observation side.</b> Exactly two JSON-RPC requests per endpoint: <code>initialize</code> and <code>tools/list</code> via <code>mcpdoctor schema</code> (MIT, zero dependencies). No tool invoked, no authentication attempted, no payment signed.</li>
+<li><b>Cross-match.</b> All endpoints matched against the official MCP Registry scan by exact URL and host.</li>
 <li><b>Reproduce any row:</b></li>
 </ul>
 <pre>npx @eidonze/mcpdoctor schema &lt;endpoint-url&gt;</pre>
 
 <h2>Limitations (read this before quoting us)</h2>
 <ul>
-<li><b>Anonymous checks only.</b> Endpoints returning 401 (auth required) or 402 (payment required) are counted as unverifiable, not broken. One endpoint failed initialize with HTTP 402 — that is x402 working as designed, not a dead agent.</li>
-<li><b>One point in time.</b> Probes ran 2026-10-12 08:00 to 2026-10-12 08:03 UTC. Endpoints change; a weekly re-run is planned.</li>
-<li><b>No behavior beyond the handshake.</b> We never invoked a tool. Consistency here means the declared endpoint speaks MCP and lists tools, nothing stronger.</li>
-<li><b>Index cache dependency.</b> Registration content came from 8004scan's cache for the 3 IPFS-hosted files we could not re-fetch through rate-limited public gateways.</li>
-<li><b>Ownership not resolved.</b> We did not verify that the owner address controls the endpoint domain (DNS/ERC-1271 binding checks are future work), so "fully consistent" does not mean "operator verified".</li>
-<li><b>Small, biased sample.</b> 88 tokens is a sliver of the registry, selected for declared MCP support. The batch-minting finding is arithmetic on this sample, not an estimate for the whole registry.</li>
-<li><b>0 conflicts and 0 missing-data rows in this sample</b> is a property of the sampling, not evidence that conflicts do not exist.</li>
+<li><b>Anonymous checks only.</b> 401 or 402 endpoints are unverifiable, not broken. HTTP 402 means x402 is working as designed.</li>
+<li><b>One point in time.</b> Probes ran 2026-10-12 10:11 to 2026-10-12 10:12 UTC on 2026-10-12.</li>
+<li><b>No behavior beyond the handshake.</b> No tool was invoked. Consistency means the declared endpoint speaks MCP and lists tools, nothing stronger.</li>
+<li><b>Index cache dependency.</b> Registration content for unreachable files rests on 8004scan's cache and is marked accordingly.</li>
+<li><b>Ownership not resolved.</b> We do not verify that the owner address controls the endpoint domain, so "fully consistent" does not mean "operator verified".</li>
+<li><b>Small, biased sample.</b> 40 tokens is a sliver of the registry. Batch-minting numbers are arithmetic on this sample, not registry-wide estimates.</li>
+<li><b>0 conflicts or 0 missing-data rows</b> would be a property of the sample, not evidence that they do not exist.</li>
 </ul>
 
 <h2>What we would build next</h2>
-<p>This page is the v0 of that loop: sample, verify, publish, repeat weekly, and let integrators diff an agent's declared self against its observed behavior over time. If you maintain an agent directory, a marketplace, or a workflow that consumes 8004 agents and this kind of pre-integration evidence would change a decision you make, we would like to hear from you — <a href="https://github.com/xka0085-byte/mcp-doctor/issues">open an issue</a>.</p>
+<p>This page is the v0 of a weekly loop: sample, verify, publish, diff an agent's declared self against its observed behavior over time. If you maintain an agent directory, a marketplace, or a workflow that consumes 8004 agents and pre-integration evidence would change a decision you make, we would like to hear from you — <a href="https://github.com/xka0085-byte/mcp-doctor/issues">open an issue</a>.</p>
 
 <div class="foot">
-Produced by <a href="https://github.com/xka0085-byte/mcp-doctor">mcpdoctor</a> (Agent Trust Infrastructure) — read-only checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Data sources: 8004scan explorer API, official MCP Registry via the Trust Directory. Collected 2026-10-12–2026-10-12. Verdicts describe verification outcomes, not agent trustworthiness. Corrections welcome via issues.
+Produced by <a href="https://github.com/xka0085-byte/mcp-doctor">mcpdoctor</a> (Agent Trust Infrastructure) — read-only checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Data sources: 8004scan explorer API, official MCP Registry via the Trust Directory. Collected 2026-10-12. Verdicts describe verification outcomes, not agent trustworthiness. Corrections welcome via issues.
 </div>
 </main>
 </body>
