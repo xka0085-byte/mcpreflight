@@ -133,7 +133,8 @@ function markdown(report) {
   const lines = [`# mcpdoctor report`, '', `- Status: **${report.finalStatus}**`, `- Endpoint: ${report.endpoint}`, `- HTTP: ${report.http.status}`, `- Response: ${report.http.elapsedMs} ms / ${report.http.bodyBytes} bytes`, `- Body SHA-256: \`${report.http.bodySha256}\``, '', '## Payment requirements', ''];
   if (!report.x402.accepts.length) lines.push('- None parsed', '');
   report.x402.accepts.forEach((item, i) => lines.push(`### accepts[${i}]`, '', ...Object.entries(item).map(([key, value]) => `- ${key}: ${value ?? 'missing'}`), ''));
-  lines.push('## Findings', '', ...(report.findings.length ? report.findings.map((item) => `- **${item.status}** \`${item.code}\`: ${item.message}`) : ['- None']), '', '## Limitations', '', ...report.limitations.map((item) => `- ${item}`), '');
+  lines.push('## Findings', '', ...(report.findings.length ? report.findings.map((item) => `- **${item.status}** \`${item.code}\`: ${item.message}`) : ['- None']), '', '## Limitations', '', ...report.limitations.map((item) => `- ${item}`));
+  if (report.finalStatus === 'PASS') lines.push('', '## Next steps', '', 'Gate CI on this exact check (paste into .github/workflows/x402.yml):', '', '```yaml', '- uses: xka0085-byte/mcp-doctor@v1', '  with:', `    endpoint: ${report.endpoint}`, '    mode: inspect', '```', '', 'Weekly re-scan and docs: https://xka0085-byte.github.io/mcp-doctor/x402-endpoint-inspector.html');
   return lines.join('\n');
 }
 
@@ -166,7 +167,12 @@ async function schemaCommand(url, format) {
   }
   if (!findings.length) add('STATIC_SCHEMA_CHECKS_PASSED', 'INFO', `${tools.length} tools passed deterministic schema checks`);
   const report = { reportVersion: 1, inspectorVersion: VERSION, mode: 'read-only MCP initialize + tools/list', checkedAt: new Date().toISOString(), endpoint: url.toString(), finalStatus: findings.some(x => x.severity === 'FAIL') ? 'FAIL' : 'PASS', mcp: { protocolVersion: init?.result?.protocolVersion ?? null, serverInfo: init?.result?.serverInfo ?? null, toolCount: Array.isArray(tools) ? tools.length : null }, findings, limitations: ['Static schema checks do not predict model tool selection or prove behavior across all clients.', 'No tool was called; side effects, authorization, data quality and security were not tested.'] };
-  console.log(format === 'json' ? JSON.stringify(report, null, 2) : `# MCP Tool Schema Report\n\n- Status: **${report.finalStatus}**\n- Endpoint: ${report.endpoint}\n- Protocol: ${report.mcp.protocolVersion ?? 'unknown'}\n- Tools: ${report.mcp.toolCount ?? 'unknown'}\n\n${findings.map(x => `- **${x.severity}** \`${x.code}\`: ${x.message}`).join('\n')}\n\n${report.limitations.map(x => `- ${x}`).join('\n')}`);
+  if (format === 'json') { console.log(JSON.stringify(report, null, 2)); }
+  else {
+    let text = `# MCP Tool Schema Report\n\n- Status: **${report.finalStatus}**\n- Endpoint: ${report.endpoint}\n- Protocol: ${report.mcp.protocolVersion ?? 'unknown'}\n- Tools: ${report.mcp.toolCount ?? 'unknown'}\n\n${findings.map(x => `- **${x.severity}** \`${x.code}\`: ${x.message}`).join('\n')}\n\n${report.limitations.map(x => `- ${x}`).join('\n')}`;
+    if (report.finalStatus === 'PASS') text += `\n\nNext steps\n- Gate CI on this exact check (paste into .github/workflows/mcp.yml):\n\n    - uses: xka0085-byte/mcp-doctor@v1\n      with:\n        endpoint: ${report.endpoint}\n        mode: schema\n\n- Weekly re-scan and a README status badge: https://xka0085-byte.github.io/mcp-doctor/trust/\n`;
+    console.log(text);
+  }
   process.exitCode = report.finalStatus === 'PASS' ? 0 : 1;
 }
 

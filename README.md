@@ -88,7 +88,7 @@ jobs:
           format: markdown
 ```
 
-Use `mode: inspect` for an x402 preflight. The action fails on `FAIL` or `UNKNOWN` by default; set `fail-on: false` for an informational check.
+Use `mode: inspect` for an x402 preflight. The action fails on `FAIL` or `UNKNOWN` by default; set `fail-on: false` for an informational check. Looking for it in the Marketplace? Search "MCP Trust Check" or "mcp server test", or browse the [mcp-trust-check listing](https://github.com/marketplace/actions/mcp-trust-check).
 
 ## Starter template
 
