@@ -64,6 +64,52 @@ function runSchema(ep) {
   });
 }
 
+// Enrichment for UNKNOWN endpoints: distinguish "auth-gated" from "actually dead".
+// One anonymous initialize POST; 401/403 + Bearer WWW-Authenticate → gated.
+// Then probe RFC 9728 resource metadata + discovery files (server card, ai-catalog).
+// Read-only: no tools invoked, no credentials, no payments.
+async function probeAuth(ep) {
+  const out = { auth: null, resourceMetadata: null, discovery: [] };
+  try {
+    const res = await fetch(ep, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', accept: 'application/json, text/event-stream' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'mcpreflight', version: '0.2.0' } } }),
+      signal: AbortSignal.timeout(9000),
+    });
+    const www = res.headers.get('www-authenticate');
+    if ((res.status === 401 || res.status === 403) && www && /bearer/i.test(www)) {
+      out.auth = 'gated';
+      const m = www.match(/resource_metadata="([^"]+)"/i);
+      if (m) {
+        out.resourceMetadata = m[1];
+        try {
+          const rm = await fetch(m[1], { signal: AbortSignal.timeout(6000) });
+          if (rm.ok) {
+            const j = await rm.json().catch(() => null);
+            if (j && Array.isArray(j.authorization_servers) && j.authorization_servers.length > 0) out.auth = 'gated-verified';
+          }
+        } catch {}
+      }
+    }
+  } catch {}
+  if (out.auth) {
+    let u;
+    try { u = new URL(ep); } catch { return out; }
+    const candidates = [
+      [`${ep.replace(/\/$/, '')}/server-card`, 'server-card'],
+      [`${u.origin}/.well-known/ai-catalog.json`, 'ai-catalog'],
+    ];
+    for (const [target, tag] of candidates) {
+      try {
+        const r = await fetch(target, { signal: AbortSignal.timeout(5000) });
+        if (r.ok) out.discovery.push(tag);
+      } catch {}
+    }
+  }
+  return out;
+}
+
 const serversPath = path.join(outDir, 'servers-full.json');
 let servers;
 if (fs.existsSync(serversPath)) {
@@ -101,6 +147,15 @@ async function worker() {
       findings: report?.findings ?? [{ severity: 'UNKNOWN', code: 'NO_RESPONSE', message: 'Endpoint did not complete MCP initialize + tools/list within timeout' }],
       checkedAt: report?.checkedAt ?? new Date().toISOString(),
     };
+    if (rec.finalStatus === 'UNKNOWN') {
+      const auth = await probeAuth(s.url);
+      if (auth.auth) {
+        rec.finalStatus = 'AUTH_GATED';
+        rec.auth = auth.auth; // 'gated' | 'gated-verified'
+        rec.resourceMetadata = auth.resourceMetadata;
+        rec.discovery = auth.discovery;
+      }
+    }
     done.set(s.name, rec);
     log.write(JSON.stringify(rec) + '\n');
     n++;

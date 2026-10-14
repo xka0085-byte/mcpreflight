@@ -32,7 +32,7 @@ for (const r of results) {
   used.set(s, true); r.slug = s;
 }
 
-const CSS = `:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}code{background:transparent}}`;
+const CSS = `:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.AUTH_GATED{background:#ddf4ff;color:#0550ae}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}code{background:transparent}}`;
 
 // page(): per-page canonical (fixes duplicate-content SEO bug)
 const page = (title, desc, body, canonicalPath = `${BASE}/`) => `<!DOCTYPE html>
@@ -78,7 +78,7 @@ chunks.forEach((chunk, i) => {
   const nav = chunks.length > 1 ? pager(i, chunks.length) : '';
   const body = `<h1>Trust reports for official MCP Registry servers</h1>
 <p class="muted">${total} remote servers scanned · read-only · reproducible with one CLI command · no tool calls, no payments</p>
-<p><span class="pill PASS">PASS ${tally.PASS ?? 0}</span> <span class="pill FAIL">FAIL ${tally.FAIL ?? 0}</span> <span class="pill UNKNOWN">UNKNOWN ${tally.UNKNOWN ?? 0}</span></p>
+<p><span class="pill PASS">PASS ${tally.PASS ?? 0}</span> <span class="pill FAIL">FAIL ${tally.FAIL ?? 0}</span> <span class="pill AUTH_GATED">AUTH-GATED ${tally.AUTH_GATED ?? 0}</span> <span class="pill UNKNOWN">UNKNOWN ${tally.UNKNOWN ?? 0}</span></p>
 <p>Every report below was produced by <a href="${SITE}/mcpreflight/">mcpreflight</a> sending only MCP <code>initialize</code> and <code>tools/list</code> to the server's official registry endpoint, then checking protocol version and JSON Schema consistency deterministically. Reproduce any report yourself:</p>
 <pre>npx @eidonze/mcpreflight schema &lt;endpoint-url&gt;</pre>
 ${i === 0 ? '<h2>Directory</h2>' : `<h2>Directory (page ${i + 1})</h2>`}
@@ -105,20 +105,21 @@ for (const r of results) {
     server: { registryName: r.name, title: r.title, description: r.description, registryVersion: r.version },
     endpoint: r.url,
     trust: { finalStatus: r.finalStatus, protocolVersion: r.protocolVersion, serverInfo: r.serverInfo, toolCount: r.toolCount, findings: r.findings },
+    ...(r.finalStatus === 'AUTH_GATED' ? { authGate: { status: r.auth ?? 'gated', resourceMetadata: r.resourceMetadata ?? null, discovery: r.discovery ?? [] } } : {}),
     verify: `npx @eidonze/mcpreflight schema ${r.url}`,
   };
   fs.writeFileSync(path.join(outDir, 'api', `${r.slug}.json`), JSON.stringify(api, null, 2));
 
   const badge = (label, value, color) => `<svg xmlns="http://www.w3.org/2000/svg" width="${6.5 * label.length + 6.5 * value.length + 30}" height="20" role="img"><title>${label}: ${value}</title><linearGradient id="s" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="r"><rect width="${6.5 * label.length + 6.5 * value.length + 30}" height="20" rx="3"/></clipPath><g clip-path="url(#r)"><rect width="${6.5 * label.length + 24}" height="20" fill="#555"/><rect x="${6.5 * label.length + 24}" width="${6.5 * value.length + 6}" height="20" fill="${color}"/><rect width="${6.5 * label.length + 6.5 * value.length + 30}" height="20" fill="url(#s)"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11"><text x="${3.25 * label.length + 12}" y="14">${label}</text><text x="${6.5 * label.length + 27 + 3.25 * value.length}" y="14">${value}</text></g></svg>`;
-  const color = r.finalStatus === 'PASS' ? '#2ea44f' : r.finalStatus === 'FAIL' ? '#cf222e' : '#6e7781';
+  const color = r.finalStatus === 'PASS' ? '#2ea44f' : r.finalStatus === 'FAIL' ? '#cf222e' : r.finalStatus === 'AUTH_GATED' ? '#0969da' : '#6e7781';
   fs.writeFileSync(path.join(outDir, 'badge', `${r.slug}.svg`), badge('mcp trust', r.finalStatus.toLowerCase(), color));
 
   const html = page(
     `${r.title} — MCP trust report (${r.finalStatus})`,
     `Read-only MCP schema trust report for ${r.name} (${r.url}): ${r.finalStatus}, protocol ${r.protocolVersion ?? 'unknown'}, ${r.toolCount ?? 'unknown'} tools. Reproducible with mcpreflight.`,
     `<p><span class="muted"><a href="${SITE}${BASE}/">Trust Directory</a> / report</span></p>
-<h1>${esc(r.title)} <span class="pill ${r.finalStatus}">${r.finalStatus}</span></h1>
-${r.finalStatus === 'UNKNOWN' ? '<p class="muted">No anonymous handshake observed — endpoints behind authentication are expected to show this result; it does not mean the server is broken.</p>' : ''}
+<h1>${esc(r.title)} <span class="pill ${r.finalStatus}">${r.finalStatus === 'AUTH_GATED' ? 'AUTH-GATED' : r.finalStatus}</span></h1>
+${r.finalStatus === 'AUTH_GATED' ? `<p class="muted">The endpoint answered an anonymous initialize with 401 and a <code>WWW-Authenticate: Bearer</code> header, so it requires authentication by design${r.auth === 'gated-verified' ? '; its RFC 9728 protected-resource metadata is live, confirming an OAuth authorization server' : ''}. This is an auth gate, not a failure — authenticated scans are out of scope.</p>` : r.finalStatus === 'UNKNOWN' ? '<p class="muted">No anonymous handshake observed — endpoints behind authentication are expected to show this result; it does not mean the server is broken.</p>' : ''}
 <p class="muted">${esc(r.description || '')}</p>
 <table>
 <tr><th>Registry name</th><td><code>${esc(r.name)}</code> (v${esc(r.version ?? '?')})</td></tr>
@@ -126,6 +127,7 @@ ${r.finalStatus === 'UNKNOWN' ? '<p class="muted">No anonymous handshake observe
 <tr><th>Reported server</th><td>${esc(r.serverInfo ? `${r.serverInfo.name} ${r.serverInfo.version ?? ''}` : '—')}</td></tr>
 <tr><th>Protocol version</th><td>${esc(r.protocolVersion ?? 'not negotiated')}</td></tr>
 <tr><th>Tools exposed</th><td>${r.toolCount ?? 'unknown'}</td></tr>
+${r.finalStatus === 'AUTH_GATED' ? `<tr><th>Auth gate</th><td>${esc(r.auth ?? 'gated')}${r.discovery?.length ? ` · discovery: ${esc(r.discovery.join(', '))}` : ''}</td></tr>` : ''}
 <tr><th>Checked at</th><td>${esc(r.checkedAt)}</td></tr>
 </table>
 <h2>Findings</h2>
