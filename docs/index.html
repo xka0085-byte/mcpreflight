@@ -3,43 +3,157 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>mcpreflight — MCP Schema Checker and x402 Inspector</title>
-  <meta name="description" content="Read-only MCP schema checker, MCP security CI guide, and x402 HTTP 402 endpoint inspector for AI-agent developers.">
+  <title>mcpreflight — read-only MCP preflight checks &amp; x402 inspector</title>
+  <meta name="description" content="Read-only MCP server preflight checks: initialize handshake, tools/list schema validation, x402 payment endpoint inspection, and a weekly Trust Directory covering 9,991 registry endpoints.">
   <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/">
   <meta name="google-site-verification" content="googlefc84beb62afa4471" />
-  <meta property="og:title" content="mcpreflight — MCP Schema Checker and x402 Inspector">
-  <meta property="og:description" content="Check MCP tool schemas and x402 payment endpoints without calling tools or making payments.">
+  <meta property="og:title" content="mcpreflight — read-only MCP preflight checks">
+  <meta property="og:description" content="Validate MCP servers before you connect: schema checks, CI gating, and a weekly Trust Directory of 9,991 registry endpoints. No tool calls, no payments.">
   <meta property="og:url" content="https://xka0085-byte.github.io/mcpreflight/">
   <style>
-    :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.55; }
-    body { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    :root {
+      color-scheme: light dark;
+      --bg: #fafbfc; --bg2: #ffffff; --fg: #0d1117; --muted: #57606a;
+      --card: #ffffff; --border: #d8dee4; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --bad: #cf222e; --code-bg: #0d1117; --code-fg: #e6edf3;
+      --chip: #ddf4ff; --chip-fg: #0969da;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0d1117; --bg2: #161b22; --fg: #e6edf3; --muted: #8b949e;
+        --card: #161b22; --border: #30363d; --accent: #4493f8; --accent2: #3fb950;
+        --warn: #d29922; --bad: #f85149; --code-bg: #010409; --code-fg: #e6edf3;
+        --chip: #121d2f; --chip-fg: #4493f8; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+      font: 16.5px/1.65 -apple-system, "Segoe UI", Roboto, Inter, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
     code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
-    pre { overflow-x: auto; padding: 1rem; border-radius: .6rem; background: #111827; color: #e5e7eb; }
-    a { color: #2563eb; } .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
-    .card { border: 1px solid #9ca3af66; border-radius: .7rem; padding: 1rem; } .muted { opacity: .75; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
+    header.site { border-bottom: 1px solid var(--border); background: var(--bg2); }
+    .nav { display: flex; align-items: center; gap: 1.1rem; padding: .8rem 0; }
+    .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
+    .brand span { color: var(--accent); }
+    .nav a { color: var(--muted); font-size: .93rem; }
+    .nav a:hover { color: var(--fg); text-decoration: none; }
+    .nav .gh { margin-left: auto; }
+    .hero { padding: 3.2rem 0 2.4rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.1rem; }
+    .chip { background: var(--chip); color: var(--chip-fg); font-size: .78rem;
+      font-weight: 600; padding: .18rem .6rem; border-radius: 99px; }
+    h1 { font-size: 2.35rem; line-height: 1.15; letter-spacing: -.025em; margin: 0 0 .7rem; }
+    .sub { font-size: 1.13rem; color: var(--muted); max-width: 46rem; margin: 0 0 1.4rem; }
+    .install { background: var(--code-bg); color: var(--code-fg); border-radius: 10px;
+      padding: .95rem 1.1rem; font-size: .92rem; overflow-x: auto; display: flex; gap: .9rem; align-items: baseline; }
+    .install .ps1 { color: #7ee787; user-select: none; }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: .8rem; margin: 1.8rem 0 0; }
+    .kpi { border: 1px solid var(--border); border-radius: 10px; padding: .85rem 1rem; background: var(--bg2); }
+    .kpi b { display: block; font-size: 1.45rem; letter-spacing: -.02em; }
+    .kpi span { font-size: .82rem; color: var(--muted); }
+    h2 { font-size: 1.35rem; letter-spacing: -.015em; margin: 2.6rem 0 .3rem; }
+    .lede { color: var(--muted); margin: 0 0 1.2rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: .9rem; }
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 1.15rem 1.2rem; background: var(--bg2);
+      transition: border-color .15s; }
+    .card:hover { border-color: var(--accent); }
+    .card h3 { margin: .1rem 0 .45rem; font-size: 1.02rem; }
+    .card p { margin: 0 0 .6rem; color: var(--muted); font-size: .93rem; }
+    .card a { font-size: .9rem; font-weight: 600; }
+    .card code { background: var(--chip); color: var(--chip-fg); padding: .1rem .35rem; border-radius: 5px; font-size: .84em; }
+    .datastrip { border: 1px solid var(--border); border-left: 4px solid var(--accent2); border-radius: 12px;
+      padding: 1.1rem 1.25rem; margin: 1.2rem 0; background: var(--bg2); }
+    .datastrip b { color: var(--accent2); }
+    pre { background: var(--code-bg); color: var(--code-fg); padding: .95rem 1.1rem; border-radius: 10px;
+      overflow-x: auto; font-size: .88rem; }
+    .bounds { border-left: 3px solid var(--warn); padding: .2rem 0 .2rem 1rem; color: var(--muted); font-size: .95rem; }
+    footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.4rem 0 3rem; color: var(--muted); font-size: .88rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+    .badges { display: flex; gap: .5rem; flex-wrap: wrap; margin: 1.2rem 0 0; }
+    .badges img { display: block; }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mcpreflight?","acceptedAnswer":{"@type":"Answer","text":"mcpreflight is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpreflight schema <url>."}},{"@type":"Question","name":"Is mcpreflight a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It validates protocol conformance and tool schema quality, not runtime behavior or code safety. A PASS means the observed responses matched the checks in that version."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mcpreflight?","acceptedAnswer":{"@type":"Answer","text":"mcpreflight (formerly mcpdoctor) is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpreflight schema <url>."}},{"@type":"Question","name":"Is mcpreflight a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It validates protocol conformance and tool schema quality, not runtime behavior or code safety. A PASS means the observed responses matched the checks in that version."}},{"@type":"Question","name":"How many MCP servers fail a basic check?","acceptedAnswer":{"@type":"Answer","text":"In the weekly scan of 9,991 remote registry endpoints (October 2026), 4,879 passed a clean anonymous handshake, 5,069 gave no anonymous response, and 43 failed outright. Full data on the State of MCP report page."}}]}</script>
 </head>
 <body>
-  <header>
-    <p class="muted">@eidonze/mcpreflight · Node.js 18+ · MIT</p>
-    <h1>MCP Schema Checker and x402 Inspector</h1>
-    <p>Read-only checks for MCP tool schemas and x402 HTTP 402 payment endpoints before an AI agent or buyer depends on them.</p>
-    <pre><code>npx @eidonze/mcpreflight@0.1.5 schema https://your-mcp.example/mcp --json
-npx @eidonze/mcpreflight@0.1.5 inspect https://your-api.example/paid --method=POST --json</code></pre>
+  <header class="site">
+    <div class="wrap nav">
+      <div class="brand">mcp<span>reflight</span></div>
+      <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a>
+      <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">State of MCP</a>
+      <a href="https://github.com/xka0085-byte/mcpreflight" class="gh">GitHub</a>
+    </div>
   </header>
-  <main>
-    <section class="grid">
-      <article class="card"><h2>MCP schema checker</h2><p>Check initialize, tools/list, tool descriptions, JSON schemas, and required fields without invoking tools.</p><a href="mcp-schema-checker.html">Read the schema guide →</a></article>
-      <article class="card"><h2>x402 inspector</h2><p>Check HTTP 402, payment documents, accepts[], discovery manifests, latency, and response digest without paying.</p><a href="x402-endpoint-inspector.html">Read the x402 guide →</a></article>
-      <article class="card"><h2>Security CI</h2><p>Add the read-only check to pull requests with one GitHub Action step.</p><a href="mcp-security-ci.html">Configure GitHub Actions →</a></article>
-      <article class="card"><h2>Trust Directory</h2><p>Read-only trust reports for 220 remote MCP servers listed in the official MCP Registry — reproducible with one command.</p><a href="trust/">Browse the directory →</a></article>
-    </section>
+
+  <div class="wrap hero">
+    <div class="chips">
+      <span class="chip">read-only</span><span class="chip">zero dependencies</span>
+      <span class="chip">MIT</span><span class="chip">Node.js 18+</span><span class="chip">CI-ready exit codes</span>
+    </div>
+    <h1>Know an MCP server works<br>before your agent depends on it.</h1>
+    <p class="sub">mcpreflight runs the MCP <code>initialize</code> handshake and <code>tools/list</code> validation against any endpoint — no tools invoked, no credentials, no payments. Then it tells you exactly what passed and what didn't.</p>
+    <div class="install"><span class="ps1">$</span><span>npx @eidonze/mcpreflight schema https://your-mcp.example/mcp</span></div>
+    <div class="badges">
+      <a href="https://www.npmjs.com/package/@eidonze/mcpreflight"><img alt="npm" src="https://img.shields.io/npm/v/@eidonze/mcpreflight?logo=npm"></a>
+      <a href="https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml/badge.svg"></a>
+      <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+      <a href="https://mcpservers.org/servers/xka0085-byte/mcpreflight"><img alt="mcpservers.org" src="https://mcpservers.org/badge.svg"></a>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><b>9,991</b><span>registry endpoints scanned weekly</span></div>
+      <div class="kpi"><b>48.8%</b><span>pass a clean anonymous handshake</span></div>
+      <div class="kpi"><b>2.4%</b><span>weekly churn: pass → unknown</span></div>
+      <div class="kpi"><b>0</b><span>tools invoked, ever</span></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <h2>Three ways to run it</h2>
+    <p class="lede">Same engine, same read-only guarantees, wherever you need it.</p>
+    <div class="grid">
+      <article class="card"><h3>CLI</h3><p>One command against any endpoint. Deterministic PASS/FAIL, exact failing step, JSON or markdown output.</p><a href="https://xka0085-byte.github.io/mcpreflight/test-remote-mcp-server.html">CLI guide →</a></article>
+      <article class="card"><h3>GitHub Action</h3><p><code>mcp-trust-check</code> on every pull request. Fails the build when a registered server stops completing a clean handshake.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html">CI guide →</a></article>
+      <article class="card"><h3>MCP server mode</h3><p>Expose <code>schema_check</code> and <code>x402_inspect</code> as MCP tools inside your own agent stack.</p><a href="https://github.com/xka0085-byte/mcpreflight#readme">README →</a></article>
+    </div>
+
+    <h2>What you can check</h2>
+    <p class="lede">Every check is reproducible with one command and documented with its limits.</p>
+    <div class="grid">
+      <article class="card"><h3>Schema check</h3><p>initialize + tools/list, tool names, descriptions, input/output JSON schemas, required fields. 46,216 property-level findings logged across the registry.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">Schema guide →</a></article>
+      <article class="card"><h3>x402 inspector</h3><p>HTTP 402 challenge shape, payment documents, accepts[], discovery manifests, latency and response digest — without paying.</p><a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">x402 guide →</a></article>
+      <article class="card"><h3>Trust Directory</h3><p>Per-server reports, status badges and JSON APIs for 9,991 official-registry endpoints. Re-scanned every Monday.</p><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Browse directory →</a></article>
+      <article class="card"><h3>Agent Evidence</h3><p>ERC-8004 on-chain registrations cross-checked against their declared MCP endpoints: 40 endpoints, five-level verdicts, reasons and timestamps.</p><a href="https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html">Sample report →</a></article>
+    </div>
+
+    <h2>State of MCP — October 2026</h2>
+    <div class="datastrip">
+      <p style="margin:.1rem 0 .5rem">Of <b>9,991</b> remote endpoints in the official registry: <b>4,879</b> passed a clean handshake, <b>5,069</b> gave no anonymous response, <b>43</b> failed outright — and <b>115</b> endpoints that passed one week flipped to unknown the next. All 213 Smithery-registered entries refused anonymous handshakes.</p>
+      <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">Read the full report, method and limits →</a>
+    </div>
+
     <h2>Guides</h2>
-    <ul><li><a href="mcp-schema-checker.html">MCP Schema Checker</a></li><li><a href="x402-endpoint-inspector.html">x402 Endpoint Inspector</a></li><li><a href="mcp-security-ci.html">MCP Security CI</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="mcp-oauth-diagnostics.html">MCP OAuth Diagnostics and current limits</a></li><li><a href="trust/">MCP Server Trust Directory</a> — read-only schema reports for official registry servers</li></ul>
+    <ul>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">MCP Schema Checker</a></li>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">x402 Endpoint Inspector</a></li>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html">MCP Security CI</a></li>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/test-remote-mcp-server.html">Test a remote MCP server before connecting</a></li>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/troubleshooting.html">Troubleshooting</a></li>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/mcp-oauth-diagnostics.html">OAuth diagnostics and current limits</a></li>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">State of MCP report</a></li>
+      <li><a href="https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html">Agent Evidence weekly report</a></li>
+    </ul>
+
     <h2>Boundaries</h2>
-    <p>mcpreflight does not call MCP tools, accept credentials, execute server commands, sign payments, settle payments, or prove delivery. PASS is a deterministic observed-check result, not a security certification.</p>
+    <p class="bounds">mcpreflight never calls MCP tools, accepts credentials, executes server commands, signs or settles payments, or proves delivery. PASS is a deterministic observed-check result for the checks in that version — not a security certification and not a trust score.</p>
   </main>
-  <footer class="muted"><p><a href="https://github.com/xka0085-byte/mcpreflight">Source repository</a> · <a href="https://www.npmjs.com/package/@eidonze/mcpreflight">npm package</a> · <a href="https://github.com/xka0085-byte/mcpreflight/issues">Feedback</a></p></footer>
+
+  <footer>
+    <div class="wrap">
+      <a href="https://github.com/xka0085-byte/mcpreflight">Source repository</a>
+      <a href="https://www.npmjs.com/package/@eidonze/mcpreflight">npm package</a>
+      <a href="https://github.com/xka0085-byte/mcpreflight/issues">Feedback</a>
+      <span>An Agent Trust Infrastructure project</span>
+    </div>
+  </footer>
 </body>
 </html>
