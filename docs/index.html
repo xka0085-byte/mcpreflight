@@ -10,78 +10,221 @@
   <meta property="og:title" content="mcpreflight — read-only MCP preflight checks">
   <meta property="og:description" content="Validate MCP servers before you connect: schema checks, CI gating, and a weekly Trust Directory of 9,991 registry endpoints. No tool calls, no payments.">
   <meta property="og:url" content="https://xka0085-byte.github.io/mcpreflight/">
+  <meta name="theme-color" content="#05070c">
   <style>
     :root {
-      color-scheme: light dark;
-      --bg: #fafbfc; --bg2: #ffffff; --fg: #0d1117; --muted: #57606a;
-      --card: #ffffff; --border: #d8dee4; --accent: #0969da; --accent2: #1a7f37;
-      --warn: #9a6700; --bad: #cf222e; --code-bg: #0d1117; --code-fg: #e6edf3;
-      --chip: #ddf4ff; --chip-fg: #0969da;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #0d1117; --bg2: #161b22; --fg: #e6edf3; --muted: #8b949e;
-        --card: #161b22; --border: #30363d; --accent: #4493f8; --accent2: #3fb950;
-        --warn: #d29922; --bad: #f85149; --code-bg: #010409; --code-fg: #e6edf3;
-        --chip: #121d2f; --chip-fg: #4493f8; }
+      color-scheme: dark;
+      --bg: #05070c; --bg2: #0a0f18; --fg: #e8eef7; --muted: #8b98ad;
+      --border: rgba(148,163,184,.14); --border-hi: rgba(77,163,255,.45);
+      --accent: #4da3ff; --cyan: #37e0d8; --green: #3fd68f; --red: #ff6b6b;
+      --grad: linear-gradient(92deg, #4da3ff 0%, #37e0d8 100%);
+      --mono: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace;
+      --sans: -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--fg);
-      font: 16.5px/1.65 -apple-system, "Segoe UI", Roboto, Inter, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font: 16.5px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
-    header.site { border-bottom: 1px solid var(--border); background: var(--bg2); }
-    .nav { display: flex; align-items: center; gap: 1.1rem; padding: .8rem 0; }
-    .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
-    .brand span { color: var(--accent); }
-    .nav a { color: var(--muted); font-size: .93rem; }
-    .nav a:hover { color: var(--fg); text-decoration: none; }
-    .nav .gh { margin-left: auto; }
-    .hero { padding: 3.2rem 0 2.4rem; }
-    .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.1rem; }
-    .chip { background: var(--chip); color: var(--chip-fg); font-size: .78rem;
-      font-weight: 600; padding: .18rem .6rem; border-radius: 99px; }
-    h1 { font-size: 2.35rem; line-height: 1.15; letter-spacing: -.025em; margin: 0 0 .7rem; }
-    .sub { font-size: 1.13rem; color: var(--muted); max-width: 46rem; margin: 0 0 1.4rem; }
-    .install { background: var(--code-bg); color: var(--code-fg); border-radius: 10px;
-      padding: .95rem 1.1rem; font-size: .92rem; overflow-x: auto; display: flex; gap: .9rem; align-items: baseline; }
-    .install .ps1 { color: #7ee787; user-select: none; }
-    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: .8rem; margin: 1.8rem 0 0; }
-    .kpi { border: 1px solid var(--border); border-radius: 10px; padding: .85rem 1rem; background: var(--bg2); }
-    .kpi b { display: block; font-size: 1.45rem; letter-spacing: -.02em; }
-    .kpi span { font-size: .82rem; color: var(--muted); }
-    h2 { font-size: 1.35rem; letter-spacing: -.015em; margin: 2.6rem 0 .3rem; }
-    .lede { color: var(--muted); margin: 0 0 1.2rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: .9rem; }
-    .card { border: 1px solid var(--border); border-radius: 12px; padding: 1.15rem 1.2rem; background: var(--bg2);
-      transition: border-color .15s; }
-    .card:hover { border-color: var(--accent); }
-    .card h3 { margin: .1rem 0 .45rem; font-size: 1.02rem; }
-    .card p { margin: 0 0 .6rem; color: var(--muted); font-size: .93rem; }
-    .card a { font-size: .9rem; font-weight: 600; }
-    .card code { background: var(--chip); color: var(--chip-fg); padding: .1rem .35rem; border-radius: 5px; font-size: .84em; }
-    .datastrip { border: 1px solid var(--border); border-left: 4px solid var(--accent2); border-radius: 12px;
-      padding: 1.1rem 1.25rem; margin: 1.2rem 0; background: var(--bg2); }
-    .datastrip b { color: var(--accent2); }
-    pre { background: var(--code-bg); color: var(--code-fg); padding: .95rem 1.1rem; border-radius: 10px;
-      overflow-x: auto; font-size: .88rem; }
-    .bounds { border-left: 3px solid var(--warn); padding: .2rem 0 .2rem 1rem; color: var(--muted); font-size: .95rem; }
-    footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.4rem 0 3rem; color: var(--muted); font-size: .88rem; }
-    footer .wrap { display: flex; flex-wrap: wrap; gap: 1.2rem; }
-    .badges { display: flex; gap: .5rem; flex-wrap: wrap; margin: 1.2rem 0 0; }
+    code, pre { font-family: var(--mono); }
+
+    /* ambient layers */
+    .bg-grid {
+      position: fixed; inset: 0; z-index: -2; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(148,163,184,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,.055) 1px, transparent 1px);
+      background-size: 44px 44px;
+      -webkit-mask-image: radial-gradient(ellipse 90% 65% at 50% -5%, #000 35%, transparent 78%);
+      mask-image: radial-gradient(ellipse 90% 65% at 50% -5%, #000 35%, transparent 78%);
+    }
+    .bg-glow {
+      position: fixed; inset: 0; z-index: -3; pointer-events: none;
+      background:
+        radial-gradient(600px 420px at 18% -8%, rgba(77,163,255,.16), transparent 70%),
+        radial-gradient(700px 480px at 85% -12%, rgba(55,224,216,.10), transparent 70%);
+    }
+    #cursor-glow {
+      position: fixed; top: 0; left: 0; width: 520px; height: 520px; z-index: -1;
+      pointer-events: none; border-radius: 50%; opacity: .55;
+      background: radial-gradient(circle, rgba(77,163,255,.07) 0%, transparent 62%);
+      transform: translate(-9999px, -9999px);
+    }
+    @media (pointer: coarse) { #cursor-glow { display: none; } }
+
+    .wrap { max-width: 1020px; margin: 0 auto; padding: 0 1.35rem; }
+
+    /* nav */
+    header.site {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      background: rgba(5,7,12,.72); border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; gap: 1.3rem; padding: .85rem 0; }
+    .brand { font-weight: 700; font-size: 1.06rem; letter-spacing: -.015em; color: var(--fg); }
+    .brand:hover { text-decoration: none; }
+    .brand em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .nav a.item { color: var(--muted); font-size: .92rem; }
+    .nav a.item:hover { color: var(--fg); text-decoration: none; }
+    .nav .gh {
+      margin-left: auto; font-size: .88rem; font-weight: 600; color: var(--fg);
+      border: 1px solid var(--border); border-radius: 9px; padding: .4rem .85rem;
+      background: rgba(148,163,184,.06); transition: border-color .18s;
+    }
+    .nav .gh:hover { border-color: var(--border-hi); text-decoration: none; }
+
+    /* hero */
+    .hero { padding: 4.6rem 0 3rem; text-align: center; }
+    .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .45rem; margin-bottom: 1.3rem; }
+    .chip {
+      font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .02em;
+      color: #9fc6ff; padding: .22rem .68rem; border-radius: 99px;
+      border: 1px solid rgba(77,163,255,.28); background: rgba(77,163,255,.07);
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6.2vw, 4rem); line-height: 1.08; letter-spacing: -.032em;
+      margin: 0 auto .95rem; max-width: 21ch; font-weight: 750;
+    }
+    h1 em {
+      font-style: normal; background: var(--grad);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .sub { font-size: 1.13rem; color: var(--muted); max-width: 44rem; margin: 0 auto 1.9rem; }
+    .sub code { color: #b7d7ff; font-size: .95em; }
+
+    /* terminal */
+    .term {
+      max-width: 680px; margin: 0 auto; text-align: left;
+      border: 1px solid var(--border); border-radius: 13px; overflow: hidden;
+      background: rgba(10,15,24,.85);
+      box-shadow: 0 24px 70px -30px rgba(77,163,255,.28), 0 0 0 1px rgba(0,0,0,.4);
+    }
+    .term-bar {
+      display: flex; align-items: center; gap: .45rem; padding: .6rem .9rem;
+      border-bottom: 1px solid var(--border); background: rgba(148,163,184,.04);
+    }
+    .term-bar i { width: 11px; height: 11px; border-radius: 50%; background: #2c3648; }
+    .term-bar i:nth-child(1) { background: #ff5f57; } .term-bar i:nth-child(2) { background: #febc2e; } .term-bar i:nth-child(3) { background: #28c840; }
+    .term-bar span { margin-left: .5rem; font-family: var(--mono); font-size: .76rem; color: var(--muted); }
+    .term-body { padding: 1rem 1.1rem 1.15rem; font-family: var(--mono); font-size: .9rem; line-height: 1.75; }
+    .term-body .ps1 { color: #37e0d8; user-select: none; }
+    .caret { display: inline-block; width: 8px; height: 1.05em; vertical-align: text-bottom; background: #37e0d8; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .term-out { margin-top: .45rem; opacity: 0; transition: opacity .5s ease; white-space: pre-line; }
+    .term-out.on { opacity: 1; }
+    .ok { color: var(--green); } .dim { color: var(--muted); } .pass { color: var(--green); font-weight: 700; }
+
+    .badges { display: flex; justify-content: center; gap: .5rem; flex-wrap: wrap; margin: 1.5rem 0 0; }
     .badges img { display: block; }
+
+    /* kpis */
+    .kpis {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .85rem;
+      max-width: 880px; margin: 2.6rem auto 0;
+    }
+    .kpi {
+      position: relative; text-align: left; padding: 1rem 1.15rem;
+      border: 1px solid var(--border); border-radius: 13px;
+      background: linear-gradient(180deg, rgba(148,163,184,.055), rgba(148,163,184,.015));
+      overflow: hidden; transition: border-color .18s, transform .18s;
+    }
+    .kpi:hover { border-color: var(--border-hi); transform: translateY(-2px); }
+    .kpi::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(77,163,255,.55), transparent);
+    }
+    .kpi b { display: block; font-size: 1.75rem; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+    .kpi b.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .kpi span { font-size: .8rem; color: var(--muted); }
+
+    /* sections */
+    h2 { font-size: 1.5rem; letter-spacing: -.02em; margin: 4rem 0 .35rem; }
+    h2 .idx { font-family: var(--mono); font-size: .8rem; font-weight: 500; color: var(--cyan); margin-right: .6rem; vertical-align: middle; }
+    .lede { color: var(--muted); margin: 0 0 1.4rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: .95rem; }
+    .card {
+      position: relative; border: 1px solid var(--border); border-radius: 14px;
+      padding: 1.25rem 1.3rem; background: linear-gradient(180deg, rgba(148,163,184,.05), rgba(148,163,184,.012));
+      transition: border-color .18s, transform .18s, box-shadow .18s;
+    }
+    .card:hover {
+      border-color: var(--border-hi); transform: translateY(-3px);
+      box-shadow: 0 18px 44px -22px rgba(77,163,255,.35);
+    }
+    .card .num { font-family: var(--mono); font-size: .74rem; color: var(--cyan); letter-spacing: .08em; }
+    .card h3 { margin: .3rem 0 .45rem; font-size: 1.05rem; letter-spacing: -.01em; }
+    .card p { margin: 0 0 .7rem; color: var(--muted); font-size: .92rem; }
+    .card a { font-size: .88rem; font-weight: 600; }
+    .card a:hover { text-decoration: none; }
+    .card a::after { content: " →"; color: var(--cyan); }
+    .card code { background: rgba(77,163,255,.1); color: #9fc6ff; padding: .1rem .38rem; border-radius: 5px; font-size: .82em; }
+
+    /* data panel */
+    .panel {
+      border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem 1.6rem;
+      margin: 1.4rem 0 0; background:
+        radial-gradient(500px 200px at 12% 0%, rgba(63,214,143,.06), transparent 70%),
+        linear-gradient(180deg, rgba(148,163,184,.05), rgba(148,163,184,.012));
+    }
+    .bar { display: flex; height: 12px; border-radius: 99px; overflow: hidden; margin: .2rem 0 .7rem; border: 1px solid var(--border); }
+    .bar i { display: block; height: 100%; }
+    .bar .b-pass { width: 48.8%; background: linear-gradient(90deg, #2ea56b, #3fd68f); }
+    .bar .b-unk { width: 50.7%; background: rgba(148,163,184,.22); }
+    .bar .b-fail { width: 0.5%; background: var(--red); }
+    .legend { display: flex; flex-wrap: wrap; gap: 1.1rem; font-family: var(--mono); font-size: .78rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .legend b { color: var(--fg); font-weight: 600; }
+    .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: .38rem; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .85rem; }
+    .stat { border: 1px solid var(--border); border-radius: 11px; padding: .8rem .95rem; background: rgba(5,7,12,.5); }
+    .stat b { display: block; font-family: var(--mono); font-size: 1.3rem; font-variant-numeric: tabular-nums; }
+    .stat span { font-size: .78rem; color: var(--muted); }
+    .stat .s-g { color: var(--green); } .stat .s-r { color: var(--red); } .stat .s-a { color: var(--amber, #e8b13f); }
+    .panel .note { color: var(--muted); font-size: .9rem; margin: 1.1rem 0 0; }
+    .panel .note b { color: #b7d7ff; }
+
+    /* guides */
+    .guides { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: .3rem 2rem; margin: 0; padding: 0; list-style: none; }
+    .guides li { border-bottom: 1px dashed rgba(148,163,184,.12); }
+    .guides a { display: block; padding: .55rem .1rem; color: var(--fg); font-size: .94rem; }
+    .guides a:hover { color: var(--accent); text-decoration: none; }
+    .guides a::after { content: " →"; color: var(--cyan); font-size: .85rem; }
+
+    /* boundaries */
+    .bounds {
+      border: 1px solid rgba(232,177,63,.25); border-radius: 14px; padding: 1.1rem 1.3rem;
+      color: var(--muted); font-size: .95rem; background: rgba(232,177,63,.04);
+    }
+    .bounds b { color: #e8b13f; }
+
+    footer { border-top: 1px solid var(--border); margin-top: 4.5rem; padding: 1.6rem 0 3.2rem; color: var(--muted); font-size: .88rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+
+    /* reveal */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .caret { animation: none; }
+      html { scroll-behavior: auto; }
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mcpreflight?","acceptedAnswer":{"@type":"Answer","text":"mcpreflight (formerly mcpdoctor) is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpreflight schema <url>."}},{"@type":"Question","name":"Is mcpreflight a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It validates protocol conformance and tool schema quality, not runtime behavior or code safety. A PASS means the observed responses matched the checks in that version."}},{"@type":"Question","name":"How many MCP servers fail a basic check?","acceptedAnswer":{"@type":"Answer","text":"In the weekly scan of 9,991 remote registry endpoints (October 2026), 4,879 passed a clean anonymous handshake, 5,069 gave no anonymous response, and 43 failed outright. Full data on the State of MCP report page."}}]}</script>
 </head>
 <body>
+  <div class="bg-glow"></div>
+  <div class="bg-grid"></div>
+  <div id="cursor-glow"></div>
+
   <header class="site">
     <div class="wrap nav">
-      <div class="brand">mcp<span>reflight</span></div>
-      <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a>
-      <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">State of MCP</a>
-      <a href="https://github.com/xka0085-byte/mcpreflight" class="gh">GitHub</a>
+      <a class="brand" href="https://xka0085-byte.github.io/mcpreflight/">mcp<em>reflight</em></a>
+      <a class="item" href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a>
+      <a class="item" href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">State of MCP</a>
+      <a class="gh" href="https://github.com/xka0085-byte/mcpreflight">GitHub ↗</a>
     </div>
   </header>
 
@@ -90,49 +233,71 @@
       <span class="chip">read-only</span><span class="chip">zero dependencies</span>
       <span class="chip">MIT</span><span class="chip">Node.js 18+</span><span class="chip">CI-ready exit codes</span>
     </div>
-    <h1>Know an MCP server works<br>before your agent depends on it.</h1>
-    <p class="sub">mcpreflight runs the MCP <code>initialize</code> handshake and <code>tools/list</code> validation against any endpoint — no tools invoked, no credentials, no payments. Then it tells you exactly what passed and what didn't.</p>
-    <div class="install"><span class="ps1">$</span><span>npx @eidonze/mcpreflight schema https://your-mcp.example/mcp</span></div>
+    <h1>Know an MCP server works <em>before</em> your agent depends on it.</h1>
+    <p class="sub">mcpreflight runs the MCP <code>initialize</code> handshake and <code>tools/list</code> validation against any endpoint. No tools invoked, no credentials, no payments. Then it tells you exactly what passed and what didn't.</p>
+
+    <div class="term">
+      <div class="term-bar"><i></i><i></i><i></i><span>preflight — npx</span></div>
+      <div class="term-body">
+        <div><span class="ps1">$ </span><span id="cmd"></span><span class="caret" id="caret"></span></div>
+        <div class="term-out" id="tout"><span class="ok">✓ initialize handshake ok</span> <span class="dim">(38ms)</span>
+<span class="ok">✓ tools/list ok</span> <span class="dim">· 12 tools · 0 invoked</span>
+<span class="pass">PASS</span> <span class="dim">— no tool calls, no credentials</span></div>
+      </div>
+    </div>
+
     <div class="badges">
       <a href="https://www.npmjs.com/package/@eidonze/mcpreflight"><img alt="npm" src="https://img.shields.io/npm/v/@eidonze/mcpreflight?logo=npm"></a>
       <a href="https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml/badge.svg"></a>
       <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
       <a href="https://mcpservers.org/servers/xka0085-byte/mcpreflight"><img alt="mcpservers.org" src="https://mcpservers.org/badge.svg"></a>
     </div>
+
     <div class="kpis">
-      <div class="kpi"><b>9,991</b><span>registry endpoints scanned weekly</span></div>
-      <div class="kpi"><b>48.8%</b><span>pass a clean anonymous handshake</span></div>
-      <div class="kpi"><b>2.4%</b><span>weekly churn: pass → unknown</span></div>
-      <div class="kpi"><b>0</b><span>tools invoked, ever</span></div>
+      <div class="kpi"><b class="grad" data-count="9991" data-fmt="int">9,991</b><span>registry endpoints scanned weekly</span></div>
+      <div class="kpi"><b class="grad" data-count="48.8" data-fmt="pct">48.8%</b><span>pass a clean anonymous handshake</span></div>
+      <div class="kpi"><b class="grad" data-count="2.4" data-fmt="pct">2.4%</b><span>weekly churn: pass → unknown</span></div>
+      <div class="kpi"><b class="grad">0</b><span>tools invoked, ever</span></div>
     </div>
   </div>
 
   <main class="wrap">
-    <h2>Three ways to run it</h2>
-    <p class="lede">Same engine, same read-only guarantees, wherever you need it.</p>
+    <h2 class="reveal"><span class="idx">01</span>Three ways to run it</h2>
+    <p class="lede reveal">Same engine, same read-only guarantees, wherever you need it.</p>
     <div class="grid">
-      <article class="card"><h3>CLI</h3><p>One command against any endpoint. Deterministic PASS/FAIL, exact failing step, JSON or markdown output.</p><a href="https://xka0085-byte.github.io/mcpreflight/test-remote-mcp-server.html">CLI guide →</a></article>
-      <article class="card"><h3>GitHub Action</h3><p><code>mcp-trust-check</code> on every pull request. Fails the build when a registered server stops completing a clean handshake.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html">CI guide →</a></article>
-      <article class="card"><h3>MCP server mode</h3><p>Expose <code>schema_check</code> and <code>x402_inspect</code> as MCP tools inside your own agent stack.</p><a href="https://github.com/xka0085-byte/mcpreflight#readme">README →</a></article>
+      <article class="card reveal"><div class="num">01</div><h3>CLI</h3><p>One command against any endpoint. Deterministic PASS/FAIL, exact failing step, JSON or markdown output.</p><a href="https://xka0085-byte.github.io/mcpreflight/test-remote-mcp-server.html">CLI guide</a></article>
+      <article class="card reveal"><div class="num">02</div><h3>GitHub Action</h3><p><code>mcp-trust-check</code> on every pull request. Fails the build when a registered server stops completing a clean handshake.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html">CI guide</a></article>
+      <article class="card reveal"><div class="num">03</div><h3>MCP server mode</h3><p>Expose <code>schema_check</code> and <code>x402_inspect</code> as MCP tools inside your own agent stack.</p><a href="https://github.com/xka0085-byte/mcpreflight#readme">README</a></article>
     </div>
 
-    <h2>What you can check</h2>
-    <p class="lede">Every check is reproducible with one command and documented with its limits.</p>
+    <h2 class="reveal"><span class="idx">02</span>What you can check</h2>
+    <p class="lede reveal">Every check is reproducible with one command and documented with its limits.</p>
     <div class="grid">
-      <article class="card"><h3>Schema check</h3><p>initialize + tools/list, tool names, descriptions, input/output JSON schemas, required fields. 46,216 property-level findings logged across the registry.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">Schema guide →</a></article>
-      <article class="card"><h3>x402 inspector</h3><p>HTTP 402 challenge shape, payment documents, accepts[], discovery manifests, latency and response digest — without paying.</p><a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">x402 guide →</a></article>
-      <article class="card"><h3>Trust Directory</h3><p>Per-server reports, status badges and JSON APIs for 9,991 official-registry endpoints. Re-scanned every Monday.</p><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Browse directory →</a></article>
-      <article class="card"><h3>Agent Evidence</h3><p>ERC-8004 on-chain registrations cross-checked against their declared MCP endpoints: 40 endpoints, five-level verdicts, reasons and timestamps.</p><a href="https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html">Sample report →</a></article>
+      <article class="card reveal"><div class="num">CHK·1</div><h3>Schema check</h3><p>initialize + tools/list, tool names, descriptions, input/output JSON schemas, required fields. 46,216 property-level findings logged across the registry.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">Schema guide</a></article>
+      <article class="card reveal"><div class="num">CHK·2</div><h3>x402 inspector</h3><p>HTTP 402 challenge shape, payment documents, accepts[], discovery manifests, latency and response digest, all without paying.</p><a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">x402 guide</a></article>
+      <article class="card reveal"><div class="num">CHK·3</div><h3>Trust Directory</h3><p>Per-server reports, status badges and JSON APIs for 9,991 official-registry endpoints. Re-scanned every Monday.</p><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Browse directory</a></article>
+      <article class="card reveal"><div class="num">CHK·4</div><h3>Agent Evidence</h3><p>ERC-8004 on-chain registrations cross-checked against their declared MCP endpoints: 40 endpoints, five-level verdicts, reasons and timestamps.</p><a href="https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html">Sample report</a></article>
     </div>
 
-    <h2>State of MCP — October 2026</h2>
-    <div class="datastrip">
-      <p style="margin:.1rem 0 .5rem">Of <b>9,991</b> remote endpoints in the official registry: <b>4,879</b> passed a clean handshake, <b>5,069</b> gave no anonymous response, <b>43</b> failed outright — and <b>115</b> endpoints that passed one week flipped to unknown the next. All 213 Smithery-registered entries refused anonymous handshakes.</p>
-      <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">Read the full report, method and limits →</a>
+    <h2 class="reveal"><span class="idx">03</span>State of MCP — October 2026</h2>
+    <div class="panel reveal">
+      <div class="bar"><i class="b-pass"></i><i class="b-unk"></i><i class="b-fail"></i></div>
+      <div class="legend">
+        <span><i style="background:#3fd68f"></i><b>48.8%</b> passed</span>
+        <span><i style="background:rgba(148,163,184,.35)"></i><b>50.7%</b> no anonymous response</span>
+        <span><i style="background:#ff6b6b"></i><b>0.4%</b> failed outright</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b class="s-g">4,879</b><span>passed a clean handshake</span></div>
+        <div class="stat"><b>5,069</b><span>gave no anonymous response</span></div>
+        <div class="stat"><b class="s-r">43</b><span>failed outright</span></div>
+        <div class="stat"><b class="s-a">115</b><span>passed last week, unknown this week</span></div>
+      </div>
+      <p class="note">Of <b>9,991</b> remote endpoints in the official registry. Plus a second finding: all <b>213</b> Smithery-registered entries refused anonymous handshakes. <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">Full report, method and limits →</a></p>
     </div>
 
-    <h2>Guides</h2>
-    <ul>
+    <h2 class="reveal"><span class="idx">04</span>Guides</h2>
+    <ul class="guides reveal">
       <li><a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">MCP Schema Checker</a></li>
       <li><a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">x402 Endpoint Inspector</a></li>
       <li><a href="https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html">MCP Security CI</a></li>
@@ -143,8 +308,8 @@
       <li><a href="https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html">Agent Evidence weekly report</a></li>
     </ul>
 
-    <h2>Boundaries</h2>
-    <p class="bounds">mcpreflight never calls MCP tools, accepts credentials, executes server commands, signs or settles payments, or proves delivery. PASS is a deterministic observed-check result for the checks in that version — not a security certification and not a trust score.</p>
+    <h2 class="reveal"><span class="idx">05</span>Boundaries</h2>
+    <p class="bounds reveal"><b>Honest limits.</b> mcpreflight never calls MCP tools, accepts credentials, executes server commands, signs or settles payments, or proves delivery. PASS is a deterministic observed-check result for the checks in that version — not a security certification and not a trust score.</p>
   </main>
 
   <footer>
@@ -155,5 +320,63 @@
       <span>An Agent Trust Infrastructure project</span>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* terminal typing */
+      var cmd = 'npx @eidonze/mcpreflight schema https://your-mcp.example/mcp';
+      var el = document.getElementById('cmd'), caret = document.getElementById('caret'), out = document.getElementById('tout');
+      if (reduced) { el.textContent = cmd; out.classList.add('on'); caret.style.display = 'none'; }
+      else {
+        var i = 0;
+        (function type() {
+          if (i <= cmd.length) { el.textContent = cmd.slice(0, i); i++; setTimeout(type, 26 + Math.random() * 34); }
+          else { caret.style.display = 'none'; setTimeout(function () { out.classList.add('on'); }, 260); }
+        })();
+      }
+
+      /* count-up */
+      var fmt = {
+        int: function (v) { return Math.round(v).toLocaleString('en-US'); },
+        pct: function (v) { return v.toFixed(1) + '%'; }
+      };
+      if (!reduced && 'IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            io.unobserve(e.target);
+            var t = parseFloat(e.target.dataset.count), f = fmt[e.target.dataset.fmt || 'int'], t0 = null;
+            (function step(ts) {
+              if (!t0) t0 = ts;
+              var p = Math.min((ts - t0) / 1100, 1); p = 1 - Math.pow(1 - p, 3);
+              e.target.textContent = f(t * p);
+              if (p < 1) requestAnimationFrame(step);
+            })(performance.now());
+          });
+        }, { threshold: .6 });
+        document.querySelectorAll('[data-count]').forEach(function (n) { io.observe(n); });
+      }
+
+      /* scroll reveal */
+      if (!reduced && 'IntersectionObserver' in window) {
+        var ro = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+        }, { threshold: .12 });
+        document.querySelectorAll('.reveal').forEach(function (n) { ro.observe(n); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('in'); });
+      }
+
+      /* cursor glow */
+      var g = document.getElementById('cursor-glow');
+      if (!reduced && matchMedia('(pointer: fine)').matches) {
+        addEventListener('pointermove', function (e) {
+          g.style.transform = 'translate(' + (e.clientX - 260) + 'px,' + (e.clientY - 260) + 'px)';
+        }, { passive: true });
+      }
+    })();
+  </script>
 </body>
 </html>
