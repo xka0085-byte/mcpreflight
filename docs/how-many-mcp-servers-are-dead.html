@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many MCP servers are dead? — October 2026 scan data</title>
+  <meta name="description" content="Direct answer from a read-only scan of all 9,991 MCP Registry endpoints: 48.8% complete a clean handshake, 50.7% give no anonymous response, 43 fail outright. Method, limits and per-server data.">
+  <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/how-many-mcp-servers-are-dead.html">
+  <style>
+    :root{color-scheme:light dark}
+    body{margin:0;font:16.5px/1.65 -apple-system,"Segoe UI",Roboto,sans-serif;color:#1a1a2e;background:#fafafc}
+    main{max-width:860px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+    a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}
+    h1{font-size:1.9rem;letter-spacing:-.02em;margin:.2rem 0 .8rem}
+    h2{font-size:1.25rem;margin:2.2rem 0 .5rem}
+    .muted{color:#57606a;font-size:.92rem}
+    table{border-collapse:collapse;width:100%;font-size:.95rem;margin:1rem 0}
+    th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid #d8dee4}
+    th{color:#57606a;font-weight:600}
+    pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:8px;padding:.9rem 1rem;overflow-x:auto;font-size:.88rem}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9em}
+    .kpi{border:1px solid #d8dee4;border-radius:10px;padding:1rem 1.3rem;margin:1.2rem 0}
+    .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}
+    @media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}.muted,.foot,th{color:#8b949e}th,td{border-color:#30363d}pre,.kpi{background:#161b22;border-color:#30363d}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many MCP servers are dead?","acceptedAnswer":{"@type":"Answer","text":"In the October 2026 read-only scan of all 9,991 remote MCP Registry endpoints, 43 failed outright (0.4%) and 5,069 (50.7%) gave no anonymous response. The 50.7% is an upper bound on breakage: it mixes dead servers with endpoints that require authentication by design. 4,879 (48.8%) completed a clean anonymous handshake."}},{"@type":"Question","name":"What percentage of MCP servers require authentication?","acceptedAnswer":{"@type":"Answer","text":"An anonymous scan cannot separate auth-gated servers from dead ones, so 50.7% no-response is an upper bound. Endpoints answering 401 with a WWW-Authenticate Bearer header and live RFC 9728 resource metadata are classified AUTH_GATED (verified) in the Trust Directory from the November 2026 rescan onward."}}]}</script>
+</head>
+<body>
+<main>
+<h1>How many MCP servers are dead?</h1>
+<p class="muted">Direct answer from a read-only scan of all 9,991 remote endpoints in the official MCP Registry · week of October 13, 2026 · <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">full report</a></p>
+
+<p><strong>Short answer: 43 endpoints failed outright (0.4%), and 5,069 (50.7%) gave no anonymous response — but the 50.7% is an upper bound on breakage, not a death count.</strong> 4,879 (48.8%) completed a clean anonymous handshake. The no-response bucket mixes genuinely dead servers with endpoints that require authentication by design, and the registry does not label the difference. An agent consuming the registry today cannot tell "requires OAuth" from "dead on arrival" without trying and failing.</p>
+
+<div class="kpi">
+<table>
+<tr><th>Status</th><th>Endpoints</th><th>Share</th><th>What it means</th></tr>
+<tr><td>PASS</td><td>4,879</td><td>48.8%</td><td>clean anonymous <code>initialize</code> + <code>tools/list</code></td></tr>
+<tr><td>no anonymous response</td><td>5,069</td><td>50.7%</td><td>dead, offline, or auth-gated — indistinguishable anonymously</td></tr>
+<tr><td>FAIL</td><td>43</td><td>0.4%</td><td>answered but broke the protocol</td></tr>
+</table>
+</div>
+
+<h2>Why the honest answer is a range, not a number</h2>
+<p>A weekly rescan adds the churn dimension: 115 endpoints that passed one week gave no response the next (2.4% of the passing set), so "dead" is also a moving target. From the November 2026 rescan onward, endpoints that answer 401 with a <code>WWW-Authenticate: Bearer</code> header and expose live RFC 9728 resource metadata are classified <strong>AUTH_GATED (verified)</strong> instead of unknown, which shrinks the gray bucket with every scan. Among servers that did respond, the dominant quality finding was 46,216 missing property descriptions — schema hygiene is a separate tax from uptime.</p>
+
+<h2>Reproduce any single result</h2>
+<pre>npx @eidonze/mcpreflight schema &lt;endpoint-url&gt;</pre>
+<p>Read-only: two JSON-RPC requests, no tools called, no credentials, no payments. <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">Full method, cohort findings and limitations</a> · <a href="https://xka0085-byte.github.io/mcpreflight/trust/">per-server directory (9,989 reports)</a></p>
+
+<div class="foot">mcpreflight · open source · updated 2026-10-15 · numbers from the week of October 13, 2026 scan, re-scanned weekly</div>
+</main>
+</body>
+</html>

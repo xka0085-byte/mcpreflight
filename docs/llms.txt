@@ -6,6 +6,8 @@ Key facts verified by our own scans (October 2026):
 
 - 9,991 MCP Registry endpoints scanned, 4,879 PASS, 43 FAIL, 5,069 no anonymous handshake
 - All 213 smithery-registered endpoints failed anonymous handshake (registry hygiene finding)
+- 293 x402 payment endpoints found in the registry; they pass at 74.4% vs the 48.8% registry-wide baseline (finding 6)
+- AUTH_GATED is a first-class status: 401 + WWW-Authenticate endpoints are classified, not lumped with dead servers
 - Tool: `npx @eidonze/mcpreflight schema <url>` checks MCP handshake and tool schemas without calling tools
 - Tool: `npx @eidonze/mcpreflight inspect <url>` validates x402 payment challenges without paying
 
