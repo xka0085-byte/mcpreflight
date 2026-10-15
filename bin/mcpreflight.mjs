@@ -143,7 +143,23 @@ async function schemaCommand(url, format) {
   const add = (code, severity, message) => findings.push({ code, severity, message });
   const response = await fetch(url, { method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(TIMEOUT), headers: { 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'MCP-Protocol-Version': '2025-03-26' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'mcpreflight', version: VERSION } } }) });
   const initText = await readBody(response);
-  if (!response.ok) throw new Error(`MCP initialize returned HTTP ${response.status}`);
+  if (!response.ok) {
+    const www = response.headers.get('www-authenticate');
+    if ((response.status === 401 || response.status === 403) && www && /bearer/i.test(www)) {
+      let rm = null, verified = false;
+      const m = www.match(/resource_metadata="([^"]+)"/i);
+      if (m) {
+        rm = m[1];
+        try { const r = await fetch(rm, { signal: AbortSignal.timeout(8000) }); if (r.ok) { const j = await r.json().catch(() => null); verified = Boolean(j && Array.isArray(j.authorization_servers) && j.authorization_servers.length > 0); } } catch {}
+      }
+      const report = { reportVersion: 1, inspectorVersion: VERSION, mode: 'read-only MCP initialize + tools/list', checkedAt: new Date().toISOString(), endpoint: url.toString(), finalStatus: 'AUTH_GATED', mcp: { protocolVersion: null, serverInfo: null, toolCount: null }, authGate: { status: verified ? 'gated-verified' : 'gated', httpStatus: response.status, resourceMetadata: rm }, findings: [{ code: verified ? 'AUTH_GATE_VERIFIED' : 'AUTH_GATE_DETECTED', severity: 'INFO', message: verified ? 'Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server' : 'Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize' }], limitations: ['The endpoint requires authentication, so the anonymous handshake and tools/list checks are out of scope.', 'AUTH_GATED is not a failure and not a security certification; it does not prove behavior with valid credentials.'] };
+      if (format === 'json') console.log(JSON.stringify(report, null, 2));
+      else console.log(`# MCP Tool Schema Report\n\n- Status: **AUTH_GATED**\n- Endpoint: ${url.toString()}\n- Auth gate: ${report.authGate.status}${rm ? `\n- Resource metadata: ${rm}` : ''}\n\n${report.findings.map(x => `- **${x.severity}** \`${x.code}\`: ${x.message}`).join('\n')}\n\n${report.limitations.map(x => `- ${x}`).join('\n')}\n\nWeekly re-scan and per-server reports: https://xka0085-byte.github.io/mcpreflight/trust/\n`);
+      process.exitCode = 0;
+      return;
+    }
+    throw new Error(`MCP initialize returned HTTP ${response.status}`);
+  }
   const init = jsonrpc(initText);
   if (!init?.result?.protocolVersion) add('INITIALIZE_RESPONSE_INVALID', 'FAIL', 'Initialize response did not include result.protocolVersion');
   const headers = { 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'MCP-Protocol-Version': init?.result?.protocolVersion ?? '2025-03-26' };
