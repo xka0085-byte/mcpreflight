@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 import { createHash } from 'node:crypto';
+import fs from 'node:fs';
 
 const MAX_BODY = 1024 * 1024;
 const TIMEOUT = 10_000;
-const VERSION = '0.3.0';
+const VERSION = '0.4.0';
+const DEFAULT_BASELINE = 'mcpreflight-baseline.json';
 
 const help = `mcpreflight ${VERSION}
 
@@ -12,7 +14,13 @@ Read-only MCP/x402 endpoint diagnostics.
 Usage:
   mcpreflight inspect <url> [--method=GET|POST] [--format=json|markdown]
   mcpreflight schema <url> [--format=json|markdown]
+  mcpreflight baseline <url> [--method=GET|POST] [--baseline=FILE] [--json]
+  mcpreflight drift <url> [--method=GET|POST] [--baseline=FILE] [--json]
   mcpreflight --help
+
+baseline records the x402 challenge shape your endpoint serves right now. drift re-checks
+the same endpoint and exits 1 when that shape has changed, so CI catches a broken payment
+challenge before your buyers do.
 
 This MVP never signs, pays, retries payment, or accepts a private key.`;
 
@@ -192,6 +200,82 @@ async function schemaCommand(url, format) {
   process.exitCode = report.finalStatus === 'PASS' ? 0 : 1;
 }
 
+// x402 challenge shape: the fields a paying agent depends on. Fingerprinted semantically,
+// so whitespace, key order or a rotating signature in the raw response is not drift.
+function shapeOf(report) {
+  const accepts = (report.x402?.accepts ?? []).map((item) => JSON.stringify(item)).sort().map((text) => JSON.parse(text));
+  return { httpStatus: report.http?.status ?? null, version: report.x402?.version ?? null, accepts };
+}
+
+function shapeFingerprint(shape) {
+  return createHash('sha256').update(JSON.stringify(shape)).digest('hex');
+}
+
+function shapeDiff(before, after) {
+  const changes = [];
+  if (before.httpStatus !== after.httpStatus) changes.push(`http status ${before.httpStatus} -> ${after.httpStatus}`);
+  if ((before.version ?? null) !== (after.version ?? null)) changes.push(`x402 version ${before.version ?? 'none'} -> ${after.version ?? 'none'}`);
+  const keyOf = (item) => [item.scheme, item.network, item.asset, item.amount, item.payTo].join('|');
+  const beforeKeys = new Map(before.accepts.map((item) => [keyOf(item), item]));
+  const afterKeys = new Map(after.accepts.map((item) => [keyOf(item), item]));
+  for (const key of beforeKeys.keys()) if (!afterKeys.has(key)) changes.push(`accepts entry removed: ${key}`);
+  for (const key of afterKeys.keys()) if (!beforeKeys.has(key)) changes.push(`accepts entry added: ${key}`);
+  return changes;
+}
+
+async function baselineCommand(url, method, format, file) {
+  const report = makeReport(url.toString(), method, await probe(url, method));
+  const shape = shapeOf(report);
+  const baseline = { baselineVersion: 1, inspectorVersion: VERSION, createdAt: new Date().toISOString(), endpoint: url.toString(), method, fingerprint: shapeFingerprint(shape), shape };
+  fs.writeFileSync(file, `${JSON.stringify(baseline, null, 2)}\n`);
+  if (format === 'json') console.log(JSON.stringify(baseline, null, 2));
+  else console.log(`# x402 challenge baseline
+
+- Endpoint: ${baseline.endpoint}
+- Method: ${method}
+- HTTP: ${shape.httpStatus}
+- Accepts entries: ${shape.accepts.length}
+- Fingerprint: \`${baseline.fingerprint}\`
+- Written to: ${file}
+
+Commit this file, then gate CI on drift so a changed challenge fails the build:
+
+    - uses: xka0085-byte/mcpreflight@v1
+      with:
+        endpoint: ${baseline.endpoint}
+        mode: drift
+        baseline: ${file}
+`);
+  process.exitCode = shape.httpStatus === 402 && shape.accepts.length ? 0 : 1;
+}
+
+async function driftCommand(url, method, format, file) {
+  let baseline;
+  try { baseline = JSON.parse(fs.readFileSync(file, 'utf8')); }
+  catch { throw new Error(`no readable baseline at ${file}. Create one first: mcpreflight baseline ${url.toString()} --method=${method}`); }
+  const report = makeReport(url.toString(), method, await probe(url, method));
+  const shape = shapeOf(report);
+  const fingerprint = shapeFingerprint(shape);
+  const drifted = fingerprint !== baseline.fingerprint;
+  const changes = drifted ? shapeDiff(baseline.shape, shape) : [];
+  const out = { reportVersion: 1, inspectorVersion: VERSION, mode: 'read-only x402 challenge drift', checkedAt: new Date().toISOString(), endpoint: url.toString(), method, finalStatus: drifted ? 'DRIFTED' : 'UNCHANGED', baseline: { file, createdAt: baseline.createdAt, fingerprint: baseline.fingerprint }, currentFingerprint: fingerprint, changes, current: shape, limitations: ['Read-only preflight only; no wallet, signing, settlement, or post-payment delivery was attempted.', 'An unchanged fingerprint means the observed challenge shape matches the baseline; it does not prove payment succeeds or that pricing is fair.'] };
+  if (format === 'json') console.log(JSON.stringify(out, null, 2));
+  else console.log(`# x402 challenge drift report
+
+- Status: **${out.finalStatus}**
+- Endpoint: ${out.endpoint}
+- Baseline: ${baseline.createdAt} (\`${baseline.fingerprint}\`)
+- Current: \`${fingerprint}\`
+
+${changes.length ? `## Changes\n\n${changes.map((item) => `- ${item}`).join('\n')}` : '## Changes\n\n- None, the challenge shape still matches the baseline'}
+
+## Limitations
+
+${out.limitations.map((item) => `- ${item}`).join('\n')}
+`);
+  process.exitCode = drifted ? 1 : 0;
+}
+
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.length === 0) { console.log(help); process.exitCode = args.length ? 0 : 3; }
 else if (args[0] === 'schema') {
@@ -199,7 +283,29 @@ else if (args[0] === 'schema') {
   const format = args.includes('--json') || args.includes('--format=json') ? 'json' : 'markdown';
   if (url) schemaCommand(url, format).catch((error) => { console.error(`UNKNOWN: ${redact(error.message)}`); process.exitCode = 2; });
 }
-else if (args[0] !== 'inspect') die('only inspect and schema commands are available in this MVP');
+else if (args[0] === 'baseline' || args[0] === 'drift') {
+  const command = args[0];
+  const rawUrl = args[1];
+  const method = (args.find((arg) => arg.startsWith('--method='))?.split('=')[1] ?? 'GET').toUpperCase();
+  const format = args.find((arg) => arg.startsWith('--format='))?.split('=')[1] ?? (args.includes('--json') ? 'json' : 'markdown');
+  const file = args.find((arg) => arg.startsWith('--baseline='))?.split('=')[1] ?? DEFAULT_BASELINE;
+  if (!rawUrl) die('URL is required');
+  else if (!['GET', 'POST'].includes(method)) die('--method must be GET or POST');
+  else if (!['json', 'markdown'].includes(format)) die('--format must be json or markdown');
+  else {
+    let url;
+    try { url = new URL(rawUrl); if (!['http:', 'https:'].includes(url.protocol)) throw new Error('only http(s) URLs are supported'); }
+    catch (error) { die(error.message); }
+    if (url) try {
+      if (command === 'baseline') await baselineCommand(url, method, format, file);
+      else await driftCommand(url, method, format, file);
+    } catch (error) {
+      console.error(`UNKNOWN: ${redact(error.message)}`);
+      process.exitCode = 2;
+    }
+  }
+}
+else if (args[0] !== 'inspect') die('only inspect, schema, baseline and drift commands are available in this MVP');
 else {
   const rawUrl = args[1];
   const method = (args.find((arg) => arg.startsWith('--method='))?.split('=')[1] ?? 'GET').toUpperCase();

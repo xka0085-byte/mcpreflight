@@ -1,8 +1,9 @@
 name: MCP Trust Check
 description: >-
-  Test an MCP server in CI: read-only Model Context Protocol health check that
-  verifies the initialize handshake and tools/list JSON schemas, or runs an
-  x402 payment preflight, on every push and pull request. No API keys, no tool calls.
+  Test an MCP server or an x402 payment endpoint in CI: read-only preflight that
+  verifies the initialize handshake and tools/list JSON schemas, inspects the 402
+  challenge document, or fails the build when that challenge shape drifts away from
+  a committed baseline. No API keys, no tool calls, no payment.
 author: Eidonze
 branding:
   icon: shield
@@ -12,15 +13,22 @@ inputs:
     description: Public MCP or x402 endpoint URL to inspect
     required: true
   mode:
-    description: Inspection mode, inspect for x402 preflight or schema for MCP tools/list
+    description: >-
+      Inspection mode. schema for the MCP handshake and tool schemas, inspect for a
+      one-off x402 payment preflight, baseline to write the x402 challenge shape to
+      the baseline file, drift to re-check it and fail when the shape changed
     required: false
     default: schema
   format:
     description: Report format
     required: false
     default: markdown
+  baseline:
+    description: Path to the committed x402 challenge baseline used by drift mode
+    required: false
+    default: mcpreflight-baseline.json
   fail-on:
-    description: Fail the job when the report status is FAIL or UNKNOWN
+    description: Fail the job when the report status is FAIL, UNKNOWN or DRIFTED
     required: false
     default: true
 runs:
@@ -32,6 +40,7 @@ runs:
         ENDPOINT: ${{ inputs.endpoint }}
         MODE: ${{ inputs.mode }}
         FORMAT: ${{ inputs.format }}
+        BASELINE: ${{ inputs.baseline }}
         FAIL_ON: ${{ inputs.fail-on }}
       run: |
         set -o pipefail
@@ -39,16 +48,28 @@ runs:
           echo "Node.js >= 18 is required" >&2
           exit 3
         fi
-        if [ "$MODE" = "schema" ]; then
-          node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" schema "$ENDPOINT" "--format=$FORMAT"
-          status=$?
-        elif [ "$MODE" = "inspect" ]; then
-          node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" inspect "$ENDPOINT" "--format=$FORMAT"
-          status=$?
-        else
-          echo "Unsupported mode: $MODE" >&2
-          exit 3
-        fi
+        case "$MODE" in
+          schema)
+            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" schema "$ENDPOINT" "--format=$FORMAT"
+            status=$?
+            ;;
+          inspect)
+            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" inspect "$ENDPOINT" "--format=$FORMAT"
+            status=$?
+            ;;
+          baseline)
+            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" baseline "$ENDPOINT" "--format=$FORMAT" "--baseline=$BASELINE"
+            status=$?
+            ;;
+          drift)
+            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" drift "$ENDPOINT" "--format=$FORMAT" "--baseline=$BASELINE"
+            status=$?
+            ;;
+          *)
+            echo "Unsupported mode: $MODE" >&2
+            exit 3
+            ;;
+        esac
         if [ "$FAIL_ON" = "true" ] && [ "$status" -ne 0 ]; then
           exit "$status"
         fi
