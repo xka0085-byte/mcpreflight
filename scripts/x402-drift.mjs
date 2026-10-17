@@ -156,6 +156,39 @@ const withResource = entries.filter((e) => (e.discovery?.resources ?? []).length
 const with402 = entries.filter((e) => (e.challenges ?? []).some((c) => c.status === 402)).length;
 const totalResources = entries.reduce((n, e) => n + (e.discovery?.resources?.length ?? 0), 0);
 
+// weekly time series plus a visible block on the x402 page, so the drift number is
+// citable and week over week, not a one-time snapshot
+const historyPath = path.join(root, 'trust-data', 'x402-drift-history.json');
+const pagePath = path.join(root, 'docs', 'x402-endpoint-inspector.html');
+const date = new Date().toISOString().slice(0, 10);
+const summary = { date, cohort: entries.length, discoverable: withResource, resources: totalResources, real402: with402, drifted: drifted.length };
+const hist = fs.existsSync(historyPath) ? JSON.parse(fs.readFileSync(historyPath, 'utf8')) : [];
+const hi = hist.findIndex((h) => h.date === date);
+if (hi >= 0) hist[hi] = summary;
+else hist.push(summary);
+hist.sort((a, b) => a.date.localeCompare(b.date));
+fs.writeFileSync(historyPath, JSON.stringify(hist, null, 1) + '\n');
+
+const rows = hist.slice(-12).map((h) => `<tr><td>${h.date}</td><td>${h.cohort}</td><td>${h.discoverable}</td><td>${h.resources}</td><td>${h.real402}</td><td>${h.drifted}</td></tr>`).join('');
+const block = `<!-- x402-drift:start -->
+<h2>x402 challenge drift tracking</h2>
+<p>The same cohort is re-probed read-only every Monday and the 402 challenge shape is fingerprinted per paid resource. A drifted value above zero means at least one serving endpoint changed its challenge shape since the previous run, which is the failure mode buyers hit first. Discovery is partial by design, since <code>/.well-known/x402</code> is not universal, so <strong>discoverable</strong> counts only endpoints that publish their paid resources.</p>
+<table><tr><th>date</th><th>cohort</th><th>discoverable</th><th>resources</th><th>real 402</th><th>drifted</th></tr>${rows}</table>
+<p>Check your own paid endpoint the same way, read-only: <code>npx @eidonze/mcpreflight baseline &lt;paid-url&gt;</code>, then <code>npx @eidonze/mcpreflight drift &lt;paid-url&gt;</code>. Both ship in mcpreflight 0.4.0 and up. No wallet, no signing, no payment, no retries.</p>
+<!-- x402-drift:end -->`;
+
+const page = fs.readFileSync(pagePath, 'utf8');
+const S = page.indexOf('<!-- x402-drift:start -->');
+const E = page.indexOf('<!-- x402-drift:end -->');
+let next;
+if (S >= 0 && E > S) next = page.slice(0, S) + block + page.slice(E + '<!-- x402-drift:end -->'.length);
+else {
+  const anchor = '<!-- x402-weekly:end -->';
+  if (!page.includes(anchor)) throw new Error('no x402-drift markers and no x402-weekly end marker to insert after');
+  next = page.replace(anchor, `${anchor}\n${block}`);
+}
+fs.writeFileSync(pagePath, next);
+
 console.log(`x402 drift snapshot: ${entries.length} endpoints, ${withResource} expose /.well-known/x402, ${totalResources} paid resources listed, ${with402} return a real 402`);
 if (prev) console.log(`drift vs previous snapshot (${prev.generatedAt}): ${drifted.length} endpoints changed`);
 else console.log('first snapshot, no baseline to diff yet');
