@@ -44,6 +44,19 @@ function normalize(item) {
   };
 }
 
+// A 402 status alone is not a usable challenge. A buyer can only act on a challenge that
+// states the scheme, the network, the amount and where to pay. This is the layer the raw
+// handshake numbers hide, and it is the reason a status count and a challenge count differ.
+function challengeValidity(item) {
+  const missing = [];
+  if (!item || typeof item !== 'object') return { valid: false, missing: ['document'] };
+  if (!item.scheme) missing.push('scheme');
+  if (!(item.network ?? item.chain)) missing.push('network');
+  if (!(item.payTo ?? item.recipient ?? item.vendor)) missing.push('payTo');
+  if (!(item.amount ?? item.maxAmountRequired)) missing.push('amount');
+  return { valid: missing.length === 0, missing };
+}
+
 function findPaymentDocument(headers, body) {
   const candidates = [headers['payment-required'], headers['x-payment-required'], body].filter(Boolean);
   const parsed = [];
@@ -80,13 +93,19 @@ async function probe(target, method = 'GET') {
     const paymentRequired = response.headers.get('payment-required') || response.headers.get('x-payment-required') || null;
     const headers = { 'payment-required': paymentRequired, 'x-payment-required': response.headers.get('x-payment-required') || '' };
     const document = findPaymentDocument(headers, body);
-    const accepts = requirements(document).map(normalize);
+    const required = requirements(document);
+    const accepts = required.map(normalize);
+    const validity = required.map(challengeValidity);
+    const valid = response.status === 402 && validity.some((v) => v.valid);
+    const missing = response.status === 402 && !valid ? [...new Set(validity.flatMap((v) => v.missing))] : [];
     const dialect = document?.x402 ? 'x402-v2-body' : paymentRequired ? 'payment-required-header' : accepts.length ? 'accepts-inline' : null;
     return {
       status: response.status,
       ms: Date.now() - started,
       dialect,
       accepts,
+      valid,
+      missing,
       fingerprint: sha(JSON.stringify({ status: response.status, dialect, accepts })),
       bodySha: sha(body),
       raw: body.slice(0, 4000),
@@ -112,12 +131,15 @@ async function snap(entry) {
   result.discovery = { ...discoveryShape, fingerprint: sha(JSON.stringify(discoveryShape)) };
 
   for (const resource of resources.slice(0, 4)) {
+    const usable = (c) => c.status === 402 && c.valid;
     let challenge = await probe(resource, 'GET');
-    if (challenge.status !== 402) {
+    // a 402 that carries no usable challenge does not settle the question, so POST gets a
+    // turn too. verifi.cloud style endpoints already need this, because GET answers 404.
+    if (!usable(challenge)) {
       const post = await probe(resource, 'POST');
-      if (post.status === 402 || (post.dialect && !challenge.dialect)) challenge = post;
+      if (usable(post) || post.status === 402 || (post.dialect && !challenge.dialect)) challenge = post;
     }
-    result.challenges.push({ url: resource, status: challenge.status, dialect: challenge.dialect ?? null, accepts: challenge.accepts ?? [], fingerprint: challenge.fingerprint ?? null, error: challenge.error ?? null });
+    result.challenges.push({ url: resource, status: challenge.status, dialect: challenge.dialect ?? null, accepts: challenge.accepts ?? [], valid: challenge.valid ?? false, missing: challenge.missing ?? [], fingerprint: challenge.fingerprint ?? null, error: challenge.error ?? null });
   }
   return result;
 }
@@ -155,13 +177,16 @@ fs.writeFileSync(driftPath, JSON.stringify({ generatedAt: new Date().toISOString
 const withResource = entries.filter((e) => (e.discovery?.resources ?? []).length > 0).length;
 const with402 = entries.filter((e) => (e.challenges ?? []).some((c) => c.status === 402)).length;
 const totalResources = entries.reduce((n, e) => n + (e.discovery?.resources?.length ?? 0), 0);
+const probed = entries.reduce((n, e) => n + (e.challenges ?? []).length, 0);
+const validChallenges = entries.reduce((n, e) => n + (e.challenges ?? []).filter((c) => c.valid).length, 0);
+const withValid = entries.filter((e) => (e.challenges ?? []).some((c) => c.valid)).length;
 
 // weekly time series plus a visible block on the x402 page, so the drift number is
 // citable and week over week, not a one-time snapshot
 const historyPath = path.join(root, 'trust-data', 'x402-drift-history.json');
 const pagePath = path.join(root, 'docs', 'x402-endpoint-inspector.html');
 const date = new Date().toISOString().slice(0, 10);
-const summary = { date, cohort: entries.length, discoverable: withResource, resources: totalResources, real402: with402, drifted: drifted.length };
+const summary = { date, cohort: entries.length, discoverable: withResource, resources: totalResources, real402: with402, probed, validChallenges, withValid, drifted: drifted.length };
 const hist = fs.existsSync(historyPath) ? JSON.parse(fs.readFileSync(historyPath, 'utf8')) : [];
 const hi = hist.findIndex((h) => h.date === date);
 if (hi >= 0) hist[hi] = summary;
@@ -169,11 +194,11 @@ else hist.push(summary);
 hist.sort((a, b) => a.date.localeCompare(b.date));
 fs.writeFileSync(historyPath, JSON.stringify(hist, null, 1) + '\n');
 
-const rows = hist.slice(-12).map((h) => `<tr><td>${h.date}</td><td>${h.cohort}</td><td>${h.discoverable}</td><td>${h.resources}</td><td>${h.real402}</td><td>${h.drifted}</td></tr>`).join('');
+const rows = hist.slice(-12).map((h) => `<tr><td>${h.date}</td><td>${h.cohort}</td><td>${h.discoverable}</td><td>${h.resources}</td><td>${h.real402 ?? ''}</td><td>${h.probed ?? ''}</td><td>${h.validChallenges ?? ''}</td><td>${h.drifted}</td></tr>`).join('');
 const block = `<!-- x402-drift:start -->
 <h2>x402 challenge drift tracking</h2>
-<p>The same cohort is re-probed read-only every Monday and the 402 challenge shape is fingerprinted per paid resource. A drifted value above zero means at least one serving endpoint changed its challenge shape since the previous run, which is the failure mode buyers hit first. Discovery is partial by design, since <code>/.well-known/x402</code> is not universal, so <strong>discoverable</strong> counts only endpoints that publish their paid resources.</p>
-<table><tr><th>date</th><th>cohort</th><th>discoverable</th><th>resources</th><th>real 402</th><th>drifted</th></tr>${rows}</table>
+<p>The same cohort is re-probed read-only every Monday, and two different numbers are reported on purpose. <strong>real 402</strong> counts endpoints whose paid resource answered with a 402 status at all. <strong>probed</strong> is how many paid resources were actually asked. <strong>valid challenge</strong> counts the ones whose 402 also carried a usable challenge, meaning it named the scheme, the network, the amount and where to pay. A 402 status on its own is not a working challenge, and a single handshake pass rate hides that gap, so the number that matters to a buyer is the valid challenge count, not the 402 status count. The challenge shape is also fingerprinted per resource, and a drifted value above zero means at least one serving endpoint changed shape since the previous run, which is the failure mode buyers hit first. Discovery is partial by design, since <code>/.well-known/x402</code> is not universal, so <strong>discoverable</strong> counts only endpoints that publish their paid resources.</p>
+<table><tr><th>date</th><th>cohort</th><th>discoverable</th><th>resources</th><th>real 402</th><th>probed</th><th>valid challenge</th><th>drifted</th></tr>${rows}</table>
 <p>Check your own paid endpoint the same way, read-only: <code>npx @eidonze/mcpreflight baseline &lt;paid-url&gt;</code>, then <code>npx @eidonze/mcpreflight drift &lt;paid-url&gt;</code>. Both ship in mcpreflight 0.4.0 and up. No wallet, no signing, no payment, no retries.</p>
 <!-- x402-drift:end -->`;
 
@@ -189,7 +214,8 @@ else {
 }
 fs.writeFileSync(pagePath, next);
 
-console.log(`x402 drift snapshot: ${entries.length} endpoints, ${withResource} expose /.well-known/x402, ${totalResources} paid resources listed, ${with402} return a real 402`);
+console.log(`x402 drift snapshot: ${entries.length} endpoints, ${withResource} expose /.well-known/x402, ${totalResources} paid resources listed, ${with402} endpoints returned a real 402`);
+console.log(`real 402 challenge layer: ${probed} resources probed, ${validChallenges} returned a usable 402 challenge (${withValid} endpoints affected)`);
 if (prev) console.log(`drift vs previous snapshot (${prev.generatedAt}): ${drifted.length} endpoints changed`);
 else console.log('first snapshot, no baseline to diff yet');
 for (const d of drifted.slice(0, 20)) console.log(`  CHANGED ${d.name}: ${d.changes.join('; ')}`);
