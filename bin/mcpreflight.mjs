@@ -4,7 +4,7 @@ import fs from 'node:fs';
 
 const MAX_BODY = 1024 * 1024;
 const TIMEOUT = 10_000;
-const VERSION = '0.4.0';
+const VERSION = '0.5.0';
 const DEFAULT_BASELINE = 'mcpreflight-baseline.json';
 
 const help = `mcpreflight ${VERSION}

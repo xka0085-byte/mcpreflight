@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 - context cost
+
+- The schema report now measures what a client actually receives on `tools/list`: `toolsBytes`, `toolsTokensEstimate` (payload bytes / 4, labelled as an estimate), the largest single tool, and bytes per tool.
+- Reason: the loudest complaint about MCP servers is context cost, that a server eats the context window before anyone asks it anything. Measured across 3,614 registry endpoints, the median is 1,518 tokens and the heaviest is 245,006.
+- The weekly rescan carries the same fields, and `scripts/context-cost.mjs` publishes a ranked table.
+- Still read-only. No wallet, signing, payment or tool calls.
+
 ## 0.4.0 - x402 challenge drift
 
 - New `baseline` command. Records the x402 challenge shape your endpoint serves to an anonymous caller, into a json file you commit.
