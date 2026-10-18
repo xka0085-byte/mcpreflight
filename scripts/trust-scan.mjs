@@ -70,6 +70,8 @@ async function worker() {
       protocolVersion: report?.mcp?.protocolVersion ?? null,
       serverInfo: report?.mcp?.serverInfo ?? null,
       toolCount: report?.mcp?.toolCount ?? null,
+      toolsBytes: report?.mcp?.toolsBytes ?? null,
+      toolsTokensEstimate: report?.mcp?.toolsTokensEstimate ?? null,
       findings: report?.findings ?? [{ severity: 'UNKNOWN', code: 'NO_RESPONSE', message: 'Endpoint did not complete MCP initialize + tools/list within timeout' }],
       checkedAt: report?.checkedAt ?? new Date().toISOString(),
     };
