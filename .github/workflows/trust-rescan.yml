@@ -26,6 +26,7 @@ jobs:
           node scripts/x402-drift.mjs || echo "::warning::x402 drift step failed, weekly data kept"
           node scripts/trust-gen.mjs
           node scripts/gen-sitemap.mjs
+          node scripts/scan-stats.mjs
       - name: Context cost ranking
         continue-on-error: true
         run: node scripts/context-cost.mjs
