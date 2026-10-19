@@ -12,6 +12,7 @@ const urls = [
   `${SITE}/`,
   `${SITE}/state-of-mcp-2026-10.html`,
   `${SITE}/registry-changes.html`,
+  `${SITE}/agent-registry-watch.html`,
   `${SITE}/how-many-mcp-servers-are-dead.html`,
   `${SITE}/agent-evidence-sample.html`,
   `${SITE}/mcp-schema-checker.html`,
