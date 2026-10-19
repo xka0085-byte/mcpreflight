@@ -11,6 +11,7 @@ const SITE = 'https://xka0085-byte.github.io/mcpreflight';
 const urls = [
   `${SITE}/`,
   `${SITE}/state-of-mcp-2026-10.html`,
+  `${SITE}/registry-changes.html`,
   `${SITE}/how-many-mcp-servers-are-dead.html`,
   `${SITE}/agent-evidence-sample.html`,
   `${SITE}/mcp-schema-checker.html`,
