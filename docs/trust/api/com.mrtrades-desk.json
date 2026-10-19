@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T05:27:20.230Z",
+  "scannedAt": "2026-10-19T07:15:01.332Z",
   "server": {
     "registryName": "com.mrtrades/desk",
     "title": "MrTrades Hyperliquid desk",
@@ -10,22 +10,17 @@
   },
   "endpoint": "https://app.mrtrades.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
+    "finalStatus": "UNKNOWN",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://app.mrtrades.com/mcp"
 }

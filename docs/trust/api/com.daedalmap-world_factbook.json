@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T05:23:57.493Z",
+  "scannedAt": "2026-10-19T07:11:52.688Z",
   "server": {
     "registryName": "com.daedalmap/world_factbook",
     "title": "DaedalMap CIA World Factbook",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://app.daedalmap.com/mcp/world_factbook",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.daedalmap/world_factbook",
+      "title": "CIA World Factbook",
+      "version": "0.4.0"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].filters has no description"
       }
     ]
   },

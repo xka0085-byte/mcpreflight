@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T05:28:51.552Z",
+  "scannedAt": "2026-10-19T07:16:28.723Z",
   "server": {
     "registryName": "com.roam2go/esim-catalog",
     "title": "Roam2Go eSIM Catalog",
@@ -10,18 +10,20 @@
   },
   "endpoint": "https://roam2go.com/wp-json/r2g-mcp/v1/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "roam2go-catalog",
-      "version": "1.3.1"
-    },
-    "toolCount": 3,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].id has no description"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },
