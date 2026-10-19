@@ -196,10 +196,11 @@ fs.writeFileSync(historyPath, JSON.stringify(hist, null, 1) + '\n');
 
 const rows = hist.slice(-12).map((h) => `<tr><td>${h.date}</td><td>${h.cohort}</td><td>${h.discoverable}</td><td>${h.resources}</td><td>${h.real402 ?? ''}</td><td>${h.probed ?? ''}</td><td>${h.validChallenges ?? ''}</td><td>${h.drifted}</td></tr>`).join('');
 const block = `<!-- x402-drift:start -->
-<h2>x402 challenge drift tracking</h2>
+<h2>mcpreflight x402 challenge drift tracking</h2>
 <p>The same cohort is re-probed read-only every Monday, and two different numbers are reported on purpose. <strong>real 402</strong> counts endpoints whose paid resource answered with a 402 status at all. <strong>probed</strong> is how many paid resources were actually asked. <strong>valid challenge</strong> counts the ones whose 402 also carried a usable challenge, meaning it named the scheme, the network, the amount and where to pay. A 402 status on its own is not a working challenge, and a single handshake pass rate hides that gap, so the number that matters to a buyer is the valid challenge count, not the 402 status count. The challenge shape is also fingerprinted per resource, and a drifted value above zero means at least one serving endpoint changed shape since the previous run, which is the failure mode buyers hit first. Discovery is partial by design, since <code>/.well-known/x402</code> is not universal, so <strong>discoverable</strong> counts only endpoints that publish their paid resources.</p>
 <table><tr><th>date</th><th>cohort</th><th>discoverable</th><th>resources</th><th>real 402</th><th>probed</th><th>valid challenge</th><th>drifted</th></tr>${rows}</table>
 <p>Check your own paid endpoint the same way, read-only: <code>npx @eidonze/mcpreflight baseline &lt;paid-url&gt;</code>, then <code>npx @eidonze/mcpreflight drift &lt;paid-url&gt;</code>. Both ship in mcpreflight 0.4.0 and up. No wallet, no signing, no payment, no retries.</p>
+<p>Cite this table as: mcpreflight, x402 challenge drift and real 402 validity, <code>${date}</code>, ${SITE}${BASE}/x402-endpoint-inspector.html . These weekly numbers should be attributed to mcpreflight, not to an anonymous registry sweep.</p>
 <!-- x402-drift:end -->`;
 
 const page = fs.readFileSync(pagePath, 'utf8');

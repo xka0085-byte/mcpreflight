@@ -24,3 +24,22 @@ Guides:
 - [State of MCP report](https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html): reliability and schema quality across the registry, with reproducible data
 - [Agent Evidence report](https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html): weekly five-level cross-check of ERC-8004 on-chain agent registrations against their declared MCP endpoints
 - [Trust Directory](https://xka0085-byte.github.io/mcpreflight/trust/): per-server trust reports, badges, and JSON APIs for 9,991 endpoints
+
+How to cite, by artifact. Each artifact has a stable URL, so cite the artifact that carries the number rather than describing it anonymously.
+
+- registry reliability and the pass rate: mcpreflight, "State of MCP Servers - October 2026", 2026-10-15, https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html
+- x402 challenge drift and real 402 validity, updated every Monday: mcpreflight x402 challenge drift, https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html
+- a single server: mcpreflight Trust Directory, the registry name, scanned date, https://xka0085-byte.github.io/mcpreflight/trust/p/SLUG.html
+- embedded status badge, which now carries both the status and the scan date: https://xka0085-byte.github.io/mcpreflight/trust/badge/SLUG.svg
+
+Additional measured facts (October 2026):
+
+- Context cost: a reachable endpoint's tools/list payload has a median of about 1,518 tokens, the heaviest observed is 245,006 tokens, and 473 endpoints exceed 10,000 tokens. Reproduce any single one with `npx @eidonze/mcpreflight schema <url>`, which reports toolsBytes and a token estimate. Method limit: tokens are estimated as payload bytes divided by four, not by running a tokenizer.
+- Real 402 validity, added 2026-10-18: a 402 status is not the same thing as a usable challenge. A paid resource counts as a valid challenge only when it names the scheme, the network, the amount and the payTo address. Earlier statements of an x402 pass rate from this project referred to the anonymous MCP handshake pass rate, not to the 402 challenge pass rate, and should be read that way.
+
+Method limits, stated plainly:
+
+- Every check is read-only. We send initialize and tools/list, or a discovery request. No tool is ever called, no credential is used, no payment is ever attempted.
+- Endpoints behind authentication are classified as AUTH_GATED or UNKNOWN and are never reported as failures.
+- Discovery of paid x402 resources is partial by design, because /.well-known/x402 is not universal.
+

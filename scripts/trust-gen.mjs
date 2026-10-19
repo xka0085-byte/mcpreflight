@@ -112,7 +112,11 @@ for (const r of results) {
 
   const badge = (label, value, color) => `<svg xmlns="http://www.w3.org/2000/svg" width="${6.5 * label.length + 6.5 * value.length + 30}" height="20" role="img"><title>${label}: ${value}</title><linearGradient id="s" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="r"><rect width="${6.5 * label.length + 6.5 * value.length + 30}" height="20" rx="3"/></clipPath><g clip-path="url(#r)"><rect width="${6.5 * label.length + 24}" height="20" fill="#555"/><rect x="${6.5 * label.length + 24}" width="${6.5 * value.length + 6}" height="20" fill="${color}"/><rect width="${6.5 * label.length + 6.5 * value.length + 30}" height="20" fill="url(#s)"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11"><text x="${3.25 * label.length + 12}" y="14">${label}</text><text x="${6.5 * label.length + 27 + 3.25 * value.length}" y="14">${value}</text></g></svg>`;
   const color = r.finalStatus === 'PASS' ? '#2ea44f' : r.finalStatus === 'FAIL' ? '#cf222e' : r.finalStatus === 'AUTH_GATED' ? '#0969da' : '#6e7781';
-  fs.writeFileSync(path.join(outDir, 'badge', `${r.slug}.svg`), badge('mcp trust', r.finalStatus.toLowerCase(), color));
+  // the badge is the artifact most likely to be embedded on someone else's page, so it has to
+  // carry the brand and the scan date. a generic "mcp trust" label loses the attribution and
+  // makes the badge worthless as an external mention
+  const scanDay = String(r.checkedAt ?? '').slice(0, 10) || new Date().toISOString().slice(0, 10);
+  fs.writeFileSync(path.join(outDir, 'badge', `${r.slug}.svg`), badge('mcpreflight', `${r.finalStatus.toLowerCase()} ${scanDay}`, color));
 
   const html = page(
     `${r.title} — MCP trust report (${r.finalStatus})`,
@@ -134,7 +138,8 @@ ${r.finalStatus === 'AUTH_GATED' ? `<tr><th>Auth gate</th><td>${esc(r.auth ?? 'g
 <ul class="findings">${findings}</ul>
 <h2>Reproduce this report</h2>
 <pre>npx @eidonze/mcpreflight schema ${esc(r.url)}</pre>
-<p>Embed status: <code>&lt;img src="${SITE}${BASE}/badge/${r.slug}.svg"&gt;</code> · Machine-readable: <a href="${SITE}${BASE}/api/${r.slug}.json"><code>/api/${r.slug}.json</code></a></p>`,
+<p>Embed status: <code>&lt;img src="${SITE}${BASE}/badge/${r.slug}.svg"&gt;</code> · Machine-readable: <a href="${SITE}${BASE}/api/${r.slug}.json"><code>/api/${r.slug}.json</code></a></p>
+<p>Cite this report as: mcpreflight Trust Directory, <code>${esc(r.name)}</code>, scanned ${esc(scanDay)}. ${SITE}${BASE}/p/${r.slug}.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>`,
     `${BASE}/p/${r.slug}.html`);
   fs.writeFileSync(path.join(outDir, 'p', `${r.slug}.html`), html);
 }
