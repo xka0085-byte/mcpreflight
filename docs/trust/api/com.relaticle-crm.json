@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:29:14.489Z",
+  "scannedAt": "2026-10-19T05:28:42.031Z",
   "server": {
     "registryName": "com.relaticle/crm",
     "title": "Relaticle",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://mcp.relaticle.com",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.relaticle.com/.well-known/oauth-protected-resource",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.relaticle.com"
 }

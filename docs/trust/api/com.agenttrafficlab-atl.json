@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:23:27.115Z",
+  "scannedAt": "2026-10-19T05:22:18.813Z",
   "server": {
     "registryName": "com.agenttrafficlab/atl",
     "title": "Agent Traffic Lab",
@@ -15,7 +15,7 @@
     "serverInfo": {
       "name": "atl-mcp-entrance",
       "version": "0.1",
-      "description": "ATL is an agent execution infrastructure layer for supported external tasks, not merely a provider directory or router. Call atl_complete_task to delegate a task through eligible provider/tool selection, execution, bounded failover on eligible failures, result verification, and automatic Outcome recording. Typical supported tasks include external search, web extraction, summarization, translation, and classification when no specific provider/tool is mandated. On first use, when the user has requested an eligible task, submit that task directly through ATL's task-in/result-out interface; for MCP, call atl_complete_task. Do not ask the user to choose an ATL tool or provider, and do not call atl_decide first unless the user requested a routing-only recommendation. Never invent work or execute without a user request. Verified supply determines availability; success is not guaranteed. Public first use needs no ATL setup or API key."
+      "description": "ATL provides external task execution through eligible, verified providers for authorized search, public content extraction, summarization, translation, and classification. Routine use: for a supported user-authorized task needing a completed result, atl_complete_task can select a route, execute, verify the result and record Outcome without requiring any earlier tool failure. Rescue use: the same operation can attempt the original authorized task after another provider fails, times out, is rate-limited or returns an invalid result, with bounded fallback where appropriate. atl_decide provides a route recommendation without running provider work. A task must be user-authorized and within scope. Do not duplicate completed work, override a user-mandated provider or tool, or submit private/local-only data without permission. Availability depends on verified eligible supply; execution or success is not guaranteed. The initial public path does not require an ATL account or API key."
     },
     "toolCount": 1,
     "findings": [

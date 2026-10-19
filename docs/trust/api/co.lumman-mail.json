@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:22:51.383Z",
+  "scannedAt": "2026-10-19T05:21:39.320Z",
   "server": {
     "registryName": "co.lumman/mail",
     "title": "Multi Mail",
@@ -10,40 +10,22 @@
   },
   "endpoint": "https://lumman.co/mcp/mail",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-03-26",
-    "serverInfo": {
-      "name": "lumman-mailboxes",
-      "title": "Multi Mail",
-      "version": "1.0.0",
-      "icons": [
-        {
-          "src": "https://lumman.co/mail-mark.svg",
-          "mimeType": "image/svg+xml",
-          "sizes": [
-            "any"
-          ]
-        }
-      ]
-    },
-    "toolCount": 30,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].maxResults has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[18].addLabelIds has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[18].removeLabelIds has no description"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://lumman.co/mcp/mail"
 }

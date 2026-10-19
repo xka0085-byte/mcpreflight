@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:25:17.806Z",
+  "scannedAt": "2026-10-19T05:24:20.826Z",
   "server": {
     "registryName": "com.earnings-watcher/mcp",
     "title": "EarningsWatcher",
@@ -10,17 +10,22 @@
   },
   "endpoint": "https://earnings-watcher-mcp-611514391657.us-central1.run.app/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://earnings-watcher-mcp-611514391657.us-central1.run.app/mcp"
 }

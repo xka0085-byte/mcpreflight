@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:32:21.457Z",
+  "scannedAt": "2026-10-19T05:32:04.102Z",
   "server": {
     "registryName": "dev.pingzen/mcp",
     "title": "PingZen Uptime Monitoring",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://pingzen.dev/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://pingzen.dev/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://pingzen.dev/mcp"
 }

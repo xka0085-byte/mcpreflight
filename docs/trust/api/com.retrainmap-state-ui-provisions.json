@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:29:19.321Z",
+  "scannedAt": "2026-10-19T05:28:46.668Z",
   "server": {
     "registryName": "com.retrainmap/state-ui-provisions",
     "title": "RetrainMap state UI provisions (weekly benefit min/max, weeks)",
@@ -10,17 +10,22 @@
   },
   "endpoint": "https://mcp.apify.com/?tools=retrainmap/state-ui-provisions",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=retrainmap/state-ui-provisions"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:21:41.041Z",
+  "scannedAt": "2026-10-19T05:20:22.596Z",
   "server": {
     "registryName": "app.pulltrader/seller-economics",
     "title": "Pulltrader",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://mcp.pulltrader.app/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-03-26",
-    "serverInfo": {
-      "name": "pulltrader-mcp",
-      "title": "Pulltrader",
-      "version": "0.6.2"
-    },
-    "toolCount": 8,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_VERIFIED",
         "severity": "INFO",
-        "message": "8 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.pulltrader.app/mcp"
 }

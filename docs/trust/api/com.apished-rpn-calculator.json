@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:23:45.453Z",
+  "scannedAt": "2026-10-19T05:22:37.906Z",
   "server": {
     "registryName": "com.apished/rpn-calculator",
     "title": "RPN Calculator",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://apished.com/mcp/v1/rpncalc",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "apished-rpncalc",
+      "version": "1.0.0"
+    },
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

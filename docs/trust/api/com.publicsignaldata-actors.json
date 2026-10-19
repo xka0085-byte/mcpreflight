@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:28:58.955Z",
+  "scannedAt": "2026-10-19T05:28:24.676Z",
   "server": {
     "registryName": "com.publicsignaldata/actors",
     "title": "com.publicsignaldata/actors",
@@ -10,17 +10,22 @@
   },
   "endpoint": "https://mcp.apify.com/?actors=splendorous_astrolabe_xs9/polymarket-odds-snapshot,splendorous_astrolabe_xs9/polymarket-whale-trades,splendorous_astrolabe_xs9/polymarket-wallet-pnl,splendorous_astrolabe_xs9/ats-jobs-workday,splendorous_astrolabe_xs9/new-business-filings,splendorous_astrolabe_xs9/govcon-monitor,splendorous_astrolabe_xs9/clinicaltrials-change-monitor",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=splendorous_astrolabe_xs9/polymarket-odds-snapshot,splendorous_astrolabe_xs9/polymarket-whale-trades,splendorous_astrolabe_xs9/polymarket-wallet-pnl,splendorous_astrolabe_xs9/ats-jobs-workday,splendorous_astrolabe_xs9/new-business-filings,splendorous_astrolabe_xs9/govcon-monitor,splendorous_astrolabe_xs9/clinicaltrials-change-monitor"
 }

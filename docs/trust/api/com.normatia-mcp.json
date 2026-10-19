@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:28:11.443Z",
+  "scannedAt": "2026-10-19T05:27:32.446Z",
   "server": {
     "registryName": "com.normatia/mcp",
     "title": "Normatia",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://mcp.normatia.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": "/.well-known/oauth-protected-resource",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.normatia.com/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:29:34.529Z",
+  "scannedAt": "2026-10-19T05:29:03.435Z",
   "server": {
     "registryName": "com.scanverity/resolution-rules",
     "title": "Scanverity Resolution Rules",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://scanverity.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "scanverity-resolution",
+      "version": "0.3.0"
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].assessment_id has no description"
       }
     ]
   },

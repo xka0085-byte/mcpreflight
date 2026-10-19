@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:32:24.090Z",
+  "scannedAt": "2026-10-19T05:31:48.161Z",
   "server": {
     "registryName": "dev.fly.x402-accelerometer-feed/tokenized-stocks-agent-data",
     "title": "Tokenized Stocks & Agent Data (x402)",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://x402-accelerometer-feed.fly.dev/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "Tokenized Stocks & Agent Data",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
       }
     ]
   },

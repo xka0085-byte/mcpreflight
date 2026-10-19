@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:21:40.922Z",
+  "scannedAt": "2026-10-19T05:20:22.654Z",
   "server": {
     "registryName": "app.promvia/promvia",
     "title": "app.promvia/promvia",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://promvia.app/api/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": "https://promvia.app/.well-known/oauth-protected-resource",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://promvia.app/api/mcp"
 }

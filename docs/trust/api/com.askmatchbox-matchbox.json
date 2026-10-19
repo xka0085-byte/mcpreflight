@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:23:50.975Z",
+  "scannedAt": "2026-10-19T05:22:45.467Z",
   "server": {
     "registryName": "com.askmatchbox/matchbox",
     "title": "Matchbox",
@@ -10,18 +10,20 @@
   },
   "endpoint": "https://askmatchbox.com/api/mcp/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-03-26",
-    "serverInfo": {
-      "name": "matchbox",
-      "version": "1.0.0"
-    },
-    "toolCount": 3,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "3 tools passed deterministic schema checks"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

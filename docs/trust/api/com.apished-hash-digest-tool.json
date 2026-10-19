@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:23:45.652Z",
+  "scannedAt": "2026-10-19T05:22:37.581Z",
   "server": {
     "registryName": "com.apished/hash-digest-tool",
     "title": "Hash Digest Tool",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://apished.com/mcp/v1/hash",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "apished-hash",
+      "version": "1.0.0"
+    },
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

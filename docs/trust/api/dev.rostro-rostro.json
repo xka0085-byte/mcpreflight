@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:32:26.206Z",
+  "scannedAt": "2026-10-19T05:32:08.414Z",
   "server": {
     "registryName": "dev.rostro/rostro",
     "title": "dev.rostro/rostro",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://proto.rostro.dev/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://proto.rostro.dev/mcp/.well-known/oauth-protected-resource",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://proto.rostro.dev/mcp"
 }

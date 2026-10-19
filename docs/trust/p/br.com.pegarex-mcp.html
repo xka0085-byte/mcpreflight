@@ -3,82 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PegaRex — MCP trust report (PASS)</title>
-<meta name="description" content="Read-only MCP schema trust report for br.com.pegarex/mcp (https://pegarex.com.br/api/mcp): PASS, protocol 2025-03-26, 17 tools. Reproducible with mcpreflight.">
+<title>PegaRex — MCP trust report (AUTH_GATED)</title>
+<meta name="description" content="Read-only MCP schema trust report for br.com.pegarex/mcp (https://pegarex.com.br/api/mcp): AUTH_GATED, protocol unknown, unknown tools. Reproducible with mcpreflight.">
 <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/trust/p/br.com.pegarex-mcp.html">
 <style>:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.AUTH_GATED{background:#ddf4ff;color:#0550ae}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}code{background:transparent}}</style>
 </head>
 <body>
 <main>
 <p><span class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> / report</span></p>
-<h1>PegaRex <span class="pill PASS">PASS</span></h1>
-
+<h1>PegaRex <span class="pill AUTH_GATED">AUTH-GATED</span></h1>
+<p class="muted">The endpoint answered an anonymous initialize with 401 and a <code>WWW-Authenticate: Bearer</code> header, so it requires authentication by design. This is an auth gate, not a failure — authenticated scans are out of scope.</p>
 <p class="muted">Search 1.8M+ live Brazilian used-car and motorcycle listings, with FIPE reference prices.</p>
 <table>
 <tr><th>Registry name</th><td><code>br.com.pegarex/mcp</code> (v1.0.0)</td></tr>
 <tr><th>Endpoint</th><td><code>https://pegarex.com.br/api/mcp</code></td></tr>
-<tr><th>Reported server</th><td>pegarex 1.0.0</td></tr>
-<tr><th>Protocol version</th><td>2025-03-26</td></tr>
-<tr><th>Tools exposed</th><td>17</td></tr>
-
-<tr><th>Checked at</th><td>2026-10-12T09:22:19.283Z</td></tr>
+<tr><th>Reported server</th><td>—</td></tr>
+<tr><th>Protocol version</th><td>not negotiated</td></tr>
+<tr><th>Tools exposed</th><td>unknown</td></tr>
+<tr><th>Auth gate</th><td>gated</td></tr>
+<tr><th>Checked at</th><td>2026-10-19T05:21:03.777Z</td></tr>
 </table>
 <h2>Findings</h2>
-<ul class="findings"><li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].query has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].brand has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].model has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].version has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].brand_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].model_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].version_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].body_style has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].price_min has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].price_max has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].year_min has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].year_max has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].mileage_min has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].mileage_max has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].fuel_type has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].transmission has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].location has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].source has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].category has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].sort_by has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].page has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[0].per_page has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].category has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].body_style has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].brand_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].brand has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].category has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].model_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].brand has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].model has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].category has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].year_min has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].year_max has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[7].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].section has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[9].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[9].granularity has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].top_n has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].year_tolerance has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].max_results has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].cheaper_only has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].max_results has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[15].car_id has no description</li>
-<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[16].car_id has no description</li></ul>
+<ul class="findings"><li><span class="pill INFO">INFO</span> <code>AUTH_GATE_VERIFIED</code> — Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server</li></ul>
 <h2>Reproduce this report</h2>
 <pre>npx @eidonze/mcpreflight schema https://pegarex.com.br/api/mcp</pre>
 <p>Embed status: <code>&lt;img src="https://xka0085-byte.github.io/mcpreflight/trust/badge/br.com.pegarex-mcp.svg"&gt;</code> · Machine-readable: <a href="https://xka0085-byte.github.io/mcpreflight/trust/api/br.com.pegarex-mcp.json"><code>/api/br.com.pegarex-mcp.json</code></a></p>
-<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-10-12.</div>
+<p>Cite this report as: mcpreflight Trust Directory, <code>br.com.pegarex/mcp</code>, scanned 2026-10-19. https://xka0085-byte.github.io/mcpreflight/trust/p/br.com.pegarex-mcp.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
+<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-10-19.</div>
 </main>
 </body>
 </html>

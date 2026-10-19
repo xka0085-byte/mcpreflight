@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:21:53.077Z",
+  "scannedAt": "2026-10-19T05:20:35.538Z",
   "server": {
     "registryName": "app.thesignup/mcp",
     "title": "TheSignup",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://thesignup.app/mcp/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://thesignup.app/.well-known/oauth-protected-resource-mcp",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://thesignup.app/mcp/mcp"
 }

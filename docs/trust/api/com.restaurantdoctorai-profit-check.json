@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:29:17.239Z",
+  "scannedAt": "2026-10-19T05:28:45.719Z",
   "server": {
     "registryName": "com.restaurantdoctorai/profit-check",
     "title": "RestaurantDoctorAI",
@@ -15,8 +15,8 @@
     "serverInfo": {
       "name": "restaurantdoctorai-profit-check",
       "title": "RestaurantDoctorAI profit check and calculators",
-      "version": "1.7.0",
-      "description": "A free restaurant profit check (12 multiple-choice questions, scored against RestaurantDoctorAI's targets), a recipe costing draft, the website's free prime cost, labor cost, break-even, plate cost, delivery app prices, menu calories, FICA tip credit and card fees calculators, a free check of a restaurant's website, a US restaurant's tax, payroll, license and permit deadlines, and a search, list and read of RestaurantDoctorAI's sourced guides, blog posts and restaurant knowledge.",
+      "version": "1.11.2",
+      "description": "A free restaurant profit check (12 multiple-choice questions, scored against RestaurantDoctorAI's targets), a recipe costing draft, the website's free prime cost, labor cost, break-even, restaurant budget, plate cost, delivery app prices, menu calories, FICA tip credit, card fees and booking fees calculators, its free nightly cash-out, tip-out and par levels sheets, a free check of a restaurant's website, a US restaurant's tax, payroll, license and permit deadlines, and a search, list and read of RestaurantDoctorAI's sourced guides, blog posts and restaurant knowledge.",
       "websiteUrl": "https://restaurantdoctorai.com/ai-assistants",
       "icons": [
         {
@@ -28,7 +28,7 @@
         }
       ]
     },
-    "toolCount": 16,
+    "toolCount": 21,
     "findings": [
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
@@ -148,6 +148,11 @@
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
+        "message": "tools[10].ownerPay has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
         "message": "tools[10].averageSpend has no description"
       },
       {
@@ -173,142 +178,322 @@
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].ingredients has no description"
+        "message": "tools[11].sales has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].portions has no description"
+        "message": "tools[11].rent has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].extras has no description"
+        "message": "tools[11].ownerPay has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].plateCost has no description"
+        "message": "tools[11].otherPct has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].menuPrice has no description"
+        "message": "tools[12].ingredients has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].taxIncluded has no description"
+        "message": "tools[12].portions has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].taxRate has no description"
+        "message": "tools[12].extras has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].target has no description"
+        "message": "tools[12].plateCost has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[11].sold has no description"
+        "message": "tools[12].menuPrice has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[12].price has no description"
+        "message": "tools[12].taxIncluded has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[12].rate has no description"
+        "message": "tools[12].taxRate has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[13].dish has no description"
+        "message": "tools[12].target has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[13].ingredients has no description"
+        "message": "tools[12].sold has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[13].plates has no description"
+        "message": "tools[13].price has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[13].cookedWeight has no description"
+        "message": "tools[13].rate has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[13].portionWeight has no description"
+        "message": "tools[14].dish has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[14].alreadyClaimed has no description"
+        "message": "tools[14].ingredients has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[14].state has no description"
+        "message": "tools[14].plates has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[14].cashWage has no description"
+        "message": "tools[14].cookedWeight has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[14].reportedTips has no description"
+        "message": "tools[14].portionWeight has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[14].tippedHours has no description"
+        "message": "tools[15].alreadyClaimed has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[14].businessType has no description"
+        "message": "tools[15].state has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[14].owesIncomeTax has no description"
+        "message": "tools[15].cashWage has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[15].cardSales has no description"
+        "message": "tools[15].reportedTips has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[15].totalFees has no description"
+        "message": "tools[15].tippedHours has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[15].cardCount has no description"
+        "message": "tools[15].businessType has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[15].averageTicket has no description"
+        "message": "tools[15].owesIncomeTax has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
-        "message": "tools[15].pricingModel has no description"
+        "message": "tools[16].cardSales has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].totalFees has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].cardCount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].averageTicket has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].pricingModel has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].networkCovers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].partnerCovers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].websiteCovers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].websiteFlatAddOn has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].monthlyFee has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].networkCoverFee has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].partnerCoverFee has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].prepaidAmount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].prepaidFeePercent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].averageSpend has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].firstMonth has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].renewalDate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].startingBank has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].cashSales has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].cashTipsPaidOut has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].paidOuts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].cashCounted has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].cardSales has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].cardBatch has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].netSales has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].comps has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].voids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].discounts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].baseKind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].base has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].tips has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].roles has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].pool has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].members has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].daysOpenPerWeek has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].daysCovered has no description"
       }
     ]
   },

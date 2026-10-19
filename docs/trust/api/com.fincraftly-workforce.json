@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:25:43.421Z",
+  "scannedAt": "2026-10-19T05:24:51.393Z",
   "server": {
     "registryName": "com.fincraftly/workforce",
     "title": "FinCraftly",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://fincraftly.com/api/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://raclink.si/.well-known/oauth-protected-resource",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://fincraftly.com/api/mcp"
 }

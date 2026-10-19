@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:26:43.731Z",
+  "scannedAt": "2026-10-19T05:25:56.715Z",
   "server": {
     "registryName": "com.iminify/iminify",
     "title": "Iminify",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://www.iminify.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://www.iminify.com/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://www.iminify.com/mcp"
 }

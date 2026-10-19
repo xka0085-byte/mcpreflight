@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:21:50.092Z",
+  "scannedAt": "2026-10-19T05:20:31.945Z",
   "server": {
     "registryName": "app.spoonjoy/spoonjoy",
     "title": "Spoonjoy",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://spoonjoy.app/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -21,6 +21,11 @@
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://spoonjoy.app/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://spoonjoy.app/mcp"
 }

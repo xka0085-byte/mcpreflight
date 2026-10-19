@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:29:52.853Z",
+  "scannedAt": "2026-10-19T05:29:23.680Z",
   "server": {
     "registryName": "com.singlefax/mcp",
     "title": "SingleFax",
@@ -10,7 +10,7 @@
   },
   "endpoint": "https://singlefax.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
@@ -20,6 +20,13 @@
         "code": "NO_RESPONSE",
         "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://singlefax.com/.well-known/oauth-protected-resource/mcp",
+    "discovery": [
+      "ai-catalog"
     ]
   },
   "verify": "npx @eidonze/mcpreflight schema https://singlefax.com/mcp"

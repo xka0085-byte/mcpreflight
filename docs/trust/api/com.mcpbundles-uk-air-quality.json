@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-12T09:27:37.646Z",
+  "scannedAt": "2026-10-19T05:26:53.913Z",
   "server": {
     "registryName": "com.mcpbundles/uk-air-quality",
     "title": "UK Air Quality MCP Server from MCPBundles",
@@ -10,17 +10,22 @@
   },
   "endpoint": "https://mcp.mcpbundles.com/bundle/uk-air-quality/",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.mcpbundles.com/bundle/uk-air-quality/"
 }
