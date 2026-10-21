@@ -21,6 +21,7 @@ const urls = [
   `${SITE}/troubleshooting.html`,
   `${SITE}/mcp-oauth-diagnostics.html`,
   `${SITE}/test-remote-mcp-server.html`,
+  `${SITE}/check-your-mcp-endpoint.html`,
   `${SITE}/trust/`,
 ];
 const total = scan.results.length;

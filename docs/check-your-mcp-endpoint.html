@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check Your MCP Endpoint in CI: Read-Only Handshake and Schema Check</title>
+<meta name="description" content="Copy-paste setup to check your own MCP endpoint on every pull request: GitHub Action, npx command and status badge. The check is read-only (initialize plus tools/list) and does not call tools or test authentication.">
+</head>
+<body style="font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc;margin:0">
+<main style="max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem">
+<p class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight docs</a> / check your endpoint</p>
+<h1>Check your MCP endpoint before clients depend on it</h1>
+<p>If you ship an MCP server, the failure you care about is the boring one: the endpoint stops answering <code>initialize</code>, or <code>tools/list</code> starts returning a schema a client cannot parse. This page is the shortest path to catching that in your own repository, on every pull request. Three copy-paste blocks: a GitHub Action, a one-line <code>npx</code> command, and a status badge.</p>
+<p>Every check here is read-only. It sends an MCP <code>initialize</code> handshake and a <code>tools/list</code> request against a URL you name, then validates the response shape and tool schemas. It does not call your tools, does not send credentials, and does not attempt payment on x402 endpoints.</p>
+
+<h2>1. GitHub Action</h2>
+<p>Add this file as <code>.github/workflows/mcp-check.yml</code>. It runs on pull requests and fails the job when the report status is FAIL or UNKNOWN.</p>
+<pre>name: MCP Trust Check
+on: [pull_request]
+
+jobs:
+  mcp-trust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: xka0085-byte/mcpreflight@v1
+        with:
+          endpoint: https://your-mcp-server.example/mcp
+          mode: schema
+          format: markdown</pre>
+<p>Inputs: <code>endpoint</code> (required), <code>mode</code> (<code>schema</code>, <code>inspect</code>, <code>baseline</code>, <code>drift</code>; default <code>schema</code>), <code>format</code> (default <code>markdown</code>), <code>baseline</code> (path used by <code>drift</code>), and <code>fail-on</code> (default <code>true</code>; set <code>false</code> for an informational run). Exit codes are stable: <code>0</code> PASS, <code>1</code> FAIL, <code>2</code> UNKNOWN or network error, <code>3</code> usage error. Point it at a public test endpoint; do not put tokens or private keys in workflow inputs.</p>
+
+<h2>2. Run it locally with npx</h2>
+<p>Node.js 18 or newer. No API key, no wallet, no server code.</p>
+<pre>npx @eidonze/mcpreflight schema https://your-mcp-server.example/mcp</pre>
+<p>Add <code>--json</code> for machine-readable output, or <code>--format=markdown</code> to match the Action report. For an x402 paid endpoint, use <code>npx @eidonze/mcpreflight inspect https://your-api.example/paid --method=POST</code>: it reads the 402 challenge document without signing, paying, or settling anything.</p>
+
+<h2>3. Status badge</h2>
+<p>After your endpoint is listed in the <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a>, the badge renders the last scan status together with the scan date, so a stale badge is visibly stale rather than silently green. Replace <code>SLUG</code> with the registry name as it appears in the directory.</p>
+<pre>[![mcpreflight](https://xka0085-byte.github.io/mcpreflight/trust/badge/SLUG.svg)](https://xka0085-byte.github.io/mcpreflight/trust/p/SLUG.html)</pre>
+<p>If your server is not in the registry yet, use your own workflow badge instead, so the badge reflects a check that actually ran:</p>
+<pre>[![MCP Trust Check](https://github.com/OWNER/REPO/actions/workflows/mcp-check.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/mcp-check.yml)</pre>
+
+<h2>What this check does not tell you</h2>
+<p>It is a protocol and schema preflight, not a security review. Read the list before you put it on a page:</p>
+<ul>
+<li><strong>No tool calls.</strong> Runtime behaviour, data handling and permission scope are not observed, so a passing check says nothing about what a tool does when invoked.</li>
+<li><strong>No authentication testing.</strong> Endpoints behind auth come back as AUTH_GATED or UNKNOWN, and are classified rather than counted as failures. The check does not bypass, test or evaluate your auth.</li>
+<li><strong>No security or supply-chain audit.</strong> Malicious code, prompt injection and dependency risk are out of scope.</li>
+<li><strong>No payment verification.</strong> For x402, the check reads the challenge shape; it does not sign, settle, or confirm delivery.</li>
+<li><strong>Point in time.</strong> A result describes the response observed during that run against that URL. An endpoint can pass today and change tomorrow, and a self-hosted endpoint behind a cold start or a rate limit may report UNKNOWN rather than FAIL.</li>
+<li><strong>Not a certification.</strong> It does not certify conformance to any spec beyond the response shapes it inspects, and it is not affiliated with any registry or vendor.</li>
+</ul>
+
+<p>Related: <a href="https://xka0085-byte.github.io/mcpreflight/test-remote-mcp-server.html">test a remote MCP server</a>, <a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">what the schema check validates</a>, <a href="https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html">gating in CI</a>, <a href="https://xka0085-byte.github.io/mcpreflight/troubleshooting.html">common handshake failures</a>, <a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">x402 preflight</a>.</p>
+<p style="font-size:.9rem;color:#555">Source: <a href="https://github.com/xka0085-byte/mcpreflight">github.com/xka0085-byte/mcpreflight</a> (MIT). Checks are read-only by design; report any false positive with the command and redacted output.</p>
+</main>
+</body>
+</html>
