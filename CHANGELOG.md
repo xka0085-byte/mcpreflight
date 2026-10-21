@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased - handshake accuracy (found by an external report, 2026-10-20)
+
+- Stateful Streamable HTTP servers return `Mcp-Session-Id` on `initialize`; `tools/list` must echo it. We did not, so healthy servers were reported as NO_RESPONSE. Reported by the Novence maintainer in issues #4 and #5.
+- `redirect: manual` turned 308 endpoints into failures. Redirects are now followed.
+- Any 401/403 now counts as AUTH_GATED, not only those carrying a Bearer `WWW-Authenticate` header.
+- One retry with backoff on 429 and 5xx, so throttling is not reported as a dead endpoint.
+- Body cap raised from 1 MB to 4 MB and timeout from 10 s to 15 s.
+- Re-tested 60 randomly sampled NO_RESPONSE endpoints: 19 now PASS and 12 are AUTH_GATED, so at least half of the 2,022 NO_RESPONSE entries were misclassified. Census figures must be regenerated before they are quoted again.
+
 ## 0.5.0 - context cost
 
 - The schema report now measures what a client actually receives on `tools/list`: `toolsBytes`, `toolsTokensEstimate` (payload bytes / 4, labelled as an estimate), the largest single tool, and bytes per tool.

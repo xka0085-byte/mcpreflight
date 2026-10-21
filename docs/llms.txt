@@ -1,4 +1,4 @@
-# mcpreflight
+﻿# mcpreflight
 
 > Read-only preflight checker for MCP servers and x402 payment endpoints. Open source (MIT), zero dependencies, runs via npx or GitHub Actions. Maintains a public Trust Directory of all 9,991 MCP Registry endpoints with weekly rescans.
 
@@ -43,3 +43,8 @@ Method limits, stated plainly:
 - Endpoints behind authentication are classified as AUTH_GATED or UNKNOWN and are never reported as failures.
 - Discovery of paid x402 resources is partial by design, because /.well-known/x402 is not universal.
 
+
+## Data quality note (2026-10-21)
+
+MCP census data quality note with before and after numbers after a session-header defect was fixed: https://xka0085-byte.github.io/mcpreflight/data-quality-2026-10-21.html
+Old handshake pass rate 48.8 percent is deprecated. New read-only census: 5120 PASS, 3514 AUTH_GATED, 1316 UNKNOWN, 41 FAIL out of 9991 endpoints, checked 2026-10-21. Not independently recomputed.

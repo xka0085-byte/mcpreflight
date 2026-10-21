@@ -2,8 +2,8 @@
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 
-const MAX_BODY = 1024 * 1024;
-const TIMEOUT = 10_000;
+const MAX_BODY = 4 * 1024 * 1024;
+const TIMEOUT = 15_000;
 const VERSION = '0.5.0';
 const DEFAULT_BASELINE = 'mcpreflight-baseline.json';
 
@@ -146,16 +146,29 @@ function markdown(report) {
   return lines.join('\n');
 }
 
+// One POST with redirect following and a single retry on transient throttling.
+// redirect:manual made 308 endpoints look dead; 429 and 5xx were counted as NO_RESPONSE.
+async function postJson(url, headers, body, attempt = 0) {
+  const res = await fetch(url, { method: 'POST', redirect: 'follow', signal: AbortSignal.timeout(TIMEOUT), headers, body });
+  if ((res.status === 429 || res.status >= 500) && attempt < 1) {
+    await new Promise((r) => setTimeout(r, 1500));
+    return postJson(url, headers, body, attempt + 1);
+  }
+  return res;
+}
+
 async function schemaCommand(url, format) {
   const findings = [];
   const add = (code, severity, message) => findings.push({ code, severity, message });
-  const response = await fetch(url, { method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(TIMEOUT), headers: { 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'MCP-Protocol-Version': '2025-03-26' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'mcpreflight', version: VERSION } } }) });
+  const response = await postJson(url, { 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'MCP-Protocol-Version': '2025-03-26' }, JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'mcpreflight', version: VERSION } } }));
   const initText = await readBody(response);
   if (!response.ok) {
     const www = response.headers.get('www-authenticate');
-    if ((response.status === 401 || response.status === 403) && www && /bearer/i.test(www)) {
+    // Any 401/403 means the endpoint is reachable but gated. Requiring a Bearer challenge
+    // under-counted gates: many servers answer 401 without WWW-Authenticate.
+    if (response.status === 401 || response.status === 403) {
       let rm = null, verified = false;
-      const m = www.match(/resource_metadata="([^"]+)"/i);
+      const m = www?.match(/resource_metadata="([^"]+)"/i);
       if (m) {
         rm = m[1];
         try { const r = await fetch(rm, { signal: AbortSignal.timeout(8000) }); if (r.ok) { const j = await r.json().catch(() => null); verified = Boolean(j && Array.isArray(j.authorization_servers) && j.authorization_servers.length > 0); } } catch {}
@@ -170,8 +183,13 @@ async function schemaCommand(url, format) {
   }
   const init = jsonrpc(initText);
   if (!init?.result?.protocolVersion) add('INITIALIZE_RESPONSE_INVALID', 'FAIL', 'Initialize response did not include result.protocolVersion');
+  // Streamable HTTP servers may be stateful: initialize returns Mcp-Session-Id and every
+  // later request must echo it. Missing it yields 400 "Server already initialized" or a
+  // NO_RESPONSE that looks like a dead endpoint. Reported by Novence maintainer, 2026-10-20.
+  const sessionId = response.headers.get('mcp-session-id');
   const headers = { 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'MCP-Protocol-Version': init?.result?.protocolVersion ?? '2025-03-26' };
-  const list = await fetch(url, { method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(TIMEOUT), headers, body: JSON.stringify({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} }) });
+  if (sessionId) headers['Mcp-Session-Id'] = sessionId;
+  const list = await postJson(url, headers, JSON.stringify({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} }));
   const listText = await readBody(list);
   if (!list.ok) throw new Error(`tools/list returned HTTP ${list.status}`);
   const parsed = jsonrpc(listText);
