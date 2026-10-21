@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corrections log: MCP endpoint scanner — mcpreflight</title>
+<meta name="description" content="Public corrections log for the mcpreflight MCP endpoint scanner. Each entry states what was wrong, what it affected, when it was fixed, and who found it.">
+<style>
+:root{--bg:#0f1115;--fg:#e6e6e6;--muted:#9aa0a6;--line:#2a2f3a;--accent:#7ac7ff;--warn:#ffb86b;--ok:#7ee2a8}
+@media (prefers-color-scheme: light){:root{--bg:#fafafa;--fg:#1b1b1b;--muted:#5a5f66;--line:#e2e4e8;--accent:#0b62a4;--warn:#a85b00;--ok:#1f7a4d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:48px 20px 72px}
+h1{font-size:30px;line-height:1.2;margin:0 0 8px}
+h2{font-size:20px;margin:36px 0 12px}
+p{color:var(--fg)}
+.sub{color:var(--muted);margin:0 0 28px}
+table{width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+code{background:rgba(127,127,127,.14);padding:1px 5px;border-radius:4px;font-size:.92em}
+.note{border-left:3px solid var(--warn);padding:10px 14px;background:rgba(255,184,107,.08);margin:18px 0}
+.ok{border-left:3px solid var(--ok);padding:10px 14px;background:rgba(126,226,168,.08);margin:18px 0}
+a{color:var(--accent)}
+.cite{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+ul{padding-left:20px}
+</style>
+</head>
+<body>
+<main>
+<h1>Corrections log</h1>
+<p class="sub">mcpreflight MCP endpoint scanner. Last updated 2026-10-21.</p>
+
+<p>When an external user tells us a scan result is wrong, we re-run the case, fix the scanner, and record it here. This page lists every correction we have made to published results, with the evidence link and the affected numbers. We publish these because a scanner that hides its errors cannot be trusted on its successes.</p>
+
+<h2>Corrections</h2>
+<table>
+<thead><tr><th>Date</th><th>What was wrong</th><th>Effect on results</th><th>Who found it</th></tr></thead>
+<tbody>
+<tr>
+<td>2026-10-20</td>
+<td>For streamable HTTP servers, <code>tools/list</code> was sent without the <code>Mcp-Session-Id</code> returned by <code>initialize</code>.</td>
+<td>Stateful servers were reported as <code>NO_RESPONSE</code>. In a re-test of 60 such endpoints, 19 passed once the session header was sent.</td>
+<td><a href="https://github.com/Novence-ai/mcp/issues/4">Novence-ai/mcp #4</a></td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td>HTTP redirects were intercepted instead of followed.</td>
+<td>Endpoints returning 308 were reported as failures.</td>
+<td>Internal re-test</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td>An unauthenticated 401 or 403 without a <code>WWW-Authenticate</code> header was counted as failure.</td>
+<td>Auth-gated endpoints were undercounted and failures were overstated.</td>
+<td>Internal re-test</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td>No retry on 429 or 5xx, and responses over 1 MB were truncated.</td>
+<td>Rate-limited endpoints and large tool lists were reported as failures.</td>
+<td>Internal re-test</td>
+</tr>
+<tr>
+<td>2026-10-21</td>
+<td>A failed collection could be rendered as a zero.</td>
+<td>A transient network failure could make a public counter read 0. Failed runs now keep the last successful value and are labelled unavailable.</td>
+<td>Internal review</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Effect on the published numbers</h2>
+<p>The full registry scan was re-run after the fixes. The current figures, all from our own scan, are:</p>
+<ul>
+<li>9,991 endpoints scanned</li>
+<li>5,120 passed the MCP handshake and schema check, 51.2%</li>
+<li>3,514 auth-gated</li>
+<li>1,316 unknown or unreachable</li>
+<li>41 failed</li>
+</ul>
+<p>The previously published 48.8% pass rate is withdrawn. It was produced by the scanner before these corrections and is no longer used anywhere on this site.</p>
+
+<div class="note">These numbers are our own scan output. They have not been independently recomputed by a third party. Where a number is quoted elsewhere, it should carry the date 2026-10-21 and the words "mcpreflight scan".</div>
+
+<h2>External reviews</h2>
+<p>Two external reviews are on record.</p>
+<ul>
+<li><a href="https://github.com/Novence-ai/mcp/issues/4">Novence-ai/mcp #4</a>: the maintainer reported that anonymous handshakes worked over streamable HTTP with a session header. Our re-test confirmed it and led to the first four corrections above.</li>
+<li><a href="https://github.com/szaffarano/org-mcp-server/issues/232">szaffarano/org-mcp-server #232</a>: the maintainer asked us to re-test a tools/list schema report on v0.1.2, then shipped v0.1.3. Our re-test confirmed the missing fields were present, and the maintainer confirmed and closed the issue.</li>
+</ul>
+<div class="ok">These two threads are the only cases where someone outside this project checked our claim and acted on it. That is useful evidence that a report changed a product. It is not evidence of commercial demand.</div>
+
+<h2>How to reproduce</h2>
+<p>Every result on this site can be re-run. The scanner is open source, and the conformance suite covers the seven cases above, including stateful session headers, SSE responses, unauthenticated 401, 308 redirects, rate-limit retries, and malformed schemas.</p>
+<p><a href="https://github.com/xka0085-byte/mcpreflight">Source and issue tracker</a> · <a href="/mcpreflight/data-quality-2026-10-21.html">Data quality note for the 2026-10-21 scan</a></p>
+
+<p class="cite">Citation: mcpreflight, corrections log, updated 2026-10-21. https://xka0085-byte.github.io/mcpreflight/corrections.html</p>
+</main>
+</body>
+</html>
