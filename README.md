@@ -7,6 +7,29 @@ Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/xka0085-byte/mcpreflight)
 
+## What it is
+
+Read-only MCP and x402 preflight: it reads `initialize` + `tools/list` and x402 payment documents. No API key, no wallet, no payment, no tool calls.
+
+## Start here
+
+```bash
+npx @eidonze/mcpreflight schema https://your-mcp-server.example/mcp --json
+```
+
+Exit codes are stable for CI: `0` PASS, `1` FAIL, `2` UNKNOWN/network, `3` usage. Requires Node.js 18+.
+
+Gate a pull request:
+
+```yaml
+- uses: xka0085-byte/mcpreflight@v1
+  with:
+    endpoint: https://your-mcp-server.example/mcp
+```
+
+Check your endpoint in the browser, free and without signup:
+[check-your-mcp-endpoint](https://xka0085-byte.github.io/mcpreflight/check-your-mcp-endpoint.html)
+
 ## Find the right guide
 
 - [Public documentation site](https://xka0085-byte.github.io/mcpreflight/)
