@@ -239,7 +239,7 @@ async function main() {
   mkdirSync(HEALTH_DIR, { recursive: true });
   mkdirSync(join(ROOT, 'data'), { recursive: true });
   writeFileSync(join(HEALTH_DIR, 'latest.json'), JSON.stringify(payload, null, 2) + '\n');
-  writeFileSync(join(HEALTH_DIR, 'health.html'), renderHtml(payload));
+  writeFileSync(join(ROOT, 'docs', 'health.html'), renderHtml(payload)); // 页面放站点根，数据留在 health/
   writeFileSync(HB_FILE, JSON.stringify({ at: payload.generated_at, overall, stale: payload.stale }, null, 2) + '\n');
   const hist = join(HEALTH_DIR, 'history.jsonl');
   appendFileSync(hist, JSON.stringify({ at: payload.generated_at, overall, stale: payload.stale.length, healed: healed.length }) + '\n');

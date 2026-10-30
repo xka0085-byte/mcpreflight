@@ -10,6 +10,7 @@ const SITE = 'https://xka0085-byte.github.io/mcpreflight';
 
 const urls = [
   `${SITE}/`,
+  `${SITE}/health.html`,
   `${SITE}/state-of-mcp-2026-10.html`,
   `${SITE}/registry-changes.html`,
   `${SITE}/agent-registry-watch.html`,
