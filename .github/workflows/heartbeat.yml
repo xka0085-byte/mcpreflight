@@ -1,0 +1,53 @@
+name: heartbeat
+
+# 一日三次自检：问每个 workflow "你上次成功是什么时候"，超期的当场补跑，
+# 仍然红的开 Issue。存在的理由见 docs/ops.html 与 scripts/heartbeat.mjs 顶部。
+#
+# 注意 actions: write —— 默认的 GITHUB_TOKEN 没有 dispatch 别人的权限，
+# 少了这一行，自愈会静默变成"只报警不修"。
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: heartbeat
+  cancel-in-progress: false
+
+jobs:
+  beat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: beat
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/heartbeat.mjs
+      - name: commit health
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p docs/health data
+          for f in docs/health/latest.json docs/health/health.html docs/health/history.jsonl data/heartbeat.json; do
+            [ -e "$f" ] && git add "$f"
+          done
+          git diff --cached --quiet || git commit -m "chore(health): heartbeat [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+            echo "push attempt $i failed, retrying in 5s"; sleep 5
+          done
+      - name: notify failure
+        if: failure()
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/notify-failure.mjs "${{ github.workflow }}"
