@@ -8,6 +8,9 @@ import path from 'node:path';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const cli = path.join(root, 'bin', 'mcpreflight.mjs');
+let throttleCount = 0;
+const okTools = (id) => ({ jsonrpc: '2.0', id, result: { tools: [{ name: 'hello', description: 'Returns a greeting.', inputSchema: { type: 'object', properties: { name: { type: 'string', description: 'Name.' } }, required: ['name'] } }] } });
+const okInit = (id, name) => ({ jsonrpc: '2.0', id, result: { protocolVersion: '2025-06-18', serverInfo: { name, version: '1' }, capabilities: {} } });
 const server = createServer(async (request, response) => {
   if (request.url === '/good') {
     response.writeHead(402, { 'content-type': 'application/json', 'payment-required': JSON.stringify({ x402Version: 2, accepts: [{ scheme: 'exact', network: 'eip155:8453', asset: 'USDC', amount: '10000', payTo: '0x1234567890123456789012345678901234567890' }] }) });
@@ -45,6 +48,72 @@ const server = createServer(async (request, response) => {
   if (request.url === '/bad-400') {
     response.writeHead(400, { 'content-type': 'application/json' });
     response.end(JSON.stringify({ error: 'missing body param' }));
+    return;
+  }
+  // conformance: stateful streamable HTTP. initialize returns Mcp-Session-Id and
+  // every later request must echo it, otherwise a healthy server looks dead.
+  if (request.url === '/mcp-session') {
+    let incoming = ''; for await (const chunk of request) incoming += chunk;
+    const rpc = JSON.parse(incoming || '{}');
+    if (rpc.method === 'initialize') {
+      response.writeHead(200, { 'content-type': 'application/json', 'mcp-session-id': 'sess-fixture-1' });
+      response.end(JSON.stringify(okInit(rpc.id, 'session-fixture')));
+      return;
+    }
+    if (request.headers['mcp-session-id'] !== 'sess-fixture-1') {
+      response.writeHead(400, { 'content-type': 'application/json' });
+      response.end(JSON.stringify({ jsonrpc: '2.0', id: rpc.id, error: { code: -32000, message: 'Mcp-Session-Id required' } }));
+      return;
+    }
+    response.writeHead(200, { 'content-type': 'application/json' });
+    response.end(JSON.stringify(okTools(rpc.id)));
+    return;
+  }
+  // conformance: an unauthenticated 401 is a gate, not a failure
+  if (request.url === '/mcp-auth') {
+    response.writeHead(401, { 'content-type': 'application/json', 'www-authenticate': 'Bearer realm="fixture"' });
+    response.end(JSON.stringify({ error: 'unauthorized' }));
+    return;
+  }
+  // conformance: 308 on the initialize POST must be followed, not reported as dead
+  if (request.url === '/mcp-redirect') {
+    response.writeHead(308, { location: '/mcp' });
+    response.end();
+    return;
+  }
+  // conformance: one retry on 429, so throttling is not reported as NO_RESPONSE
+  if (request.url === '/mcp-429') {
+    if (throttleCount++ < 1) {
+      response.writeHead(429, { 'content-type': 'application/json', 'retry-after': '1' });
+      response.end(JSON.stringify({ error: 'throttled' }));
+      return;
+    }
+    let incoming = ''; for await (const chunk of request) incoming += chunk;
+    const rpc = JSON.parse(incoming || '{}');
+    response.writeHead(200, { 'content-type': 'application/json' });
+    response.end(JSON.stringify(rpc.method === 'initialize' ? okInit(rpc.id, 'throttle-fixture') : okTools(rpc.id)));
+    return;
+  }
+  // conformance: malformed tool schema must be a deterministic FAIL, not a silent pass
+  if (request.url === '/mcp-bad-schema') {
+    let incoming = ''; for await (const chunk of request) incoming += chunk;
+    const rpc = JSON.parse(incoming || '{}');
+    const payload = rpc.method === 'initialize'
+      ? okInit(rpc.id, 'bad-schema-fixture')
+      : { jsonrpc: '2.0', id: rpc.id, result: { tools: [{ name: 'broken', description: 'Declares a required field it never defines.', inputSchema: { type: 'object', properties: { a: { type: 'string', description: 'A.' } }, required: ['a', 'b'] } }] } };
+    response.writeHead(200, { 'content-type': 'application/json' });
+    response.end(JSON.stringify(payload));
+    return;
+  }
+  // conformance: a tools/list body over the old 1 MB cap is a healthy server, not a failure
+  if (request.url === '/mcp-big') {
+    let incoming = ''; for await (const chunk of request) incoming += chunk;
+    const rpc = JSON.parse(incoming || '{}');
+    const payload = rpc.method === 'initialize'
+      ? okInit(rpc.id, 'big-payload-fixture')
+      : { jsonrpc: '2.0', id: rpc.id, result: { tools: [{ name: 'big', description: 'x'.repeat(1_500_000), inputSchema: { type: 'object', properties: {} } }] } };
+    response.writeHead(200, { 'content-type': 'application/json' });
+    response.end(JSON.stringify(payload));
     return;
   }
   response.writeHead(404, { 'content-type': 'application/json' });
@@ -100,6 +169,29 @@ try {
   const sseReport = JSON.parse(sse.stdout);
   assert.equal(sseReport.finalStatus, 'PASS', JSON.stringify(sseReport.findings));
   assert.equal(sseReport.mcp.toolCount, 1, 'SSE-wrapped JSON-RPC must be parsed');
+  // conformance: the five cases that regressions in 0.5.0 broke
+  const session = await runSchema(`http://127.0.0.1:${port}/mcp-session`);
+  assert.equal(session.code, 0, session.stderr);
+  assert.equal(JSON.parse(session.stdout).finalStatus, 'PASS', 'Mcp-Session-Id must be echoed on tools/list');
+  const auth = await runSchema(`http://127.0.0.1:${port}/mcp-auth`);
+  assert.equal(auth.code, 0, `AUTH_GATED must exit 0: ${auth.stderr}`);
+  assert.equal(JSON.parse(auth.stdout).finalStatus, 'AUTH_GATED', '401 is a gate, not a failure');
+  const redirect = await runSchema(`http://127.0.0.1:${port}/mcp-redirect`);
+  assert.equal(redirect.code, 0, redirect.stderr);
+  assert.equal(JSON.parse(redirect.stdout).finalStatus, 'PASS', '308 on initialize POST must be followed');
+  const throttled = await runSchema(`http://127.0.0.1:${port}/mcp-429`);
+  assert.equal(throttled.code, 0, throttled.stderr);
+  assert.equal(JSON.parse(throttled.stdout).finalStatus, 'PASS', '429 must be retried once, not reported as NO_RESPONSE');
+  const badSchema = await runSchema(`http://127.0.0.1:${port}/mcp-bad-schema`);
+  assert.equal(badSchema.code, 1, badSchema.stderr);
+  const badSchemaReport = JSON.parse(badSchema.stdout);
+  assert.equal(badSchemaReport.finalStatus, 'FAIL');
+  assert.ok(badSchemaReport.findings.some((f) => f.code === 'REQUIRED_PROPERTY_UNDEFINED'), 'must flag a required-but-undeclared property');
+  const big = await runSchema(`http://127.0.0.1:${port}/mcp-big`);
+  assert.equal(big.code, 0, big.stderr);
+  const bigReport = JSON.parse(big.stdout);
+  assert.equal(bigReport.finalStatus, 'PASS', 'a 1.5 MB tools/list body must not be truncated at 1 MB');
+  assert.equal(bigReport.mcp.toolCount, 1);
   const help = await new Promise((resolve) => {
     const child = spawn(process.execPath, [cli, '--help'], { stdio: ['ignore', 'pipe', 'pipe'] });
     let stdout = ''; child.stdout.on('data', (chunk) => { stdout += chunk; }); child.on('close', (code) => resolve({ code, stdout }));
