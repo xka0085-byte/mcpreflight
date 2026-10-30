@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case: running mcpreflight inside a gated weekly pipeline — longgame</title>
+  <meta name="description" content="Field notes on the one production use of mcpreflight we can show: a 13-line public-data portfolio that runs a weekly MCP registry census behind a four-stage assurance gate. Real 403/404/417 handling, 39/39 fixtures, 6/6 injected faults blocked, and what the scanner could not do.">
+  <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/case-longgame.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Running mcpreflight inside a gated weekly pipeline: the longgame case","about":["mcpreflight","MCP registry census","data pipeline assurance","fault injection"],"datePublished":"2026-10-30","dateModified":"2026-10-30","author":{"@type":"Organization","name":"mcpreflight","url":"https://xka0085-byte.github.io/mcpreflight/"},"isAccessibleForFree":true,"license":"https://opensource.org/licenses/MIT","citation":"mcpreflight, \"Running mcpreflight inside a gated weekly pipeline: the longgame case\", 2026-10-30, https://xka0085-byte.github.io/mcpreflight/case-longgame.html"}</script>
+  <style>
+    :root{color-scheme:light dark}
+    body{margin:0;font:16.5px/1.65 -apple-system,"Segoe UI",Roboto,sans-serif;color:#1a1a2e;background:#fafafc}
+    main{max-width:860px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+    a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}
+    h1{font-size:1.9rem;letter-spacing:-.02em;margin:.2rem 0 .8rem}
+    h2{font-size:1.25rem;margin:2.2rem 0 .5rem}
+    .muted{color:#57606a;font-size:.92rem}
+    .warn{border-left:3px solid #d4a72c;background:#fff8c5;padding:.8rem 1rem;margin:1.2rem 0;border-radius:6px;font-size:.95rem}
+    table{border-collapse:collapse;width:100%;font-size:.95rem;margin:1rem 0}
+    th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid #d8dee4;vertical-align:top}
+    th{color:#57606a;font-weight:600}
+    pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:8px;padding:.9rem 1rem;overflow-x:auto;font-size:.88rem}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9em}
+    .kpi{border:1px solid #d8dee4;border-radius:10px;padding:1rem 1.3rem;margin:1.2rem 0}
+    .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}
+    @media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}.muted,.foot,th{color:#8b949e}th,td{border-color:#30363d}pre,.kpi{background:#161b22;border-color:#30363d}.warn{background:#2d2411;border-color:#d4a72c;color:#e6edf3}}
+  </style>
+</head>
+<body>
+<main>
+<h1>Running mcpreflight inside a gated weekly pipeline</h1>
+<p class="muted">The longgame case · published 2026-10-30 · self-run, not a customer engagement</p>
+
+<div class="warn">
+<b>Read this first:</b> this is our own pipeline, not a customer. mcpreflight is maintained by the same person who maintains longgame, so treat this page as dogfooding evidence — it shows what the tool is actually asked to do in a scheduled, gated setting, and where it falls short. No third party has recomputed these numbers, no client is being referenced, and nothing here is a performance guarantee.
+</div>
+
+<p>Most "production use" claims for a small open-source tool are unfalsifiable. This page is the opposite: every number below can be pulled from a public repository, and the one line where the tool runs is explicitly marked <code>UNVERIFIED</code>. What follows is the pipeline, the four gates a run must pass, the real HTTP failures that occurred, and what mcpreflight contributed to each step.</p>
+
+<h2>What longgame is</h2>
+<p><a href="https://xka0085-byte.github.io/longgame/method.html">longgame</a> tracks 13 public-data series (climate disclosure dockets, grid interconnection queues, AI Act registers, Form D filings, agent payment directories, and the MCP ecosystem). No human types a number into it: each line either collects from a public source with the generation date attached, or it is quarantined with a published reason. Writing a zero to fill a gap is treated as fabrication, not as a missing value.</p>
+<p>One of those 13 lines — <code>mcpreflight-weekly</code> — is the MCP ecosystem census, and mcpreflight is the scanner behind it. On top of the census sits the number we publish separately: of the 9,991 remote endpoints returned by the 2026-10-19 registry sweep, 4,751 (47.6%) completed a clean anonymous handshake, 5,183 (51.9%) gave no anonymous response, and 57 (0.6%) answered but broke the protocol. <a href="https://xka0085-byte.github.io/mcpreflight/how-many-mcp-servers-are-dead.html">Method and limits of that count.</a></p>
+
+<h2>What the pipeline demands of a scanner</h2>
+<p>A scheduled collector breaks in ways a demo never does. Four gates run before anything publishes, and a scanner output that fails any of them stops the round:</p>
+<table>
+<tr><th>Gate</th><th>Question it asks</th><th>How it hit the MCP output</th></tr>
+<tr><td>verify</td><td>Does the page exist, carry a generation date, and match a recomputed value?</td><td>A census page with no dated number is rejected — an undated scan is not a finding</td></tr>
+<tr><td>contracts</td><td>Schema, units, de-duplication, non-emptiness</td><td>13 dataset contracts / 105 assertions. An empty <code>results</code> array cannot pass as a successful scan, and <code>toolCount</code> must be an integer or null — a string is not a count</td></tr>
+<tr><td>fixtures</td><td>Do known-good and known-bad samples land on the right side?</td><td>39 constructed samples, 39/39 as expected: normal / empty / missing <code>finalStatus</code> / string <code>toolCount</code> / duplicate rows / HTTP 429 body</td></tr>
+<tr><td>fault injection</td><td>If a fault is injected into a copy, is it actually blocked?</td><td>6 fault classes injected nightly; 6/6 blocked, real data hash unchanged before and after</td></tr>
+</table>
+<p class="muted">The fixture set is the part that ages well: <code>http-429.json</code> exists because rate limiting is a normal outcome, not an exception, and the empty and duplicate samples exist because "we scanned and found nothing" and "we scanned twice and counted twice" are the two failure modes that quietly inflate a census.</p>
+
+<h2>Real failures, and what "handled" meant</h2>
+<p>These are collector-side incidents recorded in the pipeline's own event log, kept here because a scanner faces the same surfaces. Every row links to an event with a timestamp, an HTTP status and a byte count — none of it reconstructed afterwards.</p>
+<table>
+<tr><th>When (UTC)</th><th>Surface</th><th>Observed</th><th>What the pipeline did</th></tr>
+<tr><td>2026-10-30 09:06:48</td><td>California ARB docket page</td><td>HTTP 403, 919 B challenge body</td><td>Retried once (403 is in the retryable set with 202/417/429); recovered at 09:10:34 with 58,613 B, wrote a <code>data-source-recovered</code> event, series uninterrupted</td></tr>
+<tr><td>2026-10-30 09:09:34</td><td>Second ARB page</td><td>HTTP 403, 919 B</td><td>Same path; recovered at 09:10:43 with 61,221 B</td></tr>
+<tr><td>ongoing</td><td>ARB SB 261 sub-volume</td><td>417 / 202 to non-browser clients</td><td>Declared <code>tolerate:true</code> with the reason in-repo: record the event, never block the round, never write a zero</td></tr>
+<tr><td>ongoing</td><td>CME compute-futures path</td><td>HTTP 404, path retired</td><td>Exempted the same way, and the line still refuses a success exit rather than backfilling an old value</td></tr>
+</table>
+<p>Read plainly: 403 and 417 are treated as <em>environmental interception</em>, not as "the source is dead". A 919-byte challenge page is not data, and it is not zero. The rule that made this survivable is narrow on purpose — a page failure only fails the round if it is neither tolerated nor a known anti-bot status, or if every page on the line is down. Before that rule existed, one anti-bot page silently took an entire week of collection and publishing with it.</p>
+
+<h2>The uncomfortable part</h2>
+<p>mcpreflight did not cause any of the above, and it is not a monitoring system. It runs read-only: two JSON-RPC requests per endpoint, no tools called, no credentials, no payments. What it gave the pipeline was a reproducible per-endpoint verdict — <code>PASS</code> / <code>AUTH_GATED</code> / <code>FAIL</code> — that could be schema-checked, fixture-tested and fault-injected like any other dataset. What it did not give was any way to distinguish "requires OAuth" from "dead on arrival" without trying and failing; that ambiguity is the reason 51.9% is published as an upper bound rather than a death count.</p>
+<p>The line is also marked <code>UNVERIFIED</code> in the pipeline's own status file. That is not modesty, it is the honest state: the census is produced by us, checked by our own gates, and has never been recomputed by an independent party. It sits at evidence level E0 next to the other twelve lines.</p>
+
+<h2>Reproduce it</h2>
+<pre>npx @eidonze/mcpreflight schema &lt;endpoint-url&gt;     # single endpoint, current version 0.5.1
+
+git clone https://github.com/xka0085-byte/longgame &amp;&amp; cd longgame
+npm i &amp;&amp; node scripts/assurance-gate.mjs           # verify / contracts / fixtures / fault-injection</pre>
+<p>The pipeline exports a self-contained check snapshot each round, including exit codes, sample inventory, per-file sha256 and first-observed timestamps, so the gate result can be recomputed rather than trusted: <a href="https://xka0085-byte.github.io/longgame/assurance/artifact-2026-10-30.json">longgame/assurance/artifact-2026-10-30.json</a>. The 2026-10-30 gate result was <code>passed:true</code> at head <code>df87cd6</code> with input fingerprint <code>ef6f2815f12d0053…</code>.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://xka0085-byte.github.io/longgame/method.html">longgame — collection and gate method (the counterpart page)</a></li>
+<li><a href="https://github.com/xka0085-byte/longgame">github.com/xka0085-byte/longgame</a></li>
+<li><a href="https://github.com/xka0085-byte/mcpreflight">github.com/xka0085-byte/mcpreflight</a> · <a href="https://www.npmjs.com/package/@eidonze/mcpreflight">npm</a></li>
+<li><a href="https://xka0085-byte.github.io/mcpreflight/how-many-mcp-servers-are-dead.html">How many MCP servers are dead?</a> · <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight home</a></li>
+</ul>
+
+<div class="foot">mcpreflight · MIT · case published 2026-10-30 · figures from the pipeline's 2026-10-30 gate run and its own event log · no third-party recomputation, no client relationship implied</div>
+</main>
+</body>
+</html>
