@@ -29,7 +29,7 @@ ul{padding-left:20px}
 <body>
 <main>
 <h1>Corrections log</h1>
-<p class="sub">mcpreflight MCP endpoint scanner. Last updated 2026-10-21.</p>
+<p class="sub">mcpreflight MCP endpoint scanner. Last updated 2026-10-30.</p>
 
 <p>When an external user tells us a scan result is wrong, we re-run the case, fix the scanner, and record it here. This page lists every correction we have made to published results, with the evidence link and the affected numbers. We publish these because a scanner that hides its errors cannot be trusted on its successes.</p>
 
@@ -71,17 +71,18 @@ ul{padding-left:20px}
 </table>
 
 <h2>Effect on the published numbers</h2>
-<p>The full registry scan was re-run after the fixes. The current figures, all from our own scan, are:</p>
+<p>This is the part of the log that has to be read carefully. The scan of 2026-10-19 is the only census whose raw output is archived in the repository. These are its figures:</p>
 <ul>
 <li>9,991 endpoints scanned</li>
-<li>5,120 passed the MCP handshake and schema check, 51.2%</li>
-<li>3,514 auth-gated</li>
-<li>1,316 unknown or unreachable</li>
-<li>41 failed</li>
+<li>4,751 passed the MCP handshake and schema check, 47.6%</li>
+<li>3,182 auth-gated</li>
+<li>2,001 unknown or unreachable</li>
+<li>57 failed</li>
 </ul>
-<p>The previously published 48.8% pass rate is withdrawn. It was produced by the scanner before these corrections and is no longer used anywhere on this site.</p>
+<p>A re-run on 2026-10-21 produced a different count. That output was never committed, so we cannot recompute it, and we have stopped quoting it; it no longer appears anywhere on this site. If we re-run again, the raw JSON goes into the repository first and onto the page second.</p>
+<p>For the same reason the 48.8% pass rate and the 4,879 / 5,069 / 43 breakdown published up to 2026-10-29 are withdrawn: no archived output backs them. The site now quotes exactly two measurements, and never mixes them. One is the 2026-10-19 census above. The other is a probabilistic sample taken on 2026-10-29 from the 34,190 active remote servers in the registry, 500 endpoints drawn: 316 passed (63.2%, 95% CI 58.9-67.3), 123 auth-gated, 58 unknown or timed out, 3 failed. The endpoint list and raw responses are at <a href="https://mcpreflight-audit.pages.dev/audit">mcpreflight-audit.pages.dev/audit</a>.</p>
 
-<div class="note">These numbers are our own scan output. They have not been independently recomputed by a third party. Where a number is quoted elsewhere, it should carry the date 2026-10-21 and the words "mcpreflight scan".</div>
+<div class="note">Every number above is our own output. None has been independently recomputed by a third party. Where a figure is quoted elsewhere it should carry its date and the words "mcpreflight scan", and it should be one of the two measurements named here — the 4,751 census or the 63.2% sample.</div>
 
 <h2>External reviews</h2>
 <p>Two external reviews are on record.</p>
@@ -92,10 +93,10 @@ ul{padding-left:20px}
 <div class="ok">These two threads are the only cases where someone outside this project checked our claim and acted on it. That is useful evidence that a report changed a product. It is not evidence of commercial demand.</div>
 
 <h2>How to reproduce</h2>
-<p>Every result on this site can be re-run. The scanner is open source, and the conformance suite covers the seven cases above, including stateful session headers, SSE responses, unauthenticated 401, 308 redirects, rate-limit retries, and malformed schemas.</p>
+<p>Every result on this site can be re-run. The scanner is open source (<code>bin/mcpreflight.mjs</code>), and <code>node test/smoke.mjs</code> runs the conformance cases that regressions in 0.5.0 broke: stateful <code>Mcp-Session-Id</code> headers, JSON and SSE responses, unauthenticated 401, 308 redirects, one retry on 429, and malformed tool schemas. It is a plain Node script against a local fixture server — no network, no credentials. The published npm package is still 0.5.0 and predates these fixes; the fixed scanner is in the repository and ships with the next release.</p>
 <p><a href="https://github.com/xka0085-byte/mcpreflight">Source and issue tracker</a> · <a href="/mcpreflight/data-quality-2026-10-21.html">Data quality note for the 2026-10-21 scan</a></p>
 
-<p class="cite">Citation: mcpreflight, corrections log, updated 2026-10-21. https://xka0085-byte.github.io/mcpreflight/corrections.html</p>
+<p class="cite">Citation: mcpreflight, corrections log, updated 2026-10-30. https://xka0085-byte.github.io/mcpreflight/corrections.html</p>
 </main>
 </body>
 </html>
