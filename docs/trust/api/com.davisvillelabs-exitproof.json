@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:11:57.616Z",
+  "scannedAt": "2026-10-30T13:42:43.959Z",
   "server": {
     "registryName": "com.davisvillelabs/exitproof",
     "title": "ExitProof",
@@ -10,21 +10,20 @@
   },
   "endpoint": "https://exitproof.davisvillelabs.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-11-25",
-    "serverInfo": {
-      "name": "ExitProof",
-      "title": "ExitProof",
-      "version": "0.1.0",
-      "description": "Reversibility intelligence and durable exit evidence for AI agents before they make real-world commitments.",
-      "websiteUrl": "https://exitproof.davisvillelabs.com/"
-    },
-    "toolCount": 6,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "6 tools passed deterministic schema checks"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

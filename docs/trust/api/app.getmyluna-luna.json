@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:08:18.256Z",
+  "scannedAt": "2026-10-30T13:39:52.444Z",
   "server": {
     "registryName": "app.getmyluna/luna",
     "title": "Luna Baby Tracker",
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
   },
   "authGate": {
-    "status": "gated-verified",
-    "resourceMetadata": "https://getmyluna.app/.well-known/oauth-protected-resource",
+    "status": "gated",
+    "resourceMetadata": null,
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://getmyluna.app/mcp"

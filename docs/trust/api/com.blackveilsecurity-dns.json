@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:11:03.388Z",
+  "scannedAt": "2026-10-30T13:42:08.541Z",
   "server": {
     "registryName": "com.blackveilsecurity/dns",
     "title": "BlackVeil DNS & Email Security Scanner",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://dns-mcp.blackveilsecurity.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Blackveil DNS",
+      "version": "3.106.0",
+      "description": "Source-available DNS & email security scanner — 81 MCP tools (36 check_* checks) across 19 scan categories, with scoring, grading, and remediation guidance"
+    },
+    "toolCount": 81,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "81 tools passed deterministic schema checks"
       }
     ]
   },

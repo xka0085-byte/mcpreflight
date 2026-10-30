@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:08:16.030Z",
+  "scannedAt": "2026-10-30T13:39:57.670Z",
   "server": {
     "registryName": "app.lovedone/family-inbox",
     "title": "LovedOne Family MCP",
@@ -10,22 +10,20 @@
   },
   "endpoint": "https://api.lovedone.app/mcp/v1",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "app.lovedone/family-inbox",
+      "version": "0.4.0"
+    },
+    "toolCount": 12,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "12 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.lovedone.app/mcp/v1"
 }

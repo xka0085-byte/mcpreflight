@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:06:42.239Z",
+  "scannedAt": "2026-10-30T13:38:49.229Z",
   "server": {
     "registryName": "ai.newzai.api/news-mcp",
     "title": "NewzAI MCP Server",
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
   },
   "authGate": {
     "status": "gated",
-    "resourceMetadata": "https://api.newzai.ai/.well-known/oauth-protected-resource",
+    "resourceMetadata": null,
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.newzai.ai/mcp"

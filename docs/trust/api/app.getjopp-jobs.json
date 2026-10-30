@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:08:09.218Z",
+  "scannedAt": "2026-10-30T13:39:52.624Z",
   "server": {
     "registryName": "app.getjopp/jobs",
     "title": "jopp",
@@ -10,15 +10,42 @@
   },
   "endpoint": "https://getjopp.app/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jopp",
+      "title": "jopp – Jobs in der Schweiz",
+      "version": "1.0.0",
+      "description": "Search open jobs in Switzerland and read jopp job briefs.",
+      "websiteUrl": "https://jopp.ai",
+      "icons": [
+        {
+          "src": "https://jopp.ai/symbol.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].workModes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].seniorities has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].publishedWithinDays has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
       }
     ]
   },

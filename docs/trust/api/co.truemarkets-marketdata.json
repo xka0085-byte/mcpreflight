@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:09:49.789Z",
+  "scannedAt": "2026-10-30T13:41:08.053Z",
   "server": {
     "registryName": "co.truemarkets/marketdata",
     "title": "True Markets Market Data",
@@ -10,15 +10,44 @@
   },
   "endpoint": "https://mcp.truemarkets.co/marketdata/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "marketdata",
+      "version": "1.0.0",
+      "title": "TrueMarkets Market Data",
+      "description": "Real-time crypto market data, trending assets, price history, and market summaries.",
+      "websiteUrl": "https://truemarkets.co",
+      "icons": [
+        {
+          "src": "https://d319hyy9pksbox.cloudfront.net/cb8139324ca6a97aada73786548561f846f559b0e581131826098da4d916e3d1.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "32x32"
+          ]
+        },
+        {
+          "src": "https://d319hyy9pksbox.cloudfront.net/d33409f8dbe6a8cef10db340e231ad682e932a4c51a79bf1bde547dfe978d4d0.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "64x64"
+          ]
+        },
+        {
+          "src": "https://d319hyy9pksbox.cloudfront.net/2426c4aaf302bbb1915c22502deb4e1e1c3672795920adb0381deaa8e94f8b7d.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "128x128"
+          ]
+        }
+      ]
+    },
+    "toolCount": 17,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].asset_class has no description"
       }
     ]
   },

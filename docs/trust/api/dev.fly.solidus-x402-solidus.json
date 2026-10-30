@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:19:19.768Z",
+  "scannedAt": "2026-10-30T13:47:54.829Z",
   "server": {
     "registryName": "dev.fly.solidus-x402/solidus",
     "title": "dev.fly.solidus-x402/solidus",
@@ -10,15 +10,23 @@
   },
   "endpoint": "https://solidus-mcp.fly.dev/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mock-mcp-server",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].b has no description"
       }
     ]
   },

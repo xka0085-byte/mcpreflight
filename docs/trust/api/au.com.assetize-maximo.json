@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:09:00.192Z",
+  "scannedAt": "2026-10-30T13:40:30.361Z",
   "server": {
     "registryName": "au.com.assetize/maximo",
     "title": "Assetize — IBM Maximo knowledge",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://assetize.com.au/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-03-26",
-    "serverInfo": {
-      "name": "assetize-maximo",
-      "title": "Assetize — Maximo knowledge",
-      "version": "1.0.0"
-    },
-    "toolCount": 19,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "19 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://assetize.com.au/mcp"
 }

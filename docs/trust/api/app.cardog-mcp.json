@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:08:01.800Z",
+  "scannedAt": "2026-10-30T13:39:47.987Z",
   "server": {
     "registryName": "app.cardog/mcp",
     "title": "Cardog",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://mcp.cardog.io/mcp?api_key={api_key}",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Cardog Public MCP",
+      "version": "2.0.0"
+    },
+    "toolCount": 8,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sort has no description"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:12:56.038Z",
+  "scannedAt": "2026-10-30T13:43:24.520Z",
   "server": {
     "registryName": "com.funding-radar/radar",
     "title": "com.funding-radar/radar",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://funding-radar.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "funding-radar",
+      "title": "Funding Radar",
+      "version": "1.2.0"
+    },
+    "toolCount": 8,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].exchange has no description"
       }
     ]
   },

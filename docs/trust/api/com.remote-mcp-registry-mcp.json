@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:16:30.221Z",
+  "scannedAt": "2026-10-30T13:46:10.395Z",
   "server": {
     "registryName": "com.remote-mcp/registry-mcp",
     "title": "com.remote-mcp/registry-mcp",
@@ -10,15 +10,23 @@
   },
   "endpoint": "https://registry-mcp.remote-mcp.com",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "MCP Registry Client",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0] has no description"
+      },
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1] has no description"
       }
     ]
   },

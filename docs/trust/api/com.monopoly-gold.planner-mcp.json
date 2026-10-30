@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:14:58.737Z",
+  "scannedAt": "2026-10-30T13:44:52.941Z",
   "server": {
     "registryName": "com.monopoly-gold.planner/mcp",
     "title": "Planner MCP — provable \"done\" for AI agents",
@@ -10,15 +10,34 @@
   },
   "endpoint": "https://planner.monopoly-gold.com/_mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.monopoly-gold.planner/mcp",
+      "version": "2.1.1",
+      "description": "Planner MCP by Monopoly Gold — hierarchical goal and task planning with evidence-backed completion / Иерархический планировщик целей и задач с доказуемым завершением.",
+      "icons": [
+        {
+          "src": "https://planner.monopoly-gold.com/logo.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ],
+      "websiteUrl": "https://planner.monopoly-gold.com/connect/codex"
+    },
+    "toolCount": 43,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[34].overrideResolvedBy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[41].goalId has no description"
       }
     ]
   },

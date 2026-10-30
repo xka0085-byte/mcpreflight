@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:11:57.134Z",
+  "scannedAt": "2026-10-30T13:42:43.945Z",
   "server": {
     "registryName": "com.davisvillelabs.filmrights/filmrightsproof",
     "title": "FilmRightsProof",
@@ -10,21 +10,20 @@
   },
   "endpoint": "https://filmrightsproof.davisvillelabs.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-11-25",
-    "serverInfo": {
-      "name": "FilmRightsProof",
-      "title": "FilmRightsProof",
-      "version": "1.1.1",
-      "description": "Evidence-backed U.S. Copyright Office public-record research for film, television, and underlying creative works, with bounded provenance, ambiguity, and freshness.",
-      "websiteUrl": "https://filmrightsproof.davisvillelabs.com/"
-    },
-    "toolCount": 2,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "2 tools passed deterministic schema checks"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

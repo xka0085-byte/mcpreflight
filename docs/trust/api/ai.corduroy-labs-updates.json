@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:05:52.452Z",
+  "scannedAt": "2026-10-30T13:38:12.649Z",
   "server": {
     "registryName": "ai.corduroy-labs/updates",
     "title": "ai.corduroy-labs/updates",
@@ -10,15 +10,23 @@
   },
   "endpoint": "https://corduroy-labs.ai/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "corduroy-labs",
+      "version": "1.28.1"
+    },
+    "toolCount": 2,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
       }
     ]
   },

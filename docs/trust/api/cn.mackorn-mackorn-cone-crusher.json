@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:09:30.827Z",
+  "scannedAt": "2026-10-30T13:40:55.824Z",
   "server": {
     "registryName": "cn.mackorn/mackorn-cone-crusher",
     "title": "MACKORN Hydraulic Cone Crusher Selection",
@@ -10,15 +10,29 @@
   },
   "endpoint": "https://mackorn.cn/ai/api/mcp.php",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "FAIL",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "cn.mackorn/mackorn-cone-crusher",
+      "version": "0.2.2",
+      "title": "MACKORN 液压圆锥破碎机选型插件"
+    },
+    "toolCount": 29,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].size_distribution has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].scores has no description"
+      },
+      {
+        "code": "PROPERTIES_INVALID",
+        "severity": "FAIL",
+        "message": "tools[11].inputSchema.properties must be an object"
       }
     ]
   },

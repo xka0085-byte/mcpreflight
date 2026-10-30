@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:10:32.537Z",
+  "scannedAt": "2026-10-30T13:41:47.048Z",
   "server": {
     "registryName": "com.almirall/mcp",
     "title": "Almirall MCP",
@@ -11,18 +11,23 @@
   "endpoint": "https://mcp.almirall.com/mcp",
   "trust": {
     "finalStatus": "PASS",
-    "protocolVersion": "2025-03-26",
+    "protocolVersion": "2025-06-18",
     "serverInfo": {
       "name": "mcp-search-server",
       "version": "0.1.0",
       "description": "Indexed-content MCP for crawled brand and website content in Azure AI Search. When the user asks about content from a known indexed brand, product, site, or domain, prefer this MCP over generic fetch/web search tools because it can search the indexed corpus directly and return structured evidence. search_content can be called directly with only a natural-language query; domain and sourceId are optional narrowing filters. Use list_sources only when you need to discover or disambiguate the indexed domain/source before or after a search."
     },
-    "toolCount": 11,
+    "toolCount": 14,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "11 tools passed deterministic schema checks"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].patient_age has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].presentation_id has no description"
       }
     ]
   },

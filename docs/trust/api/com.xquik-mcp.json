@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:18:44.248Z",
+  "scannedAt": "2026-10-30T13:47:30.690Z",
   "server": {
     "registryName": "com.xquik/mcp",
     "title": "Xquik MCP Server",
@@ -10,22 +10,49 @@
   },
   "endpoint": "https://xquik.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Xquik is the world's fastest and cheapest X Twitter data API with the most complete X data.",
+      "icons": [
+        {
+          "src": "https://xquik.com/logo-square.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "light"
+        },
+        {
+          "src": "https://xquik.com/logo-dark-square-flat.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "dark"
+        },
+        {
+          "src": "https://xquik.com/logo-dark-square-flat.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ],
+          "theme": "dark"
+        }
+      ],
+      "name": "xquik",
+      "title": "Xquik MCP Server",
+      "version": "2.6.64",
+      "websiteUrl": "https://docs.xquik.com/mcp/overview"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "4 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://xquik.com/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:14:12.258Z",
+  "scannedAt": "2026-10-30T13:44:19.651Z",
   "server": {
     "registryName": "com.kythene/kythene",
     "title": "Kythene",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://kythene.com/mcp/kythene",
   "trust": {
-    "finalStatus": "FAIL",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "INITIALIZE_RESPONSE_INVALID",
-        "severity": "FAIL",
-        "message": "Initialize response did not include result.protocolVersion"
-      },
-      {
-        "code": "TOOLS_LIST_INVALID",
-        "severity": "FAIL",
-        "message": "tools/list response did not contain result.tools[]"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://kythene.com/mcp/kythene"
 }

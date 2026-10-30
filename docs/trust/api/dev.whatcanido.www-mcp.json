@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:19:49.848Z",
+  "scannedAt": "2026-10-30T13:48:17.039Z",
   "server": {
     "registryName": "dev.whatcanido.www/mcp",
     "title": "Whatcanido — MCP Server for Service Businesses",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://whatcanido.dev/api/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "whatcanido",
+      "version": "0.1.0"
+    },
+    "toolCount": 10,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].action_type has no description"
       }
     ]
   },

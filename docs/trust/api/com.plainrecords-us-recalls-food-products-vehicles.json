@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:15:49.722Z",
+  "scannedAt": "2026-10-30T13:45:27.498Z",
   "server": {
     "registryName": "com.plainrecords/us-recalls-food-products-vehicles",
     "title": "PlainRecords: U.S. recalls in plain English",
@@ -10,20 +10,34 @@
   },
   "endpoint": "https://plainrecords.com/mcp",
   "trust": {
-    "finalStatus": "FAIL",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "plainrecords",
+      "title": "PlainRecords: U.S. recall records as the agencies wrote them",
+      "version": "1.2.0"
+    },
+    "toolCount": 7,
     "findings": [
       {
-        "code": "INITIALIZE_RESPONSE_INVALID",
-        "severity": "FAIL",
-        "message": "Initialize response did not include result.protocolVersion"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
       },
       {
-        "code": "TOOLS_LIST_INVALID",
-        "severity": "FAIL",
-        "message": "tools/list response did not contain result.tools[]"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].make has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].limit has no description"
       }
     ]
   },

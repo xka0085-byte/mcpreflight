@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:19:21.110Z",
+  "scannedAt": "2026-10-30T13:47:55.560Z",
   "server": {
     "registryName": "dev.gtfo/mcp-killchain-stage1-weather",
     "title": "MCP Kill-Chain Research — Stage 1 (Identity ≠ Behavior)",
@@ -10,17 +10,22 @@
   },
   "endpoint": "https://ailm.gtfo.dev/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://ailm.gtfo.dev/mcp"
 }

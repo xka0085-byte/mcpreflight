@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:17:01.005Z",
+  "scannedAt": "2026-10-30T13:46:16.874Z",
   "server": {
     "registryName": "com.singlefax/mcp",
     "title": "SingleFax",
@@ -16,18 +16,16 @@
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
   },
   "authGate": {
-    "status": "gated-verified",
-    "resourceMetadata": "https://singlefax.com/.well-known/oauth-protected-resource/mcp",
-    "discovery": [
-      "ai-catalog"
-    ]
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://singlefax.com/mcp"
 }

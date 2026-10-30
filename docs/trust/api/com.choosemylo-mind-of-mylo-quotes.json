@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:11:25.458Z",
+  "scannedAt": "2026-10-30T13:42:21.947Z",
   "server": {
     "registryName": "com.choosemylo/mind-of-mylo-quotes",
     "title": "com.choosemylo/mind-of-mylo-quotes",
@@ -10,15 +10,31 @@
   },
   "endpoint": "https://choosemylo.com/api/gateway/chatbot/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mylo-insurance",
+      "title": "Mylo Insurance Quotes",
+      "version": "1.19.5",
+      "websiteUrl": "https://choosemylo.com",
+      "description": "Personal-lines insurance premium estimates (auto, home, condo, renters) powered by Mylo — compare 100+ carriers."
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].applicant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].applicant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].applicant has no description"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-19T07:11:44.120Z",
+  "scannedAt": "2026-10-30T13:42:35.106Z",
   "server": {
     "registryName": "com.coversignalai/jevan-nfl-picks",
     "title": "Cover Signal — Jevan NFL Picks",
@@ -10,25 +10,20 @@
   },
   "endpoint": "https://coversignalai.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-03-26",
-    "serverInfo": {
-      "name": "cover-signal",
-      "title": "Cover Signal · Jevan NFL picks",
-      "version": "1.0.0",
-      "websiteUrl": "https://coversignalai.com"
-    },
-    "toolCount": 5,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].season has no description"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
       },
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[4].pick_id has no description"
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },
