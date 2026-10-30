@@ -37,7 +37,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p docs/health data
-          for f in docs/health/latest.json docs/health/health.html docs/health/history.jsonl data/heartbeat.json; do
+          for f in docs/health.html docs/health/latest.json docs/health/history.jsonl data/heartbeat.json; do
             [ -e "$f" ] && git add "$f"
           done
           git diff --cached --quiet || git commit -m "chore(health): heartbeat [skip ci]"
