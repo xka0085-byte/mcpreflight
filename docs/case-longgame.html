@@ -46,7 +46,7 @@
 <table>
 <tr><th>Gate</th><th>Question it asks</th><th>How it hit the MCP output</th></tr>
 <tr><td>verify</td><td>Does the page exist, carry a generation date, and match a recomputed value?</td><td>A census page with no dated number is rejected — an undated scan is not a finding</td></tr>
-<tr><td>contracts</td><td>Schema, units, de-duplication, non-emptiness</td><td>13 dataset contracts / 105 assertions. An empty <code>results</code> array cannot pass as a successful scan, and <code>toolCount</code> must be an integer or null — a string is not a count</td></tr>
+<tr><td>contracts</td><td>Schema, units, de-duplication, non-emptiness</td><td>13 dataset contracts / 105 assertions. The fixture set also carries a scanner payload with a string <code>toolCount</code> and one with an empty <code>results</code> array; an empty array cannot pass as a successful scan, and a string is not a count</td></tr>
 <tr><td>fixtures</td><td>Do known-good and known-bad samples land on the right side?</td><td>39 constructed samples, 39/39 as expected: normal / empty / missing <code>finalStatus</code> / string <code>toolCount</code> / duplicate rows / HTTP 429 body</td></tr>
 <tr><td>fault injection</td><td>If a fault is injected into a copy, is it actually blocked?</td><td>6 fault classes injected nightly; 6/6 blocked, real data hash unchanged before and after</td></tr>
 </table>
@@ -64,7 +64,7 @@
 <p>Read plainly: 403 and 417 are treated as <em>environmental interception</em>, not as "the source is dead". A 919-byte challenge page is not data, and it is not zero. The rule that made this survivable is narrow on purpose — a page failure only fails the round if it is neither tolerated nor a known anti-bot status, or if every page on the line is down. Before that rule existed, one anti-bot page silently took an entire week of collection and publishing with it.</p>
 
 <h2>The uncomfortable part</h2>
-<p>mcpreflight did not cause any of the above, and it is not a monitoring system. It runs read-only: two JSON-RPC requests per endpoint, no tools called, no credentials, no payments. What it gave the pipeline was a reproducible per-endpoint verdict — <code>PASS</code> / <code>AUTH_GATED</code> / <code>FAIL</code> — that could be schema-checked, fixture-tested and fault-injected like any other dataset. What it did not give was any way to distinguish "requires OAuth" from "dead on arrival" without trying and failing; that ambiguity is the reason 51.9% is published as an upper bound rather than a death count.</p>
+<p>mcpreflight did not cause any of the above, and it is not a monitoring system. It runs read-only: two JSON-RPC requests per endpoint, no tools called, no credentials, no payments. What it gave the pipeline was a reproducible per-endpoint verdict — <code>PASS</code> / <code>AUTH_GATED</code> / <code>UNKNOWN</code> / <code>FAIL</code> — that could be schema-checked, fixture-tested and fault-injected like any other dataset. What it did not give was any way to distinguish "requires OAuth" from "dead on arrival" without trying and failing; that ambiguity is the reason 51.9% is published as an upper bound rather than a death count.</p>
 <p>The line is also marked <code>UNVERIFIED</code> in the pipeline's own status file. That is not modesty, it is the honest state: the census is produced by us, checked by our own gates, and has never been recomputed by an independent party. It sits at evidence level E0 next to the other twelve lines.</p>
 
 <h2>Reproduce it</h2>
