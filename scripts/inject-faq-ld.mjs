@@ -6,6 +6,30 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const docs = path.resolve(__dirname, '..', 'docs');
 const S = 'https://xka0085-byte.github.io/mcpreflight/';
 
+// Headline figures must come from the last published scan, never from a literal typed into
+// this file. If the file is missing, the FAQ answers drop the numbers instead of guessing.
+const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+let _stats = null;
+try { _stats = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'trust-data', 'scan-stats.json'), 'utf8')); } catch {}
+const F = _stats && Number.isFinite(_stats.total)
+  ? {
+      total: fmt(_stats.total),
+      pass: fmt(_stats.counts.pass),
+      fail: fmt(_stats.counts.fail),
+      noH: fmt((_stats.counts.authGated ?? 0) + (_stats.counts.unknown ?? 0)),
+      rate: _stats.passRate,
+      date: _stats.date,
+    }
+  : null;
+
+const FAQ_ALIVE = F
+  ? `Of the ${F.total} endpoints our latest sweep returned from the official MCP Registry (scan date ${F.date}), ${F.pass} (${F.rate}%) completed a clean anonymous MCP handshake, ${F.fail} failed, and ${F.noH} gave no anonymous response. Full data and method are on this page.`
+  : 'The live split is published on the State of MCP Servers page, sourced from the latest complete sweep of the official MCP Registry. Endpoints behind authentication are counted as no anonymous handshake, not as failures.';
+
+const FAQ_RESPOND = F
+  ? `${F.rate}% of the endpoints in our latest sweep (${F.date}) completed initialize plus tools/list anonymously. Auth-gated endpoints are counted as no anonymous handshake rather than as failures.`
+  : 'The pass rate is republished with every scan on the State of MCP Servers page. Auth-gated endpoints are counted as no anonymous handshake rather than as failures.';
+
 const faqs = {
   'index.html': [
     ['What is mcpreflight?', 'mcpreflight is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpreflight schema <url>.'],
@@ -32,8 +56,8 @@ const faqs = {
     ['Does mcpreflight support OAuth flows?', 'Not yet. Checks are anonymous and read-only by design. Auth-gated endpoints are reported as UNKNOWN with a note rather than as broken.'],
   ],
   'state-of-mcp-2026-10.html': [
-    ['How many MCP servers are alive?', 'Of 9,991 MCP Registry endpoints scanned in October 2026, 4,879 (48.8%) completed a clean anonymous MCP handshake, 43 failed, and 5,069 (50.7%) gave no anonymous response. Full data and method are on this page.'],
-    ['What percentage of MCP registry endpoints respond?', '49.3% of registry endpoints completed initialize plus tools/list anonymously in the October 2026 scan. Smithery-registered endpoints were the weakest cohort: all 213 measured gave no anonymous handshake.'],
+    ['How many MCP servers are alive?', FAQ_ALIVE],
+    ['What percentage of MCP registry endpoints respond?', FAQ_RESPOND],
   ],
 };
 

@@ -26,7 +26,7 @@ mcpreflight 是开源（MIT）零依赖的 MCP 与 x402 端点只读预检工具
 ## 三、当前状态速查
 
 - 主产品：CLI 0.1.7（npx @eidonze/mcpreflight）、GitHub Action mcp-trust-check、MCP server 模式（bin/mcpreflight-mcp.mjs）
-- 数据：Trust Directory 9,991 端点每周一自动重扫（workflow trust-rescan，UTC 02:00，已修缓存与翻页 bug）。最新周数据 PASS 4,764 / FAIL 41 / UNKNOWN 5,186，一周内 115 个端点从 PASS 翻 UNKNOWN（周流失 2.4%，独家发现）
+- 数据：Trust Directory 35,327 端点每周一自动重扫（workflow trust-rescan，UTC 02:00，已修缓存与翻页 bug）。2026-11-01 全量普查（1,984 页 / 198,345 条目 / 52,765 活跃 / 35,327 远程）后重扫：PASS 20,908 (59.2%) / AUTH_GATED 10,032 / UNKNOWN 4,232 / FAIL 155 (0.4%)，对比上期基线 50 个端点掉出 PASS（42 转 UNKNOWN、8 转 AUTH_GATED），反向 181 个转 PASS。旧 9,991 数字系 300 页硬上限截断，仅作历史溯源保留
 - 采用漏斗（每日自动测）：npm 周下载 464 基线；公开 CI 集成 0；徽章嵌入 0。口径纪律：零集成必须说未发现可验证的公开集成
 - 外联：178 条 issue 约 1% 真实互动率，两个 VIP（joxo 作者、kirbah）；5 个模板 PR 在途；x402 官方文档 PR #3766 在途
 - AI 引用基线：三家 AI 均 0 引用，每月重测

@@ -1,3 +1,5 @@
+> 数字口径提示（2026-11-01）：文中 9,991 / 47.6% 等为 300 页截断旧基线，勿再对外引用。现行全量普查：35,327 远程端点，20,908 PASS (59.2%)，10,032 AUTH_GATED，4,232 UNKNOWN，155 FAIL。
+
 # Competitor: ContextIQ / X402 Inspector (trango-compute.com)
 
 First seen: HN "Show HN: X402 Inspector" (2026-09-28, user contextiq, 2 points, item 49878442)

@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
 import { spawn } from 'node:child_process';
+import { endpointPhrase } from './lib/sweep-figures.mjs';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -328,7 +329,7 @@ ${prevLine}
 </div>
 
 <div class="card">
-<b>2. The 8004 ecosystem and the official MCP Registry do not overlap in our sample.</b> ${cross.urlExact} exact-URL matches and ${cross.host} host-level matches against the 9,991-endpoint <a href="${SITE}/trust/">Trust Directory</a>. A buyer checking one index gets no information about the other.
+<b>2. The 8004 ecosystem and the official MCP Registry do not overlap in our sample.</b> ${cross.urlExact} exact-URL matches and ${cross.host} host-level matches against the <a href="${SITE}/trust/">Trust Directory</a> (${endpointPhrase(root)}). A buyer checking one index gets no information about the other.
 </div>
 
 <div class="card">

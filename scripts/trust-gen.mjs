@@ -78,6 +78,7 @@ chunks.forEach((chunk, i) => {
   const nav = chunks.length > 1 ? pager(i, chunks.length) : '';
   const body = `<h1>Trust reports for official MCP Registry servers</h1>
 <p class="muted">${total} remote servers scanned · read-only · reproducible with one CLI command · no tool calls, no payments</p>
+<p class="muted">${excluded.size} registry names are omitted at the maintainer's request, so this directory lists ${total} of the ${total + excluded.size} remote endpoints in the 2026-11-01 census.</p>
 <p><span class="pill PASS">PASS ${tally.PASS ?? 0}</span> <span class="pill FAIL">FAIL ${tally.FAIL ?? 0}</span> <span class="pill AUTH_GATED">AUTH-GATED ${tally.AUTH_GATED ?? 0}</span> <span class="pill UNKNOWN">UNKNOWN ${tally.UNKNOWN ?? 0}</span></p>
 <p>Every report below was produced by <a href="${SITE}/mcpreflight/">mcpreflight</a> sending only MCP <code>initialize</code> and <code>tools/list</code> to the server's official registry endpoint, then checking protocol version and JSON Schema consistency deterministically. Reproduce any report yourself:</p>
 <pre>npx @eidonze/mcpreflight schema &lt;endpoint-url&gt;</pre>

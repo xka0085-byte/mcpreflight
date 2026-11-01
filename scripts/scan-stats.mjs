@@ -48,7 +48,7 @@ function renderBlock(eol, indent, cls) {
   const p = (text) => `${indent}<p class="${cls}">${text}</p>`;
   return [
     `${indent}${START}`,
-    p(`Current numbers as of ${date}: ${fmt(total)} remote servers scanned, ${fmt(pass)} PASS (${passRate}%), ${fmt(fail)} FAIL, ${fmt(noAnonymousHandshake)} no anonymous handshake (${fmt(authGated)} AUTH_GATED + ${fmt(unknown)} UNKNOWN).`),
+    p(`Current numbers as of ${date}: ${fmt(total)} remote endpoints returned by that sweep, ${fmt(pass)} PASS (${passRate}%), ${fmt(fail)} FAIL, ${fmt(noAnonymousHandshake)} no anonymous handshake (${fmt(authGated)} AUTH_GATED + ${fmt(unknown)} UNKNOWN).`),
     p('These are the published figures from the weekly read-only rescan of the official MCP Registry; endpoints that require authentication are counted as AUTH_GATED rather than as failures.'),
     p('Source: mcpreflight — <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">State of MCP Servers - October 2026</a>.'),
     `${indent}${END}`,
@@ -82,6 +82,18 @@ function inject(file, anchor, cls, indent) {
   console.log('OK', file);
 }
 
+// The landing-page KPI is a hardcoded counter. Keep it in sync with the sweep that produced
+// these numbers so the headline figure cannot drift away from scan-stats.json again.
+function syncKpi(file) {
+  const p = path.join(root, 'docs', file);
+  const raw = fs.readFileSync(p, 'utf8');
+  const re = /(<b class="grad" data-count=")\d+(" data-fmt="int">)[^<]*(<\/b><span>registry endpoints in the latest sweep<\/span>)/;
+  if (!re.test(raw)) { console.log('SKIP kpi', file); return; }
+  const next = raw.replace(re, `$1${total}$2${fmt(total)}$3`);
+  if (next !== raw) { fs.writeFileSync(p, next); console.log('OK kpi', file, fmt(total)); }
+}
+
 inject('index.html', 'Full report, method and limits', 'note', '      ');
-inject('state-of-mcp-2026-10.html', '9,991 remote servers', 'muted', '');
+inject('state-of-mcp-2026-10.html', 'full per-server directory', 'muted', '');
+syncKpi('index.html');
 console.log(`scan-stats ${date}: total ${total}, pass ${pass} (${passRate}%), fail ${fail}, authGated ${authGated}, unknown ${unknown}, noAnonymousHandshake ${noAnonymousHandshake}`);

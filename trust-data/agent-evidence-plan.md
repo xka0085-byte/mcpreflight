@@ -1,3 +1,5 @@
+> 数字口径提示（2026-11-01）：文中 9,991 / 47.6% 等为 300 页截断旧基线，勿再对外引用。现行全量普查：35,327 远程端点，20,908 PASS (59.2%)，10,032 AUTH_GATED，4,232 UNKNOWN，155 FAIL。
+
 # Agent Evidence 72 小时样本报告执行计划（GPT-6 三审后启动）
 
 日期：2026-10-13。产品暂定名 Agent Evidence，母品牌 Agent Trust Infrastructure。品牌承诺：可检查、可复核、可追踪。严禁总分式 Trust Score，PASS 不代表 agent 可信。

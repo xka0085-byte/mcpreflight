@@ -29,7 +29,7 @@ ul{padding-left:20px}
 <body>
 <main>
 <h1>Corrections log</h1>
-<p class="sub">mcpreflight MCP endpoint scanner. Last updated 2026-10-30.</p>
+<p class="sub">mcpreflight MCP endpoint scanner. Last updated 2026-11-01.</p>
 
 <p>When an external user tells us a scan result is wrong, we re-run the case, fix the scanner, and record it here. This page lists every correction we have made to published results, with the evidence link and the affected numbers. We publish these because a scanner that hides its errors cannot be trusted on its successes.</p>
 
@@ -67,22 +67,43 @@ ul{padding-left:20px}
 <td>A transient network failure could make a public counter read 0. Failed runs now keep the last successful value and are labelled unavailable.</td>
 <td>Internal review</td>
 </tr>
+<tr>
+<td>2026-10-31</td>
+<td>The registry crawler stopped at 300 cursor pages and still reported success. Its output was published as the registry count.</td>
+<td>Every census figure on this site describes the first 300 pages in registry order, not the registry. Pass rates still describe the endpoints that were scanned; counts must not be read as registry size. That traversal has since been run; see the 2026-11-01 entry.</td>
+<td>External report: <a href="https://github.com/itguruhaseeb">itguruhaseeb</a> questioned the registry scope in the 9,991 figure</td>
+</tr>
+<tr>
+<td>2026-11-01</td>
+<td>No census we had ever published covered the whole registry; the only archived run was the truncated one above, and the fix was described before it was finished.</td>
+<td>Superseded rather than annotated. A complete traversal of 1,984 cursor pages returned 198,345 registry entries, 52,765 latest-version active servers, and 35,327 with a remote HTTP transport. All 35,327 were then scanned read-only: 20,908 PASS (59.2%), 10,032 AUTH_GATED, 4,232 unknown, 155 FAIL (0.4%). Every census figure on this site now comes from that run.</td>
+<td>Internal, following the 2026-10-31 report</td>
+</tr>
 </tbody>
 </table>
 
 <h2>Effect on the published numbers</h2>
-<p>This is the part of the log that has to be read carefully. The scan of 2026-10-19 is the only census whose raw output is archived in the repository. These are its figures:</p>
+<p>This is the part of the log that has to be read carefully. Two censuses have archived raw output. The first, 2026-10-19, is the truncated one, kept here for provenance:</p>
 <ul>
-<li>9,991 endpoints scanned</li>
+<li>9,991 endpoints scanned, which we now know is the first 300 pages of registry order, not the registry (see the 2026-10-31 entry)</li>
 <li>4,751 passed the MCP handshake and schema check, 47.6%</li>
 <li>3,182 auth-gated</li>
 <li>2,001 unknown or unreachable</li>
 <li>57 failed</li>
 </ul>
+<p>The second is the complete traversal of 2026-11-01, and it is the run the site now quotes:</p>
+<ul>
+<li>198,345 registry entries across 1,984 cursor pages, complete traversal</li>
+<li>52,765 latest-version active servers, of which 35,327 carry a remote HTTP transport</li>
+<li>20,908 passed the MCP handshake and schema check, 59.2%</li>
+<li>10,032 auth-gated</li>
+<li>4,232 unknown or unreachable</li>
+<li>155 failed, 0.4%</li>
+</ul>
 <p>A re-run on 2026-10-21 produced a different count. That output was never committed, so we cannot recompute it, and we have stopped quoting it; it no longer appears anywhere on this site. If we re-run again, the raw JSON goes into the repository first and onto the page second.</p>
-<p>For the same reason the 48.8% pass rate and the 4,879 / 5,069 / 43 breakdown published up to 2026-10-29 are withdrawn: no archived output backs them. The site now quotes exactly two measurements, and never mixes them. One is the 2026-10-19 census above. The other is a probabilistic sample taken on 2026-10-29 from the 34,190 active remote servers in the registry, 500 endpoints drawn: 316 passed (63.2%, 95% CI 58.9-67.3), 123 auth-gated, 58 unknown or timed out, 3 failed. The endpoint list and raw responses are at <a href="https://mcpreflight-audit.pages.dev/audit">mcpreflight-audit.pages.dev/audit</a>.</p>
+<p>For the same reason the 48.8% pass rate and the 4,879 / 5,069 / 43 breakdown published up to 2026-10-29 are withdrawn: no archived output backs them. The site now quotes three measurements and never mixes them. One is the 2026-11-01 complete census, the current default. The second is the 2026-10-19 truncated census above, kept only so an older citation can be traced. The third is a probabilistic sample taken on 2026-10-29 from the 34,190 active remote servers in the registry, 500 endpoints drawn: 316 passed (63.2%, 95% CI 58.9-67.3), 123 auth-gated, 58 unknown or timed out, 3 failed. The endpoint list and raw responses are at <a href="https://mcpreflight-audit.pages.dev/audit">mcpreflight-audit.pages.dev/audit</a>.</p>
 
-<div class="note">Every number above is our own output. None has been independently recomputed by a third party. Where a figure is quoted elsewhere it should carry its date and the words "mcpreflight scan", and it should be one of the two measurements named here — the 4,751 census or the 63.2% sample.</div>
+<div class="note">Every number above is our own output. None has been independently recomputed by a third party. Where a figure is quoted elsewhere it should carry its date and the words "mcpreflight scan", and it should be one of the three measurements named here — the complete 35,327 census of 2026-11-01, the truncated 4,751 census of 2026-10-19, or the 63.2% sample.</div>
 
 <h2>External reviews</h2>
 <p>Two external reviews are on record.</p>
@@ -96,7 +117,7 @@ ul{padding-left:20px}
 <p>Every result on this site can be re-run. The scanner is open source (<code>bin/mcpreflight.mjs</code>), and <code>node test/smoke.mjs</code> runs the conformance cases that regressions in 0.5.0 broke: stateful <code>Mcp-Session-Id</code> headers, JSON and SSE responses, unauthenticated 401, 308 redirects, one retry on 429, and malformed tool schemas. It is a plain Node script against a local fixture server — no network, no credentials. The published npm package is still 0.5.0 and predates these fixes; the fixed scanner is in the repository and ships with the next release.</p>
 <p><a href="https://github.com/xka0085-byte/mcpreflight">Source and issue tracker</a> · <a href="/mcpreflight/data-quality-2026-10-21.html">Data quality note for the 2026-10-21 scan</a></p>
 
-<p class="cite">Citation: mcpreflight, corrections log, updated 2026-10-30. https://xka0085-byte.github.io/mcpreflight/corrections.html</p>
+<p class="cite">Citation: mcpreflight, corrections log, updated 2026-11-01. https://xka0085-byte.github.io/mcpreflight/corrections.html</p>
 </main>
 </body>
 </html>

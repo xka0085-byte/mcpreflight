@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
 import { execFile } from 'node:child_process';
+import { endpointPhrase } from './lib/sweep-figures.mjs';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -19,7 +20,7 @@ const done = JSON.parse(fs.readFileSync(donePath, 'utf8'));
 const REPORT = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/p/${slug}.html`;
 const BADGE = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/badge/${slug}.svg`;
 
-const body = (q) => `the weekly read-only scan of all 9,991 remote MCP endpoints in the official registry checked your server (${q.name}) anonymously and it passed a clean initialize + tools/list handshake, so it is listed as PASS in the trust directory: ${REPORT(q.slug)}
+const body = (q) => `the weekly read-only scan of ${endpointPhrase(root)} in the official registry checked your server (${q.name}) anonymously and it passed a clean initialize + tools/list handshake, so it is listed as PASS in the trust directory: ${REPORT(q.slug)}
 
 the same check runs as one read-only CI block on every push, which is how you catch the deploy that silently breaks the handshake before clients find it:
 
@@ -40,7 +41,7 @@ for (const q of queue) {
   if (done[q.repo]) continue;
   const bodyFile = path.join(root, 'trust-data', '.ci-offer-body.md');
   fs.writeFileSync(bodyFile, body(q));
-  const title = `your MCP endpoint passes the registry-wide health check, keep it that way in CI`;
+  const title = `your MCP endpoint passes our latest registry health check, keep it that way in CI`;
   const res = await g(['issue', 'create', '-R', q.repo, '-t', title, '--body-file', bodyFile]);
   if (res.e) {
     console.log(`ERROR ${q.repo}: ${(res.s || '').slice(0, 160)}`);

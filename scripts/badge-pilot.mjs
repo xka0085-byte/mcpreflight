@@ -1,8 +1,9 @@
-// Badge pilot: offer "passed registry-wide check" badge to top 20 PASS servers with repos.
+// Badge pilot: offer a "passed our latest registry check" badge to top 20 PASS servers with repos.
 import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
 import { execFile } from 'node:child_process';
+import { endpointPhrase } from './lib/sweep-figures.mjs';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -21,9 +22,9 @@ const gh = (args) => new Promise((resolve) => {
 const BADGE = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/badge/${slug}.svg`;
 const REPORT = (slug) => `https://xka0085-byte.github.io/mcpreflight/trust/p/${slug}.html`;
 
-const body = (q) => `Good news for once: your server is one of the ${q.passCount} MCP registry endpoints that completed a clean anonymous health check in our registry-wide scan.
+const body = (q) => `Good news for once: your server is one of the ${q.passCount} MCP registry endpoints that completed a clean anonymous health check in our latest weekly scan.
 
-We ran a read-only preflight (MCP initialize + tools/list, no tools called) against all 9,991 registry endpoints. Report for your server: ${REPORT(q.slug)}
+We ran a read-only preflight (MCP initialize + tools/list, no tools called) against ${endpointPhrase(root)} in the official MCP Registry. Report for your server: ${REPORT(q.slug)}
 Reproduce locally: \`npx @eidonze/mcpreflight schema ${q.url}\`
 
 If you want to show it off, this badge embeds in your README and updates automatically as our weekly rescan runs, so it always reflects the live state of your endpoint:
@@ -62,7 +63,7 @@ for (const t of targets) {
   const key = t.repo.toLowerCase();
   fs.writeFileSync(bp, body(t));
   const r = await new Promise((resolve) => {
-    execFile('gh', ['issue', 'create', '-R', t.repo, '-t', 'your MCP server passed a registry-wide health check (badge inside)', '--body-file', bp], { timeout: 60000, maxBuffer: 2 << 20 }, (err, stdout, stderr) => {
+    execFile('gh', ['issue', 'create', '-R', t.repo, '-t', 'your MCP server passed our latest registry health check (badge inside)', '--body-file', bp], { timeout: 60000, maxBuffer: 2 << 20 }, (err, stdout, stderr) => {
       resolve({ err, out: (stdout ?? '').trim(), msg: String(err?.message ?? stderr ?? '').slice(0, 200) });
     });
   });

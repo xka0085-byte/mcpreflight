@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
 import { execFile } from 'node:child_process';
+import { endpointPhrase } from './lib/sweep-figures.mjs';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -59,7 +60,7 @@ Full report (updated weekly): ${REPORT(q.slug)}
 ${FOOTER}`;
 
 // C: directory + badge — offer exposure instead of only a problem report
-const bodyC = (q) => `Your MCP endpoint (${q.name}, \`${q.url}\`) is listed in the [MCP Trust Directory](${SITE}trust/), a free weekly-rescanned directory of ${'9,991'} registry endpoints.
+const bodyC = (q) => `Your MCP endpoint (${q.name}, \`${q.url}\`) is listed in the [MCP Trust Directory](${SITE}trust/), a free weekly-rescanned directory covering ${endpointPhrase(root)} in the official MCP Registry.
 
 Current status: **${q.status}** (\`${q.code}\`).
 
@@ -77,7 +78,7 @@ The badge re-renders on every weekly rescan, so users always see current health.
 ${FOOTER}`;
 
 // D: data / report — invite a one-line classification for the State of MCP dataset
-const bodyD = (q) => `We are compiling the **State of MCP Server Reliability** report from ${'9,991'} endpoints registered in the official MCP Registry. Yours (${q.name}, \`${q.url}\`) registered **${q.code}** on the latest scan: ${q.message}
+const bodyD = (q) => `We are compiling the **State of MCP Server Reliability** report from ${endpointPhrase(root)} in the official MCP Registry. Yours (${q.name}, \`${q.url}\`) registered **${q.code}** on the latest scan: ${q.message}
 
 That lands in the public dataset as "no anonymous handshake" unless you tell us otherwise. A one-line reply is enough:
 

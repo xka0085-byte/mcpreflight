@@ -17,10 +17,17 @@ const CONCURRENCY = Number(process.env.SCAN_CONCURRENCY ?? 24);
 const TASK_TIMEOUT = Number(process.env.SCAN_TASK_TIMEOUT_MS ?? 35000);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Hard sanity bound only. Running into it is treated as a failure, never a silent stop.
+const MAX_PAGES = Number(process.env.REGISTRY_MAX_PAGES ?? 5000);
+
+// Walks the registry until nextCursor is empty. Returns coverage metadata alongside the list
+// so callers can tell a complete sweep from a truncated one.
 async function pullServers() {
   const seen = new Map();
   let cursor = null;
-  for (let page = 0; page < 300; page++) {
+  let page = 0;
+  let pagesWalked = 0;
+  for (; page < MAX_PAGES; page++) {
     const u = REG + '?limit=100' + (cursor ? `&cursor=${encodeURIComponent(cursor)}` : '');
     let body = null;
     // 3 rounds x 6 attempts with a 60s cooldown between rounds: survives upstream flakiness
@@ -46,9 +53,16 @@ async function pullServers() {
       if (!seen.has(s.name)) seen.set(s.name, { name: s.name, title: s.title ?? s.name, description: s.description ?? '', url: remote.url, version: s.version ?? null });
     }
     cursor = body.metadata?.nextCursor;
+    pagesWalked = page + 1;
     if (!cursor) break;
   }
-  return [...seen.values()];
+  if (cursor) {
+    throw new Error(
+      `registry pagination did not terminate after ${MAX_PAGES} pages (cursor still present). ` +
+      `Refusing to write a partial server list. Raise REGISTRY_MAX_PAGES if this is expected.`,
+    );
+  }
+  return { servers: [...seen.values()], pages: pagesWalked, complete: true };
 }
 
 function runSchema(ep) {
@@ -111,14 +125,41 @@ async function probeAuth(ep) {
 }
 
 const serversPath = path.join(outDir, 'servers-full.json');
+const metaPath = path.join(outDir, 'servers-full.meta.json');
+const refresh = process.argv.includes('--refresh');
 let servers;
-if (fs.existsSync(serversPath)) {
+
+// The cache is only trusted when it carries a completed-sweep marker. A list written by the
+// old 300-page loop has no meta file and must never be reused as if it were the whole registry.
+let cachedMeta = null;
+if (fs.existsSync(metaPath)) {
+  try { cachedMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8')); } catch { cachedMeta = null; }
+}
+const cacheUsable = !refresh && cachedMeta?.complete === true && fs.existsSync(serversPath);
+
+if (cacheUsable) {
   servers = JSON.parse(fs.readFileSync(serversPath, 'utf8'));
-  console.error(`loaded cached server list: ${servers.length}`);
+  if (servers.length !== cachedMeta.total) {
+    throw new Error(`cache/meta mismatch: servers-full.json has ${servers.length}, meta says ${cachedMeta.total}`);
+  }
+  console.error(`loaded cached server list: ${servers.length} (swept ${cachedMeta.pages} pages at ${cachedMeta.generatedAt})`);
 } else {
-  servers = await pullServers();
+  if (fs.existsSync(serversPath)) {
+    console.error('ignoring existing servers-full.json: no completed-sweep marker (truncated cache from an earlier run)');
+  }
+  const pulled = await pullServers();
+  servers = pulled.servers;
+  const meta = {
+    total: servers.length,
+    pages: pulled.pages,
+    complete: pulled.complete,
+    source: REG,
+    pageSize: 100,
+    generatedAt: new Date().toISOString(),
+  };
   fs.writeFileSync(serversPath, JSON.stringify(servers));
-  console.error(`TOTAL remote servers: ${servers.length}`);
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + '\n');
+  console.error(`TOTAL remote servers: ${servers.length} (swept ${meta.pages} pages, complete=${meta.complete})`);
 }
 
 const ckptPath = path.join(outDir, 'scan-full.jsonl');

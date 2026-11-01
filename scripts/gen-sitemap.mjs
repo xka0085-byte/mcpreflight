@@ -29,7 +29,8 @@ const urls = [
 ];
 const total = scan.results.length;
 for (let i = 1; i * 500 < total; i++) urls.push(`${SITE}/trust/index-${i + 1}.html`);
-for (const r of scan.results) urls.push(`${SITE}/trust/p/${r.slug}.html`);
+const excluded = new Set((JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'exclusions.json'), 'utf8')).exclusions ?? []).map((x) => x.name));
+for (const r of scan.results) { if (!excluded.has(r.name)) urls.push(`${SITE}/trust/p/${r.slug}.html`); }
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(root, 'docs', 'sitemap.xml'), xml);

@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>mcpreflight — read-only MCP preflight checks &amp; x402 inspector</title>
-  <meta name="description" content="Read-only MCP server preflight checks: initialize handshake, tools/list schema validation, x402 payment endpoint inspection, and a weekly Trust Directory covering the 9,991 registry endpoints it scanneds.">
+  <meta name="description" content="Read-only MCP server preflight checks: initialize handshake, tools/list schema validation, x402 payment endpoint inspection, and a weekly Trust Directory covering the endpoints returned by each weekly registry sweep.">
   <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://xka0085-byte.github.io/mcpreflight/#org","name":"mcpreflight","url":"https://xka0085-byte.github.io/mcpreflight/","description":"Read-only preflight checks for MCP servers and x402 payment endpoints, plus a weekly public Trust Directory covering every remote endpoint in the official MCP Registry.","sameAs":["https://github.com/xka0085-byte/mcpreflight","https://www.npmjs.com/package/@eidonze/mcpreflight"]},{"@type":"WebSite","@id":"https://xka0085-byte.github.io/mcpreflight/#site","name":"mcpreflight","url":"https://xka0085-byte.github.io/mcpreflight/","publisher":{"@id":"https://xka0085-byte.github.io/mcpreflight/#org"}},{"@type":"SoftwareApplication","name":"mcpreflight","applicationCategory":"DeveloperApplication","operatingSystem":"Cross-platform","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","codeRepository":"https://github.com/xka0085-byte/mcpreflight","installUrl":"https://www.npmjs.com/package/@eidonze/mcpreflight","description":"CLI and GitHub Action that runs a read-only MCP initialize + tools/list handshake with JSON Schema validation, plus an x402 payment-challenge inspector. Zero dependencies.","publisher":{"@id":"https://xka0085-byte.github.io/mcpreflight/#org"}}]}</script>
   <meta name="google-site-verification" content="googlefc84beb62afa4471" />
   <meta property="og:title" content="mcpreflight — read-only MCP preflight checks">
-  <meta property="og:description" content="Validate MCP servers before you connect: schema checks, CI gating, and a weekly Trust Directory of 9,991 registry endpoints. No tool calls, no payments.">
+  <meta property="og:description" content="Validate MCP servers before you connect: schema checks, CI gating, and a weekly Trust Directory of the MCP Registry endpoints each sweep returns. No tool calls, no payments.">
   <meta property="og:url" content="https://xka0085-byte.github.io/mcpreflight/">
   <meta name="theme-color" content="#05070c">
   <style>
@@ -173,9 +173,9 @@
     }
     .bar { display: flex; height: 12px; border-radius: 99px; overflow: hidden; margin: .2rem 0 .7rem; border: 1px solid var(--border); }
     .bar i { display: block; height: 100%; }
-    .bar .b-pass { width: 47.6%; background: linear-gradient(90deg, #2ea56b, #3fd68f); }
-    .bar .b-unk { width: 51.9%; background: rgba(148,163,184,.22); }
-    .bar .b-fail { width: 0.6%; background: var(--red); }
+    .bar .b-pass { width: 59.2%; background: linear-gradient(90deg, #2ea56b, #3fd68f); }
+    .bar .b-unk { width: 40.4%; background: rgba(148,163,184,.22); }
+    .bar .b-fail { width: 0.4%; background: var(--red); }
     .legend { display: flex; flex-wrap: wrap; gap: 1.1rem; font-family: var(--mono); font-size: .78rem; color: var(--muted); margin-bottom: 1.2rem; }
     .legend b { color: var(--fg); font-weight: 600; }
     .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: .38rem; }
@@ -213,7 +213,7 @@
       html { scroll-behavior: auto; }
     }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mcpreflight?","acceptedAnswer":{"@type":"Answer","text":"mcpreflight (formerly mcpdoctor) is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpreflight schema <url>."}},{"@type":"Question","name":"Is mcpreflight a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It validates protocol conformance and tool schema quality, not runtime behavior or code safety. A PASS means the observed responses matched the checks in that version."}},{"@type":"Question","name":"How many MCP servers fail a basic check?","acceptedAnswer":{"@type":"Answer","text":"In the 2026-10-19 read-only scan of 9,991 remote registry endpoints, 4,751 passed a clean anonymous handshake (47.6%), 5,183 gave no anonymous response (3,182 AUTH_GATED + 2,001 UNKNOWN), and 57 failed outright. Full data on the State of MCP report page."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is mcpreflight?","acceptedAnswer":{"@type":"Answer","text":"mcpreflight (formerly mcpdoctor) is an open-source, read-only preflight checker for MCP servers and x402 payment endpoints. It runs an MCP initialize handshake and tools/list validation without calling any tools. Install-free usage: npx @eidonze/mcpreflight schema <url>."}},{"@type":"Question","name":"Is mcpreflight a security audit?","acceptedAnswer":{"@type":"Answer","text":"No. It validates protocol conformance and tool schema quality, not runtime behavior or code safety. A PASS means the observed responses matched the checks in that version."}},{"@type":"Question","name":"How many MCP servers fail a basic check?","acceptedAnswer":{"@type":"Answer","text":"In the 2026-11-01 complete read-only sweep of the official MCP Registry, 35,327 remote endpoints were checked: 20,908 passed a clean anonymous handshake (59.2%), 14,264 gave no anonymous response (10,032 AUTH_GATED + 4,232 UNKNOWN), and 155 failed outright. Full data on the State of MCP report page."}}]}</script>
 </head>
 <body>
   <div class="bg-glow"></div>
@@ -255,9 +255,9 @@
     </div>
 
     <div class="kpis">
-      <div class="kpi"><b class="grad" data-count="9991" data-fmt="int">9,991</b><span>registry endpoints scanned weekly</span></div>
-      <div class="kpi"><b class="grad" data-count="47.6" data-fmt="pct">47.6%</b><span>pass a clean anonymous handshake</span></div>
-      <div class="kpi"><b class="grad" data-count="2.4" data-fmt="pct">2.4%</b><span>weekly churn: pass → unknown</span></div>
+      <div class="kpi"><b class="grad" data-count="35327" data-fmt="int">35,327</b><span>registry endpoints in the latest sweep</span></div>
+      <div class="kpi"><b class="grad" data-count="59.2" data-fmt="pct">59.2%</b><span>pass a clean anonymous handshake</span></div>
+      <div class="kpi"><b class="grad" data-count="14264" data-fmt="int">14,264</b><span>gave no anonymous response</span></div>
       <div class="kpi"><b class="grad">0</b><span>tools invoked, ever</span></div>
     </div>
   </div>
@@ -274,9 +274,9 @@
     <h2 class="reveal"><span class="idx">02</span>What you can check</h2>
     <p class="lede reveal">Every check is reproducible with one command and documented with its limits.</p>
     <div class="grid">
-      <article class="card reveal"><div class="num">CHK·1</div><h3>Schema check</h3><p>initialize + tools/list, tool names, descriptions, input/output JSON schemas, required fields. 46,961 property-level findings logged across the registry.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">Schema guide</a></article>
+      <article class="card reveal"><div class="num">CHK·1</div><h3>Schema check</h3><p>initialize + tools/list, tool names, descriptions, input/output JSON schemas, required fields. 221,048 property-level findings logged across 35,327 remote endpoints.</p><a href="https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html">Schema guide</a></article>
       <article class="card reveal"><div class="num">CHK·2</div><h3>x402 inspector</h3><p>HTTP 402 challenge shape, payment documents, accepts[], discovery manifests, latency and response digest, all without paying.</p><a href="https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html">x402 guide</a></article>
-      <article class="card reveal"><div class="num">CHK·3</div><h3>Trust Directory</h3><p>Per-server reports, status badges and JSON APIs for the 9,991 registry endpoints we scanned. Re-scanned every Monday.</p><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Browse directory</a></article>
+      <article class="card reveal"><div class="num">CHK·3</div><h3>Trust Directory</h3><p>Per-server reports, status badges and JSON APIs for every endpoint in our latest scan. Re-scanned every Monday.</p><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Browse directory</a></article>
       <article class="card reveal"><div class="num">CHK·4</div><h3>Agent Evidence</h3><p>ERC-8004 on-chain registrations cross-checked against their declared MCP endpoints: 40 endpoints, five-level verdicts, reasons and timestamps.</p><a href="https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html">Sample report</a></article>
     </div>
 
@@ -284,19 +284,19 @@
     <div class="panel reveal">
       <div class="bar"><i class="b-pass"></i><i class="b-unk"></i><i class="b-fail"></i></div>
       <div class="legend">
-        <span><i style="background:#3fd68f"></i><b>47.6%</b> passed</span>
-        <span><i style="background:rgba(148,163,184,.35)"></i><b>51.9%</b> no anonymous response</span>
-        <span><i style="background:#ff6b6b"></i><b>0.6%</b> failed outright</span>
+        <span><i style="background:#3fd68f"></i><b>59.2%</b> passed</span>
+        <span><i style="background:rgba(148,163,184,.35)"></i><b>40.4%</b> no anonymous response</span>
+        <span><i style="background:#ff6b6b"></i><b>0.4%</b> failed outright</span>
       </div>
       <div class="stats">
-        <div class="stat"><b class="s-g">4,751</b><span>passed a clean handshake</span></div>
-        <div class="stat"><b>5,183</b><span>gave no anonymous response</span></div>
-        <div class="stat"><b class="s-r">57</b><span>failed outright</span></div>
-        <div class="stat"><b class="s-a">115</b><span>passed last week, unknown this week</span></div>
+        <div class="stat"><b class="s-g">20,908</b><span>passed a clean handshake</span></div>
+        <div class="stat"><b>14,264</b><span>gave no anonymous response</span></div>
+        <div class="stat"><b class="s-r">155</b><span>failed outright</span></div>
+        <div class="stat"><b class="s-a">42</b><span>passed last week, unknown this week</span></div>
       </div>
-      <p class="note">Of the <b>9,991</b> remote endpoints our 2026-10-19 sweep returned. Plus a second finding: all <b>213</b> Smithery-registered entries refused anonymous handshakes. <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">Full report, method and limits →</a></p>
+      <p class="note">Of the <b>35,327</b> remote endpoints our complete 2026-11-01 registry sweep returned. Plus a second finding: all <b>217</b> Smithery-registered entries refused anonymous handshakes. <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">Full report, method and limits →</a></p>
       <!-- scan-stats:start -->
-      <p class="note">Current numbers as of 2026-10-30: 9,991 remote servers scanned, 5,002 PASS (50.1%), 50 FAIL, 4,939 no anonymous handshake (3,554 AUTH_GATED + 1,385 UNKNOWN).</p>
+      <p class="note">Current numbers as of 2026-11-01: 35,327 remote endpoints returned by that sweep, 20,908 PASS (59.2%), 155 FAIL, 14,264 no anonymous handshake (10,032 AUTH_GATED + 4,232 UNKNOWN).</p>
       <p class="note">These are the published figures from the weekly read-only rescan of the official MCP Registry; endpoints that require authentication are counted as AUTH_GATED rather than as failures.</p>
       <p class="note">Source: mcpreflight — <a href="https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html">State of MCP Servers - October 2026</a>.</p>
       <!-- scan-stats:end -->

@@ -27,14 +27,25 @@ if (fs.existsSync(prevPath)) {
   try { prev = JSON.parse(fs.readFileSync(prevPath, 'utf8')); } catch {}
 }
 
+// A previous baseline is only comparable when it was itself a complete registry walk. The
+// pre-2026-10-31 cache came from a 300-page crawl, so every endpoint it never reached would
+// otherwise be reported as "added". Those are counted separately and never rendered as added.
+const prevComplete = prev?.meta?.complete === true;
+const prevCoverage = prev?.meta?.total ?? (prev?.servers ? Object.keys(prev.servers).length : null);
+
 const added = [];
 const removed = [];
 const changed = [];
+let uncomparable = 0;
 if (prev && prev.servers) {
   const prevMap = new Map(Object.entries(prev.servers));
   for (const [name, cur] of current) {
     const before = prevMap.get(name);
-    if (!before) { added.push({ name, url: cur.url, status: cur.status }); continue; }
+    if (!before) {
+      if (prevComplete) added.push({ name, url: cur.url, status: cur.status });
+      else uncomparable++;
+      continue;
+    }
     if (before.status !== cur.status) changed.push({ name, url: cur.url, from: before.status, to: cur.status });
     prevMap.delete(name);
   }
@@ -48,8 +59,13 @@ const feed = {
   scanDate,
   baseline: !prev,
   comparedAgainst: prev ? prev.scanDate : null,
-  method: 'week-over-week diff of per-server finalStatus from the read-only weekly rescan; added and removed are registry entries appearing or disappearing between the two scans',
-  summary: { added: added.length, removed: removed.length, statusChanged: changed.length, serversThisWeek: current.size },
+  comparedAgainstComplete: prevComplete,
+  comparedAgainstCoverage: prevCoverage,
+  comparisonNote: prevComplete
+    ? null
+    : `previous baseline covered ${prevCoverage} endpoints, so endpoints it never reached are counted in summary.addedUncomparable instead of being reported as added`,
+  method: 'week-over-week diff of per-server finalStatus from the read-only weekly rescan; added and removed are registry entries appearing or disappearing between two complete scans, and are withheld when the earlier scan was truncated',
+  summary: { added: added.length, addedUncomparable: uncomparable, removed: removed.length, statusChanged: changed.length, serversThisWeek: current.size },
   added: added.sort((a, b) => a.name.localeCompare(b.name)),
   removed: removed.sort((a, b) => a.name.localeCompare(b.name)),
   statusChanged: changed.sort((a, b) => a.name.localeCompare(b.name)),
@@ -57,8 +73,12 @@ const feed = {
 };
 fs.writeFileSync(outPath, JSON.stringify(feed, null, 1) + '\n');
 
-// save this week's map for the next run
-fs.writeFileSync(prevPath, JSON.stringify({ scanDate, servers: Object.fromEntries(current) }));
+// Save this week's map for the next run, marked complete: the next diff can trust it.
+fs.writeFileSync(prevPath, JSON.stringify({
+  scanDate,
+  meta: { complete: true, total: current.size },
+  servers: Object.fromEntries(current),
+}));
 
 // human page
 const rows = (list, cols) => list.slice(0, 200).map((r) => '<tr>' + cols.map((c) => `<td>${String(r[c] ?? '')}</td>`).join('') + '</tr>').join('\n');
@@ -86,7 +106,8 @@ code{background:#f6f8fa;padding:.1rem .3rem;border-radius:3px;font-size:.85em}
 <body>
 <p class="muted"><a href="${SITE}/">mcpreflight</a> / registry changes</p>
 <h1>MCP Registry Changes — week of ${scanDate}</h1>
-<p class="muted">Diff of the weekly read-only rescan against the previous week${prev ? ` (${prev.scanDate})` : ''}. ${feed.summary.added} added, ${feed.summary.removed} removed, ${feed.summary.statusChanged} changed status, out of ${feed.summary.serversThisWeek} endpoints.</p>
+<p class="muted">Diff of the weekly read-only rescan against the previous week${prev ? ` (${prev.scanDate})` : ''}. ${feed.summary.added} added, ${feed.summary.removed} removed, ${feed.summary.statusChanged} changed status, out of ${feed.summary.serversThisWeek} endpoints.${prevComplete ? '' : ' Added and removed are withheld this week because the previous baseline was a truncated crawl.'}</p>
+${prevComplete ? '' : `<p class="note"><strong>Added and removed are not comparable this week.</strong> The previous baseline covered only ${prevCoverage} endpoints, from a crawler that stopped after 300 pages. The ${feed.summary.addedUncomparable} endpoints absent from it are endpoints it never reached, not new registrations, so they are not listed. A complete baseline is stored from this run on; added and removed become exact next week.</p>`}
 <p>Every Monday the whole official registry is re-scanned read only and this page diffs the two weeks. A server appearing here as added was not in the registry the week before. Status changed means its anonymous handshake outcome moved, for example from PASS to AUTH_GATED, which is usually an authentication change rather than an outage. The machine-readable feed with the full arrays is at <a href="${SITE.replace('https://', 'https://')}../trust-data/registry-changes.json"><code>trust-data/registry-changes.json</code></a> in the repository.</p>
 ${prev ? '' : '<p class="muted">First run: this week establishes the baseline. The first real diff appears next Monday.</p>'}
 <h2>Added (${feed.summary.added})</h2>
