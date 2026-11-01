@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:29.946Z",
+  "server": {
+    "registryName": "site.crawlwise/crawlwise",
+    "title": "Crawlwise",
+    "description": "SEO audits and AI crawler checks. Honest findings only; no invented scores.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://crawlwise.site/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://crawlwise.site/mcp"
+}

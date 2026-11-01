@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:27.457Z",
+  "server": {
+    "registryName": "top.skillaria/skillaria",
+    "title": "Skillaria.Top",
+    "description": "Search and read Skillaria.Top courses (AI, DevOps, Linux, Git) and guides in 20 languages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://skillaria.top/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "skillaria",
+      "title": "Skillaria.Top",
+      "version": "1.0.0",
+      "websiteUrl": "https://skillaria.top"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://skillaria.top/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:26.289Z",
+  "server": {
+    "registryName": "com.myspainvisa/spain-visa",
+    "title": "My Spain Visa: Spain visa helper",
+    "description": "Spain visa rules 2026, Schengen 90/180 calculator and consulate wait times, by immigration lawyers",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://myspainvisa.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "myspainvisa",
+      "title": "My Spain Visa: Spain visa helper",
+      "version": "1.0.0",
+      "websiteUrl": "https://myspainvisa.com/mcp/"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].consulate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].planned_move has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].planned_move has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://myspainvisa.com/api/mcp"
+}

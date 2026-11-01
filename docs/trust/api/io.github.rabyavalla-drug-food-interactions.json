@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:53.257Z",
+  "server": {
+    "registryName": "io.github.rabyavalla/drug-food-interactions",
+    "title": "Drug-Food Interactions",
+    "description": "Food-drug interaction and nutrient depletion checks for 30+ common medications.",
+    "registryVersion": "5.0.0"
+  },
+  "endpoint": "https://web-production-ae61.up.railway.app/mcp/drug-food-interactions",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bonsai-health-intelligence",
+      "version": "5.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].medications has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].foods_or_supplements has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].medication has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://web-production-ae61.up.railway.app/mcp/drug-food-interactions"
+}

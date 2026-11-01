@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:17.349Z",
+  "server": {
+    "registryName": "io.github.obcraft/apiosk-mcp",
+    "title": "Apiosk Connect",
+    "description": "Discover, pay for, execute, and publish APIs through Apiosk.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://mcp.apiosk.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apiosk.com/mcp"
+}

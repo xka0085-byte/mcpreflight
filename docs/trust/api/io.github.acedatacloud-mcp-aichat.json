@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:28.319Z",
+  "server": {
+    "registryName": "io.github.AceDataCloud/mcp-aichat",
+    "title": "io.github.AceDataCloud/mcp-aichat",
+    "description": "MCP server for AI dialogue using various LLM models via AceDataCloud",
+    "registryVersion": "2026.10.28.1"
+  },
+  "endpoint": "https://aichat.mcp.acedata.cloud/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aichat.mcp.acedata.cloud/mcp"
+}

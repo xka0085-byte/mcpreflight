@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:18.131Z",
+  "scannedAt": "2026-11-01T03:55:46.712Z",
   "server": {
     "registryName": "com.skipseek/skipseek",
     "title": "com.skipseek/skipseek",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://skipseek.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "skipseek",
+      "title": "SkipSeek",
+      "version": "1.0.3"
+    },
+    "toolCount": 9,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "9 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://skipseek.com/mcp"
 }

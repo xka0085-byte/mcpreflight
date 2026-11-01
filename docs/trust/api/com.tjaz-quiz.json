@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:56.301Z",
+  "server": {
+    "registryName": "com.tjaz/quiz",
+    "title": "Tjaz",
+    "description": "Make, find and share multiple-choice quizzes that people play on tjaz.com, alone or together",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tjaz.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tjaz",
+      "title": "Tjaz",
+      "version": "1.0.0",
+      "websiteUrl": "https://tjaz.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].questions has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].subject has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tjaz.com/mcp"
+}

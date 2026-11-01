@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:03.234Z",
+  "server": {
+    "registryName": "cloud.postdata/postdata",
+    "title": "PostData",
+    "description": "No-signup IoT backend: device names, sensor readings, history and live charts. No API key needed.",
+    "registryVersion": "2.3.3"
+  },
+  "endpoint": "https://api.postdata.cloud/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "postdata",
+      "title": "PostData",
+      "version": "2.3.2",
+      "websiteUrl": "https://postdata.cloud/docs#mcp",
+      "icons": [
+        {
+          "src": "https://postdata.cloud/favico/android-chrome-512x512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://postdata.cloud/favico/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].timeout_seconds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.postdata.cloud/mcp"
+}

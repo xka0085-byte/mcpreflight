@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:28.462Z",
+  "server": {
+    "registryName": "io.github.rozetyp/emission-factors",
+    "title": "Emission Factors",
+    "description": "Keyless US grid carbon + power cost by ZIP: eGRID Scope 2, Scope 1 fuels, site ranking, clean hours",
+    "registryVersion": "1.8.0"
+  },
+  "endpoint": "https://emission-factors.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "emission-factors",
+      "version": "1.7.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://emission-factors.com/mcp"
+}

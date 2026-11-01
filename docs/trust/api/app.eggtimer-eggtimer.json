@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:54.690Z",
+  "server": {
+    "registryName": "app.eggtimer/eggtimer",
+    "title": "Eggtimer.app",
+    "description": "Shareable timer links for countdowns, clock times, Pomodoro, Tabata and step recipes. No account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://eggtimer.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "eggtimer",
+      "title": "Eggtimer.app",
+      "version": "1.0.0",
+      "websiteUrl": "https://eggtimer.app/ai.html"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].detail has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].time has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].label has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://eggtimer.app/api/mcp"
+}

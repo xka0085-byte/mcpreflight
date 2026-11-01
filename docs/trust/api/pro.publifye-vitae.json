@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:15.869Z",
+  "server": {
+    "registryName": "pro.publifye/vitae",
+    "title": "Vitae",
+    "description": "Your CV as a document you own, edited by your AI assistant, in several languages, as a typeset PDF",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vitae.publifye.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vitae.publifye.com/mcp"
+}

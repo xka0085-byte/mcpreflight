@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:48.458Z",
+  "server": {
+    "registryName": "com.skyandsigns/mcp",
+    "title": "Sky and Signs — horoscopes and sky calendars",
+    "description": "Daily horoscopes (en/es/pt, 7 days ahead), moon phases, Panchang, solar terms, Maya, Ramadan dates.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://skyandsigns.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "morgenhimmel",
+      "title": "Rosis Morgenhimmel / Sky and Signs",
+      "version": "1.3.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://skyandsigns.com/mcp"
+}

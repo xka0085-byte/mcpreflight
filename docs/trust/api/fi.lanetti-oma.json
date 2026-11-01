@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:49.894Z",
+  "server": {
+    "registryName": "fi.lanetti/oma",
+    "title": "Lanetti",
+    "description": "Run your Lanetti hosting from your AI agent: domains, DNS, sites, email, apps, backups and billing.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://mcp.oma.lanetti.fi/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.oma.lanetti.fi/mcp"
+}

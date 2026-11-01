@@ -1,0 +1,87 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:04.755Z",
+  "server": {
+    "registryName": "io.github.chrisyau83/jpg-now",
+    "title": "JPG.now MCP Server",
+    "description": "Convert JPG images to and from popular formats through MCP-compatible AI clients.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jpg.now/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Convert, compress, and resize images and documents through the JPG.now REST API. Requires a JPG.now API key for conversion tools.",
+      "name": "jpg.now",
+      "title": "JPG.now Image Conversion",
+      "version": "1.0.0",
+      "websiteUrl": "https://jpg.now/mcp-server"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].search has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].source_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].converter has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].quality has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].width has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].height has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].strip_metadata has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].background_color has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].wait_for_completion has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].timeout_seconds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].job_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jpg.now/mcp"
+}

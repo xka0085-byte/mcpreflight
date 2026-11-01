@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:38.975Z",
+  "server": {
+    "registryName": "live.foro/foro",
+    "title": "Foro",
+    "description": "Book ads on in-store and venue screens direct from the venue: find open slots, quote, hold, book.",
+    "registryVersion": "0.1.21"
+  },
+  "endpoint": "https://foro.live/api/agent/mcp/connect",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foro.live/api/agent/mcp/connect"
+}

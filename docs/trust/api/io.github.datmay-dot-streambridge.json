@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:09.485Z",
+  "server": {
+    "registryName": "io.github.datmay-dot/streambridge",
+    "title": "io.github.datmay-dot/streambridge",
+    "description": "Search Chinese TV drama scenes with second-level timestamps by character, emotion, or scene type.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.lume.living/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "streambridge",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].action_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].romance_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.lume.living/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:16.142Z",
+  "server": {
+    "registryName": "com.mailows/mailows",
+    "title": "Mailows",
+    "description": "Give AI agents their own email inboxes: list, read and send mail via scoped, revocable OAuth grants.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.mailows.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mailows.com/mcp"
+}

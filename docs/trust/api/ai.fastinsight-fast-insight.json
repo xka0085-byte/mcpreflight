@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:38:20.384Z",
+  "scannedAt": "2026-11-01T03:38:13.008Z",
   "server": {
     "registryName": "ai.fastinsight/fast-insight",
     "title": "Fast Insight",
@@ -10,22 +10,17 @@
   },
   "endpoint": "https://fastinsight.ai/api/public/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
+    "finalStatus": "UNKNOWN",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://fastinsight.ai/api/public/mcp"
 }

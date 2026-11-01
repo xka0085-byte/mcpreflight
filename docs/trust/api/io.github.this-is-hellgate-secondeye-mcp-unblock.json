@@ -1,0 +1,70 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:21.175Z",
+  "server": {
+    "registryName": "io.github.This-Is-Hellgate/secondeye-mcp-unblock",
+    "title": "Second Eyes Agent Workflow Services",
+    "description": "Workflow diagnostics, capability routing, and x402 settlement for MCP-compatible agents.",
+    "registryVersion": "1.2.7"
+  },
+  "endpoint": "https://secondeyesai.com/api/bar",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "secondeye-mcp-unblock",
+      "title": "MCP 401 Auth Fix | github PAT wiring | x402",
+      "version": "1.2.6"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].agent_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].task has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].state has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].error_detail has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://secondeyesai.com/api/bar"
+}

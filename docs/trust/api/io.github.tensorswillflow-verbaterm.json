@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:17.601Z",
+  "server": {
+    "registryName": "io.github.TensorsWillFlow/verbaterm",
+    "title": "Verbaterm Policy Intelligence",
+    "description": "Judged, citation-checked policy corpus over MCP. Keyless public reads; API key for AI tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://verbaterm.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "verbaterm",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].companySlug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].productSlug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].documentTitle has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].sessionId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].sessionId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://verbaterm.com/mcp"
+}

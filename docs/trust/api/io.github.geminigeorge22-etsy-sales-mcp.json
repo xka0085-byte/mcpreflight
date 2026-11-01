@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:06.254Z",
+  "server": {
+    "registryName": "io.github.GeminiGeorge22/etsy-sales-mcp",
+    "title": "Etsy Search & Shop Sales MCP",
+    "description": "Etsy search + Etsy shop sales: live listing rows and sales counters via Apify MCP.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=publicrecords/etsy-shop-velocity,publicrecords/etsy-search-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=publicrecords/etsy-shop-velocity,publicrecords/etsy-search-scraper"
+}

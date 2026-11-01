@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:13.809Z",
+  "server": {
+    "registryName": "io.github.clk1st/mh-fin-mcp",
+    "title": "MetricHub Quant - A股量化数据",
+    "description": "China A-Share quantitative data: 5000+ stocks, 13 factors, daily market & limit-up analysis.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.quant.metrichub.app/mcp/sse",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.quant.metrichub.app/mcp/sse"
+}

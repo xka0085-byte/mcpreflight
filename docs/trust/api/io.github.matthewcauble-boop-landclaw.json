@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:28.831Z",
+  "server": {
+    "registryName": "io.github.matthewcauble-boop/landclaw",
+    "title": "landclaw",
+    "description": "US property register: 92M parcels, deeds, violations, CMBS filings, county sales, market series.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://landclaw.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://landclaw.vercel.app/mcp"
+}

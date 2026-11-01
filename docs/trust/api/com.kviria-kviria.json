@@ -1,12 +1,12 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:44:19.308Z",
+  "scannedAt": "2026-11-01T03:49:30.242Z",
   "server": {
     "registryName": "com.kviria/kviria",
     "title": "Kviria",
-    "description": "Location understanding for AI agents: words in, one verified location out. Beta: contiguous US.",
-    "registryVersion": "1.0.3"
+    "description": "Location understanding for AI agents: know where, then navigate there. Beta: contiguous US.",
+    "registryVersion": "2.0.0"
   },
   "endpoint": "https://api.kviria.com/mcp",
   "trust": {
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
   },
   "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
+    "status": "gated-verified",
+    "resourceMetadata": "https://api.kviria.com/.well-known/oauth-protected-resource/mcp",
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.kviria.com/mcp"

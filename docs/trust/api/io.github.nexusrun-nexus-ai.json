@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:02.695Z",
+  "server": {
+    "registryName": "io.github.nexusrun/nexus-ai",
+    "title": "NEXUS AI",
+    "description": "Deploy full-stack apps with databases, storage, backups, logs, scaling, and rollback. 74 MCP tools.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.nexusai.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.nexusai.run/mcp"
+}

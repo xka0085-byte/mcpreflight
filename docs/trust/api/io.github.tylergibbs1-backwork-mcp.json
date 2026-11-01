@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:13.033Z",
+  "server": {
+    "registryName": "io.github.tylergibbs1/backwork-mcp",
+    "title": "Backwork",
+    "description": "Medicare and commercial payer policies, prior auth, claim risk, and medical codes from Backwork.",
+    "registryVersion": "2.1.6"
+  },
+  "endpoint": "https://backworkhealth.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://backworkhealth.com/mcp"
+}

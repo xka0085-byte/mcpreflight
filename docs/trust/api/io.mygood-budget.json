@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:12.632Z",
+  "server": {
+    "registryName": "io.mygood/budget",
+    "title": "MyGood Budget",
+    "description": "Run your MyGood paycheck budget from chat: safe-to-spend, bills, expenses, and bank reconcile.",
+    "registryVersion": "1.8.2"
+  },
+  "endpoint": "https://mcp.mygood.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mygood.io/mcp"
+}

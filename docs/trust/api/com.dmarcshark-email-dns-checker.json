@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:36.845Z",
+  "server": {
+    "registryName": "com.dmarcshark/email-dns-checker",
+    "title": "DMARC Shark — Email DNS Checker",
+    "description": "Check a domain's public SPF, DMARC, MX and DKIM DNS records on demand. No account required.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dmarcshark.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dmarc-shark",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].selectors has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].domain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dmarcshark.com/mcp"
+}

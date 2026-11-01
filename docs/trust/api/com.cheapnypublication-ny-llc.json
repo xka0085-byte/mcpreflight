@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:35.129Z",
+  "server": {
+    "registryName": "com.cheapnypublication/ny-llc",
+    "title": "Cheap NY Publication: New York LLC filings",
+    "description": "Look up any New York LLC: publication deadline, county and price. Quotes for NY LLC filings.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://cheapnypublication.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cheap-ny-publication",
+      "title": "Cheap NY Publication: New York LLC filings",
+      "version": "1.0.0",
+      "websiteUrl": "https://cheapnypublication.com",
+      "icons": [
+        {
+          "src": "https://cheapnypublication.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].service has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].service has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cheapnypublication.com/mcp"
+}

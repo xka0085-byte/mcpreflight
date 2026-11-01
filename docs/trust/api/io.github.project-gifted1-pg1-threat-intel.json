@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:27.685Z",
+  "server": {
+    "registryName": "io.github.Project-Gifted1/pg1-threat-intel",
+    "title": "PG1 Sovereign Threat Intelligence",
+    "description": "Preflight for AI agents, signed: one call; wallet, domain, IP abuse, package checks and CVEs.",
+    "registryVersion": "1.21.0"
+  },
+  "endpoint": "https://pg1-ai-agent.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pg1-threat-intel",
+      "version": "1.21.0"
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].workload_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].indicator has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].indicator_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pg1-ai-agent.vercel.app/api/mcp"
+}

@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:13.359Z",
+  "server": {
+    "registryName": "io.usefulapi/wakatime",
+    "title": "WakaTime MCP by usefulapi",
+    "description": "Read your WakaTime coding time: summaries, stats, projects, goals, commits and leaderboards.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://wakatime.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wakatime-mcp",
+      "version": "1.20.0",
+      "title": "WakaTime MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/wakatime/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].insight_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wakatime.usefulapi.io/mcp"
+}

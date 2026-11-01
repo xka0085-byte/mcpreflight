@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:26.417Z",
+  "server": {
+    "registryName": "io.github.yhay81/public-data-catalog",
+    "title": "Public Data Catalog",
+    "description": "Reviewed public-data search and execution with provenance and verifiable integrity receipts.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://public-data-catalog-mcp.yusuke8h.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "public-data-catalog",
+      "version": "0.6.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].recipeId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].parameters has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].execution has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://public-data-catalog-mcp.yusuke8h.workers.dev/mcp"
+}

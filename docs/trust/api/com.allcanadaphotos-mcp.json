@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:19.253Z",
+  "server": {
+    "registryName": "com.allcanadaphotos/mcp",
+    "title": "All Canada Photos",
+    "description": "Search and license real Canadian stock photography: landscapes, wildlife, cities and people.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://allcanadaphotos.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://allcanadaphotos.com/mcp"
+}

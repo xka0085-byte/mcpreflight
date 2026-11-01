@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:02.290Z",
+  "server": {
+    "registryName": "online.environ/environ-mcp",
+    "title": "online.environ/environ-mcp",
+    "description": "环境监测站点数据查询：按关键字搜索站点，查询实时/小时监测数据与站点总览。",
+    "registryVersion": "1.3.2"
+  },
+  "endpoint": "https://app.environ.online/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.environ.online/mcp"
+}

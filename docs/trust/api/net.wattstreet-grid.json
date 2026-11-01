@@ -1,0 +1,70 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:23.442Z",
+  "server": {
+    "registryName": "net.wattstreet/grid",
+    "title": "Watt Street — US grid, interconnection queue and data center power",
+    "description": "How long to get grid power in any US county. 39,173 filings, 1,574 counties, dated sources.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.wattstreet.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2026-07-28",
+    "serverInfo": {
+      "name": "watt-street",
+      "title": "Watt Street Grid Intelligence",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].min_mw has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].state has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].min_mw has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].layer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].direction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].upcoming_only has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.wattstreet.net/mcp"
+}

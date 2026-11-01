@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:07.996Z",
+  "server": {
+    "registryName": "com.omnicost/catalog",
+    "title": "Omnicost",
+    "description": "Construction unit prices with source and date for Spain, the US and the EU. Search and item tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://omnicost.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://omnicost.com/api/mcp"
+}

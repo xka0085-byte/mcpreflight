@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:30.567Z",
+  "server": {
+    "registryName": "io.github.costkits/costkits-mcp",
+    "title": "io.github.costkits/costkits-mcp",
+    "description": "Free hosted MCP server: US healthcare procedure cost estimates and provider pricing. No API key.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://mcp.costkits.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "costkits",
+      "version": "2.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].plan_deductible has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].plan_deductible_met has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].plan_oop_max has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].plan_oop_met has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].plan_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.costkits.com/mcp"
+}

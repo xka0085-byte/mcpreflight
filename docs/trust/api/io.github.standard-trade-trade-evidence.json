@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:01.769Z",
+  "server": {
+    "registryName": "io.github.Standard-Trade/trade-evidence",
+    "title": "Trade Evidence",
+    "description": "All 36,524 Canton Fair 2026 exhibitors: find factories, flag traders, MOQs, prices, US import rules.",
+    "registryVersion": "2.1.0"
+  },
+  "endpoint": "https://standardtrade.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "standard-trade-trade-evidence",
+      "version": "2.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].refs has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].product has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://standardtrade.ai/mcp"
+}

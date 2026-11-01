@@ -1,0 +1,107 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:05.096Z",
+  "server": {
+    "registryName": "io.usefulapi/shippit",
+    "title": "Shippit MCP by usefulapi",
+    "description": "Get Shippit quotes, track and manage orders; create, label, book and cancel shipments on approval.",
+    "registryVersion": "1.10.0"
+  },
+  "endpoint": "https://shippit.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shippit-mcp",
+      "version": "1.13.0",
+      "title": "Shippit MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/shippit/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].dropoff_suburb has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].dropoff_postcode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].product_currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].service_levels has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].delivery_address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].delivery_suburb has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].delivery_postcode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].delivery_company has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].receiver_contact_number has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].customer_first_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].customer_last_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].customer_mobile has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].retailer_reference has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shippit.usefulapi.io/mcp"
+}

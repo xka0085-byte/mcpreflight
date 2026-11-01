@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:42.430Z",
+  "server": {
+    "registryName": "io.github.SSTEmpresarial/official-fuel-prices",
+    "title": "Official Fuel Prices",
+    "description": "Live official fuel station prices for France, Spain, Italy and Western Australia in one schema.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=sste/official-fuel-prices",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=sste/official-fuel-prices"
+}

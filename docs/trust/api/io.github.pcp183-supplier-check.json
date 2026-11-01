@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:53.030Z",
+  "server": {
+    "registryName": "io.github.pcp183/supplier-check",
+    "title": "Supplier Check (VAT, EORI, Company, Sanctions, Export)",
+    "description": "Check a supplier in one call: VAT, EORI, registry, sanctions, export lists. $0.25/call via x402.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://supplier-check-production-1dda.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://supplier-check-production-1dda.up.railway.app/mcp"
+}

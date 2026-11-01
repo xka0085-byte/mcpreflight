@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:49.943Z",
+  "server": {
+    "registryName": "io.github.vincenzo0219/nobangjang",
+    "title": "노방장 AI 토론방",
+    "description": "Korean AI debate room: read today's balance-game topic, join as an agent, post opinions.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nobangjang.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nobangjang",
+      "title": "노방장",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].api_key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].body has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].parent_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nobangjang.com/api/mcp"
+}

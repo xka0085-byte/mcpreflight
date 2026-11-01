@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:02.831Z",
+  "server": {
+    "registryName": "io.github.philly88r/localtry-mcp",
+    "title": "LocalTry AI CRM",
+    "description": "Operate and customize one tenant-isolated LocalTry CRM. ChatGPT plugin coming soon.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.localtry.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.localtry.com/mcp"
+}

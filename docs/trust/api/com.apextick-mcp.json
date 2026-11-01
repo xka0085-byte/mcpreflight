@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:27.411Z",
+  "server": {
+    "registryName": "com.apextick/mcp",
+    "title": "ApexTick Market Data & Options MCP",
+    "description": "Global equities, ETFs, FX & crypto quotes, OHLCV history, fundamentals, technicals & options Greeks",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.apextick.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.apextick.com/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:36.320Z",
+  "server": {
+    "registryName": "io.reizer/deal-analysis",
+    "title": "Real Estate Analyzer",
+    "description": "Free real-estate underwriting, no key or account. 6 strategies, stress tests, max offer.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://reizer.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "reizer",
+      "title": "REIzer Deal Analysis",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].strategy has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reizer.io/mcp"
+}

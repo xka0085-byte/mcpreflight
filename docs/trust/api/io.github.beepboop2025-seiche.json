@@ -1,0 +1,66 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:18.385Z",
+  "server": {
+    "registryName": "io.github.beepboop2025/seiche",
+    "title": "Seiche — world-markets evidence terminal",
+    "description": "Money, FX, capital-market and metadata-only China macro evidence with source clocks and limits.",
+    "registryVersion": "0.16.10"
+  },
+  "endpoint": "https://api.seiche.info/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "seiche",
+      "title": "Seiche — funding-stress terminal",
+      "version": "0.16.10",
+      "websiteUrl": "https://seiche.info"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].quantity_kg has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].fineness has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].price_usd_per_oz has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].annual_rate_pct has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].fx_inr_per_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].fees_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].day_count has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.seiche.info/mcp"
+}

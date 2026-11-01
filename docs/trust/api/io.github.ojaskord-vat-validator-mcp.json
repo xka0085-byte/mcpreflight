@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:06.574Z",
+  "server": {
+    "registryName": "io.github.OjasKord/vat-validator-mcp",
+    "title": "VAT Validator MCP",
+    "description": "Validate EU, UK, AU VAT numbers for AI agents. EU ViDA e-invoicing compliance.",
+    "registryVersion": "2.0.30"
+  },
+  "endpoint": "https://vat-validator-mcp-production.up.railway.app",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "vat-validator-mcp",
+      "version": "2.0.44",
+      "description": "Every B2B payment workflow built on Stripe MPP, Alipay AI Pay, or Shopify UCP has a moment where the agent must validate a supplier VAT number before authorising transfer. This server answers that question in one call -- validating against live EU VIES and AU ABR government registries and returning a machine-ready PROCEED / VERIFY_MANUALLY / HOLD verdict. Used before any invoice approval or payment rail invocation."
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vat-validator-mcp-production.up.railway.app"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:23.635Z",
+  "server": {
+    "registryName": "net.vybit/mcp-server",
+    "title": "net.vybit/mcp-server",
+    "description": "Push notifications with personalized sounds - manage and trigger your vybits via MCP",
+    "registryVersion": "1.10.0"
+  },
+  "endpoint": "https://api.vybit.net/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.vybit.net/v1/mcp"
+}

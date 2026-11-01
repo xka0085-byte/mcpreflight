@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:01.250Z",
+  "server": {
+    "registryName": "com.recued/recued",
+    "title": "Recued",
+    "description": "A server you run yourself between AI agents and your accounts; by default, writes wait for your yes.",
+    "registryVersion": "26.10.27"
+  },
+  "endpoint": "https://{recued_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{recued_host}/mcp"
+}

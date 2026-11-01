@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:42.287Z",
+  "server": {
+    "registryName": "cc.perfectclock/perfect-clock",
+    "title": "Perfect Clock",
+    "description": "Find meeting times across time zones and compare working hours.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://perfectclock.cc/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "perfect-clock",
+      "title": "Perfect Clock",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].durationMinutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].durationMinutes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://perfectclock.cc/mcp"
+}

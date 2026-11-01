@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:56.140Z",
+  "server": {
+    "registryName": "com.scalingfirm.book/tsf-booking",
+    "title": "TSF Booking",
+    "description": "Salon and clinic appointments: check availability, hold slots, take deposits, move and cancel.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://book.scalingfirm.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://book.scalingfirm.com/mcp"
+}

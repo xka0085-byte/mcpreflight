@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:34.850Z",
+  "server": {
+    "registryName": "io.github.lavanry/docfarm",
+    "title": "Docfarm",
+    "description": "Publish, edit, share and track HTML docs and decks from chat, with view analytics.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.doc.farm/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "docfarm",
+      "version": "1.0.0"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].doc_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].edits has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.doc.farm/mcp"
+}

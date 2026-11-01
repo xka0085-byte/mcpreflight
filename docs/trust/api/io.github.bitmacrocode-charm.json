@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:30.267Z",
+  "server": {
+    "registryName": "io.github.bitMacrocode/charm",
+    "title": "io.github.bitMacrocode/charm",
+    "description": "OEM automotive repair data - part numbers, torque specs, procedures for 1982-2013 vehicles.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.chatwithcharm.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "charm",
+      "version": "1.27.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].make has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].system has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chatwithcharm.com/mcp"
+}

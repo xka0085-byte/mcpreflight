@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:25.774Z",
+  "server": {
+    "registryName": "io.github.PremierInc/azure-devops",
+    "title": "Azure DevOps (ADO)",
+    "description": "The MCP server for Azure DevOps, bringing the power of Azure DevOps directly to your agents.",
+    "registryVersion": "v0.0.1"
+  },
+  "endpoint": "https://mcp.dev.azure.com",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.dev.azure.com"
+}

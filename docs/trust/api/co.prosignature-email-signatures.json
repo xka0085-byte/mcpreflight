@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:27.357Z",
+  "server": {
+    "registryName": "co.prosignature/email-signatures",
+    "title": "ProSignature email signatures",
+    "description": "Design 3-4 signatures for a user, free signatures, Pro/Teams prices, install steps. No account.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://prosignature.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "prosignature",
+      "title": "ProSignature email signatures",
+      "version": "1.2.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].department has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sector has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://prosignature.co/mcp"
+}

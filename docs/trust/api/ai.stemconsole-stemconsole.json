@@ -1,0 +1,33 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:05.383Z",
+  "server": {
+    "registryName": "ai.stemconsole/stemconsole",
+    "title": "StemConsole",
+    "description": "Split songs into vocals, drums, bass, guitar and piano stems, in batches; manage songs and setlists",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://stemconsole.ai/mcp/account",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://stemconsole.ai/.well-known/oauth-protected-resource/mcp/account",
+    "discovery": [
+      "ai-catalog"
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://stemconsole.ai/mcp/account"
+}

@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:38.743Z",
+  "server": {
+    "registryName": "ai.kaleto/mcp",
+    "title": "Kaleto",
+    "description": "Find kids' enrichment providers (sports, swim, dance, arts, STEM, camps) in 39 US regions.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.kaleto.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kaleto-provider-discovery",
+      "title": "Kaleto",
+      "version": "2.0.0",
+      "websiteUrl": "https://www.kaleto.ai",
+      "icons": [
+        {
+          "src": "https://www.kaleto.ai/brand/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].provider_ids has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.kaleto.ai/mcp"
+}

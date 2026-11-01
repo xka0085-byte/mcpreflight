@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:52.440Z",
+  "server": {
+    "registryName": "io.github.violetclaire/popcorn-tain-verifier",
+    "title": "POPCORN Witness Verifier",
+    "description": "MCP server for verifying receipts: POPCORN-WITNESS/2.0 signature, digest, and time. Free, read only.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://popcorn-tain-verify-mcp-v2.violetherod.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "popcorn-tain-verifier",
+      "version": "2.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].response has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].jwks has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].expected_nonce has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].expected_payload_digest has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].expected_node_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_clock_accuracy_radius_ms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].previous_receipt has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://popcorn-tain-verify-mcp-v2.violetherod.workers.dev/mcp"
+}

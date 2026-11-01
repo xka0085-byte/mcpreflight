@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:40.966Z",
+  "server": {
+    "registryName": "social.superpowers/social-superpowers",
+    "title": "Superpowers.social",
+    "description": "Live X/Twitter and Reddit research. 10 read-only MCP tools, Google/GitHub sign-in. Free tier.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://superpowers.social/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://superpowers.social/mcp"
+}

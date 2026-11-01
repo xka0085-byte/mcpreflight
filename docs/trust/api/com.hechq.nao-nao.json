@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:34.525Z",
+  "server": {
+    "registryName": "com.hechq.nao/nao",
+    "title": "NAO",
+    "description": "Compra local en Guadalajara: productos por colonia, carrito y pedidos de prueba (demo, sin cobro).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nao.hechq.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nao-gdl",
+      "version": "0.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].notas has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nao.hechq.com/api/mcp"
+}

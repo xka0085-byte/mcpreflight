@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:24.032Z",
+  "server": {
+    "registryName": "net.assistant247/directory",
+    "title": "AssistAnt 24/7 pro directory",
+    "description": "Local tradespeople: 823,000+ US businesses in 38 trades. Verified first; no paid placement.",
+    "registryVersion": "1.6.0"
+  },
+  "endpoint": "https://assistant247.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "assistant247-pro-directory",
+      "title": "AssistAnt — home-service pro directory",
+      "version": "1.6.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].appliance has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].appliance has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://assistant247.net/mcp"
+}

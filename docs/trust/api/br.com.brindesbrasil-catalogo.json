@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:40:37.040Z",
+  "scannedAt": "2026-11-01T03:42:25.639Z",
   "server": {
     "registryName": "br.com.brindesbrasil/catalogo",
     "title": "BrindesBrasil.com.br",
@@ -10,22 +10,32 @@
   },
   "endpoint": "https://www.brindesbrasil.com.br/wp-json/bb/v1/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "brindesbrasil",
+      "title": "BrindesBrasil.com.br",
+      "version": "1.4.0",
+      "websiteUrl": "https://www.brindesbrasil.com.br/"
+    },
+    "toolCount": 7,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limite has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://www.brindesbrasil.com.br/wp-json/bb/v1/mcp"
 }

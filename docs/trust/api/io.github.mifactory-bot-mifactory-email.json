@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:18.856Z",
+  "server": {
+    "registryName": "io.github.mifactory-bot/mifactory-email",
+    "title": "io.github.mifactory-bot/mifactory-email",
+    "description": "Send transactional emails for AI agents via SMTP. Templates included.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mifactory-email.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "mifactory-email",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].smtp has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].smtp has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mifactory-email.vercel.app/mcp"
+}

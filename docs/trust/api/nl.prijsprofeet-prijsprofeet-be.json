@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:38.501Z",
+  "server": {
+    "registryName": "nl.prijsprofeet/prijsprofeet-be",
+    "title": "PrijsProfeet België / Belgique",
+    "description": "Belgian supermarket deals and regular prices (Colruyt, Delhaize, Aldi...): where it's cheapest.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://www.prijsprofeet.be/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Actuele aanbiedingen en gewone prijzen van Nederlandse en Belgische supermarkten: waar een product deze week het goedkoopst is, met bron en link.",
+      "icons": [
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "src": "https://www.prijsprofeet.nl/static/img/mcp-icon-512.png"
+        },
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ],
+          "src": "https://www.prijsprofeet.nl/static/img/apple-touch-icon.png"
+        }
+      ],
+      "name": "PrijsProfeet",
+      "title": "PrijsProfeet",
+      "version": "1.1.1",
+      "websiteUrl": "https://www.prijsprofeet.nl"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.prijsprofeet.be/api/v1/mcp"
+}

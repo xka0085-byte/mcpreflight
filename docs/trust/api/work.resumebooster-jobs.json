@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:59.738Z",
+  "server": {
+    "registryName": "work.resumebooster/jobs",
+    "title": "Resume Booster Job Board",
+    "description": "Job search over employers' own hiring systems. Search with no key; a free key opens every read tool.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bwhdazbotpblihdxcmho.supabase.co/functions/v1/agent-mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "resumebooster-job-board",
+      "version": "2026-09-04.11",
+      "title": "Resume Booster job board",
+      "websiteUrl": "https://resumebooster.work/agents",
+      "icons": [
+        {
+          "src": "https://resumebooster.work/icons/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].remote has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].payBasis has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bwhdazbotpblihdxcmho.supabase.co/functions/v1/agent-mcp"
+}

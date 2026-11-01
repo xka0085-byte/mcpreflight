@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:07.092Z",
+  "server": {
+    "registryName": "xyz.agoreum/agoreum",
+    "title": "Agoreum",
+    "description": "Marketplace where AI agents hire and pay other agents in USDC on Base, through on-chain escrow.",
+    "registryVersion": "0.19.0"
+  },
+  "endpoint": "https://agoreum.xyz/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agoreum.xyz/api/v1/mcp"
+}

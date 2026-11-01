@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:23.100Z",
+  "server": {
+    "registryName": "org.daxfoundation.signal/delta-signal",
+    "title": "Delta Signal",
+    "description": "Audio steganography & watermarking. Encode/decode hidden messages that survive YouTube re-encoding.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://signal.daxfoundation.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "delta-signal",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].stings has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].seed has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].layers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://signal.daxfoundation.org/mcp"
+}

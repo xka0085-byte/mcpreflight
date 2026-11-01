@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:33.882Z",
+  "server": {
+    "registryName": "io.github.osamaadam/genie-expense-tracker",
+    "title": "Genie Expense Tracker",
+    "description": "Read-only access to Genie accounts, transactions, investments, and financial summaries.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://genie-mobile.duckdns.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://genie-mobile.duckdns.org/mcp"
+}

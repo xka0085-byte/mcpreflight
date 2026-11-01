@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:54.184Z",
+  "server": {
+    "registryName": "io.github.Fokuus/mdprint-docs",
+    "title": "mdprint documentation",
+    "description": "Read-only mdprint product information, documentation and Markdown examples. No document uploads.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mdprint.app/mcp/docs",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "app.mdprint/docs",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mdprint.app/mcp/docs"
+}

@@ -1,0 +1,66 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:50.559Z",
+  "server": {
+    "registryName": "il.co.hartrip/harel-travel",
+    "title": "Hartrip: Harel travel insurance (Israel)",
+    "description": "Harel travel insurance (Israel): prices by age, trip rules, coverage, medical conditions.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://hartrip.co.il/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "il.co.hartrip/harel-travel",
+      "title": "הרטריפ — ביטוח נסיעות הראל",
+      "version": "1.0.0",
+      "websiteUrl": "https://hartrip.co.il"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].baggage has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].extreme has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].winter has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].age has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].condition has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].age has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hartrip.co.il/api/mcp"
+}

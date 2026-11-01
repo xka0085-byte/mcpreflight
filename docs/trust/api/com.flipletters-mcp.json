@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:32.650Z",
+  "server": {
+    "registryName": "com.flipletters/mcp",
+    "title": "FlipLetters",
+    "description": "Draft, validate, render, and share split-flap and flip-dot board videos written in flipcode.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://app.flipletters.com/mcp/v1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "flipletters",
+      "version": "0.3.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].sound has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].speed has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].workspaceId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].destinationId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.flipletters.com/mcp/v1"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:50.079Z",
+  "server": {
+    "registryName": "il.co.foodiepedia/prices",
+    "title": "Israeli supermarket prices (Foodiepedia)",
+    "description": "Prices in 31 Israeli supermarket chains by barcode. Free search; API key or x402 pay-per-call.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://foodiepedia.co.il/api/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "foodiepedia-prices",
+      "title": "Foodiepedia: Israeli supermarket prices",
+      "version": "1.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].barcode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].include_history has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foodiepedia.co.il/api/mcp/"
+}

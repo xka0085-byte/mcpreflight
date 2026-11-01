@@ -1,0 +1,70 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:38.170Z",
+  "server": {
+    "registryName": "io.github.brendoncampbell/camp-map",
+    "title": "Cosmic's Camp Map",
+    "description": "Can I camp here, and will I have signal? Land status, signal, weather and fires in Canada and the US",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://camp.cosmicotter.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "camp-map",
+      "title": "Cosmic's Camp Map",
+      "version": "1.0.0"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].access has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].vehicle has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].outcome has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].camped has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].signal has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].road has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://camp.cosmicotter.ca/mcp"
+}

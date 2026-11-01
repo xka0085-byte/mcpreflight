@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:02.174Z",
+  "server": {
+    "registryName": "io.github.danielpopamd/linkedin-ads-mcp",
+    "title": "LinkedIn Ads MCP by AdPlug",
+    "description": "LinkedIn Ads MCP server: 10 tools for campaigns, creatives, audiences, lead forms. Writes preview.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.adplug.app/mcp/linkedin-ads",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.adplug.app/mcp/linkedin-ads"
+}

@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:23.314Z",
+  "server": {
+    "registryName": "com.standardblanks/shop",
+    "title": "Standard Blanks",
+    "description": "Search blank apparel, check availability, price orders and build a cart on standardblanks.com.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://standardblanks.com/mcp/shop",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "standardblanks-shop",
+      "title": "Standard Blanks",
+      "version": "1.0.0",
+      "websiteUrl": "https://standardblanks.com",
+      "icons": [
+        {
+          "src": "https://standardblanks.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].color has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].size has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://standardblanks.com/mcp/shop"
+}

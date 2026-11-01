@@ -1,26 +1,29 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:42:20.605Z",
+  "scannedAt": "2026-11-01T03:45:34.021Z",
   "server": {
     "registryName": "com.chargerdojo/ocpi",
     "title": "ChargerDojo",
     "description": "OCPI versions, what changed between them, and which modules and journeys ChargerDojo tests.",
-    "registryVersion": "1.3.2"
+    "registryVersion": "1.3.4"
   },
-  "endpoint": "https://chargerdojo.com/api/mcp",
+  "endpoint": "https://mcp.chargerdojo.com",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "chargerdojo",
+      "version": "1.3.4"
+    },
+    "toolCount": 6,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
       }
     ]
   },
-  "verify": "npx @eidonze/mcpreflight schema https://chargerdojo.com/api/mcp"
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chargerdojo.com"
 }

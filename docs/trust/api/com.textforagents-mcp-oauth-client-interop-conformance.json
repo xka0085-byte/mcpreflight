@@ -1,0 +1,69 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:21.471Z",
+  "server": {
+    "registryName": "com.textforagents/mcp-oauth-client-interop-conformance",
+    "title": "MCP OAuth client-interop conformance",
+    "description": "Prove real MCP clients can connect: 5-client x 3-IdP OAuth matrix with shim fixes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://textforagents.com/products/mcp-oauth-client-interop-conformance/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "mcp-oauth-client-interop-conformance",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].idp_shape has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].server_config has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].full_matrix has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].clients has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].apply_shims has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].server_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].server_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tier has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].servers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/mcp-oauth-client-interop-conformance/mcp"
+}

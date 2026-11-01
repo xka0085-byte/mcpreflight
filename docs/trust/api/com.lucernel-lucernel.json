@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:03.095Z",
+  "server": {
+    "registryName": "com.lucernel/lucernel",
+    "title": "Lucernel",
+    "description": "Public Lucernel apps and articles: list, search, and analyze published content.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://lucernel.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Lucernel Content MCP",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lucernel.com/mcp"
+}

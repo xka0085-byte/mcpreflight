@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:24.072Z",
+  "server": {
+    "registryName": "io.github.beydemirfurkan/todox",
+    "title": "io.github.beydemirfurkan/todox",
+    "description": "Memory for coding agents: the decisions, the dead ends, and where the last session stopped.",
+    "registryVersion": "0.1.4"
+  },
+  "endpoint": "https://www.todox.dev/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.todox.dev/api/mcp"
+}

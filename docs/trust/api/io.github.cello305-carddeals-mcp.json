@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:00.400Z",
+  "server": {
+    "registryName": "io.github.cello305/carddeals-mcp",
+    "title": "CardDeals Live Gift Card Deals",
+    "description": "Search current U.S. gift-card discounts from validated providers. Anonymous and read-only.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://catalog.carddeals.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "co.carddeals/deals",
+      "title": "CardDeals Live Gift Card Deals",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://catalog.carddeals.co/mcp"
+}

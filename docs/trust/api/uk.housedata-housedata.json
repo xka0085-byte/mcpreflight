@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:34.081Z",
+  "server": {
+    "registryName": "uk.housedata/housedata",
+    "title": "HouseData",
+    "description": "UK property data: EPC, flood risk, planning, sale prices, MEES 2030 checks and grants.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://housedata.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "housedata",
+      "title": "HouseData",
+      "version": "1.0.0",
+      "websiteUrl": "https://housedata.uk/prism#mcp"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].tenure has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].income_range has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].country has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://housedata.uk/mcp"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:49.227Z",
+  "server": {
+    "registryName": "io.setip/emailmcp",
+    "title": "EmailMCP",
+    "description": "AI agent email — 23 tools free to read inbox, 28 paid to send. $9.99/mo. Token auto-provisioned.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.setip.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "emailmcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 56,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].filter has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].imap_config has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].imap_config has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.setip.io/mcp"
+}

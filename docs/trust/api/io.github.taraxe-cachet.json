@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:15.368Z",
+  "server": {
+    "registryName": "io.github.taraxe/cachet",
+    "title": "Cachet",
+    "description": "Send real paper mail in France from your agent: letters, tracked and registered letters with AR.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.taraxe.com/cachet/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.taraxe.com/cachet/mcp"
+}

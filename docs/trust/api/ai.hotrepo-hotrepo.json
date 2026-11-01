@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:31.927Z",
+  "server": {
+    "registryName": "ai.hotrepo/hotrepo",
+    "title": "HotRepo",
+    "description": "GitHub Trending boards and AI-written reviews of trending open-source projects.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hotrepo.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "HotRepo",
+      "version": "1.1.0",
+      "websiteUrl": "https://hotrepo.ai"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hotrepo.ai/mcp"
+}

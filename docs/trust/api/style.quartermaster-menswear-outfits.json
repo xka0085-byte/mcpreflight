@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:57.023Z",
+  "server": {
+    "registryName": "style.quartermaster/menswear-outfits",
+    "title": "The Quartermaster",
+    "description": "Independent menswear concierge: what to wear to any occasion, and is this piece worth the price.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://quartermaster.style/api/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "quartermaster",
+      "title": "QuarterMaster",
+      "version": "1.0.0",
+      "websiteUrl": "https://quartermaster.style",
+      "icons": [
+        {
+          "src": "https://quartermaster.style/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://quartermaster.style/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].time_of_day has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].min_grade has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://quartermaster.style/api/mcp/"
+}

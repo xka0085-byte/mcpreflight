@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:26.692Z",
+  "server": {
+    "registryName": "io.usefulapi/africas-talking",
+    "title": "Africa's Talking MCP by usefulapi",
+    "description": "Read Africa's Talking balance, incoming SMS, transactions; send SMS, airtime, data and voice calls.",
+    "registryVersion": "1.9.0"
+  },
+  "endpoint": "https://africas-talking.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "africas-talking-mcp",
+      "version": "1.12.0",
+      "title": "Africa's Talking MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/africas-talking/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].recipients has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].recipients has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://africas-talking.usefulapi.io/mcp"
+}

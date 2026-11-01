@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:29:28.651Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/nasa-eonet",
+    "title": "Nasa Eonet",
+    "description": "NASA EONET MCP — Earth Observatory Natural Event Tracker",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://gateway.pipeworx.io/nasa-eonet/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pipeworx-gateway",
+      "version": "0.1.0"
+    },
+    "toolCount": 50,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].bbox has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/nasa-eonet/mcp"
+}

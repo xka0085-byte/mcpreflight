@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:22.080Z",
+  "server": {
+    "registryName": "io.github.GriffMurder/taskbullet-site",
+    "title": "TaskBullet Site Guide",
+    "description": "Public, no-auth MCP for taskbullet.com: services, pricing, intent routing and the right next URL.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://taskbullet.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "taskbullet-site",
+      "version": "1.0.0",
+      "title": "TaskBullet site"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].goal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://taskbullet.com/api/mcp"
+}

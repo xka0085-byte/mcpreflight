@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:50.930Z",
+  "server": {
+    "registryName": "ai.chipp/chipp-legacy-code",
+    "title": "Chipp Legacy code",
+    "description": "Chipp: the code of an app being rebuilt: the imported GitHub repo and the legacy codebase",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.chipp.ai/mcp/legacy-code",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chipp.ai/mcp/legacy-code"
+}

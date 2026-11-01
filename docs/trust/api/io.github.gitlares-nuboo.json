@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:01.798Z",
+  "server": {
+    "registryName": "io.github.gitlares/nuboo",
+    "title": "Nuboo",
+    "description": "Manage real estate inventory, quotes, prospects, and sales reporting in Nuboo.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.nuboohub.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.nuboohub.com/mcp"
+}

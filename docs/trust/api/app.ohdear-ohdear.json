@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:25.181Z",
+  "server": {
+    "registryName": "app.ohdear/ohdear",
+    "title": "Oh Dear",
+    "description": "Website monitoring: uptime, SSL certificates, broken links, DNS, cron jobs and status pages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ohdear.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ohdear.app/mcp"
+}

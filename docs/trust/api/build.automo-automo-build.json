@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:31.397Z",
+  "server": {
+    "registryName": "build.automo/automo-build",
+    "title": "Automo Build",
+    "description": "Operate Automo Build, the AI app builder, as yourself: projects, builds, QA, security, deployments.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://mcp.automo.build/mcp{profile}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.automo.build/mcp{profile}"
+}

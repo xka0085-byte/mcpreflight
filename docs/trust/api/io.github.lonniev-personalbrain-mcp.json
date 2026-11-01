@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:00.809Z",
+  "server": {
+    "registryName": "io.github.lonniev/personalbrain-mcp",
+    "title": "io.github.lonniev/personalbrain-mcp",
+    "description": "FastMCP server for TheBrain API — AI access to a personal knowledge graph, Tollbooth-monetized",
+    "registryVersion": "1.18.0"
+  },
+  "endpoint": "https://personal-brain.fastmcp.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://personal-brain.fastmcp.app/mcp"
+}

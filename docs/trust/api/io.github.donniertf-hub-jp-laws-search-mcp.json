@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:40.437Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/jp-laws-search-mcp",
+    "title": "Japan Laws Search MCP",
+    "description": "Search Japanese statutes via the e-Gov Law API. Free law_search tool.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jp-laws-search-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jp-laws-search-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].keyword has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].keyword has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].law_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jp-laws-search-mcp.donniertf.workers.dev/mcp"
+}

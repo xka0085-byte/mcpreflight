@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:02.015Z",
+  "server": {
+    "registryName": "io.github.tourmind-com/tourmind-booking-mcp",
+    "title": "TourMind Booking MCP",
+    "description": "Business hotel search, live rates, booking, order management, and payment via TourMind.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.tourmind.com/mcp/tob",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.tourmind.com/mcp/tob"
+}

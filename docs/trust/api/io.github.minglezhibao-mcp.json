@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:21.556Z",
+  "server": {
+    "registryName": "io.github.minglezhibao/mcp",
+    "title": "明乐智保 MCP（Minglezhibao Insurance Data）",
+    "description": "中国大陆寿险/分红产品数据：利益演示、保费现价测算、行业指标与竞品对比、需求转介；免费每日 30 次，OAuth 2.1 授权，无需 Key",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://minglezhibao.cn/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://minglezhibao.cn/api/mcp"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:39.141Z",
+  "server": {
+    "registryName": "io.github.MirrorEthic/temporal-mcp",
+    "title": "temporal-mcp",
+    "description": "Wall-clock awareness for LLM agents. Two tools: elapsed-time-between-turns + day rollover detection.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://temporal-mcp.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "temporal-mcp",
+      "version": "0.2.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].thread_key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].client_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tz_offset_minutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tz_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://temporal-mcp.dev/mcp"
+}

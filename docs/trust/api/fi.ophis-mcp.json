@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:49.696Z",
+  "server": {
+    "registryName": "fi.ophis/mcp",
+    "title": "Ophis MCP",
+    "description": "Gasless, MEV-protected onchain token swaps for AI agents on 14 EVM chains, built on CoW Protocol.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.ophis.fi/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ophis",
+      "version": "0.2.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].referenceBuyAmount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].referenceSellAmount has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ophis.fi/mcp"
+}

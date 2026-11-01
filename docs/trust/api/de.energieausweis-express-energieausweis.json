@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:32.752Z",
+  "server": {
+    "registryName": "de.energieausweis-express/energieausweis",
+    "title": "Energieausweis Express",
+    "description": "Prepare a German Energieausweis (energy certificate); an Energieberater checks and signs it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://energieausweis-express.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "energieausweis-express",
+      "title": "Energieausweis Express",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].facts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].heating has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].consumption has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://energieausweis-express.de/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:27.452Z",
+  "server": {
+    "registryName": "org.golfcore/golfcore",
+    "title": "GolfCore",
+    "description": "AI caddie and flag distances for Premium golfers, plus course maps and tee-specific scorecards.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://mcp.golfcore.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "GolfCore",
+      "title": "GolfCore",
+      "version": "1.4.0",
+      "websiteUrl": "https://www.golfcore.org",
+      "icons": [
+        {
+          "src": "https://www.golfcore.org/images/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].plan has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.golfcore.org/mcp"
+}

@@ -1,0 +1,75 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:57.783Z",
+  "server": {
+    "registryName": "com.moaibuy/moa",
+    "title": "모아 — 도매 상품 찾기",
+    "description": "한국 도매 상품 10,959,337개를 배송비 포함 총액으로 찾아 비교 · 갈래 14개 · 가격 비교 표 387개 · 도구 5개(읽기만) · 로그인 없음",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://moaibuy.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "moa",
+      "title": "모아 — 도매 상품 찾기",
+      "version": "0.1.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].response_format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].q has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].price_max has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].free_shipping has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].item_ids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].products has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://moaibuy.com/mcp"
+}

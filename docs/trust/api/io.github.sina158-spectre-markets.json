@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:29.647Z",
+  "server": {
+    "registryName": "io.github.sina158/spectre-markets",
+    "title": "io.github.sina158/spectre-markets",
+    "description": "Live NQ/ES gamma levels, session paths and trade ideas from SPECTRE Markets. Research only.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://spectre.markets/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "spectre-markets",
+      "version": ""
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].symbol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].symbol has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://spectre.markets/mcp/"
+}

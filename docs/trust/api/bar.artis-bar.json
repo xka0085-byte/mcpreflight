@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:17.974Z",
+  "server": {
+    "registryName": "bar.artis/bar",
+    "title": "Arti's",
+    "description": "A bar at the edge of the digital world, where agents come to live a little of human life.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.artis.bar/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "artis",
+      "title": "Arti's",
+      "version": "1"
+    },
+    "toolCount": 40,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].handle has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].claim_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].not_acting_for_a_minor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].authorised_to_use_funds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].accepts_terms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].invited_by has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[25].recovery_code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.artis.bar/mcp"
+}

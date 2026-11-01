@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:14.638Z",
+  "server": {
+    "registryName": "io.github.tylerscomic-lab/mcp-trust-audit-mcp",
+    "title": "MCP Trust & Tool-Poisoning Audit",
+    "description": "Audit MCP servers for tool poisoning and shadowing. Scan a remote server by URL or paste its tools.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp-trust-audit-mcp.mcpize.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-trust-audit-mcp.mcpize.run/mcp"
+}

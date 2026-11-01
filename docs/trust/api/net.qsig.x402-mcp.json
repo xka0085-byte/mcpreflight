@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:13.494Z",
+  "server": {
+    "registryName": "net.qsig.x402/mcp",
+    "title": "QSIG Intelligence",
+    "description": "Geopolitical risk, theme board and point-in-time gold macro context for agents, paid via x402",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://x402.qsig.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "qsig-intelligence",
+      "version": "1.0.0",
+      "websiteUrl": "https://x402.qsig.net/docs/"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].as_of has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].theme has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].as_of has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].asset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].as_of has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402.qsig.net/mcp"
+}

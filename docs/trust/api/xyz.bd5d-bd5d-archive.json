@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:08.287Z",
+  "server": {
+    "registryName": "xyz.bd5d/bd5d-archive",
+    "title": "BD5D BrainDrops archive",
+    "description": "Read-only archive of early BrainDrops releases, artists, holdings and editorial research.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bd5d.xyz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bd5d-archive",
+      "title": "BD5D BrainDrops archive",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bd5d.xyz/mcp"
+}

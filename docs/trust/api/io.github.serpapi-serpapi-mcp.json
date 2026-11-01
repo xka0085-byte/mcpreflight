@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:12.979Z",
+  "server": {
+    "registryName": "io.github.serpapi/serpapi-mcp",
+    "title": "SerpApi",
+    "description": "Official SerpApi MCP server for Google, Bing, and other search engines.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://mcp.serpapi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SerpApi MCP Server",
+      "version": "2.0.0",
+      "websiteUrl": "https://serpapi.com/integrations/mcp",
+      "icons": [
+        {
+          "src": "https://serpapi.com/android-chrome-512x512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].params has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].params has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.serpapi.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:42.904Z",
+  "server": {
+    "registryName": "io.github.SRX9/seogeoaeo",
+    "title": "seogeoaeo.ai",
+    "description": "Research competitors, keywords and ads, and check any site for SEO, AEO and GEO with ranked fixes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://seogeoaeo.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://seogeoaeo.ai/api/mcp"
+}

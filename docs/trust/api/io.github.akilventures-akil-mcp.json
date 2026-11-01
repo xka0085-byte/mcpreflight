@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:38.137Z",
+  "server": {
+    "registryName": "io.github.AkilVentures/akil-mcp",
+    "title": "Akil MCP - New York City Edition",
+    "description": "Agent-ready NYC public records. Hosted, source-backed civic data organized around durable anchors.",
+    "registryVersion": "2.5.1"
+  },
+  "endpoint": "https://mcp.askakil.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.askakil.ai/mcp"
+}

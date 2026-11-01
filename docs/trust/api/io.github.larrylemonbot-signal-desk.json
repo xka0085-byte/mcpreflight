@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:12.110Z",
+  "server": {
+    "registryName": "io.github.LarryLemonBot/signal-desk",
+    "title": "Signal Desk by LarryBuildsAI",
+    "description": "One-to-three-cent spend routing, lead research, token-risk, and agent-tool comparison preflights.",
+    "registryVersion": "0.1.3"
+  },
+  "endpoint": "https://proofbeforepay.vercel.app/revenue/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "signal-desk-x402-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].needs_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].needs_contacts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].needs_current_web has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].needs_onchain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].chain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://proofbeforepay.vercel.app/revenue/mcp"
+}

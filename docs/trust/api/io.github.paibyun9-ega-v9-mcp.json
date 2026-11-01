@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:38.144Z",
+  "server": {
+    "registryName": "io.github.paibyun9/ega-v9-mcp",
+    "title": "EGA V9 MCP",
+    "description": "MCP access path for EGA V9 execution governance",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://lcm3-ega-v9-mcp.hf.space/gradio_api/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lcm3-ega-v9-mcp.hf.space/gradio_api/mcp/"
+}

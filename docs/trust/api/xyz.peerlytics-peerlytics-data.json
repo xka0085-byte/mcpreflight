@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:18.976Z",
+  "server": {
+    "registryName": "xyz.peerlytics/peerlytics-data",
+    "title": "Peerlytics Data",
+    "description": "Peer protocol seller-rate and liquidity history on Base. Paid aggregate reads via x402 USDC.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://peerlytics.xyz/api/mcp/data",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "xyz.peerlytics/peerlytics-data",
+      "title": "Peerlytics Data",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].hours has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://peerlytics.xyz/api/mcp/data"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:10.504Z",
+  "server": {
+    "registryName": "io.github.OpenSOSData/mcp-server",
+    "title": "OpenSOSData – US Business Entity Search",
+    "description": "Search US business entity records across all 53 jurisdictions in real time",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.opensosdata.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.opensosdata.com/mcp"
+}

@@ -1,0 +1,70 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:20.139Z",
+  "server": {
+    "registryName": "com.greenpharmacies-sharm/pharmacy",
+    "title": "Green Pharmacies",
+    "description": "Pharmacy delivery in Sharm El Sheikh, Egypt: search medicines, prices, stock and make a cart link.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://greenpharmacies-sharm.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "green-pharmacies",
+      "title": "Green Pharmacies",
+      "version": "1.0.0",
+      "websiteUrl": "https://greenpharmacies-sharm.com/en/ai",
+      "icons": [
+        {
+          "src": "https://greenpharmacies-sharm.com/brand/logo-mark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://greenpharmacies-sharm.com/api/mcp"
+}

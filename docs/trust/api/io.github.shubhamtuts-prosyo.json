@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:52.766Z",
+  "server": {
+    "registryName": "io.github.ShubhamTuts/prosyo",
+    "title": "Prosyo MCP Server",
+    "description": "Zero-config Prosyo MCP for LinkedIn, cold email, and inbox. No API key.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://app.prosyo.com/ai",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.prosyo.com/ai"
+}

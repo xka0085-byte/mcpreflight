@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:43.479Z",
+  "server": {
+    "registryName": "net.myopl/pickleball-personal",
+    "title": "MYOPL Personal MCP - Account Ratings & Statistics",
+    "description": "MYOPL account ratings, sessions, RSVP preparation and own stats via OAuth; restricted admin pilot.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.myopl.net/mcp/personal",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.myopl.net/mcp/personal"
+}

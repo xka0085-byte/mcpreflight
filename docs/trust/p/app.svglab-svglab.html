@@ -3,33 +3,415 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SVG Lab — MCP trust report (AUTH_GATED)</title>
-<meta name="description" content="Read-only MCP schema trust report for app.svglab/svglab (https://svglab.app/mcp): AUTH_GATED, protocol unknown, unknown tools. Reproducible with mcpreflight.">
+<title>SVG Lab — MCP trust report (PASS)</title>
+<meta name="description" content="Read-only MCP schema trust report for app.svglab/svglab (https://svglab.app/mcp/agents): PASS, protocol 2025-06-18, 90 tools. Reproducible with mcpreflight.">
 <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/trust/p/app.svglab-svglab.html">
 <style>:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.AUTH_GATED{background:#ddf4ff;color:#0550ae}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}code{background:transparent}}</style>
 </head>
 <body>
 <main>
 <p><span class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> / report</span></p>
-<h1>SVG Lab <span class="pill AUTH_GATED">AUTH-GATED</span></h1>
-<p class="muted">The endpoint answered an anonymous initialize with 401 and a <code>WWW-Authenticate: Bearer</code> header, so it requires authentication by design. This is an auth gate, not a failure — authenticated scans are out of scope.</p>
+<h1>SVG Lab <span class="pill PASS">PASS</span></h1>
+
 <p class="muted">SVG Lab MCP: the Design Engine for AI. App screens, icons, illustrations and charts as SVG.</p>
 <table>
-<tr><th>Registry name</th><td><code>app.svglab/svglab</code> (v0.1.2)</td></tr>
-<tr><th>Endpoint</th><td><code>https://svglab.app/mcp</code></td></tr>
-<tr><th>Reported server</th><td>—</td></tr>
-<tr><th>Protocol version</th><td>not negotiated</td></tr>
-<tr><th>Tools exposed</th><td>unknown</td></tr>
-<tr><th>Auth gate</th><td>gated</td></tr>
-<tr><th>Checked at</th><td>2026-10-30T13:40:17.507Z</td></tr>
+<tr><th>Registry name</th><td><code>app.svglab/svglab</code> (v0.1.3)</td></tr>
+<tr><th>Endpoint</th><td><code>https://svglab.app/mcp/agents</code></td></tr>
+<tr><th>Reported server</th><td>svglab 0.1.0</td></tr>
+<tr><th>Protocol version</th><td>2025-06-18</td></tr>
+<tr><th>Tools exposed</th><td>90</td></tr>
+
+<tr><th>Checked at</th><td>2026-11-01T03:41:52.865Z</td></tr>
 </table>
 <h2>Findings</h2>
-<ul class="findings"><li><span class="pill INFO">INFO</span> <code>AUTH_GATE_VERIFIED</code> — Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server</li></ul>
+<ul class="findings"><li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].shapes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].style has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].opacity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].style_ref has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].points has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].closed has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].fill_handles has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].corner_angle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].smooth has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].tension has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].subpaths has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].style has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].opacity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].style_ref has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].points has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].closed has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].wobble has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].wobble_units has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].ink has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].shape_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].subpath_index has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].move_points has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].set_handles has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].insert_point has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].delete_point has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].set_points has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].set_tangent has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].set_tension has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].closed has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].smooth has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].tension has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].shape_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].mode has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].protect has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].corners has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].display_width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].split_extrema has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].tolerance has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].corner_angle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].tension has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].subpath_index has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].ink has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[6].op has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[6].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[7].shape_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[7].distance has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].dx has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].dy has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].scale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].rotate has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[9].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[9].mode has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].axis has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].horizontal has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].vertical has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].fill has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].stroke has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].stroke_width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].stroke_linecap has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].stroke_linejoin has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].stroke_taper has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].stroke_taper_amount has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].opacity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].type has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].stops has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].angle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].focal_x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].focal_y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].target has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].units has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].spread has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].coordinates has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].def_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].blur has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].shadow has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].shadows has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].opacity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].region has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[15].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[15].pattern has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[15].color has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[16].target_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[16].clip_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[16].as_mask has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].include_clipped has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].text_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].path_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].offset has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].side has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].flipped has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].content has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].font_size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].font_family has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].font_weight has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].font_style has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].letter_spacing has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].line_height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].text_anchor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[20].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[20].offset has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[21].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[21].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[21].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[23].group has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[23].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[24].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[24].mode has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[24].reference_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[25].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[25].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[25].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[25].anchor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].mode has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[27].container_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[27].child_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[27].padding has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].mode has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].count has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].axis has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].gap has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].columns has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].row_gap has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].radius has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].center_x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].center_y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].rotate has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].join has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].snap has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].axis has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].at has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].gap has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].merge has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].axis has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].region has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].count has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].item has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].seed has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].size_jitter has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].rotation_jitter has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].min_distance has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].avoid_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].shape_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].kind has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].angle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].spacing has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].jitter has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].seed has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].color has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].opacity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].coverage has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].ink has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].icon has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].color has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].stroke_width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].verbose has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].layout_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].verbose has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].root has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].preset has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].reset has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].set has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].user_named_fonts has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].imagery has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[37].styles has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].opacity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].content has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].font_size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].font_family has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].font_weight has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].font_style has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].text_anchor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].vertical_anchor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].letter_spacing has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].line_height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].max_width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].group has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].name_contains has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].offset has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].all has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].name_contains has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].offset has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].shape_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].audit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].display_width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].corners has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].preview has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].subpath_index has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].anchor_indices has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].crop has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].max_size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].background has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].target has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].group has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].min_font_size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].ignore_pairs has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].containment has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].target has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].group has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].min_font_size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].ignore_pairs has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].containment has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[46].foreground has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[46].background has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[46].target has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[46].font_size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[46].font_weight has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].pairs has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].attachments has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].tolerance has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].display_width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].container_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].axis has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[49].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[49].container_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[49].axis has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].as_unit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].grid has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].size has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].axis has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].gap has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[52].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[52].radius has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].container_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].padding has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].shrink has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].background has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].show_background has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].background has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].show_background has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[57].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[58].padding has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[59].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[60].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[60].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].symbol_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[63].shape_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].locked has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].layout_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].path has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].mode has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].clip has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].detach has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].artboards has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].flow has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].before_after has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].scale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].critique has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].brief has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[72].format has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[72].artboards has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[72].file has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[74].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[77].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[77].devices has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[77].sizes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[78].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[78].node has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[78].max_nodes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].assets has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].format has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].scales has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[80].tools has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[80].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[81].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[81].imagery has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[82].project_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[86].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[86].outline_text has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[86].background has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[87].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[87].orientation has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[87].source has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[87].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[87].preview has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].data_url has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].url has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].photo has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].fit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].corner_radius has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].scrim has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[88].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].url has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].data_url has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].asset_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].as has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].x has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].y has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].width has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].height has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].fit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].corner_radius has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].scrim has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].artboard has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].purpose has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].shape_ids has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[89].tile_size has no description</li></ul>
 <h2>Reproduce this report</h2>
-<pre>npx @eidonze/mcpreflight schema https://svglab.app/mcp</pre>
+<pre>npx @eidonze/mcpreflight schema https://svglab.app/mcp/agents</pre>
 <p>Embed status: <code>&lt;img src="https://xka0085-byte.github.io/mcpreflight/trust/badge/app.svglab-svglab.svg"&gt;</code> · Machine-readable: <a href="https://xka0085-byte.github.io/mcpreflight/trust/api/app.svglab-svglab.json"><code>/api/app.svglab-svglab.json</code></a></p>
-<p>Cite this report as: mcpreflight Trust Directory, <code>app.svglab/svglab</code>, scanned 2026-10-30. https://xka0085-byte.github.io/mcpreflight/trust/p/app.svglab-svglab.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
-<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-10-30.</div>
+<p>Cite this report as: mcpreflight Trust Directory, <code>app.svglab/svglab</code>, scanned 2026-11-01. https://xka0085-byte.github.io/mcpreflight/trust/p/app.svglab-svglab.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
+<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-11-01.</div>
 </main>
 </body>
 </html>

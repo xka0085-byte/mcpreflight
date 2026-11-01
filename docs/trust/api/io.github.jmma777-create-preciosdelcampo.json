@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:37.481Z",
+  "server": {
+    "registryName": "io.github.jmma777-create/preciosdelcampo",
+    "title": "Precios del Campo",
+    "description": "Precios agrarios de España con fuente y fecha: Generalitat, MAPA, gasóleo B y plazos del campo.",
+    "registryVersion": "1.0.202610150819"
+  },
+  "endpoint": "https://preciosdelcampo.es/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "preciosdelcampo",
+      "title": "Precios del Campo",
+      "version": "1.0.0",
+      "websiteUrl": "https://preciosdelcampo.es/datos/mcp/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].max_puntos has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://preciosdelcampo.es/mcp"
+}

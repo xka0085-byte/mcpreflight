@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:05.799Z",
+  "server": {
+    "registryName": "tech.michaelbarber/site-mcp",
+    "title": "BL Sports Website MCP",
+    "description": "Search and read public BL Sports pages with source URLs.",
+    "registryVersion": "2026.09.15"
+  },
+  "endpoint": "https://michaelbarber.tech/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "BL Sports site MCP",
+      "version": "2026.09.15"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://michaelbarber.tech/mcp"
+}

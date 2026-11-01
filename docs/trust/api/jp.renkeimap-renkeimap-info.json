@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:43.975Z",
+  "server": {
+    "registryName": "jp.renkeimap/renkeimap-info",
+    "title": "jp.renkeimap/renkeimap-info",
+    "description": "日本の業務システムの API・認証・接続方式・稼働状況を、出典と調査日つきで返す読み取り専用 MCP（IT連携マップ）",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://renkeimap.jp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "renkeimap-info",
+      "version": "0.1.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].has has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://renkeimap.jp/mcp"
+}

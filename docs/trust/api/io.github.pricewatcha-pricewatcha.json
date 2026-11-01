@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:40.167Z",
+  "server": {
+    "registryName": "io.github.pricewatcha/pricewatcha",
+    "title": "io.github.pricewatcha/pricewatcha",
+    "description": "Track prices & price history on any online shop, with alerts and an API",
+    "registryVersion": "0.1.7"
+  },
+  "endpoint": "https://mcp.pricewatcha.com",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pricewatcha",
+      "version": "0.1.7"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].notify_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].webhook_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].is_active has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.pricewatcha.com"
+}

@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:09.082Z",
+  "server": {
+    "registryName": "online.shadowalpha/shadowgraph",
+    "title": "ShadowGraph",
+    "description": "Live outage status, internet dependencies and pay-per-call market intelligence for AI agents.",
+    "registryVersion": "2.3.3"
+  },
+  "endpoint": "https://shadowalpha.online/_api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shadowgraph-machine-intelligence",
+      "title": "ShadowGraph Market Intelligence",
+      "version": "2.3.3",
+      "description": "Pay-per-call global evidence-ranked relationship intelligence for AI agents.",
+      "websiteUrl": "https://shadowalpha.online"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].keyword has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shadowalpha.online/_api/mcp"
+}

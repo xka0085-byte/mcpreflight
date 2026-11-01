@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:37.180Z",
+  "server": {
+    "registryName": "io.github.Alex-Dev-Web-C-DE/hs-codes-mcp",
+    "title": "HS Codes Classifier",
+    "description": "AI-powered HS customs code classifier. Product description to 6-digit HS code.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hs-codes-classifier.boring-saas-infra.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hs-codes-classifier.boring-saas-infra.workers.dev/mcp"
+}

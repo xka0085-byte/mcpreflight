@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:03.224Z",
+  "server": {
+    "registryName": "io.github.Kotaro-Studio/kuongeo",
+    "title": "io.github.Kotaro-Studio/kuongeo",
+    "description": "Japan: next bus/tram/boat from 26 places, RTK bases, JMA warnings, municipality facts. No key.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://kuongeo.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kuongeo",
+      "title": "KUON GEO",
+      "version": "1.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lon has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kuongeo.com/mcp"
+}

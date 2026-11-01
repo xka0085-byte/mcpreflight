@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:21.047Z",
+  "server": {
+    "registryName": "io.github.marmotdata/marmot",
+    "title": "Marmot Data Catalog",
+    "description": "Open-source data catalog. Search assets, explore lineage, and find ownership.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://{marmot_host}/api/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{marmot_host}/api/v1/mcp"
+}

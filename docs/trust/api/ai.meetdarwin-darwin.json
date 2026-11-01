@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:52.423Z",
+  "server": {
+    "registryName": "ai.meetdarwin/darwin",
+    "title": "Darwin",
+    "description": "Read and manage your Darwin website AI agent: conversations, leads, meetings, knowledge and tests.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.meetdarwin.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.meetdarwin.ai/api/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:09.083Z",
+  "server": {
+    "registryName": "com.jocktaxes/chatgpt",
+    "title": "Jock Taxes for ChatGPT",
+    "description": "Pro athlete after-tax salary calculators for MLB, NBA, NFL and NHL, built for ChatGPT.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jocktaxes.com/mcp/chatgpt",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jocktax-chatgpt",
+      "title": "Jock Taxes",
+      "version": "1.0.0"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].league has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].team has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].season_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jocktaxes.com/mcp/chatgpt"
+}

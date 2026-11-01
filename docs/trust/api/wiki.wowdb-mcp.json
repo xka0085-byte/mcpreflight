@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:53.976Z",
+  "server": {
+    "registryName": "wiki.wowdb/mcp",
+    "title": "Azeroth DB: WoW Forever",
+    "description": "Search WoW Forever items, recipes, abilities and quests with page links from Azeroth DB.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://wowdb.wiki/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wowdb-mcp",
+      "version": "0.2.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wowdb.wiki/api/mcp"
+}

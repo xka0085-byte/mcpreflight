@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:14.572Z",
+  "server": {
+    "registryName": "net.sodatsu-mitsumori/estimate-invoice",
+    "title": "育つ見積",
+    "description": "Remote MCP + OAuthで、MCP対応AIから見積書・請求書等を作成・編集・変換。PDF生成、共有URL、品目マスタ、学習結果の保存にも対応。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.sodatsu-mitsumori.net/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.sodatsu-mitsumori.net/api/mcp"
+}

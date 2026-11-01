@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:25.956Z",
+  "server": {
+    "registryName": "io.github.HoloSoul-Team/bloom",
+    "title": "Bloom Study Guides",
+    "description": "Turn AI learning chats into illustrated study guides, and search guides already on Bloom.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://bloombook.cn/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bloom",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bloombook.cn/api/mcp"
+}

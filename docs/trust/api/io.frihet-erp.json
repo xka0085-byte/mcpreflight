@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:04.997Z",
+  "server": {
+    "registryName": "io.frihet/erp",
+    "title": "Frihet ERP",
+    "description": "AI-native ERP MCP: ES/EU fiscal compliance (VeriFactu/TicketBAI/Facturae), invoicing, tax, banking",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://mcp.frihet.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.frihet.io/mcp"
+}

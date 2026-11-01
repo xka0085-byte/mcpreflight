@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:09.046Z",
+  "server": {
+    "registryName": "com.jocktaxes/developer",
+    "title": "Jock Taxes Developer MCP",
+    "description": "Pro athlete tax calculators for MLB, NBA, NFL and NHL. Requires a Jock Taxes API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jocktaxes.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jocktax-pro",
+      "version": ""
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].league has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].team has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].season_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jocktaxes.com/mcp"
+}

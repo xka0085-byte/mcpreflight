@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:37.803Z",
+  "server": {
+    "registryName": "io.github.br9704/aethereum",
+    "title": "io.github.br9704/aethereum",
+    "description": "The team layer for AI coding agents: shared contracts, collision alerts, E2EE sessions.",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://www.aethereum.dev/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.aethereum.dev/api/mcp"
+}

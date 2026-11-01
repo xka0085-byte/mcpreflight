@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:54.489Z",
+  "server": {
+    "registryName": "dev.agentdiet/mcp-security",
+    "title": "Imperium MCP Security — Prompt-Injection, Jailbreak & Tool Poisoning Firewall",
+    "description": "Real-time MCP & A2A prompt-injection, jailbreak, and tool-schema poisoning firewall for AI agents.",
+    "registryVersion": "7.0.17"
+  },
+  "endpoint": "https://mcp-security.agentdiet.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "prompt-guard-mcp",
+      "title": "A2A Indirect Prompt-Injection & Jailbreak Firewall",
+      "version": "7.0.16",
+      "description": "Scans untrusted web pages, emails, MCP responses, or A2A payloads for hidden prompt injections and returns sanitized text.",
+      "websiteUrl": "https://prompt-guard-72343955726.us-central1.run.app",
+      "icons": [
+        {
+          "src": "https://prompt-guard-72343955726.us-central1.run.app/logo.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-security.agentdiet.dev/mcp"
+}

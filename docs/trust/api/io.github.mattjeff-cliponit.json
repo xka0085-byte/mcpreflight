@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:33.433Z",
+  "server": {
+    "registryName": "io.github.MattJeff/cliponit",
+    "title": "ClipOnIt",
+    "description": "Long video to captioned 9:16 shorts, plus AI explainer videos from a topic or voice. 70 tools.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://cliponit.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cliponit.app/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:59.015Z",
+  "server": {
+    "registryName": "io.esimfinder/connector",
+    "title": "eSIM Finder",
+    "description": "Find, compare & buy travel eSIMs for 190+ countries + a 12-month Travel Pass. 40 currencies.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.esimfinder.io/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.esimfinder.io/api/v1/mcp"
+}

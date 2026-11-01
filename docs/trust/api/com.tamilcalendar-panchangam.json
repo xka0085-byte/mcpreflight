@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:58.455Z",
+  "server": {
+    "registryName": "com.tamilcalendar/panchangam",
+    "title": "com.tamilcalendar/panchangam",
+    "description": "Deterministic panchangam, astrology, Vastu and numerology data across 31 DailyWorks sites.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://mcp.tamilcalendar.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tamilcalendar.com/mcp"
+}

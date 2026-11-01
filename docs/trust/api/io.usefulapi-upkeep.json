@@ -1,0 +1,72 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:11.430Z",
+  "server": {
+    "registryName": "io.usefulapi/upkeep",
+    "title": "UpKeep MCP by usefulapi",
+    "description": "Read UpKeep work orders, assets, parts and meters; create requests and work orders.",
+    "registryVersion": "1.11.0"
+  },
+  "endpoint": "https://upkeep.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "upkeep-mcp",
+      "version": "1.14.0",
+      "title": "UpKeep MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/upkeep/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 29,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].estimated_duration_hours has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].description has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://upkeep.usefulapi.io/mcp"
+}

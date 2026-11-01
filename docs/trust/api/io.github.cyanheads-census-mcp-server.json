@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:38.507Z",
+  "server": {
+    "registryName": "io.github.cyanheads/census-mcp-server",
+    "title": "io.github.cyanheads/census-mcp-server",
+    "description": "Query U.S. Census Bureau data, variables, and geography via MCP.",
+    "registryVersion": "0.7.1"
+  },
+  "endpoint": "https://census.caseyjhand.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "census-mcp-server",
+      "version": "0.7.1",
+      "title": "census-mcp-server"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://census.caseyjhand.com/mcp"
+}

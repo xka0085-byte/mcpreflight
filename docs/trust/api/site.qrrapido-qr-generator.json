@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:27.118Z",
+  "server": {
+    "registryName": "site.qrrapido/qr-generator",
+    "title": "QR Rápido",
+    "description": "Generate QR codes for URLs, PIX, Wi-Fi, vCards, WhatsApp and more. For AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://qrrapido.site/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://qrrapido.site/api/mcp"
+}

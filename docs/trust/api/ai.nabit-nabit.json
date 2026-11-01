@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:57.227Z",
+  "server": {
+    "registryName": "ai.nabit/nabit",
+    "title": "Nabit Video Recommendations",
+    "description": "Product-first short-form video hook matching, opening analysis, trend tracking, and collections.",
+    "registryVersion": "0.5.4"
+  },
+  "endpoint": "https://nabit.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nabit.ai/mcp"
+}

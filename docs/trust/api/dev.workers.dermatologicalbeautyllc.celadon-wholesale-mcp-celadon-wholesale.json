@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:46.083Z",
+  "server": {
+    "registryName": "dev.workers.dermatologicalbeautyllc.celadon-wholesale-mcp/celadon-wholesale",
+    "title": "Celadon Wholesale",
+    "description": "Wholesale Korean skincare for US and Canadian resellers: case prices, margins, checkout links.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://celadon-wholesale-mcp.dermatologicalbeautyllc.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "celadon-wholesale",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://celadon-wholesale-mcp.dermatologicalbeautyllc.workers.dev/mcp"
+}

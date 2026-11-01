@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:43.370Z",
+  "server": {
+    "registryName": "com.run402.lexishield-ai/mcp",
+    "title": "LexiShield AI — 6-Agent GDPR, EU AI Act & Contract Redlining Server",
+    "description": "Run deterministic SaaS contract redlining, GDPR Art. 28 DPA & EU AI Act compliance audits.",
+    "registryVersion": "3.0.0"
+  },
+  "endpoint": "https://lexishield-ai.run402.com/api/mcp?channel=run402",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "LexiShield AI",
+      "version": "4.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].email_or_contact has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].offer_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].tier has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lexishield-ai.run402.com/api/mcp?channel=run402"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:29.617Z",
+  "server": {
+    "registryName": "io.github.theluckystrike/catalogue",
+    "title": "io.github.theluckystrike/catalogue",
+    "description": "A price list and rate card the quotes and invoice servers read by SKU.",
+    "registryVersion": "0.22.6"
+  },
+  "endpoint": "https://mcp.zovo.one/mcp/catalogue",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-catalogue",
+      "version": "0.22.6"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].note has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].note has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zovo.one/mcp/catalogue"
+}

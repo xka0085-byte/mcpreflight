@@ -1,0 +1,66 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:23.096Z",
+  "server": {
+    "registryName": "ai.agenlify/catalog",
+    "title": "Agenlify AI Agent Directory",
+    "description": "Find AI tools by task, with pricing context, setup steps, limitations and official sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agenlify.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai.agenlify/catalog",
+      "title": "Agenlify AI Agent Directory",
+      "version": "1.0.0",
+      "websiteUrl": "https://agenlify.ai/developers/mcp/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].task has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pricing has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].setup has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agenlify.ai/mcp"
+}

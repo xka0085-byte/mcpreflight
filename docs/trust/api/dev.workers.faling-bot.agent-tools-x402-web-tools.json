@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:46.948Z",
+  "server": {
+    "registryName": "dev.workers.faling-bot.agent-tools/x402-web-tools",
+    "title": "Agent Tools (x402 pay-per-call)",
+    "description": "URL-to-Markdown ($0.002) and summarization ($0.003), paid per call in USDC on Solana via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agent-tools.faling-bot.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-tools-x402",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_words has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].api has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].spec_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].chain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-tools.faling-bot.workers.dev/mcp"
+}

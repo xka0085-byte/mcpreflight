@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:21.622Z",
+  "server": {
+    "registryName": "io.github.benthepythondev00/real-estate-data",
+    "title": "Real Estate Data",
+    "description": "Zillow homes and rentals, Zumper rentals and Craigslist housing listings as tools. Runs on Apify.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=benthepythondev/zillow-scraper,benthepythondev/zillow-detail-scraper,benthepythondev/zillow-rentals-scraper,benthepythondev/zumper-rental-scraper,benthepythondev/craigslist-real-estate-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=benthepythondev/zillow-scraper,benthepythondev/zillow-detail-scraper,benthepythondev/zillow-rentals-scraper,benthepythondev/zumper-rental-scraper,benthepythondev/craigslist-real-estate-scraper"
+}

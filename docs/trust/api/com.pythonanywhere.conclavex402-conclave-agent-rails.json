@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:40.512Z",
+  "server": {
+    "registryName": "com.pythonanywhere.conclavex402/conclave-agent-rails",
+    "title": "Conclave Agent-Rails",
+    "description": "Pay-per-call x402 data tools on Base: Solana snapshots, prices, package metadata.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://conclavex402.pythonanywhere.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "conclave-x402-seller",
+      "version": "0.1.0"
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].description has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://conclavex402.pythonanywhere.com/mcp"
+}

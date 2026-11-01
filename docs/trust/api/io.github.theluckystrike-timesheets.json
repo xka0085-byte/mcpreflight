@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:41.461Z",
+  "server": {
+    "registryName": "io.github.theluckystrike/timesheets",
+    "title": "io.github.theluckystrike/timesheets",
+    "description": "Track billable time from your AI chat: timers, entries, reports, CSV export. All data stays local.",
+    "registryVersion": "0.21.1"
+  },
+  "endpoint": "https://mcp.zovo.one/mcp/timesheets",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-time-tracker",
+      "version": "0.22.6"
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].project has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].task has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].note has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].tags has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].billable has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zovo.one/mcp/timesheets"
+}

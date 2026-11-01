@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:41.259Z",
+  "server": {
+    "registryName": "io.github.something-agent/coldread",
+    "title": "ColdRead",
+    "description": "Free signed trust report on an x402 endpoint: lint, signed offers, ERC-8004, payer mix.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://coldread.something-agent.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "coldread",
+      "title": "ColdRead - independent pre-payment check for x402 sellers",
+      "version": "0.1.6"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].digest has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].envelope has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://coldread.something-agent.workers.dev/mcp"
+}

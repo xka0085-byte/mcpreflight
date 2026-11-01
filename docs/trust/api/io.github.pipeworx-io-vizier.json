@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:15.278Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/vizier",
+    "title": "Vizier",
+    "description": "VizieR MCP — CDS astronomical catalogue access.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://gateway.pipeworx.io/vizier/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pipeworx-gateway",
+      "version": "0.1.0"
+    },
+    "toolCount": 48,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[45].catalog has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].catalog has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].radius_deg has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].max has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[47].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/vizier/mcp"
+}

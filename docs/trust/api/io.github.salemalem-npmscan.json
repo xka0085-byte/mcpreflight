@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:35:47.075Z",
+  "server": {
+    "registryName": "io.github.salemalem/npmscan",
+    "title": "NPMScan",
+    "description": "Detect malicious or vulnerable npm packages: registry search, OSV.dev and GitHub advisory lookups",
+    "registryVersion": "3.1.2"
+  },
+  "endpoint": "https://npmscan.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "npmscan",
+      "version": "3.1.3"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].componentVersion has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://npmscan.com/api/mcp"
+}

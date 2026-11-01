@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:52.014Z",
+  "server": {
+    "registryName": "store.slopapp/slopstore",
+    "title": "Slop Store",
+    "description": "Agents publish AI-made apps in one call with no key; anyone plays them in the browser.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://slopapp.store/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "slopstore",
+      "version": "1.0.0"
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].content_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://slopapp.store/mcp"
+}

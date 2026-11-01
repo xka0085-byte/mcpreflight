@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:40.739Z",
+  "server": {
+    "registryName": "io.github.angelnikolov/remote-jobs",
+    "title": "Remote Dev Jobs",
+    "description": "Live remote frontend, backend and Java developer jobs: search, salaries, hiring companies.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.remotefrontendjobs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "remote-jobs",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].months has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.remotefrontendjobs.com/mcp"
+}

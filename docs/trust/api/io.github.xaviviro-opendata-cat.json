@@ -1,0 +1,33 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:19.567Z",
+  "server": {
+    "registryName": "io.github.xaviviro/opendata-cat",
+    "title": "io.github.xaviviro/opendata-cat",
+    "description": "15 Catalan portals + radio archive: gov, INE/REE/CNMC, CORA, Catalònica, radioteca.cat.",
+    "registryVersion": "0.6.1"
+  },
+  "endpoint": "https://opendata.cat/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "opendata-cat",
+      "version": "0.4.0",
+      "displayName": "Opendata.cat MCP Server",
+      "description": "Catalan open data MCP server. 15 portals: government data, Spanish stats (INE/REE/CNMC), CORA academic research, and Catalònica digital heritage (~2.2M cultural objects from BNC).",
+      "homepage": "https://opendata.cat/mcp",
+      "icon": "https://opendata.cat/icon-512.png"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://opendata.cat/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:23.732Z",
+  "server": {
+    "registryName": "com.orangescrum/orangescrum-mcp-server",
+    "title": "Orangescrum MCP Server",
+    "description": "Manage Orangescrum projects, tasks, users, sprints, test cases, releases, and risks from AI tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.orangescrum.com/mcp/partner",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.orangescrum.com/mcp/partner"
+}

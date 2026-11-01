@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:28.459Z",
+  "server": {
+    "registryName": "rsvp.saved/discovery",
+    "title": "saved.rsvp",
+    "description": "Restaurant picks from food creators you trust: ranked guides, reviews and places near you.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://saved.rsvp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "saved-rsvp",
+      "title": "Goodtimes",
+      "version": "1.0.0",
+      "websiteUrl": "https://goodtimes.rsvp"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].longitude has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://saved.rsvp/mcp"
+}

@@ -1,0 +1,74 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:15.762Z",
+  "server": {
+    "registryName": "io.tooloracle/iso20022oracle",
+    "title": "io.tooloracle/iso20022oracle",
+    "description": "ISO20022Oracle - 12 ISO 20022 tools: pacs/pain/camt parsing, MX validation, MT migration.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tooloracle.io/iso20022/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ISO20022Oracle",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].debtor_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].debtor_bic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].creditor_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].creditor_bic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].bic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tooloracle.io/iso20022/mcp/"
+}

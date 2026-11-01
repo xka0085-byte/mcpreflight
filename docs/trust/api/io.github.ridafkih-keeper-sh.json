@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:15.824Z",
+  "server": {
+    "registryName": "io.github.ridafkih/keeper-sh",
+    "title": "Keeper.sh",
+    "description": "Keeper.sh calendar sync: read and book events, RSVP and find free time across synced calendars.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.keeper.sh/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.keeper.sh/mcp"
+}

@@ -1,0 +1,77 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:51.071Z",
+  "server": {
+    "registryName": "io.usefulapi/megaventory",
+    "title": "Megaventory MCP by usefulapi",
+    "description": "Read Megaventory products, stock, orders and partners; create clients, sales and purchase orders.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://megaventory.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "megaventory-mcp",
+      "version": "1.20.0",
+      "title": "Megaventory MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/megaventory/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].phone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].comments has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].contact_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].contact_phone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].comments has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].comments has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://megaventory.usefulapi.io/mcp"
+}

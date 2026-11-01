@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:19.409Z",
+  "server": {
+    "registryName": "tools.csvfile/csv-file-tools",
+    "title": "CSV File Tools",
+    "description": "Inspect, filter, sort and edit CSV text with four free tools. No account or API key required.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://csvfile.tools/api/csv/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "csv-tools",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].previewRows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].value has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].direction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].edits has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://csvfile.tools/api/csv/mcp"
+}

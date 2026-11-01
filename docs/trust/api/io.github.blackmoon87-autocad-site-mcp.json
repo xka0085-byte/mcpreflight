@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:29.172Z",
+  "server": {
+    "registryName": "io.github.blackmoon87/autocad-site-mcp",
+    "title": "io.github.blackmoon87/autocad-site-mcp",
+    "description": "Headless CAD engine & MCP server for 2D/3D drafting, solids, DXF/SVG export, and automation.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://acad-qlae.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "autocad-site-mcp-remote",
+      "version": "0.1.0"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].filter has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://acad-qlae.onrender.com/mcp"
+}

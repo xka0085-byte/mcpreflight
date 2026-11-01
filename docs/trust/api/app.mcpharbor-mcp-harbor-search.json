@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:17.590Z",
+  "server": {
+    "registryName": "app.mcpharbor/mcp-harbor-search",
+    "title": "MCP Harbor Search",
+    "description": "Search and discover MCP servers and agent tools listed in the MCP Harbor directory.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcpharbor.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-harbor-search",
+      "title": "MCP Harbor Search",
+      "version": "1.0.0",
+      "websiteUrl": "https://mcpharbor.app"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcpharbor.app/mcp"
+}

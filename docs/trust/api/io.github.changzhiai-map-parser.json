@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:02.821Z",
+  "server": {
+    "registryName": "io.github.changzhiai/map-parser",
+    "title": "Map Parser",
+    "description": "Parse Google Maps links into stops with coordinates. Geocode, route, and export.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://mapparser.travel-tracker.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "map-parser",
+      "version": "1.0.4"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lng has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].waypoints has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].format has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mapparser.travel-tracker.org/mcp"
+}

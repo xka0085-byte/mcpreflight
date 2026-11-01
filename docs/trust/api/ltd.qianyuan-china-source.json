@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:51.952Z",
+  "server": {
+    "registryName": "ltd.qianyuan/china-source",
+    "title": "China Source · 中国信源",
+    "description": "Structured Chinese official data for AI agents: 426 entries, JSON-LD, read-only. find/get/list",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://qianyuan.ltd/mcp/china-source",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://qianyuan.ltd/mcp/china-source"
+}

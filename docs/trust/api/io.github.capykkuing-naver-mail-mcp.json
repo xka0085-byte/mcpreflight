@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:31.003Z",
+  "server": {
+    "registryName": "io.github.CapyKkuing/naver-mail-mcp",
+    "title": "Naver Mail (네이버 메일)",
+    "description": "Read, search, reply to and organize Naver Mail with the same tools as the Gmail MCP (IMAP/SMTP).",
+    "registryVersion": "0.1.3"
+  },
+  "endpoint": "https://naver-mail-mcp.yeonuunim521.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://naver-mail-mcp.yeonuunim521.workers.dev/mcp"
+}

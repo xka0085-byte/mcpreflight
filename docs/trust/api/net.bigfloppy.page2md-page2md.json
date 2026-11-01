@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:28.868Z",
+  "server": {
+    "registryName": "net.bigfloppy.page2md/page2md",
+    "title": "net.bigfloppy.page2md/page2md",
+    "description": "Turn any webpage into clean Markdown for LLM/agent pipelines. Free tier; paid 1 USDC = 1000 req.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://page2md.bigfloppy.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "page2md-mcp",
+      "version": "1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://page2md.bigfloppy.net/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:58.638Z",
+  "server": {
+    "registryName": "sh.deterministic/deterministic",
+    "title": "Deterministic",
+    "description": "Physics-based validation of simulation results: receipts with per-check verdicts, via MCP.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://deterministic.sh/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://deterministic.sh/mcp"
+}

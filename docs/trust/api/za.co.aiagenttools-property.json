@@ -1,0 +1,65 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:27.708Z",
+  "server": {
+    "registryName": "za.co.aiagenttools/property",
+    "title": "SA Property Costs",
+    "description": "South African property costs: transfer duty, buying costs, bond repayments, municipal rates",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aiagenttools.co.za/property/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "za-property-costs",
+      "title": "South Africa Property Costs",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].seller_is_vat_vendor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].purchase_price has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].seller_is_vat_vendor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].loan_amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].term_years has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].municipal_valuation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].list_municipalities has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiagenttools.co.za/property/mcp"
+}

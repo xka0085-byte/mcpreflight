@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:28.466Z",
+  "server": {
+    "registryName": "io.github.alexeibespalov/trident",
+    "title": "io.github.alexeibespalov/trident",
+    "description": "Create and edit collaborative architecture diagrams with any AI assistant using the Trident 2D DSL.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.tridentchart.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "trident-mcp-server",
+      "version": "1.0.0"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].container has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].changes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].connection has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tridentchart.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:02.589Z",
+  "server": {
+    "registryName": "com.blabigo/linkedin-agent",
+    "title": "Blabigo LinkedIn",
+    "description": "LinkedIn analytics, media uploads and scheduling for AI agents. Agents queue; Blabigo publishes.",
+    "registryVersion": "1.6.0"
+  },
+  "endpoint": "https://studio.blabigo.ai/api/mcp/linkedin",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://studio.blabigo.ai/api/mcp/linkedin"
+}

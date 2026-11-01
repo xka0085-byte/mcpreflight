@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:07.615Z",
+  "server": {
+    "registryName": "fr.hypotheques-en-ligne/hel",
+    "title": "fr.hypotheques-en-ligne/hel",
+    "description": "Instant pricing for French land-registry documents (etat hypothecaire, deeds). Read-only, no auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.hypotheques-en-ligne.fr/wp-json/hel/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "HEL — Devis (public)",
+      "version": "0.7.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.hypotheques-en-ligne.fr/wp-json/hel/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:18.993Z",
+  "server": {
+    "registryName": "io.github.manuelescrig/raceresults-mcp",
+    "title": "MotoGP (Race Results)",
+    "description": "Live MotoGP, Moto2 and Moto3 standings, results, calendar, riders, live timing and news.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://raceresultsapp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "raceresults-motogp",
+      "title": "Race Results: MotoGP, Moto2 and Moto3",
+      "version": "1.0.0",
+      "websiteUrl": "https://raceresultsapp.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://raceresultsapp.com/mcp"
+}

@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:28.289Z",
+  "server": {
+    "registryName": "io.github.valor-mineral-management/services-contact",
+    "title": "Valor Services & Contact",
+    "description": "Explore Valor services and prepare a contact request for the user to review and send on Valor.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.onevalor.com/mcp/services/v1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "valor-services-contact",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].audience has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].audience has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].needs has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].audience has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].need has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].message has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].requestToken has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.onevalor.com/mcp/services/v1"
+}

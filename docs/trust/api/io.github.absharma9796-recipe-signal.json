@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:04.013Z",
+  "server": {
+    "registryName": "io.github.absharma9796/recipe-signal",
+    "title": "Recipe Signal",
+    "description": "Search and compare attributed recipe records through a public read-only remote MCP endpoint.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://recipemcp.com/api/recipes",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://recipemcp.com/api/recipes"
+}

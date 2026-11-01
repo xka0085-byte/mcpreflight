@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:41.838Z",
+  "server": {
+    "registryName": "com.wiastandards/wisdom",
+    "title": "WIA Wisdom",
+    "description": "Search WIA Wisdom's curated documents on 9 traditions of thought (EN/KO) and read excerpts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp-wisdom.wiastandards.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wisdom",
+      "title": "WIA Wisdom",
+      "version": "1.0.0",
+      "websiteUrl": "https://wisdom.wiastandards.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_chars has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-wisdom.wiastandards.com/mcp"
+}

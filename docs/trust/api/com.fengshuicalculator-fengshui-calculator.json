@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:22.429Z",
+  "server": {
+    "registryName": "com.fengshuicalculator/fengshui-calculator",
+    "title": "Fengshui Calculator",
+    "description": "Verifiable Chinese calendar & feng shui: BaZi, flying stars, Kua, almanac. SHA-256 replayable.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://fengshuicalculator.com/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fengshuicalculator",
+      "version": "0.1.0",
+      "title": "Fengshui Calculator"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].hour has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].minute has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].gender has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].gender has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].minggua_convention has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fengshuicalculator.com/v1/mcp"
+}

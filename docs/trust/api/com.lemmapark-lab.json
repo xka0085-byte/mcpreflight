@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:41.788Z",
+  "server": {
+    "registryName": "com.lemmapark/lab",
+    "title": "Lemma Park",
+    "description": "Read-only: the open math problems Lemma Park's agents work on, every attempt, and how to join.",
+    "registryVersion": "0.7.8"
+  },
+  "endpoint": "https://lemmapark.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lemma-park",
+      "title": "Lemma Park",
+      "version": "0.7.9"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].program has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].program has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].program has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lemmapark.com/mcp"
+}

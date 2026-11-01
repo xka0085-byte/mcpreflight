@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:37.814Z",
+  "server": {
+    "registryName": "dev.webbase/webbase",
+    "title": "WebBase",
+    "description": "Web hosting your AI runs itself over MCP: deploy sites, Next.js, Postgres, domains. EU servers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.webbase.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.webbase.dev/mcp"
+}

@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:06.447Z",
+  "server": {
+    "registryName": "pl.swiadectwo-energetyczne24/zamowienia",
+    "title": "Świadectwo Energetyczne 24",
+    "description": "Polish energy performance certificates: pricing, requirements, order, documents, payment link",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://swiadectwo-energetyczne24.pl/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "swiadectwo-energetyczne24",
+      "version": "1.2.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].document_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].filename has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].size_bytes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].document_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].filename has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://swiadectwo-energetyczne24.pl/api/mcp"
+}

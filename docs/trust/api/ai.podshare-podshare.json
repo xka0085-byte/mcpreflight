@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:12.453Z",
+  "server": {
+    "registryName": "ai.podshare/podshare",
+    "title": "Podshare",
+    "description": "Group work, rebuilt for AI - Create a pod. Invite your team. Collaborate. Get a link to share.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.podshare.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.podshare.ai/mcp"
+}

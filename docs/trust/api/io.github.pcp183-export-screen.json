@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:50.643Z",
+  "server": {
+    "registryName": "io.github.pcp183/export-screen",
+    "title": "US Export Control Screening (CSL)",
+    "description": "Screen a party vs the US Consolidated Screening List before export. $0.02/call via x402.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://export-screen-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://export-screen-production.up.railway.app/mcp"
+}

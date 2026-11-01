@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:10.561Z",
+  "server": {
+    "registryName": "com.botrecipe/wake",
+    "title": "Agent Wake",
+    "description": "Schedule wake-ups for AI agents that bring back their saved state and thread when they fire.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://wake.cloudforbots.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-wake",
+      "title": "Agent Wake",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].wake_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].confirm has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wake.cloudforbots.com/mcp"
+}

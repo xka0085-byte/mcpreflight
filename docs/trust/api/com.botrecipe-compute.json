@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:09.945Z",
+  "server": {
+    "registryName": "com.botrecipe/compute",
+    "title": "Compute Connector",
+    "description": "Low on memory? Your bot sends heavy jobs to cloud sandboxes on your own provider keys. Flat fee.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://compute.cloudforbots.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "compute-connector",
+      "title": "Compute Connector",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].total_mb has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].make_default has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://compute.cloudforbots.com/mcp"
+}

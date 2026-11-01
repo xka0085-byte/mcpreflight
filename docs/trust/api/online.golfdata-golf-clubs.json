@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:03.968Z",
+  "server": {
+    "registryName": "online.golfdata/golf-clubs",
+    "title": "golfdata.online — verified golf clubs",
+    "description": "Golf clubs & courses directory (not equipment): facts, booking links, requests where enabled",
+    "registryVersion": "1.3.1"
+  },
+  "endpoint": "https://golfdata.online/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "golf-mcp",
+      "title": "golfdata.online",
+      "version": "1.3.1",
+      "websiteUrl": "https://golfdata.online"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].entity_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://golfdata.online/mcp"
+}

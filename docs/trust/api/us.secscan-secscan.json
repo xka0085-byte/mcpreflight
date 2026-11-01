@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:46.197Z",
+  "server": {
+    "registryName": "us.secscan/secscan",
+    "title": "SecScan",
+    "description": "Scan, monitor and fix a live web app from your editor: graded security reports with fix prompts.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://secscan.us/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "secscan",
+      "version": "1.1.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://secscan.us/api/mcp"
+}

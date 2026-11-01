@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:46.298Z",
+  "server": {
+    "registryName": "hr.trazimstan/nekretnine",
+    "title": "trazimstan.hr — nekretnine u Hrvatskoj",
+    "description": "Pretraga provjerenih oglasa za prodaju i najam nekretnina u Hrvatskoj na trazimstan.hr.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.trazimstan.hr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "trazimstan",
+      "version": "0.2.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].transactionType has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.trazimstan.hr/mcp"
+}

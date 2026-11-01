@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:01.822Z",
+  "server": {
+    "registryName": "com.screenata/compliance",
+    "title": "com.screenata/compliance",
+    "description": "Manage compliance controls, policies, and audit readiness for SOC 2, HIPAA, ISO 27001 and more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.screenata.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.screenata.com/mcp"
+}

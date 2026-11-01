@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:46.567Z",
+  "server": {
+    "registryName": "com.clientfoyer/clientfoyer",
+    "title": "ClientFoyer MCP",
+    "description": "ClientFoyer MCP server for a freelancer client portal - projects, updates, files, invoices.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://clientfoyer.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://clientfoyer.com/api/v1/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:37.316Z",
+  "server": {
+    "registryName": "dev.wealthtech/mcp",
+    "title": "wealthtech.dev",
+    "description": "Read-only, sourced access facts for wealth tech products, vendor MCP servers and Form ADV columns.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.wealthtech.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wealthtech.dev",
+      "version": "0.2.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.wealthtech.dev/mcp"
+}

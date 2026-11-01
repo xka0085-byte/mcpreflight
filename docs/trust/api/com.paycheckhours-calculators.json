@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:41.939Z",
+  "server": {
+    "registryName": "com.paycheckhours/calculators",
+    "title": "PaycheckHours calculators",
+    "description": "US time card hours, decimal hours, overtime pay and tip pool split. Free, no sign-in.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://paycheckhours.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paycheckhours",
+      "title": "PaycheckHours calculators",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].hourly_rate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].regular_hours has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].overtime_hours has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].overtime_multiplier has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].double_time_hours has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].people has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://paycheckhours.com/mcp"
+}

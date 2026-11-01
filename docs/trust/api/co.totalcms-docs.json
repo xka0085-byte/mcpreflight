@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:32.000Z",
+  "server": {
+    "registryName": "co.totalcms/docs",
+    "title": "Total CMS",
+    "description": "Total CMS docs, guides and CMS comparisons: Twig, field types, schemas, CLI, REST API and releases.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://totalcms.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Total CMS",
+      "version": "3.6.4",
+      "description": "Total CMS site exposed as an MCP server."
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://totalcms.co/mcp"
+}

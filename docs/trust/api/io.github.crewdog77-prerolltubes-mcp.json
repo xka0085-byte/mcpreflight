@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:35.502Z",
+  "server": {
+    "registryName": "io.github.crewdog77/prerolltubes-mcp",
+    "title": "io.github.crewdog77/prerolltubes-mcp",
+    "description": "Answers questions about Pre-roll Tubes Co. wholesale tube pricing, ordering, and shipping.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://prerolltubes-mcp.chris-w-crew.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Pre-roll Tubes Co. FAQ",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].question has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://prerolltubes-mcp.chris-w-crew.workers.dev/mcp"
+}

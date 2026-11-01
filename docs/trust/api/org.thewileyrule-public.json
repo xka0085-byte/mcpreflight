@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:48.546Z",
+  "server": {
+    "registryName": "org.thewileyrule/public",
+    "title": "The Wiley Rule (public data)",
+    "description": "Read-only public data on 7-OH and related products: research, test results, FDA actions, state laws",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://thewileyrule.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "thewileyrule-public",
+      "title": "The Wiley Rule (public data)",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].n has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://thewileyrule.org/mcp"
+}

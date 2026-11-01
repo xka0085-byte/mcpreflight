@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:30.976Z",
+  "server": {
+    "registryName": "io.github.jdhart81/wu-wei-router",
+    "title": "io.github.jdhart81/wu-wei-router",
+    "description": "Plan agent workload routes from evaluation and cost data. $1 USDC per plan; modeled savings only.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.viridisconservation.com/wu-wei-router/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wu-wei-router-agent",
+      "version": "1.28.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].profiles has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tasks has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.viridisconservation.com/wu-wei-router/mcp"
+}

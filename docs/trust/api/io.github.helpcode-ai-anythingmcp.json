@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:30.319Z",
+  "server": {
+    "registryName": "io.github.HelpCode-ai/anythingmcp",
+    "title": "AnythingMCP",
+    "description": "Any REST/SOAP/GraphQL/OData/SQL API as MCP tools for Claude & ChatGPT. 561 connectors: SAP, ERP.",
+    "registryVersion": "0.51.7"
+  },
+  "endpoint": "https://cloud.anythingmcp.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cloud.anythingmcp.com/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:48.911Z",
+  "server": {
+    "registryName": "il.co.checko/docs",
+    "title": "Checko — travel insurance guides and FAQ",
+    "description": "Read-only Hebrew travel insurance guides and FAQ published on checko.co.il.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://checko.co.il/mcp/docs",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "checko-docs",
+      "title": "Checko — travel insurance guides and FAQ",
+      "version": "1.1.0",
+      "websiteUrl": "https://checko.co.il",
+      "icons": [
+        {
+          "src": "https://checko.co.il/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://checko.co.il/mcp/docs"
+}

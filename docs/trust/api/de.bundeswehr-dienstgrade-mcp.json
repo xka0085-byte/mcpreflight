@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:27.798Z",
+  "server": {
+    "registryName": "de.bundeswehr-dienstgrade/mcp",
+    "title": "bundeswehr-dienstgrade.de — Dienstgrade der Bundeswehr",
+    "description": "German armed forces ranks: lookup, comparison, NATO codes, promotion, US/UK equivalents, pay.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.bundeswehr-dienstgrade.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bundeswehr-dienstgrade",
+      "title": "bundeswehr-dienstgrade.de: Dienstgrade der Bundeswehr",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.bundeswehr-dienstgrade.de/fuer-entwickler/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].experience_level has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.bundeswehr-dienstgrade.de/mcp"
+}

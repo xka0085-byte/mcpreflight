@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:02.715Z",
+  "server": {
+    "registryName": "io.github.gitajhd/amanchain",
+    "title": "io.github.gitajhd/amanchain",
+    "description": "AmanChain: quantum-resistant x402 payments. Remote MCP, 50 paid services. USDC on Base or AMAN.",
+    "registryVersion": "2.28.0"
+  },
+  "endpoint": "https://amanchain-relay.gitajhd.workers.dev/api/mcp?net=mainnet",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "amanchain-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].txId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://amanchain-relay.gitajhd.workers.dev/api/mcp?net=mainnet"
+}

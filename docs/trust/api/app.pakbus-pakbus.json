@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:31.109Z",
+  "server": {
+    "registryName": "app.pakbus/pakbus",
+    "title": "PakBus",
+    "description": "Bus and metro journeys, departures, routes, fares and service changes in Pakistani cities.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://pakbus.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pakbus",
+      "title": "PakBus",
+      "version": "1.0.0",
+      "websiteUrl": "https://pakbus.app",
+      "icons": [
+        {
+          "src": "https://pakbus.app/pakbus-mark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pakbus.app/mcp"
+}

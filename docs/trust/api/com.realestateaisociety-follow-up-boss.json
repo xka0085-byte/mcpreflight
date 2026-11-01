@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:00.996Z",
+  "server": {
+    "registryName": "com.realestateaisociety/follow-up-boss",
+    "title": "Follow Up Boss CRM for Real Estate Agents",
+    "description": "Work a Follow Up Boss real estate CRM: lead history, overdue follow-ups, notes, tasks and new leads.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://connect.realestateaisociety.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://connect.realestateaisociety.com/mcp"
+}

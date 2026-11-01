@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:04.753Z",
+  "server": {
+    "registryName": "pl.sladami-roberta/maklowicz",
+    "title": "Śladami Roberta Makłowicza",
+    "description": "Restaurants and attractions from Robert Makłowicz's travel episodes, searchable by country and type.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.sladami-roberta.pl/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sladami-roberta",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.sladami-roberta.pl/api/mcp"
+}

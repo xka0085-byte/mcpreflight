@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:48.874Z",
+  "server": {
+    "registryName": "io.github.apifymcpfactory-droid/eu-vat-validator",
+    "title": "EU VAT Validator (VIES)",
+    "description": "Bulk-validates EU VAT numbers against the European Commission's official VIES service.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=apifmcpfactory/eu-vat-validator"
+}

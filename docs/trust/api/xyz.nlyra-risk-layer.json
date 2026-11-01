@@ -1,0 +1,61 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:16.605Z",
+  "server": {
+    "registryName": "xyz.nlyra/risk-layer",
+    "title": "NLYRA — the risk layer of Robinhood Chain",
+    "description": "Robinhood Chain risk layer: token Risk Level, contract scans, wallet x-rays, non-custodial trades",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://nlyra.xyz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nlyra",
+      "title": "NLYRA — the risk layer of Robinhood Chain",
+      "version": "1.1.0",
+      "websiteUrl": "https://nlyra.xyz/agents"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].token has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].token has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].side has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].token has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].side has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].bot_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].tx_hash has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nlyra.xyz/mcp"
+}

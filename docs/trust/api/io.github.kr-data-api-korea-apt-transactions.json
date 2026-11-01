@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:23.521Z",
+  "server": {
+    "registryName": "io.github.kr-data-api/korea-apt-transactions",
+    "title": "Korea Apartment Transactions (MOLIT sale records, English)",
+    "description": "Korean apartment sale transactions (MOLIT): price, area, floor, deal date, cancellations by district",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=kr-data/korea-apt-transactions",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=kr-data/korea-apt-transactions"
+}

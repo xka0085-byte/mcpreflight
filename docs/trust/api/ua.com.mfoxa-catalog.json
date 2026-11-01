@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:37.486Z",
+  "server": {
+    "registryName": "ua.com.mfoxa/catalog",
+    "title": "ua.com.mfoxa/catalog",
+    "description": "Read-only catalog of licensed Ukrainian MFOs: loan terms, NBU licenses, ratings and reviews.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mfoxa.com.ua/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "МФОХА — каталог МФО України",
+      "version": "1.4.1"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mfoxa.com.ua/api/mcp"
+}

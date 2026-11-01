@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:16.385Z",
+  "server": {
+    "registryName": "au.com.paycalculator/mcp",
+    "title": "PayCalculator",
+    "description": "Australian pay, income tax, super, HECS, family payments and child care subsidy, using ATO rates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.paycalculator.com.au/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paycalculator",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.paycalculator.com.au/mcp"
+}

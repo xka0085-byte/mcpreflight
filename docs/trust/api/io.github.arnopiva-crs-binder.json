@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:52.518Z",
+  "server": {
+    "registryName": "io.github.arnopiva/crs-binder",
+    "title": "Cross-Rail Settlement Binder",
+    "description": "Multi-rail settlement binder MCP. binder_verify proves integrity only — not settlement.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://crs-binder.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "crs-binder",
+      "version": ""
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].task_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].leaf has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].task_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].x402_proof has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].binder has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://crs-binder.fly.dev/mcp"
+}

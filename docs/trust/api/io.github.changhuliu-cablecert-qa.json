@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:34.894Z",
+  "server": {
+    "registryName": "io.github.ChanghuLiu/cablecert-qa",
+    "title": "RegEvidenceHub CableCert",
+    "description": "Independent owner-side QA for structured-cabling certification closeout evidence.",
+    "registryVersion": "0.2.5"
+  },
+  "endpoint": "https://cablecert.regevidencehub.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Independent owner-side structured-cabling certification closeout evidence QA.",
+      "name": "RegEvidenceHub CableCert",
+      "title": "RegEvidenceHub CableCert",
+      "version": "0.2.4",
+      "websiteUrl": "https://regevidencehub.com/about/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].csv_text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].source_file has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].csv_text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].expected_ids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].expected_test_limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].source_file has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cablecert.regevidencehub.com/mcp"
+}

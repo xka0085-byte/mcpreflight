@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:54.696Z",
+  "server": {
+    "registryName": "io.github.Fizzl13/presign-guard-wallet",
+    "title": "presign-guard wallet",
+    "description": "Agent wallet with limits: pays x402/MPP on Base, Solana, Tempo, XRPL and Algorand; phone approval.",
+    "registryVersion": "0.29.1"
+  },
+  "endpoint": "https://wallet.fizzl.eu/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wallet.fizzl.eu/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:02.357Z",
+  "server": {
+    "registryName": "io.github.ekvanauk/rentrollapi",
+    "title": "RentRollAPI",
+    "description": "Extract verified data from CRE rent rolls and T12 operating statements (PDF, Excel, CSV, scans)",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://rentrollapi.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rentrollapi.com/mcp"
+}

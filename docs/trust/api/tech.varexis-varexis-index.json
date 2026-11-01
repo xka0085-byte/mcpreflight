@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:13.400Z",
+  "server": {
+    "registryName": "tech.varexis/varexis-index",
+    "title": "VAREXIS-INDEX - Source-linked evidence",
+    "description": "Free agent evidence: 6 guides, 2 distinct MCP connectors; optional paid local checks. No authority.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://varexis.tech/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "varexis-index",
+      "version": "1.0.0",
+      "title": "VAREXIS-INDEX — Source-linked evidence"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].route_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].version has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].advisory_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ecosystem has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].package has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].cursor has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://varexis.tech/mcp"
+}

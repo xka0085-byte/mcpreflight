@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:14.799Z",
+  "server": {
+    "registryName": "xyz.filingdelta/filingdelta",
+    "title": "FilingDelta",
+    "description": "SEC filing changes, central-bank rate decisions, US macro and CPI cards. Pay per card via x402.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://filingdelta.xyz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "filingdelta",
+      "title": "FilingDelta",
+      "version": "0.5.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].since has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].what has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].price_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].frequency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].contact has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].wallet has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://filingdelta.xyz/mcp"
+}

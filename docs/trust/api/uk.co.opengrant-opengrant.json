@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:08.206Z",
+  "server": {
+    "registryName": "uk.co.opengrant/opengrant",
+    "title": "OpenGrant UK grants",
+    "description": "Search UK grant schemes and funders: deadlines, awards, eligibility and official guidance links.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://opengrant.co.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "OpenGrant UK grants",
+      "version": "2.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://opengrant.co.uk/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:52.313Z",
+  "server": {
+    "registryName": "app.tandemcrm/crm",
+    "title": "Tandem CRM",
+    "description": "The CRM your AI agent works in: companies, people, deals, tasks and buying signals, signed.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.tandemcrm.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.tandemcrm.app/mcp"
+}

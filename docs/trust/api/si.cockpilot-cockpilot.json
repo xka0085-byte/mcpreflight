@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:07.336Z",
+  "server": {
+    "registryName": "si.cockpilot/cockpilot",
+    "title": "Cockpilot",
+    "description": "Run an agency's tasks, projects, clients and KPIs from Claude or any MCP client. OAuth, per team.",
+    "registryVersion": "1.6.0"
+  },
+  "endpoint": "https://{team}.cockpilot.si/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{team}.cockpilot.si/mcp"
+}

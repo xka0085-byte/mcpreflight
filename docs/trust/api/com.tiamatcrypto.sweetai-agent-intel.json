@@ -1,57 +1,24 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:53.954Z",
+  "scannedAt": "2026-11-01T03:57:51.754Z",
   "server": {
     "registryName": "com.tiamatcrypto.sweetai/agent-intel",
     "title": "SweetAI — On-chain AI Agent Intelligence",
-    "description": "ERC-8004 agent intel, sybil forensics, Trust Gate + should-i-pay decisions, SDKs on PyPI/npm",
-    "registryVersion": "1.2.0"
+    "description": "Two pre-trade decisions: should-i-pay + token-verdict. ERC-8004 sybil forensics + live pool checks",
+    "registryVersion": "1.4.0"
   },
   "endpoint": "https://sweetai.tiamatcrypto.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "SweetAI-PreTrade-Decisions",
-      "version": "2.0.0"
-    },
-    "toolCount": 2,
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[0].token has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[0].amount_usd has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].agent_id has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].solana_asset has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].seller_url has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].pay_to has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].amount_usd has no description"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
   },

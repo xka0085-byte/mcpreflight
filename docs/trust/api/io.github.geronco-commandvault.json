@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:54.533Z",
+  "server": {
+    "registryName": "io.github.geronco/commandvault",
+    "title": "CommandVault",
+    "description": "Search prompts, CLAUDE.md/AGENTS.md templates, Cursor rules, Agent Skills and MCP servers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://commandvault.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "commandvault",
+      "title": "CommandVault",
+      "version": "1.0.0",
+      "websiteUrl": "https://commandvault.ai"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://commandvault.ai/api/mcp"
+}

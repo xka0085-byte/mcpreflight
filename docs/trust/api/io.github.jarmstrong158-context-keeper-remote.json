@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:17.205Z",
+  "server": {
+    "registryName": "io.github.jarmstrong158/context-keeper-remote",
+    "title": "Context Keeper (remote)",
+    "description": "Cloudflare Worker remote backend for context-keeper (D1). MCP 2026-07-28, dual-era.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://context-keeper-remote.{account}.workers.dev/mcp/{token}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://context-keeper-remote.{account}.workers.dev/mcp/{token}"
+}

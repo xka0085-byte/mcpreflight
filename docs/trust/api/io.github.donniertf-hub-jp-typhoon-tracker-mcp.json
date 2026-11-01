@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:41.220Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/jp-typhoon-tracker-mcp",
+    "title": "Japan Typhoon Tracker MCP",
+    "description": "Active typhoons and tropical cyclones from JMA. Free active_typhoons tool.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jp-typhoon-tracker-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jp-typhoon-tracker-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tropical_cyclone has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jp-typhoon-tracker-mcp.donniertf.workers.dev/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:26.828Z",
+  "server": {
+    "registryName": "link.snip/snip",
+    "title": "Snip",
+    "description": "Free QR codes that never expire and free short links with click stats.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://snip.link/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "snip",
+      "title": "Snip.link",
+      "version": "1.0.0",
+      "description": "Free short links and QR codes, any web page as Markdown with a saved copy that stays, and any file on the web at a short link, for any AI assistant; signed in, manage links and read their clicks and scans.",
+      "websiteUrl": "https://snip.link/mcp-server",
+      "icons": [
+        {
+          "src": "https://snip.link/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].snapshots has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://snip.link/mcp"
+}

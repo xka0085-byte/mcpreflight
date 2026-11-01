@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:28.105Z",
+  "server": {
+    "registryName": "io.github.theluckystrike/asset-register",
+    "title": "io.github.theluckystrike/asset-register",
+    "description": "Fixed assets and depreciation from bundled Polish KST, HMRC and IRS MACRS tables.",
+    "registryVersion": "0.22.6"
+  },
+  "endpoint": "https://mcp.zovo.one/mcp/asset-register",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-asset-register",
+      "version": "0.22.6"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].note has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zovo.one/mcp/asset-register"
+}

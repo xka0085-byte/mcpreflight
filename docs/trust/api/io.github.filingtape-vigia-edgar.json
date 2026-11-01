@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:32.748Z",
+  "server": {
+    "registryName": "io.github.filingtape/vigia-edgar",
+    "title": "io.github.filingtape/vigia-edgar",
+    "description": "Always-on SEC EDGAR watcher: ~45s alerts when an insider files a Form 4 or a firm drops an 8-K.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vigia-edgar.mcpize.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vigia-edgar.mcpize.run/mcp"
+}

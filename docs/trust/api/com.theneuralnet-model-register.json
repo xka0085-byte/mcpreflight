@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:35.527Z",
+  "server": {
+    "registryName": "com.theneuralnet/model-register",
+    "title": "The Neural Net",
+    "description": "Sourced register of open-weight AI model releases and AI news. Every field cites its source.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://theneuralnet.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "theneuralnet",
+      "version": "1.0.0",
+      "title": "The Neural Net"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_parameters has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://theneuralnet.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:38.448Z",
+  "server": {
+    "registryName": "com.leadsranger/leads-ranger",
+    "title": "Leads Ranger",
+    "description": "Find local businesses with real emails and run AI-written outreach to them, from your AI chat.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.leadsranger.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.leadsranger.com/mcp"
+}

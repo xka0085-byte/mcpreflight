@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:49.563Z",
+  "server": {
+    "registryName": "io.github.Fermion-company/mathpoint",
+    "title": "MathPoint",
+    "description": "TeX math, TikZ figures, and tables in the PowerPoint or Word file you have open, from chat.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.tex64.com/mathpoint/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tex64.com/mathpoint/mcp"
+}

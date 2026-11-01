@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:48.765Z",
+  "server": {
+    "registryName": "se.helsama/helsama",
+    "title": "Helsama",
+    "description": "Hemp from Gotland: product catalog, knowledge base and open lab data per batch.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://helsama.se/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "helsama",
+      "title": "Helsama",
+      "version": "1.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].handle has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://helsama.se/mcp"
+}

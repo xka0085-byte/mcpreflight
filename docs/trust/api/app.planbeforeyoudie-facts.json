@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:33.032Z",
+  "server": {
+    "registryName": "app.planbeforeyoudie/facts",
+    "title": "Plan Before You Die facts",
+    "description": "Checked US family-readiness facts with official sources: forms, state rules and deadlines.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://planbeforeyoudie.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "planbeforeyoudie-facts",
+      "title": "Plan Before You Die facts",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].date_of_death has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].assets has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://planbeforeyoudie.app/mcp"
+}

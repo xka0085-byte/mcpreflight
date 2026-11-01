@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:10.157Z",
+  "server": {
+    "registryName": "me.remem/bible-memory",
+    "title": "Remember Me – Bible Memory",
+    "description": "Memorize Bible verses with spaced repetition: add verses, get quizzed, follow a daily reading plan.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://auth.remem.me/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://auth.remem.me/mcp"
+}

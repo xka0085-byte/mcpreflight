@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:46.649Z",
+  "server": {
+    "registryName": "io.usefulapi/ipdetective",
+    "title": "IPDetective MCP by usefulapi",
+    "description": "Check IPDetective usage and investigate IP bot, VPN, proxy, ASN and country signals.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://ipdetective.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ipdetective-mcp",
+      "version": "1.4.0",
+      "title": "IPDetective MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/ipdetective/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ip has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].include_info has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ips has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].include_info has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].confirm has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ipdetective.usefulapi.io/mcp"
+}

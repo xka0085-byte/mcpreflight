@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:53.959Z",
+  "server": {
+    "registryName": "io.github.ArneFfm/nowyourlink",
+    "title": "nowyourlink public Spotlights",
+    "description": "Anonymous read-only access to settled advertising Spotlights, with an MCP Apps card.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://nowyourlink.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nowyourlink",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nowyourlink.com/mcp"
+}

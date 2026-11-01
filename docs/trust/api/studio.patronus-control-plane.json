@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:53.307Z",
+  "server": {
+    "registryName": "studio.patronus/control-plane",
+    "title": "Patronus Security",
+    "description": "Scan text, documents, websites, and MCP metadata for prompt injection and sensitive-data risks.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://control.patronus.studio/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://control.patronus.studio/api/mcp"
+}

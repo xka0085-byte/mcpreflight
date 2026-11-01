@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:47.435Z",
+  "server": {
+    "registryName": "io.github.letroi77/clipzyn-mcp",
+    "title": "io.github.letroi77/clipzyn-mcp",
+    "description": "Turn podcasts and long videos into ranked, finished short clips via the hosted ClipZyn API.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://clipzyn-mcp-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://clipzyn-mcp-production.up.railway.app/mcp"
+}

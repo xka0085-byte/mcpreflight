@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:28.846Z",
+  "server": {
+    "registryName": "io.github.yondry-ltd/day-planner",
+    "title": "Yondry: Day Out Planner",
+    "description": "Plan your perfect day out anywhere: itineraries and neighbourhood guides, tuned to mood and weather.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://yondry.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Yondry",
+      "version": "3.4.2"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].location has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].vibe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].constraints has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].neighbourhood has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].plan_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].stop_index has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].reason has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://yondry.app/mcp"
+}

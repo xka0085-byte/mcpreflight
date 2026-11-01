@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:05.763Z",
+  "server": {
+    "registryName": "dev.workers.toolschemaforge.toolschema-forge/toolschema-forge",
+    "title": "ToolSchema Forge",
+    "description": "Convert, lint and generate LLM tool schemas for OpenAI, Anthropic, Gemini and MCP",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://toolschema-forge.toolschemaforge.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "toolschema-forge",
+      "title": "ToolSchema Forge",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].maxTools has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://toolschema-forge.toolschemaforge.workers.dev/mcp"
+}

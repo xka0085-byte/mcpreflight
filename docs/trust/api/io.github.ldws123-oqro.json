@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:15.687Z",
+  "server": {
+    "registryName": "io.github.LdwS123/oqro",
+    "title": "io.github.LdwS123/oqro",
+    "description": "Insider, Congress, 13F and federal contract filings for US stocks, each linked to its source.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://oqro.io/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://oqro.io/api/mcp"
+}

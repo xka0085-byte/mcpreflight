@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:12.067Z",
+  "scannedAt": "2026-11-01T03:55:26.308Z",
   "server": {
     "registryName": "com.sgpdirectory/singapore-business-directory",
     "title": "Singapore Business Directory",
@@ -10,22 +10,20 @@
   },
   "endpoint": "https://sgpdirectory.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SGP Directory MCP Server",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "4 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://sgpdirectory.com/mcp"
 }

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:18.965Z",
+  "server": {
+    "registryName": "io.github.jcdreamjc/wudao-mcp",
+    "title": "Wudao A-Share Stock Data MCP",
+    "description": "China A-share data for AI agents: 57 read-only tools plus 6 tools for your own watchlist.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://stock.quicktiny.cn/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wudao-stock-data",
+      "version": "1.0.0",
+      "profile": "all"
+    },
+    "toolCount": 63,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "63 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://stock.quicktiny.cn/api/mcp"
+}

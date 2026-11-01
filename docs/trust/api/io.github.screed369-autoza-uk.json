@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:46.831Z",
+  "server": {
+    "registryName": "io.github.Screed369/autoza-uk",
+    "title": "Autoza UK",
+    "description": "UK used cars: road tax (VED), ULEZ charges, MOT dates, DVSA reliability, live dealer stock.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://autoza.co.uk/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "autoza-uk",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].min_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].max_year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://autoza.co.uk/api/mcp"
+}

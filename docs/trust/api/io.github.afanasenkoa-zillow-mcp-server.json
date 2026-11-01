@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:09.142Z",
+  "server": {
+    "registryName": "io.github.afanasenkoa/zillow-mcp-server",
+    "title": "Zillow MCP Server",
+    "description": "Zillow homes and agent contacts for AI agents — search by ZIP, by URL, or look up a zpid.",
+    "registryVersion": "0.0.27"
+  },
+  "endpoint": "https://afanasenko--zillow-mcp-server.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://afanasenko--zillow-mcp-server.apify.actor/mcp"
+}

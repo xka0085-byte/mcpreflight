@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:57.938Z",
+  "server": {
+    "registryName": "pl.agentrynku/gpw",
+    "title": "Agent Rynku - Warsaw Stock Exchange (GPW) data for your agent",
+    "description": "Public GPW daily prices, financials, ratios, company search, earnings calendar and WZA dividends.",
+    "registryVersion": "1.2.2"
+  },
+  "endpoint": "https://agentrynku.pl/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentrynku.pl/api/mcp"
+}

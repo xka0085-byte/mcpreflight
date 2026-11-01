@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:02.263Z",
+  "server": {
+    "registryName": "io.github.suhaH5/dukkani",
+    "title": "Dukkani — Saudi groceries and grocery cashier",
+    "description": "Find Saudi groceries by city and district, send them a shopping list; free cashier and debt book.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://dukkanlink.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dukkani",
+      "title": "دكّاني — Dukkani",
+      "version": "585"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dukkanlink.com/mcp"
+}

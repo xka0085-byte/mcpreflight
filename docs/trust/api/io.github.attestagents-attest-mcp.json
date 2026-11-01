@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:04.857Z",
+  "server": {
+    "registryName": "io.github.attestagents/attest-mcp",
+    "title": "Attest",
+    "description": "Scan agent payment endpoints (x402, AP2, L402, MPP, 402) for a trust grade A-F before paying.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://attestagent.org/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "attest",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://attestagent.org/api/mcp"
+}

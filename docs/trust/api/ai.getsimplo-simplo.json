@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:20.882Z",
+  "server": {
+    "registryName": "ai.getsimplo/simplo",
+    "title": "Simplo",
+    "description": "Social media for small businesses: write, illustrate, schedule and publish posts from your AI.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.getsimplo.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.getsimplo.ai/mcp"
+}

@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:11.079Z",
+  "server": {
+    "registryName": "com.portalharas/portal-haras",
+    "title": "Portal Haras",
+    "description": "Locales, oficinas y viviendas en pozo en Escobar, Argentina: datos, precios, guías y contacto.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://portalharas.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "portal-haras",
+      "title": "Portal Haras",
+      "version": "1.0.0",
+      "websiteUrl": "https://portalharas.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://portalharas.com/mcp"
+}

@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:54.603Z",
+  "server": {
+    "registryName": "com.pewesenergy/catalogue",
+    "title": "PEWES ENERGY catalogue",
+    "description": "Search the PEWES ENERGY drinks catalogue, read one drink, the price list and any store page.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pewesenergy.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pewes-energy",
+      "title": "PEWES ENERGY catalogue",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sugar has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].in_stock_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pewesenergy.com/api/mcp"
+}

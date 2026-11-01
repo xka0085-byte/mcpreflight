@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:57.952Z",
+  "server": {
+    "registryName": "io.github.Dcroyalty/xrplhub",
+    "title": "XRPLHub — XRPLScore, MPT issuer risk & payment pre-checks",
+    "description": "XRPL wallet scores, wallet permissions, batch send, MPT risk, screening, pre-checks. Never signs.",
+    "registryVersion": "1.18.0"
+  },
+  "endpoint": "https://www.xrplhub.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "xrplhub",
+      "version": "1.18.0",
+      "description": "Free XRPL wallet creditworthiness scores · agent payment pre-check before paying an XRPL address (x402: USDC on Base or RLUSD on XRPL) · wallet permissions check (who can move money out of a wallet: keys, signer lists, delegations, checks) · batch send (pay up to 8 people with one approval, all or nothing) · verifiable score credential · credential + permissioned domain explorer · MPT issuer risk + backing declarations · OFAC SDN screening attestation (process, not ground truth) · XLS-66 cross-broker lending exposure & underwriting inputs (attested, facts only) · community micro-grants · donations. UNSIGNED ONLY: XRPLHub builds nothing generic and never signs or holds keys — an agent signs with its own wallet (the Ripple XRPL AI Starter Kit has Wallet and Payment skills for that)."
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].recipients has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.xrplhub.io/api/mcp"
+}

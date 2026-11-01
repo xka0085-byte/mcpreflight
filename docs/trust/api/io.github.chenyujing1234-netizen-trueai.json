@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:01.739Z",
+  "server": {
+    "registryName": "io.github.chenyujing1234-netizen/trueai",
+    "title": "io.github.chenyujing1234-netizen/trueai",
+    "description": "Recommend and inspect AI SaaS apps from the TrueAI catalog (1,600+ apps) by need, name or URL.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://www.shiflowai.cloud/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "trueai",
+      "version": "1.9.4"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.shiflowai.cloud/mcp"
+}

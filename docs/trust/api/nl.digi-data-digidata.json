@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:33.995Z",
+  "server": {
+    "registryName": "nl.digi-data/digidata",
+    "title": "DigiData",
+    "description": "Read-only business data from Exact Online, Twinfield, AFAS and 30+ sources for your AI.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.digi-data.nl/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.digi-data.nl/mcp"
+}

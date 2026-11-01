@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:49.540Z",
+  "server": {
+    "registryName": "io.github.Jcjimenezglez/rosetta-mcp",
+    "title": "Rosetta PDF",
+    "description": "Parse, extract, split, and ask over digital PDFs (text layer, no OCR) from Cursor and Claude.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://rosettafolio.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rosettafolio.com/api/mcp"
+}

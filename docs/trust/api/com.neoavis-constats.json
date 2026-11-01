@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:33.819Z",
+  "server": {
+    "registryName": "com.neoavis/constats",
+    "title": "Neoavis",
+    "description": "What an AI agent found when shopping at 300 French online merchants: score, six steps, five facts.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://neoavis.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Neoavis",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].secteur has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].langue has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].langue has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].langue has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].langue has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://neoavis.com/api/mcp"
+}

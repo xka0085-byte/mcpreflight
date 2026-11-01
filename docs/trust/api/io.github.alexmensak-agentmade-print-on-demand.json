@@ -1,0 +1,74 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:33.247Z",
+  "server": {
+    "registryName": "io.github.alexmensak/agentmade-print-on-demand",
+    "title": "AgentMade Print on Demand",
+    "description": "Print on demand for AI agents. No sign-up. Picture, words or logo on a tee, hoodie or tote.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://pod.agentmade.dev/mcp/pay",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentmade-print-on-demand",
+      "title": "AgentMade Print on Demand",
+      "version": "0.1.0",
+      "websiteUrl": "https://pod.agentmade.dev",
+      "icons": [
+        {
+          "src": "https://pod.agentmade.dev/assets/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "light"
+        },
+        {
+          "src": "https://pod.agentmade.dev/assets/icon-dark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "dark"
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].artwork_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].product_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].size has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].reason has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pod.agentmade.dev/mcp/pay"
+}

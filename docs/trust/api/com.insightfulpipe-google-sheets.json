@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:55.012Z",
+  "server": {
+    "registryName": "com.insightfulpipe/google-sheets",
+    "title": "Google Sheets MCP by InsightfulPipe",
+    "description": "Hosted Google Sheets MCP server, with each action switched on or off per account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://google-sheets.insightfulmcp.com/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://google-sheets.insightfulmcp.com/"
+}

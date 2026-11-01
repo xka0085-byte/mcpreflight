@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:23.278Z",
+  "server": {
+    "registryName": "org.dictionaryofml/dictionary",
+    "title": "Dictionary of Applied Machine Learning",
+    "description": "Look up, search and cross-reference machine-learning terms from dictionaryofml.org.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dictionaryofml.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dictionaryofml",
+      "version": "1.30.0",
+      "websiteUrl": "https://dictionaryofml.org"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].term has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].term has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].terms has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dictionaryofml.org/mcp"
+}

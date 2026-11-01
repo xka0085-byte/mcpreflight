@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:53.254Z",
+  "server": {
+    "registryName": "io.ecfr/uscode",
+    "title": "US Code Federal Statutes",
+    "description": "Search and read U.S. Code statutes with legal and inline citations linking to uscode.ecfr.io.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://uscode.ecfr.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "uscode-mcp",
+      "version": "1.0.0",
+      "title": "US Code Federal Statutes"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].length has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uscode.ecfr.io/mcp"
+}

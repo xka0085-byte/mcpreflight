@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:54.660Z",
+  "server": {
+    "registryName": "io.emaillistchecker/email-verification",
+    "title": "Emaillistchecker.io Email Verification",
+    "description": "Verify emails (valid/invalid/risky/unknown): MX, SMTP, catch-all, disposable. Free agent key.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://platform.emaillistchecker.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Emaillistchecker.io",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].list_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://platform.emaillistchecker.io/mcp"
+}

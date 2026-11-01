@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:14.820Z",
+  "server": {
+    "registryName": "io.github.bch1212/pubrecords",
+    "title": "io.github.bch1212/pubrecords",
+    "description": "US public-records intelligence for AI agents — companies, SEC, courts, spending, licenses.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-pubrecords-production.up.railway.app/mcp/",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pubrecords-mcp",
+      "version": "1.12.4"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-pubrecords-production.up.railway.app/mcp/"
+}

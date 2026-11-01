@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:14.733Z",
+  "server": {
+    "registryName": "io.github.Legorobotdude/dream-pixel-forge",
+    "title": "Dream Pixel Forge",
+    "description": "Create and edit on-brand images and videos with reusable character and product references.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.dreampixelforge.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.dreampixelforge.com/api/mcp"
+}

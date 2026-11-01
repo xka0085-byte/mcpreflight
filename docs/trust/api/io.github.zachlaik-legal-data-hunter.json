@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:56.866Z",
+  "server": {
+    "registryName": "io.github.ZachLaik/legal-data-hunter",
+    "title": "io.github.ZachLaik/legal-data-hunter",
+    "description": "Search 18M+ legal documents worldwide — case law, legislation, and doctrine across 110+ countries.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://legaldatahunter.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://legaldatahunter.com/mcp"
+}

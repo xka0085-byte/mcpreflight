@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:50.252Z",
+  "server": {
+    "registryName": "io.imagekit/admin",
+    "title": "ImageKit Admin",
+    "description": "Official ImageKit admin server: manage origins, URL endpoints, account usage and usage analytics.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://imagekit.io/mcp/admin",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://imagekit.io/mcp/admin"
+}

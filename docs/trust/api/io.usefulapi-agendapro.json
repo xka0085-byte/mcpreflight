@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:24.662Z",
+  "server": {
+    "registryName": "io.usefulapi/agendapro",
+    "title": "AgendaPro MCP by usefulapi",
+    "description": "Read AgendaPro bookings, slots, clients, services and sales; create, update and cancel bookings.",
+    "registryVersion": "1.11.0"
+  },
+  "endpoint": "https://agendapro.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agendapro-mcp",
+      "version": "1.14.0",
+      "title": "AgendaPro MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/agendapro/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].service_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].provider_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].client_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].location_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].price has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agendapro.usefulapi.io/mcp"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:31.651Z",
+  "server": {
+    "registryName": "io.github.theluckystrike/common-ground",
+    "title": "Common Ground",
+    "description": "Pick one movie, show, book, artist or restaurant a whole group will enjoy, using Qloo taste data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://common-ground.lipmichal.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "common-ground",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].location has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].members has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].members has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://common-ground.lipmichal.workers.dev/mcp"
+}

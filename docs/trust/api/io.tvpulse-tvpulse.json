@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:23.328Z",
+  "server": {
+    "registryName": "io.tvpulse/tvpulse",
+    "title": "TVPulse",
+    "description": "Search OCR/ASR mentions on 15 terrestrial stations (Tokyo 7, Osaka 8); archive from 2026-01-01.",
+    "registryVersion": "1.0.14"
+  },
+  "endpoint": "https://mcp.tvpulse.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tvpulse.io/mcp"
+}

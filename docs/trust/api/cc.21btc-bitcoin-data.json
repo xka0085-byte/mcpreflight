@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:41.031Z",
+  "server": {
+    "registryName": "cc.21btc/bitcoin-data",
+    "title": "21btc.cc Bitcoin Data",
+    "description": "Live Bitcoin price, ETF flows, treasuries, on-chain metrics, fees, derivatives & wiki search.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://21btc.cc/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "21btc-cc",
+      "title": "21btc.cc Bitcoin data",
+      "version": "1.1.0",
+      "websiteUrl": "https://21btc.cc/mcp"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://21btc.cc/mcp"
+}

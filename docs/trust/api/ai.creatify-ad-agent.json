@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:01.152Z",
+  "server": {
+    "registryName": "ai.creatify/ad-agent",
+    "title": "ai.creatify/ad-agent",
+    "description": "Turn a prompt, product link, or reference ad into a finished video ad via Creatify's Ad Agent.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.creatify.ai/ad_agent/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.creatify.ai/ad_agent/mcp"
+}

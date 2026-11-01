@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:34.278Z",
+  "server": {
+    "registryName": "com.paidrouter/paidrouter",
+    "title": "PaidRouter",
+    "description": "Cheapest way to get paid: every route ranked by fee, from providers' own pricing pages, dated.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://paidrouter.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paidrouter",
+      "version": "0.1.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].corridor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].totals has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].amount has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://paidrouter.com/mcp"
+}

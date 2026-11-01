@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:22.078Z",
+  "server": {
+    "registryName": "io.github.tfitzgerwitness/witness",
+    "title": "Witness",
+    "description": "Production proofs for breaking JSON Schema/MCP changes; UNKNOWN/NO_WITNESS_FOUND not compatible.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://witness-contractwitness-production.witness-test.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Witness",
+      "version": "0.1.0-phase-c-passed"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].mode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].old_schema has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].new_schema has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].options has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://witness-contractwitness-production.witness-test.workers.dev/mcp"
+}

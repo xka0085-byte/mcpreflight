@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:32.087Z",
+  "server": {
+    "registryName": "io.protoperfect/labs",
+    "title": "Protoperfect Labs",
+    "description": "Search and read Protoperfect Labs research, documentation and glossary. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://protoperfect.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "protoperfect-labs",
+      "title": "Protoperfect Labs",
+      "version": "1.0.0",
+      "websiteUrl": "https://protoperfect.io/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].section has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://protoperfect.io/api/mcp"
+}

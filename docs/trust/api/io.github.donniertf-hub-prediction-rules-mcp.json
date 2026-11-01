@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:41.514Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/prediction-rules-mcp",
+    "title": "Prediction Market Rule Check MCP",
+    "description": "Risk-scores Polymarket/Kalshi settlement rules; Kalshi weather settlements. Not advice.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://prediction-rules-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "prediction-rules-mcp",
+      "version": "1.4.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].market has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ticker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://prediction-rules-mcp.donniertf.workers.dev/mcp"
+}

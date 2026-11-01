@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:43.109Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/uk-sponsor-register-mcp",
+    "title": "UK Visa Sponsor Register MCP",
+    "description": "Home Office licensed visa sponsors register search and lead lists.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://uk-sponsor-register-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "uk-sponsor-register-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].organisation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].town has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].route has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].town has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uk-sponsor-register-mcp.donniertf.workers.dev/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:17.519Z",
+  "server": {
+    "registryName": "pro.worldclock/time",
+    "title": "pro.worldclock/time",
+    "description": "A real clock for AI agents: current time, timezone conversion, and DST facts from the IANA tzdb.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://worldclock.pro/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "worldclockpro-time",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].locations has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].targets has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://worldclock.pro/mcp"
+}

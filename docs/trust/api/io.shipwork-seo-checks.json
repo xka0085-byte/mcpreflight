@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:45.852Z",
+  "server": {
+    "registryName": "io.shipwork/seo-checks",
+    "title": "Shipwork SEO Checks",
+    "description": "Inspect public websites for technical SEO, indexing, sitemap, redirect, and schema issues.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://shipwork.io/mcp/{token}",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shipwork",
+      "title": "Shipwork site inspection",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].urls has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shipwork.io/mcp/{token}"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:07.880Z",
+  "server": {
+    "registryName": "app.invoicetable/invoice-table",
+    "title": "Invoice Table",
+    "description": "Review invoice records, flag duplicates, validate totals, and prepare spreadsheet-safe CSV.",
+    "registryVersion": "0.4.3"
+  },
+  "endpoint": "https://invoicetable.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "invoice-table",
+      "version": "0.4.4"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].documents has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].records has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].records has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://invoicetable.app/api/mcp"
+}

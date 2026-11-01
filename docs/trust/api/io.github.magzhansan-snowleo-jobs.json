@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:27.374Z",
+  "server": {
+    "registryName": "io.github.MagzhanSan/snowleo-jobs",
+    "title": "Snow Leo Jobs & Hiring",
+    "description": "Live job listings from 20 ATS platforms plus SEEK, JobStreet, JobsDB, jobs.ch and The Muse",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.apify.com/?actors=snow_leo_data/ats-jobs-scraper,snow_leo_data/seek-scraper,snow_leo_data/jobs-ch-scraper,snow_leo_data/the-muse-jobs-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=snow_leo_data/ats-jobs-scraper,snow_leo_data/seek-scraper,snow_leo_data/jobs-ch-scraper,snow_leo_data/the-muse-jobs-scraper"
+}

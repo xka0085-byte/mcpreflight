@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:53.162Z",
+  "server": {
+    "registryName": "io.github.Yeelight/yeelight-iot-mcp",
+    "title": "Yeelight IoT MCP Server",
+    "description": "Yeelight device discovery, state, control, and scene execution.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.yeelight.com/apis/mcp_server/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.yeelight.com/apis/mcp_server/v1/mcp"
+}

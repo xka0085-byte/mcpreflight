@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:58.701Z",
+  "server": {
+    "registryName": "ai.com.nlp/open-model-catalog",
+    "title": "NLP.COM.AI Open Model Catalog",
+    "description": "Search curated open-weight AI model releases, licenses, architectures, and primary sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nlp.com.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nlp-com-ai-open-model-catalog",
+      "title": "NLP.COM.AI Open Model Catalog",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nlp.com.ai/mcp"
+}

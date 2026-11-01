@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:46.398Z",
+  "server": {
+    "registryName": "io.shadowphone/shadowphone",
+    "title": "ShadowPhone",
+    "description": "Run Instagram automation on your own real phones from Claude, Cursor or any AI agent.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://www.shadowphone.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "shadowphone-mcp-http",
+      "version": "0.4.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].platform has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.shadowphone.io/api/mcp"
+}

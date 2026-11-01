@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:08.464Z",
+  "server": {
+    "registryName": "io.github.enioxt/publico",
+    "title": "EGOS (público)",
+    "description": "Diagnóstico 'cabe IA?' por regra fixa, capacidades do EGOS com prova, pesquisa pública. Sem senha.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://mcp.egos.ia.br/publico/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "egos-publico",
+      "version": "0.4.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].notas has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].guardar has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].item has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].confirmar has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.egos.ia.br/publico/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:23.291Z",
+  "server": {
+    "registryName": "net.useapi/muse",
+    "title": "Meta Muse MCP Server by useapi.net (third-party)",
+    "description": "Meta Muse (muse.ai) agent chat with its live browser, images, videos with sound and its Library",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://api.useapi.net/v1/muse/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.useapi.net/v1/muse/mcp"
+}

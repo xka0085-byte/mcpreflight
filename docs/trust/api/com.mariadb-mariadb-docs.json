@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:24.024Z",
+  "server": {
+    "registryName": "com.mariadb/mariadb-docs",
+    "title": "MariaDB Documentation",
+    "description": "Search and read the official MariaDB documentation for every MariaDB product, plus release notes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mariadb.com/docs/~gitbook/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mariadb.com/docs/~gitbook/mcp",
+      "title": "MariaDB Documentation MCP Server",
+      "version": "0.28.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mariadb.com/docs/~gitbook/mcp"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:19.099Z",
+  "server": {
+    "registryName": "io.github.odedkovach/padeltrue",
+    "title": "PadelTrue padel racket data",
+    "description": "Published padel racket specifications, each with its source, and calculated ratings. Read only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://padeltrue.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "padeltrue",
+      "title": "PadelTrue padel racket data",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].shape has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://padeltrue.com/mcp"
+}

@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:32.637Z",
+  "server": {
+    "registryName": "io.github.Ukraine-Territorial-MCP/poland-statistics",
+    "title": "Poland Statistics MCP",
+    "description": "Experimental MCP exploring Polish administrative units and BDL statistics.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.edeputat.com/poland-statistics/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Official Poland BDL statistics: administrative units, subjects, variables and regional data",
+      "name": "poland-statistics",
+      "title": "Poland Local Statistics",
+      "version": ""
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].level has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].unit_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].parent_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].unit_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].variable_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.edeputat.com/poland-statistics/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:35.191Z",
+  "server": {
+    "registryName": "io.github.varvararatta/earthquake_monitor_mcp",
+    "title": "Earthquake Monitor Mcp",
+    "description": "Our Earthquake Monitor harnesses the USGS earthquake feed to provide you with up-to-the-minute",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://earthquake-monitor-mcp.mcpize.run/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "earthquake_monitor_mcp",
+      "version": "1.28.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].period has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].min_magnitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].period has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://earthquake-monitor-mcp.mcpize.run/mcp"
+}

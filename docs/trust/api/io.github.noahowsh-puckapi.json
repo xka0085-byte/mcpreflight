@@ -1,0 +1,38 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:11.172Z",
+  "server": {
+    "registryName": "io.github.noahowsh/puckapi",
+    "title": "PuckAPI",
+    "description": "NHL and PWHL stats, play-by-play, expected goals and odds. REST API and MCP server. Free to start.",
+    "registryVersion": "1.1.6"
+  },
+  "endpoint": "https://mcp.puckapi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "puckapi",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://puckapi.com/brand-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "22 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.puckapi.com/mcp"
+}

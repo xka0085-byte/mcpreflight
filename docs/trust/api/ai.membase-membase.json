@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:53.746Z",
+  "server": {
+    "registryName": "ai.membase/membase",
+    "title": "ai.membase/membase",
+    "description": "Long-term memory for you and your AIs: search memories, read the profile, add facts and documents.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.app.membase.com/mcp-http",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.app.membase.com/mcp-http"
+}

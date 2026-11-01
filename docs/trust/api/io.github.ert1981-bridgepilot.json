@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:12.160Z",
+  "server": {
+    "registryName": "io.github.ert1981/bridgepilot",
+    "title": "BridgePilot — cross-chain route quotes",
+    "description": "Best cross-chain route via LI.FI + Across with net USD value. Non-custodial, x402-paid.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://bridgepilot.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "io.github.ert1981/bridgepilot",
+      "title": "BridgePilot",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].selection_policy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_alternatives has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].constraints has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bridgepilot.onrender.com/mcp"
+}

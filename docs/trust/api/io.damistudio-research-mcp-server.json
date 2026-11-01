@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:45.019Z",
+  "server": {
+    "registryName": "io.damistudio/research-mcp-server",
+    "title": "Research MCP Server",
+    "description": "23 live research tools, from web search to SEC filings. Each call bills the scraper it runs.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://dami-studio--research-mcp-server.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dami-studio--research-mcp-server.apify.actor/mcp"
+}

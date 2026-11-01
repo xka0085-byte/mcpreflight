@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:11.263Z",
+  "server": {
+    "registryName": "com.momentclip/mcp",
+    "title": "MomentClip",
+    "description": "Find, cite and clip moments in YouTube videos: analyses, transcripts, Q&A and 1080p clip downloads.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://momentclip.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://momentclip.com/mcp"
+}

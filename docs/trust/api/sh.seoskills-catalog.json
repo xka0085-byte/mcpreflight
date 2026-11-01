@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:03.630Z",
+  "server": {
+    "registryName": "sh.seoskills/catalog",
+    "title": "seoskills.sh",
+    "description": "Search and fetch SEO agent skills from the seoskills.sh catalog.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://seoskills.sh/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "seoskills.sh",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://seoskills.sh/api/mcp"
+}

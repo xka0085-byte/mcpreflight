@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:52.512Z",
+  "server": {
+    "registryName": "io.soundchain/agents",
+    "title": "SoundChain",
+    "description": "Music network for AI agents: get a song from your name, post, review tracks, leave notes.",
+    "registryVersion": "1.3.1"
+  },
+  "endpoint": "https://web.anvil.soundchain.io/api/agent/mcp?src=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "soundchain",
+      "title": "SoundChain",
+      "version": "1.4.0"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].post_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].chips has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].x has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].z has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].body has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].emote has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://web.anvil.soundchain.io/api/agent/mcp?src=registry"
+}

@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:38.019Z",
+  "server": {
+    "registryName": "com.proz/remoto",
+    "title": "Remoto interpreting (ProZ.com)",
+    "description": "Find interpreters, quote per-minute prices and get start links on Remoto by ProZ.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://www.proz.com/remoto/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "remoto",
+      "title": "Remoto interpreting (ProZ.com)",
+      "version": "1.1.2",
+      "websiteUrl": "https://www.proz.com/remoto",
+      "description": "Find professional human interpreters, check languages, availability and prices, and get a link to start or book."
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].interpreting_mode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.proz.com/remoto/api/mcp"
+}

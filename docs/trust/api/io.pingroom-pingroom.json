@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:27.057Z",
+  "server": {
+    "registryName": "io.pingroom/pingroom",
+    "title": "PingRoom",
+    "description": "Send mobile pings and route human questions, approvals, and handoffs from AI agents.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.pingroom.io/api/agent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "PingRoom",
+      "version": "0.1.0"
+    },
+    "toolCount": 41,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].audience has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.pingroom.io/api/agent/mcp"
+}

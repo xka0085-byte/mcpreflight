@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:12.924Z",
+  "server": {
+    "registryName": "ai.everydaysecurity/context",
+    "title": "Context",
+    "description": "OSINT investigations with traceable evidence: domains, URLs, IPs, scams and business records.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://context.everydaysecurity.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://context.everydaysecurity.ai/api/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:28:18.478Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/flickr-public",
+    "title": "Flickr Public",
+    "description": "Flickr public feeds MCP — keyless slice of the Flickr API.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://gateway.pipeworx.io/flickr-public/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pipeworx-gateway",
+      "version": "0.1.0"
+    },
+    "toolCount": 47,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[45].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/flickr-public/mcp"
+}

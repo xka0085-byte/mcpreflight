@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:39.559Z",
+  "server": {
+    "registryName": "io.github.bramontiventures/justtranscribe-mcp",
+    "title": "io.github.bramontiventures/justtranscribe-mcp",
+    "description": "Transcribe public videos & audio (YouTube, TikTok, IG) into accurate, timestamped text via API.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://justtranscribe.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://justtranscribe.ai/api/mcp"
+}

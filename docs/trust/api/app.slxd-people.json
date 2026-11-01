@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:45.400Z",
+  "server": {
+    "registryName": "app.slxd/people",
+    "title": "SLXD People",
+    "description": "Manage employees, absences, clockings and schedules from an AI assistant.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://{tenant}.slxd.app/mcp/people",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{tenant}.slxd.app/mcp/people"
+}

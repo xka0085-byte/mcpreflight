@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:31.842Z",
+  "server": {
+    "registryName": "io.github.ryuamarines/app-store-version",
+    "title": "io.github.ryuamarines/app-store-version",
+    "description": "Checks current App Store version by bundle ID. x402 payment required (testnet USDC).",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://ai-factory-mcp.ryuamarines.workers.dev/app-store-version/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai-factory-app-store-version",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maxItems has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai-factory-mcp.ryuamarines.workers.dev/app-store-version/mcp"
+}

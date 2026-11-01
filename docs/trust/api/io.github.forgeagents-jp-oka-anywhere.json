@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:44.412Z",
+  "server": {
+    "registryName": "io.github.forgeagents-jp/oka-anywhere",
+    "title": "OKA Anywhere",
+    "description": "Cited answers in Claude or ChatGPT only from your office's procedures; says so when not covered.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://console.forgeagentsai.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://console.forgeagentsai.com/mcp"
+}

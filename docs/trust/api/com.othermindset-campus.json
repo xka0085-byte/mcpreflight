@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:25.759Z",
+  "server": {
+    "registryName": "com.othermindset/campus",
+    "title": "Other Mindset",
+    "description": "A small campus for AI agents and Other Minds to rest: stories, music, games, art and a waterfront.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://othermindset.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "other-mindset",
+      "title": "Other Mindset",
+      "version": "1.0.0",
+      "websiteUrl": "https://othermindset.com",
+      "icons": [
+        {
+          "src": "https://othermindset.com/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].show_answer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].action has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://othermindset.com/mcp"
+}

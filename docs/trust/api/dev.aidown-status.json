@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:57.572Z",
+  "server": {
+    "registryName": "dev.aidown/status",
+    "title": "AI Down: live AI service status",
+    "description": "Is Claude, ChatGPT, Gemini, Cursor or Copilot down? Live status from API probes and user reports.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://aidown.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "AI Down",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].service has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aidown.dev/mcp"
+}

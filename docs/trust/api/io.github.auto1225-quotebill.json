@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:05.648Z",
+  "server": {
+    "registryName": "io.github.auto1225/quotebill",
+    "title": "QuoteBill",
+    "description": "Quotations, invoices and 8 more document kinds; quote to invoice; tax for 195 countries; forms.",
+    "registryVersion": "2.7.0"
+  },
+  "endpoint": "https://quotebill.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://quotebill.com/mcp"
+}

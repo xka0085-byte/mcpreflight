@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:41.696Z",
+  "server": {
+    "registryName": "run.coolant/coolant",
+    "title": "Coolant",
+    "description": "Instruments for what a model cannot know on its own: time, randomness, DNS, hashes, receipts.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://coolant.run/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "coolant",
+      "version": "1.0.0"
+    },
+    "toolCount": 28,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].op has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].pattern has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].op has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].value has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://coolant.run/mcp"
+}

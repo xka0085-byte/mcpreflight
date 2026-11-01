@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:59.067Z",
+  "server": {
+    "registryName": "io.github.perwinroth/got-cosy-graph",
+    "title": "Got Cosy",
+    "description": "Travel/hotel data: 6,300 hotels scored for cosiness from guest reviews; verified booking links.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gotcosy.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "got-cosy-graph",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gotcosy.com/api/mcp"
+}

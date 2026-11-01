@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:36.271Z",
+  "server": {
+    "registryName": "io.github.MelMayssonOwen/timetopost-mcp",
+    "title": "TimeToPost",
+    "description": "Official TimeToPost MCP server for social post drafting, scheduling, publishing and approval queues.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://api.timetopost.co/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.timetopost.co/mcp"
+}

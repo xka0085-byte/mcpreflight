@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:39.091Z",
+  "server": {
+    "registryName": "uk.slate-hq.registry/ambi",
+    "title": "AMBI",
+    "description": "Save and retrieve your chosen context, manage shared workspaces, and track project time.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.slate-hq.uk/ambi",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.slate-hq.uk/ambi"
+}

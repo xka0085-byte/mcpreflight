@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:25.546Z",
+  "server": {
+    "registryName": "io.github.theguysaccount/swissmote",
+    "title": "Swissmote public jobs",
+    "description": "Search published Swissmote openings with public apply links and confidentiality controls.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.swissmote.com/v2/api/public/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "swissmote-public-jobs",
+      "title": "Swissmote public jobs",
+      "version": "1.0.0",
+      "websiteUrl": "https://swissmote.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page_size has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.swissmote.com/v2/api/public/mcp"
+}

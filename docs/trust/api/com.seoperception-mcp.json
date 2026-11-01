@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:21.500Z",
+  "server": {
+    "registryName": "com.seoperception/mcp",
+    "title": "SEO Perception",
+    "description": "Search Console, crawl, and SEO to-dos in Cursor and Claude. OAuth or token; close to-dos optionally.",
+    "registryVersion": "2.1.0"
+  },
+  "endpoint": "https://seoperception.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://seoperception.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:16.871Z",
+  "server": {
+    "registryName": "to.unspoken/conversation-exercises",
+    "title": "Unspoken Conversation Exercises",
+    "description": "Free conversation exercises for understanding, reconnecting, and checking mutual readiness.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://unspoken.to/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "unspoken-conversation-exercises",
+      "title": "Unspoken Conversation Exercises",
+      "version": "1.0.0",
+      "websiteUrl": "https://unspoken.to/mcp"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://unspoken.to/api/mcp"
+}

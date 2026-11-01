@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:07.972Z",
+  "server": {
+    "registryName": "io.github.serenido/bilibili",
+    "title": "Bilibili: Videos, Comments, Danmaku & Creators (B站)",
+    "description": "Bilibili (B站) data without login: video stats, comments, danmaku, creators, trending, hot searches.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=serenido/bilibili-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=serenido/bilibili-scraper"
+}

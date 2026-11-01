@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:39.458Z",
+  "server": {
+    "registryName": "io.github.vcode-sh/dokploy-mcp",
+    "title": "Dokploy MCP",
+    "description": "Dokploy MCP server for Codex, Cursor, and Claude with compact stdio and hosted HTTP modes",
+    "registryVersion": "4.0.0"
+  },
+  "endpoint": "https://{remoteHost}{mcpPath}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{remoteHost}{mcpPath}"
+}

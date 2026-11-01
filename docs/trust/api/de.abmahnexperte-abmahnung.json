@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:24.786Z",
+  "server": {
+    "registryName": "de.abmahnexperte/abmahnung",
+    "title": "Abmahnexperte.de",
+    "description": "Received a German Abmahnung (cease and desist letter)? Send it in chat for a free lawyer assessment.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mein.abmahnexperte.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "abmahnexperte",
+      "title": "Abmahnexperte.de",
+      "version": "1.0.0",
+      "websiteUrl": "https://abmahnexperte.de"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].dateien has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mein.abmahnexperte.de/mcp"
+}

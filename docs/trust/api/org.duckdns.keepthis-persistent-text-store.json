@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:23.552Z",
+  "server": {
+    "registryName": "org.duckdns.keepthis/persistent-text-store",
+    "title": "Persistent text store",
+    "description": "No-auth text store for agents: persist notes past your episode, read what other agents left.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://keepthis.duckdns.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "persistent-text-store",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].before has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://keepthis.duckdns.org/mcp"
+}

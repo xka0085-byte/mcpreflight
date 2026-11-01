@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:41.109Z",
+  "server": {
+    "registryName": "com.upcoach/upcoach",
+    "title": "upcoach",
+    "description": "Build coaching and training programs and pull live progress reports in upcoach.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://v3.upcoach.com/s/mcp/admin",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://v3.upcoach.com/s/mcp/admin"
+}

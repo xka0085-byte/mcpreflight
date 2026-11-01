@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:29.725Z",
+  "server": {
+    "registryName": "io.github.albemarlestudio/clayre",
+    "title": "io.github.albemarlestudio/clayre",
+    "description": "Brand strategy and content-calendar context for agents, with human-confirmed approval gates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.clayre.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.clayre.app/mcp"
+}

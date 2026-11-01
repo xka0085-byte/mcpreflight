@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:56.119Z",
+  "server": {
+    "registryName": "io.ironshell/preflight402",
+    "title": "preflight402",
+    "description": "Trust verdict for an x402 payment endpoint: health, 402 handshake, price, proceed/caution/avoid.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://preflight402.ironshell.io/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://preflight402.ironshell.io/mcp"
+}

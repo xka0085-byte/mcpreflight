@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:52.145Z",
+  "server": {
+    "registryName": "io.github.ArneFfm/ecoaloha",
+    "title": "EcoAloha",
+    "description": "Search and compare outdoor experiences. Public keyless API; booking and payment happen on Viator.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://ecoaloha.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ecoaloha",
+      "title": "EcoAloha",
+      "version": "1.2.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ecoaloha.com/mcp"
+}

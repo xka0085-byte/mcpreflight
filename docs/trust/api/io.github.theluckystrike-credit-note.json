@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:31.019Z",
+  "server": {
+    "registryName": "io.github.theluckystrike/credit-note",
+    "title": "io.github.theluckystrike/credit-note",
+    "description": "Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.",
+    "registryVersion": "0.22.8"
+  },
+  "endpoint": "https://mcp.zovo.one/mcp/credit-note-ics",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-credit-note",
+      "version": "0.22.8"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].recipient has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].reason has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].reason_detail has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].issue_date has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zovo.one/mcp/credit-note-ics"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:26.264Z",
+  "server": {
+    "registryName": "org.feegate/marketplace",
+    "title": "Feegate AI Agent data marketplace catalog & platform metrics",
+    "description": "Pay-per-call MCP data products listed on Feegate. Free discovery, x402 USDC paid queries on Base.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://feegate.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "feegate-marketplace",
+      "version": "1.30.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].product_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://feegate.org/mcp"
+}

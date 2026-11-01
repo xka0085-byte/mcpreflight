@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:36.638Z",
+  "server": {
+    "registryName": "io.github.flightdb/celebrity-jets",
+    "title": "Celebrity Jet Tracker (via FlightDB)",
+    "description": "Track private jets of celebrities and billionaires: Elon Musk, Taylor Swift, Bezos, Drake and more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://flightdb.org/mcp/celebrity-jets",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://flightdb.org/mcp/celebrity-jets"
+}

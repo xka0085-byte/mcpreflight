@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:31.512Z",
+  "server": {
+    "registryName": "ai.artil/artil",
+    "title": "Artil — Email, SMS & Messaging for AI Agents",
+    "description": "Give AI agents own email inbox, SMS numbers, and workspace accounts to receive and send messages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.artil.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.artil.ai/mcp"
+}

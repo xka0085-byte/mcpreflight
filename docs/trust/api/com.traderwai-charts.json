@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:05.878Z",
+  "server": {
+    "registryName": "com.traderwai/charts",
+    "title": "TraderWAI Charts",
+    "description": "Read-only market charts, OHLC, backtests and a view of your connected broker accounts",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://mcp.traderwai.com/charts/v2",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.traderwai.com/charts/v2"
+}

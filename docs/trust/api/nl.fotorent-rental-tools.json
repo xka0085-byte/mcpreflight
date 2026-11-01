@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:37.091Z",
+  "server": {
+    "registryName": "nl.fotorent/rental-tools",
+    "title": "FotoRent rental tools",
+    "description": "Camera rental in Diemen near Amsterdam: catalog, kit recommendations, compatibility and estimates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.fotorent.nl/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fotorent",
+      "title": "FotoRent equipment rental near Amsterdam",
+      "version": "1.0.0",
+      "websiteUrl": "https://fotorent.nl/agents/"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].slugs has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].use_case has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].budget_total has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.fotorent.nl/mcp"
+}

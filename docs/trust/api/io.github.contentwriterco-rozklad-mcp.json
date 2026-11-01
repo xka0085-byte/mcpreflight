@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:42.541Z",
+  "server": {
+    "registryName": "io.github.ContentWriterco/rozklad-mcp",
+    "title": "io.github.ContentWriterco/rozklad-mcp",
+    "description": "Polish train, bus & city transit timetables: journeys, departures, live delays, fares",
+    "registryVersion": "0.4.1"
+  },
+  "endpoint": "https://rozklad.compabase.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rozklad-mcp",
+      "version": "0.4.1"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].live has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].live has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lon has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rozklad.compabase.com/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:56.580Z",
+  "server": {
+    "registryName": "io.github.cyberLdy/solescout",
+    "title": "SoleScout",
+    "description": "Live sneaker & streetwear prices and in-stock sizes across 600+ US stores, by style code.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://solescout.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "solescout",
+      "version": "1.0.0",
+      "instructions": "Live sneaker and streetwear pricing across thousands of retailers, re-read roughly every two hours, with per-size availability. Coverage is weighted toward independent boutiques that do not publish product feeds, so it answers \"who actually has this, in this size, for how much\" in cases a feed-based catalogue cannot. Read-only; nothing here can place an order."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://solescout.ai/api/mcp"
+}

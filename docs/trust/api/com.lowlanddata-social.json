@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:01.822Z",
+  "server": {
+    "registryName": "com.lowlanddata/social",
+    "title": "LowlandData Social",
+    "description": "Public posts and videos from Bluesky, Telegram, Substack, Dailymotion and Likee as JSON.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?actors=lowlanddata/bluesky-scraper,lowlanddata/telegram-channel-scraper,lowlanddata/substack-scraper,lowlanddata/dailymotion-scraper,lowlanddata/likee-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=lowlanddata/bluesky-scraper,lowlanddata/telegram-channel-scraper,lowlanddata/substack-scraper,lowlanddata/dailymotion-scraper,lowlanddata/likee-scraper"
+}

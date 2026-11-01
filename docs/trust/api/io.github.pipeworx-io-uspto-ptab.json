@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:09.933Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/uspto-ptab",
+    "title": "Uspto Ptab",
+    "description": "USPTO PTAB MCP — wraps the USPTO Open Data Portal (ODP) PTAB APIs",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://gateway.pipeworx.io/uspto-ptab/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pipeworx-gateway",
+      "version": "0.1.0"
+    },
+    "toolCount": 54,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[50].patent_number has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[50].party has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/uspto-ptab/mcp"
+}

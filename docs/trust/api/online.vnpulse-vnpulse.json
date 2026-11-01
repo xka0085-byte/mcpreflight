@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:10.233Z",
+  "server": {
+    "registryName": "online.vnpulse/vnpulse",
+    "title": "VNPulse",
+    "description": "Vietnam stock market data: HOSE/HNX/UPCOM prices, foreign flow, order book, financials, macro, news.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ai.vnpulse.online/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.vnpulse.online/mcp"
+}

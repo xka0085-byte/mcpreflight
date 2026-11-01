@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:47.840Z",
+  "server": {
+    "registryName": "io.github.apperhq/apper-mcp",
+    "title": "Apper MCP Connector",
+    "description": "Build and update complete applications in Apper through AI assistants using MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apper.io/v1/connect",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apper.io/v1/connect"
+}

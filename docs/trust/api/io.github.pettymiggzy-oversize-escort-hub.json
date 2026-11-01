@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:19.422Z",
+  "server": {
+    "registryName": "io.github.PettyMiggzy/oversize-escort-hub",
+    "title": "Oversize Escort Hub",
+    "description": "Read-only pilot car (P/EVO) tools: sourced beginner guide, escorts by state, open oversize loads.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.oversize-escort-hub.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "oversize-escort-hub",
+      "title": "Oversize Escort Hub",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.oversize-escort-hub.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.oversize-escort-hub.com/api/mcp"
+}

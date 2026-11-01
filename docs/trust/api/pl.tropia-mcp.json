@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:04.834Z",
+  "server": {
+    "registryName": "pl.tropia/mcp",
+    "title": "tropia.pl: Polish companies (KRS)",
+    "description": "Polish company data from KRS: profiles, historical connections, financials, state aid.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.tropia.pl/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tropia",
+      "title": "tropia.pl: Polish company registry (KRS)",
+      "version": "1.0.0",
+      "websiteUrl": "https://tropia.pl/api"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.tropia.pl/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:25.851Z",
+  "server": {
+    "registryName": "net.wasmarcade/wasm-arcade",
+    "title": "WASM Arcade",
+    "description": "Search the WASM Arcade game catalogue and return game links and availability.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://browsergame.footballwars.chatgpt.site/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://browsergame.footballwars.chatgpt.site/mcp"
+}

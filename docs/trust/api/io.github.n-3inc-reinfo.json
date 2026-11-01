@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:52.170Z",
+  "server": {
+    "registryName": "io.github.n-3inc/reinfo",
+    "title": "不動産情報サービス MCP",
+    "description": "国土交通省の不動産情報ライブラリから不動産価格データを取得するためのサービスです。",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://mcp.n-3.ai/mcp?tools=get-time,reinfolib-real-estate-price,reinfolib-city-list",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "n.3.ai MCP Server",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.n-3.ai/mcp?tools=get-time,reinfolib-real-estate-price,reinfolib-city-list"
+}

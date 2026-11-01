@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:17.115Z",
+  "server": {
+    "registryName": "io.github.jannegpriv/vaderkollen",
+    "title": "VäderKollen — Nordic Weather",
+    "description": "Nordic weather: forecasts, warnings, HD radar, rain nowcast, lightning, aurora, satellite AI.",
+    "registryVersion": "0.11.4"
+  },
+  "endpoint": "https://qtowzkwkpirntmaumbfi.supabase.co/functions/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://qtowzkwkpirntmaumbfi.supabase.co/functions/v1/mcp"
+}

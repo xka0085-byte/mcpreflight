@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:22.537Z",
+  "server": {
+    "registryName": "io.apis/apis-io",
+    "title": "io.apis/apis-io",
+    "description": "Discover, rate and compare APIs and providers in the APIs.io catalog; manage a listing you own.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://apis.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "apis.io",
+      "version": "1.3.0"
+    },
+    "toolCount": 144,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].onboarding_descriptor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].onboarding_descriptor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].exclude_operator has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].include_pipeline has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apis.io/mcp"
+}

@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:09.388Z",
+  "server": {
+    "registryName": "com.zinc.www/mcp",
+    "title": "Zinc",
+    "description": "Shop Amazon, Walmart, Target and Best Buy from chat: search, pay by card, track orders.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.zinc.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "zinc",
+      "version": "1.1.0",
+      "title": "Zinc",
+      "description": "Search products across retailers and buy them with a card, with every step rendered as an interactive card.",
+      "websiteUrl": "https://zinc.com",
+      "icons": [
+        {
+          "src": "https://mcp.zinc.com/mcp/_mcp-use/public/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].products has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].order has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zinc.com/mcp"
+}

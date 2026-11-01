@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:04.670Z",
+  "server": {
+    "registryName": "io.mammoth/docs",
+    "title": "Mammoth Docs",
+    "description": "Search and read the Mammoth Analytics docs. Tools: search_docs, get_doc, list_docs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://docs.mammoth.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Mammoth Docs",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].section has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://docs.mammoth.io/mcp"
+}

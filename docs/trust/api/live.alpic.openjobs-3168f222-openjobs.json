@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:31.898Z",
+  "server": {
+    "registryName": "live.alpic.openjobs-3168f222/openjobs",
+    "title": "OpenJob",
+    "description": "Find jobs in your own words and apply on the company website — no detours.",
+    "registryVersion": "0.0.2"
+  },
+  "endpoint": "https://openjobs-3168f222.alpic.live",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "openjobs",
+      "title": "OpenJob",
+      "version": "1.4.1"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].remote_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].min_salary has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://openjobs-3168f222.alpic.live"
+}

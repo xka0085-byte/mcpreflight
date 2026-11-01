@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:39.959Z",
+  "server": {
+    "registryName": "io.github.UteamUP/mcp-server",
+    "title": "UteamUP CMMS",
+    "description": "Connect AI assistants to UteamUP CMMS for work orders, assets, maintenance, and inventory.",
+    "registryVersion": "2.3.0-beta.9"
+  },
+  "endpoint": "https://api.uteamup.com/mcp/read-only",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.uteamup.com/mcp/read-only"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:46.157Z",
+  "server": {
+    "registryName": "com.menivor/menivor",
+    "title": "Menivor",
+    "description": "Create short-form vertical reels and ads, check pricing, and get your finished MP4 from Menivor.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://menivor.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "menivor",
+      "title": "Menivor",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].platforms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].youtube_privacy_status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].modality has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://menivor.com/api/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:01.684Z",
+  "server": {
+    "registryName": "io.swiftnodes/swiftnodes",
+    "title": "SwiftNodes RPC",
+    "description": "Blockchain RPC for 125+ chains: endpoints, method support, probing and RPC calls with your key.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://rpc.swiftnodes.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "swiftnodes",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].method has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].params has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rpc.swiftnodes.io/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:20.424Z",
+  "server": {
+    "registryName": "io.github.dialgoodian/clawdcall-mcp",
+    "title": "ClawdCall",
+    "description": "Give AI agents a phone layer for consent-based calls, transcripts, summaries, and outcomes.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://gateway.clawdcall.com/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.clawdcall.com/mcp/"
+}

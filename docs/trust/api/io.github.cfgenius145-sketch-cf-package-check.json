@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:59.796Z",
+  "server": {
+    "registryName": "io.github.cfgenius145-sketch/cf-package-check",
+    "title": "io.github.cfgenius145-sketch/cf-package-check",
+    "description": "Abandonment checks for WordPress, npm and PyPI packages, priced per call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://packages.cfsoft.us/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "CF Package Check",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].ecosystem has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://packages.cfsoft.us/mcp"
+}

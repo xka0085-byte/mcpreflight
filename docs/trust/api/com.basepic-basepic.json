@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:57.002Z",
+  "server": {
+    "registryName": "com.basepic/basepic",
+    "title": "BasePic",
+    "description": "Upload, edit and share images by link: free image hosting for AI agents, no API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://basepic.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "basepic",
+      "title": "BasePic",
+      "version": "1.0.0",
+      "websiteUrl": "https://basepic.com/developers"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].quality has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].filename has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].delete_key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://basepic.com/mcp"
+}

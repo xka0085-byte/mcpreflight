@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:35.986Z",
+  "server": {
+    "registryName": "io.github.theluckystrike/kanban-todo-tasks-projects-board",
+    "title": "io.github.theluckystrike/kanban-todo-tasks-projects-board",
+    "description": "A local task board per project: columns, due dates, estimates, priorities, overdue, weekly review.",
+    "registryVersion": "0.22.6"
+  },
+  "endpoint": "https://mcp.zovo.one/mcp/kanban",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-kanban",
+      "version": "0.22.6"
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].notes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].estimate_minutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].priority has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].column has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zovo.one/mcp/kanban"
+}

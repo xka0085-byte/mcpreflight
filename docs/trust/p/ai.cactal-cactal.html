@@ -3,33 +3,244 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cactal — MCP trust report (AUTH_GATED)</title>
-<meta name="description" content="Read-only MCP schema trust report for ai.cactal/cactal (https://api.cactal.ai/v1/mcp): AUTH_GATED, protocol unknown, unknown tools. Reproducible with mcpreflight.">
+<title>Cactal — MCP trust report (PASS)</title>
+<meta name="description" content="Read-only MCP schema trust report for ai.cactal/cactal (https://api.cactal.ai/v1/mcp): PASS, protocol 2025-06-18, 84 tools. Reproducible with mcpreflight.">
 <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/trust/p/ai.cactal-cactal.html">
 <style>:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.AUTH_GATED{background:#ddf4ff;color:#0550ae}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}code{background:transparent}}</style>
 </head>
 <body>
 <main>
 <p><span class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> / report</span></p>
-<h1>Cactal <span class="pill AUTH_GATED">AUTH-GATED</span></h1>
-<p class="muted">The endpoint answered an anonymous initialize with 401 and a <code>WWW-Authenticate: Bearer</code> header, so it requires authentication by design. This is an auth gate, not a failure — authenticated scans are out of scope.</p>
+<h1>Cactal <span class="pill PASS">PASS</span></h1>
+
 <p class="muted">The website platform for AI agents. One API to build, host, and operate real websites.</p>
 <table>
 <tr><th>Registry name</th><td><code>ai.cactal/cactal</code> (v1.0.0)</td></tr>
 <tr><th>Endpoint</th><td><code>https://api.cactal.ai/v1/mcp</code></td></tr>
-<tr><th>Reported server</th><td>—</td></tr>
-<tr><th>Protocol version</th><td>not negotiated</td></tr>
-<tr><th>Tools exposed</th><td>unknown</td></tr>
-<tr><th>Auth gate</th><td>gated</td></tr>
-<tr><th>Checked at</th><td>2026-10-30T13:38:06.807Z</td></tr>
+<tr><th>Reported server</th><td>cactal-public-api 1.0.0</td></tr>
+<tr><th>Protocol version</th><td>2025-06-18</td></tr>
+<tr><th>Tools exposed</th><td>84</td></tr>
+
+<tr><th>Checked at</th><td>2026-11-01T03:37:48.111Z</td></tr>
 </table>
 <h2>Findings</h2>
-<ul class="findings"><li><span class="pill INFO">INFO</span> <code>AUTH_GATE_VERIFIED</code> — Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server</li></ul>
+<ul class="findings"><li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].organizationId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].sort has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].search has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].scope has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].organizationId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].prompt has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].slug has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].slug has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[6].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[6].hostname has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[7].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[7].domainId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].domainId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[9].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[9].domainId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].label has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].kind has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].assetId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].assetId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].category has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[15].assetId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[16].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[19].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[20].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[21].resourceId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[21].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].resourceId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].startLine has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].endLine has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[23].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[23].contextLines has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[24].resourceId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[25].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[25].assetId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[26].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[27].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[28].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[29].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].file has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].content has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].file has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[36].route has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[37].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[37].metadata has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[38].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[39].target has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[40].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[40].target has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].version has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[46].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].slug has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].displayName has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[47].fields has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].collectionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].displayName has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[49].collectionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].key has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].displayName has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].type has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].required has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].isUnique has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].example has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].targetCollectionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].config has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[50].collectionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].fieldId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].displayName has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].required has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].isUnique has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].example has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].config has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[52].fieldId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].collectionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].page has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].depth has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].published has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].filter has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].filterLogic has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].search has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[53].sort has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[54].depth has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].itemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[55].depth has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[56].collectionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[56].slug has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[56].data has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[56].references has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[56].images has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[56].files has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[57].itemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[57].data has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[57].references has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[57].images has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[57].files has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[58].itemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[59].itemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[60].itemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].startAt has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].endAt has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].path has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].referrer has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].browser has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].os has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].device has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].country has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].region has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].city has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].language has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].hostname has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].tag has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].event has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].distinctId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].utmSource has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].utmMedium has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].utmCampaign has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].utmContent has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].utmTerm has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].segment has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[61].cohort has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].startAt has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].endAt has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].path has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].referrer has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].browser has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].os has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].device has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].country has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].region has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].city has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].language has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].hostname has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].tag has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].event has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].distinctId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].utmSource has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].utmMedium has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].utmCampaign has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].utmContent has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].utmTerm has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].segment has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].cohort has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].unit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].timezone has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[62].maxPoints has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[63].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].submissionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[67].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[67].submissionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[68].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[68].submissionId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[69].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[70].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[70].formName has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[70].recipientId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[71].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[71].recipientId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[80].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[81].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[81].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[81].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[82].websiteId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[82].runId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[83].websiteId has no description</li></ul>
 <h2>Reproduce this report</h2>
 <pre>npx @eidonze/mcpreflight schema https://api.cactal.ai/v1/mcp</pre>
 <p>Embed status: <code>&lt;img src="https://xka0085-byte.github.io/mcpreflight/trust/badge/ai.cactal-cactal.svg"&gt;</code> · Machine-readable: <a href="https://xka0085-byte.github.io/mcpreflight/trust/api/ai.cactal-cactal.json"><code>/api/ai.cactal-cactal.json</code></a></p>
-<p>Cite this report as: mcpreflight Trust Directory, <code>ai.cactal/cactal</code>, scanned 2026-10-30. https://xka0085-byte.github.io/mcpreflight/trust/p/ai.cactal-cactal.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
-<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-10-30.</div>
+<p>Cite this report as: mcpreflight Trust Directory, <code>ai.cactal/cactal</code>, scanned 2026-11-01. https://xka0085-byte.github.io/mcpreflight/trust/p/ai.cactal-cactal.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
+<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-11-01.</div>
 </main>
 </body>
 </html>

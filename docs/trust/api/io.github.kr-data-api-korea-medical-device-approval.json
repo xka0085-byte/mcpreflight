@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:25.425Z",
+  "server": {
+    "registryName": "io.github.kr-data-api/korea-medical-device-approval",
+    "title": "Korea Medical Device Approval Lookup (MFDS 의료기기 품목허가)",
+    "description": "Korean medical device approvals (MFDS): number, class, license holder, manufacturer, status",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=kr-data/korea-medical-device-approval",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=kr-data/korea-medical-device-approval"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:39.006Z",
+  "server": {
+    "registryName": "com.whichsensor/products",
+    "title": "Which Sensor",
+    "description": "Search industrial sensors: specs, list and customer prices, datasheets, alternatives, quotes. Login.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://www.whichsensor.com/api/public-mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.whichsensor.com/api/public-mcp"
+}

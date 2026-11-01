@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:06.645Z",
+  "server": {
+    "registryName": "app.inescapable/booking",
+    "title": "Inescapable Detail",
+    "description": "Mobile car detailing in Jacksonville, FL: prices, open times and booking.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://inescapable.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "inescapable-detail",
+      "title": "Inescapable Detail · mobile car detailing, Jacksonville FL",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].block has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://inescapable.app/mcp"
+}

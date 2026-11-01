@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:09.734Z",
+  "server": {
+    "registryName": "io.github.dat999zx/knowl",
+    "title": "Knowl",
+    "description": "Persistent memory for AI agents, for code, research and everyday life. Stale facts retire.",
+    "registryVersion": "5.28.1"
+  },
+  "endpoint": "https://api.knowl.cloud/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.knowl.cloud/mcp/"
+}

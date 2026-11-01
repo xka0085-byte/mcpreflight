@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:42.167Z",
+  "server": {
+    "registryName": "com.wiagil/wiagil",
+    "title": "WIA GIL: hotels, places, travel basics",
+    "description": "City search, nearby hotels and places, country travel basics, reference exchange rates, distances.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.wiagil.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wiagil",
+      "title": "WIA GIL — hotels, places, travel basics",
+      "version": "1.0.0",
+      "websiteUrl": "https://wiagil.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].from_lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].from_lng has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].to_lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].to_lng has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.wiagil.com/mcp"
+}

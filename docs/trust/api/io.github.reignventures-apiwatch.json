@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:35.257Z",
+  "server": {
+    "registryName": "io.github.ReignVentures/apiwatch",
+    "title": "apiwatch",
+    "description": "Is this model or API still safe to call? Retirement and breaking change dates, with the fix.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://apiwatch.reignventures.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "apiwatch",
+      "title": "apiwatch",
+      "version": "1.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apiwatch.reignventures.co/mcp"
+}

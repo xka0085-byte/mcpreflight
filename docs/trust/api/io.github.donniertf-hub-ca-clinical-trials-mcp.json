@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:38.224Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/ca-clinical-trials-mcp",
+    "title": "Canada Clinical Trials MCP",
+    "description": "Clinical trials authorised by Health Canada.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ca-clinical-trials-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ca-clinical-trials-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].keyword has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].keyword has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].since has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].protocol_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].keyword has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ca-clinical-trials-mcp.donniertf.workers.dev/mcp"
+}

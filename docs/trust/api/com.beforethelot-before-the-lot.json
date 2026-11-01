@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:56.887Z",
+  "server": {
+    "registryName": "com.beforethelot/before-the-lot",
+    "title": "Before the Lot",
+    "description": "Car-buying math and state rules: out-the-door prices, quote checks, leases and trade-ins",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://beforethelot.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Before the Lot",
+      "title": "Before the Lot",
+      "version": "1.0.0",
+      "websiteUrl": "https://beforethelot.com"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].condition has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].add_ons has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].quotes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].tax_rate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].offers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].details has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://beforethelot.com/mcp"
+}

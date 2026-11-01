@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:56.394Z",
+  "server": {
+    "registryName": "com.affiliateprogramterms/affterms",
+    "title": "affterms — affiliate program terms",
+    "description": "Sourced, dated affiliate program terms, read off each company's page: commission, cookie, payout.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://affiliateprogramterms.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "affterms",
+      "title": "affterms — affiliate program terms",
+      "version": "2026-10-29"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://affiliateprogramterms.com/mcp"
+}

@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:45.440Z",
+  "server": {
+    "registryName": "io.github.freeq-irc/freeq",
+    "title": "freeq",
+    "description": "Read and verify freeq conversations: channels, history, search, signatures, pins.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://irc.freeq.at/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Read and verify freeq conversations: list public channels, page through history, full-text search, check who cryptographically signed a message, and read pinned context.",
+      "icons": [
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "32x32"
+          ],
+          "src": "https://irc.freeq.at/favicon.png"
+        },
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ],
+          "src": "https://irc.freeq.at/freeq-180.png"
+        },
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "1024x1024"
+          ],
+          "src": "https://irc.freeq.at/freeq.png"
+        }
+      ],
+      "name": "freeq",
+      "title": "freeq — IRC with AT Protocol identity",
+      "version": "0.1.0",
+      "websiteUrl": "https://freeq.at"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://irc.freeq.at/mcp"
+}

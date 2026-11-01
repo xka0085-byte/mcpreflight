@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:34.554Z",
+  "server": {
+    "registryName": "eu.karpata/karpata",
+    "title": "Karpata – company data from public registers",
+    "description": "Search companies in public registers: register card, live VAT risk check, risk, financials, watch.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.karpata.eu/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "karpata",
+      "version": "1.1.0",
+      "title": "Karpata – company data for Slovakia, Czechia, Poland and Romania"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.karpata.eu/v1/mcp"
+}

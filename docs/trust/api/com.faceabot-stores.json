@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:15.963Z",
+  "server": {
+    "registryName": "com.faceabot/stores",
+    "title": "Faceabot Stores for AI agents",
+    "description": "Where an AI agent can shop by country: UCP stores verified by Faceabot, big retailers. Free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://faceabot.com/tools-mcp/stores",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "faceabot-stores",
+      "title": "Faceabot stores for AI agents",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://faceabot.com/tools-mcp/stores"
+}

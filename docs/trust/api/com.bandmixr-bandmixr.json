@@ -1,0 +1,63 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:53.974Z",
+  "server": {
+    "registryName": "com.bandmixr/bandmixr",
+    "title": "Bandmixr",
+    "description": "AI mixing and mastering in the chat: check a song, mix your stems, change the mix in plain words.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bandmixr.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bandmixr",
+      "title": "Bandmixr",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://bandmixr.com/android-chrome-512x512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://bandmixr.com/android-chrome-192x192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://bandmixr.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].labels has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].changes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bandmixr.com/mcp"
+}

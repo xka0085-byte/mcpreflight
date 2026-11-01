@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:37.202Z",
+  "server": {
+    "registryName": "io.github.Airtreks/airtreks-mcp",
+    "title": "AirTreks MCP",
+    "description": "Multi-city flight routing intelligence — plan RTW trips, validate alliances, get carrier picks.",
+    "registryVersion": "1.2.7"
+  },
+  "endpoint": "https://mcp.airtreks.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "airtreks",
+      "version": "1.2.7"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.airtreks.com/mcp"
+}

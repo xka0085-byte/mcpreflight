@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:11.856Z",
+  "server": {
+    "registryName": "io.github.bartosz-kuc/skanfirmy",
+    "title": "skanfirmy.pl",
+    "description": "Verify Polish companies by NIP/KRS/REGON + EU VAT (VIES). 14 MCP tools (9 no-key).",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://skanfirmy.pl/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "skanfirmy-mcp",
+      "version": "1.4.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "14 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://skanfirmy.pl/mcp"
+}

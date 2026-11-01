@@ -1,0 +1,72 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:53.891Z",
+  "server": {
+    "registryName": "com.metruvo/fund-comparison",
+    "title": "Metruvo portfolio analysis",
+    "description": "Portfolio analysis from published fund data: charges, exposure and overlap. Read-only.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://metruvo.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "metruvo",
+      "title": "Metruvo",
+      "version": "1.1.0",
+      "websiteUrl": "https://metruvo.com",
+      "icons": [
+        {
+          "src": "https://metruvo.com/metruvo-mark.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://metruvo.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].holdings has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].baseCurrency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].isins has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].criteria has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://metruvo.com/api/mcp"
+}

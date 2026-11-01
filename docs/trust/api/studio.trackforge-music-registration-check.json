@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:55.336Z",
+  "server": {
+    "registryName": "studio.trackforge/music-registration-check",
+    "title": "TrackForge",
+    "description": "Check a catalogue against The MLC, look up a song's writers, publishers and ISWC, validate CWR files",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.trackforge.studio/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "trackforge",
+      "title": "TrackForge",
+      "version": "1.0.0",
+      "websiteUrl": "https://trackforge.studio/mcp"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.trackforge.studio/api/v1/mcp"
+}

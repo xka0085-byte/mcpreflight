@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:36.588Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/au-cash-rate-mcp",
+    "title": "Australia Cash Rate (RBA) MCP",
+    "description": "RBA cash rate target and money-market yields.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://au-cash-rate-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "au-cash-rate-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://au-cash-rate-mcp.donniertf.workers.dev/mcp"
+}

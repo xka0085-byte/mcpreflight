@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:05.475Z",
+  "server": {
+    "registryName": "io.github.reinlayer/rein-agent-risk-scale",
+    "title": "Rein Agent Risk Scale",
+    "description": "Agent Risk Rating, A–D (NR = not rated): self-declared and unverified; not a credit rating.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://rein-scale.mangowave-ad191d9c.eastus.azurecontainerapps.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rein-agent-risk-scale",
+      "title": "Rein Agent Risk Scale",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].grade has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rein-scale.mangowave-ad191d9c.eastus.azurecontainerapps.io/mcp"
+}

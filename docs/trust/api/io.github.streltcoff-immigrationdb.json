@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:00.272Z",
+  "server": {
+    "registryName": "io.github.streltcoff/immigrationdb",
+    "title": "ImmigrationDB",
+    "description": "Read-only migration data: cities, visa routes, entry rules, costs, safety, climate, with sources.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://immigrationdb.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://immigrationdb.com/mcp"
+}

@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:26.855Z",
+  "server": {
+    "registryName": "xyz.utilityhouse/federal-grant-evidence",
+    "title": "Federal Grant Evidence",
+    "description": "Find U.S. federal grants and return cited hard-gate and award-history evidence packs.",
+    "registryVersion": "1.3.2"
+  },
+  "endpoint": "https://grants.utilityhouse.xyz/mcp/registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "federal-grant-evidence",
+      "version": "1.3.2"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].organization has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].organization has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].opportunity_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].profile has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].attest_current_actual_non_personal_facts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].attest_intends_to_apply_to_opportunity_359701 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].consent_to_store_pointer_only_result has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://grants.utilityhouse.xyz/mcp/registry"
+}

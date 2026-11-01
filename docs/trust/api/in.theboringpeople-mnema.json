@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:02.356Z",
+  "server": {
+    "registryName": "in.theboringpeople/mnema",
+    "title": "Mnema — Shared Brain for You and Your AI Agents",
+    "description": "Self-hostable shared brain for you and your AI agents — docs, flows, meetings, decisions, rationale",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.theboringpeople.in/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.theboringpeople.in/mcp"
+}

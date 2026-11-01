@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:14.845Z",
+  "server": {
+    "registryName": "io.github.wit221/ivehadit",
+    "title": "I've had it",
+    "description": "Screen time and feed blocking: read your numbers, shut Reels, Shorts and For You, search guides.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ivehadit.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ivehadit.app/mcp"
+}

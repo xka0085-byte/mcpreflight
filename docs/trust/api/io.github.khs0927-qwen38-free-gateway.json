@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:12.791Z",
+  "server": {
+    "registryName": "io.github.khs0927/qwen38-free-gateway",
+    "title": "io.github.khs0927/qwen38-free-gateway",
+    "description": "Free Qwen3.8-27B gateway with isolated Minis provider, SSE, retry/failover, and MCP.",
+    "registryVersion": "0.6.2"
+  },
+  "endpoint": "https://api-v2.appdeploy.ai/app/qwen3-8-free-gateway-n995yy/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "qwen38-free-gateway",
+      "version": "0.5.6"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].prompt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].system has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].temperature has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].reasoning_effort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api-v2.appdeploy.ai/app/qwen3-8-free-gateway-n995yy/api/mcp"
+}

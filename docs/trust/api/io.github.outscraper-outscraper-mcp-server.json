@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:34.742Z",
+  "server": {
+    "registryName": "io.github.outscraper/outscraper-mcp-server",
+    "title": "Outscraper MCP Server",
+    "description": "Outscraper MCP business discovery, Maps intelligence, enrichment, reviews, and contact data.",
+    "registryVersion": "0.2.3"
+  },
+  "endpoint": "https://mcp.outscraper.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.outscraper.com/mcp"
+}

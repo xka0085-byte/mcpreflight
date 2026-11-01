@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:56.826Z",
+  "server": {
+    "registryName": "dev.pages.wayreceipt/wayreceipt",
+    "title": "Wayreceipt",
+    "description": "Proof of delivery for agent work: verify countersigned receipts and deliverable hashes. Free.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://wayreceipt.pages.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wayreceipt",
+      "title": "Wayreceipt",
+      "version": "0.1.0",
+      "description": "Wayreceipt: proof of delivery for agent work. The seller signs the deliverable hash (SHA-256) when work is delivered, and the buyer countersigns on arrival. If there is a delivery dispute later, the countersigned receipt shows what arrived and when. Anyone can check a receipt for free, with no sign-up."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].seller_link has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].buyer_link has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wayreceipt.pages.dev/mcp"
+}

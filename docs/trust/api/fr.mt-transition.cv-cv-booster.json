@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:10.106Z",
+  "server": {
+    "registryName": "fr.mt-transition.cv/cv-booster",
+    "title": "CV Booster by MT-Transition",
+    "description": "Score and improve a CV, match it to a job offer, check figures, export Word/PDF.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://cv.mt-transition.fr/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cv.mt-transition.fr/api/v1/mcp"
+}

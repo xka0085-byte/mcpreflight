@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:47.997Z",
+  "server": {
+    "registryName": "science.pith/pith",
+    "title": "Pith",
+    "description": "Reviews of arXiv papers for AI agents: verdicts, claims, flaws, compiled records, citation graphs.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://pith.science/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pith",
+      "version": "1.3.0",
+      "websiteUrl": "https://pith.science"
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].handle has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pith.science/mcp"
+}

@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:48.887Z",
+  "server": {
+    "registryName": "ch.drivelab/booking",
+    "title": "DriveLab Booking",
+    "description": "Find Swiss driving lessons, live availability, VKU, first aid and WAB courses; book on the website.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://drivelab.ch/wp-json/drivelab-mcp/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "drivelab-booking",
+      "title": "DriveLab Booking",
+      "version": "1.0.0",
+      "websiteUrl": "https://drivelab.ch/fahrschule/zuerich/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].instructor_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].service_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].course_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://drivelab.ch/wp-json/drivelab-mcp/v1/mcp"
+}

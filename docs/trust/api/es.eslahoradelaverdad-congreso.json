@@ -1,0 +1,79 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:23.713Z",
+  "server": {
+    "registryName": "es.eslahoradelaverdad/congreso",
+    "title": "Es la hora de la verdad (Congreso de los Diputados)",
+    "description": "Votes of Spain's Congress of Deputies since 2020: groups, deputies, provinces and the 29-N election.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://eslahoradelaverdad.es/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "eslahoradelaverdad",
+      "title": "Es la hora de la verdad",
+      "version": "1.0.0",
+      "websiteUrl": "https://eslahoradelaverdad.es",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMzMzQxNTUiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4IDgpIHNjYWxlKDEpIj48Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMC41IiBmaWxsPSJub25lIiBzdHJva2U9IiNmYmJmMjQiIHN0cm9rZS13aWR0aD0iNC41Ii8+PHBhdGggZD0iTTI0IDI0IDE1LjMgMTlNMjQgMjQgMzcgMTYuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmJiZjI0IiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMyIgZmlsbD0iI2ZiYmYyNCIvPjwvZz4KPC9zdmc+Cg==",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://eslahoradelaverdad.es/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://eslahoradelaverdad.es/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].legislatura has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].resultado has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pagina has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].legislatura has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limite has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://eslahoradelaverdad.es/api/mcp"
+}

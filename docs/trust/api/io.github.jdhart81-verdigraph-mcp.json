@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:30.058Z",
+  "server": {
+    "registryName": "io.github.jdhart81/verdigraph-mcp",
+    "title": "Verdigraph — paid hosted MCP for compute routing",
+    "description": "Paid hosted MCP for agent-to-agent compute routing. 25% of net revenue funds conservation.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://verdigraph-mcp.hartjustin6.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://verdigraph-mcp.hartjustin6.workers.dev/mcp"
+}

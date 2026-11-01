@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:11.226Z",
+  "server": {
+    "registryName": "io.github.davidmosiah/delx-protocol",
+    "title": "Delx Protocol — Agent Recovery & Continuity",
+    "description": "Free agent recovery and continuity. Public triage; register for a token to access private memory.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://api.delx.ai/v1/mcp/protocol?src=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Delx Agent Operations Protocol",
+      "version": "3.4.0"
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].idempotency_key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].ttl_seconds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.delx.ai/v1/mcp/protocol?src=registry"
+}

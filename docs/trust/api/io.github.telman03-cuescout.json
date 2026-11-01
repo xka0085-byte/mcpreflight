@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:19.913Z",
+  "server": {
+    "registryName": "io.github.telman03/cuescout",
+    "title": "CueScout",
+    "description": "Check if ChatGPT or Perplexity names a brand for a buying question, and if AI bots can read a site.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.cuescout.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cuescout",
+      "version": "1.2.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.cuescout.com/mcp"
+}

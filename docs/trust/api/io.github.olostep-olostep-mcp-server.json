@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:24.906Z",
+  "server": {
+    "registryName": "io.github.olostep/olostep-mcp-server",
+    "title": "Olostep MCP Server",
+    "description": "Live web search, scraping and crawling API for AI. Get structured, LLM-ready data from any site.",
+    "registryVersion": "1.0.19"
+  },
+  "endpoint": "https://mcp.olostep.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.olostep.com/mcp"
+}

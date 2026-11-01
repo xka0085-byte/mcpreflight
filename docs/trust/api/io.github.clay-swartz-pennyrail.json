@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:12.300Z",
+  "server": {
+    "registryName": "io.github.clay-swartz/pennyrail",
+    "title": "PennyRail Transaction Router",
+    "description": "Find and quote agent capabilities, then pay only the selected x402 execution URL.",
+    "registryVersion": "0.9.0"
+  },
+  "endpoint": "https://pennyrail.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pennyrail.vercel.app/api/mcp"
+}

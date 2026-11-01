@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:35.642Z",
+  "server": {
+    "registryName": "io.github.zenlee123/ppt-ai-api",
+    "title": "PPT.AI Developer API",
+    "description": "Create, edit, export and manage presentations. Requires a paid PPT.AI API merchant account.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://developer.ppt.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://developer.ppt.ai/api/mcp"
+}

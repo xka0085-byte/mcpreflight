@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:21.193Z",
+  "server": {
+    "registryName": "io.github.f-tiger/agiscorecard-web3-reconcile",
+    "title": "io.github.f-tiger/agiscorecard-web3-reconcile",
+    "description": "Reconcile declared stablecoin invoices and transfers; flag partial, pending and mismatched payments.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://reconcile.agiscorecard.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "web3-reconcile",
+      "title": "Stable Reconcile",
+      "version": "1.7.0",
+      "websiteUrl": "https://reconcile.agiscorecard.com/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reconcile.agiscorecard.com/mcp"
+}

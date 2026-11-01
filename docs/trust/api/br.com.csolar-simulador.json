@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:26.307Z",
+  "server": {
+    "registryName": "br.com.csolar/simulador",
+    "title": "CSolar Energia",
+    "description": "Solar power estimates from the electricity bill, and the service area check, for São Paulo, Brazil.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://csolar.com.br/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "csolar-energia",
+      "version": "1.0.0",
+      "title": "CSolar Energia",
+      "websiteUrl": "https://csolar.com.br"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://csolar.com.br/mcp"
+}

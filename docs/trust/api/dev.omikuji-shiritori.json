@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:51.067Z",
+  "server": {
+    "registryName": "dev.omikuji/shiritori",
+    "title": "Shiritori Dictionary (Japanese)",
+    "description": "Play Japanese shiritori with a 90,000-word dictionary: check moves, suggest next words.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://shiritori.omikuji.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shiritori-omikuji-dev",
+      "title": "しりとり辞書(shiritori.omikuji.dev)",
+      "version": "1.0.0",
+      "websiteUrl": "https://shiritori.omikuji.dev/ai/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].count has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].pool has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].loose_dakuten has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].word has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shiritori.omikuji.dev/mcp"
+}

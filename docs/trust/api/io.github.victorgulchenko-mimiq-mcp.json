@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:48.581Z",
+  "server": {
+    "registryName": "io.github.victorgulchenko/mimiq-mcp",
+    "title": "Mimiq: AI agents use your app like your users and find what breaks",
+    "description": "AI agents use your app like your users, in real browsers, and report what is broken or confusing.",
+    "registryVersion": "0.5.1"
+  },
+  "endpoint": "https://mcp.mimiqai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mimiq",
+      "version": "0.5.2",
+      "description": "AI agents use your web app like your users, each in a real browser, and report what is broken, what did nothing and where they got stuck, with the step and a screenshot. Run it on a preview before you ship, and after each fix.",
+      "homepage": "https://mimiqai.com",
+      "icon": "https://mimiqai.com/favicon.svg"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].compare_session_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mimiqai.com/mcp"
+}

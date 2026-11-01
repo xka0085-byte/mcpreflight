@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:31.125Z",
+  "server": {
+    "registryName": "io.github.aliceappai/mcp-server-alice",
+    "title": "io.github.aliceappai/mcp-server-alice",
+    "description": "Secure audio transcription meets AI. Connect Alice recordings to Claude, ChatGPT, Gemini, and more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aliceapp.ai/mcp/{api_key}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aliceapp.ai/mcp/{api_key}"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:17.966Z",
+  "server": {
+    "registryName": "com.danuastrology/danu",
+    "title": "Danu Astrology",
+    "description": "Real natal charts for you and your people: compare charts, map your Circle, see your week.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://danuastrology.com/mcp/connect",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://danuastrology.com/mcp/connect"
+}

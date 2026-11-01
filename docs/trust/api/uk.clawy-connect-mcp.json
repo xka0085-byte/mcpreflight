@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:37.018Z",
+  "server": {
+    "registryName": "uk.clawy/connect-mcp",
+    "title": "Connect-MCP",
+    "description": "Finds MCP servers and web APIs for a task, ranked by outcomes other AI agents reported.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://clawy.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "connect-mcp",
+      "title": "Connect-MCP",
+      "version": "0.1.0",
+      "websiteUrl": "https://clawy.uk/mcp"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].needs has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].outcome has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://clawy.uk/mcp"
+}

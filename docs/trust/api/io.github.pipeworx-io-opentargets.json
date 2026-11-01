@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:29:53.279Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/opentargets",
+    "title": "Opentargets",
+    "description": "Open Targets MCP — disease/target/drug knowledge graph.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://gateway.pipeworx.io/opentargets/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pipeworx-gateway",
+      "version": "0.1.0"
+    },
+    "toolCount": 51,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[47].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[48].ensembl_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[49].efo_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[49].size has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[50].ensembl_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/opentargets/mcp"
+}

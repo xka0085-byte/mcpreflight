@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:33.024Z",
+  "server": {
+    "registryName": "it.expatliving/data",
+    "title": "Expat Living Italy",
+    "description": "Sourced data on Italy's ~7,900 comuni for people relocating or retiring there.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://www.expatliving.it/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "expatliving-data",
+      "title": "Expat Living Italy",
+      "version": "1.2.0",
+      "websiteUrl": "https://www.expatliving.it",
+      "icons": [
+        {
+          "src": "https://www.expatliving.it/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.expatliving.it/api/v1/mcp"
+}

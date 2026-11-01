@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:14.364Z",
+  "server": {
+    "registryName": "io.github.wyeming95-rgb/openfda-recalls",
+    "title": "FDA Recall Checker (openFDA)",
+    "description": "Check products against FDA food, drug and device recalls; drug labels, NDC, 510(k) via openFDA",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?actors=smartmoney-data/openfda",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=smartmoney-data/openfda"
+}

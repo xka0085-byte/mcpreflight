@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:03.115Z",
+  "server": {
+    "registryName": "dev.atrix/workspace",
+    "title": "Atrix AI",
+    "description": "Work, docs, CRM, calendar, chat and hiring for small teams. OAuth 2.1 with scoped, audited access.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://atrix.dev/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://atrix.dev/api/mcp"
+}

@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:08.600Z",
+  "server": {
+    "registryName": "io.github.mdshipon4045-afk/dordekha",
+    "title": "দরদেখা — বাংলাদেশের বাজারদর",
+    "description": "Official daily Bangladesh agricultural market prices — unit-normalised, dated, citable.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dordekha.pages.dev/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].commodity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].district has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dordekha.pages.dev/mcp"
+}

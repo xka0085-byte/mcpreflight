@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:27.518Z",
+  "server": {
+    "registryName": "io.github.kriton-dev/lever-jobs",
+    "title": "Lever Jobs Scraper — Postings from Any Lever Site, US & EU",
+    "description": "Get every published job from any company's Lever site, global or EU, fetched live",
+    "registryVersion": "1.0.9"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=hermeskd/lever-jobs",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=hermeskd/lever-jobs"
+}

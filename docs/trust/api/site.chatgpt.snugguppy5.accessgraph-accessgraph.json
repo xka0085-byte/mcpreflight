@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:22.677Z",
+  "server": {
+    "registryName": "site.chatgpt.snugguppy5.accessgraph/accessgraph",
+    "title": "AccessGraph",
+    "description": "Policy-aware web access preflight: robots, licensing, payment and advertised routes for agents.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://accessgraph.snugguppy5.chatgpt.site/agent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "accessgraph",
+      "version": "0.2.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].target_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].capabilities has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].user_agent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].budget_usd has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://accessgraph.snugguppy5.chatgpt.site/agent/mcp"
+}

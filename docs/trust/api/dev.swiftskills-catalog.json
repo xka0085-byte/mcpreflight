@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:27.314Z",
+  "server": {
+    "registryName": "dev.swiftskills/catalog",
+    "title": "SwiftSkills",
+    "description": "Search a curated catalog of agent skills, MCP servers and rules for Swift, SwiftUI, Xcode and iOS.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://swiftskills.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SwiftSkills",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://swiftskills.dev/mcp"
+}

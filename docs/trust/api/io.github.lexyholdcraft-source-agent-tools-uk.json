@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:47.505Z",
+  "server": {
+    "registryName": "io.github.lexyholdcraft-source/agent-tools-uk",
+    "title": "Agent Tools UK",
+    "description": "Pay-per-use agent tools: screenshots, web to Markdown, PDF tables, OCR, UK company checks",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://agent-tools-production-e6aa.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Agent Tools UK",
+      "title": "Agent Tools UK",
+      "version": "1.2.0",
+      "description": "Ten pay-per-use tools for AI agents: screenshots, web to Markdown, PDF tables, OCR, file conversion, HTML to PDF, transcription, UK postcode and company checks, website/SSL checks. Paid per call in USDC via x402.",
+      "websiteUrl": "https://agent-tools-production-e6aa.up.railway.app",
+      "icons": [
+        {
+          "src": "https://agent-tools-production-e6aa.up.railway.app/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://agent-tools-production-e6aa.up.railway.app/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].landscape has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-tools-production-e6aa.up.railway.app/mcp"
+}

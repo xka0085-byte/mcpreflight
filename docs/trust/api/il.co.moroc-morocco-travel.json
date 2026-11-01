@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:51.300Z",
+  "server": {
+    "registryName": "il.co.moroc/morocco-travel",
+    "title": "il.co.moroc/morocco-travel",
+    "description": "Morocco travel for Israeli travelers: e-visa, itineraries, guides, Shabbat times, hilula dates.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://moroc.co.il/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "moroc-co-il",
+      "title": "המרכז למטייל במרוקו",
+      "version": "1.1.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].who has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].style has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].vibes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].month has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://moroc.co.il/api/mcp"
+}

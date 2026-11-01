@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:40.267Z",
+  "server": {
+    "registryName": "com.simpleeasytransactions/agent-checks",
+    "title": "Simple Easy Transactions agent checks",
+    "description": "Agent payment readiness and AI visibility checks, $1 per call over MPP or prepaid credits.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://simpleeasytransactions.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "simple-easy-transactions",
+      "title": "Simple Easy Transactions",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].workflow has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].capabilities has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].idempotencyKey has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://simpleeasytransactions.com/api/mcp"
+}

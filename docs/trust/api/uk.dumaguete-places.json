@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:32.192Z",
+  "server": {
+    "registryName": "uk.dumaguete/places",
+    "title": "dumaguete.uk places",
+    "description": "Dumaguete City places: name, category, coordinates, OSM reference. Nearby search by coordinate.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dumaguete.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "uk.dumaguete/places",
+      "title": "dumaguete.uk places",
+      "version": "1.0.0",
+      "websiteUrl": "https://dumaguete.uk"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dumaguete.uk/mcp"
+}

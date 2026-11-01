@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:17.288Z",
+  "server": {
+    "registryName": "site.chatgpt.army20160422.agentread-json-api/agentread",
+    "title": "AgentRead — bounded web context",
+    "description": "Free HTML parsing; static web context at 0.01 USDC via x402. Paid reads need a wallet adapter.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://agentread-json-api.army20160422.chatgpt.site/agent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentread",
+      "version": "0.3.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].html has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_chars has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].max_chars has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentread-json-api.army20160422.chatgpt.site/agent/mcp"
+}

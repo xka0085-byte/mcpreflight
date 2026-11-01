@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:37:52.847Z",
+  "scannedAt": "2026-11-01T03:37:20.209Z",
   "server": {
     "registryName": "agency.ottobot/licensed-house-painters",
     "title": "Licensed House Painters",
@@ -10,22 +10,20 @@
   },
   "endpoint": "https://house-painters.ottobot.agency/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "house-painters",
+      "version": "0.1.2"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://house-painters.ottobot.agency/mcp"
 }

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:46.299Z",
+  "server": {
+    "registryName": "ls.ip/ipls-ip-lookup-service",
+    "title": "IP.LS — IP Lookup Service",
+    "description": "Keyless IP geolocation, ASN/ISP, timezone and DNS records for any IP or domain, plus your own IP.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://ip.ls/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "IP Lookup Service (ipls)",
+      "version": "1.4.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].ips has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ip.ls/mcp"
+}

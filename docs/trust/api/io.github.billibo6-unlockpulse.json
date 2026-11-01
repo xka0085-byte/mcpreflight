@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:05.517Z",
+  "server": {
+    "registryName": "io.github.Billibo6/unlockpulse",
+    "title": "Unlock Pulse",
+    "description": "Token unlock calendar for the next 60 days, rated by size vs circulating supply. Free, no key.",
+    "registryVersion": "1.9.1"
+  },
+  "endpoint": "https://unlockpulse-mcp.unlockpulse.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "unlockpulse",
+      "title": "Unlock Pulse: token unlock calendar",
+      "version": "1.9.1",
+      "websiteUrl": "https://billibo6.github.io/unlockpulse/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://unlockpulse-mcp.unlockpulse.workers.dev/mcp"
+}

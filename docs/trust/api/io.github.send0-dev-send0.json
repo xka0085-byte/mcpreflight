@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:01.790Z",
+  "server": {
+    "registryName": "io.github.send0-dev/send0",
+    "title": "send0",
+    "description": "Email inboxes for AI agents: create an address, wait for codes and links, send and reply in threads.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://api.send0.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.send0.dev/mcp"
+}

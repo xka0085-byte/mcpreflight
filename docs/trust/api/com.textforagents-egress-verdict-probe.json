@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:19.823Z",
+  "server": {
+    "registryName": "com.textforagents/egress-verdict-probe",
+    "title": "Egress-verdict probe",
+    "description": "Grades an MCP server's real egress: EVERY-HOP-VALIDATED, FIRST-HOP-ONLY, or OPEN-EGRESS.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://textforagents.com/products/egress-verdict-probe/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "egress-verdict-probe",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].endpoint has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].endpoint has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].fingerprint has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/egress-verdict-probe/mcp"
+}

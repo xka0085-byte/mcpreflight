@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:19.518Z",
+  "server": {
+    "registryName": "io.github.gsc-em/a2a-mcp-cpg",
+    "title": "MCP GSC CPG",
+    "description": "A2A MCP & CPG Rails: HBPC (Hygiene + Beauty Personal Care) procurement and ESG.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.gsc-em.com",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gsc-em.com"
+}

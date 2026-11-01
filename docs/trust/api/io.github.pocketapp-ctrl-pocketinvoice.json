@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:29.926Z",
+  "server": {
+    "registryName": "io.github.pocketApp-ctrl/pocketinvoice",
+    "title": "PocketInvoice MCP",
+    "description": "Free hosted MCP for invoices, estimates, clients, items and PDFs. OAuth authorization required.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.freedominvoice.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.freedominvoice.com/mcp"
+}

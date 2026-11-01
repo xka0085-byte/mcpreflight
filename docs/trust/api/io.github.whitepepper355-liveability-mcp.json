@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:08.594Z",
+  "server": {
+    "registryName": "io.github.whitepepper355/liveability-mcp",
+    "title": "Liveability MCP",
+    "description": "Liveability scoring for Japanese addresses: shopping, medical, transit, education, nature, safety.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://liveability.jp/mcp/sse",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://liveability.jp/mcp/sse"
+}

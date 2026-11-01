@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:59.624Z",
+  "server": {
+    "registryName": "io.github.edinetdb/edinet-db-mcp",
+    "title": "io.github.edinetdb/edinet-db-mcp",
+    "description": "Remote MCP for Japan's EDINET DB — 3,800 listed companies' financials & filings (OAuth)",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://edinetdb.jp/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://edinetdb.jp/mcp"
+}

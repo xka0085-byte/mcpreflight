@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:32.668Z",
+  "server": {
+    "registryName": "io.github.ryuamarines/email-extractor",
+    "title": "io.github.ryuamarines/email-extractor",
+    "description": "Extracts emails from texts. x402 payment required (testnet USDC).",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://ai-factory-mcp.ryuamarines.workers.dev/email-extractor/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai-factory-email-extractor",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].dedupe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maxPerText has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai-factory-mcp.ryuamarines.workers.dev/email-extractor/mcp"
+}

@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:48.473Z",
+  "server": {
+    "registryName": "lu.flyscout/deals",
+    "title": "FlyScout flight deals",
+    "description": "Read-only cheap return flight deals from Luxembourg and 6 nearby airports, rescanned daily.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.flyscout.lu/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Read-only cheap flight deals from Luxembourg and nearby airports.",
+      "name": "FlyScout",
+      "title": "FlyScout flight deals",
+      "version": "1.0.0",
+      "websiteUrl": "https://flyscout.lu"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.flyscout.lu/mcp"
+}

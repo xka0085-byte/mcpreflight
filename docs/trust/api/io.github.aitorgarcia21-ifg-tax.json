@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:22.036Z",
+  "server": {
+    "registryName": "io.github.aitorgarcia21/ifg-tax",
+    "title": "IFG",
+    "description": "Official tax law at the date of the facts, with official links: 9 European countries, EU, OECD.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://ifg.tax/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ifg.tax/v1/mcp"
+}

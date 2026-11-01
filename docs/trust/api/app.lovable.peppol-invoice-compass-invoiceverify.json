@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:16.528Z",
+  "server": {
+    "registryName": "app.lovable.peppol-invoice-compass/invoiceverify",
+    "title": "InvoiceVerify",
+    "description": "Check Peppol receivability (incl. Belgian client lists) and validate EU e-invoices. Free check.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://peppol-invoice-compass.lovable.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "invoiceverify",
+      "version": "1.2.1",
+      "title": "InvoiceVerify"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://peppol-invoice-compass.lovable.app/mcp"
+}

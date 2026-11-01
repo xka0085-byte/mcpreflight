@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:40.085Z",
+  "server": {
+    "registryName": "org.pennyforge.api/sendcheck",
+    "title": "SendCheck — EVM address verification (x402)",
+    "description": "Pre-send EVM address checks: free pre-check, $0.01 check, $0.05 deep scan. x402: payment is auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.pennyforge.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sendcheck",
+      "title": "SendCheck — EVM address verification (x402)",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.pennyforge.org/mcp"
+}

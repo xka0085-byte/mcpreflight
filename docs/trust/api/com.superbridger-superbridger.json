@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:42.136Z",
+  "server": {
+    "registryName": "com.superbridger/superbridger",
+    "title": "Superbridger",
+    "description": "Post and schedule to Instagram, Facebook, YouTube, TikTok, LinkedIn and X from your AI app.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://superbridger.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://superbridger.com/api/mcp"
+}

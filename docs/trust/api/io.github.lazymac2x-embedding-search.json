@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:39.455Z",
+  "server": {
+    "registryName": "io.github.lazymac2x/embedding-search",
+    "title": "io.github.lazymac2x/embedding-search",
+    "description": "Cloudflare Workers MCP server: embedding-search",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.lazy-mac.com/embedding-search/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "embedding-search",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].text_a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].text_b has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].model has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lazy-mac.com/embedding-search/mcp"
+}

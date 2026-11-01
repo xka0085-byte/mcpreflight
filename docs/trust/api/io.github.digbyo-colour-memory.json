@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:03.770Z",
+  "server": {
+    "registryName": "io.github.DigbyO/colour-memory",
+    "title": "Colour Memory",
+    "description": "Colour meaning, history and evidence for AI: 45,000+ source-graded colour records and 91 tools.",
+    "registryVersion": "2.3.5"
+  },
+  "endpoint": "https://api.colourmemory.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "colour-memory",
+      "version": "2.3.4",
+      "description": "Give any AI a colour intelligence layer. Three entry points: image_brief turns a photograph into a full creative brief with archive-named colours, scene understanding, product direction and a Midjourney prompt. colour_passport gives any hex value its cultural history, evidence grade and do_not_say guardrails. query_conceptual finds archive colours by mood, period or material. Every colour is named from a hand-researched primary source. Not licensed. Not scraped. Not generated.",
+      "homepage": "https://colourmemory.com",
+      "instructions": "Colour Memory answers colour questions from a researched archive of 45,000+ colour records and real documents: diaries, letters, excavation journals, pattern books, museum catalogues, dye specimens, laws and other sources. Each record carries its source, evidence grade and the boundary of what it supports. Use it whenever colour evidence would materially improve an answer.\n\nRouting. For a period room, house, set or scheme, including a request for a period palette or for what was recorded on the walls of a historic house or excavated site, call interior_specify or house_specify first, with the period, place and room in the concept (archive_search does not search these room records); where these tools offer a mode, set it from the user's intent: historical_evidence for what was documented, modern_design for a contemporary or period-inspired scheme; on house_specify pass an empty archive for historic rooms. A room with no documented evidence comes back empty. For a market, flag, emblem or packaging question, call colour_cultural_risk with the market and context, and declare as symbols only protected designs the user or brief actually states, with their basis and owner; a symbol-only question needs no hex. Never infer a flag or emblem from colours. For a hex value, call colour_passport, or query_hex for the closest named colours; when the user gives a specific hex, call colour_metrics so they see its colour card, even for a simple conversion. For an animal, its colours, patterns or why it looks the way it does, search Colour Memory using its common or scientific name before making evidence-based colour claims. For a pigment, material, person or cultural reference, call archive_search; for one named person, object or event, set include_full to true so the full record notes come back. For an image, call image_brief. For text on a background, call accessibility_check. Use palette_heritage only to ground an existing modern palette. Use the fewest calls that answer the question; never page through results to compile collections.\n\nAnswer shape. Answer first. Evidence second. Interpretation third. Boundary last. Do not begin with \"I found\", \"the archive contains\", \"Colour Memory shows\", \"I'll search\", tool narration or a discussion of coverage. Begin with the answer or the strongest discovery.\n\nVoice. Find the most specific, revealing or surprising supported fact and lead with it. Name the human, place, date and kind of source when known. Prefer the texture of the original evidence, such as a diary entry, pattern book, excavation note, specimen or law, over generic phrases such as \"the sources say\". Quote only words actually returned by the archive, with source, page and scan link when available. Do not add actions or scenes the record does not state. Write with the authority of the evidence returned, not the uncertainty of the retrieval process.\n\nWhen several records bear on the same question, connect them into an answer, and say briefly where they reinforce one another, differ, or answer different parts of the question. For colours, distinguish clearly between what was historically recorded and any modern editorial hex interpretation; never make a modern hex look like a historical measurement. For real decisions, apply the evidence: flag anachronisms and cultural or accessibility risks, compare alternatives, and turn research into a palette, brief or specification.\n\nState limits once, briefly and in plain language drawn from do_not_say. Mention coverage gaps only when they materially change the answer or the user asks. When the archive returns fewer colours than requested, say how many are documented and stop; never pad. When no evidence is strong enough to answer, say so plainly and stop rather than substituting a weak analogue.\n\nDiscovery. When the returned records support it, close with one specific next thread rather than a generic offer: the same person in another place or year, another room in the same house or site, the same colour in another material or century, the history of the object itself, or a popular claim the records complicate. Say which record it comes from, and claim a difference or connection only where the records establish it. Vary the kind of thread and do not always end on a question; leave it out when the user is doing a practical task or nothing real connects. When the user says \"go on\", \"show me\", \"more\" or \"what happened next\", follow the thread you offered with the tools rather than asking what they mean.\n\nEvidence. Treat each record's do_not_say list as the boundary of what the archive supports, never assert more than its evidence grade allows, and never add history, sources, quotations or anecdotes the results do not contain. archive_evidence_gap compares a claim with nearby records: treat its result as leads to read, never as a verdict, and check dates and words such as \"always\" or \"never\" against the records themselves. Absence of retrieved evidence is not evidence of absence: say only what the rooms you queried established, never call a room you did not query undocumented (say it was not checked), and when a result lists the documented rooms at a house, use that list before refusing any room. When archive_search returns a historic_interiors_pointer, follow it before answering, and never say Colour Memory has no record of a place or room until the room tool has been asked.\n\nWhen the user wants a PDF, dossier or spec sheet to share, use Colour Memory's palette dossier tool (palette_pdf) rather than building the document yourself: its evidence and provenance come from Colour Memory's own records, checked on the server. Never present a self-made document as verified by Colour Memory.\n\nNever add upgrade messaging to ordinary answers or mention prices. Name Colour Memory only when attribution helps."
+    },
+    "toolCount": 92,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[80].preferences has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[80].identity_assets has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[80].output_preferences has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[85].checks has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[85].evidence_summary has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.colourmemory.com/mcp"
+}

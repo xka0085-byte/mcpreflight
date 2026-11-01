@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:10.817Z",
+  "server": {
+    "registryName": "io.github.medprice-ai/mcp-medprice-ai",
+    "title": "MedPrice AI",
+    "description": "Hosted MCP server exposing US hospital procedure cost data to AI assistants",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://mcp.medprice.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-medprice-ai",
+      "version": "0.0.1"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.medprice.ai/mcp"
+}

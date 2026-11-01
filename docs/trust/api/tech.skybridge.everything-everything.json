@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:09.476Z",
+  "server": {
+    "registryName": "tech.skybridge.everything/Everything",
+    "title": "Skybridge Everything App",
+    "description": "Example and testing ChatGPT and MCP App showcasing all the features of the Skybridge framework",
+    "registryVersion": "0.0.2"
+  },
+  "endpoint": "https://everything.skybridge.tech",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "alpic-openai-app",
+      "version": "0.0.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].file has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://everything.skybridge.tech"
+}

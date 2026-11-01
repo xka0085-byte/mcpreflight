@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:30.436Z",
+  "server": {
+    "registryName": "gg.scrappy/cloud-browser",
+    "title": "Scrappy Cloud Browser",
+    "description": "Cloud browsers for AI agents: saved logins, residential IPs, live human takeover, 57 browser tools.",
+    "registryVersion": "1.16.0"
+  },
+  "endpoint": "https://scrappy.gg/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scrappy.gg/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:50.974Z",
+  "server": {
+    "registryName": "market.waxed/mcp",
+    "title": "market.waxed/mcp",
+    "description": "WAXED vinyl marketplace: record/catalog search, price history, and dealer store management.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.waxed.market",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.waxed.market"
+}

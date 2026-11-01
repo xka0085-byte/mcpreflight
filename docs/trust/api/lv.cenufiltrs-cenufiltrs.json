@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:51.074Z",
+  "server": {
+    "registryName": "lv.cenufiltrs/cenufiltrs",
+    "title": "CenuFiltrs Price Comparison",
+    "description": "Compare prices across Latvian online retailers: offers, price history and wishlists.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.cenufiltrs.lv/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cenufiltrs",
+      "version": "1.0.0"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].response has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.cenufiltrs.lv/mcp"
+}

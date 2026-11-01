@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:03.313Z",
+  "server": {
+    "registryName": "io.github.celfons/kya-brasil",
+    "title": "io.github.celfons/kya-brasil",
+    "description": "KYA backed by a real company: e-CNPJ-signed agent mandates, revocation-checked, signed verdicts",
+    "registryVersion": "0.4.1"
+  },
+  "endpoint": "https://kya-br-agents.marcelfons.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "KYA Brasil",
+      "title": "KYA Brasil",
+      "version": "0.12.1",
+      "description": "KYA backed by a real company. A Brazilian company signs with its e-CNPJ (ICP-Brasil) that an AI agent key (EVM, Web Bot Auth or ERC-8004) acts for it within a mandate. Every day the issuer checks that the e-CNPJ is not revoked (ICP-Brasil CRL) and the company is still ATIVA at the Receita; risk (sanctions, debt) is the verifier's call. Credentials are Ed25519-signed, verifiable offline, revocable at once; every per-action verdict is signed. Verification free up to 50/day per IP, then x402.",
+      "websiteUrl": "https://kya-br-agents.marcelfons.workers.dev",
+      "icons": [
+        {
+          "src": "https://kya-br-agents.marcelfons.workers.dev/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].agent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].reason has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].since has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kya-br-agents.marcelfons.workers.dev/mcp"
+}

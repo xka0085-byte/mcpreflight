@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:17.101Z",
+  "server": {
+    "registryName": "ai.trellus/trellus",
+    "title": "Trellus",
+    "description": "Read-only Trellus call reporting: call activity, rep results, sessions and call details.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.trellus.ai/rpt/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.trellus.ai/rpt/mcp"
+}

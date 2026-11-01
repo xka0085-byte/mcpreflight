@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:46.082Z",
+  "server": {
+    "registryName": "dev.workers.deanhiki.krtools/korean-tools",
+    "title": "KRTools Korean Utilities",
+    "description": "Korean name/text romanization, Korean address to English, business number (BRN) check.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://krtools.deanhiki.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "krtools",
+      "title": "KRTools - Korean names, addresses, business numbers",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].brn has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].title has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://krtools.deanhiki.workers.dev/mcp"
+}

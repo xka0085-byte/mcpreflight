@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:47.419Z",
+  "server": {
+    "registryName": "us.uphealth/mcp",
+    "title": "Uphealth Signal",
+    "description": "The adaptive health-messaging engine for apps and agents. Federally-sourced. Not medical advice.",
+    "registryVersion": "1.1.7"
+  },
+  "endpoint": "https://mcp.uphealth.us/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "uphealth-mcp",
+      "version": "1.1.7"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].feedback_timeout_days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].feedback has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.uphealth.us/mcp"
+}

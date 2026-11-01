@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:39.370Z",
+  "server": {
+    "registryName": "com.chsbackflow/booking",
+    "title": "CHS Backflow — book backflow testing in Charleston",
+    "description": "Book backflow testing in Charleston, SC: prices, ZIP coverage, free callback.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://chsbackflow.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "chsbackflow.com-booking",
+      "title": "CHS Backflow — book backflow testing in Charleston",
+      "version": "1.0.0",
+      "websiteUrl": "https://chsbackflow.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chsbackflow.com/mcp"
+}

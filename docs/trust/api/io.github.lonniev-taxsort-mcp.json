@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:00.215Z",
+  "server": {
+    "registryName": "io.github.lonniev/taxsort-mcp",
+    "title": "io.github.lonniev/taxsort-mcp",
+    "description": "TaxSort — Tollbooth-monetized MCP server for personal tax transaction classification",
+    "registryVersion": "0.31.0"
+  },
+  "endpoint": "https://taxsort-mcp.fastmcp.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://taxsort-mcp.fastmcp.app/mcp"
+}

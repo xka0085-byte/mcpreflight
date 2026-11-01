@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:21.842Z",
+  "server": {
+    "registryName": "io.github.benthepythondev00/jobs-data",
+    "title": "Jobs Data",
+    "description": "Remote job boards, LinkedIn jobs, company ATS pages and Upwork jobs as tools. Runs on Apify.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=benthepythondev/remote-jobs-aggregator,benthepythondev/linkedin-jobs-scraper,benthepythondev/ats-jobs-aggregator,benthepythondev/upwork-jobs-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=benthepythondev/remote-jobs-aggregator,benthepythondev/linkedin-jobs-scraper,benthepythondev/ats-jobs-aggregator,benthepythondev/upwork-jobs-scraper"
+}

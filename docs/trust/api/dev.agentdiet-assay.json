@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:52.385Z",
+  "server": {
+    "registryName": "dev.agentdiet/assay",
+    "title": "Assay A2A, MCP & x402 Pre-Flight Verifier & Observatory",
+    "description": "Live behavioral security verifier, schema auditor, and trust oracle for A2A, MCP & x402 agents.",
+    "registryVersion": "7.0.17"
+  },
+  "endpoint": "https://assay.agentdiet.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "assay",
+      "version": "0.7.31",
+      "title": "Assay — A2A & MCP Pre-Flight Security Observatory & TDQS Compiler",
+      "description": "Pre-flight MCP tool-poisoning security gate, SHA-256 schema drift detector, and 5.0/5.0 Glama TDQS compiler.",
+      "websiteUrl": "https://assay-207908449630.us-central1.run.app",
+      "icons": [
+        {
+          "src": "https://assay-207908449630.us-central1.run.app/logo.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://assay.agentdiet.dev/mcp"
+}

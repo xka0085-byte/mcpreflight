@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:44.910Z",
+  "server": {
+    "registryName": "io.honeybadger/mcp",
+    "title": "Honeybadger",
+    "description": "Debug errors, query logs, create alarms, and monitor cron jobs from your agent",
+    "registryVersion": "1.5.1"
+  },
+  "endpoint": "https://{host}.honeybadger.io/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{host}.honeybadger.io/mcp"
+}

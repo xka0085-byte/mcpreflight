@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:54.025Z",
+  "server": {
+    "registryName": "io.github.ge3m0r/cola-insight",
+    "title": "COLA Insight",
+    "description": "Read-only Social Security COLA data, calculations, history, and official source links.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://www.colainsight.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "io.github.ge3m0r/cola-insight",
+      "title": "COLA Insight",
+      "version": "1.0.1",
+      "websiteUrl": "https://www.colainsight.com/mcp-server"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].currentMonthlyBenefit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].medicarePartBPremium has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.colainsight.com/mcp"
+}

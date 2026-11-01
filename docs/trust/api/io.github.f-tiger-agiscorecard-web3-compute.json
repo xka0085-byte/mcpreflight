@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:19.705Z",
+  "server": {
+    "registryName": "io.github.f-tiger/agiscorecard-web3-compute",
+    "title": "io.github.f-tiger/agiscorecard-web3-compute",
+    "description": "Compare GPU workload costs per accepted output, including setup, storage, egress and failed work.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://compute.agiscorecard.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "web3-compute",
+      "title": "Compute Lens",
+      "version": "1.7.0",
+      "websiteUrl": "https://compute.agiscorecard.com/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://compute.agiscorecard.com/mcp"
+}

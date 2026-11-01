@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:20.228Z",
+  "server": {
+    "registryName": "mx.scan/diagnostics",
+    "title": "scan.mx Email Diagnostics",
+    "description": "Email deliverability check: MX, SPF, DKIM, DMARC, blacklists, MTA-STS, DNSSEC, BIMI. Graded, no key.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.scan.mx/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "scan.mx",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.scan.mx/mcp"
+}

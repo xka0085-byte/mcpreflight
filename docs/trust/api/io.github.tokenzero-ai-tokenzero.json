@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:57.256Z",
+  "server": {
+    "registryName": "io.github.tokenzero-ai/tokenzero",
+    "title": "TokenZero",
+    "description": "LLM cost optimization gateway, repo token-waste auditor & model arbitrage MCP server.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://tokenzero.sh/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tokenzero",
+      "version": "0.2.9"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].endpoint has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].strategy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].requests_per_month has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].compare_to has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].window has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tokenzero.sh/mcp"
+}

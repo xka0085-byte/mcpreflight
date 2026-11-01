@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:55.703Z",
+  "server": {
+    "registryName": "io.github.gcarrenos/planvoyager",
+    "title": "PlanVoyager",
+    "description": "Compare ACA health plans by real yearly cost, with tax credits, doctors and drugs, from CMS data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://planvoyager.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "planvoyager",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].rxcuis has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].npis has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://planvoyager.com/mcp"
+}

@@ -1,31 +1,29 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:42:55.772Z",
+  "scannedAt": "2026-11-01T03:46:47.478Z",
   "server": {
     "registryName": "com.dveracity/semantic-mcp",
     "title": "dVeracity Semantic API",
     "description": "Natural-language queries over a verified emissions knowledge graph, plus standards validation",
-    "registryVersion": "0.6.2"
+    "registryVersion": "0.7.0"
   },
   "endpoint": "https://api.dveracity.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dveracity-semantic",
+      "version": "0.8.1"
+    },
+    "toolCount": 25,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "25 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.dveracity.com/mcp"
 }

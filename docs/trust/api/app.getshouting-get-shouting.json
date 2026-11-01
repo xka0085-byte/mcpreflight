@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:02.993Z",
+  "server": {
+    "registryName": "app.getshouting/get-shouting",
+    "title": "Get Shouting",
+    "description": "Marketing MCP: social, email, SMS, CRM, paid ads, analytics. OAuth; confirm before send/spend.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.getshouting.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.getshouting.app/api/mcp"
+}

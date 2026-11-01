@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:54.560Z",
+  "server": {
+    "registryName": "io.github.viveksinra/bugmojo",
+    "title": "BugMojo",
+    "description": "Bug tracking for AI agents: session replay, console/network logs, repro packs, test plans, evidence.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://www.bugmojo.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.bugmojo.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:23.217Z",
+  "server": {
+    "registryName": "io.github.Thinkode/thinkreview",
+    "title": "ThinkReview",
+    "description": "Live PR/MR code reviews via review_url_code. OAuth or portal Bearer auth.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://mcp.thinkreview.dev/v1",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.thinkreview.dev/v1"
+}

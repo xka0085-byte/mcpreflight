@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:51.737Z",
+  "server": {
+    "registryName": "io.github.JerryYangAI/taoyuan-mcp",
+    "title": "Taoyuan Music",
+    "description": "Write an original song for one person: lyrics, two full versions and cover art in about a minute.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://api.musicsforyou.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.musicsforyou.com/mcp"
+}

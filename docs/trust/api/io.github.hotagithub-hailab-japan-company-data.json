@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:22.697Z",
+  "server": {
+    "registryName": "io.github.HOTAgithub/hailab-japan-company-data",
+    "title": "hai Lab Japan Company Data",
+    "description": "Search Japanese company credit, financials, subsidies, and procurement via AI agents.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://hailab-japan-company-api.pickaxe.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hailab-japan-company-api.pickaxe.workers.dev/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:40.450Z",
+  "server": {
+    "registryName": "com.partly-app/exact-split",
+    "title": "Partly Exact Split",
+    "description": "Split expenses in cents with equal/weighted shares and payer advances. No account or payments.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://partly-exact-split.paul-brousses.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "partly-exact-split",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].participants has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].expenses has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://partly-exact-split.paul-brousses.workers.dev/mcp"
+}

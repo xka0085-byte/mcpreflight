@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:55.827Z",
+  "server": {
+    "registryName": "dev.workers.mosn-3r41y.mosn-api/mosn",
+    "title": "MOSN Solana Safety",
+    "description": "Solana token rug checks and safety-checked Jupiter swaps for AI agents; paid data via x402.",
+    "registryVersion": "2.4.0"
+  },
+  "endpoint": "https://mosn-api.mosn-3r41y.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mosn",
+      "version": "2.4.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].mint has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].side has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slippageBps has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mosn-api.mosn-3r41y.workers.dev/mcp"
+}

@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:17.070Z",
+  "server": {
+    "registryName": "com.ssanvps/vps-prices",
+    "title": "SSANVPS - VPS & domain price comparison",
+    "description": "Cheapest and best-value VPS plans by spec, plus domain prices, read daily from official pricing.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ssanvps.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ssanvps",
+      "title": "SSANVPS VPS & domain prices",
+      "version": "1.0.0",
+      "websiteUrl": "https://ssanvps.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_vcpu has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_ram_gb has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ssanvps.com/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:40.398Z",
+  "server": {
+    "registryName": "io.github.palthainon/oldweb-network",
+    "title": "io.github.palthainon/oldweb-network",
+    "description": "Inspect IPv4/IPv6 subnets, allocate labeled prefixes and detect overlaps with exact address counts.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.oldweb.tech/network/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "oldweb-network",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].requests has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].cidrs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.oldweb.tech/network/mcp"
+}

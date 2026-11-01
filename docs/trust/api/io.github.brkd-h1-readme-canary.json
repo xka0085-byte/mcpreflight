@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:43.965Z",
+  "server": {
+    "registryName": "io.github.brkd-h1/readme-canary",
+    "title": "io.github.brkd-h1/readme-canary",
+    "description": "Security research canary remote MCP server for owned-account testing.",
+    "registryVersion": "0.0.2"
+  },
+  "endpoint": "https://bintool.brkd.no/anything/mcp-brkd-canary",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bintool.brkd.no/anything/mcp-brkd-canary"
+}

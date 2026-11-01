@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:30.694Z",
+  "server": {
+    "registryName": "com.dianarafael/storefront",
+    "title": "Diana Rafael Jewelry Store",
+    "description": "Search and shop Diana Rafael natural black diamond fine jewelry: catalog, products, cart, checkout.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://dianarafael.com/api/ucp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "universal-commerce",
+      "version": "0.1.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].ask has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dianarafael.com/api/ucp/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:13.582Z",
+  "server": {
+    "registryName": "com.onrender.x402-usdc-verify/base-usdc-verifier",
+    "title": "Base USDC Payment Verifier (x402)",
+    "description": "Verify a Base tx is a confirmed native-USDC transfer to a recipient. Paid via x402, 0.01 USDC/call.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://x402-usdc-verify.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402-usdc-verify.onrender.com/mcp"
+}

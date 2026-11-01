@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:49.533Z",
+  "server": {
+    "registryName": "fi.signo/signo",
+    "title": "Signo",
+    "description": "AI agents that watch DeFi positions: read a wallet report, draft agents for the owner to sign.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://app.signo.fi/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "signo-public-drafts",
+      "title": "Signo",
+      "version": "1.1.0",
+      "websiteUrl": "https://signo.fi",
+      "icons": [
+        {
+          "src": "https://signo.fi/signo-favicon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.signo.fi/api/mcp"
+}

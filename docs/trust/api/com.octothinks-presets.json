@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:57.279Z",
+  "server": {
+    "registryName": "com.octothinks/presets",
+    "title": "Octo Thinks Decision Presets",
+    "description": "Reviewed decision matrices and buying guides: ranked options and weighted criteria in 6 languages",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.octothinks.com/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "octothinks-presets",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].locale has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].locale has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.octothinks.com/"
+}

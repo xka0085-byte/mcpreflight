@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:59.145Z",
+  "server": {
+    "registryName": "io.github.a0971025732-netizen/finch-agent-catalog",
+    "title": "Finch Agent Catalog",
+    "description": "Free: OFAC check, ATS keywords, FOMC/CPI dates, US yields, HL perps, SG stamp duty, Finch agents",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://finch-agent-catalog.finch-catalog-mcp.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "finch-agent-catalog",
+      "title": "Finch Agent Catalog",
+      "version": "1.1.0"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://finch-agent-catalog.finch-catalog-mcp.workers.dev/mcp"
+}

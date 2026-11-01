@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:52.986Z",
+  "server": {
+    "registryName": "com.synorb/mcp",
+    "title": "Synorb: News & Context for AI Agents",
+    "description": "Cited news for AI agents from AI companies, VC firms, private companies and business podcasts.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.synorb.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Synorb Core",
+      "version": "1.26.0",
+      "websiteUrl": "https://synorb.com",
+      "icons": [
+        {
+          "src": "https://synorb.com/partner-logo-200.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "200x200"
+          ]
+        },
+        {
+          "src": "https://synorb.com/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].visitor_token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.synorb.com/mcp"
+}

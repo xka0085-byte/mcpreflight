@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:57.973Z",
+  "server": {
+    "registryName": "io.github.steadyapi/scrapers",
+    "title": "Steady API Scrapers",
+    "description": "YouTube transcripts, Google Hotels prices, Google Ads Transparency, Google Trends and Threads posts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=steadyapi/youtube-transcript-scraper,steadyapi/google-hotels-scraper,steadyapi/google-ads-transparency-scraper,steadyapi/google-trends-scraper,steadyapi/threads-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=steadyapi/youtube-transcript-scraper,steadyapi/google-hotels-scraper,steadyapi/google-ads-transparency-scraper,steadyapi/google-trends-scraper,steadyapi/threads-scraper"
+}

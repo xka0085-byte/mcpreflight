@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:21.230Z",
+  "scannedAt": "2026-11-01T03:55:58.704Z",
   "server": {
     "registryName": "com.softician.examprep/notary-exam-prep",
     "title": "Softician Notary Exam Prep",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://examprep.softician.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "examprep-mcp",
+      "title": "passvana",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://examprep.softician.com/mcp"
 }

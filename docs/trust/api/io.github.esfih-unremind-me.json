@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:12.849Z",
+  "server": {
+    "registryName": "io.github.esfih/unremind-me",
+    "title": "UnRemind.me",
+    "description": "Context-aware reminders that surface when your situation matches, not at a fixed time.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://unremind.me/mcp?src=mcp-registry",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://unremind.me/mcp?src=mcp-registry"
+}

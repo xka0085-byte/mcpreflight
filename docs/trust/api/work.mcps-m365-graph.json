@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:00.311Z",
+  "server": {
+    "registryName": "work.mcps/m365-graph",
+    "title": "M365 Graph MCP",
+    "description": "Manage Microsoft 365 email, calendar, contacts and inbox rules via the Graph API with OAuth 2.0.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcps.work/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcps.work/mcp"
+}

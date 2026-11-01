@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:36.911Z",
+  "server": {
+    "registryName": "io.github.AivaStack/vouchtools",
+    "title": "Vouch",
+    "description": "Vouch — independently measured reliability scores for MCP tools, not self-reported claims.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://vouch.tools/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vouch",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vouch.tools/api/mcp"
+}

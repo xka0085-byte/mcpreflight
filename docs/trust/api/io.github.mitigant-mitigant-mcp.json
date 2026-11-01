@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:31.618Z",
+  "server": {
+    "registryName": "io.github.mitigant/mitigant-mcp",
+    "title": "Mitigant",
+    "description": "Run real, auto-recovered cloud attacks on AWS, Azure and GCP to test your defenses.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.mitigant.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mitigant-mcp-server",
+      "title": "Mitigant",
+      "version": "0.1.0",
+      "description": "Run real, automatically-cleaned-up cloud attacks against AWS, Azure, and GCP to test your defenses, and see what your logging recorded about each one.",
+      "websiteUrl": "https://mitigant.io"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].cloud_service has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].cloud_service has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].cloud_service has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].cloud_service has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].cloud_service has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mitigant.io/mcp"
+}

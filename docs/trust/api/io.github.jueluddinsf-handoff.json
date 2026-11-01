@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:51.987Z",
+  "server": {
+    "registryName": "io.github.jueluddinsf/handoff",
+    "title": "Handoff: Send Files to Users & Agents",
+    "description": "Send a file to a user or agent as a share link with expiry, max opens, approval, revoke and logs.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://hand-off.space/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "io.github.jueluddinsf/handoff",
+      "title": "Handoff: Send Files to Users & Agents",
+      "version": "1.0.1",
+      "description": "Send a file to a user or agent as a share link with expiry, max opens, approval, revoke and logs."
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].grant_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].expires_in_hours has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hand-off.space/mcp"
+}

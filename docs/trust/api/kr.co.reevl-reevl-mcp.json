@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:50.448Z",
+  "server": {
+    "registryName": "kr.co.reevl/reevl-mcp",
+    "title": "Reevl — Korean Real Estate",
+    "description": "Korean apartment data: official transaction prices, jeonse ratios, AI forecasts. 45,000+ complexes.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://reevl.co.kr/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "reevl",
+      "title": "리블 — 실거래가 기반 부동산 데이터",
+      "version": "2.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reevl.co.kr/api/mcp"
+}

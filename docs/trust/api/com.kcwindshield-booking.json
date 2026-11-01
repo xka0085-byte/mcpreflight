@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:20.344Z",
+  "server": {
+    "registryName": "com.kcwindshield/booking",
+    "title": "KC Windshield — book windshield replacement in Kansas City",
+    "description": "Book windshield replacement in Kansas City, MO: prices, ZIP coverage, free callback.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://kcwindshield.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kcwindshield.com-booking",
+      "title": "KC Windshield — book windshield replacement in Kansas City",
+      "version": "1.0.0",
+      "websiteUrl": "https://kcwindshield.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kcwindshield.com/mcp"
+}

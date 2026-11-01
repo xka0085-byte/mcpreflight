@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:05.755Z",
+  "server": {
+    "registryName": "com.ai-agents-pitstop/pitstop-free",
+    "title": "Pitstop Free",
+    "description": "A memory for your assistant, and your yes on the exact content before it sends or changes anything.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.ai-agents-pitstop.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ai-agents-pitstop.com/mcp"
+}

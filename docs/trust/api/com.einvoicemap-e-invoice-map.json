@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:54.365Z",
+  "server": {
+    "registryName": "com.einvoicemap/e-invoice-map",
+    "title": "E-Invoice Map",
+    "description": "Free, read-only e-invoicing data: mandate dates, Peppol providers, validation-error explainers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://einvoicemap.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Free read-only e-invoicing data: mandate dates, providers, validation errors, foreign-supplier rules and Peppol network counts.",
+      "name": "E-Invoice Map",
+      "title": "E-Invoice Map",
+      "version": "1",
+      "websiteUrl": "https://einvoicemap.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name_or_slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].identifier has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].country has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://einvoicemap.com/api/v1/mcp"
+}

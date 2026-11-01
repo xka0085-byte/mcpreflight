@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:56.139Z",
+  "server": {
+    "registryName": "com.conferencefindr/events",
+    "title": "ConferenceFindr",
+    "description": "Search upcoming business conferences and trade shows by keyword, industry, place, radius and date.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.conferencefindr.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ConferenceFindr",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].industry has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].region has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.conferencefindr.com/api/mcp"
+}

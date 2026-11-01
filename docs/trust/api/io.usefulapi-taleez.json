@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:08.389Z",
+  "server": {
+    "registryName": "io.usefulapi/taleez",
+    "title": "Taleez MCP by usefulapi",
+    "description": "Read Taleez recruiting data; create or update candidates and add them to pools or jobs.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://taleez.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "taleez-mcp",
+      "version": "1.4.0",
+      "title": "Taleez MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/taleez/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 25,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].first_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].last_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].first_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].last_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].properties has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://taleez.usefulapi.io/mcp"
+}

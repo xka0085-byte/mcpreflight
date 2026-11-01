@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:56.735Z",
+  "server": {
+    "registryName": "io.github.getchordlabs/chord",
+    "title": "Chord",
+    "description": "Swap quotes + unsigned txs on 8 EVM chains, plus Solana data: boards, candles, wallet PnL. No key.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.getchord.xyz/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "chord",
+      "version": "1.2.0"
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].quoteId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].slippageBps has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.getchord.xyz/v1/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:11.114Z",
+  "server": {
+    "registryName": "io.github.badDevBuild/china-bank-offers-facts",
+    "title": "China Bank Offers Facts",
+    "description": "Official-source China bank card offer facts for agents; free bank list and paid factual search.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agent-offers-api-replitzip.replit.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "china-bank-offers-facts",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].bank_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].activity_status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-offers-api-replitzip.replit.app/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:15.525Z",
+  "server": {
+    "registryName": "io.github.agnicpay-prog/agnicpay",
+    "title": "AgnicPay",
+    "description": "X402 payment MCP for AI agents. Auto-pay 300+ APIs with USDC on Base and Solana.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.agnic.ai/sse",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.agnic.ai/sse"
+}

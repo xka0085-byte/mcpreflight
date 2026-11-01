@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:19.792Z",
+  "server": {
+    "registryName": "io.github.5ak3t/frontdeskchat",
+    "title": "FrontDesk Chat",
+    "description": "AI front desk for your website: read chats, bookings and analytics, and draft desks you approve.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.frontdeskchat.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://api.frontdeskchat.com/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.frontdeskchat.com/mcp"
+}

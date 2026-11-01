@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:15.204Z",
+  "server": {
+    "registryName": "io.github.grupoanesthy-spec/agent-transaction-trust",
+    "title": "Agent Transaction Trust",
+    "description": "Authorize and prove autonomous x402/AP2 agent payments with cryptographic receipts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://json-repair-api-9ybv.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-transaction-trust",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].request has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].ap2_authority has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].nonce has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://json-repair-api-9ybv.onrender.com/mcp"
+}

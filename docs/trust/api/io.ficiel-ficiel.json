@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:00.084Z",
+  "server": {
+    "registryName": "io.ficiel/ficiel",
+    "title": "Ficiel MCP",
+    "description": "Read and search your Instagram, WhatsApp and LinkedIn DMs and prepare follow-ups you approve.",
+    "registryVersion": "1.6.2"
+  },
+  "endpoint": "https://bridge.ficiel.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bridge.ficiel.io/mcp"
+}

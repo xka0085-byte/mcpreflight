@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:26.696Z",
+  "server": {
+    "registryName": "io.github.theguysaccount/unredactus",
+    "title": "Unredactus metadata research",
+    "description": "Search public document metadata and pinned snapshot provenance, excluding passages and identifiers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://unredactus.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "unredactus-metadata-research",
+      "title": "Unredactus metadata research",
+      "version": "1.0.0",
+      "websiteUrl": "https://unredactus.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].documentPrefix has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].dataset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].documentId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://unredactus.com/api/mcp"
+}

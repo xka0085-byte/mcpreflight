@@ -1,0 +1,62 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:58.975Z",
+  "server": {
+    "registryName": "io.usefulapi/plutio",
+    "title": "Plutio MCP by usefulapi",
+    "description": "Manage Plutio clients, projects, tasks, time entries and invoices.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://plutio.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "plutio-mcp",
+      "version": "1.8.0",
+      "title": "Plutio MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/plutio/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 37,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[31].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[31].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[34].isAllDay has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[34].descriptionHTML has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://plutio.usefulapi.io/mcp"
+}

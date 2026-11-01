@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:56.065Z",
+  "server": {
+    "registryName": "com.baseofagi/news",
+    "title": "Base of AGI",
+    "description": "AI news in TR/EN/ES/RU, a daily stack brief and a verified MCP/plugin/skill catalog. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://baseofagi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.baseofagi/news",
+      "title": "Base of AGI",
+      "version": "1.1.0",
+      "websiteUrl": "https://baseofagi.com/agent.html"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://baseofagi.com/mcp"
+}

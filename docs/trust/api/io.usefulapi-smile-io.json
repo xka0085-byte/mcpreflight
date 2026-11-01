@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:06.101Z",
+  "server": {
+    "registryName": "io.usefulapi/smile-io",
+    "title": "Smile.io MCP by usefulapi",
+    "description": "Look up loyalty customers, points history, rewards and VIP tiers, and add points or activities.",
+    "registryVersion": "1.30.0"
+  },
+  "endpoint": "https://smile-io.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "smile-io-mcp",
+      "version": "1.33.0",
+      "title": "Smile.io MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/smile-io/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].fulfillment_status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].usage_status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://smile-io.usefulapi.io/mcp"
+}

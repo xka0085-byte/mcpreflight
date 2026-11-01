@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:41.179Z",
+  "server": {
+    "registryName": "com.nextgenenergyjobs/jobs",
+    "title": "NextGen Energy Jobs",
+    "description": "Search open jobs in grid, nuclear, renewables, storage and data centers. Read-only, no login.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.nextgenenergyjobs.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nextgenenergyjobs",
+      "version": "1.0.0",
+      "title": "NextGen Energy Jobs",
+      "websiteUrl": "https://www.nextgenenergyjobs.com/mcp",
+      "icons": [
+        {
+          "src": "https://www.nextgenenergyjobs.com/favicon/icon-256x256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        },
+        {
+          "src": "https://www.nextgenenergyjobs.com/favicon/web-app-manifest-512x512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].experience_level has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].employment_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.nextgenenergyjobs.com/api/mcp"
+}

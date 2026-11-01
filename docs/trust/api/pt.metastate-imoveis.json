@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:19.504Z",
+  "server": {
+    "registryName": "pt.metastate/imoveis",
+    "title": "Metastate · Imóveis em Portugal",
+    "description": "Homes for sale and rent in Lisbon and Cascais, INE prices, purchase costs and viewings.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://metastate.pt/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "metastate",
+      "title": "Metastate · Imóveis em Portugal",
+      "version": "1.0.0",
+      "websiteUrl": "https://metastate.pt"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://metastate.pt/api/mcp"
+}

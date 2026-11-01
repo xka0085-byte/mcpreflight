@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:33.353Z",
+  "server": {
+    "registryName": "ru.me-ko/doors",
+    "title": "Между Комнат: двери в Москве",
+    "description": "Interior and entrance doors shop in Moscow: search, exact cart price, stock, order and measurement.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://me-ko.ru/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "me-ko",
+      "title": "Между Комнат: двери в Москве",
+      "version": "1.2.0",
+      "websiteUrl": "https://me-ko.ru/"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kolichestvo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].pozitsii has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].kommentariy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].interval has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].kommentariy has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://me-ko.ru/mcp"
+}

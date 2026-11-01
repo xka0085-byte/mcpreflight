@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:06.460Z",
+  "server": {
+    "registryName": "io.github.isakskogstad/kolada-mcp",
+    "title": "Kolada MCP Server",
+    "description": "Swedish municipality statistics from Kolada API. 6000+ KPIs for all 290 municipalities.",
+    "registryVersion": "2.2.1"
+  },
+  "endpoint": "https://kolada-mcp-pafn.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kolada-mcp-pafn.onrender.com/mcp"
+}

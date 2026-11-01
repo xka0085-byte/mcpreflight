@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:19.478Z",
+  "server": {
+    "registryName": "pro.wals.ai/weclapp",
+    "title": "wals.pro AI 4 weclapp",
+    "description": "weclapp ERP in your AI assistant: reads instantly, writes only after a preview you approve.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.ai.wals.pro/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ai.wals.pro/v1/mcp"
+}

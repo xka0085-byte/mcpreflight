@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:19.654Z",
+  "server": {
+    "registryName": "io.github.Perufitlife/rotate-pilot",
+    "title": "Rotate Pilot — FAA exam prep",
+    "description": "FAA written-test prep: practice questions, readiness diagnostic, METAR/TAF, drone airspace",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rotatepilot.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rotate-pilot",
+      "title": "Rotate Pilot — FAA exam prep",
+      "version": "1.0.0",
+      "websiteUrl": "https://rotatepilot.com/developers/mcp",
+      "icons": [
+        {
+          "src": "https://rotatepilot.com/mcp-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://rotatepilot.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].count has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].mode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].count has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].answers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].hours_per_day has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rotatepilot.com/api/mcp"
+}

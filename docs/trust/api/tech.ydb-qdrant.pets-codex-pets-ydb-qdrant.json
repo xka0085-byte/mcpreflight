@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:13.312Z",
+  "server": {
+    "registryName": "tech.ydb-qdrant.pets/codex-pets-ydb-qdrant",
+    "title": "Codex Pets Registry",
+    "description": "Search, preview, install community Codex pet packs, and discover the pet request flow.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pets.ydb-qdrant.tech/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "codex-pets-registry",
+      "version": "1.1.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].prompt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].displayName has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].requestId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].generationId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pets.ydb-qdrant.tech/mcp"
+}

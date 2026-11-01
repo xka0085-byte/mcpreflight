@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:05.501Z",
+  "server": {
+    "registryName": "io.github.registry-desk/uk-companies-house",
+    "title": "io.github.registry-desk/uk-companies-house",
+    "description": "UK Companies House company data (company-level, change tracking) for AI agents.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://tormanliikenne--uk-companies-house.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tormanliikenne--uk-companies-house.apify.actor/mcp"
+}

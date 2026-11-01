@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:40.009Z",
+  "server": {
+    "registryName": "io.github.palthainon/oldweb-diagnostics",
+    "title": "io.github.palthainon/oldweb-diagnostics",
+    "description": "Public DNS, HTTPS and deployment checks, plus offline email header and delivery-log tracing.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.oldweb.tech/diagnostics/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "oldweb-diagnostics",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].headers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].deliveryLog has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.oldweb.tech/diagnostics/mcp"
+}

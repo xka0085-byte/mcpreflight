@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:44.615Z",
+  "server": {
+    "registryName": "com.run402.rugshield-ai/mcp",
+    "title": "RugShield AI v4.0 MCP",
+    "description": "42-Point On-Chain Token Honeypot, Liquidity Lock & Drainer Scanner ($1 USDC Pro).",
+    "registryVersion": "4.0.0"
+  },
+  "endpoint": "https://rugshield-ai.run402.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "RugShield AI",
+      "version": "4.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].email_or_contact has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].offer_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].tier has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rugshield-ai.run402.com/api/mcp"
+}

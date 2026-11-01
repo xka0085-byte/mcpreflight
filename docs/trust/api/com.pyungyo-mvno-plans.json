@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:41.478Z",
+  "server": {
+    "registryName": "com.pyungyo/mvno-plans",
+    "title": "평생요금제닷컴 알뜰폰 요금제 (Korea MVNO plans)",
+    "description": "Korean MVNO(알뜰폰) plans checked 5x daily on carriers' official sites: search, cheapest, price history",
+    "registryVersion": "2.1.1"
+  },
+  "endpoint": "https://pyungyo.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pyungyo",
+      "title": "평생요금제닷컴 알뜰폰 요금제",
+      "version": "2.1.1",
+      "websiteUrl": "https://pyungyo.com/developers/"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].network has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].network has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].network has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pyungyo.com/mcp"
+}

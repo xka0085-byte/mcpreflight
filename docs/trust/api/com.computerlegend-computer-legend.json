@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:56.074Z",
+  "server": {
+    "registryName": "com.computerlegend/computer-legend",
+    "title": "Computer Legend",
+    "description": "Food, sleep, to-dos, songs, files, finance: one Computer Legend account your AI uses. You own it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.computerlegend.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.computerlegend.com/mcp"
+}

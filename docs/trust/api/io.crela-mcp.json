@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:44.873Z",
+  "server": {
+    "registryName": "io.crela/mcp",
+    "title": "Crela",
+    "description": "Search the Crela software marketplace and publish, update and review your software from your agent.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://crela.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "crela",
+      "title": "Crela",
+      "version": "1.0.0",
+      "websiteUrl": "https://crela.io",
+      "icons": [
+        {
+          "src": "https://crela.io/images/brand/crela-app-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "light"
+        },
+        {
+          "src": "https://crela.io/images/brand/crela-app-icon-512-dark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "dark"
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://crela.io/mcp"
+}

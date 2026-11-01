@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:22.333Z",
+  "server": {
+    "registryName": "fyi.contractors/contractors",
+    "title": "contractors.fyi",
+    "description": "US contractors ranked by city permits, permit costs and timelines, solar and generator sizing.",
+    "registryVersion": "2026.9.25"
+  },
+  "endpoint": "https://contractors.fyi/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "contractors.fyi",
+      "version": "2026-10-08"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].electric_cars has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].city has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://contractors.fyi/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:02.641Z",
+  "server": {
+    "registryName": "io.github.weide43/homey-mcp-ai-bridge",
+    "title": "MCP AI Bridge for Homey",
+    "description": "Control a Homey Pro smart home: devices, flows, energy and more. Runs on the Homey itself.",
+    "registryVersion": "5.2.1"
+  },
+  "endpoint": "https://{homey_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{homey_host}/mcp"
+}

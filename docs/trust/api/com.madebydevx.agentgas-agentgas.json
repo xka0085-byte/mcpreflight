@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:09.349Z",
+  "server": {
+    "registryName": "com.madebydevx.agentgas/agentgas",
+    "title": "AgentGas",
+    "description": "Quotes, capacity and order status for buying native gas on Base/Arbitrum/Optimism/Polygon via x402.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://agentgas.madebydevx.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentgas",
+      "title": "AgentGas by DevX",
+      "version": "1.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].order_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].usd has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentgas.madebydevx.com/mcp"
+}

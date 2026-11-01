@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:55.627Z",
+  "server": {
+    "registryName": "cl.ombo/ombo",
+    "title": "cl.ombo/ombo",
+    "description": "Seguro contra el enojo: registra compras y tratos de una persona en Chile y reclama por ella.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://ombo.cl/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ombo.cl/mcp"
+}

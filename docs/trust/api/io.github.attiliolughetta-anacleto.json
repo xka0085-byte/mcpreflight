@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:57.488Z",
+  "server": {
+    "registryName": "io.github.AttilioLughetta/anacleto",
+    "title": "Anacleto",
+    "description": "ETF portfolio calculator: returns, drawdown, market thermometers, plan. No advice, no orders.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://anacleto-zb7h.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://anacleto-zb7h.onrender.com/mcp"
+}

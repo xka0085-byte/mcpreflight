@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:38.524Z",
+  "server": {
+    "registryName": "io.github.InfoTrackGlobal/us",
+    "title": "InfoTrack (US)",
+    "description": "Court e-filing and process serving. Submit filings, serve process, and manage orders.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://search.infotrack.com/services/mcp-us-server/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://search.infotrack.com/services/mcp-us-server/mcp"
+}

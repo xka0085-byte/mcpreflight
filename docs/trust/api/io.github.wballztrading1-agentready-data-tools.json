@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:01.980Z",
+  "server": {
+    "registryName": "io.github.wballztrading1/agentready-data-tools",
+    "title": "agentready data tools (jobs, tenders, companies)",
+    "description": "Jobs from Greenhouse/Lever/Ashby/Workday, SAM.gov and EU tenders, UK companies. Hosted on Apify.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=agentready/greenhouse-lever-ashby-jobs,agentready/workday-jobs-scraper,agentready/sam-gov-opportunities,agentready/eu-tenders-ted,agentready/uk-companies-house-search",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=agentready/greenhouse-lever-ashby-jobs,agentready/workday-jobs-scraper,agentready/sam-gov-opportunities,agentready/eu-tenders-ted,agentready/uk-companies-house-search"
+}

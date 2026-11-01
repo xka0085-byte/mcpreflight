@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:12.992Z",
+  "server": {
+    "registryName": "io.github.TencentCloudBase/cloudbase-mcp",
+    "title": "CloudBase",
+    "description": "CloudBase MCP: DB, functions, storage, hosting via @cloudbase/cloudbase-mcp",
+    "registryVersion": "2.36.2"
+  },
+  "endpoint": "https://tcb-api.cloud.tencent.com/mcp/v1?env_id={env_id}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tcb-api.cloud.tencent.com/mcp/v1?env_id={env_id}"
+}

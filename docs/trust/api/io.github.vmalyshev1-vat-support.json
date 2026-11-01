@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:55.223Z",
+  "server": {
+    "registryName": "io.github.vmalyshev1/vat-support",
+    "title": "vat.support VAT Compliance",
+    "description": "EU/UK VAT compliance for AI agents: number validation, rate lookups, reverse-charge checks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://snapshot.vat.support/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "vat.support",
+      "version": "1.0.0",
+      "title": "vat.support — EU/UK VAT compliance engine"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].customer_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].annual_revenue_eur has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://snapshot.vat.support/api/mcp"
+}

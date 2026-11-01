@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:15.851Z",
+  "server": {
+    "registryName": "com.pourwire/pourwire",
+    "title": "PourWire",
+    "description": "Restaurants and bars about to open in 7 US metros, from new liquor license filings. No key needed.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://pourwire.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pourwire",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].metro has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].metro has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pourwire.com/mcp"
+}

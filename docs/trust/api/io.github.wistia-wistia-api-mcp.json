@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:10.472Z",
+  "server": {
+    "registryName": "io.github.wistia/wistia-api-mcp",
+    "title": "Wistia API",
+    "description": "Manage Wistia videos, channels, folders, captions, customizations, and analytics via MCP.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://api.wistia.com/mcp/api",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.wistia.com/mcp/api"
+}

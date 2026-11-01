@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:09.372Z",
+  "server": {
+    "registryName": "io.github.winters-works-co/domain-whois",
+    "title": "WHOIS & Domain Availability (RDAP)",
+    "description": "Domain WHOIS via official RDAP: registrar, expiry dates, nameservers, availability. Winters Works.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com?actors=wintersworks/domain-whois-mcp-server",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?actors=wintersworks/domain-whois-mcp-server"
+}

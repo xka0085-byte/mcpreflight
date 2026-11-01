@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:51.584Z",
+  "server": {
+    "registryName": "com.swolvy/mcp",
+    "title": "Swolvy",
+    "description": "Publish HTML from Claude, ChatGPT, Gemini or any MCP client and get a shareable link. No account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://swolvy.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://swolvy.com/api/mcp"
+}

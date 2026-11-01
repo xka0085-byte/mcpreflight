@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:02.896Z",
+  "server": {
+    "registryName": "io.github.phrase/mcp",
+    "title": "Phrase MCP",
+    "description": "Phrase MCP server: language intelligence platform for translation, terminology, and quality.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.eu.phrase.com",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.eu.phrase.com"
+}

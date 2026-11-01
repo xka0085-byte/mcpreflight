@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:33.691Z",
+  "server": {
+    "registryName": "com.chargezen/subscriptions",
+    "title": "Chargezen Subscriptions",
+    "description": "Shopify subscriptions: subscribe-and-save, prepaid and build-a-box, plus rewards and invoices.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.chargezen.com/mcp/subscriptions",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chargezen.com/mcp/subscriptions"
+}

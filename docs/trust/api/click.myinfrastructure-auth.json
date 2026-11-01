@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:58.302Z",
+  "server": {
+    "registryName": "click.myinfrastructure/auth",
+    "title": "Auth",
+    "description": "Usuários, sessões, logins sociais e webhooks da sua aplicação",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://auth.worker.myinfrastructure.click/mcp/{project_id}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://auth.worker.myinfrastructure.click/mcp/{project_id}"
+}

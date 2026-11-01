@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:01.194Z",
+  "server": {
+    "registryName": "dev.workers.quietworklabs.txlicense-leads/txlicense-leads",
+    "title": "Quietwork Lead Feeds",
+    "description": "Public-records leads: trucking insurance signals, liquor licenses, new nonprofits, LLCs, carriers.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://txlicense-leads.quietworklabs.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dev.workers.quietworklabs.txlicense-leads/txlicense-leads",
+      "title": "Quietwork Lead Feeds (new liquor licenses TX/NY/CA/FL, new CO businesses, WA contractors, Chicago licenses, FMCSA trucking, new nonprofits)",
+      "version": "1.3.0",
+      "websiteUrl": "https://txlicense-leads.quietworklabs.workers.dev"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].feed has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://txlicense-leads.quietworklabs.workers.dev/mcp"
+}

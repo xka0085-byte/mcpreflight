@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:40.083Z",
+  "server": {
+    "registryName": "io.github.jnilrac/secant-agent-research-mcp",
+    "title": "Secant Agent Research Pack",
+    "description": "Paid MCP web research for agents: search, extraction, citations, and x402 payment discovery.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agentic.secantoutreach.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Secant Agent Research Pack",
+      "version": "2.14.7"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].offer_slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].input has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].max_budget_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].intent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].max_latency_ms has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentic.secantoutreach.com/mcp/"
+}

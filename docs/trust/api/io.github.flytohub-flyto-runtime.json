@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:35.787Z",
+  "server": {
+    "registryName": "io.github.flytohub/flyto-runtime",
+    "title": "Flyto2 Runtime",
+    "description": "Self-hosted MCP runtime for ChatGPT to edit files, run commands, and test local projects.",
+    "registryVersion": "1.0.8"
+  },
+  "endpoint": "https://{runtime_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{runtime_host}/mcp"
+}

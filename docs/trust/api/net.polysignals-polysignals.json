@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:15.079Z",
+  "server": {
+    "registryName": "net.polysignals/polysignals",
+    "title": "PolySignals.net",
+    "description": "Live crypto Buy/Sell/Hold readings from prediction markets and options, plus daily trend calls.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://polysignals.net/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "net.polysignals/polysignals",
+      "title": "PolySignals.net",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].timeframe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].hours has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://polysignals.net/api/mcp"
+}

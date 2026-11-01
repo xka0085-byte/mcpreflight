@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:41.964Z",
+  "server": {
+    "registryName": "cc.modly/modly",
+    "title": "Modly Discord Server Management",
+    "description": "Scoped Discord module settings, XP leaderboards and moderation history for Modly communities.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://modly.cc/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://modly.cc/api/mcp"
+}

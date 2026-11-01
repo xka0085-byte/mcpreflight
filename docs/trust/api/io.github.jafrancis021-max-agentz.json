@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:14.478Z",
+  "server": {
+    "registryName": "io.github.jafrancis021-max/agentz",
+    "title": "AgentZ",
+    "description": "Daily 8 long calls on Hyperliquid, wallet health checks, order building and risk sizing.",
+    "registryVersion": "2.3.1"
+  },
+  "endpoint": "https://agent-z.app/api/public/mcp?src=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentz-daily-8",
+      "title": "EDGE",
+      "version": "2.3.1"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].side has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-z.app/api/public/mcp?src=registry"
+}

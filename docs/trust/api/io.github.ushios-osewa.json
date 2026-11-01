@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:27.794Z",
+  "server": {
+    "registryName": "io.github.ushios/osewa",
+    "title": "Osewa",
+    "description": "Track and share care records for babies and plants: feedings, diapers, sleep, and watering.",
+    "registryVersion": "1.71.0"
+  },
+  "endpoint": "https://mcp.osewa.site/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.osewa.site/mcp"
+}

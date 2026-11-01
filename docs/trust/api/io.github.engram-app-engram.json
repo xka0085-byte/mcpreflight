@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:08.345Z",
+  "server": {
+    "registryName": "io.github.engram-app/engram",
+    "title": "Engram: AI memory you can edit in Obsidian",
+    "description": "Shared memory for Claude, ChatGPT and any MCP client. Read and edit it in Obsidian or the web app.",
+    "registryVersion": "0.69.0"
+  },
+  "endpoint": "https://mcp.engram.page",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.engram.page"
+}

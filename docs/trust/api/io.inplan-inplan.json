@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:51.368Z",
+  "server": {
+    "registryName": "io.inplan/inplan",
+    "title": "InPlan",
+    "description": "Is this US provider in this health plan? Network checks by NPI and plan ID, with dated sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.inplan.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "inplan",
+      "title": "InPlan",
+      "version": "1.0.0",
+      "description": "Which Marketplace and Medicare Advantage plans list a US provider, by NPI and plan ID, with the source type and date behind every answer.",
+      "websiteUrl": "https://inplan.io"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.inplan.io/mcp"
+}

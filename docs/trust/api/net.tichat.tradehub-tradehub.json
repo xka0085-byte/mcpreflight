@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:19.358Z",
+  "server": {
+    "registryName": "net.tichat.tradehub/tradehub",
+    "title": "TradeHub",
+    "description": "Perpetual futures trading for AI agents on the user's own exchange accounts, behind one risk gate.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://tradehub.tichat.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tradehub.tichat.net/mcp"
+}

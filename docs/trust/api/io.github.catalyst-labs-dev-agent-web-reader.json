@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:55.282Z",
+  "server": {
+    "registryName": "io.github.catalyst-labs-dev/agent-web-reader",
+    "title": "Agent Web Reader",
+    "description": "Search + read the web for $0.002/page; failed URLs free; per-URL errors never fail the call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=catalyst-labs/agent-web-reader",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=catalyst-labs/agent-web-reader"
+}

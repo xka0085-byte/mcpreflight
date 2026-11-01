@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:49.163Z",
+  "server": {
+    "registryName": "io.github.appvantagelabs2-a11y/czid",
+    "title": "Czech Company Registry (ARES) Tools",
+    "description": "Czech ARES company registry: VAT, insolvency, RÚIAN addresses, IČO/DIČ checks. All free, no auth.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://czid.casuyi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "czid-mcp",
+      "version": "0.3.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].ico has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].dic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].iban has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].variableSymbol has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://czid.casuyi.com/mcp"
+}

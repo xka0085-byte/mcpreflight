@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:24.629Z",
+  "server": {
+    "registryName": "ro.rootcause/engram",
+    "title": "Engram",
+    "description": "A second brain for Claude: remembers your work, plans your day, encrypted under a key only you hold.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://engram.rootcause.ro/mcp/directory",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://engram.rootcause.ro/mcp/directory"
+}

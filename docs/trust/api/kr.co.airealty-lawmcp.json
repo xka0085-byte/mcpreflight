@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:48.704Z",
+  "server": {
+    "registryName": "kr.co.airealty/lawmcp",
+    "title": "airealty 한국 법령 (법제처 OPEN API)",
+    "description": "대한민국 법령·조문·별표·연혁·판례·해석례를 법제처 국가법령정보 OPEN API 로 찾아보는 읽기 전용 MCP 서버. 코어 12 + 보조 12 도구.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://law.airealty.co.kr/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://law.airealty.co.kr/mcp"
+}

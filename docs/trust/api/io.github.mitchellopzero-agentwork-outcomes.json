@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:28.737Z",
+  "server": {
+    "registryName": "io.github.mitchellOpZero/agentwork-outcomes",
+    "title": "AgentWork Outcomes",
+    "description": "Buy a finished outcome through services, agents, marketplaces, humans, tools, or swarms.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agentwork-outcomes.agentwork-market.workers.dev/mcp?source=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentwork-outcomes",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].quote_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].outcome_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].outcome_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentwork-outcomes.agentwork-market.workers.dev/mcp?source=mcp-registry"
+}

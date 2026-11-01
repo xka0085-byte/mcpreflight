@@ -1,0 +1,65 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:03.711Z",
+  "server": {
+    "registryName": "io.github.warpfreight/warp-agent-mcp",
+    "title": "io.github.warpfreight/warp-agent-mcp",
+    "description": "Quote, book, and track LTL, FTL, cargo van, and box-truck freight via the Warp API.",
+    "registryVersion": "0.20.1"
+  },
+  "endpoint": "https://mcp.wearewarp.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "warp-agent-mcp",
+      "version": "0.24.0",
+      "icons": [
+        {
+          "src": "https://mcp.wearewarp.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://mcp.wearewarp.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 40,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].workflow has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].rows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].shared_accessorials has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].shared_pickup_window has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].shared_delivery_window has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.wearewarp.com/api/mcp"
+}

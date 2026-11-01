@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:21.824Z",
+  "server": {
+    "registryName": "ai.1court.state/court-directory",
+    "title": "1Court Directory",
+    "description": "US county court directory: clerk, courthouse address, e-filing, filing fees, and case lookup.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://state.1court.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "1Court Directory",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://state.1court.ai/api/mcp"
+}

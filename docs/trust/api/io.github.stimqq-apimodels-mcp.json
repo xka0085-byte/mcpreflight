@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:59.923Z",
+  "server": {
+    "registryName": "io.github.stimQQ/apimodels-mcp",
+    "title": "apimodels",
+    "description": "Image, video, chat and speech models with one account — local (npx) or hosted with OAuth sign-in.",
+    "registryVersion": "0.7.0"
+  },
+  "endpoint": "https://api.apimodels.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.apimodels.app/mcp"
+}

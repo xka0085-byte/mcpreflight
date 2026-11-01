@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:46.840Z",
+  "server": {
+    "registryName": "io.github.hwang-yh-cto/space-ocr",
+    "title": "io.github.hwang-yh-cto/space-ocr",
+    "description": "Verified OCR with per-value coordinates, plus a workspace agents can file documents into and query.",
+    "registryVersion": "0.5.6"
+  },
+  "endpoint": "https://mcp.space-ocr.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.space-ocr.com/mcp"
+}

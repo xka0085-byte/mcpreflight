@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:46.540Z",
+  "server": {
+    "registryName": "app.singitai/singit",
+    "title": "SingIt x402",
+    "description": "Web search, page reading, prices and market data for agents, billed to your SingIt API key in USDC.",
+    "registryVersion": "0.1.4"
+  },
+  "endpoint": "https://app.singitai.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "singit",
+      "title": "SingIt x402",
+      "version": "0.1.3"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.singitai.app/mcp"
+}

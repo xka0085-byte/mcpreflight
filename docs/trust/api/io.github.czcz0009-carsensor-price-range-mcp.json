@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:55.153Z",
+  "server": {
+    "registryName": "io.github.czcz0009/carsensor-price-range-mcp",
+    "title": "carsensor Price Range MCP Server for AI Agents",
+    "description": "Get a used car's market-price range (min/max/median) by model and year from carsensor.net.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://woolen-snake--carsensor-price-range-mcp.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://woolen-snake--carsensor-price-range-mcp.apify.actor/mcp"
+}

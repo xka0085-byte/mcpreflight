@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:34.694Z",
+  "server": {
+    "registryName": "ai.yuanwu/aisub",
+    "title": "AISub",
+    "description": "ChatGPT, Claude, Gemini, Perplexity and Grok subscription prices by country, with price history.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aisub.yuanwu.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aisub",
+      "title": "AISub AI subscription prices",
+      "version": "1.0.0",
+      "websiteUrl": "https://aisub.yuanwu.ai"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aisub.yuanwu.ai/mcp"
+}

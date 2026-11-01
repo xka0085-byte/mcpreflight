@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:42.525Z",
+  "server": {
+    "registryName": "jp.domain-bannin/domain-bannin",
+    "title": "ドメイン番人",
+    "description": "ドメインの設定を調べる MCP サーバー。SPF / DKIM / DMARC・DNS・SSL 証明書・セキュリティヘッダ・サブドメイン・類似ドメインを、公開情報だけで確認します。登録不要・無料。",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://domain-bannin.jp/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "domain-bannin",
+      "title": "ドメイン番人",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://domain-bannin.jp/api/mcp"
+}

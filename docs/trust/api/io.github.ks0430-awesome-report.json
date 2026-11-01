@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:30.555Z",
+  "server": {
+    "registryName": "io.github.ks0430/awesome-report",
+    "title": "Awesome Report",
+    "description": "Turn an agent's findings into a clean web page: tables, charts, diagrams, one shareable link.",
+    "registryVersion": "0.12.0"
+  },
+  "endpoint": "https://www.awesome-report.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.awesome-report.app/api/mcp"
+}

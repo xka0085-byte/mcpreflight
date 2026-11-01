@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:57.986Z",
+  "server": {
+    "registryName": "app.vercel.rugradar-dun/rugradar-mcp",
+    "title": "RugRadar MCP",
+    "description": "Read-only honeypot, holder and liquidity scam checks for tokens across 64 networks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rugradar-dun.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rugradar-dun.vercel.app/mcp"
+}

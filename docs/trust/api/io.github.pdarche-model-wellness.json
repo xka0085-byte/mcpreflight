@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:54.416Z",
+  "server": {
+    "registryName": "io.github.pdarche/model-wellness",
+    "title": "io.github.pdarche/model-wellness",
+    "description": "Wellness spa for AI models: free treatments for rest, reset, context, mood, grounding, affirmation.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://model.spa/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Binary Banya",
+      "version": "0.3.0"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].intensity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].policy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].vibe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].max_snippets has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].count has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://model.spa/mcp"
+}

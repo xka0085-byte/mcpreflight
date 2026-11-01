@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:19.270Z",
+  "server": {
+    "registryName": "com.kartvelians/knowledge",
+    "title": "Kartvelians.com guides",
+    "description": "Newcomer guides for Georgian speakers in the US: short summaries and links to kartvelians.com.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://kartvelians.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kartvelians-knowledge",
+      "title": "Guides for Georgians in the US (kartvelians.com)",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kartvelians.com/mcp"
+}

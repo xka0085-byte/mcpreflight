@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:43.854Z",
+  "server": {
+    "registryName": "io.github.ModelsLab/modelslab-v8",
+    "title": "ModelsLab v8",
+    "description": "ModelsLab v8 generation APIs: discover models, providers and endpoints, then run them.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://modelslab.com/mcp/v8",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://modelslab.com/mcp/v8"
+}

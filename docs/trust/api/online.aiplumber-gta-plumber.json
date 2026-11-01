@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:00.238Z",
+  "server": {
+    "registryName": "online.aiplumber/gta-plumber",
+    "title": "GTA AI Plumber",
+    "description": "Agent-first GTA plumbing: compare vetted providers, negotiate price and availability, and book.",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://aiplumber.online/agent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gta-ai-plumber",
+      "version": "0.7.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].urgency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].contact_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].phone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].email has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiplumber.online/agent/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:21.987Z",
+  "server": {
+    "registryName": "io.openwaters/ais",
+    "title": "Open Waters AIS",
+    "description": "Live AIS vessel positions by MMSI, name, area, or radius, plus coverage. No sign-in, no key.",
+    "registryVersion": "0.18.0"
+  },
+  "endpoint": "https://ais.openwaters.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aiscast",
+      "title": "Open Waters AIS",
+      "version": "0.18.0",
+      "websiteUrl": "https://openwaters.io/ais/"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].bbox has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ais.openwaters.io/mcp"
+}

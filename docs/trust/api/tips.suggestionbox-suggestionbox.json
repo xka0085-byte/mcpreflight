@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:14.548Z",
+  "server": {
+    "registryName": "tips.suggestionbox/suggestionbox",
+    "title": "SuggestionBox.tips",
+    "description": "Leave a private suggestion, problem or compliment for any business. Only the business reads it.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://suggestionbox.tips/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "suggestionbox",
+      "title": "SuggestionBox.tips",
+      "version": "1.0.1",
+      "websiteUrl": "https://suggestionbox.tips/",
+      "icons": [
+        {
+          "src": "https://suggestionbox.tips/wp-content/uploads/2026/10/suggestionbox-logo-square.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "884x884"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://suggestionbox.tips/mcp"
+}

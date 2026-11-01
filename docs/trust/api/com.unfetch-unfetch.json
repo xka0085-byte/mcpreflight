@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:38.158Z",
+  "server": {
+    "registryName": "com.unfetch/unfetch",
+    "title": "Unfetch",
+    "description": "Marketing reporting across Google Ads, Meta Ads, GA4, Search Console and Merchant Center.",
+    "registryVersion": "1.0.6"
+  },
+  "endpoint": "https://unfetch.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://unfetch.com/api/mcp"
+}

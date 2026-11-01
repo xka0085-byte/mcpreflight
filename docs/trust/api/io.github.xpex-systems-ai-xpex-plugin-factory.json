@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:22.697Z",
+  "server": {
+    "registryName": "io.github.xpex-systems-ai/xpex-plugin-factory",
+    "title": "io.github.xpex-systems-ai/xpex-plugin-factory",
+    "description": "MCP plugin factory and x402 Agent Kit API for external agents, at 0.01 USDC per call.",
+    "registryVersion": "0.4.1"
+  },
+  "endpoint": "https://xpex-plugin-factory-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "xpex-plugin-factory",
+      "version": "0.4.1"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].blueprint has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].blueprint has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].blueprint has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://xpex-plugin-factory-production.up.railway.app/mcp"
+}

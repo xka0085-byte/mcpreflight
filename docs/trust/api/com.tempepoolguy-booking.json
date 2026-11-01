@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:05.219Z",
+  "server": {
+    "registryName": "com.tempepoolguy/booking",
+    "title": "Tempe Pool Guy — book pool service in Tempe",
+    "description": "Book pool service in Tempe, AZ: prices, service area by ZIP, free callback from a local pro.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tempepoolguy.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tempepoolguy.com-booking",
+      "title": "Tempe Pool Guy — book pool service in Tempe",
+      "version": "1.0.0",
+      "websiteUrl": "https://tempepoolguy.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tempepoolguy.com/mcp"
+}

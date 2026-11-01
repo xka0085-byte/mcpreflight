@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:44.580Z",
+  "server": {
+    "registryName": "io.github.VladimirWrites/nestegg-calculators",
+    "title": "io.github.VladimirWrites/nestegg-calculators",
+    "description": "90+ pure finance calculators: loans, investing, bonds, options, tax. Stateless, stores nothing.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://nestegg.money/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nestegg-calculators",
+      "version": "1.0.0",
+      "calcVersion": "1.5.3"
+    },
+    "toolCount": 99,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].privateHealth has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nestegg.money/mcp"
+}

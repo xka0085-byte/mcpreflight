@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:08.939Z",
+  "server": {
+    "registryName": "io.github.grant1493-svg/england-planning-constraints",
+    "title": "England Planning Constraints Checker (official open data)",
+    "description": "Planning constraints for English properties from official planning.data.gov.uk data, via Apify.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=shelly_fen/england-planning-constraints-checker",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=shelly_fen/england-planning-constraints-checker"
+}

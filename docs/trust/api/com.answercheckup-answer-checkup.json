@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:26.208Z",
+  "server": {
+    "registryName": "com.answercheckup/answer-checkup",
+    "title": "Answer Checkup",
+    "description": "Free AI readiness scan for any website. Paid reports for agents are coming soon.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://answercheckup.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "answercheckup",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://answercheckup.com/mcp"
+}

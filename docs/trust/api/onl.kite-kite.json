@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:02.915Z",
+  "server": {
+    "registryName": "onl.kite/kite",
+    "title": "Kite Discord Bot Builder",
+    "description": "Build and fix Discord bots from a chat. Kite hosts them 24/7, with no code to deploy.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://kite.onl/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kite.onl/api/mcp"
+}

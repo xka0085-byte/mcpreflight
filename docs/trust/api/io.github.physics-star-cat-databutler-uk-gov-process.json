@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:05.213Z",
+  "server": {
+    "registryName": "io.github.physics-star-cat/databutler-uk-gov-process",
+    "title": "io.github.physics-star-cat/databutler-uk-gov-process",
+    "description": "UK government service fees, steps, processing times and recent changes, read from gov.uk.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://databutler.dev/api/mcp/uk-gov-process",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://databutler.dev/api/mcp/uk-gov-process"
+}

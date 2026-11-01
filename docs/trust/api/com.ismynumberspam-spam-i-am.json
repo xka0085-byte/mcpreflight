@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:01.816Z",
+  "server": {
+    "registryName": "com.ismynumberspam/spam-i-am",
+    "title": "Spam I Am: carrier spam label check",
+    "description": "See if a phone number shows Spam Risk or Scam Likely on AT&T, Verizon and T-Mobile real phones.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ismynumberspam.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "spam-i-am",
+      "title": "Spam I Am",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].check_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].wait_seconds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].approval_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].wait_seconds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ismynumberspam.com/mcp"
+}

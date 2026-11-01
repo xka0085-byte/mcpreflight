@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:09.029Z",
+  "server": {
+    "registryName": "com.tetheredtrust/tethered-trust",
+    "title": "Tethered Trust",
+    "description": "Compatibility checks for AI agents before they buy or install: verdicts, evidence, receipts.",
+    "registryVersion": "0.12.0"
+  },
+  "endpoint": "https://tetheredtrust.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tethered-trust",
+      "title": "Tethered Trust",
+      "version": "0.16.0",
+      "websiteUrl": "https://tetheredtrust.com",
+      "icons": [
+        {
+          "src": "https://tetheredtrust.com/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].checks has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].outcome has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tetheredtrust.com/mcp"
+}

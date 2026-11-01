@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:47.817Z",
+  "server": {
+    "registryName": "hu.posty/posty",
+    "title": "Posty: Social Media Scheduler",
+    "description": "Write, schedule and publish posts to 20 social platforms, from Facebook and Instagram to TikTok.",
+    "registryVersion": "1.4.3"
+  },
+  "endpoint": "https://api.posty.hu/mcp-oauth",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.posty.hu/mcp-oauth"
+}

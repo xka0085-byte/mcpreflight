@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:55.480Z",
+  "server": {
+    "registryName": "io.github.KG-NINJA/hyperxosist-agent",
+    "title": "HyperXosist-Agent Remote MCP",
+    "description": "X feedback discovery, noise-reduced query planning, signal filtering, and AI handoffs.",
+    "registryVersion": "2.5.1"
+  },
+  "endpoint": "https://mcp.kgninja.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "hyperxosist-mcp-server",
+      "version": "2.5.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].productName has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.kgninja.dev/mcp"
+}

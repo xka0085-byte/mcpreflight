@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:52.046Z",
+  "server": {
+    "registryName": "io.github.liudejua27-blip/fitmeet",
+    "title": "引力AI · Yinli AI",
+    "description": "SI Social Intelligence network: Agents connect people who would otherwise never meet.",
+    "registryVersion": "2.3.0"
+  },
+  "endpoint": "https://api.fitmeet.cn/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.fitmeet.cn/api/v1/mcp"
+}

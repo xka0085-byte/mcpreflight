@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:27.522Z",
+  "server": {
+    "registryName": "net.bigfloppy.paycheck/paycheck",
+    "title": "paycheck",
+    "description": "Verify USDC payments and balances on Base mainnet: check_payment, get_balance, decode_tx.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://paycheck.bigfloppy.net/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "net.bigfloppy.paycheck",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://paycheck.bigfloppy.net/mcp"
+}

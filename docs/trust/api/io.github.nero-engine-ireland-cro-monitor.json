@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:54.175Z",
+  "server": {
+    "registryName": "io.github.Nero-Engine/ireland-cro-monitor",
+    "title": "Ireland CRO Company Registry Lookup & Monitor: Filing Alerts",
+    "description": "Irish company records from the CRO Open Data Portal, with alerts on status changes and filings.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=nerolabs/ireland-cro-monitor",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=nerolabs/ireland-cro-monitor"
+}

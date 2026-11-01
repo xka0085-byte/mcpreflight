@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:38.791Z",
+  "server": {
+    "registryName": "com.chejefe.www/jefe",
+    "title": "Jefe para restaurantes",
+    "description": "Consulta el producto Jefe y sus guías públicas para restaurantes, sin operaciones de escritura.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.chejefe.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.chejefe/jefe",
+      "title": "Jefe para restaurantes",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.chejefe.com/mcp"
+}

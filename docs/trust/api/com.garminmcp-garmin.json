@@ -1,26 +1,29 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:43:26.404Z",
+  "scannedAt": "2026-11-01T03:47:48.371Z",
   "server": {
     "registryName": "com.garminmcp/garmin",
     "title": "Garmin MCP",
     "description": "Read-only Garmin data for your AI: sleep, Body Battery, activities, laps, and training status.",
-    "registryVersion": "1.0.0"
+    "registryVersion": "1.1.0"
   },
-  "endpoint": "https://garminmcp.com/u/{user_id}/mcp",
+  "endpoint": "https://garminmcp.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Garmin MCP",
+      "version": "1.30.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
       }
     ]
   },
-  "verify": "npx @eidonze/mcpreflight schema https://garminmcp.com/u/{user_id}/mcp"
+  "verify": "npx @eidonze/mcpreflight schema https://garminmcp.com/mcp"
 }

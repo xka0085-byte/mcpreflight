@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:20.266Z",
+  "server": {
+    "registryName": "com.textforagents/minimum-equipment-list-dispatch",
+    "title": "Minimum Equipment List dispatch for agents",
+    "description": "Fail-closed per-task-class dispatch matrix with deferral clocks and signed dispatch releases.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://textforagents.com/products/minimum-equipment-list-dispatch/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/minimum-equipment-list-dispatch/mcp"
+}

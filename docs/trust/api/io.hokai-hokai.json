@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:48.156Z",
+  "server": {
+    "registryName": "io.hokai/hokai",
+    "title": "HokAI",
+    "description": "AI tool directory MCP server, live since July 2026. Tools, agents, models, companies, services.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://hokai.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Hokai MCP",
+      "version": "1.27.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tool_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].company has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].note has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hokai.io/mcp"
+}

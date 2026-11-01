@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:27.814Z",
+  "server": {
+    "registryName": "sk.autoisto/intents",
+    "title": "AutoIsto — car watch",
+    "description": "Watches Slovak used-car ads for a buyer. Takes no contact; active only after e-mail opt-in.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://www.autoisto.sk/mcp/zamery",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "autoisto-zamery",
+      "title": "AutoIsto — sledovanie ponuky",
+      "version": "0.1.0",
+      "websiteUrl": "https://www.autoisto.sk"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.autoisto.sk/mcp/zamery"
+}

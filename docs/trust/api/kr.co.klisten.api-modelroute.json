@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:51.322Z",
+  "server": {
+    "registryName": "kr.co.klisten.api/modelroute",
+    "title": "Klisten ModelRoute",
+    "description": "Read public model catalog metadata with freshness timestamps. No model execution or payments.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.klisten.co.kr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "klisten-catalog-local",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pricing_class has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.klisten.co.kr/mcp"
+}

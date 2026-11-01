@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:48.453Z",
+  "server": {
+    "registryName": "com.gatherhq.synthetic/research-reports",
+    "title": "GatherHQ",
+    "description": "Turn a business question into a customer research report from simulated interviews.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://synthetic.gatherhq.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://synthetic.gatherhq.com/api/v1/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:01.617Z",
+  "server": {
+    "registryName": "legal.loupe/citation-lookup",
+    "title": "Loupe: free citation lookup",
+    "description": "Check if a US legal citation exists, names its case and has a valid pin cite; or find a case. Free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://loupe.legal/mcp-public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "loupe-public",
+      "title": "Loupe: free citation lookup",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].citation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://loupe.legal/mcp-public"
+}

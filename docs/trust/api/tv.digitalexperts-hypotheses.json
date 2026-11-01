@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:33.282Z",
+  "server": {
+    "registryName": "tv.digitalexperts/hypotheses",
+    "title": "Digital Experts Hypotheses",
+    "description": "Open data: 1,590 JTBD hypotheses with cold-traffic test results and cost per lead. CC BY 4.0",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://mcp.digitalexperts.tv/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "digital-experts-hypotheses",
+      "version": "0.1.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].verdict has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].year_from has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.digitalexperts.tv/mcp"
+}

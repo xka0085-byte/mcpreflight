@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:48.885Z",
+  "server": {
+    "registryName": "io.github.Webba-Creative-Technologies/capslane",
+    "title": "io.github.Webba-Creative-Technologies/capslane",
+    "description": "Retrieve existing or generated YouTube transcripts with timestamps through Capslane.",
+    "registryVersion": "0.1.8"
+  },
+  "endpoint": "https://capslane.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://capslane.com/mcp"
+}

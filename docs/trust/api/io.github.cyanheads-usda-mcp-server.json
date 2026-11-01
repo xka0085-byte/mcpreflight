@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:54.871Z",
+  "server": {
+    "registryName": "io.github.cyanheads/usda-mcp-server",
+    "title": "io.github.cyanheads/usda-mcp-server",
+    "description": "Search foods, compare nutrients, and look up the full USDA FoodData Central database.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://usda.caseyjhand.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "usda-mcp-server",
+      "version": "0.2.0",
+      "title": "usda-mcp-server"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://usda.caseyjhand.com/mcp"
+}

@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:32.628Z",
+  "server": {
+    "registryName": "io.github.Ukraine-Territorial-MCP/eurostat-statistics",
+    "title": "Eurostat Statistics MCP",
+    "description": "Experimental MCP providing read-only population statistics from Eurostat.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.edeputat.com/eurostat-statistics/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Live official European population statistics",
+      "name": "eurostat-statistics",
+      "title": "Eurostat Statistics",
+      "version": ""
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].geo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.edeputat.com/eurostat-statistics/mcp"
+}

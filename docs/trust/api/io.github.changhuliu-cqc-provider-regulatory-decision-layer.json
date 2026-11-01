@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:37.046Z",
+  "server": {
+    "registryName": "io.github.ChanghuLiu/cqc-provider-regulatory-decision-layer",
+    "title": "RegEvidenceHub CQC",
+    "description": "RegEvidenceHub CQC: England provider-registration and statutory-notification preflight.",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://cqc.regevidencehub.com/ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "CQC Provider Compliance Navigator",
+      "version": "0.6.0",
+      "websiteUrl": "https://regevidencehub.com/about/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].question_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].workflow has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cqc.regevidencehub.com/ai/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:06.272Z",
+  "server": {
+    "registryName": "io.github.nirholas/three.ws",
+    "title": "three.ws Avatars & Agents",
+    "description": "3D avatars, embeds, glTF tools, agent memory, and on-chain agent identity from three.ws.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://three.ws/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://three.ws/api/mcp"
+}

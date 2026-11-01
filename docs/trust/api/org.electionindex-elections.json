@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:22.801Z",
+  "server": {
+    "registryName": "org.electionindex/elections",
+    "title": "Election Index",
+    "description": "Neutral, sourced election calendar: polling days, when provisional and final results are due.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://electionindex.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "electionindex",
+      "title": "Global Election Index",
+      "version": "2026-10-31.9c2c30b0",
+      "websiteUrl": "https://electionindex.org",
+      "icons": [
+        {
+          "src": "https://electionindex.org/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        },
+        {
+          "src": "https://electionindex.org/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://electionindex.org/mcp"
+}

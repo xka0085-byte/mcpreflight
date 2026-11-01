@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:34.646Z",
+  "server": {
+    "registryName": "com.hermosso/mcp",
+    "title": "Hermosso",
+    "description": "AI photos and videos of yourself: photoshoot packs, image and video engines, motion transfer.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hermosso.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hermosso.com/mcp"
+}

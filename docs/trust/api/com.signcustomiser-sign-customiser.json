@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:37.587Z",
+  "server": {
+    "registryName": "com.signcustomiser/sign-customiser",
+    "title": "Sign Customiser",
+    "description": "Read and manage Sign Customiser stores: customisers, options, pricing, products and orders.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.signcustomiser.com",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.signcustomiser.com"
+}

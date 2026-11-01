@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:14.446Z",
+  "server": {
+    "registryName": "tl.aura/aura",
+    "title": "Aura",
+    "description": "Live sports data: scores, play-by-play, box scores, odds and props. No key needed to start.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aura.tl/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aura",
+      "title": "Aura",
+      "version": "1.0.0",
+      "websiteUrl": "https://aura.tl"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sport has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].marketType has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].marketType has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].sport has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].sport has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aura.tl/mcp"
+}

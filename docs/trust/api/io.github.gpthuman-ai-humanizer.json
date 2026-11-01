@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:02.904Z",
+  "server": {
+    "registryName": "io.github.GPTHuman-ai/humanizer",
+    "title": "io.github.GPTHuman-ai/humanizer",
+    "description": "Transform AI-generated text into natural, human-sounding content that bypasses AI detectors.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://api.gpthuman.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "GPTHuman MCP Server",
+      "version": "1.1.0",
+      "websiteUrl": "https://github.com/GPTHuman-ai/mcp-server",
+      "description": "A Model Context Protocol (MCP) server that exposes GPTHuman's AI humanization API. It provides tools for transforming AI-generated text into more natural, human-sounding writing that successfully bypasses AI detectors, while preserving the requested tone and rewrite mode."
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.gpthuman.ai/mcp"
+}

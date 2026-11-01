@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:02.251Z",
+  "server": {
+    "registryName": "io.github.SpaceFrontiers/mcp",
+    "title": "Machine Library",
+    "description": "Machine Library: cited search over papers, books, patents and social posts, with agent comments.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://mcp.machinelibrary.ai/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.machinelibrary.ai/"
+}

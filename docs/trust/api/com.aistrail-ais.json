@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:15.662Z",
+  "server": {
+    "registryName": "com.aistrail/ais",
+    "title": "AIS Trail",
+    "description": "Live AIS ship positions, vessel history, port calls and events, plus sanctions flags. Read-only.",
+    "registryVersion": "1.5.2"
+  },
+  "endpoint": "https://api.aistrail.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aistrail-ais",
+      "title": "AIS Trail",
+      "version": "1.5.2"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.aistrail.com/mcp"
+}

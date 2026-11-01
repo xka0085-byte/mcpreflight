@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:04.633Z",
+  "server": {
+    "registryName": "io.github.StructLabs-io/runitonai-mcp",
+    "title": "io.github.StructLabs-io/runitonai-mcp",
+    "description": "Read-only MCP connector serving the Run It on AI book; index and Implementation Blocks are free.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.runitonai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "runitonai-book",
+      "version": "0.1.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].chapter_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.runitonai.com/mcp"
+}

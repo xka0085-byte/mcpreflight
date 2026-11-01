@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:52.023Z",
+  "server": {
+    "registryName": "io.github.igormilovanovic/data-converter",
+    "title": "MCP Data Converter",
+    "description": "Convert between 200+ format pairs: JSON, CSV, XML, YAML, PDF, Excel, DOCX and more.",
+    "registryVersion": "1.4.3"
+  },
+  "endpoint": "https://mcp-converter.tnkng.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-converter.tnkng.com/mcp"
+}

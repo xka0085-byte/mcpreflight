@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:30.558Z",
+  "server": {
+    "registryName": "io.github.cozzagit/devil",
+    "title": "DeviL",
+    "description": "Trova PMI italiane a cui proporre i software che hai già sviluppato, dal tuo Claude Code.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://devil.vibecanyon.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://devil.vibecanyon.com/api/mcp"
+}

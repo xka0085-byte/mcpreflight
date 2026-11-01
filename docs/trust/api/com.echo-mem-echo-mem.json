@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:49.896Z",
+  "server": {
+    "registryName": "com.echo-mem/echo-mem",
+    "title": "Echo Memory",
+    "description": "Shared memory for AI agents, as a graph in your own Postgres. Writes never call an LLM.",
+    "registryVersion": "0.5.6"
+  },
+  "endpoint": "https://api.echo-mem.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.echo-mem.com/mcp"
+}

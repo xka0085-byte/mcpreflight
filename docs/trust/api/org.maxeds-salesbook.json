@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:33.851Z",
+  "server": {
+    "registryName": "org.maxeds/salesbook",
+    "title": "SalesBook by MaxedS: B2B Startup Rankings & Enterprise Vendor Discovery",
+    "description": "B2B startup rankings, enterprise AI vendor discovery, buyer-fit scores, and sourced deal claims.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://mcp.maxeds.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "salesbook-mcp",
+      "title": "SalesBook by MaxedS: B2B vendor research",
+      "version": "0.5.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].sector has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.maxeds.org/mcp"
+}

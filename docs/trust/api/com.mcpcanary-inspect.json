@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:34.144Z",
+  "server": {
+    "registryName": "com.mcpcanary/inspect",
+    "title": "MCP Canary",
+    "description": "Inspect any remote MCP server: transport, protocol, tools, and side-effect hints. No tool calls.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.mcpcanary.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.mcpcanary.com/mcp"
+}

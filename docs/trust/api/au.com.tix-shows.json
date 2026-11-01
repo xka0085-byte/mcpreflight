@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:15.878Z",
+  "server": {
+    "registryName": "au.com.tix/shows",
+    "title": "TIX – shows and ticket deals",
+    "description": "Live shows on sale in Australia and New Zealand, with prices, Lasttix deals and show cards.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tix.com.au/_hcms/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tix",
+      "title": "TIX – shows and ticket deals",
+      "version": "agents-2026-10-30",
+      "websiteUrl": "https://tix.com.au/",
+      "icons": [
+        {
+          "src": "https://tix.com.au/hubfs/23822556/tix-favicon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].shows has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tix.com.au/_hcms/api/mcp"
+}

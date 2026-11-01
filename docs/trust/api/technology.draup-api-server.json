@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:12.169Z",
+  "server": {
+    "registryName": "technology.draup/api-server",
+    "title": "technology.draup/api-server",
+    "description": "Global labour & market data for skills, workforce, planning, stakeholders, jobs, news & profiles",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.draup.technology/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.draup.technology/mcp/"
+}

@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:52.349Z",
+  "server": {
+    "registryName": "sg.propely/singapore-property",
+    "title": "Propely Singapore Property",
+    "description": "Singapore stamp duty (BSD, ABSD, SSD), TDSR, loan tenure and net proceeds calculators, from Propely.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://mcp.propely.sg/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "propely",
+      "version": "2.0.1",
+      "title": "Propely Singapore Property",
+      "description": "Free Singapore property calculators (BSD, ABSD, TDSR, loan tenure, decoupling, SSD, seller net proceeds) and SORA rates, from Propely, the owner-direct condo marketplace.",
+      "websiteUrl": "https://propely.sg"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].propertyType has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.propely.sg/"
+}

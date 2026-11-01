@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:29.569Z",
+  "server": {
+    "registryName": "io.github.maxbeech/basinwise",
+    "title": "Basinwise",
+    "description": "Determines which NPDES stormwater permit governs a US site and its requirements, cited to source.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://basinwise.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://basinwise.vercel.app/api/mcp"
+}

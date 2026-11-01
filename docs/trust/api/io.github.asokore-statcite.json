@@ -1,0 +1,81 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:54.876Z",
+  "server": {
+    "registryName": "io.github.asokore/statcite",
+    "title": "StatCite — Verified Economic Statistics",
+    "description": "Cited economic statistics: World Bank, IMF, BIS, ECB, Caribbean central banks. Verify any figure.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://statcite.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "statcite",
+      "title": "StatCite, Verified Economic Statistics",
+      "version": "1.17.0",
+      "description": "Official economic statistics with citations, and verification of claimed figures.",
+      "websiteUrl": "https://statcite.com",
+      "icons": [
+        {
+          "src": "https://statcite.com/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        }
+      ]
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].start_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].end_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].transform has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].from_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].to_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://statcite.com/mcp"
+}

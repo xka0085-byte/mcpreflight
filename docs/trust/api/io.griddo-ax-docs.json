@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:45.511Z",
+  "server": {
+    "registryName": "io.griddo/ax-docs",
+    "title": "Griddo AX Docs",
+    "description": "Official Griddo backoffice docs for content authors: search, read and list pages in ES and EN.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://ax.mcp.griddo.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "griddo-ax-docs",
+      "title": "Griddo Docs",
+      "version": "0.1.2"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ax.mcp.griddo.io/mcp"
+}

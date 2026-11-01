@@ -1,0 +1,96 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:09.871Z",
+  "server": {
+    "registryName": "io.github.adpadinc/brinkeradvisor-rates",
+    "title": "BrinkerAdvisor Rates",
+    "description": "Public CD, money-market and Treasury records with data dates, source links and illustrative ladders.",
+    "registryVersion": "0.3.6"
+  },
+  "endpoint": "https://mcp.brinkeradvisor.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "brinkeradvisor-rates",
+      "title": "BrinkerAdvisor Rates",
+      "version": "0.4.0",
+      "description": "Current public fixed-income rates, comparisons, and illustrative ladders from BrinkerAdvisor.",
+      "websiteUrl": "https://rates.brinkeradvisor.com/",
+      "icons": [
+        {
+          "src": "https://mcp.brinkeradvisor.com/favicon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "48x48"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].instrument_types has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].minimum_term_months has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].maximum_term_months has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].instrument_types has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].rung_count has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].minimum_term_months has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].maximum_term_months has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].hypothetical_amount_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.brinkeradvisor.com/mcp"
+}

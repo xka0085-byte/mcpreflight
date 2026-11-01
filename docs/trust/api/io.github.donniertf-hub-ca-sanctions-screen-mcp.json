@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:39.763Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/ca-sanctions-screen-mcp",
+    "title": "Canada Sanctions Screening MCP",
+    "description": "Screen customers, suppliers and vessels against Canada's autonomous sanctions list (SEMA).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ca-sanctions-screen-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ca-sanctions-screen-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].names has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].threshold has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].since has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ca-sanctions-screen-mcp.donniertf.workers.dev/mcp"
+}

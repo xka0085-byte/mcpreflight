@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:45.614Z",
+  "server": {
+    "registryName": "io.github.SamyTouri/agent-hub",
+    "title": "Agent Reputation",
+    "description": "Complaint registry for paid agent transactions - check a seller before you pay, or file your own.",
+    "registryVersion": "1.13.0"
+  },
+  "endpoint": "https://agentreputation.dev/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-hub",
+      "version": "1.12.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].decision has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentreputation.dev/api/mcp"
+}

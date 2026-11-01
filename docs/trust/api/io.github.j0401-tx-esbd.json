@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:43.817Z",
+  "server": {
+    "registryName": "io.github.J0401/tx-esbd",
+    "title": "TX ESBD Procurement",
+    "description": "Texas procurement search with NIGP codes, change tracking, 60k+ bids, $0.01+.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=j0401/tx-esbd-search,j0401/tx-esbd-get,j0401/tx-esbd-changes",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=j0401/tx-esbd-search,j0401/tx-esbd-get,j0401/tx-esbd-changes"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:59.021Z",
+  "server": {
+    "registryName": "io.github.assetgrid-llc/jueban-buddhist-companion",
+    "title": "Jueban · Buddhist Companion",
+    "description": "Read-only Buddhist scripture search, verified explanations, situation matching, and practice.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://jueban.online/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jueban-chatgpt-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jueban.online/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:53.362Z",
+  "server": {
+    "registryName": "io.github.ApparelHub-AI/apparelhub-mcp",
+    "title": "ApparelHub",
+    "description": "Run a custom-merch store from an agent: design, build products, list on every channel, fulfill.",
+    "registryVersion": "0.20.0"
+  },
+  "endpoint": "https://mcp.apparelhub.ai",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apparelhub.ai"
+}

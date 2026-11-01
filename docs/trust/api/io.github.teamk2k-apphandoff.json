@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:26.936Z",
+  "server": {
+    "registryName": "io.github.TeamK2K/apphandoff",
+    "title": "AppHandoff",
+    "description": "Milestones, handoff tickets, project context, and deploy signals for AI-built apps over MCP.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.apphandoff.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.apphandoff.com/mcp"
+}

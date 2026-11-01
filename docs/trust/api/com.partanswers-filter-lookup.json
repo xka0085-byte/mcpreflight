@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:40.389Z",
+  "server": {
+    "registryName": "com.partanswers/filter-lookup",
+    "title": "PartAnswers Fridge Water Filter Lookup",
+    "description": "Which water filter fits a fridge model, and how replacements compare on NSF and IAPMO listings.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://partanswers.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "partanswers-filter-lookup",
+      "title": "PartAnswers Fridge Water Filter Lookup",
+      "version": "1.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].oem_part has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://partanswers.com/mcp"
+}

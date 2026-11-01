@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:51.438Z",
+  "server": {
+    "registryName": "com.importsfromchina/ifc-india-import-duty",
+    "title": "IFC India Import Duty & Landed Cost",
+    "description": "India import duty (BCD, SWS, AIDC, IGST) by HS code and China-to-India landed cost estimates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://importsfromchina.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ifc-india-import-duty",
+      "title": "IFC India Import Duty & Landed Cost",
+      "version": "1.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].mode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://importsfromchina.com/mcp"
+}

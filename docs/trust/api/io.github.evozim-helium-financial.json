@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:39.612Z",
+  "server": {
+    "registryName": "io.github.Evozim/helium-financial",
+    "title": "Helium Financial",
+    "description": "Financial oracle aggregating Yahoo Finance metrics for portfolio analysis.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://helium-financial-mcp.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://helium-financial-mcp.vercel.app/api/mcp"
+}

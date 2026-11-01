@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:41.951Z",
+  "server": {
+    "registryName": "live.sidai/dis",
+    "title": "DIS — Singular Intelligence Domain",
+    "description": "Compile full-stack apps from one architecture spec, with a shared Memory Fabric.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.sidislab.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.sidislab.com/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:33.490Z",
+  "server": {
+    "registryName": "ai.inite/site-agents",
+    "title": "INITE Agents",
+    "description": "Per-business MCP servers serving owner-confirmed facts: services, prices, hours, places, FAQ.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://{slug}.inite.ai/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{slug}.inite.ai/mcp"
+}

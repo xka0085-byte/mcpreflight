@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:13.475Z",
+  "server": {
+    "registryName": "io.github.groundroof/crehq-mcp-server",
+    "title": "CREHQ Location Intelligence",
+    "description": "CREHQ entity affiliation, brand, site, franchise, credit, and location-intelligence tools.",
+    "registryVersion": "0.1.7"
+  },
+  "endpoint": "https://mcp.crehq.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.crehq.com/mcp"
+}

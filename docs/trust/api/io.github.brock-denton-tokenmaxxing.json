@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:31.527Z",
+  "server": {
+    "registryName": "io.github.Brock-Denton/tokenmaxxing",
+    "title": "Tokenmaxxing",
+    "description": "Coordinate coding agents through MCP using existing AI plans, saved work, and independent checks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.trytokenmaxxing.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.trytokenmaxxing.com/api/mcp"
+}

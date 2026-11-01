@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:44.088Z",
+  "server": {
+    "registryName": "ai.bnbgenius/mcp",
+    "title": "BnBGenius MCP for Airbnb hosts",
+    "description": "Ask your AI about your Airbnb and VRBO listings, bookings, guest messages and reviews. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://my.bnbgenius.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://my.bnbgenius.ai/mcp"
+}

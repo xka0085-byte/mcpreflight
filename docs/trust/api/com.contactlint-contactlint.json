@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:57.092Z",
+  "server": {
+    "registryName": "com.contactlint/contactlint",
+    "title": "ContactLint",
+    "description": "Validate emails (MX, disposable, role, typo) and phone numbers, singly or in batches, for AI agents.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://contactlint.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "contactlint",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].emails has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].phone has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://contactlint.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:09.886Z",
+  "server": {
+    "registryName": "io.github.0xbeny/xdc-ai",
+    "title": "XDC AI",
+    "description": "Wallet and payments for AI agents: auto-pay x402 APIs in USDC on XDC, within on-chain limits.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.xdcai.tech/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.xdcai.tech/mcp"
+}

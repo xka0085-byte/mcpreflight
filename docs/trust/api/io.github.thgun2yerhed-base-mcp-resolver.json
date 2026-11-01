@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:46.348Z",
+  "server": {
+    "registryName": "io.github.thgun2yerhed/base-mcp-resolver",
+    "title": "Base MCP Resolver",
+    "description": "Free onboarding tool providing authentic live transaction analysis on Base mainnet.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://agent-services-seven.vercel.app/api/gateway",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "base-mcp-resolver",
+      "version": "2.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].txHash has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-services-seven.vercel.app/api/gateway"
+}

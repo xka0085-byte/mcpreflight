@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:28.192Z",
+  "server": {
+    "registryName": "io.github.Protopopov/mentalka-tests",
+    "title": "io.github.Protopopov/mentalka-tests",
+    "description": "Free anonymous PHQ-9 depression and SAS smartphone-addiction screenings in uk, en, hr, ru, pl.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mentalka.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mentalka-tests",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].answers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mentalka.app/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:57.462Z",
+  "server": {
+    "registryName": "io.studiomeyer/crew",
+    "title": "StudioMeyer Crew",
+    "description": "Agent personas for Claude. 16 tools, 13 personas, 3 workflows. Zero extra API cost. Free.",
+    "registryVersion": "2.8.0"
+  },
+  "endpoint": "https://crew.studiomeyer.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://crew.studiomeyer.io/mcp"
+}

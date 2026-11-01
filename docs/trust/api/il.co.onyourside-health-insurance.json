@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:51.827Z",
+  "server": {
+    "registryName": "il.co.onyourside/health-insurance",
+    "title": "לצדך: Israeli health insurance, from the policies",
+    "description": "Israeli health insurance from the insurers' own documents: covers, fast routes, refunds, surgeons.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.onyourside.co.il/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "il.co.onyourside/health-insurance",
+      "title": "לצדך · Israeli health insurance, from the policies (onyourside.co.il)",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.onyourside.co.il/developers"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.onyourside.co.il/api/mcp"
+}

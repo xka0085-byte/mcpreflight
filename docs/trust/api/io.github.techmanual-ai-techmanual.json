@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:15.221Z",
+  "server": {
+    "registryName": "io.github.techmanual-ai/techmanual",
+    "title": "techmanual.ai",
+    "description": "Search technical manuals for T&M, industrial automation, and power electronics equipment.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://mcp.techmanual.ai/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.techmanual.ai/mcp/"
+}

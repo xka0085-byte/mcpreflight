@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:25.920Z",
+  "server": {
+    "registryName": "app.openkrill/agent-trace",
+    "title": "Agent Trace Check",
+    "description": "Read a tool-call log from an AI agent run and see which calls failed, looped or were slow.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agenttrace.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-trace",
+      "title": "Agent Trace Check: Find failing agent tool calls",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agenttrace.openkrill.app/mcp"
+}

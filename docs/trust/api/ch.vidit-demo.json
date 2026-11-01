@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:51.834Z",
+  "server": {
+    "registryName": "ch.vidit/demo",
+    "title": "vidit (demo)",
+    "description": "Demo of a Swiss tax service for AI agents: AI-drafted answers, sample quotes, nothing validated yet.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.vidit.ch/mcp/r",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vidit-demo",
+      "title": "vidit (demo)",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].jurisdiction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].jurisdiction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.vidit.ch/mcp/r"
+}

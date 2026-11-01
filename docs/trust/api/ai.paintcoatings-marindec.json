@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:07.851Z",
+  "server": {
+    "registryName": "ai.paintcoatings/marindec",
+    "title": "Marindec Paints Product Assistant",
+    "description": "Marindec Paints (SA) coatings: products, systems, compatibility, datasheets. Access by application.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.paintcoatings.ai/marindec/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.paintcoatings.ai/marindec/mcp"
+}

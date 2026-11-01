@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:36.965Z",
+  "server": {
+    "registryName": "org.mylastwill/mylastwill",
+    "title": "MyLastWill",
+    "description": "Free U.S. wills, codicils and charitable bequest wording, plus will-signing rules for every state.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mylastwill.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mylastwill",
+      "title": "MyLastWill",
+      "version": "1.0.0",
+      "description": "Free wills, codicils and charitable legacy planning for U.S. residents.",
+      "websiteUrl": "https://mylastwill.org",
+      "icons": [
+        {
+          "src": "https://mylastwill.org/img/logo-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].backup_executor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].backup_guardian has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mylastwill.org/mcp"
+}

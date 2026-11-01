@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:45.426Z",
+  "server": {
+    "registryName": "org.sophiacommons/directory",
+    "title": "Sophia Commons",
+    "description": "Search 4,500+ Waldorf schools, biodynamic farms, Camphill communities and anthroposophical events.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sophiacommons.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sophia-commons",
+      "title": "Sophia Commons",
+      "version": "1.0.0",
+      "websiteUrl": "https://sophiacommons.org"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].longitude has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sophiacommons.org/mcp"
+}

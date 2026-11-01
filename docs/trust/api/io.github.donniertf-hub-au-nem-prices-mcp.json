@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:37.930Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/au-nem-prices-mcp",
+    "title": "Australia NEM Electricity Prices MCP",
+    "description": "AEMO National Electricity Market regional prices.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://au-nem-prices-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "au-nem-prices-mcp",
+      "version": "1.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].region has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].product has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].suburb has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://au-nem-prices-mcp.donniertf.workers.dev/mcp"
+}

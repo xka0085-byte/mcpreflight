@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:49.641Z",
+  "server": {
+    "registryName": "fi.sukuk/sukukfi",
+    "title": "SukukFi",
+    "description": "Live vault metrics and docs for SukukFi, Islamic trade finance on Berachain. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.sukuk.fi/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sukukfi",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].asset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.sukuk.fi/mcp"
+}

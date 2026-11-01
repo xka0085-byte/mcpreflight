@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:57.196Z",
+  "server": {
+    "registryName": "com.getinfrly/infrly",
+    "title": "Infrly",
+    "description": "Read-only access to your Infrly services, deploys, logs, metrics and billing.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.getinfrly.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.getinfrly.com/mcp"
+}

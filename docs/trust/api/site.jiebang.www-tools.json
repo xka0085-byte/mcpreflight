@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:25.061Z",
+  "server": {
+    "registryName": "site.jiebang.www/tools",
+    "title": "site.jiebang.www/tools",
+    "description": "20 free dev tools: JSON/YAML, XML/SQL, Cron, SEO, QR code, URL shortener, cron tasks, files",
+    "registryVersion": "1.6.0"
+  },
+  "endpoint": "https://www.jiebang.site/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "jiebang-tools",
+      "version": "2.0.0",
+      "description": "JieBang Online Tools - 29 free tools via MCP (text processing + AI generation + humanizer + keyword extraction + SEO tools + QR code + short links + image conversion + cron tasks + file processing + ideas board)"
+    },
+    "toolCount": 29,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].options has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.jiebang.site/mcp"
+}

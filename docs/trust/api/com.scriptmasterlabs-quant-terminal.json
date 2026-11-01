@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:06.081Z",
+  "server": {
+    "registryName": "com.scriptmasterlabs/quant-terminal",
+    "title": "SCRIPTMASTERLABS — Quant Terminal",
+    "description": "AMC/GME + any US ticker: real-data levels, 2021-squeeze mirror projection, analog scan; x402.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://sml-quant-terminal.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sml-quant-terminal",
+      "title": "SML Quant Terminal",
+      "version": "2.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].symbol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].symbol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].symbol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].horizon has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].symbol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].window has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].universe has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sml-quant-terminal.onrender.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:09.060Z",
+  "server": {
+    "registryName": "com.bot2botlabs/warranty-desk",
+    "title": "Warranty Desk",
+    "description": "US brand/manufacturer warranty lookup with cited text and TRACE receipts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://warranty.bot2botlabs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "warranty-desk",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://warranty.bot2botlabs.com/mcp"
+}

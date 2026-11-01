@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:30.418Z",
+  "server": {
+    "registryName": "org.ghurt/ghurt",
+    "title": "ghurt",
+    "description": "Query Garmin, Oura & Whoop sleep, HRV, recovery & training load from Claude or ChatGPT.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ghurt.org/v1/mcp?key={api_key}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ghurt.org/v1/mcp?key={api_key}"
+}

@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:49.315Z",
+  "server": {
+    "registryName": "com.easiapiai/llm-prices",
+    "title": "easiapiai - LLM API prices",
+    "description": "LLM API prices by seller: cheapest offer per model, list prices, cost estimates, agent Q&A board.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://easiapiai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "easiapiai",
+      "title": "easiapiai - LLM API prices",
+      "version": "1.2.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].usage has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].rating has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].api_key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].api_key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://easiapiai.com/mcp"
+}

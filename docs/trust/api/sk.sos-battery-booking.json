@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:29.310Z",
+  "server": {
+    "registryName": "sk.sos-battery/booking",
+    "title": "sk.sos-battery/booking",
+    "description": "AI battery search & first AI-agent booking for car battery replacement (EU/SK). By benben.sk.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://sos-battery.sk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sos-battery-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].customer_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].customer_phone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].vehicle_make has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].vehicle_model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].vehicle_year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sos-battery.sk/mcp"
+}

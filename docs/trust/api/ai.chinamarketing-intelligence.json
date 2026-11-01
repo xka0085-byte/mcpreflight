@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:38:08.541Z",
+  "scannedAt": "2026-11-01T03:37:49.801Z",
   "server": {
     "registryName": "ai.chinamarketing/intelligence",
     "title": "China Marketing AI Intelligence MCP",
@@ -10,22 +10,20 @@
   },
   "endpoint": "https://api.chinamarketing.ai/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "China Marketing AI Intelligence MCP",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.chinamarketing.ai/mcp"
 }

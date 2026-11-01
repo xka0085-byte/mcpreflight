@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:32.145Z",
+  "server": {
+    "registryName": "com.pagecanary/pagecanary",
+    "title": "PageCanary",
+    "description": "Walks your site's signup or checkout like a customer and checks pages for broken links and errors.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.pagecanary.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.pagecanary.com/mcp"
+}

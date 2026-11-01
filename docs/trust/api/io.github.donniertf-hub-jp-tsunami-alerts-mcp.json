@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:41.537Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/jp-tsunami-alerts-mcp",
+    "title": "Japan Tsunami Alerts MCP",
+    "description": "JMA tsunami forecasts and warnings for the Japanese coast.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jp-tsunami-alerts-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jp-tsunami-alerts-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].keyword has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jp-tsunami-alerts-mcp.donniertf.workers.dev/mcp"
+}

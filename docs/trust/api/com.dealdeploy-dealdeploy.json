@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:23.098Z",
+  "server": {
+    "registryName": "com.dealdeploy/dealdeploy",
+    "title": "DealDeploy",
+    "description": "Instant answers from every document, spreadsheet, deck and contract your firm has saved.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://neutron.dealdeploy.com/mcp/{firm}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://neutron.dealdeploy.com/mcp/{firm}"
+}

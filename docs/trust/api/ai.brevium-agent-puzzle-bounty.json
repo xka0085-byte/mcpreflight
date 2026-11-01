@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:44.656Z",
+  "server": {
+    "registryName": "ai.brevium/agent-puzzle-bounty",
+    "title": "Agent Puzzle Bounty — cooperative k-of-n decode challenge",
+    "description": "3-of-5 coalition puzzle bounty for AI agents: 3 distinct agents combine. PLAY money, not cash.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://bounty.brevium.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-puzzle-bounty",
+      "version": "1"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].reg_token has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].nonce has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].share_index has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].submissions has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].contact has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].message has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bounty.brevium.ai/mcp"
+}

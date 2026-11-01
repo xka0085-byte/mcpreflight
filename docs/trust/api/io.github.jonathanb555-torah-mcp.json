@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:53.720Z",
+  "server": {
+    "registryName": "io.github.JonathanB555/torah-mcp",
+    "title": "io.github.JonathanB555/torah-mcp",
+    "description": "Source discipline for Torah study in Claude: read the real texts, quote exactly, never fabricate",
+    "registryVersion": "1.10.0"
+  },
+  "endpoint": "https://torah-mcp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "torah-mcp",
+      "version": "1.10.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].longitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].longitude has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://torah-mcp.com/mcp"
+}

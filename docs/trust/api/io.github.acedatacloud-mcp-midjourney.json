@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:30.123Z",
+  "server": {
+    "registryName": "io.github.AceDataCloud/mcp-midjourney",
+    "title": "Midjourney",
+    "description": "MCP server for Midjourney AI image generation and editing",
+    "registryVersion": "2026.10.18.4"
+  },
+  "endpoint": "https://midjourney.mcp.acedata.cloud/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://midjourney.mcp.acedata.cloud/mcp"
+}

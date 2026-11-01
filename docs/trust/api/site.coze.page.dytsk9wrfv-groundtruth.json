@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:24.694Z",
+  "server": {
+    "registryName": "site.coze.page.dytsk9wrfv/groundtruth",
+    "title": "GroundTruth: 2026 US Tariff & Landed Cost",
+    "description": "Source-linked 2026 US duty and landed cost facts for AI agents: layered tariffs, MPF and HMF.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://winter-river-47fc.contentforge-press.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "groundtruth-tariff",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].product_description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].declared_value has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].freight has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].insurance has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].broker_fee has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://winter-river-47fc.contentforge-press.workers.dev/mcp"
+}

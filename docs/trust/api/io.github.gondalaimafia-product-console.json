@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:06.932Z",
+  "server": {
+    "registryName": "io.github.gondalaimafia/product-console",
+    "title": "Product Console",
+    "description": "Agent accountability for product teams: specs, evidence, and ship readiness over MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pc-mcp.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pc-mcp.fly.dev/mcp"
+}

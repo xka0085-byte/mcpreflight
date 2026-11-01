@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:29.331Z",
+  "server": {
+    "registryName": "io.github.matiasbattocchia/google-mcp",
+    "title": "io.github.matiasbattocchia/google-mcp",
+    "description": "Streamable HTTP MCP server for Google Calendar and Sheets with OAuth login.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://g.mcp.openbsp.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://g.mcp.openbsp.dev/mcp"
+}

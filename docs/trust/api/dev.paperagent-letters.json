@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:57.903Z",
+  "server": {
+    "registryName": "dev.paperagent/letters",
+    "title": "PaperAgent — Send Physical Mail",
+    "description": "Mail one-off USPS letters from ChatGPT or Claude after you approve the preview and price. US only.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://paperagent.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paperagent",
+      "title": "PaperAgent — Send Physical Mail",
+      "version": "0.1.0",
+      "websiteUrl": "https://paperagent.dev",
+      "icons": [
+        {
+          "src": "https://paperagent.dev/brand/connector-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].from_address_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].draft_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].letter_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://paperagent.dev/mcp"
+}

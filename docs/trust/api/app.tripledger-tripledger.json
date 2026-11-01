@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:56.390Z",
+  "server": {
+    "registryName": "app.tripledger/tripledger",
+    "title": "TripLedger",
+    "description": "Travel ledger for AI: journeys, stays, expenses, tax-residency day counts and Schengen 90/180.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://my.tripledger.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://my.tripledger.app/mcp"
+}

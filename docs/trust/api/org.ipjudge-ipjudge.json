@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:30.056Z",
+  "server": {
+    "registryName": "org.ipjudge/ipjudge",
+    "title": "IP Judge",
+    "description": "Check an IP or your own network exit before using ChatGPT, Claude, Gemini or Meta Muse.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://ipjudge.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ipjudge",
+      "title": "IP Judge",
+      "version": "1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ipjudge.org/mcp"
+}

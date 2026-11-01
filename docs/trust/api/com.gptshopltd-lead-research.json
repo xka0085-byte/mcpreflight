@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:16.931Z",
+  "server": {
+    "registryName": "com.gptshopltd/lead-research",
+    "title": "Company and Lead Research",
+    "description": "Emails and socials from company sites, WHOIS, live job listings, Hacker News and App Store search.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=chris_elder/website-contact-extractor,chris_elder/bulk-whois-domain-lookup,chris_elder/multi-ats-jobs-api,chris_elder/hacker-news-search,chris_elder/itunes-app-store-search",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=chris_elder/website-contact-extractor,chris_elder/bulk-whois-domain-lookup,chris_elder/multi-ats-jobs-api,chris_elder/hacker-news-search,chris_elder/itunes-app-store-search"
+}

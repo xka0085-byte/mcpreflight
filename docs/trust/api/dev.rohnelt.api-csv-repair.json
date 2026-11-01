@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:11.042Z",
+  "server": {
+    "registryName": "dev.rohnelt.api/csv-repair",
+    "title": "CSV Repair",
+    "description": "Free CSV validation and repair, up to 20 data lines, no storage. Annual browser licence available.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.rohnelt.dev/csv-repair/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "CSV Repair",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].order has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].decimal has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].dedupe has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.rohnelt.dev/csv-repair/mcp"
+}

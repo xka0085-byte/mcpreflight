@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:48.618Z",
+  "server": {
+    "registryName": "ch.funkyjobs/jobs",
+    "title": "FunkyJobs Stellensuche",
+    "description": "Search current job listings in Switzerland on funkyjobs.ch and fetch a single listing by id.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.funkyjobs.ch/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "funkyjobs",
+      "title": "FunkyJobs Stellensuche",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.funkyjobs.ch/mcp"
+}

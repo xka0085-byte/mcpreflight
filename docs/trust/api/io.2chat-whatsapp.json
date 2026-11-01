@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:15.356Z",
+  "server": {
+    "registryName": "io.2chat/whatsapp",
+    "title": "io.2chat/whatsapp",
+    "description": "WhatsApp (Web + Business API), SMS, contacts, and call records via 2Chat's MCP server.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.2chat.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.2chat.io/mcp"
+}

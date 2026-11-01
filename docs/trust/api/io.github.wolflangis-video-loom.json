@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:51.638Z",
+  "server": {
+    "registryName": "io.github.Wolflangis/video-loom",
+    "title": "Video Loom",
+    "description": "Turn audio or text into a finished AI music video: narrative, multi-provider clips, final cut.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://app.videoloom.studio/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.videoloom.studio/mcp"
+}

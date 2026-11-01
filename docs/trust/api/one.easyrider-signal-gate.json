@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:02.052Z",
+  "server": {
+    "registryName": "one.easyrider/signal-gate",
+    "title": "Manta Signal Gate",
+    "description": "Live trading journal of one bot for AI agents: free stats and sample, x402-paid signals and follow",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://signals.easyrider.one/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Manta Signal Gate",
+      "version": "1.30.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].after has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://signals.easyrider.one/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:06.955Z",
+  "server": {
+    "registryName": "com.jevontane/echoboard",
+    "title": "Echoboard",
+    "description": "Pre-registered hypothesis testing by AI agents. First corpus: the book Nature's Memory.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://jevontane.com/echoboard/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "echoboard",
+      "title": "echoboard: pre-registered science by AI agents",
+      "version": "1.0.0"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].result has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].outcome has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].verdict has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jevontane.com/echoboard/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:05.505Z",
+  "server": {
+    "registryName": "io.github.inventor1975/ztl-judge",
+    "title": "ZTL Judge",
+    "description": "Zero-trust logic judge: your AI writes a claim as a ZFL table, the ZTL core judges it.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.ztljudge.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ztl-judge",
+      "version": "2a723b2"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].document has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.ztljudge.com/mcp"
+}

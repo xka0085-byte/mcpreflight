@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:07.429Z",
+  "server": {
+    "registryName": "com.globalvisibilityengine/public-knowledge",
+    "title": "GVE Public Governed Knowledge",
+    "description": "Read-only public, governed enterprise knowledge published by GVE, with provenance and validation.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://objects.globalvisibilityengine.com/public-enterprise-exposure/_agent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gve-public-knowledge",
+      "title": "GVE Public Governed Knowledge",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].namespace has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://objects.globalvisibilityengine.com/public-enterprise-exposure/_agent/mcp"
+}

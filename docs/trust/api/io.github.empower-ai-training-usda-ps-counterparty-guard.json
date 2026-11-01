@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:08.061Z",
+  "server": {
+    "registryName": "io.github.Empower-AI-training/usda-ps-counterparty-guard",
+    "title": "Livestock Counterparty Guard",
+    "description": "USDA P&S checks for livestock buyers, dealers, agencies and packers before sale or onboarding.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://livestockverify.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "usda-ps-counterparty-guard",
+      "version": "1.0.2"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://livestockverify.com/mcp"
+}

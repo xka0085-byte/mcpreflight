@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:36.855Z",
+  "server": {
+    "registryName": "io.github.RidioDevelopment/socialcrawl",
+    "title": "SocialCrawl",
+    "description": "One API for 65 platforms and 572 endpoints: social, commerce, retail, jobs, finance, web scraping.",
+    "registryVersion": "1.10.0"
+  },
+  "endpoint": "https://mcp.socialcrawl.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "socialcrawl-mcp",
+      "version": "2.0.2"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].method has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].dry_run has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.socialcrawl.dev/mcp"
+}

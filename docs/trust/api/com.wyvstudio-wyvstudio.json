@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:51.595Z",
+  "server": {
+    "registryName": "com.wyvstudio/wyvstudio",
+    "title": "WyvStudio",
+    "description": "Make short branded ad and social videos from a product link, script or idea, in your chat.",
+    "registryVersion": "1.10.0"
+  },
+  "endpoint": "https://app.wyvstudio.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.wyvstudio.com/mcp"
+}

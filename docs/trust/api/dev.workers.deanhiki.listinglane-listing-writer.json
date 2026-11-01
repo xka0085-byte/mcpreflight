@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:46.047Z",
+  "server": {
+    "registryName": "dev.workers.deanhiki.listinglane/listing-writer",
+    "title": "ListingLane Real Estate Listing Writer",
+    "description": "MLS-ready, Fair-Housing-safe property listing descriptions (en/ko/es) and wording checks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://listinglane.deanhiki.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "listinglane",
+      "title": "ListingLane - AI real estate listing descriptions",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].listing_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].text has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://listinglane.deanhiki.workers.dev/mcp"
+}

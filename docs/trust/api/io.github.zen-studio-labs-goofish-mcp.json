@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:34.024Z",
+  "server": {
+    "registryName": "io.github.zen-studio-labs/goofish-mcp",
+    "title": "Goofish (Xianyu) Marketplace",
+    "description": "Goofish (Xianyu, 闲鱼) second-hand listings, item details, seller reviews, comments, image search.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=fetch-actor-details,get-actor-run,get-dataset-items,get-dataset-list,zen-studio/goofish-xianyu-search-scraper,zen-studio/goofish-xianyu-item-detail-scraper,zen-studio/goofish-xianyu-seller-scraper,zen-studio/goofish-xianyu-visual-search-scraper,zen-studio/goofish-xianyu-item-comments-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=fetch-actor-details,get-actor-run,get-dataset-items,get-dataset-list,zen-studio/goofish-xianyu-search-scraper,zen-studio/goofish-xianyu-item-detail-scraper,zen-studio/goofish-xianyu-seller-scraper,zen-studio/goofish-xianyu-visual-search-scraper,zen-studio/goofish-xianyu-item-comments-scraper"
+}

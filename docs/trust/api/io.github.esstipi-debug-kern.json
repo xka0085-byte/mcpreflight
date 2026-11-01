@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:12.919Z",
+  "server": {
+    "registryName": "io.github.esstipi-debug/kern",
+    "title": "Kern",
+    "description": "Read-only supply-chain decision support: forecasting, reorder policies, ABC-XYZ, data quality.",
+    "registryVersion": "2.9.0"
+  },
+  "endpoint": "https://linchpin.fly.dev/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://linchpin.fly.dev/mcp/"
+}

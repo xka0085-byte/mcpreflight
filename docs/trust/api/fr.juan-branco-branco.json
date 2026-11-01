@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:09.620Z",
+  "server": {
+    "registryName": "fr.juan-branco/branco",
+    "title": "BRANCO - Droit français",
+    "description": "Droit français : textes, jurisprudence, citations et calculs. Connexion OAuth au compte BRANCO.",
+    "registryVersion": "0.56.3"
+  },
+  "endpoint": "https://droit.juan-branco.fr/api/mcp/oauth",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://droit.juan-branco.fr/api/mcp/oauth"
+}

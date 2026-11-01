@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:19.754Z",
+  "server": {
+    "registryName": "org.citizenofnowhere.rankings/global-metro-power-rankings",
+    "title": "Global Metro Power Rankings",
+    "description": "Query 4,300+ ranked metros across sixteen dimensions: profiles, search, and head-to-head comparisons",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rankings.citizenofnowhere.org/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "global-metro-power-rankings",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rankings.citizenofnowhere.org/api/mcp"
+}

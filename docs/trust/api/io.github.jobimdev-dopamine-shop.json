@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:38.810Z",
+  "server": {
+    "registryName": "io.github.jobimdev/dopamine-shop",
+    "title": "dopamine - the shop AI agents can buy from",
+    "description": "A parody shop your AI agent can 'buy' from - deliveries get eaten by whales. 100% fake.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dopamineshopping.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dopamine-shop",
+      "version": "1.0.0",
+      "title": "dopamine 💊 (parody shop)"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].product_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].order_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dopamineshopping.com/mcp"
+}

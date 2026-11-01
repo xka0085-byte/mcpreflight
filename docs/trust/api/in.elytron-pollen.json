@@ -1,0 +1,62 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:55.757Z",
+  "server": {
+    "registryName": "in.elytron/pollen",
+    "title": "Pollen — Managed Agent-Readiness Layer",
+    "description": "Manage your Pollen account: sync, enrich, fix, and publish your store's catalog for AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pollen.elytron.in/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pollen-management",
+      "version": "1.0.0",
+      "title": "Pollen",
+      "websiteUrl": "https://pollen.elytron.in",
+      "icons": [
+        {
+          "src": "https://pollen.elytron.in/icon-192.png?v=2",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://pollen.elytron.in/icon-512.png?v=2",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sortBy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].fixType has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].updates has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pollen.elytron.in/mcp"
+}

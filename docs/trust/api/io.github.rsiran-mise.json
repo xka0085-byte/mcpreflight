@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:40.263Z",
+  "server": {
+    "registryName": "io.github.Rsiran/mise",
+    "title": "Mise — Meal Planner, Grocery List & Calories",
+    "description": "Weekly meal plans, recipes, grocery list with Kroger checkout, and USDA-based calorie tracking.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://misemeals.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mise",
+      "title": "Mise — Meal Planner, Grocery List & Calorie Counter",
+      "version": "0.1.0",
+      "websiteUrl": "https://misemeals.vercel.app"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].meal has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].diet has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_total_minutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].meal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://misemeals.vercel.app/mcp"
+}

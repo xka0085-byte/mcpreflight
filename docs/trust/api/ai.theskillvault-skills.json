@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:12.990Z",
+  "server": {
+    "registryName": "ai.theskillvault/skills",
+    "title": "TheSkillVault",
+    "description": "Search and fetch vibe-coding Agent Skills (SKILL.md files) and prompts from TheSkillVault library.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://theskillvault.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "theskillvault",
+      "title": "TheSkillVault",
+      "version": "0.3.0",
+      "websiteUrl": "https://theskillvault.ai",
+      "description": "Vibe-coding Agent Skills and prompts. Remote endpoint: https://theskillvault.ai/mcp"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://theskillvault.ai/mcp"
+}

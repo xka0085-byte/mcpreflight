@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:19.699Z",
+  "server": {
+    "registryName": "com.greenercloset/greener-closet",
+    "title": "Greener Closet",
+    "description": "Score clothes by disclosed fiber content: fabric labels, products, brands, alternatives.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://greenercloset.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "greener-closet",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].department has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://greenercloset.com/mcp"
+}

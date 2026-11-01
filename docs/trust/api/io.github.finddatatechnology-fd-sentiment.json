@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:51.585Z",
+  "server": {
+    "registryName": "io.github.FindDataTechnology/fd-sentiment",
+    "title": "io.github.FindDataTechnology/fd-sentiment",
+    "description": "柏讯文档情绪打分 MCP：8 工具/5 组全 commercial。evidence_spans 必填且 quote 为原文逐字子串；幂等键 (doc_id, co… — 想 7×24 常驻 → 萬星",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://mcp.finddatatech.cloud/fd-sentiment/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.finddatatech.cloud/fd-sentiment/mcp"
+}

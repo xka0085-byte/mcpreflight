@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:46.094Z",
+  "server": {
+    "registryName": "io.github.CssEoCAO/notamcp",
+    "title": "NotaMCP",
+    "description": "Issue Brazilian service invoices (NFS-e Nacional) from your AI, with preview and confirmation.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://notamcp.com.br/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "notamcp",
+      "title": "NotaMCP — NFS-e Nacional",
+      "version": "0.1.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].nota_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].tipo has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://notamcp.com.br/mcp"
+}

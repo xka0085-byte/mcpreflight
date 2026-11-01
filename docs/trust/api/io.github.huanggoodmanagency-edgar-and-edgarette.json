@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:28.527Z",
+  "server": {
+    "registryName": "io.github.HuangGoodmanAgency/edgar-and-edgarette",
+    "title": "Edgar & Edgarette: SEC Filing Boards",
+    "description": "SEC filing boards and actuarial checks: companies, portfolios vs insurers, reinsurers, cash records.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.pops4.com/boards/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "edgar-and-edgarette",
+      "title": "Edgar & Edgarette: SEC Filing Boards",
+      "version": "2.1.0"
+    },
+    "toolCount": 26,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].board has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].attendees has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].tier has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.pops4.com/boards/mcp"
+}

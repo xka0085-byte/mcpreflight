@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:15.864Z",
+  "server": {
+    "registryName": "fr.symone/symone-moto",
+    "title": "SYMONE motorcycle transport",
+    "description": "Search SYMONE motorcycle transport trips in France: dates, prices, free places and booking link.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://symone.fr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "symone-moto",
+      "version": "1.3.0",
+      "instructions": "Search motorcycle transport routes in France. Use search_routes to find available trips between French cities, then get_booking_url to hand the user the booking link (booking and payment only happen on symone.fr). All tools are read-only and public, no authentication required. Main route: Paris↔Marseille from 299€. Documentation questions: use the docs MCP server at https://symone.fr/docs/mcp."
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://symone.fr/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:01.486Z",
+  "server": {
+    "registryName": "io.github.kadopi/agent-card-health-check",
+    "title": "Agent Card Health Check",
+    "description": "Free no-storage MCP that checks A2A Agent Card connection readiness for authorized targets.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agent-card-health-check.kadopi.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-card-health-check",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].agentCard has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].authorizedTargetUrl has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].authorization has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-card-health-check.kadopi.workers.dev/mcp"
+}

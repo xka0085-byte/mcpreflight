@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:38.688Z",
+  "server": {
+    "registryName": "am.elib/library",
+    "title": "ELIB - Armenian Digital Library",
+    "description": "Search and cite books, authors and subjects of elib.am, the free Armenian digital library.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://elib.am/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "elib-am",
+      "title": "ELIB - Armenian Digital Library",
+      "version": "1.1.0",
+      "websiteUrl": "https://elib.am/developers"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].per_page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://elib.am/mcp"
+}

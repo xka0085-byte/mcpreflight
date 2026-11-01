@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:56.221Z",
+  "server": {
+    "registryName": "io.github.NeurFlow-Oy/arctura-reef",
+    "title": "Arctura Reef — counterfactual evidence engine (synthetic)",
+    "description": "Deterministic same-seed but-for twin for battery fleets — synthetic-only (DR-236)",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://arctura-reef-mcp.fly.dev/mcp/{token}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://arctura-reef-mcp.fly.dev/mcp/{token}"
+}

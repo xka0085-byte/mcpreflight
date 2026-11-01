@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:22.904Z",
+  "server": {
+    "registryName": "io.github.jaylee7777/daemoon",
+    "title": "io.github.jaylee7777/daemoon",
+    "description": "One PAT, any MCP agent: Vercel, GitHub, Cloudflare, Supabase, GCP — unified dev infra gateway.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://daemoon.dev/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://daemoon.dev/.well-known/oauth-protected-resource",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://daemoon.dev/api/mcp"
+}

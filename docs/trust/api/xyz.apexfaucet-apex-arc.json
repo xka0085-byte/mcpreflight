@@ -1,0 +1,62 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:08.060Z",
+  "server": {
+    "registryName": "xyz.apexfaucet/apex-arc",
+    "title": "APEX on Arc",
+    "description": "Arc for agents: token prices, rug checks (holders, dev pulls), launch exits, free USDC, paid APIs.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://apexfaucet.xyz/api/mcp/arc",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "apex-arc",
+      "version": "1.0.0",
+      "description": "Arc (Circle's USDC chain, eip155:5042) for agents: a free USDC and APEX faucet claimed by signature with no gas, exit checks that say whether an Arc token can really be sold before you buy it, Arc pools, bridge quotes into Arc, one-click liquidity and on-chain checks. Every number is read from the chain at call time.",
+      "websiteUrl": "https://apexfaucet.xyz",
+      "icons": [
+        {
+          "src": "https://apexfaucet.xyz/icons/icon-512.png?v=neon3",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://apexfaucet.xyz/favicon-192.png?v=neon3",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 69,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].image has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].services has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apexfaucet.xyz/api/mcp/arc"
+}

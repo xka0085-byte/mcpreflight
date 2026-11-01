@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:37.450Z",
+  "server": {
+    "registryName": "com.paperplanepost/office",
+    "title": "Paper Plane Post",
+    "description": "Create and send an AI-illustrated postcard anywhere in the world",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.paperplanepost.com/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paper-plane-post",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.paperplanepost.com/v1/mcp"
+}

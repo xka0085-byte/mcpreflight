@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:04.375Z",
+  "server": {
+    "registryName": "pl.tatry-planer/tatry-planer",
+    "title": "Tatry Planer",
+    "description": "Hiking routes in the Polish and Slovak Tatras: walking times, trail closures, route planning",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp.tatry-planer.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tatry-planer",
+      "title": "Tatry Planer",
+      "version": "0.3.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].trudnosc_max has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kraj has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kraj has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tatry-planer.workers.dev/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:58.372Z",
+  "server": {
+    "registryName": "io.github.stayce/icf-mcp",
+    "title": "io.github.stayce/icf-mcp",
+    "description": "WHO ICF codes: lookup, search, hierarchy, qualifiers, and 11 scored clinical assessment instruments.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp-icf.medseal.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "icf-mcp-server",
+      "version": "1.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0] has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].action has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-icf.medseal.app/mcp"
+}

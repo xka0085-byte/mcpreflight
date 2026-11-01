@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:09.123Z",
+  "server": {
+    "registryName": "io.github.troyhunt/hibp",
+    "title": "Have I Been Pwned",
+    "description": "Breach intelligence API: email search, domain monitoring, passwords and stealer logs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://haveibeenpwned.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "hibp-mcp-server",
+      "title": "Have I Been Pwned MCP",
+      "version": "0.0.0",
+      "description": "Use public breach and data-class tools and resources without authentication. Account, paste, domain, subscription, domain-verification, stealer-log, and breached-account range tools require an OAuth bearer token linked to an active HIBP API subscription; plan features control access to k-anonymity and stealer-log results. Pwned Passwords range search is public, while breached-account range search is authenticated and requires local hash-suffix matching."
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "17 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://haveibeenpwned.com/mcp"
+}

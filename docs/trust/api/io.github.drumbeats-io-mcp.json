@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:50.333Z",
+  "server": {
+    "registryName": "io.github.drumbeats-io/mcp",
+    "title": "io.github.drumbeats-io/mcp",
+    "description": "Manage Drumbeats cron, heartbeat and uptime monitors, report job runs and handle incidents.",
+    "registryVersion": "0.5.2"
+  },
+  "endpoint": "https://api.drumbeats.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.drumbeats.io/mcp"
+}

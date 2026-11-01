@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:26.921Z",
+  "server": {
+    "registryName": "ai.veevid/veevid",
+    "title": "Veevid AI",
+    "description": "Generate AI videos, images and audio on Veevid with Kling 4.0, Seedance 2.5, Veo 3.1 and more.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://veevid.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://veevid.ai/api/mcp"
+}

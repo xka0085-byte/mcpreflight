@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:46.830Z",
+  "server": {
+    "registryName": "lt.taxmeter/taxmeter",
+    "title": "Taxmeter",
+    "description": "Lietuvos PVM paruošimas / Lithuanian VAT preparation. No submission or tax advice.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://app.taxmeter.lt/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.taxmeter.lt/mcp"
+}

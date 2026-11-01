@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:33.754Z",
+  "server": {
+    "registryName": "io.github.Aggrometer/aggrometer",
+    "title": "io.github.Aggrometer/aggrometer",
+    "description": "The gaming attention graph: Steam players, Twitch live viewers, aggro ratio, hype, history.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://aggrometer.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aggrometer",
+      "title": "Aggrometer - the gaming attention graph",
+      "version": "0.2.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].genre has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].genre has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aggrometer.com/mcp"
+}

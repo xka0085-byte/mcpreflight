@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:23.193Z",
+  "server": {
+    "registryName": "io.github.xrplto/xrpl-to",
+    "title": "XRPL.to Token Analytics",
+    "description": "XRP Ledger tokens, AMM pools, NFTs, accounts and transactions: prices, holders, trades and history",
+    "registryVersion": "1.20.0"
+  },
+  "endpoint": "https://api.xrpl.to/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.xrpl.to/v1/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:06.529Z",
+  "server": {
+    "registryName": "dev.workers.yuechenxi-importexport.identifier-validator-api/identifier-validator",
+    "title": "Identifier Validator + Stablecoin Peg Verdict",
+    "description": "Offline IBAN/BIC/EU VAT/card/ISBN/GTIN validators + live USD stablecoin peg-health verdict.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://identifier-validator-api.yuechenxi-importexport.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "identifier-validator-peg-verdict",
+      "title": "Identifier Validator + Stablecoin Peg Verdict",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://identifier-validator-api.yuechenxi-importexport.workers.dev/mcp"
+}

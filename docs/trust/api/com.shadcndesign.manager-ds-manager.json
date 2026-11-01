@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:27.363Z",
+  "server": {
+    "registryName": "com.shadcndesign.manager/ds-manager",
+    "title": "DS Manager",
+    "description": "Design System Manager for shadcn/ui: tokens, fonts, radius, components, icons, blocks, Figma sync.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://manager.shadcndesign.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://manager.shadcndesign.com/api/mcp"
+}

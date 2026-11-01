@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:43.089Z",
+  "server": {
+    "registryName": "io.github.VidhiJav/myrsu-mcp",
+    "title": "io.github.VidhiJav/myrsu-mcp",
+    "description": "Concentration risk analysis for tech workers with RSU comp — global (US/IN/CA/UK/EU/AU).",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://myrsu-mcp.vidhidev.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "myrsu-mcp",
+      "version": "0.4.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].student_loans has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].credit_card_debt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].other_debt has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://myrsu-mcp.vidhidev.workers.dev/mcp"
+}

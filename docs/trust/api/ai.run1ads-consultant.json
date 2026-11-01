@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:26.912Z",
+  "server": {
+    "registryName": "ai.run1ads/consultant",
+    "title": "Run1Ads: live Meta ads consultant",
+    "description": "Live Meta ads consultant for e-commerce. Checks ads, Pixel and store hourly, then gives the one fix.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://run1ads.ai/mcp/rpc",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "run1ads",
+      "version": "v1.0 · 2026-10-16 · consultant",
+      "title": "Run1Ads · your live Meta ads consultant"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].why has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].question has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].objective has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://run1ads.ai/mcp/rpc"
+}

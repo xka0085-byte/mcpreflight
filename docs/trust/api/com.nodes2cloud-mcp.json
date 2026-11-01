@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:43.815Z",
+  "server": {
+    "registryName": "com.nodes2cloud/mcp",
+    "title": "Nodes2Cloud",
+    "description": "Build, validate and deploy workflows as Cloudflare Workers in your own account, with approval.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.nodes2cloud.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.nodes2cloud.com/mcp"
+}

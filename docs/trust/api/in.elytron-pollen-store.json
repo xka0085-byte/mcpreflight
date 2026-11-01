@@ -1,0 +1,97 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:55.963Z",
+  "server": {
+    "registryName": "in.elytron/pollen-store",
+    "title": "Pollen Store Catalog",
+    "description": "Search a Pollen-connected store's enriched catalog: products, facts, variants, availability.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pollen.elytron.in/mcp/store/{shop}",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pollen-store",
+      "version": "1.0.0",
+      "title": "Pollen Store Catalog",
+      "websiteUrl": "https://pollen.elytron.in",
+      "icons": [
+        {
+          "src": "https://pollen.elytron.in/icon-192.png?v=2",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://pollen.elytron.in/icon-512.png?v=2",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].filters has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].productId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].productId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].productId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].cartId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].cartId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pollen.elytron.in/mcp/store/{shop}"
+}

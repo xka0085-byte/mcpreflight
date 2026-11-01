@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:37.374Z",
+  "server": {
+    "registryName": "io.github.Rira365/japan-business-day",
+    "title": "Japan Business Day",
+    "description": "Japan business days & holidays (official Cabinet Office data). Free tool + x402 USDC paid tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://japan-business-day-api.matchan962.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "japan-business-day",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://japan-business-day-api.matchan962.workers.dev/mcp"
+}

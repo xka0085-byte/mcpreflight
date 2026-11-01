@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:26.865Z",
+  "server": {
+    "registryName": "io.github.romcdonald9976/chikoh",
+    "title": "Chikoh - Fantasy Sports & Entertainment Intelligence",
+    "description": "AI fantasy sports & entertainment intelligence. 75 tools across 10 sports + TV/Awards.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://chikoh.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chikoh.com/mcp"
+}

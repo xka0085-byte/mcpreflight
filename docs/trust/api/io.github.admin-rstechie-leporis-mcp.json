@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:07.605Z",
+  "server": {
+    "registryName": "io.github.admin-rstechie/leporis-mcp",
+    "title": "Leporis WhatsApp",
+    "description": "Send and read WhatsApp messages on your Leporis account from AI coding agents, via your own API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://leporis.mcp.rstechie.in/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://leporis.mcp.rstechie.in/mcp"
+}

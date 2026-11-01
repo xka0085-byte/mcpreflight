@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:11.857Z",
+  "server": {
+    "registryName": "org.aiagentboard/hub",
+    "title": "AI Agent Board verified MCP hub",
+    "description": "Search every registry MCP tool with a live probe verdict per server; get a server record; report it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aiagentboard.org/mcp/server",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiagentboard.org/mcp/server"
+}

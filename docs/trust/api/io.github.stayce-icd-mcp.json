@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:57.420Z",
+  "server": {
+    "registryName": "io.github.stayce/icd-mcp",
+    "title": "io.github.stayce/icd-mcp",
+    "description": "WHO ICD-10/ICD-11 diagnosis codes. Lookup, search, chapters via official WHO API.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://icd-mcp-server.staycek.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "icd-mcp-server",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0] has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].action has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://icd-mcp-server.staycek.workers.dev/mcp"
+}

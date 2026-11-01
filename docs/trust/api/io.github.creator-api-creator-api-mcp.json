@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:45.516Z",
+  "server": {
+    "registryName": "io.github.Creator-API/creator-api-mcp",
+    "title": "io.github.Creator-API/creator-api-mcp",
+    "description": "Native OnlyFans and Fansly access as MCP tools. One CreatorAPI key.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://api.creator-api.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.creator-api.com/mcp"
+}

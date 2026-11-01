@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:18.217Z",
+  "server": {
+    "registryName": "io.github.ochodigits/launch-ready",
+    "title": "Launch Ready",
+    "description": "Pre-launch website QA: deterministic rule-based scans, readiness score, and blockers for agents.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://uselaunchready.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uselaunchready.com/api/mcp"
+}

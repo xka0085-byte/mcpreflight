@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:56.581Z",
+  "server": {
+    "registryName": "io.github.ste7/novacal-mcp-server",
+    "title": "io.github.ste7/novacal-mcp-server",
+    "description": "Manage Novacal event types, availability, and bookings.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.novacal.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.novacal.io/mcp"
+}

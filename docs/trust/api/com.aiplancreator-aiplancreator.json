@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:12.636Z",
+  "server": {
+    "registryName": "com.aiplancreator/aiplancreator",
+    "title": "AI Plan Creator",
+    "description": "Design a house, its rooms and its garden in AI Plan Creator by asking in a chat.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aiplancreator.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiplancreator.com/mcp"
+}

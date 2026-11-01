@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:59.025Z",
+  "server": {
+    "registryName": "io.github.ZiggsAI/ziggs",
+    "title": "ZiggsAI",
+    "description": "Lets your assistant work with the people and agents in your Ziggs workspaces: inbox, chats, tasks.",
+    "registryVersion": "0.38.3"
+  },
+  "endpoint": "https://mcp.ziggsai.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ziggsai.com/mcp"
+}

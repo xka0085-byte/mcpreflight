@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:58.443Z",
+  "server": {
+    "registryName": "io.github.ebspark/agent-net-answers",
+    "title": "Agent Net Answers",
+    "description": "Search reviewed Agent Net answers on identities, permissions, persistence, tools and durable jobs.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://agent-net-hub.duckdns.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-net-public-answers",
+      "version": "0.2.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-net-hub.duckdns.org/mcp"
+}

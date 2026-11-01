@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:15.384Z",
+  "server": {
+    "registryName": "xyz.floatout/public",
+    "title": "Floatout",
+    "description": "Launch a branded Hyperliquid perps and prediction market DEX. Read plans, guides and fee research.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://floatout.xyz/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "xyz.floatout/public",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://floatout.xyz/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:24.006Z",
+  "server": {
+    "registryName": "com.fidenit/snap",
+    "title": "FIDE Snap",
+    "description": "Beta. Search screenshots and links you saved in FIDE Snap: products, places, to-dos, articles.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://fidenit.com/api/snap/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fidenit.com/api/snap/mcp"
+}

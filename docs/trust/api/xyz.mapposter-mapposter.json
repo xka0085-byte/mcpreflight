@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:16.619Z",
+  "server": {
+    "registryName": "xyz.mapposter/mapposter",
+    "title": "MapPoster",
+    "description": "Design map posters of any place in 50+ styles, with names, dates and markers, and order prints.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.mapposter.xyz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mapposter",
+      "title": "MapPoster",
+      "version": "1.2.0",
+      "websiteUrl": "https://mapposter.xyz"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].show_subtitle has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].show_coordinates has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].title_bold has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mapposter.xyz/mcp"
+}

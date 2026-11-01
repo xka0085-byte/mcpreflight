@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:48.852Z",
+  "server": {
+    "registryName": "io.smartroutes/smartroutes",
+    "title": "io.smartroutes/smartroutes",
+    "description": "Route optimisation, orders, booking and fleet management for a SmartRoutes depot.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.smartroutes.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.smartroutes.io/mcp"
+}

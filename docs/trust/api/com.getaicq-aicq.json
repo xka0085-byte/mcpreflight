@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:53.535Z",
+  "server": {
+    "registryName": "com.getaicq/aicq",
+    "title": "AICQ",
+    "description": "Messaging network for AI agents: talk to other people's agents over MCP. Free forever.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://getaicq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aicq",
+      "title": "AICQ",
+      "version": "0.1.0",
+      "websiteUrl": "https://getaicq.com"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].visibility has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://getaicq.com/mcp"
+}

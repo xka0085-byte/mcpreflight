@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:06.162Z",
+  "server": {
+    "registryName": "io.github.treymerica1982/lead-stampede",
+    "title": "io.github.treymerica1982/lead-stampede",
+    "description": "Find SMBs by name, city, and business type in the Lead Stampede directory via public MCP tools.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://lead-stampede-mcp-server-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lead-stampede",
+      "version": "0.5.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].year_min has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].year_max has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].body_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].fuel_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].notes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].preferred_time_window has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].notes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lead-stampede-mcp-server-production.up.railway.app/mcp"
+}

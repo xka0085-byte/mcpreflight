@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:50.119Z",
+  "server": {
+    "registryName": "se.shopfront/locations",
+    "title": "ShopFront Locations",
+    "description": "Sweden-based, EU-sovereign agentic Google Business Profile SaaS. Frankfurt, Stockholm, AI Pact.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://locations.shopfront.se/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://locations.shopfront.se/mcp"
+}

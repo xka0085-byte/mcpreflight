@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:43.897Z",
+  "server": {
+    "registryName": "dev.workers.cybermax-tools.cybermax/hacker-news",
+    "title": "Frontpeek: Hacker News Front Page + Mentions — stories, scores, links",
+    "description": "Hacker News front page and search: stories, points, comments, and which stories link to your domain.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=cybermax/hacker-news&via=mcp-registry",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=cybermax/hacker-news&via=mcp-registry"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:25.427Z",
+  "server": {
+    "registryName": "uk.co.sweepcertificates/sweep-certificates",
+    "title": "Sweep Certificates",
+    "description": "Customers, diary, quotes and certificates for chimney sweeps and stove installers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://uks-sweepcertificates-api.azurewebsites.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uks-sweepcertificates-api.azurewebsites.net/mcp"
+}

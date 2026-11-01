@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:43.110Z",
+  "server": {
+    "registryName": "io.github.projectworks007/youtube-transcripts",
+    "title": "YouTube Transcripts",
+    "description": "Transcripts of YouTube videos, playlists and channels with timestamps; SRT or WebVTT too.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=highbrow_fame/youtube-transcript-fast,highbrow_fame/youtube-channel-api,highbrow_fame/youtube-video-details-api",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=highbrow_fame/youtube-transcript-fast,highbrow_fame/youtube-channel-api,highbrow_fame/youtube-video-details-api"
+}

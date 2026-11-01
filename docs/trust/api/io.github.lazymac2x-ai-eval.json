@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:37.224Z",
+  "server": {
+    "registryName": "io.github.lazymac2x/ai-eval",
+    "title": "io.github.lazymac2x/ai-eval",
+    "description": "Cloudflare Workers MCP server: ai-eval",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.lazy-mac.com/ai-eval/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "ai-eval",
+      "version": "1.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].prompt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].responses has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].text has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lazy-mac.com/ai-eval/mcp"
+}

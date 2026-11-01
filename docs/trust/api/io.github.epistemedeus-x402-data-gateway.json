@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:12.568Z",
+  "server": {
+    "registryName": "io.github.epistemedeus/x402-data-gateway",
+    "title": "io.github.epistemedeus/x402-data-gateway",
+    "description": "Agent tools for discovery, payment safety, data extraction, and DeFi.",
+    "registryVersion": "1.23.55"
+  },
+  "endpoint": "https://agents.samedaydesk.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "x402-data-gateway",
+      "version": "1.23.55"
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[25].after has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].arguments has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agents.samedaydesk.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:41.133Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/jp-holidays-mcp",
+    "title": "Japan Public Holidays MCP",
+    "description": "Japanese national holidays calendar.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jp-holidays-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jp-holidays-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].date has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jp-holidays-mcp.donniertf.workers.dev/mcp"
+}

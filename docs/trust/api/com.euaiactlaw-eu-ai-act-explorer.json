@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:06.582Z",
+  "server": {
+    "registryName": "com.euaiactlaw/eu-ai-act-explorer",
+    "title": "EU AI Act Explorer",
+    "description": "Read-only EU AI Act (Reg. 2024/1689 as amended) answers, citing official sources",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.euaiactlaw.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "eu-ai-act-explorer",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].role has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.euaiactlaw.com/mcp"
+}

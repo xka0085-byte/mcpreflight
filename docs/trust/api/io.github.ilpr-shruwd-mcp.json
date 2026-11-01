@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:55.733Z",
+  "server": {
+    "registryName": "io.github.ilpr/shruwd-mcp",
+    "title": "io.github.ilpr/shruwd-mcp",
+    "description": "Set up a brand, read its AI-search visibility, and act on diagnostic findings.",
+    "registryVersion": "0.1.9"
+  },
+  "endpoint": "https://shruwd.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shruwd.io/mcp"
+}

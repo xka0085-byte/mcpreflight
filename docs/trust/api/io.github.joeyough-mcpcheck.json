@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:40.308Z",
+  "server": {
+    "registryName": "io.github.joeyough/mcpcheck",
+    "title": "io.github.joeyough/mcpcheck",
+    "description": "Scan any MCP server for tool-poisoning, security, auth & license. Trust score before install.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcpcheck.netlify.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcpcheck",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcpcheck.netlify.app/mcp"
+}

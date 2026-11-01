@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:59.250Z",
+  "server": {
+    "registryName": "tax.terminal/filing",
+    "title": "Terminal Tax",
+    "description": "Tax software: your AI agent sends the facts, we calculate and e-file; you review and sign.",
+    "registryVersion": "0.335.3"
+  },
+  "endpoint": "https://mcp.terminal.tax/v1/hosted-mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "terminal-tax",
+      "title": "Terminal Tax",
+      "version": "0.335.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].continuationHandle has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].continuationHandle has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.terminal.tax/v1/hosted-mcp"
+}

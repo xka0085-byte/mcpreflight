@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:32.998Z",
+  "server": {
+    "registryName": "io.github.cuipengdba/agentsql",
+    "title": "AgentSQL",
+    "description": "Guard AI agents' PostgreSQL/MySQL access via MCP: SQL audit, auth, masking, write approval",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://demo.agentsql.cn/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://demo.agentsql.cn/mcp"
+}

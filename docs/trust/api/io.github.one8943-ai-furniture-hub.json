@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:04.001Z",
+  "server": {
+    "registryName": "io.github.ONE8943/ai-furniture-hub",
+    "title": "AI Furniture & Home Product Hub",
+    "description": "MCP server for mm-precision furniture search, fit checks, curated sets, and AIO audits.",
+    "registryVersion": "6.3.0"
+  },
+  "endpoint": "https://ai-furniture-hub.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "furniture-hub",
+      "version": "6.4.0"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].margin_between_mm has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].wall_clearance_mm has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].grid_step_mm has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai-furniture-hub.onrender.com/mcp"
+}

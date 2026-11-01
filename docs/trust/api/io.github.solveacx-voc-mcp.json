@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:58.989Z",
+  "server": {
+    "registryName": "io.github.SolveaCX/voc-mcp",
+    "title": "VOC OpenAPI MCP",
+    "description": "VOC OpenAPI gives AI agents authorized review and product data for insights, tagging, and listings.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://open.voc.ai/mcp/catalog",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://open.voc.ai/mcp/catalog"
+}

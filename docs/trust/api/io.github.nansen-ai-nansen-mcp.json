@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:56.364Z",
+  "server": {
+    "registryName": "io.github.nansen-ai/nansen-mcp",
+    "title": "Nansen",
+    "description": "Blockchain analytics API for AI agents. Smart Money signals, wallet profiling, token analytics.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.nansen.ai/ra/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nansen-mcp",
+      "version": "3.2.4"
+    },
+    "toolCount": 53,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].request has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].request has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[41].transaction_hash has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[41].chain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.nansen.ai/ra/mcp/"
+}

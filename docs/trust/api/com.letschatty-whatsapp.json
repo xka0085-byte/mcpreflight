@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:45.594Z",
+  "server": {
+    "registryName": "com.letschatty/whatsapp",
+    "title": "Chatty: WhatsApp Business",
+    "description": "Your WhatsApp Business inbox in Claude or ChatGPT: who's waiting, follow-ups and replies.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://asistente.letschatty.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://asistente.letschatty.com/mcp"
+}

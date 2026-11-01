@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:11.204Z",
+  "server": {
+    "registryName": "app.knowra/knowra",
+    "title": "Knowra",
+    "description": "Search arXiv papers and read Scout reports with methods, evidence and verification points.",
+    "registryVersion": "0.8.15"
+  },
+  "endpoint": "https://mcp.knowra.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "icons": [
+        {
+          "mimeType": "image/jpeg",
+          "sizes": [
+            "256x256"
+          ],
+          "src": "https://mcp.knowra.app/assets/logo-light.jpeg",
+          "theme": "light"
+        },
+        {
+          "mimeType": "image/jpeg",
+          "sizes": [
+            "256x256"
+          ],
+          "src": "https://mcp.knowra.app/assets/logo-dark.jpeg",
+          "theme": "dark"
+        }
+      ],
+      "name": "Knowra",
+      "version": "0.8.15",
+      "websiteUrl": "https://knowra.app"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.knowra.app/mcp"
+}

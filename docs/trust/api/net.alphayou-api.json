@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:22.680Z",
+  "server": {
+    "registryName": "net.alphayou/api",
+    "title": "AlphaYou API",
+    "description": "SEC filings, 13F funds, insider trades and published calls, each with its source link.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.alphayou.net/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.alphayou.net/api/v1/mcp"
+}

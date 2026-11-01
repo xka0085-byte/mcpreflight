@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:09.241Z",
+  "server": {
+    "registryName": "io.github.no-fait/infinite-audience",
+    "title": "Infinite Audience",
+    "description": "Discover audiences, build segments, match and deliver data. Some actions may incur billable usage.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.infiniteaudience.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.infiniteaudience.ai/mcp"
+}

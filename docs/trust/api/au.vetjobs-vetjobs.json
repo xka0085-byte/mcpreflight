@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:18.719Z",
+  "server": {
+    "registryName": "au.vetjobs/vetjobs",
+    "title": "VetJobs.au - veterinary jobs in Australia",
+    "description": "Live Australian veterinary jobs: vet, nurse and locum roles, direct from employers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vetjobs.au/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vetjobs",
+      "title": "VetJobs.au job inventory",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].per_page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].per_page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vetjobs.au/mcp"
+}

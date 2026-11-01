@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:42.210Z",
+  "server": {
+    "registryName": "io.scanbimlabs/scanbim",
+    "title": "io.scanbimlabs/scanbim",
+    "description": "Unified AEC tools: ACC, Revit, Navisworks, Twinmotion, and APS from one endpoint.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://mcp.scanbimlabs.io/unified",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.scanbimlabs.io/unified"
+}

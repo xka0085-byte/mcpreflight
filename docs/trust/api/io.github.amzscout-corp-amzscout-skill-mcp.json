@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:37.993Z",
+  "server": {
+    "registryName": "io.github.amzscout-corp/amzscout-skill-mcp",
+    "title": "AMZScout Skill + MCP",
+    "description": "Amazon research from AMZScout data: analyze products & niches, keywords/PPC, and brand catalogs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://chatbot.amzscout.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chatbot.amzscout.net/mcp"
+}

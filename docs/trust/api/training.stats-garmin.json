@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:30.584Z",
+  "server": {
+    "registryName": "training.stats/garmin",
+    "title": "Garmin & Strava for Claude and ChatGPT",
+    "description": "Read-only Garmin and Strava data for your AI: activities, sleep, HRV, readiness, training load.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://stats.training/mcp/{mcp_key}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://stats.training/mcp/{mcp_key}"
+}

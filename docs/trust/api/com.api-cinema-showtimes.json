@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:27.032Z",
+  "server": {
+    "registryName": "com.api-cinema/showtimes",
+    "title": "API Cinéma — movie showtimes",
+    "description": "Movie showtimes for 5,000+ cinemas in France and the US: search cinemas, movies and screenings.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.api-cinema.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.api-cinema.com/mcp"
+}

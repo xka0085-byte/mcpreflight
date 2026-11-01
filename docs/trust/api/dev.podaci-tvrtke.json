@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:05.290Z",
+  "server": {
+    "registryName": "dev.podaci/tvrtke",
+    "title": "dev.podaci/tvrtke",
+    "description": "An MCP server that provides Croatian corporate, financial, and beneficial ownership intelligence.",
+    "registryVersion": "v0.1.8"
+  },
+  "endpoint": "https://tvrtke.podaci.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Tvrtke MCP server",
+      "version": "v0.1.8"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tvrtke.podaci.dev/mcp"
+}

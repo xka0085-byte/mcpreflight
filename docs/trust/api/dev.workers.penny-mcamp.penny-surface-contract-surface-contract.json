@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:00.085Z",
+  "server": {
+    "registryName": "dev.workers.penny-mcamp.penny-surface-contract/surface-contract",
+    "title": "Surface Contract: platform API behavior and x402 pre-payment checks",
+    "description": "Surface contracts: API behavior evidence, x402 pre-payment check, MCP server preflight",
+    "registryVersion": "2026.10.22"
+  },
+  "endpoint": "https://penny-surface-contract.penny-mcamp.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "penny-surface-contract",
+      "version": "0.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].claimId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].statement has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].evidence has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://penny-surface-contract.penny-mcamp.workers.dev/mcp"
+}

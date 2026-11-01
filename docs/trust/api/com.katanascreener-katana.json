@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:19.901Z",
+  "server": {
+    "registryName": "com.katanascreener/katana",
+    "title": "Katana — Japan Stock Screener",
+    "description": "Screen every listed company in Japan by financials, custom formulas, and annual report text.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.katanascreener.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.katanascreener.com/mcp"
+}

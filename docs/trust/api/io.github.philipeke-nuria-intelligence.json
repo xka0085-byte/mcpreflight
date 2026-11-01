@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:02.176Z",
+  "server": {
+    "registryName": "io.github.philipeke/nuria-intelligence",
+    "title": "io.github.philipeke/nuria-intelligence",
+    "description": "Nuria Islamic app: source-cited Islamic guidance, in scholarly review; sensitive Qs go to a human.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.nuria.one/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.nuria.one/mcp"
+}

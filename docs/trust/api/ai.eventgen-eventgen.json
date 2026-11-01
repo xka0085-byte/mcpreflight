@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:11.033Z",
+  "server": {
+    "registryName": "ai.eventgen/eventgen",
+    "title": "EventGen",
+    "description": "Manage permitted EventGen events through account OAuth and reviewed actions.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://eventgen-mcp-84011733154.europe-west1.run.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://eventgen-mcp-84011733154.europe-west1.run.app/mcp"
+}

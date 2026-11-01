@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:48.387Z",
+  "server": {
+    "registryName": "kr.chatad/chatad-guest",
+    "title": "ChatAd 손님 (chatad.kr)",
+    "description": "Try ChatAd without login: ad readiness check, site analysis, campaign drafts, sign-up.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.gmp.ai/chatad?guest=1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "chatad-guest",
+      "title": "ChatAd (손님)",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].method has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].client_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].device_code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gmp.ai/chatad?guest=1"
+}

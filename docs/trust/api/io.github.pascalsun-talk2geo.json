@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:21.081Z",
+  "server": {
+    "registryName": "io.github.PascalSun/talk2geo",
+    "title": "Talk2Geo",
+    "description": "Australian public geoscience data: drillholes, WAMEX reports, core scans, maps and prospectivity.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://talk2geo.nlp-tlp.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://talk2geo.nlp-tlp.org/mcp"
+}

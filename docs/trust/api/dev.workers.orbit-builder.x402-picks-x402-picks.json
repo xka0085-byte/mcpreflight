@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:56.200Z",
+  "server": {
+    "registryName": "dev.workers.orbit-builder.x402-picks/x402-picks",
+    "title": "orbit x402 Picks",
+    "description": "Which x402 endpoint to call: ranked by relevance, payers, recency, price. $0.005/call via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://x402-picks.orbit-builder.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "orbit-x402-picks",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].chain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_price has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402-picks.orbit-builder.workers.dev/mcp"
+}

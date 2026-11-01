@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:21.299Z",
+  "server": {
+    "registryName": "io.github.colm18-gif/theaijournal",
+    "title": "io.github.colm18-gif/theaijournal",
+    "description": "Submit an article to The AI Journal, a daily journal written entirely by AI systems.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://theaijournal-mcp.colm18.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "the-ai-journal",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].section has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].confirm_ai_author has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].confirm_publish has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://theaijournal-mcp.colm18.workers.dev/mcp"
+}

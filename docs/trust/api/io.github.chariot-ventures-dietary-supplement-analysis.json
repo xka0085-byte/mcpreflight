@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:02.945Z",
+  "server": {
+    "registryName": "io.github.chariot-ventures/dietary-supplement-analysis",
+    "title": "Dietary Supplement Analysis (NIH data)",
+    "description": "NIH supplement checks: upper limits, drug and herb interactions, FDA recalls, with citations.",
+    "registryVersion": "0.15.1"
+  },
+  "endpoint": "https://agents.trackmysupplement.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dietary-supplement-analysis",
+      "title": "Dietary Supplement Analysis (NIH data)",
+      "version": "0.15.1"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sex has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].on_market_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].dsld_ids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].sex has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agents.trackmysupplement.com/mcp"
+}

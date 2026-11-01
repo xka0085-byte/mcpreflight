@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:57.940Z",
+  "server": {
+    "registryName": "lat.events/latino-events",
+    "title": "Latino Events (events.lat)",
+    "description": "Find upcoming concerts, festivals and cultural events across Latin America.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://ojlsoqhibryhvuyltwpi.supabase.co/functions/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ojlsoqhibryhvuyltwpi.supabase.co/functions/v1/mcp"
+}

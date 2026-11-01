@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:55.624Z",
+  "server": {
+    "registryName": "com.elocuenti/elocuenti",
+    "title": "Elocuenti",
+    "description": "Manage your Elocuenti AI sales agents, CRM, campaigns and analytics from Claude.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.elocuenti.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.elocuenti.com/mcp"
+}

@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:57.349Z",
+  "server": {
+    "registryName": "work.latlng.mcp/latlng",
+    "title": "LatLng",
+    "description": "Geocoding, reverse geocoding, and places search for LatLng.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.latlng.work/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "latlng-mcp",
+      "version": "0.1.0",
+      "title": "LatLng",
+      "description": "LatLng MCP server for geocoding, reverse geocoding, places search, nearby POIs, and map/location workflows. Uses the LatLng API with a generous free quota. Get a free server key from https://dash.latlng.work.",
+      "homepage": "https://www.latlng.work",
+      "repository": "https://github.com/latlng-work/latlng-mcp"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].radius has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.latlng.work/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:24.966Z",
+  "server": {
+    "registryName": "io.github.unshift-ai/unshift",
+    "title": "Unshift",
+    "description": "Turn Claude or ChatGPT into a website builder that ships a real site to a live URL you own.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://studio.unshift.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://studio.unshift.ai/api/mcp"
+}

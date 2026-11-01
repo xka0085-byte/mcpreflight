@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:04.105Z",
+  "server": {
+    "registryName": "io.github.Dyln01/chronokey",
+    "title": "ChronoKey",
+    "description": "MCP tools: timestamps, UUID v4, gas prices, domain WHOIS, text extraction, and persistent memory.",
+    "registryVersion": "2.2.1"
+  },
+  "endpoint": "https://bot.chronokey.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "chronokey",
+      "version": "3.3.1"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].value has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bot.chronokey.workers.dev/mcp"
+}

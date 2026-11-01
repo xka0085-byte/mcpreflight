@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:35.057Z",
+  "server": {
+    "registryName": "io.github.crossi-dev/latam-tools",
+    "title": "Velora LATAM Tools",
+    "description": "Argentina CUIT/CUIL validation and AFIP fiscal QR generation. Pure, no-auth MCP tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tools.somosvelora.com/api/mcp/public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "velora-mcp-demo-public",
+      "version": "1.0.0"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "22 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tools.somosvelora.com/api/mcp/public"
+}

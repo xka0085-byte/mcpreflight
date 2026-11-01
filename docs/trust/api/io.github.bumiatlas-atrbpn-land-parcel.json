@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:26.224Z",
+  "server": {
+    "registryName": "io.github.BumiAtlas/atrbpn-land-parcel",
+    "title": "ATR/BPN Land Parcel Lookup (Indonesia)",
+    "description": "Indonesian ATR/BPN land parcels by certificate number, NIB or coordinates, with overlaps.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bumiatlas.com/mcp/parcels",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bumiatlas.com/mcp/parcels"
+}

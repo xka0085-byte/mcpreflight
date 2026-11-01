@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:56.229Z",
+  "server": {
+    "registryName": "studio.so-me/social-media-studio",
+    "title": "Social media studio",
+    "description": "Schedule and publish posts on 18 social platforms, manage drafts, inbox, media and analytics.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.so-me.studio/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.so-me.studio/mcp"
+}

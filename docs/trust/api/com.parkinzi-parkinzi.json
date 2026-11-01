@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:45:18.480Z",
+  "scannedAt": "2026-11-01T03:52:38.463Z",
   "server": {
     "registryName": "com.parkinzi/parkinzi",
     "title": "com.parkinzi/parkinzi",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://parkinzi.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "parkinzi",
+      "version": "0.3.1",
+      "title": "PARKINZI — Smart Parking & EV Charging (Saudi Arabia)"
+    },
+    "toolCount": 9,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "9 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://parkinzi.com/mcp"
 }

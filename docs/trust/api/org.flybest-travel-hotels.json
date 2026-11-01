@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:26.466Z",
+  "server": {
+    "registryName": "org.flybest/travel-hotels",
+    "title": "FlyBest Travel — Hotel Booking with Advisor Benefits",
+    "description": "Travel: live hotel rates with advisor benefits (breakfast, credit, upgrade), booked via a US agency.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://ai.flybest.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.flybest.org/mcp"
+}

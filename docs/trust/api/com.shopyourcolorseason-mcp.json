@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:33.432Z",
+  "server": {
+    "registryName": "com.shopyourcolorseason/mcp",
+    "title": "Shop Your Color Season",
+    "description": "Find clothes in your colour season (seasonal colour analysis) from shops in your country.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://shopyourcolorseason.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shopyourcolorseason",
+      "title": "Shop Your Color Season",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].season has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shopyourcolorseason.com/mcp"
+}

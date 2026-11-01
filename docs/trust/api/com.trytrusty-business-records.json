@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:26.318Z",
+  "server": {
+    "registryName": "com.trytrusty/business-records",
+    "title": "Trusty",
+    "description": "Dated US business records before signing a quote, paying a deposit or sending money.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.trytrusty.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "trusty-mover-check",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://trytrusty.com/favicon.svg",
+          "mimeType": "image/svg+xml"
+        },
+        {
+          "src": "https://trytrusty.com/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].entries has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].state has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.trytrusty.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:17.344Z",
+  "server": {
+    "registryName": "io.github.TheAgenticUniverse/enroute-route-optimizer",
+    "title": "Énroute Route Optimizer",
+    "description": "Agentic-AI route optimization for delivery fleets, capacity- and time-window-safe.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://routeoptimizerglobal.theagenticuniverse.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://routeoptimizerglobal.theagenticuniverse.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:43.543Z",
+  "server": {
+    "registryName": "io.sealsecurity/mcp",
+    "title": "Seal Security",
+    "description": "Vulnerability management: scan projects, search sealed packages, manage sealing rules and reports.",
+    "registryVersion": "0.1.142"
+  },
+  "endpoint": "https://mcp.sealsecurity.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.sealsecurity.io/mcp"
+}

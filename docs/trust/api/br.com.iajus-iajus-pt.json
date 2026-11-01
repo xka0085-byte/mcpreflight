@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:28.400Z",
+  "server": {
+    "registryName": "br.com.iajus/iajus-pt",
+    "title": "IAJUS - Jurisprudência PT",
+    "description": "Pesquisa jurídica portuguesa",
+    "registryVersion": "2.0.21"
+  },
+  "endpoint": "https://pt.mcp.iajus.com.br/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pt.mcp.iajus.com.br/mcp"
+}

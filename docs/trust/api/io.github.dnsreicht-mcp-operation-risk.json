@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:29.943Z",
+  "server": {
+    "registryName": "io.github.dnsreicht/mcp-operation-risk",
+    "title": "MCP Operation Risk",
+    "description": "Operation-level risk guidance for consolidated MCP tools, including schema drift and retry signals.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://87-106-119-237.sslip.io/mcp-operation-risk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Check whether the actual operation inside an MCP tool call is safe before execution. Use this when one MCP tool exposes multiple operations with different side effects, so whole-tool permissions are too coarse. Provide the native MCP server identity, the tool's tools/list metadata and the intended arguments. For supported consolidated tools, distinguish read, create/add, update/mutate and delete/destructive operations. Return ALLOW, DENY, or REQUIRE_APPROVAL. Unknown, unsupported, ambiguous, or schema-changed calls fail closed with REQUIRE_APPROVAL. The evaluator never executes the source operation.",
+      "name": "mcp-operation-risk",
+      "title": "MCP Operation Risk Check",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://87-106-119-237.sslip.io/mcp-operation-risk/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:32.759Z",
+  "server": {
+    "registryName": "io.github.ux-xd/dephealth",
+    "title": "Dependency Health MCP",
+    "description": "Package alive? Verdict with evidence: deprecated, archived, stale or active; plus runtime EOL dates.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://dephealth.dsh.sh/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dephealth",
+      "version": "0.1.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].manifest_kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dephealth.dsh.sh/mcp"
+}

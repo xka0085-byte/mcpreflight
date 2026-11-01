@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:28.989Z",
+  "server": {
+    "registryName": "com.casafari/claro",
+    "title": "Claro AI by Casafari",
+    "description": "Commercial premises search for expansion teams: plain-words briefs, exact counts, quoted evidence.",
+    "registryVersion": "2026.10.18"
+  },
+  "endpoint": "https://platform.casafari.com/mcp/claro",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://platform.casafari.com/mcp/claro"
+}

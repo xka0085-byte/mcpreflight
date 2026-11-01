@@ -1,0 +1,69 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:54.163Z",
+  "server": {
+    "registryName": "io.github.livevariant/livevariant",
+    "title": "LiveVariant",
+    "description": "Build, inspect and read adaptive A/B tests. Config travels in the URL; no account or API key needed.",
+    "registryVersion": "0.1.5"
+  },
+  "endpoint": "https://livevariant.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "livevariant",
+      "version": "0.1.5",
+      "icons": [
+        {
+          "src": "https://livevariant.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://livevariant.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "light"
+        },
+        {
+          "src": "https://livevariant.com/icon-512-dark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ],
+          "theme": "dark"
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].beliefs has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].channel has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].count has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://livevariant.com/mcp"
+}

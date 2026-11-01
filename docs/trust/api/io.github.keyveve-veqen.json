@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:03.060Z",
+  "server": {
+    "registryName": "io.github.Keyveve/veqen",
+    "title": "Veqen: AI cost monitoring and protection",
+    "description": "AI cost monitoring and protection: spend per person and customer, stolen-key alerts and bill checks.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://veqen-app.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://veqen-app.com/mcp"
+}

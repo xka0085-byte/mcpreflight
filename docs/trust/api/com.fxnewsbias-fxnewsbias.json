@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:46.179Z",
+  "server": {
+    "registryName": "com.fxnewsbias/fxnewsbias",
+    "title": "FXNewsBias",
+    "description": "Forex sentiment scores and session bias calls, with gold, silver, oil, crypto and US index reads",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fxnewsbias.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fxnewsbias.com/mcp"
+}

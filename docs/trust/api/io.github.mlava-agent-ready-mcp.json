@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:34.211Z",
+  "server": {
+    "registryName": "io.github.mlava/agent-ready-mcp",
+    "title": "Agent Ready",
+    "description": "Scan any URL for AI agent readability — Vercel Spec, llmstxt.org, and agent-protocol manifests.",
+    "registryVersion": "0.7.7"
+  },
+  "endpoint": "https://agent-ready.dev/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-ready",
+      "version": "1.0.0",
+      "title": "Agent Ready",
+      "description": "Scan any public website for AI agent-readability — a 0–100 score against the Vercel Agent Readability Spec, an llms.txt score, and per-check remediation.",
+      "websiteUrl": "https://agent-ready.dev",
+      "icons": [
+        {
+          "src": "https://agent-ready.dev/icon.svg",
+          "mimeType": "image/svg+xml"
+        },
+        {
+          "src": "https://agent-ready.dev/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-ready.dev/api/v1/mcp"
+}

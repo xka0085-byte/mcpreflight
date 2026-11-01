@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:32.470Z",
+  "server": {
+    "registryName": "gr.diavgis/procurement",
+    "title": "Diavgis — Greek Public Procurement",
+    "description": "Greek public procurement: tenders, awards, contracts, payments, suppliers, expiring contracts.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://mcp.diavgis.gr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "diavgis-mcp",
+      "title": "Diavgis — Greek Public Procurement",
+      "version": "1.5.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].chain_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.diavgis.gr/mcp"
+}

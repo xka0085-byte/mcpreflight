@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:37.297Z",
+  "server": {
+    "registryName": "io.github.amc2144/construction-leads",
+    "title": "Horry County Construction Leads",
+    "description": "Live Horry County construction leads for low-voltage, networking, security, AV, POS, and electrical.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agent-vending-mcp.amctechsc.workers.dev/construction-leads/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-vending-mcp",
+      "version": "0.3.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].number has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-vending-mcp.amctechsc.workers.dev/construction-leads/mcp"
+}

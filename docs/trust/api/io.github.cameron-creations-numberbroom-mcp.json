@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:50.024Z",
+  "server": {
+    "registryName": "io.github.cameron-creations/numberbroom-mcp",
+    "title": "io.github.cameron-creations/numberbroom-mcp",
+    "description": "Verify US phone numbers: line type, carrier, and TCPA litigator status via the NumberBroom API.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://numberbroom.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://numberbroom.com/mcp"
+}

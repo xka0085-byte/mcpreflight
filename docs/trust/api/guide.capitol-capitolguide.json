@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:33.738Z",
+  "server": {
+    "registryName": "guide.capitol/capitolguide",
+    "title": "guide.capitol/capitolguide",
+    "description": "Navigate the U.S. Capitol complex: decode room codes, route buildings, check access, amenities.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://capitol.guide/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "capitolguide",
+      "version": "0.1.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].meetings has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://capitol.guide/mcp"
+}

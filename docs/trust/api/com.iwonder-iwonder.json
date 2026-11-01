@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:05.144Z",
+  "server": {
+    "registryName": "com.iwonder/iwonder",
+    "title": "iWonder",
+    "description": "Rights-aware documentary search, film details, and where-to-watch for AI assistants. 100,000+ films.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://iwonder.com/api/mcp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "iWonder",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].year_from has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].year_to has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_runtime_minutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].per_page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://iwonder.com/api/mcp/mcp"
+}

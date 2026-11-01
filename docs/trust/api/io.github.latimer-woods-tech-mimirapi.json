@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:12.866Z",
+  "server": {
+    "registryName": "io.github.Latimer-Woods-Tech/mimirapi",
+    "title": "MimirAPI",
+    "description": "Pay-per-call agent tools over x402 (USDC on Base) — no signup or API key.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mimirapi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mimirapi",
+      "title": "MimirAPI",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].subtitle has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mimirapi.com/mcp"
+}

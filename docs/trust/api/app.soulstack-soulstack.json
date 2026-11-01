@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:48.986Z",
+  "server": {
+    "registryName": "app.soulstack/soulstack",
+    "title": "SoulStack",
+    "description": "Read MRR, churn, users, errors, AI costs and 0-100 health scores for every app you run.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://www.soulstack.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.soulstack.app/api/mcp"
+}

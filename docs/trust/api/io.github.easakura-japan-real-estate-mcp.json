@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:55.561Z",
+  "server": {
+    "registryName": "io.github.easakura/japan-real-estate-mcp",
+    "title": "Japan Real Estate Prices",
+    "description": "Japan real estate transaction prices and official land values (MLIT data) by area, year, and type.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fudousan-mcp.easakura.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fudousan-mcp.easakura.workers.dev/mcp"
+}

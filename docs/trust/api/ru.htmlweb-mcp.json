@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:31.562Z",
+  "server": {
+    "registryName": "ru.htmlweb/mcp",
+    "title": "htmlweb.ru — справочники и проверки для AI",
+    "description": "RU INN/OGRN, banks, geo, WHOIS. Agent self-registers via register_agent. 20 free/day.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://mcp.htmlweb.ru/",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "htmlweb",
+      "version": "1.6.3"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTIES_INVALID",
+        "severity": "FAIL",
+        "message": "tools[3].inputSchema.properties must be an object"
+      },
+      {
+        "code": "PROPERTIES_INVALID",
+        "severity": "FAIL",
+        "message": "tools[7].inputSchema.properties must be an object"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.htmlweb.ru/"
+}

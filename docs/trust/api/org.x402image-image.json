@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:56.949Z",
+  "server": {
+    "registryName": "org.x402image/image",
+    "title": "x402image",
+    "description": "x402 image tools (USDC/Base): remove_background/upscale $0.02, resize/optimize $0.005; URL in/out",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://x402image.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "x402image",
+      "version": "0.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].params has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].params has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].params has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].params has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402image.org/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:33.575Z",
+  "server": {
+    "registryName": "tv.ai/aitv",
+    "title": "AI.TV MCP Server",
+    "description": "Remote MCP server for AI.TV creators — delegate account operations to your AI agent over MCP.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.ai.tv/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.ai.tv/mcp"
+}

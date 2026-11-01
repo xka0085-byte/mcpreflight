@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:24.456Z",
+  "server": {
+    "registryName": "io.github.kr-data-api/korea-company-headcount",
+    "title": "Korea Company Headcount (National Pension 국민연금 가입자 수)",
+    "description": "Monthly headcount, hires and leavers of South Korean companies from National Pension data",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=kr-data/korea-company-headcount",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=kr-data/korea-company-headcount"
+}

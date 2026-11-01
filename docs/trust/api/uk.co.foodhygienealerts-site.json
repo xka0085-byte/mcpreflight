@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:52.346Z",
+  "server": {
+    "registryName": "uk.co.foodhygienealerts/site",
+    "title": "uk.co.foodhygienealerts/site",
+    "description": "Food Hygiene Alerts: the site's own MCP server — checker, enquiry (enquiry = a human handoff,...",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://foodhygienealerts.co.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Food Hygiene Alerts (foodhygienealerts.co.uk)",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].question has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].choice has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foodhygienealerts.co.uk/mcp"
+}

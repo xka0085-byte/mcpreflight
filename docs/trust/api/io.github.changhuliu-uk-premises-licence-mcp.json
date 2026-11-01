@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:34.844Z",
+  "server": {
+    "registryName": "io.github.ChanghuLiu/uk-premises-licence-mcp",
+    "title": "RegEvidenceHub Premises",
+    "description": "RegEvidenceHub Premises: UK premises-licensing preflight for supported authorities.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://premises.regevidencehub.com/ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "UK Premises Licence Navigator",
+      "version": "1.0.0",
+      "websiteUrl": "https://regevidencehub.com/about/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].authority has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].activity has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://premises.regevidencehub.com/ai/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:58.096Z",
+  "server": {
+    "registryName": "io.github.ashevilleislove/ardaro-receipt-intelligence",
+    "title": "Ardaro Purchase Document Review",
+    "description": "Receipt extraction, invoice-to-PO quantity allocation, and free three-document discrepancy checks.",
+    "registryVersion": "1.4.2"
+  },
+  "endpoint": "https://agents.getardaro.com/mcp/documents",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ardaro-purchase-document-review",
+      "version": "1.4.2"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].contract_version has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].invoice has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].purchase_order has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agents.getardaro.com/mcp/documents"
+}

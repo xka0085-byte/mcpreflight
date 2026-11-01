@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:43.513Z",
+  "server": {
+    "registryName": "io.github.AndreiDrang/tokenbel-mcp",
+    "title": "TokenBel Financial Data",
+    "description": "Read-only MCP server for Belarusian securities: tokens, shares, bonds, companies.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.tokenbel.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tb-ai-api",
+      "version": "1.0.1"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "19 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tokenbel.dev/mcp"
+}

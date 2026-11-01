@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:12.084Z",
+  "server": {
+    "registryName": "com.goblinalpha/goblin-alpha",
+    "title": "com.goblinalpha/goblin-alpha",
+    "description": "Price checks for resale agents: sold comps with confidence grades, mislisting scans, fee math.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp.goblinalpha.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.goblinalpha.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:16.922Z",
+  "server": {
+    "registryName": "io.vectree/diagrams",
+    "title": "Vectree",
+    "description": "Search and read ~95,000 interactive concept diagrams that explain how things work — visually.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vectree.io/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "vectree",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vectree.io/mcp"
+}

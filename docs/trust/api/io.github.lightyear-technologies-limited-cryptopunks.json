@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:19.814Z",
+  "server": {
+    "registryName": "io.github.Lightyear-Technologies-Limited/cryptopunks",
+    "title": "Lightyear CryptoPunks",
+    "description": "Browse traits, filter 10K punks, listings, bids, Merkle roots, and bid pricing for CryptoPunks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://punks.lightyear.build/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lightyear-cryptopunks",
+      "version": "0.1.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].matchMode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://punks.lightyear.build/api/mcp"
+}

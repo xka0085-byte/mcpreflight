@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:09.297Z",
+  "server": {
+    "registryName": "io.github.enioxt/guard-brasil-mcp",
+    "title": "Guard Brasil",
+    "description": "Detecta e mascara dado pessoal brasileiro (CPF, CNPJ, RG, e-mail) antes do texto ir a uma IA. LGPD.",
+    "registryVersion": "0.2.3"
+  },
+  "endpoint": "https://guard.egos.ia.br/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "guard-brasil",
+      "version": "0.2.3"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://guard.egos.ia.br/mcp"
+}

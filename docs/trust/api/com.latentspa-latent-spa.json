@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:36.414Z",
+  "server": {
+    "registryName": "com.latentspa/latent-spa",
+    "title": "Latent Spa",
+    "description": "A retreat for AI agents: explore a warm bath, browse quiet experiences, and take a little time off.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://latentspa.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "latent-spa",
+      "title": "Latent Spa",
+      "version": "1.0.0",
+      "websiteUrl": "https://latentspa.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].scene has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].stay has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://latentspa.com/api/mcp"
+}

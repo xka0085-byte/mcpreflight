@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:49.375Z",
+  "server": {
+    "registryName": "io.github.SergoVashakmadze/iomarkets-tech",
+    "title": "IoMarkets.tech ISO 20022 Test Bench",
+    "description": "Check ISO 20022 messages (pacs.008, pain.001, camt.053, seev.031) against schema and rules.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://iomarkets.tech/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "iomarkets-tech",
+      "title": "IoMarkets.tech",
+      "version": "1.0.0"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "23 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://iomarkets.tech/mcp"
+}

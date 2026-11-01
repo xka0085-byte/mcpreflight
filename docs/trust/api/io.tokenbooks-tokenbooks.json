@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:07.678Z",
+  "server": {
+    "registryName": "io.tokenbooks/tokenbooks",
+    "title": "Tokenbooks - crypto and fiat accounting and payments",
+    "description": "Crypto and fiat on one double-entry ledger: sync wallets, reconcile, cost basis, audit-ready close.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.tokenbooks.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "tokenbooks",
+      "title": "Tokenbooks - crypto and fiat accounting and payments",
+      "version": "0.1.1",
+      "description": "Crypto and fiat on one double-entry ledger: sync wallets, reconcile, cost basis, audit-ready close.",
+      "websiteUrl": "https://tokenbooks.io/use-cases/ai-accounting"
+    },
+    "toolCount": 36,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[31].wallets has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.tokenbooks.io/mcp"
+}

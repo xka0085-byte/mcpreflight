@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:25.783Z",
+  "server": {
+    "registryName": "io.github.romudille-bit/agentpay",
+    "title": "AgentPay — trust routing + spend caps for x402 agents",
+    "description": "Buyer-side trust oracle + capped sessions for x402 agents: verified_route, receipts, 17 free tools.",
+    "registryVersion": "2.7.3"
+  },
+  "endpoint": "https://agentpay.tools/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentpay",
+      "version": "2.7.3"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "23 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentpay.tools/mcp"
+}

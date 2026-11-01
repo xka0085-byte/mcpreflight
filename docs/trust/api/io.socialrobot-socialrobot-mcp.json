@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:50.941Z",
+  "server": {
+    "registryName": "io.socialrobot/socialrobot-mcp",
+    "title": "SocialRobot",
+    "description": "Schedule and analyze posts on 10 social networks from AI assistants. 25 tools, free on every plan.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://socialrobot.io/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://socialrobot.io/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:39.154Z",
+  "server": {
+    "registryName": "com.simplechinatrip/china-attraction-booking",
+    "title": "Simple China Trip",
+    "description": "How foreigners book 135 China attractions: official channels, passport rules, ticket release times.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://simplechinatrip.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "simplechinatrip",
+      "title": "Simple China Trip",
+      "version": "1.0.0",
+      "websiteUrl": "https://simplechinatrip.com/mcp/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://simplechinatrip.com/mcp"
+}

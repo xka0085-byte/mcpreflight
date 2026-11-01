@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:45.651Z",
+  "server": {
+    "registryName": "io.github.Moe03/convocore",
+    "title": "Convocore",
+    "description": "Build, test and manage customer-facing AI voice and chat agents (web, WhatsApp, phone) from chat.",
+    "registryVersion": "2.6.16"
+  },
+  "endpoint": "https://mcp.convocore.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.convocore.app/mcp"
+}

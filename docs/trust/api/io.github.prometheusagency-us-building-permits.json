@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:25.999Z",
+  "server": {
+    "registryName": "io.github.PrometheusAgency/us-building-permits",
+    "title": "io.github.PrometheusAgency/us-building-permits",
+    "description": "Fresh US building permits with contacts from official city APIs. Construction lead generation.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://mcp.apify.com/?actors=prometheusagency/us-building-permits",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=prometheusagency/us-building-permits"
+}

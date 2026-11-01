@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:48.882Z",
+  "server": {
+    "registryName": "com.avenbridgetech/avenbridge",
+    "title": "Avenbridge",
+    "description": "Hosted MCP knowledge base: businesses forward emails and docs; buyers query them over MCP.",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://mcp.avenbridgetech.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "avenbridge",
+      "title": "Avenbridge",
+      "version": "0.6.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].questions has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].questions has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.avenbridgetech.com/mcp"
+}

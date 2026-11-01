@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:47.266Z",
+  "server": {
+    "registryName": "sa.daall/mnaqasat",
+    "title": "منصة المناقصات — Saudi Government Tenders",
+    "description": "Saudi government tenders (Etimad): search, agencies, winners, market reports. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mnaqasat.daall.sa/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mnaqasat",
+      "title": "منصة المناقصات",
+      "version": "1.0.0",
+      "websiteUrl": "https://mnaqasat.daall.sa"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mnaqasat.daall.sa/mcp"
+}

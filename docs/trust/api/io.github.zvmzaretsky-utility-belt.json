@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:41.923Z",
+  "server": {
+    "registryName": "io.github.zvmzaretsky/utility-belt",
+    "title": "FabTally Utility Belt",
+    "description": "13 deterministic agent utilities: timezone, cron, RRULE, currency, regex, diff, hashing & more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://belt.fabtally.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fabtally-belt",
+      "version": "1.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].label_a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].label_b has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://belt.fabtally.com/mcp"
+}

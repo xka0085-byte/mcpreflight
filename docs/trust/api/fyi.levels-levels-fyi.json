@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:26.346Z",
+  "server": {
+    "registryName": "fyi.levels/levels-fyi",
+    "title": "Levels.fyi",
+    "description": "Salary, level and job data from 1M+ pay reports. Benchmark pay, evaluate offers, search open jobs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.levels.fyi/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "levels-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].workArrangement has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].standardLevels has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].workArrangements has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].employmentTypes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].sortBy has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.levels.fyi/"
+}

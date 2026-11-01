@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:19.146Z",
+  "server": {
+    "registryName": "fun.design-events/afisha",
+    "title": "Дизайн-афиша",
+    "description": "Афиша для дизайнеров: лекции, митапы, выставки. Поиск по городу, датам, теме, только чтение.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://design-events.fun/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "design-events-afisha",
+      "title": "Дизайн-афиша",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].interests has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://design-events.fun/mcp"
+}

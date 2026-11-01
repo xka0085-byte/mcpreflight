@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:54.216Z",
+  "server": {
+    "registryName": "com.odingard/bifrost",
+    "title": "Bifrost",
+    "description": "Query a company's Bifrost trust gateway: cited answers and approved actions with signed receipts.",
+    "registryVersion": "0.1.32"
+  },
+  "endpoint": "https://bifrost-mcp-842108046620.us-central1.run.app/t/{tenant}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bifrost-mcp-842108046620.us-central1.run.app/t/{tenant}/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:06.671Z",
+  "server": {
+    "registryName": "io.github.nirholas/paired",
+    "title": "paired.exchange",
+    "description": "Launch coins quoted in tokenized stocks on Robinhood Chain; the user signs at a launch link.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://paired.exchange/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://paired.exchange/mcp"
+}

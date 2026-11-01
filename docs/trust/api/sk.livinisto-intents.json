@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:27.167Z",
+  "server": {
+    "registryName": "sk.livinisto/intents",
+    "title": "LivinIsto — home watch",
+    "description": "Watches Slovak home listings for a buyer. Takes no contact; active only after e-mail opt-in.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://www.livinisto.sk/mcp/zamery",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "livinisto-zamery",
+      "title": "LivinIsto — sledovanie ponuky",
+      "version": "0.1.0",
+      "websiteUrl": "https://www.livinisto.sk"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.livinisto.sk/mcp/zamery"
+}

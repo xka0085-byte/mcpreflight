@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:33.270Z",
+  "server": {
+    "registryName": "io.github.firsthanddata/job-postings",
+    "title": "Firsthand Data - Job Postings",
+    "description": "Live job postings from company career pages on Greenhouse, Lever, Ashby and SmartRecruiters.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=firsthand-data/career-page-job-monitor,firsthand-data/career-page-jobs-scraper,firsthand-data/remote-jobs-scraper,firsthand-data/startup-jobs-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=firsthand-data/career-page-job-monitor,firsthand-data/career-page-jobs-scraper,firsthand-data/remote-jobs-scraper,firsthand-data/startup-jobs-scraper"
+}

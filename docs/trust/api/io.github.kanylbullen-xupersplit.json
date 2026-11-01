@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:05.827Z",
+  "server": {
+    "registryName": "io.github.kanylbullen/xupersplit",
+    "title": "xupersplit",
+    "description": "Split shared expenses in a group — no account needed. See who owes whom and settle up.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://split.xuper.fun/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "xupersplit",
+      "version": "1.0.1",
+      "websiteUrl": "https://split.xuper.fun",
+      "description": "Split shared expenses in a group — no account needed. Create a split, add what everyone paid, and see who owes whom.",
+      "icons": [
+        {
+          "src": "https://split.xuper.fun/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://split.xuper.fun/apple-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].methods has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].currency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://split.xuper.fun/api/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:40.625Z",
+  "server": {
+    "registryName": "io.github.morvs-ai/morvs",
+    "title": "MORVS",
+    "description": "Keyless, read-only US public records for agents: SEC, FDA, enforcement, sanctions, market data.",
+    "registryVersion": "0.1.27"
+  },
+  "endpoint": "https://api.morvs.ai/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.morvs.ai/mcp"
+}

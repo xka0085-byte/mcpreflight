@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:16.493Z",
+  "server": {
+    "registryName": "com.aiunivid/aiunivid",
+    "title": "AiuniVid · Seedance video",
+    "description": "Generate Seedance 2.5 and 2.0 videos from chat. Quotes credits before each job; OAuth sign-in.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aiunivid.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiunivid.com/api/mcp"
+}

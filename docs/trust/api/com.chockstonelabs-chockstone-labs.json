@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:39.097Z",
+  "server": {
+    "registryName": "com.chockstonelabs/chockstone-labs",
+    "title": "Chockstone Labs",
+    "description": "Run social media from Claude: draft, schedule and approve posts, answer comments, read results.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://chockstonelabs.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chockstonelabs.com/mcp"
+}

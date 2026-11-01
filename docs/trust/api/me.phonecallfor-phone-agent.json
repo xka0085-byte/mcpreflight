@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:07.547Z",
+  "server": {
+    "registryName": "me.phonecallfor/phone-agent",
+    "title": "PhoneCallFor.me",
+    "description": "Outbound phone calls placed by an AI voice agent to book, ask, or confirm on your behalf.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://phonecallfor.me/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://phonecallfor.me/mcp"
+}

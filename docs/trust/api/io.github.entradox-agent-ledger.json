@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:08.681Z",
+  "server": {
+    "registryName": "io.github.entradox/agent-ledger",
+    "title": "AgentLedger",
+    "description": "Meter, cap, and block AI agent spend before the provider is charged.",
+    "registryVersion": "0.4.7"
+  },
+  "endpoint": "https://aiagentscity.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-ledger",
+      "version": "0.4.7"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].agent_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].workspace_key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].agent_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].workspace_key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiagentscity.com/mcp/"
+}

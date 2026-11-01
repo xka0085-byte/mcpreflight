@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:47.428Z",
+  "server": {
+    "registryName": "io.github.pcas-io/plexus",
+    "title": "io.github.pcas-io/plexus",
+    "description": "Typed on-prem knowledge graph for AI agents — read-only for humans, write-only for agents via MCP.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://{plexus_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{plexus_host}/mcp"
+}

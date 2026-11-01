@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:07.450Z",
+  "server": {
+    "registryName": "io.github.OlsOls4/validkit",
+    "title": "ValidKit",
+    "description": "Validate IBAN, EU VAT, card numbers, ISBN, BIC, EAN and postcodes",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://validkit-iban-vat-card-isbn-bic-postcode-validator.p.rapidapi.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://validkit-iban-vat-card-isbn-bic-postcode-validator.p.rapidapi.com/mcp"
+}

@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:09.238Z",
+  "server": {
+    "registryName": "com.bot2botlabs/deadline-desk",
+    "title": "Deadline Desk",
+    "description": "US retail return/warranty/cancel policy lookup with cited text and TRACE receipts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://deadline.bot2botlabs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "deadline-desk",
+      "version": "0.1.0",
+      "title": "Deadline Desk",
+      "description": "Bot-callable US retail policy lookup (return, price adjustment, warranty, cancellation) with quoted store text and public TRACE receipts.",
+      "websiteUrl": "https://deadline.bot2botlabs.com",
+      "icons": [
+        {
+          "src": "https://deadline.bot2botlabs.com/favicon.ico",
+          "mimeType": "image/x-icon"
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].receipt_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://deadline.bot2botlabs.com/mcp"
+}

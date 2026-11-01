@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:59.484Z",
+  "server": {
+    "registryName": "io.github.tonnode/mcp",
+    "title": "TONNode — TON blockchain access",
+    "description": "TON liteservers over ADNL: balances, history, get-methods, non-custodial DEX and cross-chain swaps",
+    "registryVersion": "0.9.2"
+  },
+  "endpoint": "https://mcp.tonnode.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tonnode.io/mcp"
+}

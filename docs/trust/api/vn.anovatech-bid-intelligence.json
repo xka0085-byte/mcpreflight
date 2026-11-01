@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:56.974Z",
+  "server": {
+    "registryName": "vn.anovatech/bid-intelligence",
+    "title": "Bid Intelligence",
+    "description": "Vietnam public procurement: find tenders, read bid documents, check eligibility, winning prices.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dauthau.anovatech.vn/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dauthau.anovatech.vn/mcp"
+}

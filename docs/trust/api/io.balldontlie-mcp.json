@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:27.340Z",
+  "server": {
+    "registryName": "io.balldontlie/mcp",
+    "title": "io.balldontlie/mcp",
+    "description": "Provides access to live sports data and analytics from BALLDONTLIE: The Sports API",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.balldontlie.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.balldontlie.io/mcp"
+}

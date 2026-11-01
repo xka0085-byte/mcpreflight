@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:59.817Z",
+  "server": {
+    "registryName": "io.github.astuto-ai/onelens-mcp",
+    "title": "io.github.astuto-ai/onelens-mcp",
+    "description": "Query OneLens cloud-cost data in natural language: breakdowns, trends, cost centers. Read-only.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.onelens.cloud/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.onelens.cloud/mcp"
+}

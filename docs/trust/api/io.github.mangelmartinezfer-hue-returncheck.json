@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:17.102Z",
+  "server": {
+    "registryName": "io.github.mangelmartinezfer-hue/returncheck",
+    "title": "ReturnCheck",
+    "description": "Can this product actually be returned? The merchant's exact clause, its URL and the date.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://returncheck.m-angelmartinez-fer.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ReturnCheck",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].item_condition has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].reason has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].merchant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].seller_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://returncheck.m-angelmartinez-fer.workers.dev/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:38.952Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/ca-natural-health-products-mcp",
+    "title": "Canada Natural Health Product Check MCP",
+    "description": "Verify supplements and natural health products are licensed in Canada (NPN).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ca-natural-health-products-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ca-natural-health-products-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].npn has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].npn has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].npns has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ca-natural-health-products-mcp.donniertf.workers.dev/mcp"
+}

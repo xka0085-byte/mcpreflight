@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:21.722Z",
+  "server": {
+    "registryName": "cz.evidence-exekuci/evidence",
+    "title": "Evidence exekucí",
+    "description": "Czech registers: executions (paid 60 CZK), insolvency, land registry, ID validity, sanctions.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://evidence-exekuci.cz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "evidence",
+      "title": "Evidence exekucí a další rejstříky",
+      "version": "1.0.0",
+      "websiteUrl": "https://evidence-exekuci.cz",
+      "icons": [
+        {
+          "src": "https://evidence-exekuci.cz/icon.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].register has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://evidence-exekuci.cz/mcp"
+}

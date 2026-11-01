@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:03.014Z",
+  "server": {
+    "registryName": "io.github.elliot-hub-ui/agentrescue",
+    "title": "AgentRescue",
+    "description": "MCP diagnostics that help AI agents find safe next steps for HTTP, API, and MCP failures.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://agentrescue-mcp.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "AgentRescue",
+      "version": "0.2.1"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].error has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].system has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentrescue-mcp.onrender.com/mcp"
+}

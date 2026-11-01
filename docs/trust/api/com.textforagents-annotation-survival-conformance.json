@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:14.069Z",
+  "server": {
+    "registryName": "com.textforagents/annotation-survival-conformance",
+    "title": "Annotation-survival conformance",
+    "description": "Annotation-survival conformance for MCP tools. Receipt $0.01, check $4.99, plans $9.99/$19.99.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://textforagents.com/products/annotation-survival-conformance/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "annotation-survival-conformance",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].receipt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].receipt_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/annotation-survival-conformance/mcp"
+}

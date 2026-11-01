@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:59.034Z",
+  "server": {
+    "registryName": "me.bestbus/bestbus",
+    "title": "BestBus: Thailand bus times & tickets",
+    "description": "Live intercity bus departures in Thailand, timetables and destinations, with a booking link per bus.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bestbus.me/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bestbus",
+      "title": "BestBus: Thai bus tickets",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].passengers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bestbus.me/mcp"
+}

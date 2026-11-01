@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:03.001Z",
+  "server": {
+    "registryName": "io.founderventures/founder-ventures",
+    "title": "Founder Ventures",
+    "description": "Read-only search over the Founder Ventures library on bootstrapped SaaS, plus founder events.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://founderventures.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "founder-ventures",
+      "title": "Founder Ventures",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].when has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://founderventures.io/api/mcp"
+}

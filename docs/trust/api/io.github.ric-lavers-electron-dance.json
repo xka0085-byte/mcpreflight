@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:37.812Z",
+  "server": {
+    "registryName": "io.github.Ric-Lavers/electron-dance",
+    "title": "electron.dance",
+    "description": "electron.dance MCP server: upcoming gigs, community links, RSVP, and Spotify top tracks.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://electron.dance/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "electron-dance",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://electron.dance/api/mcp"
+}

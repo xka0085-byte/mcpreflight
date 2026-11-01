@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:23.771Z",
+  "server": {
+    "registryName": "com.ampworth/ampworth",
+    "title": "Ampworth",
+    "description": "UK solar PV and heat pump calculators, with guides, on one server. Follows the MCS methods. No key.",
+    "registryVersion": "1.0.20261017"
+  },
+  "endpoint": "https://ampworth.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ampworth",
+      "title": "UK home energy calculators and documents, following the MCS standards",
+      "description": "Every Ampworth tool on one server: the solar and heat pump sizing calculators, the nine single-method calculators, and search and reading of the guides, articles and questions. The same tools are also served separately at /mcp/calculators and /mcp/documents.",
+      "version": "1.0.0",
+      "websiteUrl": "https://ampworth.com"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "15 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ampworth.com/mcp"
+}

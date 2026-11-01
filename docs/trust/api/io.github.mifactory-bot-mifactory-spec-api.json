@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:22.093Z",
+  "server": {
+    "registryName": "io.github.mifactory-bot/mifactory-spec-api",
+    "title": "io.github.mifactory-bot/mifactory-spec-api",
+    "description": "Convert docs to agent-readable specs with criteria and constraints. $0.10/convert.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://spec-api-mcp.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "mifactory-spec-api",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].documentText has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].spec has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://spec-api-mcp.vercel.app/mcp"
+}

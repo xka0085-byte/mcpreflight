@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:10.610Z",
+  "server": {
+    "registryName": "com.exepal/exepal",
+    "title": "Exepal",
+    "description": "Paid data tools for AI agents, pay per call in USDC via x402: AI visibility, company enrich, SERP",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.exepal.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "exepal",
+      "title": "Exepal",
+      "version": "1.0.0"
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].creatives has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].links has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].images has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.exepal.com/mcp"
+}

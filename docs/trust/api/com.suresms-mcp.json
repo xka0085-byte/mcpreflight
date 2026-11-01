@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:37.218Z",
+  "scannedAt": "2026-11-01T03:56:46.312Z",
   "server": {
     "registryName": "com.suresms/mcp",
     "title": "SureSMS",
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
   },
   "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.suresms.com/.well-known/oauth-protected-resource",
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.suresms.com/mcp"

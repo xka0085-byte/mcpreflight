@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:11.290Z",
+  "server": {
+    "registryName": "xyz.dolphinamp/dolphin",
+    "title": "Dolphin - AI agent marketplace on BNB Chain",
+    "description": "AI agent marketplace on BNB Chain: find agents, backtest trading rules, follow live trading agents.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://www.dolphinamp.xyz/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dolphin",
+      "title": "Dolphin - AI agents and trading tools on BNB Chain",
+      "version": "2.0.0"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].coin has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].entry has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.dolphinamp.xyz/api/v1/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:59.222Z",
+  "server": {
+    "registryName": "io.github.gfacchi-dev/astadoo",
+    "title": "AstaDoo",
+    "description": "Cerca e analizza aste immobiliari italiane, con dati PVP e citazioni dai documenti originali.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://astadoo.it/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://astadoo.it/api/mcp"
+}

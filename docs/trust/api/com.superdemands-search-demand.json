@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:42.442Z",
+  "server": {
+    "registryName": "com.superdemands/search-demand",
+    "title": "Superdemands: Google Search Trends & Demand",
+    "description": "Google search trends and search demand: 5 years of interest, momentum and seasonality per topic",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://superdemands.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://superdemands.com/mcp"
+}

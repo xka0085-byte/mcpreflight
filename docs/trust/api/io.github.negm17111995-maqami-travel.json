@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:00.017Z",
+  "server": {
+    "registryName": "io.github.negm17111995/maqami-travel",
+    "title": "MAQAMI Travel",
+    "description": "Official MCP server for MAQAMI, a hotel and flight booking platform with 3M+ hotels.",
+    "registryVersion": "1.0.9"
+  },
+  "endpoint": "https://mcp.maqami.co/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "MAQAMI Travel MCP Server",
+      "version": "1.0.9",
+      "title": "MAQAMI Travel",
+      "websiteUrl": "https://maqami.co",
+      "icons": [
+        {
+          "src": "https://maqami.co/android-chrome-512x512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://maqami.co/android-chrome-192x192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 41,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].occupancies has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].timeout has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.maqami.co/"
+}

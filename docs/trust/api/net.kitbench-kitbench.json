@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:41.379Z",
+  "server": {
+    "registryName": "net.kitbench/kitbench",
+    "title": "Kitbench",
+    "description": "Exact Japanese text & date tools: char count, business days with JP holidays, era, tax, units.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://kitbench.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kitbench",
+      "title": "KitBench",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].month has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].day has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kitbench.net/mcp"
+}

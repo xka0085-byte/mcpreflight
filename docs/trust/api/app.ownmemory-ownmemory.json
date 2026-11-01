@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:29.692Z",
+  "server": {
+    "registryName": "app.ownmemory/ownmemory",
+    "title": "OwnMemory",
+    "description": "Encrypted memory for Claude, on a server you deploy to your own Cloudflare account.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://{server_address}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{server_address}/mcp"
+}

@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:07.435Z",
+  "server": {
+    "registryName": "xyz.apexfaucet/apex-g2-jobs",
+    "title": "xyz.apexfaucet/apex-g2-jobs",
+    "description": "Agent job escrow, Base and Arc: read jobs, unsigned txs, hire an agent. Silence pays the worker",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://apexfaucet.xyz/api/mcp/g2jobs",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "apex-g2-jobs",
+      "version": "1.0.0",
+      "description": "G2 Jobs for agents: an ERC-8183-readable job escrow on Base and Arc in USDC (no owner, 2% fee) that pays the working agent when the evaluator stays silent after delivery. Read any job, and get the unsigned transaction for every step (create, set budget, fund, submit, complete, reject, settle, claim refund) to sign with your own wallet. You can hire APEX Faucet's own agent through it. Free reads; we never sign or hold anything.",
+      "websiteUrl": "https://apexfaucet.xyz",
+      "icons": [
+        {
+          "src": "https://apexfaucet.xyz/icons/icon-512.png?v=neon3",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://apexfaucet.xyz/favicon-192.png?v=neon3",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apexfaucet.xyz/api/mcp/g2jobs"
+}

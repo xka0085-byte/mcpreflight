@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:06.732Z",
+  "server": {
+    "registryName": "io.theagentindex/agent-index",
+    "title": "Agent Index",
+    "description": "Free open dataset of compliance, security and risk AI agents and audit firms. Read-only search.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://theagentindex.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agent-index",
+      "title": "Agent Index",
+      "version": "1.0.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://theagentindex.io/api/mcp"
+}

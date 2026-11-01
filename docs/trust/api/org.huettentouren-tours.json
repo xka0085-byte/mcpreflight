@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:29.261Z",
+  "server": {
+    "registryName": "org.huettentouren/tours",
+    "title": "Hüttentouren",
+    "description": "Hut-to-hut hiking tours in the Alps with live availability from multiple booking systems.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.huettentouren.org/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "huettentouren",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].maxResults has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.huettentouren.org/api/mcp"
+}

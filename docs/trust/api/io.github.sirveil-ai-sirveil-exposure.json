@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:27.413Z",
+  "server": {
+    "registryName": "io.github.sirveil-ai/sirveil-exposure",
+    "title": "Sirveil Exposure",
+    "description": "Is this person indexed on that data-broker domain? A three-state verdict, with the evidence.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ai.sirveil.ai/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sirveil-exposure",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].middleName has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].street has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].phone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].email has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.sirveil.ai/api/v1/mcp"
+}

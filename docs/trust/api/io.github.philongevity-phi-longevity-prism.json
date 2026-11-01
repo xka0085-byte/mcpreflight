@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:22.894Z",
+  "server": {
+    "registryName": "io.github.Philongevity/phi-longevity-prism",
+    "title": "io.github.Philongevity/phi-longevity-prism",
+    "description": "Which tests may be due with diabetes, kidney disease, lupus or a cancer history. Guideline-cited.",
+    "registryVersion": "0.6.11"
+  },
+  "endpoint": "https://philongevity.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "phi-longevity",
+      "version": "0.14.2"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].age has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].biologicalSex has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://philongevity.com/mcp"
+}

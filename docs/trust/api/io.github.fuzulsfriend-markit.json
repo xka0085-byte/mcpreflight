@@ -1,0 +1,65 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:01.729Z",
+  "server": {
+    "registryName": "io.github.FuzulsFriend/markit",
+    "title": "MarkIt",
+    "description": "Search, save, and set reminders in your personal MarkIt library of links, posts, and notes.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mark-it.co/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "markit",
+      "version": "0.1.0",
+      "title": "MarkIt",
+      "websiteUrl": "https://mark-it.co",
+      "icons": [
+        {
+          "src": "https://mark-it.co/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pinnedOnly has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].likedOnly has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].deliveryMethod has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mark-it.co/api/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:44.071Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/uk-postcode-report-mcp",
+    "title": "UK Postcode Property Report MCP",
+    "description": "Full UK postcode property report: prices, flood, crime, EPC and more. Free postcode_summary.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://uk-postcode-report-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "uk-postcode-report-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].postcode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].postcode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uk-postcode-report-mcp.donniertf.workers.dev/mcp"
+}

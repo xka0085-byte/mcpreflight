@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:16.180Z",
+  "server": {
+    "registryName": "io.github.ParsingMAINFRAME/bankday",
+    "title": "Bankday",
+    "description": "Business days, holidays and settlement dates for ACH, TARGET2, Bacs, 28 exchanges and 247 countries",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://bankday.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bankday.dev/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:12.512Z",
+  "server": {
+    "registryName": "io.github.kevinbett/sampuli",
+    "title": "Sampuli",
+    "description": "Format-true synthetic test data for 90 countries — IBANs, SWIFT/BIC, IDs, cards, all certified.",
+    "registryVersion": "0.1.3"
+  },
+  "endpoint": "https://sampuli.site/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sampuli.site/api/mcp"
+}

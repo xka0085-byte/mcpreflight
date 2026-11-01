@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:46.896Z",
+  "server": {
+    "registryName": "io.usefulapi/jisr",
+    "title": "Jisr MCP by usefulapi",
+    "description": "Read employees, attendance, leave and payroll; create employee records and import device punches.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://jisr.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jisr-mcp",
+      "version": "1.5.0",
+      "title": "Jisr MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/jisr/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].gender has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].marital_status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].punches has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jisr.usefulapi.io/mcp"
+}

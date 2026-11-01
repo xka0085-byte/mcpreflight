@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:45.732Z",
+  "server": {
+    "registryName": "us.opcreative/fulfillment",
+    "title": "OpCreative",
+    "description": "Print-on-demand fulfillment: manage orders, catalog and account from AI clients. Writes ask first.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://opcreative.us/api/mcp/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://opcreative.us/api/mcp/mcp"
+}

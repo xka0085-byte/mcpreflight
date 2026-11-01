@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:58.981Z",
+  "server": {
+    "registryName": "ai.nobi/shop-nobi",
+    "title": "Shop Nobi",
+    "description": "Search products from independent stores. Read-only remote MCP; no sign-in. Buy on merchant sites.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.nobi.ai/v1/shop/mcp?source=mcp_registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shop-nobi",
+      "title": "Shop Nobi",
+      "version": "1.0.0",
+      "_meta": {
+        "ai.nobi/provider": "Nobi",
+        "ai.nobi/providerUrl": "https://nobi.ai"
+      }
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.nobi.ai/v1/shop/mcp?source=mcp_registry"
+}

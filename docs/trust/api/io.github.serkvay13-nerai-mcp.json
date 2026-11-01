@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:09.681Z",
+  "server": {
+    "registryName": "io.github.serkvay13/nerai-mcp",
+    "title": "io.github.serkvay13/nerai-mcp",
+    "description": "Geopolitical grounding for AI agents: country risk, forecasts, chokepoints, sanctions. Free tier.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://nerai-mcp.neraicorp.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nerai-risk-intelligence",
+      "title": "NERAI Risk Intelligence",
+      "version": "1.0.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].destination has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].transit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nerai-mcp.neraicorp.workers.dev/mcp"
+}

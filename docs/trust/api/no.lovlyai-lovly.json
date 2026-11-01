@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:57.904Z",
+  "server": {
+    "registryName": "no.lovlyai/lovly",
+    "title": "Lovly",
+    "description": "Answers about Norwegian law with citations to current laws and regulations on Lovdata.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.lovlyai.no/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.lovlyai.no/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.lovlyai.no/mcp"
+}

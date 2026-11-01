@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:23.227Z",
+  "server": {
+    "registryName": "rentals.threshold/stays",
+    "title": "Threshold",
+    "description": "Search and book verified independent vacation rentals directly from hosts, with no guest fees.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://threshold.rentals/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "threshold-stays",
+      "title": "Threshold",
+      "version": "0.1.0",
+      "websiteUrl": "https://threshold.rentals/for-agents",
+      "description": "Search and book verified independent vacation rentals directly from hosts, with no guest fees.",
+      "icons": [
+        {
+          "src": "https://threshold.rentals/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://threshold.rentals/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:54.203Z",
+  "server": {
+    "registryName": "app.eggtimer/server-timers",
+    "title": "Eggtimer.app Server Timers",
+    "description": "Schedule, check and cancel server-side countdowns and step routines, with optional Zapier hooks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://eggtimer.app/api/mcp/server",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://eggtimer.app/api/mcp/server"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:55.841Z",
+  "server": {
+    "registryName": "dev.pages.tenderfix-api/tenderfix",
+    "title": "Tenderfix",
+    "description": "Open UK and EU public tenders (Find a Tender, TED) with go/no-go screening. Paid tier via L402.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://tenderfix-api.pages.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tenderfix",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].cpv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].min_value has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].q has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tenderfix-api.pages.dev/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:31.400Z",
+  "server": {
+    "registryName": "com.kushalsm.nexus/nexus",
+    "title": "Nexus",
+    "description": "Calorie, workout and body-weight log inside ChatGPT and Claude. Log meals by text, photo or voice.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.nexus.kushalsm.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.nexus.kushalsm.com/mcp"
+}

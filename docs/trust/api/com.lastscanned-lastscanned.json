@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:34.688Z",
+  "server": {
+    "registryName": "com.lastscanned/lastscanned",
+    "title": "lastscanned — 542-Carrier Package Tracking, Webhooks & Watches",
+    "description": "Track 542 carriers (USPS, UPS, FedEx, UniUni, LTL) via MCP, API, Webhooks & Watches.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://mcp.lastscanned.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lastscanned",
+      "title": "lastscanned package tracking",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tracking_numbers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.lastscanned.com/mcp"
+}

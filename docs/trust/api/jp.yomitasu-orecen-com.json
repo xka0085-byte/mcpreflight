@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:47.002Z",
+  "server": {
+    "registryName": "jp.yomitasu/orecen-com",
+    "title": "XRメモランダム",
+    "description": "XR（AR/VR/MR）に関する情報をメインに扱うサイトです。（orecen.com の内容を検索して答える。ヨミタス経由）",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.yomitasu.jp/s/orecen-com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "yomitasu-orecen-com",
+      "title": "XRメモランダム",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.yomitasu.jp/s/orecen-com/mcp"
+}

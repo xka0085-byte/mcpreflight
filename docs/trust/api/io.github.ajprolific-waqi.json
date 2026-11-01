@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:22.799Z",
+  "server": {
+    "registryName": "io.github.ajprolific/waqi",
+    "title": "Waqi — AI Privacy Layer",
+    "description": "Redacts PII from your business tools before the AI sees them — with a provable audit log.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://waqi.bilazann.com/api/mcp/{token}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://waqi.bilazann.com/api/mcp/{token}"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:53.377Z",
+  "server": {
+    "registryName": "page.afterimage/afterimage",
+    "title": "AfterImage",
+    "description": "Shared copies of public web pages for AI agents. Search stored pages or fetch a URL.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://afterimage.page/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "afterimage",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://afterimage.page/mcp"
+}

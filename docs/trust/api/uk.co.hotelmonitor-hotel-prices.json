@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:59.370Z",
+  "server": {
+    "registryName": "uk.co.hotelmonitor/hotel-prices",
+    "title": "HotelMonitor hotel prices",
+    "description": "Hotel price history in GBP: is a quoted price good, cheapest months to visit, and current deals.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://hotelmonitor.co.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "hotelmonitor",
+      "title": "HotelMonitor hotel prices",
+      "version": "1.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].hotel has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].adults has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].destination has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hotelmonitor.co.uk/mcp"
+}

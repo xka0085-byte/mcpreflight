@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:22.598Z",
+  "server": {
+    "registryName": "io.github.Plainfold/sec-company-financials",
+    "title": "SEC Company Financials",
+    "description": "Clean annual and quarterly company financials from official SEC EDGAR XBRL data.",
+    "registryVersion": "0.1.3"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=plainfold/sec-company-financials",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=plainfold/sec-company-financials"
+}

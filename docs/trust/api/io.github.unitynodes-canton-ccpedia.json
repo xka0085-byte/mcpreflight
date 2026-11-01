@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:42.113Z",
+  "server": {
+    "registryName": "io.github.UnityNodes/canton-ccpedia",
+    "title": "io.github.UnityNodes/canton-ccpedia",
+    "description": "Canton Network: CIPs and their on-chain vote outcomes, docs, forum, validator upgrade deadlines.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://ccpedia.xyz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ccpedia",
+      "version": "1.0.0",
+      "description": "Canton Network knowledge base: CIPs, docs, forum, whitepapers, proposals and more."
+    },
+    "toolCount": 104,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ccpedia.xyz/mcp"
+}

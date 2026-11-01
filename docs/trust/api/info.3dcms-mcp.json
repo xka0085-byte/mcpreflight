@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:02.534Z",
+  "server": {
+    "registryName": "info.3dcms/mcp",
+    "title": "3dCMS",
+    "description": "Build a real 3D website by chatting: pages, models and text in space, published to a live URL.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://3dcms.info/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "3dcms",
+      "version": "1.3.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].output has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].label has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].keywords has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://3dcms.info/mcp"
+}

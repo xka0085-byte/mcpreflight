@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:32.927Z",
+  "server": {
+    "registryName": "io.github.RaYYeR220/regimen",
+    "title": "io.github.RaYYeR220/regimen",
+    "description": "Tells you whether a trading strategy's edge is distinguishable from luck.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://regimen-nu.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "regimen",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].confidence has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].simulations has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://regimen-nu.vercel.app/mcp"
+}

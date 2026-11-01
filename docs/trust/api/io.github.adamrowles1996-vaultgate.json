@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:04.242Z",
+  "server": {
+    "registryName": "io.github.adamrowles1996/vaultgate",
+    "title": "vaultgate",
+    "description": "Self-hosted remote MCP server for Bitwarden and Vaultwarden with OAuth 2.1; agents hold tokens only",
+    "registryVersion": "0.1.0-rc.10"
+  },
+  "endpoint": "https://{vaultgate_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{vaultgate_host}/mcp"
+}

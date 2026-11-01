@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:49.618Z",
+  "server": {
+    "registryName": "io.github.srotzin/hive-mcp-attest",
+    "title": "HiveAttest",
+    "description": "Pre-action attestation perimeter for AI agents — 8 primitives, signed C18 receipt per call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hive-mcp-attest.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "hive-mcp-attest",
+      "version": "1.0.0",
+      "description": "HiveAttest umbrella MCP shim: perimeter for autonomous agents. Covers USPTO 64/055,601 claims C8/C12/C13/C15-C20."
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].sensitivity has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hive-mcp-attest.onrender.com/mcp"
+}

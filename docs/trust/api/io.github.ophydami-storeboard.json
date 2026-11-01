@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:32.729Z",
+  "server": {
+    "registryName": "io.github.ophydami/storeboard",
+    "title": "Storeboard",
+    "description": "Generate exact-size App Store and Google Play screenshots, feature graphics, and listing copy.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://storeboard.dev/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://storeboard.dev/api/mcp"
+}

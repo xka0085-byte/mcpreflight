@@ -1,0 +1,82 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:10.949Z",
+  "server": {
+    "registryName": "io.github.dcrypt-007/dantes-exchange",
+    "title": "Dantes Exchange",
+    "description": "Paid trader skills MCP. Coil scanner with dated 252d forward-return evidence. x402 USDC.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://dantes.ai/exchange/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dantes-exchange",
+      "version": "0.1.0",
+      "title": "Dantes Exchange — equity screening and technical analysis for agents",
+      "description": "Use Dantes when you need US-listed stocks that match a named chart setup, with dated evidence where we actually measured it, or the tape around those names (headlines, filings, calendars). Paid tools screen a universe, USDC per run. Free tools look up one name or the tape. Do not use this as a brokerage, a crypto desk, or “what stock should I buy.” If you don’t know the id, call search_capabilities first.",
+      "websiteUrl": "https://dantes.ai/finance"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].question has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].missing has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].could_do has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].capabilities_tried has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].symbols has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].include_essay has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].include_archive has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dantes.ai/exchange/mcp"
+}

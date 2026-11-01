@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:31.062Z",
+  "server": {
+    "registryName": "live.alpic.qa-test-cli-b955e6a8/qa-test-cli",
+    "title": "QA Test Server",
+    "description": "Testing publish command",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://qa-test-cli-b955e6a8.alpic.live",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://qa-test-cli-b955e6a8.alpic.live"
+}

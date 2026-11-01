@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:15.703Z",
+  "server": {
+    "registryName": "fr.vtc-aeroport/reservation",
+    "title": "VTC AEROPORT PARIS",
+    "description": "Chauffeur privé et transferts aéroport à Paris (CDG, Orly, Beauvais) : prix fixes et réservation.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vtc-aeroport.fr/wp-json/sivtc/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vtc-aeroport-paris",
+      "title": "VTC AEROPORT PARIS",
+      "version": "1.52.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].passagers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].bagages has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].passagers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].bagages has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].client has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].numero has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].email has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vtc-aeroport.fr/wp-json/sivtc/v1/mcp"
+}

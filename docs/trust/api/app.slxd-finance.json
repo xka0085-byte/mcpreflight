@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:45.208Z",
+  "server": {
+    "registryName": "app.slxd/finance",
+    "title": "SLXD Finance",
+    "description": "Query invoices, purchases, budgets and project financials from an AI assistant.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://{tenant}.slxd.app/mcp/finance",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{tenant}.slxd.app/mcp/finance"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:17.396Z",
+  "server": {
+    "registryName": "io.github.mandalacomputer/mcp",
+    "title": "Mandala Computer",
+    "description": "Cloud desktops for AI agents: create a Linux computer, see its screen, click, type and run tasks.",
+    "registryVersion": "0.21.0"
+  },
+  "endpoint": "https://app.mandala.computer/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.mandala.computer/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:47.260Z",
+  "server": {
+    "registryName": "io.github.futurebets/placement-api",
+    "title": "Placement API",
+    "description": "Buy SEO link placements across every marketplace: verified domains, held prices, one invoice.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.placementapi.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "placement-api",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.placementapi.com/mcp"
+}

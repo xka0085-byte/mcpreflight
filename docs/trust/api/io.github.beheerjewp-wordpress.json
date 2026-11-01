@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:20.867Z",
+  "server": {
+    "registryName": "io.github.beheerjewp/wordpress",
+    "title": "Beheer je WP",
+    "description": "Manage a WordPress site from your AI assistant: read, search, propose edits, Search Console data.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://beheerjewp.nl/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://beheerjewp.nl/mcp"
+}

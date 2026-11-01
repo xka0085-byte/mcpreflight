@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:50.521Z",
+  "server": {
+    "registryName": "io.github.gaurav-kumar-sinha-060705/singularity",
+    "title": "Singularity - MCP Discovery & Security Gateway",
+    "description": "Find, vet, and run MCP tools through a secure audited gateway with prompt-injection risk scoring",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://singularity-osd2.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://singularity-osd2.onrender.com/mcp"
+}

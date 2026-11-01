@@ -1,0 +1,72 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:49.303Z",
+  "server": {
+    "registryName": "io.usefulapi/lexware-office",
+    "title": "Lexware Office MCP by usefulapi",
+    "description": "Read Lexware Office contacts, articles, invoices and vouchers; create contacts and draft invoices.",
+    "registryVersion": "1.21.0"
+  },
+  "endpoint": "https://lexware-office.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lexware-office-mcp",
+      "version": "1.24.0",
+      "title": "Lexware Office MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/lexware-office/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].contact_person_first_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].contact_person_salutation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].contact_person_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].contact_person_phone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].billing_address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].shipping_address has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lexware-office.usefulapi.io/mcp"
+}

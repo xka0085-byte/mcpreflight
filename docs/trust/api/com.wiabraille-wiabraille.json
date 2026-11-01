@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:43.995Z",
+  "server": {
+    "registryName": "com.wiabraille/wiabraille",
+    "title": "WIA Braille + WIA Talk",
+    "description": "Text to WIA Braille (pronunciation-based, not a national code), BRF output and checks, Nemeth math.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.wiabraille.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wiabraille",
+      "title": "WIA Braille + WIA Talk",
+      "version": "1.0.0",
+      "websiteUrl": "https://wiabraille.com"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].text has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.wiabraille.com/mcp"
+}

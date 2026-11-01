@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:28.082Z",
+  "server": {
+    "registryName": "io.github.conversiondigital-cmyk/research-sprint",
+    "title": "ResearchSprint",
+    "description": "AI research reports: market analysis, competitor intel, blog posts. USDC payment.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://research-sprint.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "research-sprint",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://research-sprint.vercel.app/api/mcp"
+}

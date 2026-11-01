@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:40.751Z",
+  "server": {
+    "registryName": "ru.vedarai/mcp",
+    "title": "Vedar — Kamchatka travel",
+    "description": "Kamchatka, Russia travel: tours, hotels, transfers, volcano status, safety, booking requests",
+    "registryVersion": "2.10.1"
+  },
+  "endpoint": "https://vedarai.ru/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vedar-mcp",
+      "title": "Ведар — Камчатка",
+      "version": "2.10.1",
+      "description": "Ведар — данные Камчатки: обстановка в крае и безопасность мест, туры и их реальная занятость, жильё, снаряжение, трансферы, прокат машин без водителя, погода, план поездки. Записей пять: заявка на подбор (create_lead), заявка оператору на тур и дату (create_booking_request), заявка на машину целиком (request_charter), заявка владельцу жилья на даты (create_stay_request) и заявка прокатчику на машину без водителя (create_car_rental_request) — все подтверждает человек.",
+      "websiteUrl": "https://vedarai.ru/mcp",
+      "icons": [
+        {
+          "src": "https://vedarai.ru/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        }
+      ]
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "23 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vedarai.ru/api/mcp"
+}

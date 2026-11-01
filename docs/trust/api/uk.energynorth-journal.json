@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:33.947Z",
+  "server": {
+    "registryName": "uk.energynorth/journal",
+    "title": "Energy North Journal",
+    "description": "Search and read plain-English guides on electrical safety, EICRs and EV chargers in London.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://energynorth.uk/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "energy-north-journal",
+      "title": "Energy North Journal",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].journal has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://energynorth.uk/api/mcp"
+}

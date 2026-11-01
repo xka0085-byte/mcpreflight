@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:33.250Z",
+  "server": {
+    "registryName": "io.github.doc2video/d2v",
+    "title": "doc2video",
+    "description": "Turn documents and photos into narrated AI videos from Claude, ChatGPT, Codex or any MCP client.",
+    "registryVersion": "0.2.3"
+  },
+  "endpoint": "https://doc2video.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://doc2video.io/mcp"
+}

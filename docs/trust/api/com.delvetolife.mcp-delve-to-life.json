@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:25.360Z",
+  "server": {
+    "registryName": "com.delvetolife.mcp/delve-to-life",
+    "title": "Delve to Life",
+    "description": "Dress codes explained, outfit formulas by occasion and weather, and clothing colour combinations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.delvetolife.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "delve-to-life",
+      "title": "Delve to Life",
+      "version": "1.0.0",
+      "websiteUrl": "https://delvetolife.com/ai/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.delvetolife.com/mcp"
+}

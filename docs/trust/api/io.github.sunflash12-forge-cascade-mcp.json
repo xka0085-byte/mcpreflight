@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:06.477Z",
+  "server": {
+    "registryName": "io.github.SunFlash12/forge-cascade-mcp",
+    "title": "Forge Cascade MCP Memory Server",
+    "description": "AI memory buyer routing with Forge docs, pricing, paid recommendations, and MCP discovery.",
+    "registryVersion": "0.1.7"
+  },
+  "endpoint": "https://forgecascade.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://forgecascade.org/mcp"
+}

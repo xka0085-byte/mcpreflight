@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:55.838Z",
+  "server": {
+    "registryName": "io.github.YS-projectcalc/agent-cold-email",
+    "title": "io.github.YS-projectcalc/agent-cold-email",
+    "description": "Coldrig — cold-email infra run by your agent: 28 MCP tools, live sending, free sandbox, from $99/mo.",
+    "registryVersion": "0.2.5"
+  },
+  "endpoint": "https://api.coldrig.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.coldrig.dev/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:53.315Z",
+  "server": {
+    "registryName": "kr.vlsi/vlsi-korea",
+    "title": "VLSI Korea Semiconductor Data",
+    "description": "Semiconductor data for AI agents: 2,600+ articles in 9 languages, daily briefing, 113 tickers.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://mcp.vlsi.kr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vlsi-data",
+      "version": "2.0.1",
+      "title": "VLSI Korea Semiconductor Data"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.vlsi.kr/mcp"
+}

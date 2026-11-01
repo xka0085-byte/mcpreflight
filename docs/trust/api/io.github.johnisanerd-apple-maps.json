@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:40.483Z",
+  "server": {
+    "registryName": "io.github.johnisanerd/apple-maps",
+    "title": "Apple Maps",
+    "description": "Search Apple Maps businesses with Apple ratings and aggregated Yelp + TripAdvisor reviews.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=johnvc/apple-maps-api",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=johnvc/apple-maps-api"
+}

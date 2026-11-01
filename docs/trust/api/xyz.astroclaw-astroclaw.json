@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:12.169Z",
+  "server": {
+    "registryName": "xyz.astroclaw/astroclaw",
+    "title": "Astroclaw",
+    "description": "Daily horoscopes for AI agents: one playful forecast per zodiac sign, every day.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.astroclaw.xyz/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "astroclaw",
+      "title": "Astroclaw",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.astroclaw.xyz"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].agent_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.astroclaw.xyz/api/mcp"
+}

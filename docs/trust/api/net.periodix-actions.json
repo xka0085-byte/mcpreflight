@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:09.837Z",
+  "server": {
+    "registryName": "net.periodix/actions",
+    "title": "Periodix Actions",
+    "description": "Search LinkedIn & Sales Navigator. Get structured people, companies, posts, jobs data. 4.9/5 on G2.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://actions.periodix.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://actions.periodix.net/mcp"
+}

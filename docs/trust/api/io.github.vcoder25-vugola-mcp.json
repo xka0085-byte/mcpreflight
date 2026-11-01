@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:39.819Z",
+  "server": {
+    "registryName": "io.github.VCoder25/vugola-mcp",
+    "title": "Vugola",
+    "description": "Clip videos into captioned shorts, add captions, and schedule posts from AI agents.",
+    "registryVersion": "1.4.1"
+  },
+  "endpoint": "https://www.vugolaai.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.vugolaai.com/api/mcp"
+}

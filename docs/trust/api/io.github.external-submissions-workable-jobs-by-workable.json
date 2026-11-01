@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:20.408Z",
+  "server": {
+    "registryName": "io.github.external-submissions-workable/jobs-by-workable",
+    "title": "Jobs by Workable",
+    "description": "Jobs by Workable MCP server. Access over 150K jobs & thousands of companies listed on the job board.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jobs.workable.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "workable-jobs",
+      "version": "1.727.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jobs.workable.com/mcp"
+}

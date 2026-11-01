@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:03.891Z",
+  "server": {
+    "registryName": "io.magellandata/spotlight",
+    "title": "Magellan Data Spotlight",
+    "description": "Find parent companies, PE backers, corporate families, and portfolio siblings for any company.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://spotlight-mcp.magellandata.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://spotlight-mcp.magellandata.io/mcp"
+}

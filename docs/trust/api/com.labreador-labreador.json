@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:34.035Z",
+  "server": {
+    "registryName": "com.labreador/labreador",
+    "title": "Labreador",
+    "description": "Bioassay & ecotoxicology calculators: ELISA 4PL/5PL curves, dietary risk, pollution indices.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://labreador.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "labreador",
+      "version": "1.0.0",
+      "title": "Labreador"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].elements has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].elements has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://labreador.com/mcp"
+}

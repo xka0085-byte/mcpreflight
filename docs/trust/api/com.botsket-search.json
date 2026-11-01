@@ -1,0 +1,42 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:11.109Z",
+  "server": {
+    "registryName": "com.botsket/search",
+    "title": "Botsket",
+    "description": "Product search over independent US stores, with whether an AI agent can check out at each",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://botsket.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Product search over independent US stores, with an agent-checkout verdict.",
+      "name": "botsket",
+      "title": "Botsket",
+      "version": "0.1.0",
+      "websiteUrl": "https://botsket.com/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].in_stock_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://botsket.com/mcp"
+}

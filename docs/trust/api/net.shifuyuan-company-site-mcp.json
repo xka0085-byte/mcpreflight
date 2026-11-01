@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:10.713Z",
+  "server": {
+    "registryName": "net.shifuyuan/company-site-mcp",
+    "title": "世福源供应链 · 企业官网开放数据 MCP",
+    "description": "海南世福源冻品火锅食材供应链官网开放数据：全站检索、企业概况、产品矩阵、成功案例、FAQ、招聘 6 个只读工具，API Key 官网自助申请。",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gys.shifuyuan.net/api/mcp/v1/rpc",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gys.shifuyuan.net/api/mcp/v1/rpc"
+}

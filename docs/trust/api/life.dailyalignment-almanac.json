@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:59.327Z",
+  "server": {
+    "registryName": "life.dailyalignment/almanac",
+    "title": "Daily Alignment",
+    "description": "The Chinese almanac, lunar dates, Four Pillars, solar terms and the sky, calculated from astronomy.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.dailyalignment.life/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "daily-alignment",
+      "title": "Daily Alignment",
+      "version": "1.2.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.dailyalignment.life/api/mcp"
+}

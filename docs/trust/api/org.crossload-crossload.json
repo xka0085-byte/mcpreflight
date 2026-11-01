@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:19.952Z",
+  "server": {
+    "registryName": "org.crossload/crossload",
+    "title": "Crossload",
+    "description": "Christliche Predigten und Bücher auf Deutsch: Volltextsuche, Transkripte, Bibellexikon",
+    "registryVersion": "0.12.0"
+  },
+  "endpoint": "https://mcp.crossload.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "crossload-mcp",
+      "version": "0.12.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].yearFrom has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].yearTo has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.crossload.org/mcp"
+}

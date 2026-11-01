@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:11.856Z",
+  "server": {
+    "registryName": "com.zsetup/ai-assistant",
+    "title": "Zoho CRM AI Assistant",
+    "description": "Zoho CRM tools. Independent product by zsetup; not affiliated with or endorsed by Zoho Corporation.",
+    "registryVersion": "0.1.9"
+  },
+  "endpoint": "https://mcp.askincrm.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.askincrm.com/mcp"
+}

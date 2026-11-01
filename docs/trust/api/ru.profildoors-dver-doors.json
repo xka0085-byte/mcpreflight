@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:36.516Z",
+  "server": {
+    "registryName": "ru.profildoors-dver/doors",
+    "title": "ProfilDoors: межкомнатные двери в Москве",
+    "description": "ProfilDoors doors dealer in Moscow: catalog search, exact cart price, stock. Read-only.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://profildoors-dver.ru/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "profildoors",
+      "title": "ProfilDoors: межкомнатные двери в Москве",
+      "version": "1.2.0",
+      "websiteUrl": "https://profildoors-dver.ru/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kolichestvo has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://profildoors-dver.ru/mcp"
+}

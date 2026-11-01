@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:36.454Z",
+  "server": {
+    "registryName": "com.proxyjam/mcp",
+    "title": "ProxyJam",
+    "description": "Buy and manage ISP proxies: offers, orders, renewals, traffic, whitelists and wallet.",
+    "registryVersion": "3.3.1"
+  },
+  "endpoint": "https://proxyjam.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://proxyjam.com/mcp"
+}

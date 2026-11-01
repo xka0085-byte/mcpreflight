@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:57.873Z",
+  "server": {
+    "registryName": "io.github.ashevilleislove/ardaro-agent-utilities",
+    "title": "Ardaro Agent Runtime Utilities",
+    "description": "Advisory context, intent, budget and API-ledger checks with free examples and x402 payments.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://agents.getardaro.com/mcp/utilities",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ardaro-agent-utilities",
+      "version": "1.4.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].proposed_cost has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].policy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].history has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].billing_records has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].usage_records has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agents.getardaro.com/mcp/utilities"
+}

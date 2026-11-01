@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:49.742Z",
+  "server": {
+    "registryName": "io.github.D4umak/heylead",
+    "title": "HeyLead — AI agent for LinkedIn outreach",
+    "description": "AI agent for LinkedIn outreach: finds the right people, writes in your voice, follows up, replies.",
+    "registryVersion": "0.10.485"
+  },
+  "endpoint": "https://heylead.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://heylead.dev/mcp"
+}

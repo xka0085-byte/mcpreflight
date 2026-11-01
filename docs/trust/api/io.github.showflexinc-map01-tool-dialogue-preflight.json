@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:20.002Z",
+  "server": {
+    "registryName": "io.github.showflexinc/map01-tool-dialogue-preflight",
+    "title": "Tool-dialogue preflight",
+    "description": "Structural preflight for JSONL tool-dialogue training data.",
+    "registryVersion": "0.1.0-probe.20261030221223.h87e4c4d63721"
+  },
+  "endpoint": "https://foundry-map01.showflex.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foundry-map01.showflex.workers.dev/mcp"
+}

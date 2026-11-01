@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:27.280Z",
+  "server": {
+    "registryName": "io.github.yayabough/tolca",
+    "title": "Tolca",
+    "description": "Know who you are paying before you pay: Québec contractor and company checks, plus web search. x402.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://tolca.tonbot.ca/mcp/public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tolca",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tolca.tonbot.ca/mcp/public"
+}

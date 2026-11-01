@@ -1,0 +1,42 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:45.132Z",
+  "server": {
+    "registryName": "io.github.vbhjckfd/timetable-api-node",
+    "title": "Lviv Public Transport",
+    "description": "Lviv public transport MCP: stops, timetables, routes, and live vehicle positions. No API key.",
+    "registryVersion": "1.8.6"
+  },
+  "endpoint": "https://api.lad.lviv.ua/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.lad.lviv/timetable-api",
+      "title": "Lviv Timetable MCP",
+      "version": "1.8.6",
+      "description": "Read-only access to Lviv, Ukraine public transport: stops, routes, static shapes, live vehicle positions, and terminus timetables. Sourced from municipal GTFS and GTFS-RT. No API key, OAuth, or user configuration is required.",
+      "websiteUrl": "https://lad.lviv.ua",
+      "icons": [
+        {
+          "src": "https://api.lad.lviv.ua/mcp-icon.svg",
+          "mimeType": "image/svg+xml"
+        },
+        {
+          "src": "https://lad.lviv.ua/favicon.ico",
+          "mimeType": "image/x-icon"
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lad.lviv.ua/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:01.356Z",
+  "server": {
+    "registryName": "io.github.peteabu/jules",
+    "title": "Jules",
+    "description": "Create, list, update and cancel phone call reminders that ring your phone, via your Jules account.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://mcp.heyjules.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Jules",
+      "version": "0.2.5",
+      "instructions": "Free and Routine both include plugin access. Check account status and subscription.features before managing reminders; keep the user's existing plan limits. Free includes one-off and weekly/biweekly/monthly reminders, a 20-minute call window and zero retries. Routine adds daily/weekday/custom recurrence, flexible windows and retries. Do not silently change a requested paid feature to a Free alternative; explain the feature requirement. Before creating or moving a reminder, only call Jules write tools after the user has given or confirmed an exact reminder time. Do not guess from fuzzy phrases like 'later', 'this afternoon', 'this evening', 'tonight', or 'after work'; ask one follow-up question first. When deleting a reminder, use the human-readable reminder label in addition to the internal reminder ID so the confirmation step is clear."
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.heyjules.app/mcp"
+}

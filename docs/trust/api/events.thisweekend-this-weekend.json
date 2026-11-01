@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:43.506Z",
+  "server": {
+    "registryName": "events.thisweekend/this-weekend",
+    "title": "This Weekend (이번 주말)",
+    "description": "Festivals, shows and exhibitions across South Korea, searchable by date and area. No auth.",
+    "registryVersion": "1.8.0"
+  },
+  "endpoint": "https://thisweekend.events/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "this-weekend",
+      "version": "1.9.0",
+      "title": "이번 주말 행사 MCP",
+      "description": "공공 행사 자료에서 날짜와 지역으로 행사를 찾고, 빠진 행사나 바뀐 점을 제보받는 MCP 서버입니다. 제보는 운영자가 확인한 뒤에만 공개합니다.",
+      "websiteUrl": "https://thisweekend.events"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://thisweekend.events/mcp"
+}

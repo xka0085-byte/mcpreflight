@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:56.779Z",
+  "server": {
+    "registryName": "com.getdeeprecall/memory",
+    "title": "Deep Recall (getdeeprecall.com)",
+    "description": "One memory you own, shared by Claude, ChatGPT, Gemini, Muse and any remote MCP client.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.getdeeprecall.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.getdeeprecall.com/mcp"
+}

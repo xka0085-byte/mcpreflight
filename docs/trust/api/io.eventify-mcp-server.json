@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:58.501Z",
+  "server": {
+    "registryName": "io.eventify/mcp-server",
+    "title": "io.eventify/mcp-server",
+    "description": "Eventify MCP server — manage events, attendees, sessions, speakers, sponsors, and analytics.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://amcp.eventify.io/api/v2/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://amcp.eventify.io/api/v2/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:38.305Z",
+  "server": {
+    "registryName": "com.3dsellers/mcp",
+    "title": "3Dsellers",
+    "description": "Run eBay, Amazon, Walmart, Etsy and Shopify stores from your AI assistant. 120+ tools, no code.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://api.3dsellers.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.3dsellers.com/mcp"
+}

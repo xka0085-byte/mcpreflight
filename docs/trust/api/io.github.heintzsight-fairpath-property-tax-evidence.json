@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:26.923Z",
+  "server": {
+    "registryName": "io.github.Heintzsight/fairpath-property-tax-evidence",
+    "title": "FairPath Property-Tax Evidence",
+    "description": "Sourced property-tax protest facts; homeowner reviews and files. Not a law firm; no outcome claims.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.fairpath.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fairpath-public-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].context has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.fairpath.app/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:05.340Z",
+  "server": {
+    "registryName": "com.plumbregistry/directory",
+    "title": "Plumb Registry",
+    "description": "Search and verify fire protection contractor licenses (TX SFMO, CA CSLB C-16) from state records.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://plumbregistry.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "plumb-registry",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].service has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://plumbregistry.com/mcp"
+}

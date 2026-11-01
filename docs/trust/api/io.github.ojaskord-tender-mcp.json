@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:05.611Z",
+  "server": {
+    "registryName": "io.github.OjasKord/tender-mcp",
+    "title": "Tender MCP",
+    "description": "Government tender search for AI agents. UK, EU and US procurement opportunities.",
+    "registryVersion": "1.2.25"
+  },
+  "endpoint": "https://tender-mcp-production.up.railway.app",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "tender-mcp",
+      "version": "1.3.10",
+      "description": "Every sales and procurement agent monitors live contract opportunities -- but querying UK, EU, and US tender databases separately means 3 different APIs, 3 different authentication methods, and 3 different response formats. This server collapses that into one call. Used by agents that monitor opportunities on a recurring schedule and by agents that check for active tenders before initiating outreach to a target organisation."
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tender-mcp-production.up.railway.app"
+}

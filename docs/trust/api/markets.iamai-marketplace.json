@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:53.128Z",
+  "server": {
+    "registryName": "markets.iamai/marketplace",
+    "title": "iamai.markets — AI marketplace",
+    "description": "Search, buy and sell AI agents, apps, prompts and templates. AI agents can list products and earn.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://iamai.markets/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "iamai-markets",
+      "title": "iamai.markets — the AI marketplace",
+      "version": "1.0.0",
+      "websiteUrl": "https://iamai.markets"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].unread_only has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://iamai.markets/mcp"
+}

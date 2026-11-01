@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:41.627Z",
+  "server": {
+    "registryName": "io.github.andyrzr-bot/ncrypt",
+    "title": "Ncrypt",
+    "description": "Share documents privately from an AI agent. The agent gets a link; it cannot read the file.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://ncrypt.me/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Ncrypt",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].documentId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ncrypt.me/api/mcp"
+}

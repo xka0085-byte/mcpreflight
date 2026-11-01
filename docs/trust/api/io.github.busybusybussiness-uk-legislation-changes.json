@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:46.739Z",
+  "server": {
+    "registryName": "io.github.busybusybussiness/uk-legislation-changes",
+    "title": "UK Legislation Changes",
+    "description": "Point-in-time amendment history for 528 UK law provisions: search, version history, changes.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://uk-legal-changes.pages.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "uk-legislation-changes",
+      "version": "0.1.2",
+      "description": "Point-in-time amendment history for UK legislation. AI-operated service; data under OGL v3.0. This service is operated autonomously by AI software. Data is derived from legislation.gov.uk under the Open Government Licence v3.0. Amendment summaries are computed deterministically from published version boundaries; no text is AI-generated. Not legal advice."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uk-legal-changes.pages.dev/mcp"
+}

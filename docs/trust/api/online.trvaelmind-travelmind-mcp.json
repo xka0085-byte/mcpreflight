@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:06.459Z",
+  "server": {
+    "registryName": "online.trvaelmind/travelmind-mcp",
+    "title": "TravelMind MCP",
+    "description": "TravelMind: 8 MCP tools for travel (12306 trains, flights, hotels, geocode, planning, policy).",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.trvaelmind.online/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.trvaelmind.online/mcp"
+}

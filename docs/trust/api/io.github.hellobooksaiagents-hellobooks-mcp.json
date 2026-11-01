@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:26.076Z",
+  "server": {
+    "registryName": "io.github.HelloBooksAIAgents/hellobooks-mcp",
+    "title": "HelloBooks AI Agents MCP Server",
+    "description": "AI agents for bookkeeping, reconciliation, and financial close for SMBs.",
+    "registryVersion": "0.7.0"
+  },
+  "endpoint": "https://agents.hellobooks.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "hellobooks-public",
+      "version": "1.5.0"
+    },
+    "toolCount": 29,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].fileName has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agents.hellobooks.ai/mcp"
+}

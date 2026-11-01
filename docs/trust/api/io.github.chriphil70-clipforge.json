@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:03.106Z",
+  "server": {
+    "registryName": "io.github.chriphil70/clipforge",
+    "title": "ClipForge",
+    "description": "Trim, watermark, extract audio, and convert video to 9:16 vertical via API or MCP server.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://budding-retrograde--clipforge.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://budding-retrograde--clipforge.apify.actor/mcp"
+}

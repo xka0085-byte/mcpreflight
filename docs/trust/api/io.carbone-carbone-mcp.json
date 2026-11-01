@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:37.841Z",
+  "server": {
+    "registryName": "io.carbone/carbone-mcp",
+    "title": "Carbone MCP",
+    "description": "Automate production-ready PDF, Word, Excel and PowerPoint documents from templates and JSON data",
+    "registryVersion": "2.1.4"
+  },
+  "endpoint": "https://mcp.carbone.io",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.carbone.io"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:06.578Z",
+  "server": {
+    "registryName": "io.github.enigm-io-sys/enigmata-mcp",
+    "title": "Enigmata Flow MCP",
+    "description": "Аccess to personalized Enigmata astrological forecasts (day/week/month/thematic) for AI assistants",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://enigmata.ru/flow/api/v1/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://enigmata.ru/flow/api/v1/mcp/"
+}

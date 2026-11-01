@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:11.350Z",
+  "server": {
+    "registryName": "io.github.rezearcher/tech-risk",
+    "title": "io.github.rezearcher/tech-risk",
+    "description": "Scan any MCP server for tool-poisoning/prompt-injection/exfiltration (OWASP LLM01/08) + Base data",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://x402-data-api.sigrunner.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Grey Ridge x402 — Payment Verification & Agent Safety",
+      "version": "0.1.6"
+    },
+    "toolCount": 34,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].techstack has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].domain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402-data-api.sigrunner.workers.dev/mcp"
+}

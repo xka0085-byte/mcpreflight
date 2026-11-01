@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:26.145Z",
+  "server": {
+    "registryName": "net.whiskyhunter/mcp",
+    "title": "Whisky Hunter",
+    "description": "Whisky auction market data: past and live lots, prices, distillery stats and retail listings.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://whiskyhunter.net/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://whiskyhunter.net/mcp/"
+}

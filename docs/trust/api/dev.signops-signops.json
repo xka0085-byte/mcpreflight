@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:17.910Z",
+  "server": {
+    "registryName": "dev.signops/signops",
+    "title": "SignOps",
+    "description": "Send push to Android, iOS and the web, and ask a trusted phone to approve a login, from your agent.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.signops.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "signops",
+      "title": "SignOps",
+      "version": "1.0.0",
+      "websiteUrl": "https://signops.dev"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].platform has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.signops.dev/mcp"
+}

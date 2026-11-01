@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:31.898Z",
+  "server": {
+    "registryName": "io.usefulapi/click2mail",
+    "title": "Click2Mail MCP by usefulapi",
+    "description": "Read Click2Mail credit, jobs, costs and tracking; upload documents, create and submit mail jobs.",
+    "registryVersion": "1.9.0"
+  },
+  "endpoint": "https://click2mail.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "click2mail-mcp",
+      "version": "1.12.0",
+      "title": "Click2Mail MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/click2mail/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].addresses has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].addresses has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].coupon_code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://click2mail.usefulapi.io/mcp"
+}

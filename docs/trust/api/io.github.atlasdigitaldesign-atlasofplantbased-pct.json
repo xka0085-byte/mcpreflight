@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:56.208Z",
+  "server": {
+    "registryName": "io.github.AtlasDigitalDesign/atlasofplantbased-pct",
+    "title": "Atlas of Plant Based: PCT data",
+    "description": "Read-only Pacific Crest Trail data: legs by trail mile, towns, passes and lakes, and vegan resupply.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://atlasofplantbased.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "atlas-of-plant-based-pct",
+      "title": "Atlas of Plant Based: PCT data",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].mile has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].fromMile has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].toMile has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://atlasofplantbased.com/mcp/"
+}

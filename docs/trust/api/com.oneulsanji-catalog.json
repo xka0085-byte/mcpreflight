@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:12.179Z",
+  "server": {
+    "registryName": "com.oneulsanji/catalog",
+    "title": "Oneul Sanji (오늘산지) catalog",
+    "description": "Read-only catalog of a Korean farm-produce shop: search products, prices, origin facts, guides.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://oneulsanji.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Oneul Sanji catalog",
+      "version": "1.0.0",
+      "websiteUrl": "https://oneulsanji.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://oneulsanji.com/mcp"
+}

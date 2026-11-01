@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:14.390Z",
+  "server": {
+    "registryName": "io.nexteverything/parts",
+    "title": "Next Everything",
+    "description": "Find electronic parts with live Mouser, DigiKey and JLCPCB stock and prices, check BOMs, order.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.nexteverything.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.nexteverything.io/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:16.286Z",
+  "server": {
+    "registryName": "com.govapiatlas/govapi-atlas",
+    "title": "GovAPI Atlas",
+    "description": "Search 77k public-sector open data APIs across 10 countries. Read-only, no API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://govapiatlas.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://govapiatlas.com/mcp"
+}

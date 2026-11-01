@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:56.830Z",
+  "server": {
+    "registryName": "click.myagents/brazil-lookup",
+    "title": "CNPJ e CEP",
+    "description": "Empresa pelo CNPJ, CEP, feriados, DDD, bancos, NCM, Selic, CDI e IPCA, e conferência de CPF e CNPJ",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://brazil-lookup.mcp.myagents.click/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://brazil-lookup.mcp.myagents.click/mcp"
+}

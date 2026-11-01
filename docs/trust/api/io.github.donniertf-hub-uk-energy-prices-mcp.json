@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:42.814Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/uk-energy-prices-mcp",
+    "title": "UK Electricity Price Slots MCP",
+    "description": "Cheapest half-hour Agile electricity prices by UK postcode.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://uk-energy-prices-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "uk-energy-prices-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].hours has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].kwh has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uk-energy-prices-mcp.donniertf.workers.dev/mcp"
+}

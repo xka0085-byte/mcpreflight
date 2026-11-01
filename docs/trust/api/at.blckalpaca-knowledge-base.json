@@ -1,31 +1,40 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:40:29.594Z",
+  "scannedAt": "2026-11-01T03:42:11.590Z",
   "server": {
     "registryName": "at.blckalpaca/knowledge-base",
-    "title": "Blck Alpaca Knowledge Base",
-    "description": "Search Blck Alpaca's knowledge base on SEO, GEO, AI agents and marketing automation.",
-    "registryVersion": "1.0.0"
+    "title": "Blck Alpaca Agentic Audit & Knowledge Base",
+    "description": "Audit a website for AI-agent readiness and GEO. Knowledge base on SEO, GEO and AI agents (de/en/sk).",
+    "registryVersion": "1.0.1"
   },
   "endpoint": "https://blckalpaca.at/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "blckalpaca-knowledge-base",
+      "title": "Blck Alpaca Knowledge Base",
+      "version": "1.0.1"
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].categorySlug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].topicSlug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].articleSlug has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://blckalpaca.at/mcp"
 }

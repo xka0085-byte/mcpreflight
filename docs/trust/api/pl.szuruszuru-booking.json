@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:06.598Z",
+  "server": {
+    "registryName": "pl.szuruszuru/booking",
+    "title": "SzuruSzuru – rezerwacja czyszczenia tapicerki",
+    "description": "Quote, check slots and book on-site upholstery, carpet and mattress cleaning in Pomorskie, Poland.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://agent.szuruszuru.pl/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "szuruszuru-agent-gateway",
+      "title": "SzuruSzuru – rezerwacja czyszczenia tapicerki",
+      "version": "1.2.0",
+      "websiteUrl": "https://szuruszuru.pl/"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].customer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].booking_reference has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].booking_reference has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.szuruszuru.pl/mcp"
+}

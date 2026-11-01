@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:58.709Z",
+  "server": {
+    "registryName": "fr.devoria/mcp",
+    "title": "Devoria MCP",
+    "description": "iOS and Android store checks for Claude: review pre-checks, rejections, paywall, listings, prices.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://devoria.fr/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://devoria.fr/api/mcp"
+}

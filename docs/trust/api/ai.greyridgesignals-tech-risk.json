@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:27.956Z",
+  "server": {
+    "registryName": "ai.greyridgesignals/tech-risk",
+    "title": "ai.greyridgesignals/tech-risk",
+    "description": "Free MCP security scan: tool-poisoning & prompt-injection audit (OWASP LLM01/08) + trust badge",
+    "registryVersion": "0.1.5"
+  },
+  "endpoint": "https://api.greyridgesignals.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Grey Ridge x402 — Payment Verification & Agent Safety",
+      "version": "0.1.6"
+    },
+    "toolCount": 34,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].techstack has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].domain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.greyridgesignals.ai/mcp"
+}

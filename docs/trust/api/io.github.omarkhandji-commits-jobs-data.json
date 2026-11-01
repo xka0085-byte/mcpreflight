@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:23.525Z",
+  "server": {
+    "registryName": "io.github.omarkhandji-commits/jobs-data",
+    "title": "Jobs & Hiring Data",
+    "description": "Jobs from Greenhouse, Lever, Ashby, Workday, career pages, Google Jobs, SEEK, plus hiring signals.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=om_kh/ats-jobs-api,om_kh/careers-page-scraper,om_kh/google-jobs-scraper,om_kh/seek-jobstreet-jobs-scraper,om_kh/company-hiring-signals",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=om_kh/ats-jobs-api,om_kh/careers-page-scraper,om_kh/google-jobs-scraper,om_kh/seek-jobstreet-jobs-scraper,om_kh/company-hiring-signals"
+}

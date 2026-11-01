@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:08.515Z",
+  "server": {
+    "registryName": "io.github.globalize-now/globalize",
+    "title": "globalize.now",
+    "description": "Localize apps from your AI assistant: translate locale files, set glossaries, connect GitHub repos.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.globalize.now/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.globalize.now/mcp"
+}

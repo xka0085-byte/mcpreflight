@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:16.620Z",
+  "server": {
+    "registryName": "io.github.ahunter135/realtime-sports-api",
+    "title": "Realtime Sports API",
+    "description": "Live scores, play-by-play, box scores, odds, injuries: NFL, NBA, NHL, MLB, NCAA, 23 soccer leagues",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.realtimesportsapi.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "realtime-sports-api",
+      "title": "Realtime Sports API",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.realtimesportsapi.com/docs/mcp?utm_source=mcp&utm_medium=server_info"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].include_odds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.realtimesportsapi.com/api/mcp"
+}

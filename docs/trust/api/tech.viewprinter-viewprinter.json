@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:12.938Z",
+  "server": {
+    "registryName": "tech.viewprinter/viewprinter",
+    "title": "ViewPrinter",
+    "description": "Schedule social posts to TikTok, Instagram, Facebook, YouTube and X; manage accounts and media",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://viewprinter.tech/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "viewprinter",
+      "title": "ViewPrinter",
+      "version": "1.1.0"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].workspace_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].confirm_discard has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].auth_header has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].platform has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://viewprinter.tech/api/mcp"
+}

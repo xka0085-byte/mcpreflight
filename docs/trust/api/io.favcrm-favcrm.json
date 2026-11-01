@@ -1,0 +1,79 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:03.290Z",
+  "server": {
+    "registryName": "io.favcrm/favcrm",
+    "title": "FavCRM",
+    "description": "Agentic CRM for service businesses — bookings, customers, WhatsApp, loyalty, invoicing.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.favcrm.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "favcrm",
+      "title": "FavCRM",
+      "version": "1.0.0",
+      "websiteUrl": "https://favcrm.io",
+      "icons": [
+        {
+          "src": "https://favcrm.io/images/logo/favcrm-icon-512-dark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://favcrm.io/images/logo/favcrm-icon-256-dark.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 237,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].rows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].rows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].priceOverride has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].discountPercent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].advanceBookingDays has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].timeSlotPricing has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].bookingLimits has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[143].billingCycle has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.favcrm.io/mcp"
+}

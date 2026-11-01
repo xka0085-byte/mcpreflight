@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:09.402Z",
+  "server": {
+    "registryName": "io.github.LMSlay/tubetext-reviews-insights",
+    "title": "Reviews + AI Insights: Steam, Agoda, Google Play",
+    "description": "Steam game, Agoda/Booking.com hotel and Google Play app reviews with optional AI insight reports.",
+    "registryVersion": "1.3.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=fetch-actor-details,tubetext/steam-reviews-scraper,tubetext/agoda-reviews-scraper,tubetext/google-play-reviews-ai",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=fetch-actor-details,tubetext/steam-reviews-scraper,tubetext/agoda-reviews-scraper,tubetext/google-play-reviews-ai"
+}

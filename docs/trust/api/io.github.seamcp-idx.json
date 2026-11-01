@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:47.735Z",
+  "server": {
+    "registryName": "io.github.SeaMCP/idx",
+    "title": "IDX MCP - Indonesia Stock Exchange Trading Data",
+    "description": "Indonesia Stock Exchange data: listed companies, shareholders, boards and daily trading.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://seamcp.com/idx/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://seamcp.com/idx/mcp"
+}

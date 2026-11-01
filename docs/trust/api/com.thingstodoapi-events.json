@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:47.425Z",
+  "server": {
+    "registryName": "com.thingstodoapi/events",
+    "title": "Things To Do API",
+    "description": "Search local events in plain words: shows, pop-ups, markets, classes, with times, venues, prices.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.thingstodoapi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "thingstodo",
+      "title": "Things To Do API",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.thingstodoapi.com/mcp"
+}

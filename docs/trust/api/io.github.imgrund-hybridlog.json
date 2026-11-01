@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:32.197Z",
+  "server": {
+    "registryName": "io.github.Imgrund/hybridlog",
+    "title": "hybridlog",
+    "description": "Reads your own Garmin mirror: readiness, training load, muscle freshness, and read-only SQL.",
+    "registryVersion": "0.1.13"
+  },
+  "endpoint": "https://{hybridlog_host}/mcp/garmin",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{hybridlog_host}/mcp/garmin"
+}

@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:22.797Z",
+  "server": {
+    "registryName": "io.github.benno303/ndis-provider-feed",
+    "title": "NDIS Provider Feed",
+    "description": "Agent-readable search over the NDIS Provider Register (CC BY 4.0 AU) by location and service.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://ndis-provider-feed-125475360011.australia-southeast1.run.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Structured, agent-readable access to the NDIS Provider Register (source: NDIS Quality and Safeguards Commission, CC BY 4.0 AU). Loaded 29574 providers.",
+      "name": "ndis-provider-register",
+      "version": ""
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].suburb has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].state has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].postcode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].service_category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].include_revoked has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].provider_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ndis-provider-feed-125475360011.australia-southeast1.run.app/mcp"
+}

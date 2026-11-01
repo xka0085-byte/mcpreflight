@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:17.199Z",
+  "server": {
+    "registryName": "io.github.ThatMojo/chinacarapi-mcp",
+    "title": "ChinaCarAPI - Chinese used cars",
+    "description": "Live used car listings from China (Dongchedi, Che168) in English, with inspection reports.",
+    "registryVersion": "1.6.3"
+  },
+  "endpoint": "https://mcp.chinacarapi.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chinacarapi.com/mcp"
+}

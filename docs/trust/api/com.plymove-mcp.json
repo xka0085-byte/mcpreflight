@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:45:28.195Z",
+  "scannedAt": "2026-11-01T03:53:05.153Z",
   "server": {
     "registryName": "com.plymove/mcp",
     "title": "PlyMove",
@@ -10,22 +10,26 @@
   },
   "endpoint": "https://mcp.plymove.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "PlyMove Storyboard",
+      "version": "2.0.0",
+      "instructions": "PlyMove builds Elo-aware chess game storyboards: opening context, story arc, ranked critical chapters, what-if branches, and a main lesson. Use build_game_storyboard for whole games. explain_game and find_teaching_moments are legacy aliases to the same storyboard flow. All tools are read-only analysis — they never modify user files, accounts, or external systems."
+    },
+    "toolCount": 6,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].target_elo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].engine_depth has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.plymove.com/mcp"
 }

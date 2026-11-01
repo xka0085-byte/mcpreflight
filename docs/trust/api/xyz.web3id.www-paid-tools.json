@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:27.500Z",
+  "server": {
+    "registryName": "xyz.web3id.www/paid-tools",
+    "title": "web3id paid tools",
+    "description": "FX, funding rates, token cross-rates, weather joins, Solana dossiers, x402 audits. USDC per call.",
+    "registryVersion": "1.5.1"
+  },
+  "endpoint": "https://www.web3id.xyz/mcp/",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.web3id.xyz/mcp/"
+}

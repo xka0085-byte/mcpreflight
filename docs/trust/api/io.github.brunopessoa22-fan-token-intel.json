@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:26.395Z",
+  "server": {
+    "registryName": "io.github.BrunoPessoa22/fan-token-intel",
+    "title": "Fan Token Intel",
+    "description": "Fan-token intelligence for Chiliz Chain: prices, whale flows, match event impact. 22 read tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp-production-f681.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tokenintel",
+      "version": "1.26.0",
+      "websiteUrl": "https://www.fantokenintel.com"
+    },
+    "toolCount": 25,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].minute_bucket has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-production-f681.up.railway.app/mcp"
+}

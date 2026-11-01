@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:14.292Z",
+  "server": {
+    "registryName": "io.github.nowork-studio/notfair",
+    "title": "NotFair",
+    "description": "OAuth MCP for Google, Meta, X, LinkedIn, Reddit, TikTok, GSC, GA4, WordPress and GHL.",
+    "registryVersion": "0.27.16"
+  },
+  "endpoint": "https://notfair.co/api/mcp/notfair",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://notfair.co/api/mcp/notfair"
+}

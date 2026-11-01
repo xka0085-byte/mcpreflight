@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:01.624Z",
+  "server": {
+    "registryName": "io.github.lordfreez-ship-it/mil",
+    "title": "MIL — Machine Intelligence Layer",
+    "description": "Swedish company data (Bolagsverket, SCB) for AI agents, verified, with history and annual reports",
+    "registryVersion": "0.4.2"
+  },
+  "endpoint": "https://www.milquery.com/api/mcp?src=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mil",
+      "title": "MIL Machine Intelligence Layer",
+      "version": "0.4"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.milquery.com/api/mcp?src=registry"
+}

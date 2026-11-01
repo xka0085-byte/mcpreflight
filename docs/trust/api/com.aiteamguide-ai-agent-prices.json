@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:15.121Z",
+  "server": {
+    "registryName": "com.aiteamguide/ai-agent-prices",
+    "title": "AITeamGuide AI agent prices",
+    "description": "Read-only lookups of public AI agent pricing, free plans and source links. No API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aiteamguide.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aiteamguide",
+      "title": "AITeamGuide AI agent prices",
+      "version": "1.0.0",
+      "websiteUrl": "https://aiteamguide.com/mcp/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiteamguide.com/api/mcp"
+}

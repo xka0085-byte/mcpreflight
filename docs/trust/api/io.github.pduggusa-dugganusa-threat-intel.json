@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:56.731Z",
+  "server": {
+    "registryName": "io.github.pduggusa/dugganusa-threat-intel",
+    "title": "Jeevesus — DugganUSA threat-intel MCP",
+    "description": "Membrane for AI agents: threat intel you can check, IOC enrichment, pre-install package checks.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://analytics.dugganusa.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "DugganUSA Threat Intelligence MCP (Jeevesus)",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].input_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].output_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].cache_read_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].cache_write_5m_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].cache_write_1h_tokens has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://analytics.dugganusa.com/api/v1/mcp"
+}

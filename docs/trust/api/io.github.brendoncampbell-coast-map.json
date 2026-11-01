@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:40.839Z",
+  "server": {
+    "registryName": "io.github.brendoncampbell/coast-map",
+    "title": "Cosmic's Coast Map",
+    "description": "Tides, currents, marine forecasts and warnings for paddlers, anglers and small boats, 26 countries.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://coast.cosmicotter.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "coast-map",
+      "title": "Cosmic's Coast Map",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].days has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://coast.cosmicotter.ca/mcp"
+}

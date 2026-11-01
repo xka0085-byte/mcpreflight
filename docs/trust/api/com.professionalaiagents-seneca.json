@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:27.063Z",
+  "server": {
+    "registryName": "com.professionalaiagents/seneca",
+    "title": "Seneca Research Platform",
+    "description": "One prompt. ~100 independent AI models. One report: consensus, disagreements, and minority insights.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.seneca.professionalaiagents.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Seneca",
+      "version": "",
+      "websiteUrl": "https://seneca.professionalaiagents.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].max_characters has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.seneca.professionalaiagents.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:12.896Z",
+  "server": {
+    "registryName": "io.github.Taru0208/openfda-mcp-server",
+    "title": "OpenFDA Safety Data",
+    "description": "Search FDA safety data: drug adverse events, recalls, and device events.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://aligned-kettledrum--openfda-mcp-server.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aligned-kettledrum--openfda-mcp-server.apify.actor/mcp"
+}

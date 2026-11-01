@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:36.333Z",
+  "server": {
+    "registryName": "io.github.Agoranome/agoranome",
+    "title": "Agoranome seller tools",
+    "description": "Get your x402 API found and bought: lint, Bazaar rank, buyer panel, demand gaps. Paid in USDC.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://api.agoranome.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Agoranome",
+      "title": "Agoranome seller tools",
+      "version": "1.0.3",
+      "websiteUrl": "https://api.agoranome.com"
+    },
+    "toolCount": 27,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].expected_price_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].pay_to has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.agoranome.com/mcp"
+}

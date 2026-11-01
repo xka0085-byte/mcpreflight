@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:23.245Z",
+  "server": {
+    "registryName": "io.github.bennekrouf/mayorana",
+    "title": "Mayorana",
+    "description": "Search mayorana.ch: desktop apps, release notes, plans, and the Rust, LLM and Azure blog.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mayorana.ch/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mayorana",
+      "title": "Mayorana",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mayorana.ch/mcp"
+}

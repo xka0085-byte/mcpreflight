@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:43.219Z",
+  "server": {
+    "registryName": "org.roundtrips/roundtrips",
+    "title": "RoundTrips",
+    "description": "Plan and coordinate a group trip from your AI assistant: invites, votes, days and shared costs.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.roundtrips.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.roundtrips.org/mcp"
+}

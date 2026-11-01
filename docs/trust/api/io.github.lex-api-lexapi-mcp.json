@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:17.720Z",
+  "server": {
+    "registryName": "io.github.Lex-API/lexapi-mcp",
+    "title": "LexAPI",
+    "description": "EU law for AI: EUR-Lex legislation and case law, citation graph, semantic search with asOf.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp.lex-api.com/v1",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.lex-api.com/v1"
+}

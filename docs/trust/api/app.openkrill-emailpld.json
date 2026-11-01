@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:27.354Z",
+  "server": {
+    "registryName": "app.openkrill/emailpld",
+    "title": "Email Engagement Report",
+    "description": "Email Engagement Report turns a raw email event export into a per-recipient engagement report.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://emailpld.openkrill.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "emailpld",
+      "title": "Email Engagement Report: Events to recipient report",
+      "version": "1.1.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].rules has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://emailpld.openkrill.app/mcp"
+}

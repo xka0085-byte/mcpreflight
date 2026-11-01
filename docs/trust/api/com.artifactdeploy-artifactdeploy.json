@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:35.552Z",
+  "server": {
+    "registryName": "com.artifactdeploy/artifactdeploy",
+    "title": "ArtifactDeploy",
+    "description": "Deploy what Claude builds to a live link: previews, who-opened-it links, stats, forms, domains.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://mcp.artifactdeploy.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.artifactdeploy.com/mcp"
+}

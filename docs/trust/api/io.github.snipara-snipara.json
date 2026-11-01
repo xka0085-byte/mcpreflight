@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:01.028Z",
+  "server": {
+    "registryName": "io.github.Snipara/snipara",
+    "title": "Snipara Project Intelligence",
+    "description": "Hosted MCP for source-backed project context, memory, code impact, and agent workflow continuity.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.snipara.com/mcp/{project_slug}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.snipara.com/mcp/{project_slug}"
+}

@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:19.954Z",
+  "server": {
+    "registryName": "ae.easyvoice/tts",
+    "title": "EasyVoice text to speech",
+    "description": "Hosted text-to-speech MCP server: 66 voices in 9 languages, long-form narration, podcasts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://easyvoice.ae/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "easyvoice",
+      "title": "EasyVoice TTS",
+      "version": "1.0.0",
+      "websiteUrl": "https://easyvoice.ae"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].speed has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].speed has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].format has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://easyvoice.ae/api/mcp"
+}

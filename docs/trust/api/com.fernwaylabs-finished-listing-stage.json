@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:22.525Z",
+  "server": {
+    "registryName": "com.fernwaylabs/finished-listing-stage",
+    "title": "Finished Listing: stage an empty room",
+    "description": "Virtual staging of one empty room from a public listing photo, labelled, original returned.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://finishedlisting.fernwaylabs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.fernwaylabs/finished-listing-stage",
+      "title": "Finished Listing: stage an empty room",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://finishedlisting.fernwaylabs.com/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:09.224Z",
+  "server": {
+    "registryName": "io.github.OpenCallPortal/open-call-portals",
+    "title": "Open Call Portal",
+    "description": "Search PII-free opportunities, availability, and live events; prepare safe no-write form handoffs.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://opencallportal.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "open-call-portals",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "INPUT_SCHEMA_NOT_OBJECT",
+        "severity": "FAIL",
+        "message": "tools[5].inputSchema must declare type: object"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].version has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].fields has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://opencallportal.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:07.744Z",
+  "server": {
+    "registryName": "com.omniyond/mcp",
+    "title": "Omniyond",
+    "description": "Pay-per-use agent tools: schedule HTTP calls, extract pages, PDFs, OG images, QR codes, short links.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://omniyond.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://omniyond.com/mcp"
+}

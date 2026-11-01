@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:07.883Z",
+  "server": {
+    "registryName": "io.github.ivaavimusic/singularity",
+    "title": "Singularity Layer MCP",
+    "description": "MCP for Singularity Layer - discover listings, manage assets, run payment flows, and use agents",
+    "registryVersion": "1.14.0"
+  },
+  "endpoint": "https://mcp.x402layer.cc/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "singularity-mcp",
+      "version": "1.14.0"
+    },
+    "toolCount": 63,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.x402layer.cc/mcp"
+}

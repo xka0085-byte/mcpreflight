@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:44:56.769Z",
+  "scannedAt": "2026-11-01T03:51:29.016Z",
   "server": {
     "registryName": "com.nalpeiron.docs/mcp",
     "title": "Nalpeiron Docs",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://docs.nalpeiron.com/~gitbook/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "docs.nalpeiron.com/~gitbook/mcp",
+      "title": "Nalpeiron Documentation MCP Server",
+      "version": "0.28.0"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://docs.nalpeiron.com/~gitbook/mcp"
 }

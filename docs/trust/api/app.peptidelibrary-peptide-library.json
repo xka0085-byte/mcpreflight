@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:33.024Z",
+  "server": {
+    "registryName": "app.peptidelibrary/peptide-library",
+    "title": "Peptide Library",
+    "description": "Peptide research profiles, evidence by tier, comparisons and educational content. No dosing.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://peptidelibrary.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "peptide-library",
+      "title": "Peptide Library",
+      "version": "1.0.1",
+      "websiteUrl": "https://peptidelibrary.app",
+      "description": "Peptide research profiles, comparisons, educational content and lab math from Peptide Library.",
+      "icons": [
+        {
+          "src": "https://peptidelibrary.app/assets/peptide-library-logo-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].components has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://peptidelibrary.app/mcp"
+}

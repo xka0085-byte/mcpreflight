@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:47.722Z",
+  "server": {
+    "registryName": "io.github.dougsureel-tech/radtask-mcp",
+    "title": "io.github.dougsureel-tech/radtask-mcp",
+    "description": "AI task cockpit: an agent does your tasks and asks before anything irreversible.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://radtask.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "RadTask",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://radtask.ai/api/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:33.367Z",
+  "server": {
+    "registryName": "io.github.ryosukedesigner-cmd/tokenguard",
+    "title": "TokenGuard",
+    "description": "Solana rug check before you buy: SAFE/CAUTION/DANGER from chain state. Free key or x402.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://gdzlcxskuhupymyxywzm.supabase.co/functions/v1/tokenguard-mcp?v=2",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tokenguard",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].addresses has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gdzlcxskuhupymyxywzm.supabase.co/functions/v1/tokenguard-mcp?v=2"
+}

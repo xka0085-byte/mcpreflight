@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:42.738Z",
+  "server": {
+    "registryName": "no.formnord/print",
+    "title": "FormNord 3D printing",
+    "description": "Quote and order 3D prints (PETG/ABS) from STL/3MF files, printed and shipped in Norway.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://formnord.no/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "formnord-print",
+      "title": "FormNord 3D-print",
+      "version": "1.1.0",
+      "websiteUrl": "https://formnord.no/print"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].quantity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].customer has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://formnord.no/mcp"
+}

@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:06.146Z",
+  "server": {
+    "registryName": "com.givewithlegacy/donate",
+    "title": "Legacy",
+    "description": "Give to UK registered charities: check charity numbers, price a gift and get a checkout link.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://donate.givewithlegacy.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "legacy",
+      "title": "Legacy",
+      "version": "4c987c5"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].charityNumbers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].charities has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].charities has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://donate.givewithlegacy.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:50.395Z",
+  "server": {
+    "registryName": "io.github.Anteos-Health/anteos-booking",
+    "title": "Anteos Health — Medical Appointment Booking",
+    "description": "Book medical appointments with French doctors by specialty and city via AI agents.",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://anteoshealth.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "anteos-mcp-server",
+      "version": "1.1.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://anteoshealth.com/mcp"
+}

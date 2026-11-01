@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:45:45.719Z",
+  "scannedAt": "2026-11-01T03:53:57.922Z",
   "server": {
     "registryName": "com.ratevert/mcp",
     "title": "Ratevert MCP",
@@ -10,22 +10,27 @@
   },
   "endpoint": "https://ratevert.com/api/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Ratevert",
+      "version": "0.3.1",
+      "icons": [
+        {
+          "src": "https://ratevert.com/favicon.ico",
+          "mimeType": "image/x-icon"
+        }
+      ],
+      "websiteUrl": "https://ratevert.com"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "4 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://ratevert.com/api/mcp"
 }

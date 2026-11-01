@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:10.009Z",
+  "server": {
+    "registryName": "io.github.grblasquiz/hacecuentas",
+    "title": "Hacé Cuentas — Free Calculators",
+    "description": "Free calculators as MCP tools: finance, taxes, health, units, dates. Search, fetch & compute.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hacecuentas.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hacecuentas.com/mcp"
+}

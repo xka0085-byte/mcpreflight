@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:07.781Z",
+  "server": {
+    "registryName": "io.github.bakaburg24/nightly-mcp",
+    "title": "Nightly MCP",
+    "description": "NBA/WNBA betting analytics: live odds, sharp fair prices, injuries, and prop verification.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nightly-mcp-production-7f9e.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nightly-mcp-production-7f9e.up.railway.app/mcp"
+}

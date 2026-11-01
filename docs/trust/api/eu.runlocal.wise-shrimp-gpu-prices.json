@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:38.718Z",
+  "server": {
+    "registryName": "eu.runlocal.wise-shrimp/gpu-prices",
+    "title": "GPU Cloud Prices (AWS, Azure, OCI)",
+    "description": "H100/H200/A100 on-demand AWS/Azure/OCI + Azure Spot; L4 AWS, L40S AWS/OCI. Cached $/hr, x402 $0.005",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://wise-shrimp.runlocal.eu/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wise-shrimp.runlocal.eu/mcp"
+}

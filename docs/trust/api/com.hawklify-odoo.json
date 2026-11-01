@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:32.446Z",
+  "server": {
+    "registryName": "com.hawklify/odoo",
+    "title": "MCP server for Odoo, per user, approvals",
+    "description": "Read, write and run Odoo actions from any AI app, as each user, with approval rules per colleague.",
+    "registryVersion": "1.11.0"
+  },
+  "endpoint": "https://mcp.hawklify.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.hawklify.com/mcp"
+}

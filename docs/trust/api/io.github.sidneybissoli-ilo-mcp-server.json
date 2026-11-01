@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:54.440Z",
+  "server": {
+    "registryName": "io.github.SidneyBissoli/ilo-mcp-server",
+    "title": "ILO Labour Statistics (ILOSTAT): unemployment, wages, informality",
+    "description": "Labour market data from the ILO (ILOSTAT) by country, year, sex and age, with provenance.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://ilo.sidneybissoli.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ilo-mcp-server",
+      "version": "1.7.0",
+      "title": "ILO Labour Statistics (ILOSTAT)",
+      "websiteUrl": "https://ilo.sidneybissoli.com",
+      "icons": [
+        {
+          "src": "https://ilo.sidneybissoli.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ilo.sidneybissoli.com/mcp"
+}

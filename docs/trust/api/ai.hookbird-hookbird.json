@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:31.627Z",
+  "server": {
+    "registryName": "ai.hookbird/hookbird",
+    "title": "Hookbird",
+    "description": "Make social content from your agent: hooks, AI UGC videos, competitor ads, posts to 30+ networks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.hookbird.ai/mcp-oauth-dynamic",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.hookbird.ai/mcp-oauth-dynamic"
+}

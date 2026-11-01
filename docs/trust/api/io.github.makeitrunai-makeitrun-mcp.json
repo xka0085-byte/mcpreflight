@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:14.982Z",
+  "server": {
+    "registryName": "io.github.makeitrunai/makeitrun-mcp",
+    "title": "MakeItRun",
+    "description": "Publish HTML from Claude or ChatGPT to a live URL with a QR code — no developer needed.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.makeitrun.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.makeitrun.ai/mcp"
+}

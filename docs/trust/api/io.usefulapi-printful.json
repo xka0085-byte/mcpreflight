@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:58.656Z",
+  "server": {
+    "registryName": "io.usefulapi/printful",
+    "title": "Printful MCP by usefulapi",
+    "description": "Browse the Printful catalog, orders, shipping quotes and stats, and create draft orders and mockups.",
+    "registryVersion": "1.30.0"
+  },
+  "endpoint": "https://printful.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "printful-mcp",
+      "version": "1.33.0",
+      "title": "Printful MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/printful/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].retail_costs has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].gift has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[18].packing_slip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://printful.usefulapi.io/mcp"
+}

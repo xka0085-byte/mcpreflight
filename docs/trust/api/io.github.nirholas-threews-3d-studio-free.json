@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:06.512Z",
+  "server": {
+    "registryName": "io.github.nirholas/threews-3d-studio-free",
+    "title": "three.ws 3D Studio (free)",
+    "description": "Free text/image → 3D: generate, rig, avatar-ify, and refine GLB models. No auth, no payment.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://three.ws/api/mcp-studio",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "three-ws-3d-studio-free",
+      "version": "1.0.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://three.ws/api/mcp-studio"
+}

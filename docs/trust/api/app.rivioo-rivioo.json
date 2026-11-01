@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:38.922Z",
+  "server": {
+    "registryName": "app.rivioo/rivioo",
+    "title": "Rivioo",
+    "description": "Analyse App Store and Google Play reviews in Claude: counts, trends and real quotes for any app.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://api.rivioo.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rivioo",
+      "version": "2.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].response_format has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.rivioo.app/mcp"
+}

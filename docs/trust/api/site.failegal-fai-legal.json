@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:23.603Z",
+  "server": {
+    "registryName": "site.failegal/fai-legal",
+    "title": "FAI Legal Research",
+    "description": "Pakistani case law and statutes: Supreme Court and High Court judgments, laws, drafting templates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://failegal.site/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fai-legal",
+      "title": "FAI Legal Research Assistant",
+      "version": "1.0.0",
+      "websiteUrl": "https://failegal.site"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://failegal.site/mcp"
+}

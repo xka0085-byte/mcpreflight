@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:32.608Z",
+  "server": {
+    "registryName": "io.github.pleazed-cmd/energiror",
+    "title": "Energirör – VVS, värmepumpar & reservdelar",
+    "description": "Swedish VVS and heat-pump MCP with live price/stock, spare parts, compatibility and SGU wells.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://energiror.se/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://energiror.se/mcp"
+}

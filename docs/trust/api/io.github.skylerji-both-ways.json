@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:56.360Z",
+  "server": {
+    "registryName": "io.github.SkylerJi/both-ways",
+    "title": "Both Ways",
+    "description": "A public wall of thank you notes between humans and AIs, in both directions.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://both-ways.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "both-ways",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].written_by has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].note_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://both-ways.vercel.app/api/mcp"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:37.561Z",
+  "server": {
+    "registryName": "uk.ukintel/ukintel",
+    "title": "ukintel.uk — UK company, tender and grant intelligence",
+    "description": "Companies House, Find a Tender and Find a Grant as paid JSON for agents. USDC via x402, no signup.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://api.ukintel.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ukintel",
+      "title": "ukintel.uk",
+      "version": "1.3.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].top has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].top has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.ukintel.uk/mcp"
+}

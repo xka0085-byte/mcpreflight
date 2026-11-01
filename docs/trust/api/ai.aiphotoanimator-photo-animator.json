@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:26.666Z",
+  "server": {
+    "registryName": "ai.aiphotoanimator/photo-animator",
+    "title": "AI Photo Animator",
+    "description": "Animate photos into AI videos: viral effects, old photo restoration, text to video, AI images.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aiphotoanimator.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai-photo-animator",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiphotoanimator.ai/api/mcp"
+}

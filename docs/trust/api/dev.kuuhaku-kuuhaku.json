@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:38.256Z",
+  "server": {
+    "registryName": "dev.kuuhaku/kuuhaku",
+    "title": "Kuuhaku",
+    "description": "Ask who calls a route, what a change breaks or who reads a field, across a system's repos.",
+    "registryVersion": "0.2.10"
+  },
+  "endpoint": "https://api.kuuhaku.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.kuuhaku.dev/mcp"
+}

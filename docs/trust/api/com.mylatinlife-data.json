@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:24.573Z",
+  "server": {
+    "registryName": "com.mylatinlife/data",
+    "title": "MyLatinLife Data",
+    "description": "Verified residency, citizenship, tax and banking data for Latin America and Latin Europe.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mylatinlife.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mylatinlife-data",
+      "title": "MyLatinLife Data",
+      "version": "1.0.0",
+      "websiteUrl": "https://mylatinlife.com/"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].visa_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].countries has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].topics has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].countries has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mylatinlife.com/mcp"
+}

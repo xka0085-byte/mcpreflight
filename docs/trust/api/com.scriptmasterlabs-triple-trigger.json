@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:06.335Z",
+  "server": {
+    "registryName": "com.scriptmasterlabs/triple-trigger",
+    "title": "SCRIPTMASTERLABS — Triple-Trigger",
+    "description": "Triple-Trigger MCP: SPEC v2 triple-trigger ticker scans on live Schwab data. $0.05 x402 on Base.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://squeezeos-api.onrender.com/triple-trigger/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Triple-Trigger by ScriptMasterLabs: SPEC v2 triple-trigger scans of one ticker on live Schwab data (T1 liquidity sweep + Fibonacci reclaim, T2 VWAP reclaim + RVOL thrust, T3 same-side unusual options premium vs the ticker's own 20-session baseline), $0.05 USDC on Base via x402.",
+      "name": "triple-trigger",
+      "title": "Triple-Trigger",
+      "version": "2.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://squeezeos-api.onrender.com/triple-trigger/mcp"
+}

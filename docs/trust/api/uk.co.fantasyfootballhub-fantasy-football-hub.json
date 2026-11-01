@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:51.595Z",
+  "server": {
+    "registryName": "uk.co.fantasyfootballhub/fantasy-football-hub",
+    "title": "Fantasy Football Hub",
+    "description": "Fantasy Premier League predictions, fixture difficulty, team news and your own FPL team and leagues.",
+    "registryVersion": "44d920389458"
+  },
+  "endpoint": "https://public-api.fantasyfootballhub.co.uk/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://public-api.fantasyfootballhub.co.uk/mcp"
+}

@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:05.607Z",
+  "server": {
+    "registryName": "io.usefulapi/smartaccounts",
+    "title": "SmartAccounts MCP by usefulapi",
+    "description": "Read SmartAccounts clients, vendors, invoices, payments, ledger, accounts; create and book records.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://smartaccounts.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "smartaccounts-mcp",
+      "version": "1.20.0",
+      "title": "SmartAccounts MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/smartaccounts/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].county has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].address1 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].address2 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].postal_code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://smartaccounts.usefulapi.io/mcp"
+}

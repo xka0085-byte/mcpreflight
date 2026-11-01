@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:59.629Z",
+  "server": {
+    "registryName": "com.getplanagram/social-media",
+    "title": "Planagram",
+    "description": "Create, schedule and manage social posts on 10 networks (Instagram, TikTok, LinkedIn, X...)",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.getplanagram.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.getplanagram.com/mcp"
+}

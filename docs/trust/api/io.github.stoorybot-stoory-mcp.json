@@ -1,0 +1,63 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:04.225Z",
+  "server": {
+    "registryName": "io.github.StooryBot/stoory-mcp",
+    "title": "Stoory Hire Specialist",
+    "description": "Find and hire a human specialist from the Stoory marketplace, right from chat.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.stoory.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "hire-specialist",
+      "version": "0.1.0",
+      "icons": [
+        {
+          "src": "https://e8c01a4a70d545e9d2b441388f10b6ae.cdn.bubble.io/f1786771894866x197350542730857280/stoory_favicon_640x640.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "640x640"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].problem_context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].budget has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].task_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].task_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.stoory.io/mcp"
+}

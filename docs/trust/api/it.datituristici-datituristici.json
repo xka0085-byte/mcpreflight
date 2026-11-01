@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:32.740Z",
+  "server": {
+    "registryName": "it.datituristici/datituristici",
+    "title": "it.datituristici/datituristici",
+    "description": "Dati turistici ISTAT di ogni comune italiano: presenze, arrivi, posti letto, popolazione.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://datituristici.it/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "datituristici",
+      "title": "DatiTuristici",
+      "version": "1.1.0",
+      "description": "Tourism statistics for every Italian municipality: arrivals, nights spent, bed places, accommodation establishments and resident population, processed by DatiTuristici.it from institutional data (ISTAT). Public and read-only, no authentication."
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://datituristici.it/mcp"
+}

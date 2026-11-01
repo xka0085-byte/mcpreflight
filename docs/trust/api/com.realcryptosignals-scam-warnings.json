@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:59.551Z",
+  "server": {
+    "registryName": "com.realcryptosignals/scam-warnings",
+    "title": "Real Crypto Signals: crypto scam warning lists",
+    "description": "Check sites and firms against regulator scam warning lists: SEC, CFTC, AMF, FSMA, BaFin, AFM, CBI",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://realcryptosignals.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "realcryptosignals",
+      "title": "Real Crypto Signals: crypto scam warning lists",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].regulator has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].country has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://realcryptosignals.com/mcp"
+}

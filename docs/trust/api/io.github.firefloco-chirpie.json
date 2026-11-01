@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:52.515Z",
+  "server": {
+    "registryName": "io.github.Firefloco/chirpie",
+    "title": "Chirpie",
+    "description": "Post, schedule, and track social posts on X, Bluesky, LinkedIn, Instagram and more from AI agents.",
+    "registryVersion": "1.2.3"
+  },
+  "endpoint": "https://chirpie.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chirpie.ai/mcp"
+}

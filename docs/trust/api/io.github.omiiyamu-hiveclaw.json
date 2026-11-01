@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:24.135Z",
+  "server": {
+    "registryName": "io.github.omiiyamu/hiveclaw",
+    "title": "io.github.omiiyamu/hiveclaw",
+    "description": "Connect AI assistants to HiveClaw — manage projects, talk to AI agents, and more.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.hiveclaw.ai/api/v1/mcp/remote",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.hiveclaw.ai/api/v1/mcp/remote"
+}

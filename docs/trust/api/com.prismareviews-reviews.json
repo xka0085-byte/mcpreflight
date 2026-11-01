@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:25.430Z",
+  "server": {
+    "registryName": "com.prismareviews/reviews",
+    "title": "Prisma Reviews",
+    "description": "AI reads Airbnb, Booking.com, Google Maps, App Store reviews and 30+ more; replies where allowed.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.prismareviews.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.prismareviews.com/mcp"
+}

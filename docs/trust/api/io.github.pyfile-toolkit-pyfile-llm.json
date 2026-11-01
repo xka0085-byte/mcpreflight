@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:48.820Z",
+  "server": {
+    "registryName": "io.github.pyfile-toolkit/pyfile-llm",
+    "title": "Pyfile LLM & Data API",
+    "description": "Pay-per-call LLM chat plus data tools: DNS, crypto, Base gas, Wikipedia. x402 USDC or Lightning.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pyfile-agent.taile3ff35.ts.net:8443/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "l402-llm",
+      "version": "1.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pyfile-agent.taile3ff35.ts.net:8443/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:19.096Z",
+  "server": {
+    "registryName": "com.textforagents/fleet-spend-circuit-breaker",
+    "title": "Fleet spend circuit-breaker",
+    "description": "Pre-funded dollar envelope over a whole agent task tree: count-only metering, tree-wide halt.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://textforagents.com/products/fleet-spend-circuit-breaker/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fleet-spend-circuit-breaker",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].envelope_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].token has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].receipt has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/fleet-spend-circuit-breaker/mcp"
+}

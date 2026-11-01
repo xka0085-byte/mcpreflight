@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:06.523Z",
+  "server": {
+    "registryName": "ai.subpay/invoice-reader",
+    "title": "Subpay Invoice Reader",
+    "description": "Reads invoices and receipts from PDF to JSON and checks the math. $0.04/page via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://subpay.ai/invoice/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "subpay-invoice-reader",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://subpay.ai/invoice/mcp"
+}

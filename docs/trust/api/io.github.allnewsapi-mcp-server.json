@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:40.069Z",
+  "server": {
+    "registryName": "io.github.AllNewsAPI/mcp-server",
+    "title": "AllNewsAPI",
+    "description": "Get access to real-time and historical news data including top headlines from global sources",
+    "registryVersion": "1.1.9"
+  },
+  "endpoint": "https://mcp.allnewsapi.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.allnewsapi.com/mcp"
+}

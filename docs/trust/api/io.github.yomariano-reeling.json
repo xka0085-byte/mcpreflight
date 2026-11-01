@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:28.201Z",
+  "server": {
+    "registryName": "io.github.yomariano/reeling",
+    "title": "Reeling",
+    "description": "Social publishing, scheduling and delivery-status tools for Reeling accounts.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.reeling.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "reeling-mcp",
+      "version": "1.1.0"
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].aspect_ratio has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.reeling.app/mcp"
+}

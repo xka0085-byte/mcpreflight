@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:57.674Z",
+  "server": {
+    "registryName": "click.myagents/search-console",
+    "title": "Google Search Console",
+    "description": "Cliques, impressões e posição do seu site na Busca do Google",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://search-console.mcp.myagents.click/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://search-console.mcp.myagents.click/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:35.214Z",
+  "server": {
+    "registryName": "io.github.docracy1/monthsleft",
+    "title": "io.github.docracy1/monthsleft",
+    "description": "SaaS runway calculator (MRR growth vs churn), breakeven, burn multiple. Free MCP connector.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://monthsleft.netlify.app/.netlify/functions/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "monthsleft-cfo-tools",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].currency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://monthsleft.netlify.app/.netlify/functions/mcp"
+}

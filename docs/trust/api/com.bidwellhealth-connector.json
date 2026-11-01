@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:58.976Z",
+  "server": {
+    "registryName": "com.bidwellhealth/connector",
+    "title": "Bidwell Health",
+    "description": "Bidwell Health info: UTI, BV, yeast, ED, hair loss, cold sores and herpes care across 11 US states.",
+    "registryVersion": "0.8.8+listing.20261029"
+  },
+  "endpoint": "https://tools.bidwellhealth.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bidwell-health",
+      "version": "0.8.7",
+      "title": "Bidwell Health",
+      "websiteUrl": "https://bidwellhealth.com"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].service has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].state has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].situation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tools.bidwellhealth.com/mcp"
+}

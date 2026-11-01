@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:27:04.635Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/chainlist",
+    "title": "Chainlist",
+    "description": "Chainlist MCP — registry of EVM chains",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://gateway.pipeworx.io/chainlist/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pipeworx-gateway",
+      "version": "0.1.0"
+    },
+    "toolCount": 47,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[46].chain_id_or_short_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/chainlist/mcp"
+}

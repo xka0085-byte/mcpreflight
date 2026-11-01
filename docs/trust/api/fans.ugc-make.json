@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:47.281Z",
+  "server": {
+    "registryName": "fans.ugc/make",
+    "title": "UGC Fans",
+    "description": "Make ads, images and video from a URL; every paid generation is quoted in credits first",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.ugc.fans/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ugcfans",
+      "title": "UGCFans",
+      "version": "1.0.0",
+      "websiteUrl": "https://ugc.fans",
+      "icons": [
+        {
+          "src": "https://ugc.fans/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].palette has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ugc.fans/mcp"
+}

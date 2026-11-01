@@ -1,31 +1,26 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:47:52.460Z",
+  "scannedAt": "2026-11-01T04:01:31.754Z",
   "server": {
     "registryName": "dev.dvt/dvt",
     "title": "dev.dvt/dvt",
     "description": "Dashboards as data. Author, validate, render, and share dvt dashboards from any MCP client.",
-    "registryVersion": "0.7.4"
+    "registryVersion": "0.7.37"
   },
   "endpoint": "https://mcp.dvt.dev/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
+    "finalStatus": "UNKNOWN",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.dvt.dev/mcp"
 }

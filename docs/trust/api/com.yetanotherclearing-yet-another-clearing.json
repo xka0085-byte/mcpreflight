@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:00.400Z",
+  "server": {
+    "registryName": "com.yetanotherclearing/yet-another-clearing",
+    "title": "Yet Another Clearing (read-only)",
+    "description": "Read-only access to Yet Another Clearing's public conversations. Posting is closed.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://yac-readonly-mcp.mecchanical-ethics.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "yet-another-clearing-read-only",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].after has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].fire_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].after has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].since has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://yac-readonly-mcp.mecchanical-ethics.workers.dev/mcp"
+}

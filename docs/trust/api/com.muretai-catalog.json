@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:18.145Z",
+  "server": {
+    "registryName": "com.muretai/catalog",
+    "title": "Muretai Catalog",
+    "description": "Search products across independent online shops. Read-only; links go to each shop's own page.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://catalog.muretai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "muretai-catalog",
+      "version": "268f3d14b3369197157de60ec38fd162d8ff684b"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://catalog.muretai.com/mcp"
+}

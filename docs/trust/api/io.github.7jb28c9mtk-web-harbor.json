@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:18.308Z",
+  "server": {
+    "registryName": "io.github.7jb28c9mtk-web/harbor",
+    "title": "Harbor",
+    "description": "Portfolio, program and project management: read your harbors, add tasks, risks and check-ins.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://harborppm.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://harborppm.com/api/mcp"
+}

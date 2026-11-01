@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:32.863Z",
+  "server": {
+    "registryName": "io.github.alik472/ai-watermark-remover",
+    "title": "AI Watermark Remover",
+    "description": "Remove watermarks and overlays from images the user owns or has permission to edit.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aiwatermarkremover.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiwatermarkremover.com/mcp"
+}

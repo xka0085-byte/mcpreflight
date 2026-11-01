@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:15.469Z",
+  "server": {
+    "registryName": "com.goodailabs/arrakis",
+    "title": "Arrakis",
+    "description": "Rent GPUs at live prices and serve any Hugging Face model, with spend caps for AI agents.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://arrakis.goodailabs.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "arrakis",
+      "version": "0.1.0",
+      "websiteUrl": "https://arrakis.goodailabs.com/agents"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].instance_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].instance_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].instance_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://arrakis.goodailabs.com/mcp"
+}

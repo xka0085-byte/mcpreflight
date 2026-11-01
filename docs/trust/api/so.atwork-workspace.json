@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:34.217Z",
+  "server": {
+    "registryName": "so.atwork/workspace",
+    "title": "Atwork",
+    "description": "Connect Claude, ChatGPT or any MCP client to your Atwork sheets, tasks, pages and dashboards.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.atwork.so/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.atwork.so/mcp"
+}

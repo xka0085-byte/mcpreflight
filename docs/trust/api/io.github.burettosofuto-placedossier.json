@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:26.956Z",
+  "server": {
+    "registryName": "io.github.BurettoSofuto/placedossier",
+    "title": "PlaceDossier",
+    "description": "Public records on one BC lot: zoning, hazards, water and septic, access, services, what's planned.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://placedossier.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "placedossier",
+      "title": "PlaceDossier",
+      "version": "1.0.0",
+      "websiteUrl": "https://placedossier.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lon has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://placedossier.com/mcp"
+}

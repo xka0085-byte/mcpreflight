@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:54.017Z",
+  "server": {
+    "registryName": "io.github.naeem-jtr/jtr-holidays",
+    "title": "io.github.naeem-jtr/jtr-holidays",
+    "description": "Search tours, attraction tickets, and holiday packages across 24 countries.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.jtrholidays.com/mcp/v1",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "jtr-holidays",
+      "version": "1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTIES_INVALID",
+        "severity": "FAIL",
+        "message": "tools[3].inputSchema.properties must be an object"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.jtrholidays.com/mcp/v1"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:46.869Z",
+  "server": {
+    "registryName": "com.dubairealestatedata/mcp",
+    "title": "Dubai Real Estate Data",
+    "description": "Dubai property market figures from official DLD open data: prices, rents, yields, monthly reports.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.dubairealestatedata.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.dubairealestatedata.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:20.835Z",
+  "server": {
+    "registryName": "io.github.shiv9thakur/mitr-mcp",
+    "title": "Mitr Analytics",
+    "description": "Ask about your Mitr cookie-free analytics: apps, reports, funnels, alerts and usage.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.mitranalytics.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mitranalytics.dev/mcp"
+}

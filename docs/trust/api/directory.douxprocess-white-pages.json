@@ -1,0 +1,69 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:12.784Z",
+  "server": {
+    "registryName": "directory.douxprocess/white-pages",
+    "title": "DouxProcess Directory",
+    "description": "Is a US business licensed, bonded and insured today? From the government record. Free, no paid rank.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://douxprocess.directory/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "douxprocess-directory",
+      "title": "DouxProcess Directory",
+      "version": "1.2.0",
+      "websiteUrl": "https://douxprocess.directory/for-ai",
+      "icons": [
+        {
+          "src": "https://douxprocess.directory/assets/brand/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://douxprocess.directory/assets/brand/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://douxprocess.directory/assets/brand/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].city has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].radius_miles has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].phone has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://douxprocess.directory/mcp"
+}

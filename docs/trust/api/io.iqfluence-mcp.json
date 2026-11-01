@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:54.957Z",
+  "server": {
+    "registryName": "io.iqfluence/mcp",
+    "title": "IQFluence",
+    "description": "Search 455M+ Instagram, TikTok and YouTube creators and analyze influencers from your AI assistant.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.iqfluence.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.iqfluence.io/mcp"
+}

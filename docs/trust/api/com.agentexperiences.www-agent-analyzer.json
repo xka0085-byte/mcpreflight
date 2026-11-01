@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:59.386Z",
+  "server": {
+    "registryName": "com.agentexperiences.www/agent-analyzer",
+    "title": "Agent Analyzer",
+    "description": "Scan a web page the way an AI agent reads it, get the failing checks and fixes, then re-scan.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.agentexperiences.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.agentexperiences.com/api/mcp"
+}

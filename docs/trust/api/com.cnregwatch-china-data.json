@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:49.060Z",
+  "server": {
+    "registryName": "com.cnregwatch/china-data",
+    "title": "China Visa & Regulation Data",
+    "description": "China visa-free eligibility by nationality and latest official regulation changes, with sources.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://cnregwatch.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cnregwatch-china-data",
+      "title": "China Visa & Regulation Data",
+      "version": "0.2.3",
+      "websiteUrl": "https://cnregwatch.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cnregwatch.com/mcp"
+}

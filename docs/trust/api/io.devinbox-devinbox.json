@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:48.679Z",
+  "server": {
+    "registryName": "io.devinbox/devinbox",
+    "title": "DevInbox",
+    "description": "Real email inboxes for AI agents: create inboxes, catch verification codes, extract OTPs, reply.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.devinbox.io",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.devinbox.io"
+}

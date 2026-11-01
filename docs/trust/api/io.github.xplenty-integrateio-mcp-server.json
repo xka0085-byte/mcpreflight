@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:21.812Z",
+  "server": {
+    "registryName": "io.github.xplenty/integrateio-mcp-server",
+    "title": "Integrate.io MCP Server",
+    "description": "Build, run and monitor Integrate.io ETL and Reverse ETL pipelines from AI assistants.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.xplenty.com/{account}/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.xplenty.com/{account}/api/mcp"
+}

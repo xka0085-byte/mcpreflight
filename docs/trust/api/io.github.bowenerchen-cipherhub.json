@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:35.084Z",
+  "server": {
+    "registryName": "io.github.bowenerchen/cipherhub",
+    "title": "CipherHUB Cryptography Toolkit",
+    "description": "Production-grade cryptography toolkit with 31 MCP tools for classical, PQC, and KMS workflows.",
+    "registryVersion": "1.9.4"
+  },
+  "endpoint": "https://tools.cipherhub.cloud/cipherhub/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cipherhub-mcp",
+      "version": "1.13.2"
+    },
+    "toolCount": 55,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[26].tweak_in_hex has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].alice_x25519_public_key_pem has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[42].bob_x25519_public_key_pem has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tools.cipherhub.cloud/cipherhub/mcp"
+}

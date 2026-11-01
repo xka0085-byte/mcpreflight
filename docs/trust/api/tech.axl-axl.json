@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:01.346Z",
+  "server": {
+    "registryName": "tech.axl/axl",
+    "title": "AXL — Run Sales, Marketing & Courses with Your AI",
+    "description": "Build a landing page, publish after approval, and capture form signups in AXL CRM.",
+    "registryVersion": "2026.1019.1"
+  },
+  "endpoint": "https://app.axl.tech/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.axl.tech/mcp"
+}

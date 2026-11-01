@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:05.876Z",
+  "server": {
+    "registryName": "io.github.reinlainer/postmd-mcp-server",
+    "title": "io.github.reinlainer/postmd-mcp-server",
+    "description": "Publish Markdown as a shareable web page, with document graphs",
+    "registryVersion": "2.6.1"
+  },
+  "endpoint": "https://postmd.turink.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "postmd-mcp-server",
+      "version": "2.6.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].docCode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].docCode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].docCode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://postmd.turink.com/mcp"
+}

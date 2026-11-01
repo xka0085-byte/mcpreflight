@@ -1,0 +1,42 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:24.449Z",
+  "server": {
+    "registryName": "net.videostemporales/video-temporary-hosting",
+    "title": "VideosTemporales",
+    "description": "Temporary video hosting for AI agents with shareable human-viewing links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.videostemporales.net/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "videostemporales",
+      "version": "1.0.0",
+      "description": "Temporary video sharing for AI agents. Upload a user-provided video and receive a temporary human viewing link on VideosTemporales.",
+      "websiteUrl": "https://ai.videostemporales.net/",
+      "title": "VideosTemporales"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].lock_first_viewer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].share_verification_data has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].anti_repost_watermark has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.videostemporales.net/"
+}

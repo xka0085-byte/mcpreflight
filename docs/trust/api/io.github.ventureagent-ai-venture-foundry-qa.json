@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:44.680Z",
+  "server": {
+    "registryName": "io.github.ventureagent-ai/venture-foundry-qa",
+    "title": "Venture Foundry QA",
+    "description": "Preflight QA for AI-agent deliverables with structured verdicts and repair guidance.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://venture-foundry-qa.jenvan.chatgpt.site/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://venture-foundry-qa.jenvan.chatgpt.site/api/mcp"
+}

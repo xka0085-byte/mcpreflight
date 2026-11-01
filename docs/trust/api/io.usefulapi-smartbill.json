@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:04.622Z",
+  "server": {
+    "registryName": "io.usefulapi/smartbill",
+    "title": "SmartBill MCP by usefulapi",
+    "description": "Read SmartBill series, taxes, stock, clients and products; draft and issue invoices and estimates.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://smartbill.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "smartbill-mcp",
+      "version": "1.20.0",
+      "title": "SmartBill MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/smartbill/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].product_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].product_code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://smartbill.usefulapi.io/mcp"
+}

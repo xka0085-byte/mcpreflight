@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:22.066Z",
+  "server": {
+    "registryName": "red.atlas/red-atlas-api",
+    "title": "red.atlas/red-atlas-api",
+    "description": "Puerto Rico & Colombia real estate: listings, sales, parcels, permits, analytics, AVM reports.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://apiv3.atlas.red/external-api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apiv3.atlas.red/external-api/v1/mcp"
+}

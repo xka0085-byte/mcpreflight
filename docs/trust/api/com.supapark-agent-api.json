@@ -1,0 +1,61 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:38.498Z",
+  "server": {
+    "registryName": "com.supapark/agent-api",
+    "title": "SupaPark — Walt Disney World live data",
+    "description": "Live Walt Disney World waits, crowd forecasts, Lightning Lane sellouts and prices, dining drop odds.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://supapark.com/api/agent/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "supapark",
+      "title": "SupaPark",
+      "version": "0.2.0",
+      "websiteUrl": "https://supapark.com/developers"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].range has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].range has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].party_size has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://supapark.com/api/agent/mcp"
+}

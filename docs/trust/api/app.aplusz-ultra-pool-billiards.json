@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:42.668Z",
+  "server": {
+    "registryName": "app.aplusz/ultra-pool-billiards",
+    "title": "Ultra Billiard Pool",
+    "description": "Eight-ball pool in the browser: table state, shot physics, rules and live match data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://poolgame.aplusz.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ultra-pool-billiards",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://poolgame.aplusz.app/mcp"
+}

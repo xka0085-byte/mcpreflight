@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:16.785Z",
+  "server": {
+    "registryName": "si.sigit/sigit",
+    "title": "siGit",
+    "description": "MCP server for siGit (sigit.si): browse repos, search code, manage PRs/issues, web search.",
+    "registryVersion": "1.2.5"
+  },
+  "endpoint": "https://sigit.si/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sigit.si/api/v1/mcp"
+}

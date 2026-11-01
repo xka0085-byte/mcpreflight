@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:31.728Z",
+  "server": {
+    "registryName": "dev.tlly/tlly",
+    "title": "tlly",
+    "description": "Hosted dashboards and scheduled data jobs for AI agents, with thresholds, alerts and share links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tlly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tlly",
+      "version": "1.0.0"
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].enabled has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].dates has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tlly.dev/mcp"
+}

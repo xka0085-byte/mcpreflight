@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:27.619Z",
+  "server": {
+    "registryName": "io.github.simul813/kdp-niche-research",
+    "title": "KDP Niche Research",
+    "description": "Kindle niche intelligence (demand/competition/BSR/revenue) gated by x402 USDC on Base.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://nichedata.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kdp-niche-research",
+      "version": "1.29.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].keyword has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].x_payment has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nichedata.dev/mcp"
+}

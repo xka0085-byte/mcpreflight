@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:32.467Z",
+  "server": {
+    "registryName": "uk.co.weightmedscompare/price-compare",
+    "title": "uk.co.weightmedscompare/price-compare",
+    "description": "Factual UK weight-loss medicine price comparison across providers. Read-only; not medical advice.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jfwxdchauccbuwdqjnap.supabase.co/functions/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "weightmedscompare-build",
+      "version": "1.0.0",
+      "title": "WeightMedsCompare-Build"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_monthly_price_gbp has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].cqc_registered has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].published_price_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].monthly_budget_gbp has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].cqc_registered has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].bmi has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].weight_related_condition has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jfwxdchauccbuwdqjnap.supabase.co/functions/v1/mcp"
+}

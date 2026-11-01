@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:29.531Z",
+  "server": {
+    "registryName": "ir.netarz/fx-rates",
+    "title": "NetArz FX Rates",
+    "description": "Iranian rial/toman exchange rates (~30 currencies), conversion, history and gold. Free tier, no key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://netarz.ir/api/fx/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "netarz-fx-rates",
+      "title": "NetArz FX rates (نرخ ارز نِت اَرز)",
+      "version": "1.0.0",
+      "websiteUrl": "https://netarz.ir/docs/fx/mcp"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].side has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://netarz.ir/api/fx/mcp"
+}

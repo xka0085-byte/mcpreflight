@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:00.234Z",
+  "server": {
+    "registryName": "com.bike4mind/bike4mind",
+    "title": "Bike4Mind — the open-core AI workbench",
+    "description": "Read-only facts on Bike4Mind: live model catalog, comparisons, open-core license, blog, updates.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://bike4mind.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bike4mind",
+      "version": "1.3.0",
+      "title": "Bike4Mind — the open-core AI workbench"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bike4mind.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:39.825Z",
+  "server": {
+    "registryName": "io.catchmetrics.mcp/rum-analytics",
+    "title": "io.catchmetrics.mcp/rum-analytics",
+    "description": "RUM platform for web performance analytics, Core Web Vitals, and third-party script monitoring.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.catchmetrics.io",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.catchmetrics.io"
+}

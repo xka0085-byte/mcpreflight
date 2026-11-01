@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:00.838Z",
+  "server": {
+    "registryName": "io.github.nexus-mcp-infra/onchain-activity-index",
+    "title": "io.github.nexus-mcp-infra/onchain-activity-index",
+    "description": "DeFi Protocol Activity Index -- quantitative on-chain activity metric from DefiLlama data",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://onchain-activity-index-325572559480.us-central1.run.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://onchain-activity-index-325572559480.us-central1.run.app/mcp"
+}

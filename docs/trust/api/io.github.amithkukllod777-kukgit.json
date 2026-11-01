@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:39.286Z",
+  "server": {
+    "registryName": "io.github.amithkukllod777/kukgit",
+    "title": "KukGit",
+    "description": "Read and write KukGit repositories, files, issues and pull requests from an AI assistant.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://git.kuklabs.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://git.kuklabs.com/mcp"
+}

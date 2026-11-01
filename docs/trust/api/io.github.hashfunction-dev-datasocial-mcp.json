@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:30.511Z",
+  "server": {
+    "registryName": "io.github.hashfunction-dev/datasocial-mcp",
+    "title": "DataSocial",
+    "description": "Query a TikTok data warehouse (creators, videos, sounds, daily history) with read-only SQL.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.datasocial.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "datasocial",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.datasocial.ai/mcp"
+}

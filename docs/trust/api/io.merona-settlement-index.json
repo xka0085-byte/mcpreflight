@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:08.804Z",
+  "server": {
+    "registryName": "io.merona/settlement-index",
+    "title": "merona — x402 settlement index",
+    "description": "See what actually settles on x402: wash-adjusted volume, payTo checks. Free, no key, no signup.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.merona.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "merona-mcp",
+      "title": "merona — trust tooling for agents (x402 settlement index)",
+      "version": "1.2"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.merona.io/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:03.666Z",
+  "server": {
+    "registryName": "io.localize/localize-io",
+    "title": "Localize.io",
+    "description": "AI localization for agents: translation, TMS sync, translation memories, glossaries, post-editing.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://hub.localize.io/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hub.localize.io/mcp/"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:40.703Z",
+  "server": {
+    "registryName": "com.a1syntheticoil/a1-synthetic-oil",
+    "title": "A1 Synthetic Oil (independent AMSOIL dealer)",
+    "description": "AMSOIL catalog search, account options, and dealer-referral shopping links from A1 Synthetic Oil",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://a1syntheticoil.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "a1syntheticoil",
+      "title": "A1 Synthetic Oil (independent AMSOIL dealer #30734402)",
+      "version": "1.0.0+2026-10-27",
+      "websiteUrl": "https://a1syntheticoil.com/ai-assistant-connector/"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://a1syntheticoil.com/mcp"
+}

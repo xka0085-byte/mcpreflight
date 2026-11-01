@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:03.336Z",
+  "server": {
+    "registryName": "com.agenttaskatlas/catalog",
+    "title": "AgentTask Atlas",
+    "description": "Read-only catalog of verified MCP servers and Agent Skills by dev task, with practical verdicts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agenttaskatlas.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agenttask-atlas",
+      "version": "1.0.0",
+      "title": "AgentTask Atlas catalog"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agenttaskatlas.com/api/mcp"
+}

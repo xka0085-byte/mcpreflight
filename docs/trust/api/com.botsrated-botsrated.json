@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:11.414Z",
+  "server": {
+    "registryName": "com.botsrated/botsrated",
+    "title": "BotsRated (beta)",
+    "description": "Signed checks of x402 sellers on Base and remote MCP servers, before your agent pays.",
+    "registryVersion": "0.4.0-beta"
+  },
+  "endpoint": "https://botsrated.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "botsrated",
+      "title": "BotsRated",
+      "version": "0.4.0",
+      "websiteUrl": "https://botsrated.com"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].route has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].mcp has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://botsrated.com/mcp"
+}

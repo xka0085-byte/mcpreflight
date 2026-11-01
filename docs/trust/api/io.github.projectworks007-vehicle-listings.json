@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:43.978Z",
+  "server": {
+    "registryName": "io.github.projectworks007/vehicle-listings",
+    "title": "Car & Vehicle Listings Data",
+    "description": "Used and new car listings with prices and specs from national car marketplaces.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=highbrow_fame/cochesnet-listings,highbrow_fame/autotrader-ca-listings,highbrow_fame/otomoto-listings,highbrow_fame/autoscout24-listings",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=highbrow_fame/cochesnet-listings,highbrow_fame/autotrader-ca-listings,highbrow_fame/otomoto-listings,highbrow_fame/autoscout24-listings"
+}

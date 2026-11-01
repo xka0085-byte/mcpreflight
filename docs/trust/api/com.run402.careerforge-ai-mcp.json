@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:42.692Z",
+  "server": {
+    "registryName": "com.run402.careerforge-ai/mcp",
+    "title": "CareerForge ATS v4.0 MCP",
+    "description": "Workday, Greenhouse & Lever ATS Resume Keyword Optimizer & DOCX/PDF Kit ($1 USDC).",
+    "registryVersion": "4.0.0"
+  },
+  "endpoint": "https://careerforge-ai.run402.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "CareerForge ATS",
+      "version": "4.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].email_or_contact has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].offer_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].tier has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://careerforge-ai.run402.com/api/mcp"
+}

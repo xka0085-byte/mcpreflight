@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:41.631Z",
+  "server": {
+    "registryName": "com.nisebookings/booking",
+    "title": "nisebookings",
+    "description": "Operate a nisebookings account: catalogue, staff schedules, free slots, customers, appointments",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.nisebookings.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.nisebookings.com/api/mcp"
+}

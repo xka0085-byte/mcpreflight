@@ -1,0 +1,61 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:35.479Z",
+  "server": {
+    "registryName": "it.interfibra/copertura",
+    "title": "Interfibra",
+    "description": "Copertura fibra e FWA per indirizzo in Italia, offerte Interfibra con costi e link di attivazione",
+    "registryVersion": "1.6.2"
+  },
+  "endpoint": "https://interfibra.it/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "interfibra",
+      "title": "Interfibra",
+      "version": "1.6.3",
+      "description": "Verifica della copertura (FTTH, FTTC, FWA) a un indirizzo italiano, listino Interfibra con condizioni e costi, ricerca nei contenuti pubblici del sito (search e fetch), link di attivazione già compilato. Solo lettura: il contratto lo firma il cliente.",
+      "websiteUrl": "https://interfibra.it/assistenti-ai",
+      "icons": [
+        {
+          "src": "https://interfibra.it/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].comune has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].via has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].civico has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].cap has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://interfibra.it/api/mcp"
+}

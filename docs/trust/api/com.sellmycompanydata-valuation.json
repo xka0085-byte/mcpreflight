@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:12.304Z",
+  "server": {
+    "registryName": "com.sellmycompanydata/valuation",
+    "title": "Sell My Company Data",
+    "description": "Estimate what your company's operational data is worth to AI labs. Counts only, never content.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://sellmycompanydata.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sell-my-company-data",
+      "title": "Sell My Company Data",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].first_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].last_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].company has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].website has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sellmycompanydata.com/mcp"
+}

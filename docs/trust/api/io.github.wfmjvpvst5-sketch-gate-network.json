@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:07.425Z",
+  "server": {
+    "registryName": "io.github.wfmjvpvst5-sketch/gate-network",
+    "title": "Gate Network",
+    "description": "x402 gate network for agents to discover gates, inspect definitions, and fetch preflight data.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://gate-network.matsutake-lab.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gate-network",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].gateId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].gateId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gate-network.matsutake-lab.workers.dev/mcp"
+}

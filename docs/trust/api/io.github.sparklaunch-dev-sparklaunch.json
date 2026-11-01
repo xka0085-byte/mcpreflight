@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:01.719Z",
+  "server": {
+    "registryName": "io.github.SparkLaunch-Dev/sparklaunch",
+    "title": "SparkLaunch",
+    "description": "Founder workflows for idea validation, branding, campaigns, landing pages, analytics, and CRM.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sparklaun.ch/api/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sparklaun.ch/api/mcp/"
+}

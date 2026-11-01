@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:37.521Z",
+  "server": {
+    "registryName": "io.github.moldy93/smard-x402",
+    "title": "SMARD Energy Prices (x402)",
+    "description": "Paywalled SMARD day-ahead electricity prices (DE-LU, 15‑minute resolution) via x402 on Base mainnet.",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://smard-energy-prices-x402.favo.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SMARD Prices",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].region has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].seriesId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://smard-energy-prices-x402.favo.workers.dev/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:52.224Z",
+  "server": {
+    "registryName": "se.riksflodet/riksflodet",
+    "title": "Riksflödet",
+    "description": "Sveriges riksdag: vem sa vad, hur röstade ledamöter och partier — med källänkar.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://riksflodet.se/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "riksflodet",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].n has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].n has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://riksflodet.se/mcp"
+}

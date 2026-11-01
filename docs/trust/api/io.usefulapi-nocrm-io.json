@@ -1,0 +1,62 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:54.019Z",
+  "server": {
+    "registryName": "io.usefulapi/nocrm-io",
+    "title": "noCRM.io MCP by usefulapi",
+    "description": "Read noCRM.io leads, pipeline steps, comments and client folders; create, update and assign leads.",
+    "registryVersion": "1.11.0"
+  },
+  "endpoint": "https://nocrm-io.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nocrm-io-mcp",
+      "version": "1.14.0",
+      "title": "noCRM.io MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/nocrm-io/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].firstname has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].lastname has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].title has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].starred has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nocrm-io.usefulapi.io/mcp"
+}

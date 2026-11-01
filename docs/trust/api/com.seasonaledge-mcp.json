@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:10.001Z",
+  "server": {
+    "registryName": "com.seasonaledge/mcp",
+    "title": "SeasonalEdge",
+    "description": "Find the calendar days, weeks and events that beat simply holding a US stock or ETF, year by year.",
+    "registryVersion": "3.0.0"
+  },
+  "endpoint": "https://seasonaledge.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://seasonaledge.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:45.257Z",
+  "server": {
+    "registryName": "io.github.anttka4cz/mcp-server-coldleads",
+    "title": "Cold Leads",
+    "description": "B2B outreach CRM for AI agents: contacts, verification, approved campaigns, replies, follow-ups.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://coldleads.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://coldleads.app/api/mcp"
+}

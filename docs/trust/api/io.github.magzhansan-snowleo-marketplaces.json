@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:28.196Z",
+  "server": {
+    "registryName": "io.github.MagzhanSan/snowleo-marketplaces",
+    "title": "Snow Leo Marketplaces & Prices",
+    "description": "Priced listings from Amazon, Shopify stores, the App Store, Google Play, Airbnb and Redfin",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?actors=snow_leo_data/amazon-product-scraper,snow_leo_data/shopify-inventory-scraper,snow_leo_data/app-store-scraper,snow_leo_data/google-play-scraper,snow_leo_data/airbnb-scraper,snow_leo_data/redfin-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=snow_leo_data/amazon-product-scraper,snow_leo_data/shopify-inventory-scraper,snow_leo_data/app-store-scraper,snow_leo_data/google-play-scraper,snow_leo_data/airbnb-scraper,snow_leo_data/redfin-scraper"
+}

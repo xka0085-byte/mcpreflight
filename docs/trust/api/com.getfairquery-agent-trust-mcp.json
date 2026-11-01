@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:56.461Z",
+  "server": {
+    "registryName": "com.getfairquery/agent-trust-mcp",
+    "title": "Fairquery Agent Trust & Data Safety",
+    "description": "PII/secret redaction, email checks, sanctions screening, OSV lookups and an MCP server pre-check.",
+    "registryVersion": "1.1.10"
+  },
+  "endpoint": "https://mcp.getfairquery.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fairquery",
+      "version": "0.1.0"
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "21 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.getfairquery.com/mcp"
+}

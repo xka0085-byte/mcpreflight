@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:12.108Z",
+  "server": {
+    "registryName": "at.fixfind/fixfind",
+    "title": "fixfind.at – local offers in Austria",
+    "description": "Products and services from Austrian businesses and shops: search by keyword, location and price.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fixfind.at/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fixfind",
+      "title": "fixfind.at – regionale Angebote in Österreich",
+      "version": "1.0.0",
+      "websiteUrl": "https://fixfind.at/mcp-info.php"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fixfind.at/mcp"
+}

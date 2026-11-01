@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:15.273Z",
+  "server": {
+    "registryName": "io.github.jamhimself/robinx-mcp",
+    "title": "io.github.jamhimself/robinx-mcp",
+    "description": "Robinhood Chain social signal for trading bots: graded X callers, token verdicts, deployer records.",
+    "registryVersion": "0.6.3"
+  },
+  "endpoint": "https://api.robinx.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "robinx",
+      "version": "0.6.0",
+      "title": "RobinX — measured inputs for Robinhood Chain trading agents"
+    },
+    "toolCount": 34,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].min_score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].since has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.robinx.io/mcp"
+}

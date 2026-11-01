@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:31.197Z",
+  "server": {
+    "registryName": "io.github.Cavendo-AI/vantage",
+    "title": "Vantage — Signal Tracker",
+    "description": "Save and query market signals from your AI conversations.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://vantage.cavendo.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vantage.cavendo.ai/mcp"
+}

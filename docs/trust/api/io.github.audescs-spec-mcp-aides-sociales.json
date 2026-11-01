@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:01.148Z",
+  "server": {
+    "registryName": "io.github.audescs-spec/mcp-aides-sociales",
+    "title": "Aides sociales françaises",
+    "description": "API MCP developpeurs: RSA, prime d'activite, APL/ALS. Calculs via OpenFisca (AGPL-3.0).",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://mcp-aides-sociales.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-aides-sociales.onrender.com/mcp"
+}

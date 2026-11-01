@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:41.853Z",
+  "server": {
+    "registryName": "io.consentease/mcp-server",
+    "title": "io.consentease/mcp-server",
+    "description": "Manage ConsentEase consent banners and cookie inventories from your coding agent.",
+    "registryVersion": "1.4.1"
+  },
+  "endpoint": "https://consentease.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://consentease.io/mcp"
+}

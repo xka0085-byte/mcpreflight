@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:46.627Z",
+  "server": {
+    "registryName": "io.github.hypeprinter007-stack/anchor-x402",
+    "title": "io.github.hypeprinter007-stack/anchor-x402",
+    "description": "x402-paid agent tools: 18 over HTTP, 14 over stdio. USDC per call, no API key.",
+    "registryVersion": "0.3.2"
+  },
+  "endpoint": "https://api.anchor-x402.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "anchor-x402",
+      "version": "0.3.0"
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].chain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].tx_hash has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].group_by has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].group_by has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.anchor-x402.com/mcp"
+}

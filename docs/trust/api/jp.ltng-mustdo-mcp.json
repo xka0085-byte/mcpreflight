@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:43.602Z",
+  "server": {
+    "registryName": "jp.ltng/mustdo-mcp",
+    "title": "MustDo",
+    "description": "Read and write your MustDo (iOS alarm To-Do) tasks in your own iCloud via CloudKit.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://ltng.jp/api/mustdo/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ltng.jp/api/mustdo/mcp"
+}

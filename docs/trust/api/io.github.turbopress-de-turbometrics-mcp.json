@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:12.455Z",
+  "server": {
+    "registryName": "io.github.turbopress-de/turbometrics-mcp",
+    "title": "io.github.turbopress-de/turbometrics-mcp",
+    "description": "Website performance monitoring: scans, Core Web Vitals, RUM data and alerts.",
+    "registryVersion": "1.6.2"
+  },
+  "endpoint": "https://turbometrics.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://turbometrics.io/mcp"
+}

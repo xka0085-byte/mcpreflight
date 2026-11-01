@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:01.510Z",
+  "server": {
+    "registryName": "com.getproofsnap/proofsnap-verify",
+    "title": "ProofSnap Verify",
+    "description": "Check without an account whether ProofSnap issued an evidence package.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.getproofsnap.com/verify/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "proofsnap-verify",
+      "title": "ProofSnap Verify",
+      "version": "0.2.0",
+      "description": "Check whether ProofSnap issued an evidence package, by the SHA-256 of its manifest.json. No sign-in.",
+      "websiteUrl": "https://getproofsnap.com/api/mcp.html",
+      "icons": [
+        {
+          "src": "https://getproofsnap.com/proofsnap_logo_socials.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.getproofsnap.com/verify/mcp"
+}

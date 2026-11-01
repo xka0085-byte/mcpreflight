@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:31.922Z",
+  "server": {
+    "registryName": "ai.hotapi/docs",
+    "title": "HotAPI Docs",
+    "description": "Read-only HotAPI documentation: search integration guides and inspect OpenAPI operations.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://hotapi.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "hotapi-docs",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].method has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hotapi.ai/mcp"
+}

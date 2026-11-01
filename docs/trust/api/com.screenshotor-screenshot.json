@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:02.141Z",
+  "server": {
+    "registryName": "com.screenshotor/screenshot",
+    "title": "Screenshotor",
+    "description": "Website screenshots for AI agents: real Chrome, ad/cookie/chat blocking, bot-wall detection.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://screenshotor.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://screenshotor.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:30.876Z",
+  "server": {
+    "registryName": "io.github.jerrysrodz/goldhold",
+    "title": "io.github.jerrysrodz/goldhold",
+    "description": "Persistent memory for AI agents. Search, store, and recall across sessions.",
+    "registryVersion": "1.5.1"
+  },
+  "endpoint": "https://mcp.goldhold.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.goldhold.ai/mcp"
+}

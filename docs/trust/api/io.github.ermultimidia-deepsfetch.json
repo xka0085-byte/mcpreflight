@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:11.675Z",
+  "server": {
+    "registryName": "io.github.ermultimidia/deepsfetch",
+    "title": "DeepSFetch",
+    "description": "Web scraping, extraction and search for AI agents. Hosted MCP with workspace API keys.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://mcp.deepsfetch.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.deepsfetch.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:05.435Z",
+  "server": {
+    "registryName": "io.github.Kromatic-Innovation/krobot",
+    "title": "io.github.Kromatic-Innovation/krobot",
+    "description": "Kromatic's public MCP server for read-only access to the Kromatic knowledge base.",
+    "registryVersion": "2.0"
+  },
+  "endpoint": "https://api.kromatic.com/mcp/krobot",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.kromatic.com/mcp/krobot"
+}

@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:00.442Z",
+  "server": {
+    "registryName": "com.veritaset/mcp",
+    "title": "Veritaset",
+    "description": "Mobile, home internet and energy prices in 34 countries, read on operators' pages and dated.",
+    "registryVersion": "0.6.1"
+  },
+  "endpoint": "https://veritaset.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "veritaset",
+      "title": "Veritaset",
+      "version": "0.12.0",
+      "websiteUrl": "https://veritaset.com/",
+      "description": "Verified, dated consumer prices: mobile plans in 34 markets and home internet in 34; household energy in Belgium, Netherlands, United Kingdom, Spain, ranked by a public method, with a measured accuracy per market."
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].needs_esim has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].needs_5g has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].accept_prepaid has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].needs_esim has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].needs_5g has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].offer_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].wants_tv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].wants_landline has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://veritaset.com/mcp"
+}

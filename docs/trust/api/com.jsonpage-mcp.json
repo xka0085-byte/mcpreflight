@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:15.933Z",
+  "server": {
+    "registryName": "com.jsonpage/mcp",
+    "title": "Jsonpage",
+    "description": "Company data for 14 countries: search firms, check company IDs, validate VAT and EORI numbers.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.jsonpage.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.jsonpage.com/mcp"
+}

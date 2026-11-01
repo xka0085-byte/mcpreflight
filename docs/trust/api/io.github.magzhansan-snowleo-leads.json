@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:30.546Z",
+  "server": {
+    "registryName": "io.github.MagzhanSan/snowleo-leads",
+    "title": "Snow Leo Leads & Contacts",
+    "description": "Local business leads from Google Maps, 7 directories, DuckDuckGo and OpenStreetMap, with contacts",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.apify.com/?actors=snow_leo_data/google-maps-scraper,snow_leo_data/yellow-pages-scraper,snow_leo_data/duckduckgo-scraper,snow_leo_data/openstreetmap-business-scraper,snow_leo_data/website-contact-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=snow_leo_data/google-maps-scraper,snow_leo_data/yellow-pages-scraper,snow_leo_data/duckduckgo-scraper,snow_leo_data/openstreetmap-business-scraper,snow_leo_data/website-contact-scraper"
+}

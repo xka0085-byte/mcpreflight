@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:54.017Z",
+  "server": {
+    "registryName": "io.github.nazar256/memheaven",
+    "title": "MemHeaven — Self-hosted Remote MCP Memory for ChatGPT",
+    "description": "Self-hosted remote MCP memory server for ChatGPT and AI agents.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://{worker_domain}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{worker_domain}/mcp"
+}

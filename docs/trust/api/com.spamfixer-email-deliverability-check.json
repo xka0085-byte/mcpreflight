@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:06.558Z",
+  "server": {
+    "registryName": "com.spamfixer/email-deliverability-check",
+    "title": "SpamFixer Email Deliverability Check",
+    "description": "Why do a domain's emails go to spam? Checks SPF, DKIM, DMARC, MX and blocklists. Free, no login.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://spamfixer.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Checks why a business's emails go to spam: SPF, DKIM, DMARC, MX and blocklists for any domain.",
+      "name": "spamfixer",
+      "title": "SpamFixer Email Deliverability Check",
+      "version": "1.0.0",
+      "websiteUrl": "https://spamfixer.com/"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].domain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://spamfixer.com/mcp"
+}

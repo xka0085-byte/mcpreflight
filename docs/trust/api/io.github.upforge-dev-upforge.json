@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:22.921Z",
+  "server": {
+    "registryName": "io.github.upforge-dev/upforge",
+    "title": "Upforge",
+    "description": "Talk with Upforge Echo, compare services and proof, or request a human-approved project review.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://upforge.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "io.upforge/site",
+      "version": "1.2.0",
+      "title": "Upforge"
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].rights_to_submit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].retention_accepted has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].human_approved has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].rights_to_submit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].review_only has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://upforge.io/api/mcp"
+}

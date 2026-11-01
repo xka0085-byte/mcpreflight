@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:26.257Z",
+  "server": {
+    "registryName": "io.github.fbmdata/maxstat-mcp",
+    "title": "MaxStat MCP",
+    "description": "Search 408K+ MAX channels and 86M+ posts; metrics, reactions, forwards, webhooks and usage.",
+    "registryVersion": "1.2.3"
+  },
+  "endpoint": "https://maxstat.ru/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://maxstat.ru/api/mcp"
+}

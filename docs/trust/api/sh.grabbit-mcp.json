@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:59.566Z",
+  "server": {
+    "registryName": "sh.grabbit/mcp",
+    "title": "Grabbit MCP",
+    "description": "Find high-intent Reddit conversations and manage lead workflows from MCP-compatible AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.grabbit.sh/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.grabbit.sh/mcp"
+}

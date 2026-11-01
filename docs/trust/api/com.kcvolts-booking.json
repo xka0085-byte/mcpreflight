@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:19.926Z",
+  "server": {
+    "registryName": "com.kcvolts/booking",
+    "title": "KC Volts — book electrician in Kansas City",
+    "description": "Book electrician in Kansas City, MO: prices, service area by ZIP, free callback from a local pro.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://kcvolts.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kcvolts.com-booking",
+      "title": "KC Volts — book electrician in Kansas City",
+      "version": "1.0.0",
+      "websiteUrl": "https://kcvolts.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kcvolts.com/mcp"
+}

@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:32.967Z",
+  "server": {
+    "registryName": "com.applytovolunteer/apply2volunteer",
+    "title": "Apply2Volunteer",
+    "description": "Preview or grade a volunteer form. No API key. Free sign-up to publish.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://applytovolunteer.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "apply2volunteer",
+      "title": "Apply2Volunteer",
+      "version": "1.0.0",
+      "websiteUrl": "https://applytovolunteer.com",
+      "icons": [
+        {
+          "src": "https://applytovolunteer.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://applytovolunteer.com/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://applytovolunteer.com/mcp"
+}

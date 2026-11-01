@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:25.316Z",
+  "server": {
+    "registryName": "io.github.BuilderIO/agent-native-plan",
+    "title": "Agent-Native Plan",
+    "description": "Structured visual plans and PR recaps with diagrams, prototypes, annotations, and sharing",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://plan.agent-native.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://plan.agent-native.com/mcp"
+}

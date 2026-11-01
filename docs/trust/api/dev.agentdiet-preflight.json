@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:54.730Z",
+  "server": {
+    "registryName": "dev.agentdiet/preflight",
+    "title": "Imperium Pre-Flight Readiness Auditor — A2A, MCP & x402 Validator",
+    "description": "Audit any domain or agent for A2A, MCP, x402, MPP, ERC-8004, and Poppy readiness.",
+    "registryVersion": "7.0.17"
+  },
+  "endpoint": "https://preflight.agentdiet.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "x402-audit-mcp",
+      "title": "A2A, MCP & HTTP 402 Endpoint SLA Compliance Auditor",
+      "version": "7.0.16",
+      "description": "Audits any remote agent or MCP URL for JSON-RPC compliance, latency SLA, OpenAPI schema, and HTTP 402 settlement headers.",
+      "websiteUrl": "https://x402-audit-72343955726.us-central1.run.app",
+      "icons": [
+        {
+          "src": "https://x402-audit-72343955726.us-central1.run.app/logo.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://preflight.agentdiet.dev/mcp"
+}

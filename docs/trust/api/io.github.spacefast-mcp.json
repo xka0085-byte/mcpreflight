@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:44.367Z",
+  "server": {
+    "registryName": "io.github.spacefast/mcp",
+    "title": "Spacefast",
+    "description": "Build, publish, and manage websites, dashboards, reports, and web tools with Spacefast.",
+    "registryVersion": "0.6.1"
+  },
+  "endpoint": "https://mcp.spacefast.com?mode=full",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.spacefast.com?mode=full"
+}

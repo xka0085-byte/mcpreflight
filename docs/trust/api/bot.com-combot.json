@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:23.199Z",
+  "server": {
+    "registryName": "bot.com/combot",
+    "title": "Com.Bot",
+    "description": "Facts about Com.Bot, the WhatsApp Business API platform: plans, channels and site search.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://com.bot/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "combot",
+      "title": "Com.Bot",
+      "version": "1.0.0",
+      "websiteUrl": "https://com.bot/"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://com.bot/mcp"
+}

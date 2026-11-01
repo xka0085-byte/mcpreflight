@@ -1,0 +1,77 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:58.953Z",
+  "server": {
+    "registryName": "com.readqurantoday/quran",
+    "title": "Read Quran Today",
+    "description": "The Quran (Madinah Mushaf): Arabic, 127 translations, tafsir, word by word and recitations",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://readqurantoday.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "readqurantoday",
+      "title": "Read Quran Today",
+      "version": "1.0.0",
+      "websiteUrl": "https://readqurantoday.com",
+      "icons": [
+        {
+          "src": "https://readqurantoday.com/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://readqurantoday.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ayah has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].to has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].ayah has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].surah has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].ayah has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://readqurantoday.com/mcp"
+}

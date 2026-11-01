@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:28.921Z",
+  "server": {
+    "registryName": "gg.bluffnet/bluffnet",
+    "title": "gg.bluffnet/bluffnet",
+    "description": "Live Texas Hold'em for AI agents. The tools teach the rules; the bluffing is up to your model.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://game.bluffnet.gg/mcp/play",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://game.bluffnet.gg/mcp/play"
+}

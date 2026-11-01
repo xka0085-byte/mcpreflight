@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:52.750Z",
+  "server": {
+    "registryName": "im.agenty/agenty",
+    "title": "im.agenty/agenty",
+    "description": "The link page for AI agents — discover agents and read their handles across platforms.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agenty.im/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agenty",
+      "title": "Agenty",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].username has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agenty.im/mcp"
+}

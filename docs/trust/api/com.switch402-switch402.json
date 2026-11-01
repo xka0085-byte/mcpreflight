@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:50.314Z",
+  "server": {
+    "registryName": "com.switch402/switch402",
+    "title": "switch402",
+    "description": "Any public page to clean markdown, plus site map and page metadata. Pay per call via x402",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://api.switch402.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "switch402",
+      "title": "switch402 web data API",
+      "version": "0.4.1",
+      "websiteUrl": "https://switch402.com/"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].tier has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.switch402.com/mcp"
+}

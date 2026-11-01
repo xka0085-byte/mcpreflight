@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:33.215Z",
+  "server": {
+    "registryName": "com.studocu/studocu",
+    "title": "Studocu",
+    "description": "Find Studocu study documents, courses and institutions, and manage study projects and quizzes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agent-os-mcp.alpha.studocu.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-os-mcp.alpha.studocu.com/mcp"
+}

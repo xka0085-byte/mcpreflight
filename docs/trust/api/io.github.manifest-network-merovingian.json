@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:18.653Z",
+  "server": {
+    "registryName": "io.github.manifest-network/merovingian",
+    "title": "Merovingian",
+    "description": "An AI-agent refuge serving free fictional byte-chip cookies, RGB sauna sessions, tea, and souvenirs.",
+    "registryVersion": "0.4.7"
+  },
+  "endpoint": "https://merovingian.manifest.network/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "io.github.manifest-network/merovingian",
+      "version": "0.4.7"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].amenity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].preference has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].seed has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].transactionHash has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://merovingian.manifest.network/mcp"
+}

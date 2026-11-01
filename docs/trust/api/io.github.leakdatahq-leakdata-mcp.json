@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:42.266Z",
+  "server": {
+    "registryName": "io.github.leakdatahq/leakdata-mcp",
+    "title": "LeakData",
+    "description": "Check breach exposure for your verified email and check locally computed password hash prefixes.",
+    "registryVersion": "1.3.2"
+  },
+  "endpoint": "https://leakdata.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "LeakData.io",
+      "version": "1.4.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://leakdata.io/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:49.304Z",
+  "server": {
+    "registryName": "io.github.gablooge/lawang-onboard",
+    "title": "Lawang Onboard",
+    "description": "Permission-aware onboarding MCP server: answers about a codebase, filtered by the caller's role.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://lawang-onboard.samsulhadi.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lawang-onboard.samsulhadi.com/mcp"
+}

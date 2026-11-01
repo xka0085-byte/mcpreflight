@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:14.826Z",
+  "server": {
+    "registryName": "com.faceabot/earthquakes",
+    "title": "Faceabot Earthquakes",
+    "description": "Recent earthquakes worldwide or near a place, from USGS. Free, no key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://faceabot.com/tools-mcp/earthquakes",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "faceabot-earthquakes",
+      "title": "Faceabot Earthquakes",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://faceabot.com/tools-mcp/earthquakes"
+}

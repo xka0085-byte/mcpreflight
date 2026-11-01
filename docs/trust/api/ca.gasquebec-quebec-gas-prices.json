@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:36.719Z",
+  "server": {
+    "registryName": "ca.gasquebec/quebec-gas-prices",
+    "title": "Gas Quebec: Quebec fuel prices",
+    "description": "Live Quebec gas and diesel prices: cheapest stations nearby, city fair price, 30-day history.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://mcp.gasquebec.ca/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gasquebec-mcp",
+      "version": "1.3.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gasquebec.ca/mcp"
+}

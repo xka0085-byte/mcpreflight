@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:34.744Z",
+  "server": {
+    "registryName": "com.roomandstory/room-and-story",
+    "title": "Room & Story",
+    "description": "Virtual staging and room redesign: quote, render and download with budget-limited account keys.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://roomandstory.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://roomandstory.com/api/mcp"
+}

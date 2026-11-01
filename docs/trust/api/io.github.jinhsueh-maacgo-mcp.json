@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:37.871Z",
+  "server": {
+    "registryName": "io.github.jinhsueh/maacgo-mcp",
+    "title": "io.github.jinhsueh/maacgo-mcp",
+    "description": "Taiwan SMS MCP server for Claude Code, Codex and Cursor. NCC-compliant, 30 free SMS on signup.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://sms.cresclab.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sms.cresclab.com/api/mcp"
+}

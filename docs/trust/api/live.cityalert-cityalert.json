@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:41.376Z",
+  "server": {
+    "registryName": "live.cityalert/cityalert",
+    "title": "CityAlert",
+    "description": "Free live public-safety incident map: global crime, fire, disaster, weather and news feeds",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://cityalert.live/.well-known/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cityalert",
+      "version": "0.1.1",
+      "title": "CityAlert",
+      "description": "Free live public-safety incident map: global crime, fire, disaster, weather and news feeds",
+      "websiteUrl": "https://cityalert.live",
+      "icons": [
+        {
+          "src": "https://cityalert.live/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://cityalert.live/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://cityalert.live/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cityalert.live/.well-known/mcp"
+}

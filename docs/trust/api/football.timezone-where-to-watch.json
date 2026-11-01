@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:54.548Z",
+  "server": {
+    "registryName": "football.timezone/where-to-watch",
+    "title": "timezone.football",
+    "description": "Where to watch football: licensed channel by country, kickoff in your time zone, verified prices.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://timezone.football/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "timezone.football",
+      "title": "timezone.football",
+      "version": "1.0.0",
+      "websiteUrl": "https://timezone.football"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].team has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://timezone.football/mcp"
+}

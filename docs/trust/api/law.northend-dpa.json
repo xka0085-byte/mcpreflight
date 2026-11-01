@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:57.979Z",
+  "server": {
+    "registryName": "law.northend/dpa",
+    "title": "North End Law",
+    "description": "Data processing agreement, $350 flat fee, reviewed and released by a lawyer.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://northend.law/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "northend-law",
+      "title": "North End Law",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].governingLaw has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].governingLaw has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].email has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://northend.law/api/mcp"
+}

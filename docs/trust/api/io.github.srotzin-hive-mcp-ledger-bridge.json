@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:50.776Z",
+  "server": {
+    "registryName": "io.github.srotzin/hive-mcp-ledger-bridge",
+    "title": "Hive Ledger Bridge",
+    "description": "Hive MCP server implementing the EIP-712 over USB/DMK ledger-bridge integration spec…",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hive-mcp-gateway.onrender.com/ledger-bridge/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hive-mcp-gateway.onrender.com/ledger-bridge/mcp"
+}

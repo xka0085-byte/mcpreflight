@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:27.707Z",
+  "server": {
+    "registryName": "io.github.dllio/dll-execution",
+    "title": "DLL Execution",
+    "description": "Free read-only Base Mainnet transaction Preflight and Verification; no signing or custody.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://execution.dll.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dll-execution",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].candidate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].constraints has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].transaction_hash has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].expectation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://execution.dll.io/mcp"
+}

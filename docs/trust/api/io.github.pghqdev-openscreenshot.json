@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:12.784Z",
+  "server": {
+    "registryName": "io.github.PGHQdev/openscreenshot",
+    "title": "OpenScreenShot",
+    "description": "Capture website screenshots (viewport or full page) with local Chrome, or on OpenScreenShot Cloud.",
+    "registryVersion": "2.5.2"
+  },
+  "endpoint": "https://cloud.openscreenshot.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cloud.openscreenshot.app/mcp"
+}

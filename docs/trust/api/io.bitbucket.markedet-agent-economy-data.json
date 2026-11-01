@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:28.923Z",
+  "server": {
+    "registryName": "io.bitbucket.markedet/agent-economy-data",
+    "title": "io.bitbucket.markedet/agent-economy-data",
+    "description": "MCP server counts from the official registry, new servers per day, and MCP/A2A spec changes. As is.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://agent-economy-data.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-economy-data",
+      "title": "Agent economy data (counts from the Official MCP Registry)",
+      "version": "0.3.1"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-economy-data.onrender.com/mcp"
+}

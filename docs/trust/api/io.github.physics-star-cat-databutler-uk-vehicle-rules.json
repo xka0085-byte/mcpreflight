@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:04.737Z",
+  "server": {
+    "registryName": "io.github.physics-star-cat/databutler-uk-vehicle-rules",
+    "title": "io.github.physics-star-cat/databutler-uk-vehicle-rules",
+    "description": "UK vehicle tax (VED) bands, expensive-car supplement, EV rules and MOT fees, sourced.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://databutler.dev/api/mcp/uk-vehicle-rules",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://databutler.dev/api/mcp/uk-vehicle-rules"
+}

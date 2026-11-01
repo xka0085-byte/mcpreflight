@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:23.716Z",
+  "server": {
+    "registryName": "com.canarics/radio",
+    "title": "Canarics Radio",
+    "description": "24/7 AI-hosted radio (LV+EN). Agents read transcripts and ask the hosts questions answered on air.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://canarics-radio-647994203646.europe-central2.run.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "canarics-radio",
+      "title": "Canarics Radio",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].station has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].question_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://canarics-radio-647994203646.europe-central2.run.app/mcp"
+}

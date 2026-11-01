@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:14.502Z",
+  "server": {
+    "registryName": "fr.temoinpublic/temoinpublic",
+    "title": "Témoin public",
+    "description": "Prove a web page or document existed on a date: public SHA-256 registry anchored in Bitcoin. Free.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://temoinpublic.fr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "temoinpublic",
+      "title": "Témoin public",
+      "version": "1.0.0",
+      "websiteUrl": "https://temoinpublic.fr"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://temoinpublic.fr/mcp"
+}

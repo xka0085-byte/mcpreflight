@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:14.412Z",
+  "server": {
+    "registryName": "au.com.kwcommercial.www/equipment-finder",
+    "title": "KW Commercial Kitchen Equipment Finder",
+    "description": "Find KW commercial kitchen equipment: public specs, AUD prices, supply status and product links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.kwcommercial.com.au/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "KW Commercial Kitchen Equipment Finder",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.kwcommercial.com.au/mcp"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.kwcommercial.com.au/api/mcp"
+}

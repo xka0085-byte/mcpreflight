@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:37.114Z",
+  "server": {
+    "registryName": "de.laborregister/laborregister",
+    "title": "Laborregister Deutschland",
+    "description": "Orderable lab tests in Germany by analysis parameter, sample type and provider, with source links.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://laborregister.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "de.laborregister/laborregister",
+      "title": "Laborregister Deutschland",
+      "version": "1.0.0",
+      "websiteUrl": "https://laborregister.de"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://laborregister.de/mcp"
+}

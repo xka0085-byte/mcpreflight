@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:34.847Z",
+  "server": {
+    "registryName": "io.github.cuilinhao/shortsmonkey-youtube-outlier-research",
+    "title": "ShortsMonkey YouTube Outlier Research",
+    "description": "Find YouTube outliers, daily viral Shorts, and analyze video performance.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.shortsmonkey.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.shortsmonkey.com/mcp"
+}

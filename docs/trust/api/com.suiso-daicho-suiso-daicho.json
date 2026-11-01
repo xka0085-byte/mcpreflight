@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:36.528Z",
+  "server": {
+    "registryName": "com.suiso-daicho/suiso-daicho",
+    "title": "すいそう台帳 (Suiso Daicho)",
+    "description": "Water tank cleaning ledger (Japan): due dates, sites, reports, inbox. Bearer API key required.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://suiso-daicho.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://suiso-daicho.com/api/mcp"
+}

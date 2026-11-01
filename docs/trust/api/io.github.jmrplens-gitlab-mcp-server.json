@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:39.191Z",
+  "server": {
+    "registryName": "io.github.jmrplens/gitlab-mcp-server",
+    "title": "GitLab MCP Server",
+    "description": "Go MCP server for GitLab: 2 dynamic tools reach ~876 actions on Free/CE, up to ~1103 on Ultimate.",
+    "registryVersion": "3.4.0"
+  },
+  "endpoint": "https://mcp.jmrp.io/gitlab",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.jmrp.io/gitlab"
+}

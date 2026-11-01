@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:14.405Z",
+  "server": {
+    "registryName": "io.github.kindrat86/carshake",
+    "title": "CarShake",
+    "description": "Vehicle handover checklists, damage-documentation best practices, valet/rental/service FAQs.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://carshake.online/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "carshake-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].use_case has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://carshake.online/api/mcp"
+}

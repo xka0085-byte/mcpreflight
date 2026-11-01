@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:34.470Z",
+  "server": {
+    "registryName": "io.github.ChanghuLiu/england-works-watch",
+    "title": "RegEvidenceHub Sponsor",
+    "description": "RegEvidenceHub Sponsor: UK Skilled Worker sponsor-change preflight with GOV.UK evidence.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://works.regevidencehub.com/ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "UK Sponsor Change Checker",
+      "version": "0.1.2",
+      "websiteUrl": "https://regevidencehub.com/about/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].payload has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://works.regevidencehub.com/ai/mcp"
+}

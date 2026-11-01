@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:15.953Z",
+  "server": {
+    "registryName": "com.faceabot/rail-finland",
+    "title": "Faceabot Rail Finland (VR)",
+    "description": "Finnish trains (VR, Helsinki commuter): live direct trains and departures. Free, no key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://faceabot.com/tools-mcp/fi-rail",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "faceabot-rail-finland",
+      "title": "Faceabot Rail Finland",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].time_is has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].results has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://faceabot.com/tools-mcp/fi-rail"
+}

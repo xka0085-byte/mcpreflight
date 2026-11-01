@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:05.128Z",
+  "server": {
+    "registryName": "io.github.Komplyzen/komplyt-zero",
+    "title": "Komplyt Zero",
+    "description": "Persistent working memory for AI agents: a knowledge graph with semantic search and decay.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://kg.kompl.yt/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kg.kompl.yt/mcp"
+}

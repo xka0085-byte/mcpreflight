@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:41.319Z",
+  "server": {
+    "registryName": "live.status/themeparks",
+    "title": "status.live theme parks",
+    "description": "Live ride status and wait times at 140 theme parks, with local time and weather.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://status.live/themeparks/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "status-live-themeparks",
+      "version": "0.3.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://status.live/themeparks/mcp"
+}

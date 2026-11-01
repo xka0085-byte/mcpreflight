@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:37.839Z",
+  "server": {
+    "registryName": "io.github.RodRomer/render-mcp",
+    "title": "io.github.RodRomer/render-mcp",
+    "description": "Hosted browser for AI agents: screenshots, post-JS DOM, console, WCAG. No install, no API key.",
+    "registryVersion": "0.7.4"
+  },
+  "endpoint": "https://render.makermargins.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://render.makermargins.com/mcp"
+}

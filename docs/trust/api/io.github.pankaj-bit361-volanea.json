@@ -1,0 +1,61 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:18.800Z",
+  "server": {
+    "registryName": "io.github.Pankaj-bit361/volanea",
+    "title": "Volanea",
+    "description": "Email infrastructure on Volanea: build templates, segments and workflows, send and check email.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.volanea.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "volanea",
+      "title": "Volanea",
+      "version": "0.1.0",
+      "description": "Email platform for agents: transactional sending, campaigns, and lifecycle automation over one contact graph. Tools document how each operation fails, not just its parameters, and every \"did it work?\" question has a tool that answers honestly — rendered previews, delivery logs, workflow run logs, and signed webhook deliveries.",
+      "websiteUrl": "https://volanea.com",
+      "icons": [
+        {
+          "src": "https://volanea.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 27,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].inboxId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].inboxId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].timeoutSeconds has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].inboxId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.volanea.com/mcp"
+}

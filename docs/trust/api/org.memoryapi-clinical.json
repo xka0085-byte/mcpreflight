@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:34.533Z",
+  "server": {
+    "registryName": "org.memoryapi/clinical",
+    "title": "Clinical Trials",
+    "description": "Clinical trial search and status from ClinicalTrials.gov",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://clinical.memoryapi.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "AgentClinical",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://clinical.memoryapi.org/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:43.798Z",
+  "server": {
+    "registryName": "com.nolamechanic/booking",
+    "title": "NOLA Mechanic — book mobile mechanic in New Orleans",
+    "description": "Book mobile mechanic in New Orleans, LA: prices, ZIP coverage, free callback.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nolamechanic.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nolamechanic.com-booking",
+      "title": "NOLA Mechanic — book mobile mechanic in New Orleans",
+      "version": "1.0.0",
+      "websiteUrl": "https://nolamechanic.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nolamechanic.com/mcp"
+}

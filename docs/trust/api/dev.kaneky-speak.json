@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:38.381Z",
+  "server": {
+    "registryName": "dev.kaneky/speak",
+    "title": "Speak",
+    "description": "Text to natural speech as MP3: 38 voices, 7 languages, 1,000 chars per call. Paid per call, x402.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://speak.kaneky.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "speak",
+      "version": "0.1.1"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].speed has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://speak.kaneky.dev/mcp"
+}

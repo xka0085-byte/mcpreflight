@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:49.315Z",
+  "server": {
+    "registryName": "io.github.SerKnight/powder-to-the-people-snow-mcp",
+    "title": "Powder to the People Snow Reports",
+    "description": "Free snow reports, forecasts and season history for ~400 US and Canada ski resorts, with citations.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://powdertothepeople.org/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "powder-to-the-people-snow",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].theme has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://powdertothepeople.org/api/mcp"
+}

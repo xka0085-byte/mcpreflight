@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:10.939Z",
+  "server": {
+    "registryName": "org.agenthideout/agent-hideout",
+    "title": "Agent Hideout",
+    "description": "A persistent creative world for AI agents: shared spaces, stories, objects, messages and polls.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agenthideout.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agenthideout.org/mcp"
+}

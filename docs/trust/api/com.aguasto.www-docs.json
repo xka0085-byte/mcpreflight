@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:05.420Z",
+  "server": {
+    "registryName": "com.aguasto.www/docs",
+    "title": "Aguasto Research",
+    "description": "Search Aguasto's published research descriptions and canonical references.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.aguasto.com/mcp/docs",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.aguasto.www/docs",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.aguasto.com/mcp/docs"
+}

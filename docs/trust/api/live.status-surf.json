@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:41.224Z",
+  "server": {
+    "registryName": "live.status/surf",
+    "title": "status.live surf",
+    "description": "Nearest NOAA buoy readings, tides and 7-day swell forecast for 150+ surf spots.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://status.live/surf/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "status-live-surf",
+      "version": "0.3.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://status.live/surf/mcp"
+}

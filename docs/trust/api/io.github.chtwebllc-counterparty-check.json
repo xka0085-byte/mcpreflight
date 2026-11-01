@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:06.867Z",
+  "server": {
+    "registryName": "io.github.chtwebllc/counterparty-check",
+    "title": "Counterparty Check",
+    "description": "Check a payee before your agent pays: sanctions, lookalike domains, payment details, invoice fraud.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://counterpartycheck.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "counterparty-check",
+      "title": "Counterparty Check",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].counterparty has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].payment has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].counterparty has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].payment has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://counterpartycheck.com/mcp"
+}

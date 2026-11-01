@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:22.328Z",
+  "server": {
+    "registryName": "com.kestrelvoice/kestrelvoice",
+    "title": "Kestrel Voice",
+    "description": "AI receptionist: calls, leads, credits, usage, workflows and guided setup via OAuth",
+    "registryVersion": "2.4.0"
+  },
+  "endpoint": "https://kestrelvoice.com/api/mcp/v2",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kestrelvoice.com/api/mcp/v2"
+}

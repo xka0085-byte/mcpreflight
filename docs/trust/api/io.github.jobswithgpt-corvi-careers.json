@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:38.896Z",
+  "server": {
+    "registryName": "io.github.jobswithgpt/corvi-careers",
+    "title": "Corvi Careers",
+    "description": "Search remote and onsite jobs through the public Corvi Careers MCP server.",
+    "registryVersion": "1.27.0"
+  },
+  "endpoint": "https://corvi.careers/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://corvi.careers/mcp"
+}

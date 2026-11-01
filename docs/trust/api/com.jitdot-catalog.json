@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:08.330Z",
+  "server": {
+    "registryName": "com.jitdot/catalog",
+    "title": "짓닷 자재 찾기",
+    "description": "짓닷(jitdot.com)에 공개된 타일 · 마루 · LVT 등 인테리어 마감재를 규격 · 재질 · 마감으로 찾는 읽기 전용 카탈로그",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jitdot.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jitdot-catalog",
+      "title": "짓닷 자재 찾기",
+      "version": "1.1.0",
+      "websiteUrl": "https://jitdot.com/developers/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jitdot.com/mcp"
+}

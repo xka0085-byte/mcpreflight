@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:19.063Z",
+  "server": {
+    "registryName": "com.datacrate360/guides-and-fixes",
+    "title": "DataCrate360 Guides & Fixes",
+    "description": "Search verified fixes and guides for data tools (Snowflake, dbt, Airflow, Spark…). Paste an error.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.datacrate360.com/api/mcp/public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "datacrate360-fixes",
+      "title": "DataCrate360 Guides & Fixes",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://datacrate360.com/logo-mark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ],
+      "websiteUrl": "https://datacrate360.com/guides-and-fixes"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].post_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.datacrate360.com/api/mcp/public"
+}

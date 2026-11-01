@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:27.062Z",
+  "server": {
+    "registryName": "io.github.ronybarbosa/alugar-ou-comprar",
+    "title": "Alugar ou Comprar — MCP Server",
+    "description": "Motor financeiro determinístico: simula comprar vs alugar imóvel.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://alugar-ou-comprar.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "alugar-ou-comprar",
+      "version": "0.1.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].rendaLiquidaMensal has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].comprometimentoExistenteMensal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://alugar-ou-comprar.vercel.app/api/mcp"
+}

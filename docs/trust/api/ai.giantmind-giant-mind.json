@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:27.286Z",
+  "server": {
+    "registryName": "ai.giantmind/giant-mind",
+    "title": "Giant Mind",
+    "description": "Ask what you saved in Giant Mind and get a brief of recent memories. Saving new memories is opt-in.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://giantmind.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://giantmind.ai/mcp"
+}

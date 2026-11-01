@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:34.118Z",
+  "server": {
+    "registryName": "io.github.docracy1/chasa",
+    "title": "io.github.docracy1/chasa",
+    "description": "AI invoice follow-up emails for freelancers. Draft-only, never sends for you.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.chasa.io/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.chasa.io/mcp"
+}

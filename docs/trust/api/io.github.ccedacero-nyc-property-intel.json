@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:56.950Z",
+  "server": {
+    "registryName": "io.github.ccedacero/nyc-property-intel",
+    "title": "io.github.ccedacero/nyc-property-intel",
+    "description": "MCP server giving Claude AI access to 22+ NYC public-record databases for real estate due diligence",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://nyc-property-intel-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nyc-property-intel-production.up.railway.app/mcp"
+}

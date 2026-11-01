@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:50.909Z",
+  "server": {
+    "registryName": "org.ukrfish.sk/sudnokontrol",
+    "title": "SudnoKontrol",
+    "description": "Ukrainian vessel registry: search by number/name/owner, full records, stats. No API key required.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.sk.ukrfish.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SudnoKontrol",
+      "version": "1.0.1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.sk.ukrfish.org/mcp"
+}

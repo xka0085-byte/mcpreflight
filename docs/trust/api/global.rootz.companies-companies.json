@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:31.392Z",
+  "server": {
+    "registryName": "global.rootz.companies/companies",
+    "title": "global.rootz.companies/companies",
+    "description": "Verify a US company: officers, agents, motor carriers. Flags when our status disagrees with state.",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://companies.rootz.global/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "companies-rootz",
+      "version": "0.1.0",
+      "description": "31,447,276 US business entities, 25,698,891 officers, 4,510,668 motor carriers and 2,013,481 nonprofits. US business registry data from all 56 state and territory registries, plus FMCSA motor carriers, IRS nonprofits and professional licences. Answers one narrow question well: is this company real, who controls it, is it in good standing, and what changed. Change history is Ed25519-signed, Merkle-anchored and Bitcoin-timestamped, and every fact links to its own evidence. Coverage is published rather than implied — see /api/freshness for reach and depth per source, including what is missing. Free, no API key. From Rootz."
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "13 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://companies.rootz.global/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:32.632Z",
+  "server": {
+    "registryName": "io.github.ryuamarines/url-normalizer",
+    "title": "io.github.ryuamarines/url-normalizer",
+    "description": "Normalizes and deduplicates a list of URLs. x402 payment required (testnet USDC, Base Sepolia).",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://ai-factory-mcp.ryuamarines.workers.dev/url-normalizer/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai-factory-url-normalizer",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].stripParams has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].forceHttps has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].keepTrailingSlash has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai-factory-mcp.ryuamarines.workers.dev/url-normalizer/mcp"
+}

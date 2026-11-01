@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:19.911Z",
+  "server": {
+    "registryName": "ai.ragjur/mcp",
+    "title": "ai.ragjur/mcp",
+    "description": "Brazilian legal search and jurimetria: 115M+ court decisions from 90+ courts across 14 MCP tools.",
+    "registryVersion": "2.5.1"
+  },
+  "endpoint": "https://mcp.ragjur.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ragjur.ai/mcp"
+}

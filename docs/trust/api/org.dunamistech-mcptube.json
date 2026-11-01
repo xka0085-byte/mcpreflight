@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:25.075Z",
+  "server": {
+    "registryName": "org.dunamistech/mcptube",
+    "title": "MCPTube",
+    "description": "Search YouTube videos, read transcripts and get public video information in your AI assistant.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.mcptube.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.mcptube.com/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mcptube.com/mcp"
+}

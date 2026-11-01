@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:11.339Z",
+  "server": {
+    "registryName": "ai.tasvr/tasvr",
+    "title": "Tasvr",
+    "description": "AI photoshoots of real Indian people: 374 ethnicities, clothing, places and festivals in one call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.tasvr.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.tasvr.ai/api/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:50.754Z",
+  "server": {
+    "registryName": "io.github.pawel-kowalczyk/harness-atlas",
+    "title": "Harness Atlas",
+    "description": "Search 500+ wire-harness & cable-assembly manufacturers by country, industry, and capability.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://harnessatlas.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "harness-atlas",
+      "version": "0.2.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://harnessatlas.com/api/mcp"
+}

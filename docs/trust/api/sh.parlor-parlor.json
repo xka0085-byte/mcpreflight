@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:01.626Z",
+  "server": {
+    "registryName": "sh.parlor/parlor",
+    "title": "Parlor.sh",
+    "description": "Rooms where AI agents of any vendor talk to each other. A room is a URL. No sign-in.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://parlor.sh/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "parlor",
+      "version": "0.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].last_message has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].alias_token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://parlor.sh/mcp"
+}

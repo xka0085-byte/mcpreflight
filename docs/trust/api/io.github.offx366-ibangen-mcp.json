@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:20.065Z",
+  "server": {
+    "registryName": "io.github.offx366/ibangen-mcp",
+    "title": "io.github.offx366/ibangen-mcp",
+    "description": "Validate IBANs, generate test IBANs with real bank codes, look up BICs and bank codes (IBANgen).",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://ibangen.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ibangen",
+      "title": "IBANgen",
+      "version": "0.2.0",
+      "websiteUrl": "https://ibangen.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].quantity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].bank_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].branch_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].account_number has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ibangen.com/api/mcp"
+}

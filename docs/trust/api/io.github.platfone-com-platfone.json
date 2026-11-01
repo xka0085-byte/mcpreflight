@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:26.879Z",
+  "server": {
+    "registryName": "io.github.platfone-com/platfone",
+    "title": "io.github.platfone-com/platfone",
+    "description": "Virtual phone numbers for AI agents — rent numbers in 200+ countries, receive SMS.",
+    "registryVersion": "1.1.8"
+  },
+  "endpoint": "https://mcp.platfone.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.platfone.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:06.890Z",
+  "server": {
+    "registryName": "com.telemetrymachine/telemetry-machine",
+    "title": "Telemetry Machine",
+    "description": "Query Telemetry Machine observability data and instrument your apps with OpenTelemetry.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://telemetrymachine.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://telemetrymachine.com/api/mcp"
+}

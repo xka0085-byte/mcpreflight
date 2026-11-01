@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:59.530Z",
+  "server": {
+    "registryName": "io.github.chancewalker165-dot/ransack",
+    "title": "Ransack",
+    "description": "Web search & fetch MCP for AI agents: 12 engines, one key, flat $15/mo at ransack.tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ransack.tools/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ransack.tools/mcp"
+}

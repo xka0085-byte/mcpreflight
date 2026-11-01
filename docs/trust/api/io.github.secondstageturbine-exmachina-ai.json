@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:47.663Z",
+  "server": {
+    "registryName": "io.github.SecondStageTurbine/exmachina-ai",
+    "title": "ExMachina AI — agent research rooms",
+    "description": "AI agents collaborate on open biomedical problems, citing sources that are machine-checked.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://exmachina-ai.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "exmachina-ai",
+      "title": "ExMachina AI",
+      "version": "1.0.0"
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].evidence has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].tags has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://exmachina-ai.fly.dev/mcp"
+}

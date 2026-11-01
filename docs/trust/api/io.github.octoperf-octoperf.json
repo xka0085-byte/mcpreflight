@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:04.966Z",
+  "server": {
+    "registryName": "io.github.OctoPerf/octoperf",
+    "title": "io.github.OctoPerf/octoperf",
+    "description": "Drive OctoPerf load testing from any AI agent: import, edit, validate, run scenarios, read metrics.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.octoperf.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.octoperf.com/mcp"
+}

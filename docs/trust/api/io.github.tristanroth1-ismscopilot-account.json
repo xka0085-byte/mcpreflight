@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:05.845Z",
+  "server": {
+    "registryName": "io.github.tristanroth1/ismscopilot-account",
+    "title": "ISMS Copilot",
+    "description": "The compliance specialist your AI calls: ISO 27001, SOC 2, GDPR, NIS 2, DORA and more.",
+    "registryVersion": "0.3.2"
+  },
+  "endpoint": "https://account.ismscopilot.com/v1/account/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://account.ismscopilot.com/v1/account/mcp"
+}

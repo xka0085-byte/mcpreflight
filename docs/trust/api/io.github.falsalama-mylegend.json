@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:25.487Z",
+  "server": {
+    "registryName": "io.github.falsalama/mylegend",
+    "title": "MyLegend — public profiles, rich cards and personal agents",
+    "description": "Find owner-published people, display rich profile cards and ask approved public questions. No login.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mylegend.id/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mylegend",
+      "version": "1.0.1",
+      "icons": [
+        {
+          "src": "https://mylegend.id/mylegend-emblem.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].fields has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].expectedRevision has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mylegend.id/mcp"
+}

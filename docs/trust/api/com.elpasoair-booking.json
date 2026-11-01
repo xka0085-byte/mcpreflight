@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:55.589Z",
+  "server": {
+    "registryName": "com.elpasoair/booking",
+    "title": "El Paso Air — book AC repair in El Paso",
+    "description": "Book AC repair in El Paso, TX: prices, service area by ZIP, free callback from a local pro.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://elpasoair.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "elpasoair.com-booking",
+      "title": "El Paso Air — book AC repair in El Paso",
+      "version": "1.0.0",
+      "websiteUrl": "https://elpasoair.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://elpasoair.com/mcp"
+}

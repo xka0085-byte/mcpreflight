@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:11.987Z",
+  "server": {
+    "registryName": "fr.publicoffre/marches-publics",
+    "title": "PublicOffre — marchés publics français",
+    "description": "French public procurement: open tenders, who wins contracts, company references, local finances.",
+    "registryVersion": "3.31.0"
+  },
+  "endpoint": "https://www.publicoffre.fr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fr.publicoffre/marches-publics",
+      "title": "PublicOffre — marchés publics français",
+      "version": "3.69.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limite has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.publicoffre.fr/mcp"
+}

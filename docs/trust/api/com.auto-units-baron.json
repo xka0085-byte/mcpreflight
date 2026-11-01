@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:47.096Z",
+  "server": {
+    "registryName": "com.auto-units/baron",
+    "title": "Baron",
+    "description": "Explore AI business ideas and prepare a business brief for review in Baron.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://trybaron.ai/mcp-public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Baron",
+      "version": "0.1.1",
+      "icons": [
+        {
+          "src": "https://trybaron.ai/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "1024x1024"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://trybaron.ai/mcp-public"
+}

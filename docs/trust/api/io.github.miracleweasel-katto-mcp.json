@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:27.852Z",
+  "server": {
+    "registryName": "io.github.miracleweasel/katto-mcp",
+    "title": "io.github.miracleweasel/katto-mcp",
+    "description": "AI video clipping MCP: long videos and podcasts into scored, captioned 9:16 shorts.",
+    "registryVersion": "0.6.1"
+  },
+  "endpoint": "https://mcp.katto.tech/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.katto.tech/mcp"
+}

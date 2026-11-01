@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:16.766Z",
+  "server": {
+    "registryName": "xyz.lizzflix/lizzflix",
+    "title": "LizzFlix",
+    "description": "Plan, cast and render short AI video series in your LizzFlix studio.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.lizzflix.xyz/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.lizzflix.xyz/mcp"
+}

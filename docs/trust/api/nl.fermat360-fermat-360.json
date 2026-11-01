@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:36.156Z",
+  "server": {
+    "registryName": "nl.fermat360/fermat-360",
+    "title": "Fermat 360",
+    "description": "Dutch legal AI for law firms: answers from Dutch case law, legislation and EU law, with citations.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://fermat360.nl/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fermat360.nl/mcp"
+}

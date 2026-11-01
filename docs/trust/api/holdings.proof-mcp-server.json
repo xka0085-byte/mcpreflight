@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:45.817Z",
+  "server": {
+    "registryName": "holdings.proof/mcp-server",
+    "title": "Proof Holdings",
+    "description": "One API, all things verified — control, delegation, human approval, anti-impersonation.",
+    "registryVersion": "1.7.1"
+  },
+  "endpoint": "https://api.proof.holdings/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "proof-holdings",
+      "version": "1.7.1"
+    },
+    "toolCount": 167,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[26].context has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.proof.holdings/mcp"
+}

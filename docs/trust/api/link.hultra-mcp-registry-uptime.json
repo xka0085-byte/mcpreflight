@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:22.690Z",
+  "server": {
+    "registryName": "link.hultra/mcp-registry-uptime",
+    "title": "link.hultra/mcp-registry-uptime",
+    "description": "Annuaire vérifié des serveurs MCP : ce qui est mort, protégé ou en retard de spec.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://link-mcp.hultra-site.workers.dev",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2026-07-28",
+    "serverInfo": {
+      "name": "hultra-link",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].serveur has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].depuis has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://link-mcp.hultra-site.workers.dev"
+}

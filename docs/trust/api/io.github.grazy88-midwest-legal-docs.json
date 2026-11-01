@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:10.323Z",
+  "server": {
+    "registryName": "io.github.grazy88/midwest-legal-docs",
+    "title": "io.github.grazy88/midwest-legal-docs",
+    "description": "Legal-form catalog, search, and checkout for AI agents. Document prep only; not a law firm.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://midwest-legal-docs-mcp.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://midwest-legal-docs-mcp.onrender.com/mcp"
+}

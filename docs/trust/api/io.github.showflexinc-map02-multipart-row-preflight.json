@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:20.402Z",
+  "server": {
+    "registryName": "io.github.showflexinc/map02-multipart-row-preflight",
+    "title": "Multipart row preflight",
+    "description": "CSV row-structure inspection (inspect_parts) and manifest comparison (compare_manifest).",
+    "registryVersion": "0.1.0-probe.20261030221223.haf567e6da00b"
+  },
+  "endpoint": "https://foundry-map02.showflex.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foundry-map02.showflex.workers.dev/mcp"
+}

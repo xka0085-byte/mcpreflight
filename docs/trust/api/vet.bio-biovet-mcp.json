@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:49.268Z",
+  "server": {
+    "registryName": "vet.bio/biovet-mcp",
+    "title": "vet.bio/biovet-mcp",
+    "description": "Moscow vet clinic network (20 clinics, 24/7): clinics, live prices, slots, booking, triage. Russian",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://bio.vet/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "biovet",
+      "title": "БиоВет — сеть ветклиник (Москва, 24/7)",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "7 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bio.vet/mcp"
+}

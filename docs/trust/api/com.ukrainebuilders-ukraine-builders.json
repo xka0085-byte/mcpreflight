@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:34.719Z",
+  "server": {
+    "registryName": "com.ukrainebuilders/ukraine-builders",
+    "title": "Ukraine Builders",
+    "description": "Open tenders, signed contracts, upcoming projects and guides for Ukraine's reconstruction.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ukrainebuilders.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ukraine-builders",
+      "title": "Ukraine Builders",
+      "version": "1.0.0",
+      "websiteUrl": "https://ukrainebuilders.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sector has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ukrainebuilders.com/api/mcp"
+}

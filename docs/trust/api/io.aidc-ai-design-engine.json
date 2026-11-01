@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:17.525Z",
+  "server": {
+    "registryName": "io.aidc-ai/design-engine",
+    "title": "io.aidc-ai/design-engine",
+    "description": "AI data-center design engine: size, validate & lay out Rubin-era data centers. Korea live.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aidc-ai.io/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aidc-ai.io/api/mcp"
+}

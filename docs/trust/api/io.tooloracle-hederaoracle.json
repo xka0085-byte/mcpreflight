@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:12.016Z",
+  "server": {
+    "registryName": "io.tooloracle/hederaoracle",
+    "title": "io.tooloracle/hederaoracle",
+    "description": "HederaOracle - 12 Hedera tools: HCS, HTS tokens, mirror node, consensus, governance.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tooloracle.io/hedera/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "HederaOracle",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].protocol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].min_tvl_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].account has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tooloracle.io/hedera/mcp/"
+}

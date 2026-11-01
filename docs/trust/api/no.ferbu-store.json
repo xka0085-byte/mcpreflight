@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:42.384Z",
+  "server": {
+    "registryName": "no.ferbu/store",
+    "title": "Klinikk Ferbu nettbutikk",
+    "description": "Klinikk Ferbu web shop: cosmetic hair-care products, live shipping quotes, Stripe checkout links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ferbu.no/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "klinikk-ferbu-store",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].delivery_method has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ferbu.no/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:39.791Z",
+  "server": {
+    "registryName": "jp.afdb/mcp",
+    "title": "jp.afdb/mcp",
+    "description": "Search current Japanese point-site rewards, conditions, yen values, and observation times.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.afdb.jp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "AFDB",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.afdb.jp/mcp"
+}

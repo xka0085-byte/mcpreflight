@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:09.540Z",
+  "server": {
+    "registryName": "io.github.11Agents/cloud-mcp",
+    "title": "11agents Cloud MCP",
+    "description": "Cloud MCP for project data, analytics, research, content planning, media generation, and growth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.11agents.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.11agents.ai/mcp"
+}

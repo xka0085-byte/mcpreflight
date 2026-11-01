@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:16.466Z",
+  "server": {
+    "registryName": "io.github.beepboop2025/liquilens-trade-safety-gateway",
+    "title": "LiquiLens Trade Safety Gateway",
+    "description": "Read-only checks for proposed orders against evidence and policy; no trading or payment authority.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://trade-safety.liquilens.in/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://trade-safety.liquilens.in/mcp"
+}

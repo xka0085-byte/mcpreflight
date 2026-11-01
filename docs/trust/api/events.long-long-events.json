@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:43.469Z",
+  "server": {
+    "registryName": "events.long/long-events",
+    "title": "LONG Events",
+    "description": "Search events, conference weeks, cities, venues and artist schedules via remote MCP.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://long.events/functions/v1/mcp-server/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "long-events",
+      "title": "LONG Events",
+      "version": "1.2.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "16 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://long.events/functions/v1/mcp-server/mcp"
+}

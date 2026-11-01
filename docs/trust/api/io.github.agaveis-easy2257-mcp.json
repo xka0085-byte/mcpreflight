@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:34.069Z",
+  "server": {
+    "registryName": "io.github.Agaveis/easy2257-mcp",
+    "title": "Easy2257",
+    "description": "Read your 18 U.S.C. 2257 compliance records: what is outstanding, expiring, or certified.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://easy2257.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://easy2257.com/api/mcp"
+}

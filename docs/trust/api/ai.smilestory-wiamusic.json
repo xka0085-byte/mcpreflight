@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:39.628Z",
+  "server": {
+    "registryName": "ai.smilestory/wiamusic",
+    "title": "WIA Music catalog",
+    "description": "Search the WIA Music catalog of original K-pop, K-trot and K-ballad songs: details, key, BPM.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp-wiamusic.smilestory.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wiamusic",
+      "title": "WIA Music Catalog",
+      "version": "1.0.0",
+      "websiteUrl": "https://wiamusic.smilestory.ai"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].bpm_min has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].bpm_max has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].has_lyrics has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-wiamusic.smilestory.ai/mcp"
+}

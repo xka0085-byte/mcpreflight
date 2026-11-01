@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:51.981Z",
+  "server": {
+    "registryName": "io.github.dsers/dsers-mcp-server",
+    "title": "DSers Official MCP Server",
+    "description": "Official DSers MCP for dropshipping: import, edit, price, and publish products to Shopify and Wix.",
+    "registryVersion": "1.8.4"
+  },
+  "endpoint": "https://ai.dsers.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.dsers.com/mcp"
+}

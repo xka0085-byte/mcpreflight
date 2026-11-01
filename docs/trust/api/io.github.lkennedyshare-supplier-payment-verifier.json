@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:09.860Z",
+  "server": {
+    "registryName": "io.github.LKennedyShare/supplier-payment-verifier",
+    "title": "Supplier Payment Decision Agent (Ireland)",
+    "description": "Free daily IBAN, VIES VAT and CRO checks; paid invoice decisions. x402. Never moves invoice money.",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://supplier-payment-verifier-production.up.railway.app/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Supplier Payment Decision Agent",
+      "version": "1.30.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].transaction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].customer_assertions has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].payment_destination has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].requested_at has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].evidence has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].callback has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].metadata has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://supplier-payment-verifier-production.up.railway.app/mcp/"
+}

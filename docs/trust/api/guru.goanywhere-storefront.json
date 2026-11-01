@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:40.762Z",
+  "server": {
+    "registryName": "guru.goanywhere/storefront",
+    "title": "guru.goanywhere/storefront",
+    "description": "US college admissions fit (College Scorecard bands) + verified admitted-student mentor search.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://goanywhere.guru/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "goanywhere-storefront",
+      "version": "0.2.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://goanywhere.guru/api/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:58.143Z",
+  "server": {
+    "registryName": "com.connectorreport/connectorreport",
+    "title": "ConnectorReport",
+    "description": "Hands-on test results for 560+ remote MCP connectors: does it work, how to sign in, what breaks.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://connectorreport.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://connectorreport.com/api/mcp"
+}

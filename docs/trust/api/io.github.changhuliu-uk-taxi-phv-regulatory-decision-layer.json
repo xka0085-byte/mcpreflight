@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:34.876Z",
+  "server": {
+    "registryName": "io.github.ChanghuLiu/uk-taxi-phv-regulatory-decision-layer",
+    "title": "RegEvidenceHub Taxi",
+    "description": "RegEvidenceHub Taxi: England taxi/PHV licensing preflight and council comparison.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://taxi.regevidencehub.com/ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Public payment-free England taxi and private-hire (PHV) licensing preflight for supported authorities. Use it to inspect authority coverage, source freshness, applicant or fleet blockers, missing facts, next actions, and cross-authority trade-offs. Results are evidence-linked preflight information, not licensing-authority approval or legal advice.",
+      "name": "UK Taxi PHV Regulatory Decision Layer",
+      "title": "UK Taxi PHV Regulatory Decision Layer",
+      "version": "1.0.3",
+      "websiteUrl": "https://regevidencehub.com/about/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://taxi.regevidencehub.com/ai/mcp"
+}

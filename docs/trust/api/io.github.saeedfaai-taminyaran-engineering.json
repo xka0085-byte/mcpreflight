@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:35:46.062Z",
+  "server": {
+    "registryName": "io.github.saeedfaai/taminyaran-engineering",
+    "title": "Taminyaran Engineering MCP",
+    "description": "Engineering MCP for geosynthetics, waterproofing, drainage, ponds, foundations and tunnels.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://mcp.taminyaran.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ty-engineering-mcp",
+      "version": "0.5.1"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.taminyaran.com/mcp"
+}

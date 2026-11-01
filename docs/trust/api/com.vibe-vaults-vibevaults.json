@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:05.431Z",
+  "server": {
+    "registryName": "com.vibe-vaults/vibevaults",
+    "title": "VibeVaults",
+    "description": "Read clients' pinned website feedback and, if allowed, reply and set status from your AI tool.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.vibe-vaults.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.vibe-vaults.com/api/mcp"
+}

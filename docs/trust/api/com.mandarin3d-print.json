@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:19.283Z",
+  "server": {
+    "registryName": "com.mandarin3d/print",
+    "title": "Mandarin 3D",
+    "description": "Quote, price and order custom 3D prints (PLA) shipped anywhere in the US.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mandarin3d.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mandarin-3d",
+      "title": "Mandarin 3D: custom 3D printing",
+      "version": "1.0.0",
+      "websiteUrl": "https://mandarin3d.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].quote_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].qty has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].color has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].quote_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].color has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].qty has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mandarin3d.com/mcp"
+}

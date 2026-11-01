@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:27.840Z",
+  "server": {
+    "registryName": "com.thailandfunexperiences/thailand-fun-experiences",
+    "title": "Thailand Fun Experiences",
+    "description": "Phuket activity search with live weather, sea state, transfer times and party-fit filtering.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://thailandfunexperiences.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "thailand-fun-experiences",
+      "version": "1.0.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_duration_minutes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://thailandfunexperiences.com/mcp"
+}

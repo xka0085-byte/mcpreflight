@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:19.350Z",
+  "server": {
+    "registryName": "io.github.LienDeadline/liendeadline-mcp",
+    "title": "LienDeadline",
+    "description": "Statute-cited lien and notice deadlines for material suppliers; lien guides for 50 states and DC.",
+    "registryVersion": "0.5.7"
+  },
+  "endpoint": "https://mcp.liendeadline.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "liendeadline",
+      "title": "LienDeadline",
+      "version": "0.5.6"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].project_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].hired_by has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].project_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].hired_by has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.liendeadline.com/mcp"
+}

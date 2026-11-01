@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:12.285Z",
+  "server": {
+    "registryName": "com.rendlet/pdf",
+    "title": "Rendlet PDF",
+    "description": "HTML or JSON templates (invoice, itinerary) to PDF. Free plan: 100 documents/month.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://rendlet.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rendlet",
+      "title": "Rendlet PDF",
+      "version": "0.2.0",
+      "websiteUrl": "https://rendlet.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].landscape has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].filename has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].template has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].filename has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rendlet.com/mcp"
+}

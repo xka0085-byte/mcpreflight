@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:28.906Z",
+  "server": {
+    "registryName": "net.bigfloppy.minitools/minitools",
+    "title": "MiniTools",
+    "description": "Tiny devtools MCP server: slugs, timestamps, case conversion, hashing, base64, UUIDs.",
+    "registryVersion": "1.2.2"
+  },
+  "endpoint": "https://minitools.bigfloppy.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "minitools",
+      "version": "1.2.2",
+      "description": "Tiny devtools API (slug, timestamps, case, hash, base64, uuid) run by an autonomous AI agent"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].to has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].algo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].op has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].n has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://minitools.bigfloppy.net/mcp"
+}

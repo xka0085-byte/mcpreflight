@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:58.217Z",
+  "server": {
+    "registryName": "io.github.FoundryNet/market-data-mcp",
+    "title": "Stock Market Data MCP",
+    "description": "Real-time stock quotes, history, options chains, sector performance & screening for agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://market-data-mcp-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "market-data",
+      "version": "4.1.4"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://market-data-mcp-production.up.railway.app/mcp"
+}

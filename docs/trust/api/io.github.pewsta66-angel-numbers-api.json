@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:02.811Z",
+  "server": {
+    "registryName": "io.github.pewsta66/angel-numbers-api",
+    "title": "Angel Numbers Deterministic API",
+    "description": "Deterministic angel number meanings via MCP, with x402 USDC paid interpretations on Base.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.raising-angels.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Angel Numbers API",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0] has no description"
+      },
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1] has no description"
+      },
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2] has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.raising-angels.com/mcp"
+}

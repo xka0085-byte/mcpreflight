@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:52.142Z",
+  "server": {
+    "registryName": "ch.spekt/spektrum-mcp",
+    "title": "SPEKTRUM MCP – Swiss spatial planning",
+    "description": "Swiss spatial planning: official geodata, ÖREB cadastre, zoning, building zone capacity, case law",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://mcp.spekt.ch/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.spekt.ch/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:51.667Z",
+  "server": {
+    "registryName": "com.lmax/omnia-exchange",
+    "title": "Omnia Exchange",
+    "description": "Omnia Exchange is the institutional liquidity and execution infrastructure layer powered by LMAX",
+    "registryVersion": "2.0.5"
+  },
+  "endpoint": "https://api.{environment}.omniaexchange.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.{environment}.omniaexchange.com/api/mcp"
+}

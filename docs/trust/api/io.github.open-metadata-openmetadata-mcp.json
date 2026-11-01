@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:26.743Z",
+  "server": {
+    "registryName": "io.github.open-metadata/openmetadata-mcp",
+    "title": "OpenMetadata",
+    "description": "Official OpenMetadata MCP: 21 read and write tools for search, lineage, data quality, governance.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://{openmetadata_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{openmetadata_host}/mcp"
+}

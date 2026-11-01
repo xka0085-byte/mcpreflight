@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:30.473Z",
+  "server": {
+    "registryName": "xyz.x402helper/mcp",
+    "title": "X402 Helper MCP",
+    "description": "API discovery and x402 paid execution via MCP. Search by natural-language, call with USDC payment",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://x402helper.xyz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "x402helper-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].routeId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].arguments has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402helper.xyz/mcp"
+}

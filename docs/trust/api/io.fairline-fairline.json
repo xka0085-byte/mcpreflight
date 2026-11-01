@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:56.580Z",
+  "server": {
+    "registryName": "io.fairline/fairline",
+    "title": "FairLine",
+    "description": "Shops MLB, NHL, EPL and NFL lines across sportsbooks with a no-vig fair probability, for members.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.fairline.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.fairline.io/mcp"
+}

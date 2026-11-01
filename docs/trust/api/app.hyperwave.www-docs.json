@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:06.202Z",
+  "server": {
+    "registryName": "app.hyperwave.www/docs",
+    "title": "app.hyperwave.www/docs",
+    "description": "Search and read Hyperwave's published wavetable documentation.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.hyperwave.app/mcp/docs",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "app.hyperwave.www/docs",
+      "version": "1.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].cursor has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.hyperwave.app/mcp/docs"
+}

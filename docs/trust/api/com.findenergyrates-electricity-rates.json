@@ -1,31 +1,29 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:43:15.525Z",
+  "scannedAt": "2026-11-01T03:47:27.114Z",
   "server": {
     "registryName": "com.findenergyrates/electricity-rates",
     "title": "FindEnergyRates Electricity Rates",
     "description": "Live US retail electricity plans, utility price-to-compare rates, ZIP-to-utility lookup. Read-only.",
-    "registryVersion": "1.1.2"
+    "registryVersion": "1.1.16"
   },
-  "endpoint": "https://findenergyrates.com/mcp",
+  "endpoint": "https://findenergyrates.com/mcp/public",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fer-mcp-server",
+      "version": "1.1.17"
+    },
+    "toolCount": 7,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "7 tools passed deterministic schema checks"
       }
     ]
   },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
-  },
-  "verify": "npx @eidonze/mcpreflight schema https://findenergyrates.com/mcp"
+  "verify": "npx @eidonze/mcpreflight schema https://findenergyrates.com/mcp/public"
 }

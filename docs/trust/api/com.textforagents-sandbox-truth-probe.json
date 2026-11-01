@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:24.562Z",
+  "server": {
+    "registryName": "com.textforagents/sandbox-truth-probe",
+    "title": "Sandbox-truth probe for agent frameworks",
+    "description": "Measured sandbox verdicts: 7-axis probe, signed pinned receipt. Cached $0.25, fresh $2.50.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://textforagents.com/products/sandbox-truth-probe/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sandbox-truth-probe",
+      "version": "1.0.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].framework has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].receipt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].receipt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].expected_source_hash has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].expected_framework has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].max_age_seconds has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/sandbox-truth-probe/mcp"
+}

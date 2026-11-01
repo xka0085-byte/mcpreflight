@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:27.079Z",
+  "server": {
+    "registryName": "io.github.jdhart81/maxwell-defense",
+    "title": "io.github.jdhart81/maxwell-defense",
+    "description": "Model proof-of-work policy and latency for AI agents. $1 USDC rehearsal; no runtime protection.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.viridis-security.com/maxwell-defense/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "maxwell-defense-agent",
+      "version": "1.28.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].client_hashes_per_second has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].client_p95_budget_ms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].backend_cost_ms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].peak_requests_per_second has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.viridis-security.com/maxwell-defense/mcp"
+}

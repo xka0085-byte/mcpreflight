@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:35.114Z",
+  "server": {
+    "registryName": "io.github.zeroatflops/flopsindex-mcp",
+    "title": "FLOPS Index",
+    "description": "GPU rental reference prices (spot, on-demand, DePIN), key-free; every value carries a verify URL.",
+    "registryVersion": "0.12.5"
+  },
+  "endpoint": "https://app.flopsindex.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "flopsindex",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.flopsindex.com/mcp"
+}

@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:54.510Z",
+  "server": {
+    "registryName": "io.github.vnish-global/vnish-global-operator",
+    "title": "VNISH Global Operator",
+    "description": "Read-only VNISH firmware metadata, Ninja guidance and input-based mining economics calculations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vnish.global/ai/mcp/index.php",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vnish-global-operator",
+      "title": "VNISH Global Operator",
+      "version": "1.0.0",
+      "websiteUrl": "https://vnish.global/ai/connect/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].board_platform has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].version has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vnish.global/ai/mcp/index.php"
+}

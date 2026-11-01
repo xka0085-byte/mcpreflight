@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:24.466Z",
+  "server": {
+    "registryName": "io.github.februality/cowboy-mcp",
+    "title": "Cowboy MCP",
+    "description": "Self-hosted WordPress MCP server with 203 tools and per-change undo. OAuth sign-in or API key. Free.",
+    "registryVersion": "1.7.5"
+  },
+  "endpoint": "https://{site_host}/wp-json/cowboy-mcp/v1/endpoint",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{site_host}/wp-json/cowboy-mcp/v1/endpoint"
+}

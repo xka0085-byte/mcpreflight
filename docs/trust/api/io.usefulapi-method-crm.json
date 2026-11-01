@@ -1,0 +1,62 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:51.456Z",
+  "server": {
+    "registryName": "io.usefulapi/method-crm",
+    "title": "Method CRM MCP by usefulapi",
+    "description": "Query Method CRM customers, leads, activities and invoices; create and update records.",
+    "registryVersion": "1.11.0"
+  },
+  "endpoint": "https://method-crm.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "method-crm-mcp",
+      "version": "1.14.0",
+      "title": "Method CRM MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/method-crm/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].first_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].last_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].phone has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://method-crm.usefulapi.io/mcp"
+}

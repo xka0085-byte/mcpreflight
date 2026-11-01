@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:37.505Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/au-earthquake-alerts-mcp",
+    "title": "Australia Earthquake Alerts MCP",
+    "description": "Geoscience Australia and USGS earthquakes for the Australian region.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://au-earthquake-alerts-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "au-earthquake-alerts-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].min_mag has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].min_mag has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://au-earthquake-alerts-mcp.donniertf.workers.dev/mcp"
+}

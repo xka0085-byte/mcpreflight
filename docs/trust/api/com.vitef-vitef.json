@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:14.881Z",
+  "server": {
+    "registryName": "com.vitef/vitef",
+    "title": "Vitef",
+    "description": "French admin chores: law-citing letters, calculators, quotes. Démarches en France, vite fait.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.vitef.com",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vitef",
+      "title": "Vitef",
+      "version": "1.3.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.vitef.com"
+}

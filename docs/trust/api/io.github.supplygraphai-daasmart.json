@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:04.978Z",
+  "server": {
+    "registryName": "io.github.SupplyGraphAI/daasmart",
+    "title": "SupplyGraph.AI Data",
+    "description": "Official SupplyGraph.AI data MCP: POIs, parks, regions, industry chains, and companies.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.daasmart.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SupplyGraph AI MCP Server",
+      "title": "SupplyGraph.AI (Daasmart)",
+      "version": "1.0.0",
+      "description": "SupplyGraph.AI MCP server for the Daasmart market. Supply-chain tools include company search, tariff calculation, enterprise-change monitoring, and risk prediction. It also exposes China geo and registry data agents as tools: (1) POI — named, map-located facilities in an administrative area (schools, hospitals, gas stations, banks/ATMs, pharmacies, restaurants, brand outlets), not counts; (2) park — enterprises and attributes of a named industrial park or development zone; (3) region — province/city/district aggregate indicators (population, GDP, fiscal, investment, employment, land, housing, traffic, public services), totals and trends only, no name lists; (4) industry — enterprise lists or counts under a named industry chain (e.g. NEV, low-altitude economy, ICs), optionally scoped by region; (5) company — look up one known firm by name or USCC, or filter firms by region and business-registration conditions without requiring a chain or park name (registered capital, industry, status, abnormal operations, dishonesty, listing, social-insurance headcount, founding year, keywords); (6) address nearby — population, housing prices, facilities, and similar indicators around a specific address, landmark, road, community, or park gate, not around an admin region alone. Get an API key from Console → Developer Settings → A2A/MCP Keys and send Authorization: Bearer <key>.",
+      "websiteUrl": "https://supplygraph.ai/resources/mcp"
+    },
+    "toolCount": 198,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "198 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.daasmart.com/mcp"
+}

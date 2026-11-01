@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:04.223Z",
+  "server": {
+    "registryName": "com.eremosapp/bible",
+    "title": "Eremos Thai Bible",
+    "description": "Quote the Eremos Translation (Thai Bible, CC0) word for word: passages, search, decision notes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.eremosapp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "eremos-bible",
+      "title": "Eremos Thai Bible",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.eremosapp.com/mcp"
+}

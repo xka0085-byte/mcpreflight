@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:01.452Z",
+  "server": {
+    "registryName": "io.github.dangamsoft/cafe-mcp",
+    "title": "io.github.dangamsoft/cafe-mcp",
+    "description": "Saju & BaZi (Four Pillars) charts, luck cycles, manseryeok and classics. Free with sign-in.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.24plus.ai.kr/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.24plus.ai.kr/mcp"
+}

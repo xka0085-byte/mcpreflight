@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:33.684Z",
+  "server": {
+    "registryName": "io.github.mcdca/usertapes-mcp",
+    "title": "UserTapes",
+    "description": "Query real user session replay data: tapes, transcripts, error/rage-click filters, alerts.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://usertapes.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://usertapes.com/mcp"
+}

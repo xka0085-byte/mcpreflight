@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:46.465Z",
+  "server": {
+    "registryName": "com.pedalbro/pedalbro",
+    "title": "PedalBro",
+    "description": "Guitar pedal specs, new and used prices, price history, review scores, board checks, buying guides.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.pedalbro.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pedalbro",
+      "title": "PedalBro",
+      "version": "1.0.0",
+      "websiteUrl": "https://pedalbro.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slugs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.pedalbro.com/mcp"
+}

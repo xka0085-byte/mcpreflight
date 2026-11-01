@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:49.170Z",
+  "server": {
+    "registryName": "stream.aidata/site-search",
+    "title": "AIdata site search",
+    "description": "Read-only search over the aidata.stream documentation, blog, changelog, pricing and FAQ.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aidata.stream/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "AI Data Stream Site Search",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].section has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aidata.stream/mcp"
+}

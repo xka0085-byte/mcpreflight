@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:36.316Z",
+  "server": {
+    "registryName": "io.github.hft-studio/pokerdata",
+    "title": "PokerData",
+    "description": "GTO poker solver data: NLHE/PLO preflop ranges, postflop strategy, EV. 6-max NL preflop free.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://pokerdata.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pokerdata-ranges",
+      "title": "PokerData",
+      "version": "1.6.0",
+      "description": "GTO poker solver data for NLHE and PLO: preflop ranges, postflop strategy and EV, board-texture reports, and your own uploaded hand histories. Free key: 25 calls a month at pokerdata.io/app/api.",
+      "websiteUrl": "https://pokerdata.io"
+    },
+    "toolCount": 32,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "32 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pokerdata.io/api/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:30.604Z",
+  "server": {
+    "registryName": "io.github.vandurmedries/agent-revenue-auditor",
+    "title": "Agent Revenue Auditor",
+    "description": "Free preflight and exact-price discovery for paid website and AI-agent audits.",
+    "registryVersion": "0.5.1"
+  },
+  "endpoint": "https://agent-revenue-auditor.vandurmedries.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Agent Revenue Auditor",
+      "version": "0.5.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].product has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-revenue-auditor.vandurmedries.workers.dev/mcp"
+}

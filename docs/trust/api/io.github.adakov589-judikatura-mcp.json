@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:05.392Z",
+  "server": {
+    "registryName": "io.github.adakov589/judikatura-mcp",
+    "title": "Judikatura MCP — Slovak Court Decisions",
+    "description": "Slovak court decisions as MCP tools. 12,000+ decisions, GDPR-compliant, pseudonymized, SLA-backed.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.lexvector.eu/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lexvector.eu/mcp"
+}

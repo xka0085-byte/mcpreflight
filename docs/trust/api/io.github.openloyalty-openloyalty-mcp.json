@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:10.571Z",
+  "server": {
+    "registryName": "io.github.OpenLoyalty/openloyalty-mcp",
+    "title": "Open Loyalty",
+    "description": "Manage Open Loyalty programs: members, points, rewards, campaigns, tiers and transactions.",
+    "registryVersion": "1.41.0"
+  },
+  "endpoint": "https://mcp.openloyalty.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.openloyalty.io/mcp"
+}

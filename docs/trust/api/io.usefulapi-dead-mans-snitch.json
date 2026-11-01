@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:36.196Z",
+  "server": {
+    "registryName": "io.usefulapi/dead-mans-snitch",
+    "title": "Dead Man's Snitch MCP by usefulapi",
+    "description": "Read Dead Man's Snitch monitors and status; create, tag, pause and unpause snitches.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://dead-mans-snitch.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dead-mans-snitch-mcp",
+      "version": "1.20.0",
+      "title": "Dead Man's Snitch MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/dead-mans-snitch/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tags has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].tags has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dead-mans-snitch.usefulapi.io/mcp"
+}

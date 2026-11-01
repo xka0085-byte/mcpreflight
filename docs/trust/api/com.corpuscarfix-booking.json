@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:02.490Z",
+  "server": {
+    "registryName": "com.corpuscarfix/booking",
+    "title": "Corpus Car Fix — book mobile mechanic in Corpus Christi",
+    "description": "Book mobile mechanic in Corpus Christi, TX: prices, ZIP coverage, free callback.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://corpuscarfix.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "corpuscarfix.com-booking",
+      "title": "Corpus Car Fix — book mobile mechanic in Corpus Christi",
+      "version": "1.0.0",
+      "websiteUrl": "https://corpuscarfix.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://corpuscarfix.com/mcp"
+}

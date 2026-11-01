@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:21.675Z",
+  "server": {
+    "registryName": "com.alwa7i.bayan/bayan",
+    "title": "Bayan — Islamic encyclopedia (Arabic)",
+    "description": "Hadith with grades and takhrij, Qur'an verses with tafsir, narrators and articles, in Arabic.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://bayan.alwa7i.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bayan",
+      "title": "البيان — Bayan Islamic encyclopedia",
+      "version": "1.0.0",
+      "websiteUrl": "https://bayan.alwa7i.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].surah has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ayah has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bayan.alwa7i.com/mcp"
+}

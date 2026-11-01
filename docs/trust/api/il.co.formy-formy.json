@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:50.866Z",
+  "server": {
+    "registryName": "il.co.formy/formy",
+    "title": "Formy",
+    "description": "Read your Formy forms and responses over OAuth. For Claude, ChatGPT, Cursor and VS Code.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://formy.co.il/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://formy.co.il/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://formy.co.il/mcp"
+}

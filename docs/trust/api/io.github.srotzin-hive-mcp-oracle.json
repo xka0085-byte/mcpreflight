@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:51.910Z",
+  "server": {
+    "registryName": "io.github.srotzin/hive-mcp-oracle",
+    "title": "Hive Oracle",
+    "description": "Agent-native price and event oracle with cryptographic source attestation",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://hive-mcp-oracle.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "hive-mcp-oracle",
+      "version": "1.0.0",
+      "description": "Agent-callable oracle aggregator for signed price feeds and off-chain data with x402 subscriptions",
+      "backendStatus": "v0.1 — pending hivemorph backend build (Q3 2026 spec)"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hive-mcp-oracle.onrender.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:47.790Z",
+  "server": {
+    "registryName": "com.gameserverapp.mcp/mcp",
+    "title": "GameServerApp",
+    "description": "Manage game servers, configurations, players, and groups through the GameServerApp MCP server.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://mcp.gameserverapp.com/mcp/system",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gameserverapp.com/mcp/system"
+}

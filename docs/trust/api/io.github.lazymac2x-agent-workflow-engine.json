@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:35.266Z",
+  "server": {
+    "registryName": "io.github.lazymac2x/agent-workflow-engine",
+    "title": "io.github.lazymac2x/agent-workflow-engine",
+    "description": "Cloudflare Workers MCP server: agent-workflow-engine",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.lazy-mac.com/agent-workflow-engine/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "agent-workflow-engine",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].condition_logic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lazy-mac.com/agent-workflow-engine/mcp"
+}

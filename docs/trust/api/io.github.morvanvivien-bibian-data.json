@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:40.712Z",
+  "server": {
+    "registryName": "io.github.morvanvivien/bibian-data",
+    "title": "Jobs and market data: France, Germany, Spain, Latin America",
+    "description": "Public job postings and market data for France, Germany, Spain and Latin America, as JSON.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=bibian/free-work-jobs-scraper,bibian/arbeitsagentur-jobs-scraper,bibian/infoempleo-jobs-scraper,bibian/latam-jobs-bumeran-scraper,bibian/codeur-projects-scraper,bibian/allocine-movies-scraper,bibian/kisskissbankbank-projects-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=bibian/free-work-jobs-scraper,bibian/arbeitsagentur-jobs-scraper,bibian/infoempleo-jobs-scraper,bibian/latam-jobs-bumeran-scraper,bibian/codeur-projects-scraper,bibian/allocine-movies-scraper,bibian/kisskissbankbank-projects-scraper"
+}

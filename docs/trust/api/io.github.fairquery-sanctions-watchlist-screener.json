@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:25.052Z",
+  "server": {
+    "registryName": "io.github.fairquery/sanctions-watchlist-screener",
+    "title": "Sanctions Screening (OFAC, EU, UK, UN)",
+    "description": "Fuzzy-screen people and company names against OFAC SDN, EU, UK and UN sanctions lists.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=fetch-actor-details,fairquery/sanctions-watchlist-screener",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=fetch-actor-details,fairquery/sanctions-watchlist-screener"
+}

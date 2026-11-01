@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:31.430Z",
+  "server": {
+    "registryName": "io.github.Humanleap/toolrouter",
+    "title": "ToolRouter",
+    "description": "The OpenRouter for tools. One MCP connection gives any AI agent 254 hosted tools, pay per call.",
+    "registryVersion": "0.3.2"
+  },
+  "endpoint": "https://api.toolrouter.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "toolrouter",
+      "title": "ToolRouter",
+      "version": "0.3.2",
+      "description": "The OpenRouter for tools. One MCP connection gives any AI agent 254 hosted tools, pay per call.",
+      "websiteUrl": "https://toolrouter.com",
+      "icons": [
+        {
+          "src": "https://toolrouter.com/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 48,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "48 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.toolrouter.com/mcp"
+}

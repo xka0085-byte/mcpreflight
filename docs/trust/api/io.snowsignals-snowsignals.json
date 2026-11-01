@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:48.710Z",
+  "server": {
+    "registryName": "io.snowsignals/snowsignals",
+    "title": "io.snowsignals/snowsignals",
+    "description": "Market-phase classifications over a metered API — phase events per currency and timeframe.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://snowsignals.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SnowSignals",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].currencies has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].tfs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://snowsignals.io/mcp"
+}

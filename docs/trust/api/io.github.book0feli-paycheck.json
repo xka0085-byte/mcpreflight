@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:08.315Z",
+  "server": {
+    "registryName": "io.github.Book0fEli/paycheck",
+    "title": "Lumière PayCheck",
+    "description": "Check any x402 endpoint before your AI agent pays it: trust grade, verdict, and hijack checks.",
+    "registryVersion": "1.8.1"
+  },
+  "endpoint": "https://lumierepaycheck.org/mcp?plans=1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lumiere-paycheck",
+      "title": "Lumière PayCheck",
+      "version": "1.8.0",
+      "websiteUrl": "https://lumierepaycheck.org",
+      "icons": [
+        {
+          "src": "https://lumierepaycheck.org/brand/app-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://lumierepaycheck.org/brand/app-icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].answers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lumierepaycheck.org/mcp?plans=1"
+}

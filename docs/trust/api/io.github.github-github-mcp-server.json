@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:02.440Z",
+  "server": {
+    "registryName": "io.github.github/github-mcp-server",
+    "title": "GitHub",
+    "description": "Connect AI assistants to GitHub - manage repos, issues, PRs, and workflows through natural language.",
+    "registryVersion": "2.0.3"
+  },
+  "endpoint": "https://api.githubcopilot.com/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.githubcopilot.com/mcp/"
+}

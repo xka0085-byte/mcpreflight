@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:33.326Z",
+  "server": {
+    "registryName": "io.github.hawaleska/arn-konsumenttvist",
+    "title": "ARN Konsumenttvist",
+    "description": "Svensk MCP-server för sökning och analys av ARN-beslut och konsumenttvister.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.qysley.se/arn/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.qysley.se/arn/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:33.919Z",
+  "server": {
+    "registryName": "com.strongsaga/gear-lookup",
+    "title": "Strong Saga Home Gym Gear Finder",
+    "description": "Find and compare home gym gear that fits your space, budget and ceiling height. Free, no API key.",
+    "registryVersion": "1.16.0"
+  },
+  "endpoint": "https://strongsaga.com/wp-json/gear/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "strongsaga-gear-lookup",
+      "title": "Strong Saga Home Gym Gear Lookup",
+      "version": "1.23.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].goal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://strongsaga.com/wp-json/gear/v1/mcp"
+}

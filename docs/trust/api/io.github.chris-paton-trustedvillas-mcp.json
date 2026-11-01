@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:05.628Z",
+  "server": {
+    "registryName": "io.github.chris-paton/trustedvillas-mcp",
+    "title": "TrustedVillas Villa Rentals",
+    "description": "Search and book luxury villa rentals across Europe with real-time availability and pricing.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.trustedvillas.co.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "trustedvillas",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pageSize has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.trustedvillas.co.uk/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:06.169Z",
+  "server": {
+    "registryName": "io.github.Bijikyu/qortex",
+    "title": "Qortex",
+    "description": "Call AI by role, not by model: tiered AI gateway over REST and MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://qortex.forgewise.tech/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://qortex.forgewise.tech/mcp"
+}

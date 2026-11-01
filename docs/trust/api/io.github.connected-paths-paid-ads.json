@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:24.954Z",
+  "server": {
+    "registryName": "io.github.connected-paths/paid-ads",
+    "title": "io.github.connected-paths/paid-ads",
+    "description": "Hosted MCP server for Google Ads and LinkedIn Ads analysis.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://paidads-mcp.connectedpaths.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://paidads-mcp.connectedpaths.com/mcp"
+}

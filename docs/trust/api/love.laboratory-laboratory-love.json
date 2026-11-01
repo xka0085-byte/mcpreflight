@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:43.978Z",
+  "server": {
+    "registryName": "love.laboratory/laboratory-love",
+    "title": "laboratory.love",
+    "description": "Lab results for phthalates and bisphenols in consumer products, plus crowdfunded testing.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.laboratory.love/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "laboratory-love",
+      "title": "Laboratory.love",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.laboratory.love/mcp"
+}

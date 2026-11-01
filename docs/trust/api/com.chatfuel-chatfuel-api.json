@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:34.895Z",
+  "server": {
+    "registryName": "com.chatfuel/chatfuel-api",
+    "title": "Chatfuel API",
+    "description": "Full Chatfuel public API for developers: schema search, queries, mutations and file uploads.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.chatfuel.com/panel/api",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chatfuel.com/panel/api"
+}

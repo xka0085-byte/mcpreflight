@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:41.491Z",
+  "server": {
+    "registryName": "io.github.lbailey94/whitemagic-mcp",
+    "title": "WhiteMagic — governed local memory for agent continuity",
+    "description": "Governed local-first memory and continuity for AI agents — signed receipts, optional hosted lane.",
+    "registryVersion": "10.6.1"
+  },
+  "endpoint": "https://mcp.whitemagic.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "whitemagic-gen3",
+      "version": "10.6.1",
+      "profile": "full"
+    },
+    "toolCount": 57,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[40].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[40].tenant_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.whitemagic.dev/mcp"
+}

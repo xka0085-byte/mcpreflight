@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:27.133Z",
+  "server": {
+    "registryName": "com.mystictiming/bazi",
+    "title": "Mystic Timing: birth time readings",
+    "description": "What your birth date and time say about you: personality, love, timing. Readings in 20 languages.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mystictiming-mcp.yaletongxue.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mystic-timing-bazi",
+      "title": "Mystic Timing: birth time readings",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].gender has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].a_birth_date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].a_birth_time has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].a_gender has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].b_birth_date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].b_birth_time has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].b_gender has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mystictiming-mcp.yaletongxue.workers.dev/mcp"
+}

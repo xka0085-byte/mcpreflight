@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:14.358Z",
+  "server": {
+    "registryName": "io.github.kindrat86/gitdealflow",
+    "title": "GitDealFlow",
+    "description": "Track startup engineering acceleration from public GitHub data before funding rounds",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://gitdealflow.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "gitdealflow-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].startup has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gitdealflow.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:06.851Z",
+  "server": {
+    "registryName": "pl.outreachpilot/outreachpilot",
+    "title": "OutreachPilot: Polish B2B leads & cold email",
+    "description": "Find Polish companies (CEIDG, KRS, Google Maps), verify emails and run cold email campaigns from AI.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://outreachpilot.pl/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://outreachpilot.pl/api/mcp"
+}

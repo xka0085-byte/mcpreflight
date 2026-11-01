@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:02.976Z",
+  "server": {
+    "registryName": "io.github.autokeren/mcp",
+    "title": "AutoKeren MCP",
+    "description": "AI video studio for agents — script to MP4, b-roll sourcing, Gemini QA. 43 tools.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.autokeren.com",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.autokeren.com"
+}

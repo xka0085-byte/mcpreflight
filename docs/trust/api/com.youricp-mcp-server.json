@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:47:31.281Z",
+  "scannedAt": "2026-11-01T04:00:01.949Z",
   "server": {
     "registryName": "com.youricp/mcp-server",
     "title": "YourICP",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://mcp.youricp.com/sse",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "youricp",
+      "version": "1.0.0",
+      "instructions": "Enrich and verify email addresses and LinkedIn profiles. Build targeted audiences filtered by industry, seniority, location, and company size. Start with submit_lookup to enrich contacts, or audience_start to build an audience. Payment may be required for anonymous users."
+    },
+    "toolCount": 13,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "13 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.youricp.com/sse"
 }

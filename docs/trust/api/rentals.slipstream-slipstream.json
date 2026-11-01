@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:25.580Z",
+  "server": {
+    "registryName": "rentals.slipstream/slipstream",
+    "title": "Slipstream: short term rental analytics",
+    "description": "Read-only analytics for short-term rentals: bookings, occupancy, forecasts, reviews, owner payouts.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://slipstream.rentals/api/ask/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://slipstream.rentals/api/ask/mcp"
+}

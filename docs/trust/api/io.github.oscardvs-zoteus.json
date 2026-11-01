@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:33.473Z",
+  "server": {
+    "registryName": "io.github.oscardvs/zoteus",
+    "title": "Zoteus",
+    "description": "Zotero MCP server for Claude and ChatGPT: search, citations, safe writes, PDF passages and pages.",
+    "registryVersion": "1.23.0"
+  },
+  "endpoint": "https://mcp.zoteus.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zoteus.com/mcp"
+}

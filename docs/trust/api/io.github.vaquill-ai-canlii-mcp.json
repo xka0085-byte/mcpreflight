@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:40.729Z",
+  "server": {
+    "registryName": "io.github.Vaquill-AI/canlii-mcp",
+    "title": "CanLII",
+    "description": "MCP for CanLII: Canadian case law and legislation metadata (federal, provincial, territorial).",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://canlii-mcp.vaquill.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://canlii-mcp.vaquill.ai/mcp"
+}

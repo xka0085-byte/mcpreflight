@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:29.501Z",
+  "server": {
+    "registryName": "io.github.TotesMagotes/mcp-server-auth",
+    "title": "ExpenseBot",
+    "description": "Receipt ingestion, Gmail capture, expense analysis, and reviewed reports for AI-agent workflows.",
+    "registryVersion": "0.6.26"
+  },
+  "endpoint": "https://mcp.expensebot.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "expensebot-remote",
+      "title": "ExpenseBot",
+      "version": "0.3.1-m3.6",
+      "websiteUrl": "https://www.expensebot.ai/claude-connector"
+    },
+    "toolCount": 62,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].groupBy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].metric has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].reportId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].recipients has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].notes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[32].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.expensebot.ai/mcp"
+}

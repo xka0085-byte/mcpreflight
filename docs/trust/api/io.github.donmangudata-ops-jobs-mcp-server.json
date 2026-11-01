@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:35.978Z",
+  "server": {
+    "registryName": "io.github.donmangudata-ops/jobs-mcp-server",
+    "title": "Jobs MCP Server",
+    "description": "Read-only tools: open jobs at the companies you name, and a live search of current tech jobs",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://conserving-celerytop--jobs-mcp-server.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://conserving-celerytop--jobs-mcp-server.apify.actor/mcp"
+}

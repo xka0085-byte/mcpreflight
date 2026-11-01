@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:24.884Z",
+  "server": {
+    "registryName": "io.github.fairquery/edgar-company-facts-filings",
+    "title": "SEC EDGAR Filings & XBRL Company Facts",
+    "description": "SEC EDGAR 10-K/10-Q/8-K filings and XBRL company facts by ticker, CIK or company name.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=fetch-actor-details,fairquery/edgar-company-facts-filings",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=fetch-actor-details,fairquery/edgar-company-facts-filings"
+}

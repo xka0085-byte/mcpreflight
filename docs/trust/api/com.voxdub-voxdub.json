@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:19.162Z",
+  "server": {
+    "registryName": "com.voxdub/voxdub",
+    "title": "Voxdub",
+    "description": "Create rythmo bands for dubbing: upload a video, transcribe, edit lines, style, and export.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.voxdub.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.voxdub.com/mcp"
+}

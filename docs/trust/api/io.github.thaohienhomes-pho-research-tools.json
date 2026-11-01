@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:20.896Z",
+  "server": {
+    "registryName": "io.github.thaohienhomes/pho-research-tools",
+    "title": "Phở Research Tools",
+    "description": "Verifies AI-written references; finds real papers, evidence, datasets and research tools; PRISMA.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.pho.chat/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pho-research-tools",
+      "title": "Phở Research Tools",
+      "version": "0.2.0",
+      "websiteUrl": "https://pho.chat"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].counts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].records has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.pho.chat/mcp"
+}

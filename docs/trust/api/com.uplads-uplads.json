@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:41.949Z",
+  "server": {
+    "registryName": "com.uplads/uplads",
+    "title": "uplads",
+    "description": "Ads MCP for Meta, Google Ads, TikTok, Snapchat and LinkedIn: stage launches and manage campaigns.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://uplads.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://uplads.com/api/mcp"
+}

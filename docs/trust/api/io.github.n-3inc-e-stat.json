@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:53.674Z",
+  "server": {
+    "registryName": "io.github.n-3inc/e-stat",
+    "title": "e-Stat MCP",
+    "description": "政府統計 (e-Stat) の API を通じて、統計データやメタ情報を取得するためのサービスです。",
+    "registryVersion": "0.0.4"
+  },
+  "endpoint": "https://mcp.n-3.ai/mcp?tools=e-stat-get-stats-list,e-stat-get-meta-info,e-stat-get-data-catalog",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "n.3.ai MCP Server",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.n-3.ai/mcp?tools=e-stat-get-stats-list,e-stat-get-meta-info,e-stat-get-data-catalog"
+}

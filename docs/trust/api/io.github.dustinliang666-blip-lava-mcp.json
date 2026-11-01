@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:50.876Z",
+  "server": {
+    "registryName": "io.github.dustinliang666-blip/lava-mcp",
+    "title": "熔岩 Lava · A股机构/大V消息面热度监测",
+    "description": "查A股个股/概念最近被多少机构/大V提及、热度高不高。只读数据，机构/大V用匿名ID。量化交易必备。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://lava.ai-dolphin.com/subscribe/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lava.ai-dolphin.com/subscribe/v1/mcp"
+}

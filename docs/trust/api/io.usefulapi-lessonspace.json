@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:55.668Z",
+  "server": {
+    "registryName": "io.usefulapi/lessonspace",
+    "title": "Lessonspace MCP by usefulapi",
+    "description": "Read Lessonspace sessions, recordings, transcripts, spaces and users; launch spaces, edit sessions.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://lessonspace.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lessonspace-mcp",
+      "version": "1.20.0",
+      "title": "Lessonspace MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/lessonspace/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].video_layout_mode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lessonspace.usefulapi.io/mcp"
+}

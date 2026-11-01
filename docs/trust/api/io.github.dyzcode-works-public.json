@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:50.703Z",
+  "server": {
+    "registryName": "io.github.DYZCODE/works-public",
+    "title": "WORKS Public Verifier",
+    "description": "Independent static verification for exact immutable public GitHub commits.",
+    "registryVersion": "0.1.13"
+  },
+  "endpoint": "https://works-runner.vercel.app/mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "works-public",
+      "version": "0.1.7"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].contract has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].contract has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].repository_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].commit_sha has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://works-runner.vercel.app/mcp-registry"
+}

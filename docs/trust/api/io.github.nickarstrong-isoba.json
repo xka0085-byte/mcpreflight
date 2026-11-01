@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:03.287Z",
+  "server": {
+    "registryName": "io.github.nickarstrong/isoba",
+    "title": "Isoba — Dollar & Crisis Index",
+    "description": "US dollar index, crisis meter, recession and market-top risk from public-domain data since 1990.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://isoba.lokio.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "isoba",
+      "title": "Isoba — Dollar & Crisis Index",
+      "version": "0.3.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].from_year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].to_year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://isoba.lokio.org/mcp"
+}

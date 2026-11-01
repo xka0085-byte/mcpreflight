@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:30.288Z",
+  "server": {
+    "registryName": "io.github.AceDataCloud/mcp-serp",
+    "title": "io.github.AceDataCloud/mcp-serp",
+    "description": "MCP server for Google search results via SERP API",
+    "registryVersion": "2026.10.19.0"
+  },
+  "endpoint": "https://serp.mcp.acedata.cloud/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://serp.mcp.acedata.cloud/mcp"
+}

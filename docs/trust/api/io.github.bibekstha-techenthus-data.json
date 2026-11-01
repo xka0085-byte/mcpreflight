@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:05.849Z",
+  "server": {
+    "registryName": "io.github.BibekStha/techenthus-data",
+    "title": "TechEnthus Hardware Data API",
+    "description": "Authenticated GPU/CPU/PSU lookup; beta power-budget estimate. Coverage/freshness vary by source.",
+    "registryVersion": "1.1.4"
+  },
+  "endpoint": "https://data.techenthus.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://data.techenthus.dev/mcp"
+}

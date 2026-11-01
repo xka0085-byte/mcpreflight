@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:24.870Z",
+  "server": {
+    "registryName": "io.vpndetection/mcp",
+    "title": "VPNDetection",
+    "description": "VPN, proxy, Tor, hosting and CDN detection for any IP address, from the VPNDetection API.",
+    "registryVersion": "6.2.2"
+  },
+  "endpoint": "https://mcp.vpndetection.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.vpndetection.io/mcp"
+}

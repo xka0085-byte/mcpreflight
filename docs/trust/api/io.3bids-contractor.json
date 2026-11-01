@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:18.702Z",
+  "server": {
+    "registryName": "io.3bids/contractor",
+    "title": "3Bids Contractor",
+    "description": "Contractor operations on 3Bids: CRM, jobs, dispatch, estimates, invoicing, calls, and reports.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.3bids.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.3bids.io/mcp"
+}

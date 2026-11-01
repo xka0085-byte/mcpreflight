@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:54.983Z",
+  "server": {
+    "registryName": "md.authority/authority-md",
+    "title": "authority.md",
+    "description": "Search, browse, and buy 597 AI thinking frameworks, Tools and bundles from within any MCP client.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://authority.md/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "authority.md",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slugs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://authority.md/api/mcp"
+}

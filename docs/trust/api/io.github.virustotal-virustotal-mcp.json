@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:45.257Z",
+  "server": {
+    "registryName": "io.github.VirusTotal/virustotal-mcp",
+    "title": "VirusTotal",
+    "description": "Official VirusTotal MCP server: threat reports, file and URL submissions, and analysis recovery.",
+    "registryVersion": "0.9.9"
+  },
+  "endpoint": "https://ai.virustotal.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.virustotal.com/mcp"
+}

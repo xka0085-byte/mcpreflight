@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:49.842Z",
+  "server": {
+    "registryName": "se.klassio/eu-customs-tariff-eudr",
+    "title": "Klassio — EU customs tariff (CN/HS) classification + EUDR",
+    "description": "EU customs tariff classification: CN/HS code + GIR rule, MFN duty and EUDR scope. Sourced.",
+    "registryVersion": "0.6.4"
+  },
+  "endpoint": "https://klassio.se/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "klassio-mcp",
+      "version": "0.6.4",
+      "title": "Klassio MCP Server"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].current_cn has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].cn_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].include has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://klassio.se/api/mcp"
+}

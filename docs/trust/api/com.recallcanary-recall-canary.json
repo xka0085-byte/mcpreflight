@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:00.113Z",
+  "server": {
+    "registryName": "com.recallcanary/recall-canary",
+    "title": "Recall Canary",
+    "description": "U.S. federal product recalls from FDA, FSIS, CPSC, and NHTSA, in one schema.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://recallcanary.com/data/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "recall-canary",
+      "title": "Recall Canary",
+      "version": "1.4.0",
+      "description": "U.S. federal product recalls from FDA, FSIS, CPSC, and NHTSA, in one schema.",
+      "websiteUrl": "https://recallcanary.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://recallcanary.com/data/mcp"
+}

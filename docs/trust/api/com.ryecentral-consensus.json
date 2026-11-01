@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:45.801Z",
+  "server": {
+    "registryName": "com.ryecentral/consensus",
+    "title": "RyeCentral Consensus",
+    "description": "Rye whiskey consensus scores compiled from published reviews, with confidence bands and citations.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://ryecentral-wtb.silent-sky-6573.workers.dev/wtb/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ryecentral-consensus",
+      "title": "RyeCentral Consensus",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.ryecentral.com/pages/consensus-index"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].min_score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ryecentral-wtb.silent-sky-6573.workers.dev/wtb/mcp"
+}

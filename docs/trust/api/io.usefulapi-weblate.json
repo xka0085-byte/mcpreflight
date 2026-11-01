@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:13.099Z",
+  "server": {
+    "registryName": "io.usefulapi/weblate",
+    "title": "Weblate MCP by usefulapi",
+    "description": "Read Weblate projects, strings, stats and changes; translate, suggest, comment and autotranslate.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://weblate.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "weblate-mcp",
+      "version": "1.20.0",
+      "title": "Weblate MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/weblate/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 23,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].source_language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].target_language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].operation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://weblate.usefulapi.io/mcp"
+}

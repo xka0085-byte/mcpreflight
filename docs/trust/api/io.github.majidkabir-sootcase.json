@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:13.219Z",
+  "server": {
+    "registryName": "io.github.majidkabir/sootcase",
+    "title": "Sootcase freight CO2e",
+    "description": "Freight CO2e by road, rail, sea, inland waterway and air (GLEC, ISO 14083), every step shown",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://sootcase.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sootcase",
+      "title": "Sootcase freight emissions",
+      "version": "1",
+      "websiteUrl": "https://sootcase.org"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].plan has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].settings has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].mode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sootcase.org/mcp"
+}

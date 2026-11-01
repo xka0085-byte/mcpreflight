@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:02.468Z",
+  "server": {
+    "registryName": "io.github.warwickwood-cell/gengeo",
+    "title": "GenGEO Agent Registry",
+    "description": "Merchant verification for AI shopping agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.gengeo.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gengeo-remote-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].domain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gengeo.co/mcp"
+}

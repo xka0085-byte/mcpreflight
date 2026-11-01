@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:27.505Z",
+  "server": {
+    "registryName": "io.github.theguysaccount/internets",
+    "title": "INTERNETS.FUN room reader",
+    "description": "Read bounded room summaries with existing room-scoped bearer tokens; no AI execution or edits.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://internets.fun/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "internets-room-reader",
+      "title": "INTERNETS.FUN room reader",
+      "version": "1.0.0",
+      "websiteUrl": "https://internets.fun"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].roomId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://internets.fun/api/mcp"
+}

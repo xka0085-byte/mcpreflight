@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:07.513Z",
+  "server": {
+    "registryName": "io.github.tributarydata/sec-filings",
+    "title": "SEC Filings",
+    "description": "Official SEC EDGAR filings, financial data and full-text search. Every answer cites its source.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tributarydata--sec-filings-mcp.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tributarydata--sec-filings-mcp.apify.actor/mcp"
+}

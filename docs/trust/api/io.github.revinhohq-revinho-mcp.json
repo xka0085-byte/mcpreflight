@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:35.482Z",
+  "server": {
+    "registryName": "io.github.RevinhoHQ/revinho-mcp",
+    "title": "Revinho",
+    "description": "Read-only SaaS business intelligence from GA4, Stripe, and Google Search Console.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://www.revinho.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.revinho.com/api/mcp"
+}

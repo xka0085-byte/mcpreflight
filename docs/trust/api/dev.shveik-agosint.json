@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:20.419Z",
+  "server": {
+    "registryName": "dev.shveik/agosint",
+    "title": "agosint",
+    "description": "Company and domain due diligence for agents: registers, sanctions, VAT, domain. Pay per call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agosint.shveik.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agosint",
+      "title": "agosint",
+      "version": "1.0.0",
+      "websiteUrl": "https://agosint.shveik.dev"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agosint.shveik.dev/mcp"
+}

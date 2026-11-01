@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:47.656Z",
+  "server": {
+    "registryName": "com.ierhub/license-lookup",
+    "title": "IERhub Texas electrician license lookup",
+    "description": "Look up Texas electrician licenses, renewal rules, TDLR forms and IERhub continuing education.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ierhub.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "ierhub",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].number has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].email has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ierhub.com/api/mcp"
+}

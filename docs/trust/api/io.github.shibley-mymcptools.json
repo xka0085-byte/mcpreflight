@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:19.570Z",
+  "server": {
+    "registryName": "io.github.shibley/mymcptools",
+    "title": "MyMCPTools",
+    "description": "Find MCP servers and check whether they actually respond, via live handshake probes.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://mymcptools.com/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mymcptools.com/api/mcp"
+}

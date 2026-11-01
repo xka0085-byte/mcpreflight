@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:32.561Z",
+  "server": {
+    "registryName": "io.github.ct-jaryn/baizhi-agent-toolkit",
+    "title": "Baizhi Cloud Agent Toolkit",
+    "description": "Web search, page extraction, visual tools and developer utilities through Baizhi Cloud.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agent-toolkit.app.baizhi.cloud/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-toolkit.app.baizhi.cloud/mcp"
+}

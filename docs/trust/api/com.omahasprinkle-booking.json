@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:05.858Z",
+  "server": {
+    "registryName": "com.omahasprinkle/booking",
+    "title": "Omaha Sprinkle — book sprinkler repair in Omaha",
+    "description": "Book sprinkler repair in Omaha, NE: prices, service area by ZIP, free callback from a local pro.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://omahasprinkle.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "omahasprinkle.com-booking",
+      "title": "Omaha Sprinkle — book sprinkler repair in Omaha",
+      "version": "1.0.0",
+      "websiteUrl": "https://omahasprinkle.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://omahasprinkle.com/mcp"
+}

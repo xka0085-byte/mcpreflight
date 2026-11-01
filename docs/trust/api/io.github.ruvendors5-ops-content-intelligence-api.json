@@ -1,0 +1,64 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:30.429Z",
+  "server": {
+    "registryName": "io.github.ruvendors5-ops/content-intelligence-api",
+    "title": "Content Intelligence API",
+    "description": "9 MCP tools: extract, analyze, research, compare, monitor, brief. Pay-per-call x402 or subscribe.",
+    "registryVersion": "2.4.0"
+  },
+  "endpoint": "https://content-intelligence-mcp.wajih-hyder55.workers.dev",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "content-intelligence-api",
+      "version": "2.4.0",
+      "description": "Content Intelligence API - extract, analyze, research, monitor, compare, brief. Pay per call via USDC (x402) or subscribe for credits (1k/5k/15k/mo).",
+      "payment": {
+        "type": "x402",
+        "network": "Base",
+        "asset": "USDC",
+        "assetAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "wallet": "0x7003209BDDb2253B5Ba902211279a28fB7b39aD7",
+        "facilitator": "https://facilitator.xpay.sh",
+        "subscription": {
+          "starter": {
+            "price": "5 USDC",
+            "credits": 1000,
+            "endpoint": "/v1/subscribe",
+            "desc": "1,000 credits - ~200 extracts"
+          },
+          "pro": {
+            "price": "20 USDC",
+            "credits": 5000,
+            "endpoint": "/v1/subscribe",
+            "desc": "5,000 credits - ~1,000 extracts"
+          },
+          "enterprise": {
+            "price": "50 USDC",
+            "credits": 15000,
+            "endpoint": "/v1/subscribe",
+            "desc": "15,000 credits - ~3,000 extracts"
+          },
+          "yearly_pro": {
+            "price": "200 USDC",
+            "credits": 60000,
+            "endpoint": "/v1/subscribe",
+            "desc": "60,000 credits/yr - best value"
+          }
+        }
+      }
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].depth has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://content-intelligence-mcp.wajih-hyder55.workers.dev"
+}

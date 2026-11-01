@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:03.925Z",
+  "server": {
+    "registryName": "fr.humanmirror/forge",
+    "title": "HumanMirror Forge",
+    "description": "Five deterministic micro-tools for AI-agent data pipelines: clean, dedupe, normalize, score, detect.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://humanmirror.fr/api/forge/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "humanmirror-forge",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].options has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].options has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://humanmirror.fr/api/forge/mcp/"
+}

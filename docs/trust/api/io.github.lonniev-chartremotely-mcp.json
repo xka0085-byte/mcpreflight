@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:59.134Z",
+  "server": {
+    "registryName": "io.github.lonniev/chartremotely-mcp",
+    "title": "io.github.lonniev/chartremotely-mcp",
+    "description": "ChartRemotely — put a security on a desktop chart anywhere in the world, by voice or by tool call",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://chartremotely-mcp.fastmcp.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chartremotely-mcp.fastmcp.app/mcp"
+}

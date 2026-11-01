@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:50:00.808Z",
+  "server": {
+    "registryName": "com.losalidirect/numbers",
+    "title": "Losali French Special Numbers",
+    "description": "Directory of French special phone numbers: service, number type, cost from France, Losali price",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.losalidirect.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "losali-numbers",
+      "title": "Losali, annuaire des numéros spéciaux français",
+      "version": "1.1.0",
+      "description": "Annuaire public, en lecture seule, des numéros spéciaux français (numéros courts 3xxx, 08, numéros verts) : service joint, type, tarif depuis la France et prix Losali quand il s'applique. Licence CC-BY-4.0.",
+      "websiteUrl": "https://api.losalidirect.com/v1/docs",
+      "icons": [
+        {
+          "src": "https://losalidirect.com/favicon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "128x128"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.losalidirect.com/mcp"
+}

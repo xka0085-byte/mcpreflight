@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:39.036Z",
+  "server": {
+    "registryName": "io.github.jobvetta/job-search",
+    "title": "Jobvetta MCP Server",
+    "description": "Search live, vetted India jobs by keyword, location, posting age, and job ID.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.jobvetta.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jobvetta",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].job_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.jobvetta.com/mcp"
+}

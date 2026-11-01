@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:13.913Z",
+  "server": {
+    "registryName": "com.airbandenservice/tyres",
+    "title": "AIR Bandenservice Haarlem",
+    "description": "Car tyres in Haarlem, NL: search by size, all-in prices, fitting slots, order and pay via Mollie.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.airbandenservice.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "air-bandenservice",
+      "title": "AIR Bandenservice Haarlem",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.airbandenservice.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].season has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].ref has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.airbandenservice.com/mcp"
+}

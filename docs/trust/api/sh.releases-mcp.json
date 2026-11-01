@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:03.785Z",
+  "server": {
+    "registryName": "sh.releases/mcp",
+    "title": "Release Notes Index",
+    "description": "Release notes and changelogs from across the web, indexed for agents. Also via CLI and REST API.",
+    "registryVersion": "0.15.2"
+  },
+  "endpoint": "https://agents.releases.sh/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "releases",
+      "title": "Release Notes Index",
+      "version": "0.15.2",
+      "icons": [
+        {
+          "src": "https://releases.sh/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].action has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agents.releases.sh/mcp"
+}

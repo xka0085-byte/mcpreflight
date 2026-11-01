@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:47.948Z",
+  "server": {
+    "registryName": "fi.meom/public",
+    "title": "MEOM",
+    "description": "Read-only public info from MEOM, a Finnish B2B website agency: services, references, team, booking.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.meom.fi/wp-json/meom-public/v1/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.meom.fi/wp-json/meom-public/v1/mcp"
+}

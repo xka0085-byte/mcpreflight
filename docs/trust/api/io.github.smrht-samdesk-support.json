@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:37.878Z",
+  "server": {
+    "registryName": "io.github.smrht/samdesk-support",
+    "title": "SamDesk Support",
+    "description": "Read your SamDesk support inbox, find customer agreements and draft replies. Read-only.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://samdesk.nl/support/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://samdesk.nl/support/mcp"
+}

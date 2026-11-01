@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:46.196Z",
+  "server": {
+    "registryName": "io.github.mtcontext/mtcontext",
+    "title": "MTContext",
+    "description": "Connect any MCP client to MetaTrader 4/5 to read prices, manage positions, and place trades.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.mtcontext.com/mcp/v1",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mtcontext.com/mcp/v1"
+}

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:47:42.124Z",
+  "scannedAt": "2026-11-01T04:00:43.306Z",
   "server": {
     "registryName": "de.registercheck/registercheck",
     "title": "Registercheck",
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
   },
   "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.registercheck.de/.well-known/oauth-protected-resource/mcp",
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.registercheck.de/mcp"

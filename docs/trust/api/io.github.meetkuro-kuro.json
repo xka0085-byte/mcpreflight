@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:13.326Z",
+  "server": {
+    "registryName": "io.github.meetkuro/kuro",
+    "title": "Kuro — AI images, video and audio",
+    "description": "Create AI images, clips, voice-overs, music and editable storyboard films from your AI assistant.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://api.meetkuro.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://api.meetkuro.com/.well-known/oauth-protected-resource",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.meetkuro.com/mcp"
+}

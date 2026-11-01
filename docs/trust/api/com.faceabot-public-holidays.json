@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:14.959Z",
+  "server": {
+    "registryName": "com.faceabot/public-holidays",
+    "title": "Faceabot Public holidays",
+    "description": "Public holidays of about 200 countries: next holidays, is a given date a holiday. Free, no key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://faceabot.com/tools-mcp/holidays",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "faceabot-public-holidays",
+      "title": "Faceabot Public Holidays",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://faceabot.com/tools-mcp/holidays"
+}

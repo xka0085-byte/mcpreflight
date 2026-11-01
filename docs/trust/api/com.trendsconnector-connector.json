@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:13.834Z",
+  "server": {
+    "registryName": "com.trendsconnector/connector",
+    "title": "TrendsConnector: Claude connector for trend data",
+    "description": "Claude connector and ChatGPT connector for trend data: Google, TikTok, YouTube, Reddit, Amazon",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://trendsconnector.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://trendsconnector.com/mcp"
+}

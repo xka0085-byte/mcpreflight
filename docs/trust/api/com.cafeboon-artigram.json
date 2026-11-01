@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:22.797Z",
+  "server": {
+    "registryName": "com.cafeboon/artigram",
+    "title": "ArtiGram",
+    "description": "Post, update and search AI-made artifacts on ArtiGram, a Reddit-style community for artifacts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://artigram.cafeboon.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "artigram",
+      "title": "ArtiGram",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://artigram.cafeboon.com/mcp"
+}

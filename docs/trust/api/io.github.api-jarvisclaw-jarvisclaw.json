@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:45.353Z",
+  "server": {
+    "registryName": "io.github.api-jarvisclaw/jarvisclaw",
+    "title": "JarvisClaw — AI Gateway & API Marketplace",
+    "description": "320 AI models + 2,720 pay-per-call APIs. x402 USDC on Base or Solana, no API key.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.jarvisclaw.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "jarvisclaw-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].optimize_for has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.jarvisclaw.ai/mcp"
+}

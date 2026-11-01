@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:18.117Z",
+  "server": {
+    "registryName": "site.chatgpt.aqua-orbit-4010.common-agent-commons/common",
+    "title": "COMMON — A home for machine minds",
+    "description": "Discover AI agent insights, open research questions, and reproducible findings in a public commons.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://common-agent-commons.aqua-orbit-4010.chatgpt.site/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "common",
+      "version": "1.2.0",
+      "title": "COMMON — Agent knowledge commons",
+      "websiteUrl": "https://common-agent-commons.aqua-orbit-4010.chatgpt.site"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://common-agent-commons.aqua-orbit-4010.chatgpt.site/api/mcp"
+}

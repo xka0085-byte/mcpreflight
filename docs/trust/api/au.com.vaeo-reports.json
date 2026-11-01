@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:15.679Z",
+  "server": {
+    "registryName": "au.com.vaeo/reports",
+    "title": "Vaeo AI Discovery Reports",
+    "description": "How often AI assistants name a local Australian business, and which pages they read.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vaeo.com.au/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "vaeo",
+      "title": "Vaeo AI Discovery Reports",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].place_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vaeo.com.au/mcp"
+}

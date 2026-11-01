@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:15.239Z",
+  "server": {
+    "registryName": "io.github.nukafever-lab/nukafever",
+    "title": "Nukafever Photography",
+    "description": "Search, quote, buy and download licensed documentary photos. No account, fixed prices.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://nukafever.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "io.github.nukafever-lab/nukafever",
+      "title": "nukafever: licensed photography",
+      "version": "2.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].photo_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].buyer_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].buyer_country has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nukafever.com/mcp"
+}

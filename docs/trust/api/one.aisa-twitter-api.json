@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:58.948Z",
+  "server": {
+    "registryName": "one.aisa/twitter-api",
+    "title": "AIsa X / Twitter",
+    "description": "Profiles, timelines, followers, replies, quotes, communities, lists and trends.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.aisa.one/twitter-api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.aisa.one/twitter-api/mcp"
+}

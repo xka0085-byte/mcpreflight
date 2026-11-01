@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:21.482Z",
+  "server": {
+    "registryName": "io.github.aistatusdashboard/aistatusdashboard",
+    "title": "AIStatusDashboard",
+    "description": "Read-only MCP server for AIStatusDashboard status, incidents, metrics, and fallback recommendations.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://aistatusdashboard.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aistatusdashboard.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:53.804Z",
+  "server": {
+    "registryName": "io.github.aruuhii2yo/maxion-mcp-gateway",
+    "title": "io.github.aruuhii2yo/maxion-mcp-gateway",
+    "description": "CPU telemetry & benchmarking, SHA-256 hashing, AES-256-GCM storage, AI video/image via Nova.",
+    "registryVersion": "16.4.0"
+  },
+  "endpoint": "https://5pu357jdkqc3qynzkjvu3okgqy0ncsiy.lambda-url.us-east-1.on.aws/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://5pu357jdkqc3qynzkjvu3okgqy0ncsiy.lambda-url.us-east-1.on.aws/mcp"
+}

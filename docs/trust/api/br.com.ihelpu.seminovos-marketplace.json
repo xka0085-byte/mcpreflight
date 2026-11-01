@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:26.952Z",
+  "server": {
+    "registryName": "br.com.ihelpu.seminovos/marketplace",
+    "title": "iHelpU Seminovos — iPhones usados no RS",
+    "description": "iPhones usados e seminovos à venda no RS (Brasil): estoque ao vivo, preços e 9 lojas iHelpU.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://seminovos.ihelpu.com.br/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ihelpu-seminovos",
+      "title": "iHelpU Seminovos — iPhones usados no RS",
+      "version": "1.0.0",
+      "websiteUrl": "https://seminovos.ihelpu.com.br"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].modelo has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].capacidade has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].cidade has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://seminovos.ihelpu.com.br/mcp"
+}

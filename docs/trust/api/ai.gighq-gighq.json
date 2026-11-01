@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:27.159Z",
+  "server": {
+    "registryName": "ai.gighq/gighq",
+    "title": "GigHQ.ai",
+    "description": "Job-search tracker for AI agents: applications, stale follow-ups, skills gaps, H-1B lookup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.gighq.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "GigHQ.ai",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://www.gighq.ai/wp-content/uploads/2025/05/favicon-gig-150x150.webp",
+          "mimeType": "image/webp",
+          "sizes": [
+            "150x150"
+          ]
+        }
+      ]
+    },
+    "toolCount": 34,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[32].career_stage has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[32].career_switch_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gighq.ai/mcp"
+}

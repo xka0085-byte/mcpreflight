@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:48.150Z",
+  "server": {
+    "registryName": "io.github.SavantoAI/mcp-server",
+    "title": "io.github.SavantoAI/mcp-server",
+    "description": "Manage your Savanto store from your AI: catalog, content, prompts, and analytics, by chat.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://mcp.savanto.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.savanto.ai/mcp"
+}

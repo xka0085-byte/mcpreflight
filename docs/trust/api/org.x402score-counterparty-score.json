@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:58.396Z",
+  "server": {
+    "registryName": "org.x402score/counterparty-score",
+    "title": "x402 Counterparty Score",
+    "description": "Trust scores for x402 sellers: wash-trading, real buyers, verdict. $0.02/score via x402 on Base.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://x402score.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "x402-counterparty-score",
+      "version": "0.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402score.org/mcp"
+}

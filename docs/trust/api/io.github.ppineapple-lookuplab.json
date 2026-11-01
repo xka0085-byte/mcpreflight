@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:24.552Z",
+  "server": {
+    "registryName": "io.github.PpiNeaPpLe/lookuplab",
+    "title": "LookupLab",
+    "description": "Phone carrier, email domain, IP network and DNS checks using your LookupLab account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://lookuplab.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lookuplab",
+      "version": "1.0.0",
+      "websiteUrl": "https://lookuplab.io/mcp/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].check has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lookuplab.io/api/mcp"
+}

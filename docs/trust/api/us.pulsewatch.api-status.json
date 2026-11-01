@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:45.674Z",
+  "server": {
+    "registryName": "us.pulsewatch.api/status",
+    "title": "PulseWatch Vendor Status",
+    "description": "Is this vendor down? Pay-per-call status for 1,700+ SaaS/cloud vendors from PulseWatch (x402 USDC).",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.pulsewatch.us/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pulsewatch-status",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.pulsewatch.us/mcp"
+}

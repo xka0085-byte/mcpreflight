@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:12.411Z",
+  "server": {
+    "registryName": "ing.compoundinterest/market-intelligence",
+    "title": "Compound Interesting — market intelligence",
+    "description": "Source-backed US market signals: insider filings, Congress trades, institutions, consensus.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.compoundinterest.ing/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "compoundinterest",
+      "title": "Compound Interesting",
+      "version": "1.0.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.compoundinterest.ing/mcp"
+}

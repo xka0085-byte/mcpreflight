@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:48.565Z",
+  "server": {
+    "registryName": "io.usefulapi/laposta",
+    "title": "Laposta MCP by usefulapi",
+    "description": "Read Laposta lists, members, campaigns and reports; add members and build campaigns.",
+    "registryVersion": "1.6.0"
+  },
+  "endpoint": "https://laposta.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "laposta-mcp",
+      "version": "1.9.0",
+      "title": "Laposta MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/laposta/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].email has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://laposta.usefulapi.io/mcp"
+}

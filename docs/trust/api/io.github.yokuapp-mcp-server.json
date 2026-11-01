@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:55.470Z",
+  "server": {
+    "registryName": "io.github.YokuApp/mcp-server",
+    "title": "io.github.YokuApp/mcp-server",
+    "description": "Yoku is a platform that provides structured, real-time brand identity and company data.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.yoku.app",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.yoku.app"
+}

@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:22.225Z",
+  "server": {
+    "registryName": "io.usefulapi/17track",
+    "title": "17TRACK MCP by usefulapi",
+    "description": "Track parcels across 3000+ carriers with 17TRACK: register numbers, read tracking events and quota.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://17track.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "17track-mcp",
+      "version": "1.20.0",
+      "title": "17TRACK MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/17track/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].changes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].numbers has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].numbers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://17track.usefulapi.io/mcp"
+}

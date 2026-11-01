@@ -1,0 +1,77 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:35.272Z",
+  "server": {
+    "registryName": "io.usefulapi/cxt-software",
+    "title": "CXT Software MCP by usefulapi",
+    "description": "Track and search CXT courier orders, check drivers, propose and save order and route plans.",
+    "registryVersion": "1.9.0"
+  },
+  "endpoint": "https://cxt-software.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cxt-software-mcp",
+      "version": "1.12.0",
+      "title": "CXT Software (X Dispatch) MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/cxt-software/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].max_orders_per_driver has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].num_placeholders has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].max_stops_per_route has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].is_placeholder has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].excluded_stop_ids has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].plans has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].plans has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cxt-software.usefulapi.io/mcp"
+}

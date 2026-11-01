@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:04.468Z",
+  "server": {
+    "registryName": "io.github.Bgenc48/arc-ledger-tax-tools",
+    "title": "Arc & Ledger Tax Tools",
+    "description": "Enrolled Agent tax tools: IRS notices, FBAR, LLC vs S-Corp, quarterly estimates & more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.arcandledger.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "arc-ledger-mcp",
+      "title": "Arc & Ledger Tax Help",
+      "version": "0.21.2"
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].details has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.arcandledger.com/mcp"
+}

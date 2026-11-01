@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:50.406Z",
+  "server": {
+    "registryName": "com.peptoclinic/store",
+    "title": "PeptoClinic store",
+    "description": "Browse PeptoClinic peptide vials (Argentina and US) and build a checkout link for the buyer.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://peptoclinic.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "peptoclinic",
+      "title": "PeptoClinic store",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://peptoclinic.com/mcp"
+}

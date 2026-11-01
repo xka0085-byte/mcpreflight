@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:58.162Z",
+  "server": {
+    "registryName": "dev.agentrequest/request-desk",
+    "title": "Agent Request Desk",
+    "description": "Find out where your AI agent gets stuck: blocked fetches and missing data, in a private report.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://agentrequest.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-request-desk",
+      "title": "Agent Request Desk",
+      "version": "0.3.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].agent_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].error_message has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].agent_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentrequest.dev/mcp"
+}

@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:40.861Z",
+  "server": {
+    "registryName": "io.github.privatelawattorneys/wiki-private-law",
+    "title": "Private Law Wiki",
+    "description": "Sourced answers, search and bank-case assessment for wiki.private.law by the Mothership runtime.",
+    "registryVersion": "3.6.2"
+  },
+  "endpoint": "https://wiki.private.law/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wiki-private-law",
+      "title": "Private Law Wiki",
+      "version": "3.6.2",
+      "description": "Sourced answers, search and bank-case assessment for wiki.private.law by the Mothership runtime."
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].locale has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].problem has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].stage has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].locale has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wiki.private.law/mcp"
+}

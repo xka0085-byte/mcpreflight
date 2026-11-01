@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:19.801Z",
+  "server": {
+    "registryName": "io.github.LogicLabsAI/ultramemory-mcp",
+    "title": "UltraMemory",
+    "description": "One memory, every AI: Claude, ChatGPT, Perplexity, Gemini, Cursor, OpenClaw, Hermes, any MCP client.",
+    "registryVersion": "1.9.13"
+  },
+  "endpoint": "https://api.ultramemory.us/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.ultramemory.us/mcp"
+}

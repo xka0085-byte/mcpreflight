@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:54.611Z",
+  "server": {
+    "registryName": "io.github.pcremotecommander/pcremotecommander",
+    "title": "PC Remote Commander",
+    "description": "Connect AI assistants to your approved computer for files, commands, browser and desktop tasks.",
+    "registryVersion": "0.7.0-beta.16"
+  },
+  "endpoint": "https://pc-remote-commander.pcremotecommander.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pc-remote-commander.pcremotecommander.workers.dev/mcp"
+}

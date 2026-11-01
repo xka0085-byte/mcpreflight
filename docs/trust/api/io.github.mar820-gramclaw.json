@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:19.992Z",
+  "server": {
+    "registryName": "io.github.mar820/gramclaw",
+    "title": "GramClaw",
+    "description": "Manage Telegram outreach, campaigns, follow-ups, conversations, and pipelines from an MCP client.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://gramclaw.com/api/mcp?key={api_key}",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gramclaw.com/api/mcp?key={api_key}"
+}

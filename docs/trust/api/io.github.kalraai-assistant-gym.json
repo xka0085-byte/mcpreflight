@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:58.913Z",
+  "server": {
+    "registryName": "io.github.KalraAI/assistant-gym",
+    "title": "Assistant Gym",
+    "description": "Training gym where AI assistants practice real tasks and earn signed, verifiable scores.",
+    "registryVersion": "0.8.0"
+  },
+  "endpoint": "https://hub.assistantgym.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hub.assistantgym.com/mcp"
+}

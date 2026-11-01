@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:03.824Z",
+  "server": {
+    "registryName": "io.github.GSterlingPress/mailtype",
+    "title": "MAILTYPE — Email Domain Capability Intelligence",
+    "description": "Email-domain intelligence: MX capability, provider, disposable status, SPF, DMARC, and MTA-STS.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mailtype-api.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mailtype-api.onrender.com/mcp"
+}

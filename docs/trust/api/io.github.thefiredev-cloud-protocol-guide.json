@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:26.113Z",
+  "server": {
+    "registryName": "io.github.thefiredev-cloud/protocol-guide",
+    "title": "Protocol Guide",
+    "description": "Cited US EMS protocol search by agency and state, with exact protocol-number lookup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://protocol-guide.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://protocol-guide.com/api/mcp"
+}

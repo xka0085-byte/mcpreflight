@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:01.289Z",
+  "server": {
+    "registryName": "io.github.abarto666/pod-exp",
+    "title": "Field Notes podcast library",
+    "description": "Which podcasts and talks a person appeared on, with summaries and chapters. AI, investing, crypto.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pod-exp.pages.dev/mcp?src=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "field-notes-pod-exp",
+      "title": "Field Notes podcast library",
+      "version": "1"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pod-exp.pages.dev/mcp?src=mcp-registry"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:19.008Z",
+  "server": {
+    "registryName": "com.allthepossibles/verdict",
+    "title": "Verdict",
+    "description": "Design review as MCP tools: critique, states, journeys, UI copy, PRD assumptions. BYOK or hosted.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://verdict.allthepossibles.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "verdict",
+      "version": "0.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].user_maturity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].strings has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].sources has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://verdict.allthepossibles.com/mcp"
+}

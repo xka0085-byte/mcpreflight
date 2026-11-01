@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:50.972Z",
+  "server": {
+    "registryName": "org.typesense/typesense-cloud",
+    "title": "Typesense Cloud",
+    "description": "Add fast, typo-tolerant search to your site or app, and run the Typesense clusters behind it.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://cloud.typesense.org/mcp/v1",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cloud.typesense.org/mcp/v1"
+}

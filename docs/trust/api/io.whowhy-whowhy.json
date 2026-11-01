@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:24.276Z",
+  "server": {
+    "registryName": "io.whowhy/whowhy",
+    "title": "whowhy",
+    "description": "An AI recruiter for founders: it finds the people, writes to them, you meet the ones who say yes.",
+    "registryVersion": "5.248.0"
+  },
+  "endpoint": "https://api.whowhy.io/functions/v1/mcp-server/directory",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.whowhy.io/functions/v1/mcp-server/directory"
+}

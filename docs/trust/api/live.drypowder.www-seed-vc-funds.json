@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:37.468Z",
+  "server": {
+    "registryName": "live.drypowder.www/seed-vc-funds",
+    "title": "DryPowder: seed VCs deploying now",
+    "description": "Seed and pre-seed VC funds actively deploying now, from SEC Form D filings and news signals.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://smbntzxlkblbmfqhqayo.supabase.co/functions/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "DryPowder",
+      "title": "DryPowder: seed VCs deploying now",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://smbntzxlkblbmfqhqayo.supabase.co/functions/v1/mcp"
+}

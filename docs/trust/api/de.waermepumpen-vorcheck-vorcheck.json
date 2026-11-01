@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:45.751Z",
+  "server": {
+    "registryName": "de.waermepumpen-vorcheck/vorcheck",
+    "title": "Wärmepumpen-Vorcheck",
+    "description": "Heat-pump readiness check for German single-family houses: traffic light, reasons, next step",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://waermepumpen-vorcheck.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "waermepumpen-vorcheck",
+      "title": "Wärmepumpen-Vorcheck",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://waermepumpen-vorcheck.de/mcp"
+}

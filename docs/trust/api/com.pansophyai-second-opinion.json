@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:37.236Z",
+  "server": {
+    "registryName": "com.pansophyai/second-opinion",
+    "title": "Second Opinion for Sales",
+    "description": "Behavioral read on one speaker in a sales conversation. Big Five standings plus how to use them.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.pansophyai.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.pansophyai.com/mcp"
+}

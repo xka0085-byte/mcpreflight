@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:59.802Z",
+  "server": {
+    "registryName": "ai.noinfra/noinfra-mcp",
+    "title": "NoInfra MCP",
+    "description": "Discover managed business agents. Private capabilities require owner authorization and eligibility.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.noinfra.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "noinfra-mcp",
+      "version": "0.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].idempotency_key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.noinfra.ai/mcp"
+}

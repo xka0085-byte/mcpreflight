@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:12.182Z",
+  "server": {
+    "registryName": "io.github.killbridge/startupjobs-mcp",
+    "title": "Startup Jobs",
+    "description": "Search live startup jobs from Claude, Cursor, or ChatGPT via MCP. Free, no account needed.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.startup.jobs/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "startup-jobs",
+      "title": "Startup Jobs",
+      "version": "1.0.0",
+      "websiteUrl": "https://startup.jobs"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].workplace_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].employment_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.startup.jobs/mcp"
+}

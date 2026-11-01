@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:52.533Z",
+  "server": {
+    "registryName": "io.github.quotewise/mcp",
+    "title": "Quotewise",
+    "description": "Semantic quote search with 600K quotes. Find quotes by meaning, verify attributions.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.quotewise.io/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Quotewise.io Quote Server",
+      "version": "3.4.11"
+    },
+    "toolCount": 21,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.quotewise.io/"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:20.935Z",
+  "server": {
+    "registryName": "com.prenotomenu/menu",
+    "title": "PRENOTO Menu",
+    "description": "Create digital QR menus for restaurants, bars and hotels from a menu photo, PDF or text.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.prenotomenu.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "prenoto-menu",
+      "title": "PRENOTO Menu",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].business has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].categories has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.prenotomenu.com/mcp"
+}

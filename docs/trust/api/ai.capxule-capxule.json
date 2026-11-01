@@ -1,0 +1,62 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:48.186Z",
+  "server": {
+    "registryName": "ai.capxule/capxule",
+    "title": "Capxule",
+    "description": "The context marketplace: expert guided journeys your assistant runs step by step.",
+    "registryVersion": "2026.10.13"
+  },
+  "endpoint": "https://capxule.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "capxule-agent",
+      "title": "Capxule",
+      "version": "1.0.0",
+      "websiteUrl": "https://capxule.ai",
+      "icons": [
+        {
+          "src": "https://capxule.ai/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://capxule.ai/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://capxule.ai/favicon.ico",
+          "mimeType": "image/x-icon",
+          "sizes": [
+            "16x16",
+            "32x32",
+            "48x48",
+            "64x64"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://capxule.ai/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:31.764Z",
+  "server": {
+    "registryName": "com.roar-ai/mcp",
+    "title": "Roar AI",
+    "description": "Deploy the apps you build with AI, with databases and domains, and call 200+ AI models on one key.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://cloud.roar-ai.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cloud.roar-ai.com/mcp"
+}

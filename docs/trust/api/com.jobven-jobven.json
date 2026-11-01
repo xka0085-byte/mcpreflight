@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:08.942Z",
+  "server": {
+    "registryName": "com.jobven/jobven",
+    "title": "Jobven",
+    "description": "Search job postings and employers from company career sites; each result returns its REST call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.jobven.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jobven",
+      "version": "1.0.0",
+      "title": "Jobven",
+      "description": "Job postings collected directly from employer career sites, through the Jobven API.",
+      "websiteUrl": "https://jobven.com",
+      "icons": [
+        {
+          "src": "https://jobven.com/jobven.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "500x500"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sortOrder has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.jobven.com/mcp"
+}

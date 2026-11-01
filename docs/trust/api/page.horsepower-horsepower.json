@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:56.322Z",
+  "server": {
+    "registryName": "page.horsepower/horsepower",
+    "title": "page.horsepower/horsepower",
+    "description": "Ask your AI about your horse yard: horses, treatments, visits, calendar, exercise and weights.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://horsepower.page/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://horsepower.page/api/mcp"
+}

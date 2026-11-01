@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:52.804Z",
+  "server": {
+    "registryName": "io.ecfr/ecfr",
+    "title": "eCFR.io Federal Regulations",
+    "description": "Search and read US federal regulations with legal and inline citations linking to ecfr.io.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ecfr.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ecfr-mcp",
+      "version": "1.0.0",
+      "title": "eCFR.io Federal Regulations"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].length has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ecfr.io/mcp"
+}

@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:40.687Z",
+  "server": {
+    "registryName": "io.revexa/signals",
+    "title": "Revexa: B2B buying signals",
+    "description": "B2B buying signals: companies hiring salespeople, startups hiring sales, weekly funding rounds.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://revexa.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "revexa",
+      "title": "Revexa: buying signals",
+      "version": "1.0.0",
+      "websiteUrl": "https://revexa.io/en/agents"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].region has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].region has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://revexa.io/api/mcp"
+}

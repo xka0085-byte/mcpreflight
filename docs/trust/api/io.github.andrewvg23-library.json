@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:43.365Z",
+  "server": {
+    "registryName": "io.github.AndrewVG23/library",
+    "title": "Moral Theology Library",
+    "description": "Search Grisez and Finnis. Bearer token required.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://library-mcp-production-0ea7.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://library-mcp-production-0ea7.up.railway.app/mcp"
+}

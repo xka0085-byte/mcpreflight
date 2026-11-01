@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:48.753Z",
+  "server": {
+    "registryName": "io.github.liad142/yedapo",
+    "title": "Yedapo podcast summaries",
+    "description": "Search and read AI summaries of ~3,500 podcast and YouTube episodes.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.yedapo.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "yedapo",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.yedapo.com/api/mcp"
+}

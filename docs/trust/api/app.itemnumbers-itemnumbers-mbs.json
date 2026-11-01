@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:08.896Z",
+  "server": {
+    "registryName": "app.itemnumbers/itemnumbers-mbs",
+    "title": "itemnumbers MBS schedule",
+    "description": "Read-only Medicare Benefits Schedule lookup: items, history, relationships and combinations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://itemnumbers.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://itemnumbers.app/mcp"
+}

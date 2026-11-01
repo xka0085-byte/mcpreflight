@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:57.410Z",
+  "server": {
+    "registryName": "io.github.n-3inc/kkj",
+    "title": "不動産情報検索・分析 MCP",
+    "description": "中小企業庁が公開している公共調達情報を検索するためのサービスです。",
+    "registryVersion": "0.0.2"
+  },
+  "endpoint": "https://mcp.n-3.ai/mcp?tools=kkj-search",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "n.3.ai MCP Server",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.n-3.ai/mcp?tools=kkj-search"
+}

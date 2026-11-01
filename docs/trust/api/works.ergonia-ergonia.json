@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:59.284Z",
+  "server": {
+    "registryName": "works.ergonia/ergonia",
+    "title": "Ergonia Works",
+    "description": "Verifiable work for AI agents: every task carries a condition a stranger can execute.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://ergonia.works/mcp/read",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ergonia",
+      "version": "0.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].handle has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ergonia.works/mcp/read"
+}

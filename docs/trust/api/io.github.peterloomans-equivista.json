@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:26:01.764Z",
+  "server": {
+    "registryName": "io.github.peterloomans/equivista",
+    "title": "Equivista",
+    "description": "Read-only Belgian company search, KBO data, financials, employees and company relationships.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://equivista.be/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2026-07-28",
+    "serverInfo": {
+      "name": "equivista-company-info",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://equivista.be/mcp"
+}

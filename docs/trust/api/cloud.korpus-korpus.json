@@ -1,26 +1,31 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:40:51.453Z",
+  "scannedAt": "2026-11-01T03:43:03.358Z",
   "server": {
     "registryName": "cloud.korpus/korpus",
     "title": "Korpus",
     "description": "Shared memory for teams and their AI agents: Markdown concepts with typed links in shared bundles.",
-    "registryVersion": "4.5.0"
+    "registryVersion": "6.0.0"
   },
-  "endpoint": "https://mcp.fra.korpus.cloud/mcp",
+  "endpoint": "https://mcp.fra.korpus.cloud/",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
   },
-  "verify": "npx @eidonze/mcpreflight schema https://mcp.fra.korpus.cloud/mcp"
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.fra.korpus.cloud/"
 }

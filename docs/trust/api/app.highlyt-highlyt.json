@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:06.538Z",
+  "server": {
+    "registryName": "app.highlyt/highlyt",
+    "title": "Highlyt",
+    "description": "Highlight anything you read. Then ask your AI about it: search, read and edit your highlights.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.highlyt.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "highlyt-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 28,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[26].params has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.highlyt.app/mcp"
+}

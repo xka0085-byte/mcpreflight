@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:15.299Z",
+  "server": {
+    "registryName": "app.lpsignal/lpsignal",
+    "title": "LPSignal",
+    "description": "Uniswap/PancakeSwap/Aerodrome LP pools and price ranges ranked by net APR after impermanent loss",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.lpsignal.app/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lpsignal.app/v1/mcp"
+}

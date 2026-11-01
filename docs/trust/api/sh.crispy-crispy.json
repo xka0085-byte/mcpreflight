@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:55.620Z",
+  "server": {
+    "registryName": "sh.crispy/crispy",
+    "title": "sh.crispy/crispy",
+    "description": "Full LinkedIn access for AI agents: leads, messaging, and campaigns with activity limits built in.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://crispy.sh/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://crispy.sh/api/mcp"
+}

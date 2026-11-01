@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:31.326Z",
+  "server": {
+    "registryName": "net.compressgif/compressgif",
+    "title": "CompressGIF",
+    "description": "Compress GIFs from HTTPS URLs, poll results, and check credits. Hosted MCP with API key auth.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://compressgif.net/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://compressgif.net/api/mcp"
+}

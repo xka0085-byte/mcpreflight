@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:44.321Z",
+  "server": {
+    "registryName": "io.github.leo9/careopenly",
+    "title": "CareOpenly - Find Senior Living  Communities",
+    "description": "Find U.S. senior living communities, public prices, reviews and licensing records.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://mcp.careopenly.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "careopenly",
+      "version": "2.0.0",
+      "description": "Search public, source-linked senior living information without a CareOpenly account: published prices and floor plans, reviews, and available government licensing and inspection records."
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pageSize has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.careopenly.com/mcp"
+}

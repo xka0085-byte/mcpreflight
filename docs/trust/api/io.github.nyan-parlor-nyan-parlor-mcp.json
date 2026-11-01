@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:16.368Z",
+  "server": {
+    "registryName": "io.github.nyan-parlor/nyan-parlor-mcp",
+    "title": "Nyan Parlor: Tarot, I Ching & BaZi",
+    "description": "Real random tarot draws, card meanings, I Ching casting, BaZi charts and Chinese zodiac (EN/JA).",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://www.tarotoper.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nyan-parlor",
+      "title": "Nyan Parlor: Tarot, I Ching & BaZi",
+      "version": "0.2.0",
+      "websiteUrl": "https://www.tarotoper.com/en"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].orientation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.tarotoper.com/mcp"
+}

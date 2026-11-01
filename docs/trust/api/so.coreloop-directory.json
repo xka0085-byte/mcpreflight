@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:30.962Z",
+  "server": {
+    "registryName": "so.coreloop/directory",
+    "title": "CoreLoop Business Network",
+    "description": "Search real businesses, then read profiles, services and hours or contact them, in one endpoint.",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://coreloop.so/api/mcp/coreloop-directory",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "coreloop:network",
+      "version": "1.2.1"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].sender_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].sender_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].sender_phone has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].subject has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://coreloop.so/api/mcp/coreloop-directory"
+}

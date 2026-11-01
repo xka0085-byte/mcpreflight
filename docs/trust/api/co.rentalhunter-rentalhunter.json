@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:28.720Z",
+  "server": {
+    "registryName": "co.rentalhunter/rentalhunter",
+    "title": "RentalHunter",
+    "description": "Filter-first rental search for India and Southeast Asian cities.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rentalhunter.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rentalhunter",
+      "version": "0.3.0",
+      "websiteUrl": "https://rentalhunter.co/"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].bedrooms_min has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].bedrooms_min has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].bedrooms_min has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rentalhunter.co/mcp"
+}

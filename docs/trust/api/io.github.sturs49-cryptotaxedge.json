@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:00.421Z",
+  "server": {
+    "registryName": "io.github.sturs49/cryptotaxedge",
+    "title": "io.github.sturs49/cryptotaxedge",
+    "description": "US tax classification for on-chain transactions: category, treatment, confidence, review flags.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.cryptotaxedge.com/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cte-mcp-server",
+      "title": "CryptoTaxEdge",
+      "version": "0.3.0",
+      "description": "US crypto tax classification for on-chain transactions: transaction hash in, canonical category, US tax treatment, confidence score, and an honest needs_review flag out. Deterministic answers backed by 15,000+ verified protocol rules; declines to guess rather than hallucinate a treatment.",
+      "websiteUrl": "https://cryptotaxedge.com/mcp",
+      "icons": [
+        {
+          "src": "https://cryptotaxedge.com/android-chrome-192x192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.cryptotaxedge.com/"
+}

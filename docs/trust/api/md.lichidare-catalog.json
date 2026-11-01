@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:58.063Z",
+  "server": {
+    "registryName": "md.lichidare/catalog",
+    "title": "LICHIDARE.MD",
+    "description": "Assets for sale in Moldova from insolvency, enforcement, bank collateral and public auctions",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.lichidare.md/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lichidare-md",
+      "version": "1.2.0",
+      "title": "LICHIDARE.MD",
+      "websiteUrl": "https://lichidare.md"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.lichidare.md/mcp"
+}

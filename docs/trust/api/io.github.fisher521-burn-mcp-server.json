@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:51.722Z",
+  "server": {
+    "registryName": "io.github.Fisher521/burn-mcp-server",
+    "title": "io.github.Fisher521/burn-mcp-server",
+    "description": "AI-powered reading triage MCP. 26 tools with a 24h burn timer. Read less, absorb more.",
+    "registryVersion": "2.1.1"
+  },
+  "endpoint": "https://burn-mcp-server.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://burn-mcp-server.vercel.app/api/mcp"
+}

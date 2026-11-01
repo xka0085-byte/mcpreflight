@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:11.919Z",
+  "server": {
+    "registryName": "ai.tendeck/crm",
+    "title": "Tendeck: free real estate CRM",
+    "description": "Free AI-native CRM for real estate agents and brokers: Today's 10, deals, goals, drips.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tendeck.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tendeck",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tendeck.ai/mcp"
+}

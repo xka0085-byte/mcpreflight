@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:40.820Z",
+  "server": {
+    "registryName": "net.invitt/invitt",
+    "title": "Invitt: Invitations, RSVPs, Planning",
+    "description": "Plan an event in chat: venue ideas, RSVP deadline and past events, then email invites and RSVPs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agent.invitt.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.invitt.net/mcp"
+}

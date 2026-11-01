@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:06.279Z",
+  "server": {
+    "registryName": "dev.workers.zenith-ops.agentkit-x402/agentkit",
+    "title": "AgentKit x402 MCP server",
+    "description": "Remote MCP tools for pay-per-call email, domain, SEO and Swedish data utilities (x402).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agentkit-x402.zenith-ops.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentkit-x402",
+      "version": "1.0.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentkit-x402.zenith-ops.workers.dev/mcp"
+}

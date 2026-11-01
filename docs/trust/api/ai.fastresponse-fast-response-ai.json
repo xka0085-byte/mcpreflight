@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:14.021Z",
+  "server": {
+    "registryName": "ai.fastresponse/fast-response-ai",
+    "title": "Fast Response AI",
+    "description": "Calls, texts and follow-ups from your AI receptionist: catch up, text customers, update contacts.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://app.fastresponse.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.fastresponse.ai/mcp"
+}

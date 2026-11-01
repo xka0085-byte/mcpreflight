@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:24.934Z",
+  "server": {
+    "registryName": "io.github.signaliz/signaliz-mcp",
+    "title": "Signaliz",
+    "description": "B2B lead generation, email verification, company enrichment, and agentic GTM Ops.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://api.signaliz.com/functions/v1/signaliz-mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.signaliz.com/functions/v1/signaliz-mcp"
+}

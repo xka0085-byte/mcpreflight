@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:36.897Z",
+  "server": {
+    "registryName": "io.github.lazymac2x/ai-prompt-optimizer",
+    "title": "io.github.lazymac2x/ai-prompt-optimizer",
+    "description": "Cloudflare Workers MCP server: ai-prompt-optimizer",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.lazy-mac.com/ai-prompt-optimizer/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "ai-prompt-optimizer",
+      "version": "2.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].prompt_a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].prompt_b has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lazy-mac.com/ai-prompt-optimizer/mcp"
+}

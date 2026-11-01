@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:35.667Z",
+  "server": {
+    "registryName": "ru.mcp-everything/russian-apis",
+    "title": "mcp-everything: Russian APIs",
+    "description": "Russian APIs for AI agents: YooKassa, CDEK, Bitrix24 and more. Ready scenarios with code. No key.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp-everything.ru/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-everything",
+      "title": "mcp-everything — российские API для агентов",
+      "version": "0.3.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].industry has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-everything.ru/mcp"
+}

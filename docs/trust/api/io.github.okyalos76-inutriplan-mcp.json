@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:23.455Z",
+  "server": {
+    "registryName": "io.github.okyalos76/inutriplan-mcp",
+    "title": "iNutriPlan Supplement Database MCP Server",
+    "description": "MCP server exposing supplements database used by iNutriPlan.com",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.inutriplan.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "inutriplan-supplement-mcp",
+      "version": "3.4.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.inutriplan.com/mcp"
+}

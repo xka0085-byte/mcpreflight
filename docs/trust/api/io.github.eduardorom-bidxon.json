@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:00.585Z",
+  "server": {
+    "registryName": "io.github.eduardorom/bidxon",
+    "title": "Bidxon — ad-free AI shopping agent",
+    "description": "Real US store prices with shipping, daily price history and real-deal checks. Never paid rankings.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bidxon.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bidxon",
+      "title": "Bidxon — ad-free shopping advisor",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bidxon.com/mcp"
+}

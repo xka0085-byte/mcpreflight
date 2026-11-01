@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:50.975Z",
+  "server": {
+    "registryName": "io.github.musikalienhandel-de/mcp-server",
+    "title": "io.github.musikalienhandel-de/mcp-server",
+    "description": "Product search for musikalienhandel.de: sheet music, GEWA instruments, B-Ware/clearance stock.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.musikalienhandel.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "musikalienhandel-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].catalog has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.musikalienhandel.de/mcp"
+}

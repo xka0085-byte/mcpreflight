@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:59.678Z",
+  "server": {
+    "registryName": "io.github.Franksterino/citeguard",
+    "title": "io.github.Franksterino/citeguard",
+    "description": "Verify citations in AI text: fetches each cited source, returns verdicts with evidence quotes.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://citeguard.boundy.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "citeguard",
+      "version": "0.1.2"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].claims has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://citeguard.boundy.workers.dev/mcp"
+}

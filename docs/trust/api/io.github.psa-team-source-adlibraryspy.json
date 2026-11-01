@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:14.556Z",
+  "server": {
+    "registryName": "io.github.PSA-Team-source/adlibraryspy",
+    "title": "AdLibrarySpy",
+    "description": "Shopify store and ad intelligence: traffic, best sellers, apps, live Meta ads and weekly breakouts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://adlibraryspy.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://adlibraryspy.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:13.745Z",
+  "server": {
+    "registryName": "io.github.shailesh-opsera/softwareforge",
+    "title": "SoftwareForge",
+    "description": "AI-native Day 0 modernization platform for PRDs, architecture, work orders, and code transformation.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://refactory.agent.opsera.dev/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://refactory.agent.opsera.dev/api/mcp"
+}

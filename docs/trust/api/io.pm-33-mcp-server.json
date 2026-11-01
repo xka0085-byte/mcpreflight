@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:33.643Z",
+  "server": {
+    "registryName": "io.pm-33/mcp-server",
+    "title": "io.pm-33/mcp-server",
+    "description": "AI-powered product management: backlog optimization, scheduling, forecasting, and PRD generation.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://pm-33.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pm-33.io/mcp"
+}

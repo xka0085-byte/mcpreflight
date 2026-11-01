@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:33.562Z",
+  "server": {
+    "registryName": "io.github.docracy1/runwayleft",
+    "title": "io.github.docracy1/runwayleft",
+    "description": "Cash runway, breakeven, and burn multiple calculator. Free, no login. MCP connector.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://runwayleft.netlify.app/.netlify/functions/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "runwayleft-cfo-tools",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].currency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://runwayleft.netlify.app/.netlify/functions/mcp"
+}

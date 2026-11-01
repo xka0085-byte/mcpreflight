@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:09.624Z",
+  "server": {
+    "registryName": "io.github.mcpsbom/sbom-mcp",
+    "title": "SBOMApp - SBOM Generator & Vulnerability Scanner",
+    "description": "Generate SBOMs, scan vulnerabilities, and analyze dependencies from local projects or Git repos.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.sbomapp.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.sbomapp.com/mcp"
+}

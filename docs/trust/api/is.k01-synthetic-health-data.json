@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:30.111Z",
+  "server": {
+    "registryName": "is.k01/synthetic-health-data",
+    "title": "K01 Synthetic Health Data",
+    "description": "Privacy-preserving synthetic health data generation. FHIR R4/R5 compliant.",
+    "registryVersion": "1.7.1"
+  },
+  "endpoint": "https://mcp.k01.is/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.k01.is/mcp"
+}

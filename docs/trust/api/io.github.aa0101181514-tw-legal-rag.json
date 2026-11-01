@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:01.946Z",
+  "server": {
+    "registryName": "io.github.aa0101181514/tw-legal-rag",
+    "title": "io.github.aa0101181514/tw-legal-rag",
+    "description": "Citation-guarded retrieval over 22M Taiwan court judgments and administrative interpretations",
+    "registryVersion": "2.3.1"
+  },
+  "endpoint": "https://tlr.dr-legal.com.tw/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tlr.dr-legal.com.tw/mcp"
+}

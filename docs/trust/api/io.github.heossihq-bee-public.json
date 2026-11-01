@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:36.292Z",
+  "server": {
+    "registryName": "io.github.heossihq/bee-public",
+    "title": "Bee: Quantum Intelligence",
+    "description": "Bee governed intelligence for chat, code, research, documents, and memory.",
+    "registryVersion": "1.0.91"
+  },
+  "endpoint": "https://api.bee.heossi.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.bee.heossi.com/mcp"
+}

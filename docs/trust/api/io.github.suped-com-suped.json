@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:06.041Z",
+  "server": {
+    "registryName": "io.github.suped-com/suped",
+    "title": "Suped DMARC",
+    "description": "DMARC monitoring, SPF/DKIM diagnostics, reports, domains and MSP client management with Suped.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.suped.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.suped.com/api/mcp"
+}

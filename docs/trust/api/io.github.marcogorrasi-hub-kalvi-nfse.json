@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:22.899Z",
+  "server": {
+    "registryName": "io.github.marcogorrasi-hub/kalvi-nfse",
+    "title": "Kalvi — NFS-e e IBS/CBS",
+    "description": "Confere a NFS-e brasileira para IBS/CBS antes de transmitir. Sem cadastro e sem chave.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.kalvi.com.br/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kalvi-nfse",
+      "title": "Kalvi — NFS-e e IBS/CBS",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tax_regime has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].operation_nature has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.kalvi.com.br/v1/mcp"
+}

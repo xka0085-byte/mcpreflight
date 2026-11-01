@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:05.799Z",
+  "server": {
+    "registryName": "io.github.irmasemma/jsonlify",
+    "title": "JSONlify",
+    "description": "Validate and convert JSONL fine-tuning data across 11 AI providers. 13 tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.jsonlify.com/api/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-typescript server on vercel",
+      "version": "0.1.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.jsonlify.com/api/mcp"
+}

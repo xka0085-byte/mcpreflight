@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:55.938Z",
+  "server": {
+    "registryName": "io.github.rabyavalla/lifestyle-medicine-knowledge",
+    "title": "Lifestyle Medicine Knowledge",
+    "description": "Semantic search over a 200-chunk ACLM lifestyle medicine knowledge base.",
+    "registryVersion": "5.0.0"
+  },
+  "endpoint": "https://web-production-ae61.up.railway.app/mcp/lifestyle-medicine-knowledge",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bonsai-health-intelligence",
+      "version": "5.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pillar has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_results has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://web-production-ae61.up.railway.app/mcp/lifestyle-medicine-knowledge"
+}

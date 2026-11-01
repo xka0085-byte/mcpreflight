@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:46.053Z",
+  "server": {
+    "registryName": "io.github.pulpminercom/pulpminer-mcp",
+    "title": "PulpMiner",
+    "description": "Turn any public webpage into JSON with AI, save it as a live JSON API, and call it from your agent.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://mcp.pulpminer.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.pulpminer.com/mcp"
+}

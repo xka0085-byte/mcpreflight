@@ -1,0 +1,42 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:02.889Z",
+  "server": {
+    "registryName": "tech.bluebird/website",
+    "title": "Bluebird Technologies",
+    "description": "Bluebird Technologies' public website: services, case studies, team and contact.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.bluebird.tech/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tech.bluebird/website",
+      "title": "Bluebird Technologies",
+      "version": "1.0.0",
+      "websiteUrl": "https://bluebird.tech",
+      "description": "An international boutique software development agency with South African roots, building ambitious products and dependable business systems worldwide."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].topic has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.bluebird.tech/mcp"
+}

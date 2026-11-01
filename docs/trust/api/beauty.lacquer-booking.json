@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:19.035Z",
+  "server": {
+    "registryName": "beauty.lacquer/booking",
+    "title": "Lacquer nail salon booking",
+    "description": "Find US nail salons and book confirmed appointments: menus, prices, hours, live open times.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://lacquer.beauty/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lacquer",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lacquer.beauty/mcp"
+}

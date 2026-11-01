@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:31.251Z",
+  "server": {
+    "registryName": "io.github.AceDataCloud/mcp-veo",
+    "title": "io.github.AceDataCloud/mcp-veo",
+    "description": "MCP server for Google Veo AI video generation",
+    "registryVersion": "2026.10.18.4"
+  },
+  "endpoint": "https://veo.mcp.acedata.cloud/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://veo.mcp.acedata.cloud/mcp"
+}

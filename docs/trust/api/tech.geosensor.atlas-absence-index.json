@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:05.756Z",
+  "server": {
+    "registryName": "tech.geosensor.atlas/absence-index",
+    "title": "Atlas absence index",
+    "description": "Measured rates at which web services lack machine-readable capabilities. Research demonstrator.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://atlas.geosensor.tech/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "atlas.geosensor.tech",
+      "version": "0.8.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].gap_class has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].host has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://atlas.geosensor.tech/mcp"
+}

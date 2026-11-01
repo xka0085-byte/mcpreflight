@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:14.957Z",
+  "server": {
+    "registryName": "io.tooloracle/paymentoracle",
+    "title": "PaymentOracle — Verifiable Multi-Rail Payment Receipts",
+    "description": "PaymentOracle — ES256K-signed receipts for x402 payments on USDC+EURC (Base) and XRP+RLUSD (XRPL).",
+    "registryVersion": "0.7.0"
+  },
+  "endpoint": "https://tooloracle.io/payments/mcp/",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tooloracle.io/payments/mcp/"
+}

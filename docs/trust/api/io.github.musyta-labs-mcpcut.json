@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:51.662Z",
+  "server": {
+    "registryName": "io.github.musyta-labs/mcpcut",
+    "title": "io.github.musyta-labs/mcpcut",
+    "description": "Orccut: a real timeline video editor for AI agents - journaled edits, FFmpeg/MLT rendering",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://orccut.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://orccut.com/mcp"
+}

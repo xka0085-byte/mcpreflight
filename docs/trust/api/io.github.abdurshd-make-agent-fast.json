@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:02.657Z",
+  "server": {
+    "registryName": "io.github.abdurshd/make-agent-fast",
+    "title": "Make Agent Fast",
+    "description": "Create customer-service agents, review conversations and leads, and improve answers.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://makeagent.fast/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://makeagent.fast/.well-known/oauth-protected-resource/api/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://makeagent.fast/api/mcp"
+}

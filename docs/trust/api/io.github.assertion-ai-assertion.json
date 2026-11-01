@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:56.558Z",
+  "server": {
+    "registryName": "io.github.Assertion-AI/assertion",
+    "title": "Assertion Memory",
+    "description": "Recall your team's coding-agent memory. Install the Assertion plugin to capture it automatically.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://memory.assertion-ai.com/memory/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "assertion",
+      "title": "Assertion Memory",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].node_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].node_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://memory.assertion-ai.com/memory/mcp"
+}

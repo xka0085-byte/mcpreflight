@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:11.847Z",
+  "server": {
+    "registryName": "io.github.entradox/perimeter-watch-scanner",
+    "title": "Perimeter Watch",
+    "description": "Passive domain-perimeter checks — cert expiry, subdomain takeover, lookalikes — as agent tools",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://perimeter-watch-api-production.up.railway.app/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "perimeter-watch",
+      "version": "1.30.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].authority has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].uri has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://perimeter-watch-api-production.up.railway.app/mcp/"
+}

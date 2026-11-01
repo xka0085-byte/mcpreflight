@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:39.183Z",
+  "server": {
+    "registryName": "io.github.productdevbook/yuva",
+    "title": "Yuva",
+    "description": "Customer support inbox: search, read, triage and draft replies to e-mail and chat.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://{yuva_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{yuva_host}/mcp"
+}

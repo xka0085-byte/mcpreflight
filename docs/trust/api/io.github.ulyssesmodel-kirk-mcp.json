@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:35.771Z",
+  "server": {
+    "registryName": "io.github.UlyssesModel/kirk-mcp",
+    "title": "Kirk — Unsupervised Structural Change Detection",
+    "description": "The Kalman filter for the non-Gaussian, non-stationary world. Unsupervised structural change.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://kirk-mcp.kavara.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kirk-mcp.kavara.ai/mcp"
+}

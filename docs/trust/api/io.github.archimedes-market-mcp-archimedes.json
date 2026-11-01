@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:50.336Z",
+  "server": {
+    "registryName": "io.github.archimedes-market/mcp-archimedes",
+    "title": "io.github.archimedes-market/mcp-archimedes",
+    "description": "Discover verified deep-tech engineering bounties from any AI agent.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://archimedes.market/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "archimedes-market",
+      "version": "0.3.0",
+      "vendor": "Archimedes Market",
+      "documentation_url": "https://archimedes.market/mcp"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].asset_class has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://archimedes.market/api/mcp"
+}

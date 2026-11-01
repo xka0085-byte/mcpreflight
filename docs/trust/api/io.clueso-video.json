@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:41.454Z",
+  "server": {
+    "registryName": "io.clueso/video",
+    "title": "Clueso",
+    "description": "Make videos and docs with your AI agent — describe what you need, every output stays editable.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://connect.clueso.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "clueso-connect",
+      "version": "1.0.0"
+    },
+    "toolCount": 53,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[45].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[47].action has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://connect.clueso.io/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:47.059Z",
+  "server": {
+    "registryName": "app.smsportal/sms",
+    "title": "smsportal.app SMS",
+    "description": "Send and read SMS from your own Android phone and number. No per-message fees from smsportal.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://smsportal.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://smsportal.app/mcp"
+}

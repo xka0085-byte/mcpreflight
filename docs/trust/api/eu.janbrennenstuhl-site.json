@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:34.108Z",
+  "server": {
+    "registryName": "eu.janbrennenstuhl/site",
+    "title": "janbrennenstuhl.eu",
+    "description": "Search, read and cite Jan Brennenstuhl's essays on AppSec, identity and agent identity.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.janbrennenstuhl.eu/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "janbrennenstuhl.eu",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].article_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.janbrennenstuhl.eu/mcp"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:26.953Z",
+  "server": {
+    "registryName": "com.tryeasylane/parking",
+    "title": "Easy Lane: New Orleans Parking",
+    "description": "Can I park here? Tow zones, meters, permit zones, parades and events for any New Orleans address.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://tryeasylane.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "easy-lane-parking",
+      "version": "0.2.0",
+      "title": "Easy Lane: New Orleans Parking"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lon has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tryeasylane.com/mcp"
+}

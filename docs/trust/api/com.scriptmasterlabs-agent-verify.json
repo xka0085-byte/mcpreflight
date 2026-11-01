@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:04.559Z",
+  "server": {
+    "registryName": "com.scriptmasterlabs/agent-verify",
+    "title": "SCRIPTMASTERLABS — Agent Verify",
+    "description": "Proof, not ratings: verified paid agent-job records on Arc + a $0.05 signed Proof Check.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://scriptmasterlabs.com/agent-verify/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "sml-agent-verify",
+      "version": "1.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].before_seq has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].capability has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scriptmasterlabs.com/agent-verify/mcp"
+}

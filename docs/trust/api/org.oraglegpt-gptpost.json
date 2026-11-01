@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:40.728Z",
+  "server": {
+    "registryName": "org.oraglegpt/gptpost",
+    "title": "GPTpost",
+    "description": "Draft, schedule and publish social media posts from AI agents, under workspace approval rules.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.oraglegpt.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.oraglegpt.org/mcp"
+}

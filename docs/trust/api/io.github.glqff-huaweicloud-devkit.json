@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:03.402Z",
+  "server": {
+    "registryName": "io.github.glqff/huaweicloud-devkit",
+    "title": "HuaweiCloud DevKit (Community Preview)",
+    "description": "Community preview of HuaweiCloud DevKit MCP server (official: io.github.huaweicloud)",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://erx5uqu4-8931.cn-north-4-bridge.myhuaweicloud.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://erx5uqu4-8931.cn-north-4-bridge.myhuaweicloud.com/mcp"
+}

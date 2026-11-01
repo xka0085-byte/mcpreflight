@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:40.476Z",
+  "server": {
+    "registryName": "io.usefulapi/fieldwire",
+    "title": "Fieldwire MCP by usefulapi",
+    "description": "Read Fieldwire projects, tasks, plans, forms, RFIs and submittals; create and update tasks.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://fieldwire.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fieldwire-mcp",
+      "version": "1.20.0",
+      "title": "Fieldwire MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/fieldwire/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].first_name_contains has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].last_name_contains has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].company_contains has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fieldwire.usefulapi.io/mcp"
+}

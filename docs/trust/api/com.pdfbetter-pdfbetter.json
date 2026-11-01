@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:46.306Z",
+  "server": {
+    "registryName": "com.pdfbetter/pdfbetter",
+    "title": "PDFBetter",
+    "description": "Fill, convert, OCR, merge, split, extract data from and summarize PDFs. AI answers cite the page.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pdfbetter.com/api/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pdfbetter.com/api/mcp/"
+}

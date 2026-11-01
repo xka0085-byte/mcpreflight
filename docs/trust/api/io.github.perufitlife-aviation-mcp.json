@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:19.173Z",
+  "server": {
+    "registryName": "io.github.Perufitlife/aviation-mcp",
+    "title": "io.github.Perufitlife/aviation-mcp",
+    "description": "Live aviation data for AI agents: METAR weather, airports, aircraft, glossary & FAA questions.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://renzomacar--aviation-mcp.apify.actor/mcp?token={apifyToken}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://renzomacar--aviation-mcp.apify.actor/mcp?token={apifyToken}"
+}

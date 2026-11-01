@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:26.645Z",
+  "server": {
+    "registryName": "games.playfrog/publish",
+    "title": "games.playfrog/publish",
+    "description": "Publish browser games to Playfrog and get a shareable play link. Static HTML5, files sent inline.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp-open.playfrog.games/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "playfrog",
+      "title": "Playfrog: publish browser games",
+      "version": "0.1.0",
+      "description": "Publish a browser game and get a public play link in seconds. Free, no account and no API key.",
+      "websiteUrl": "https://playfrog.gg/docs"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].files has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].files has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-open.playfrog.games/mcp"
+}

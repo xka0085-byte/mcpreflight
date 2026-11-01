@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:14.092Z",
+  "server": {
+    "registryName": "to.agentmail/agentmail",
+    "title": "AgentMail",
+    "description": "Email inboxes for AI agents: send, receive, reply, search, and manage threaded email over MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.agentmail.to/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.agentmail.to/mcp"
+}

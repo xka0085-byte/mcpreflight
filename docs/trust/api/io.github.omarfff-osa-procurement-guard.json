@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:25.398Z",
+  "server": {
+    "registryName": "io.github.omarfff/osa-procurement-guard",
+    "title": "OSA Procurement Guard",
+    "description": "Pre-purchase trust, pricing and budget decisions for AI agents buying APIs and MCP tools.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://pkctqxeydfuiupadaoov.supabase.co/functions/v1/procurement-mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "OSA Procurement Guard",
+      "version": "0.2.2"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].network has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].asset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offered_price_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_price_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].min_trust has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pkctqxeydfuiupadaoov.supabase.co/functions/v1/procurement-mcp"
+}

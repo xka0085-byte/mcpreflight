@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:29.950Z",
+  "server": {
+    "registryName": "com.theagenticweekly/agentic-weekly",
+    "title": "Agentic Weekly",
+    "description": "Read-only data on new AI models and tool releases. Each fact has a source URL and a date.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://theagenticweekly.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentic-weekly",
+      "title": "Agentic Weekly",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].b has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://theagenticweekly.com/mcp"
+}

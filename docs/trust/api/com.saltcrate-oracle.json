@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:50.526Z",
+  "server": {
+    "registryName": "com.saltcrate/oracle",
+    "title": "SaltCrate Oracle",
+    "description": "Pay-per-call web intelligence MCP: fetch pages, check links, detect changes, verify claims.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://saltcrate-oracle.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "saltcrate-oracle",
+      "version": ""
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].claim has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].source_url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://saltcrate-oracle.fly.dev/mcp"
+}

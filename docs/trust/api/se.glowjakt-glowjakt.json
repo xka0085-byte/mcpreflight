@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:48.422Z",
+  "server": {
+    "registryName": "se.glowjakt/glowjakt",
+    "title": "se.glowjakt/glowjakt",
+    "description": "Nordic beauty price comparison: 500k+ EAN-matched products, 70+ stores, true landed-cost pricing.",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://mcp.glowjakt.se/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.glowjakt.se/mcp"
+}

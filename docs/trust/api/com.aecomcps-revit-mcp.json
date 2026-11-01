@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:55.386Z",
+  "server": {
+    "registryName": "com.aecomcps/revit-mcp",
+    "title": "Revit MCP",
+    "description": "Read and edit the Revit 2024–2027 model on your PC. Needs the free Revit MCP add-in.",
+    "registryVersion": "0.7.30"
+  },
+  "endpoint": "https://revit-mcp.pages.dev/mcp/revit",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://revit-mcp.pages.dev/mcp/revit"
+}

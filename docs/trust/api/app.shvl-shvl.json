@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:45.411Z",
+  "server": {
+    "registryName": "app.shvl/shvl",
+    "title": "SHVL",
+    "description": "Review UK aged-debtors CSVs, workspace receivables briefs and saved case information.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://shvl.jlucwright.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shvl-credit-control",
+      "version": "2.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shvl.jlucwright.workers.dev/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:20.293Z",
+  "server": {
+    "registryName": "cz.osvcalc/osvcalc",
+    "title": "OSVcalc",
+    "description": "Czech OSVČ tax calculator: income tax, social and health insurance, VAT, paušální daň.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://osvcalc.cz/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://osvcalc.cz/api/mcp"
+}

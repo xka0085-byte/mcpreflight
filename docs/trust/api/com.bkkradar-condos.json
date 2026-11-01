@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:02.754Z",
+  "server": {
+    "registryName": "com.bkkradar/condos",
+    "title": "BKK Radar",
+    "description": "Bangkok condos for rent and sale: search by budget, BTS/MRT station and walk time; median rents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bkkradar.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bkkradar",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bkkradar.com/api/mcp"
+}

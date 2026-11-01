@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:36.806Z",
+  "server": {
+    "registryName": "io.github.ChanghuLiu/factorytalk-import-preflight",
+    "title": "HMI Import Preflight",
+    "description": "Independent static checks for supported tag and alarm CSV import formats; no HMI or PLC access.",
+    "registryVersion": "0.1.6"
+  },
+  "endpoint": "https://factorytalk.regevidencehub.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "HMI Import Preflight",
+      "version": "1.30.0",
+      "websiteUrl": "https://regevidencehub.com/about/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tags_csv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].digital_alarms_csv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].analog_alarms_csv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tags_csv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].digital_alarms_csv has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].analog_alarms_csv has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://factorytalk.regevidencehub.com/mcp"
+}

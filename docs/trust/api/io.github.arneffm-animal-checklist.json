@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:52.294Z",
+  "server": {
+    "registryName": "io.github.ArneFfm/animal-checklist",
+    "title": "Animal Checklist",
+    "description": "Search animals in eight languages with habitats, countries, photos and source credits.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://animalchecklist.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "animalchecklist",
+      "title": "Animal Checklist",
+      "version": "1.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].habitat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].per has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://animalchecklist.com/mcp"
+}

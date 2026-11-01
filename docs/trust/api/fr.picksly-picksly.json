@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:09.984Z",
+  "server": {
+    "registryName": "fr.picksly/picksly",
+    "title": "Picksly",
+    "description": "Best phone, tablet, laptop or smartwatch for your profile and budget: lab scores, live prices.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://picksly.fr/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "picksly",
+      "title": "Picksly — tech buying guide",
+      "version": "1.0.0",
+      "websiteUrl": "https://picksly.fr/assistants-ia",
+      "icons": [
+        {
+          "src": "https://picksly.fr/static/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].modele_a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].modele_b has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://picksly.fr/api/mcp"
+}

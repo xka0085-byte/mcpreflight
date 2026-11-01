@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:49.921Z",
+  "server": {
+    "registryName": "com.quantwright/agent-api",
+    "title": "QuantWright",
+    "description": "Backtests with costs, a held-out test that counts once, a score that counts every version tried.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://quantwright.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "quantwright",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].timeframe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].version has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].version has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://quantwright.com/api/mcp"
+}

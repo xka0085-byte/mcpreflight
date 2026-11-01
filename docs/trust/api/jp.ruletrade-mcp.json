@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:42.952Z",
+  "server": {
+    "registryName": "jp.ruletrade/mcp",
+    "title": "Rule Trade - Japanese equity verification layer",
+    "description": "Verified Japanese equity studies: 50 anomalies, 26 indicators, 12 candlesticks, events, ETF decay.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://ruletrade.jp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ruletrade-mcp",
+      "version": "0.2.0",
+      "title": "ルールトレード MCP(無料版)",
+      "websiteUrl": "https://ruletrade.jp/"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ruletrade.jp/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:19.000Z",
+  "server": {
+    "registryName": "io.github.Pearl-Passport/pearl-agent-plugin",
+    "title": "Pearl",
+    "description": "Pearl places, table availability, and confirmed visit, save and trip actions for reviewed hosts.",
+    "registryVersion": "0.12.3"
+  },
+  "endpoint": "https://agent.joinpearl.co/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.joinpearl.co/mcp"
+}

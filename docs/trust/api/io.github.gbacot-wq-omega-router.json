@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:51.535Z",
+  "server": {
+    "registryName": "io.github.gbacot-wq/omega-router",
+    "title": "io.github.gbacot-wq/omega-router",
+    "description": "Route agent services by observed price and public usage evidence.",
+    "registryVersion": "0.1.3"
+  },
+  "endpoint": "https://omega-router.gbacot.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "OMEGA Router",
+      "version": "0.1.7"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].capability has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].mode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_price_usdc has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].capability has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://omega-router.gbacot.workers.dev/mcp"
+}

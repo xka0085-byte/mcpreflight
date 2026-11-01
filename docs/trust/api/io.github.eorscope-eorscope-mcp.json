@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:10.395Z",
+  "server": {
+    "registryName": "io.github.eorscope/eorscope-mcp",
+    "title": "EOR Scope",
+    "description": "Statutory employer cost by country, before any Employer of Record (EOR) fee.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://mcp.eorscope.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "eorscope-mcp",
+      "title": "EOR Scope",
+      "version": "0.2.0",
+      "description": "Statutory employer cost by country, with sources and check dates, before any Employer of Record (EOR) fee.",
+      "websiteUrl": "https://eorscope.com/",
+      "icons": [
+        {
+          "src": "https://eorscope.com/favicon.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].countries has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].lines has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.eorscope.com/mcp"
+}

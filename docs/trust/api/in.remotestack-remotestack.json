@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:01.072Z",
+  "server": {
+    "registryName": "in.remotestack/remotestack",
+    "title": "RemoteStack",
+    "description": "Search 50,000 live remote jobs, match your resume, get a tailored resume and cover letter.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.remotestack.in/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.remotestack.in/mcp"
+}

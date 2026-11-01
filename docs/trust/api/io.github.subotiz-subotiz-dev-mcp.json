@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:03.569Z",
+  "server": {
+    "registryName": "io.github.Subotiz/subotiz-dev-mcp",
+    "title": "Subotiz MCP",
+    "description": "Connect AI assistants to Subotiz - Using Subotiz's external capabilities through natural language",
+    "registryVersion": "0.0.3"
+  },
+  "endpoint": "https://api.subotiz.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.subotiz.com/mcp"
+}

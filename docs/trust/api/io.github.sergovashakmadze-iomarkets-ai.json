@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:49.286Z",
+  "server": {
+    "registryName": "io.github.SergoVashakmadze/iomarkets-ai",
+    "title": "IoMarkets.ai guide",
+    "description": "Guide to IoMarkets.ai Federated Computing: receipt checks, runs, costs and evaluation requests.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://iomarkets.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "iomarkets-ai",
+      "title": "IoMarkets.ai",
+      "version": "1.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].organisation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://iomarkets.ai/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:37.103Z",
+  "server": {
+    "registryName": "io.github.flightdb/dictatoralert",
+    "title": "Dictator Alert (via FlightDB)",
+    "description": "Track government and VIP jets of authoritarian regimes: flight history, airport visits, ADS-B data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://flightdb.org/mcp/dictatoralert",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://flightdb.org/mcp/dictatoralert"
+}

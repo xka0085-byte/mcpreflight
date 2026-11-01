@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:15.804Z",
+  "server": {
+    "registryName": "io.github.PanStories/mcp-stock-analyst",
+    "title": "MCP Stock Analyst",
+    "description": "Real-time quotes, fuzzy search and K-line history across 13 global stock markets.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://neeenja--mcp-stock-analyst.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://neeenja--mcp-stock-analyst.apify.actor/mcp"
+}

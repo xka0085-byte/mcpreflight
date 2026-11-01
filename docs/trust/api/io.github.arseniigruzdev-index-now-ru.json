@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:52.708Z",
+  "server": {
+    "registryName": "io.github.arseniigruzdev/index-now-ru",
+    "title": "Index-Now.ru",
+    "description": "Отправка URL, статусы, Sitemap и SEO-аудит через облачный API Index-Now.ru.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://index-now.ru/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://index-now.ru/mcp"
+}

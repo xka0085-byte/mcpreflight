@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:02.443Z",
+  "server": {
+    "registryName": "io.github.SosoPkhakadze/reestri-company-screen",
+    "title": "Caucasus Company Screen (Reestri)",
+    "description": "One-call company screen across Georgia, Armenia and Moldova registers: status, owners, contracts.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://reestri--company-screen.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reestri--company-screen.apify.actor/mcp"
+}

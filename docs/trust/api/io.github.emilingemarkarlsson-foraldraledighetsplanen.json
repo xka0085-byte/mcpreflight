@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:06.431Z",
+  "server": {
+    "registryName": "io.github.emilingemarkarlsson/foraldraledighetsplanen",
+    "title": "Föräldraledighetsplanen",
+    "description": "Swedish parental benefit rules 2026 (Försäkringskassan) for planning parental leave.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://tur-parentalleave.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "foraldraledighetsplanen",
+      "version": "1.2.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].foraldrar has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].onskemal has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].fraga has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tur-parentalleave.vercel.app/api/mcp"
+}

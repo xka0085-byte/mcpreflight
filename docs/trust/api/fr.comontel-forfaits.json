@@ -1,0 +1,85 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:58.336Z",
+  "server": {
+    "registryName": "fr.comontel/forfaits",
+    "title": "Comontel : forfaits mobiles pro sur le réseau Orange",
+    "description": "Forfaits mobiles pro sur le réseau Orange : prix, itinérance Europe et Suisse, FAQ. Lecture seule.",
+    "registryVersion": "1.5.1"
+  },
+  "endpoint": "https://comontel.fr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "comontel",
+      "version": "1.5.1",
+      "title": "Comontel : forfaits mobiles pro des frontaliers",
+      "description": "Forfaits mobiles pro Comontel pour les frontaliers (réseau Orange, Europe et Suisse incluses) : prix, coût d’une flotte, règle d’usage des frontaliers, zones frontalières, itinérance, éligibilité, FAQ et guides. Lecture seule.",
+      "websiteUrl": "https://comontel.fr/",
+      "icons": [
+        {
+          "src": "https://comontel.fr/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://comontel.fr/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://comontel.fr/icons/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 18,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].workdays_per_month has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].video_hours_per_week has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].audio_call_hours_per_week has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].streaming_hours_per_week has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].music_hours_per_week has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].web_pages_per_day has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].gps_hours_per_week has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://comontel.fr/mcp"
+}

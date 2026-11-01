@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:51.997Z",
+  "server": {
+    "registryName": "app.connectmyshop/etsy",
+    "title": "ConnectMyShop for Etsy",
+    "description": "Manage your Etsy shop from your AI: bulk-edit listings, prices and drafts. You approve every change.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://connectmyshop.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://connectmyshop.app/mcp"
+}

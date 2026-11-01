@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:33.438Z",
+  "server": {
+    "registryName": "za.co.webuycars/website",
+    "title": "WeBuyCars",
+    "description": "Search WeBuyCars' live used-vehicle stock, condition reports and FAQs, or start a sell-my-car lead.",
+    "registryVersion": "2.2.0"
+  },
+  "endpoint": "https://ai.webuycars.co.za/website",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.webuycars.co.za/website"
+}

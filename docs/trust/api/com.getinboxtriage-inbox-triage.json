@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:56.960Z",
+  "server": {
+    "registryName": "com.getinboxtriage/inbox-triage",
+    "title": "Inbox Triage",
+    "description": "Connect Gmail, Outlook, iCloud, Yahoo and IMAP to AI apps in one MCP connection.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://getinboxtriage.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://getinboxtriage.com/mcp"
+}

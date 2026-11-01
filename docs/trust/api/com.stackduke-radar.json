@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:17.614Z",
+  "server": {
+    "registryName": "com.stackduke/radar",
+    "title": "Stackduke Radar",
+    "description": "Read-only answers about tool changes in the public MCP servers on Stackduke's tracker. No sign-in.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://radar.stackduke.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "stackduke-radar",
+      "title": "Stackduke Radar",
+      "version": "0.1.0",
+      "websiteUrl": "https://stackduke.com/tracker"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].match has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://radar.stackduke.com/mcp"
+}

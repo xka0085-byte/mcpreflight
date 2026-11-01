@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:34.157Z",
+  "server": {
+    "registryName": "io.github.helpmyagent/helpmyagent",
+    "title": "HelpMyAgent",
+    "description": "Pay-per-call data APIs for AI agents: business, compliance, procurement, VAT and IBAN via x402.",
+    "registryVersion": "1.5.9"
+  },
+  "endpoint": "https://api.helpmyagent.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "helpmyagent",
+      "title": "HelpMyAgent APIs",
+      "version": "v1",
+      "description": "HelpMyAgent is a remote MCP server for AI agents that need structured business, compliance, procurement, VAT and IBAN data, with deep French company and public-procurement coverage. Agents can discover free metadata tools, inspect well-documented callable input/output schemas, real stored response examples, source coverage and pricing, then execute paid business tools over Streamable HTTP. Paid tools publish x402 terms before execution and support USDC on Base plus RLUSD on XRPL.",
+      "websiteUrl": "https://helpmyagent.com"
+    },
+    "toolCount": 59,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "59 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.helpmyagent.com/mcp"
+}

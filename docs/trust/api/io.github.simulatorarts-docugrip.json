@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:25.408Z",
+  "server": {
+    "registryName": "io.github.simulatorarts/docugrip",
+    "title": "DocuGrip",
+    "description": "Find the right PDF tool for any task and get the link. Your document never reaches the server.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://docugrip.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "docugrip",
+      "title": "DocuGrip",
+      "version": "0.2.0",
+      "websiteUrl": "https://docugrip.com",
+      "icons": [
+        {
+          "src": "https://docugrip.com/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://docugrip.com/api/mcp"
+}

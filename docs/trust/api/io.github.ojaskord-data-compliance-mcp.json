@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:04.988Z",
+  "server": {
+    "registryName": "io.github.OjasKord/data-compliance-mcp",
+    "title": "Data Compliance Classifier MCP",
+    "description": "Classify data safety before storing or sharing. GDPR, HIPAA, PCI-DSS, CCPA. AI-powered.",
+    "registryVersion": "1.0.25"
+  },
+  "endpoint": "https://data-compliance-mcp-production.up.railway.app",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "data-compliance-mcp",
+      "version": "1.0.38",
+      "description": "Every agent that processes user input or assembles outbound API payloads has a moment where it must decide whether the data is safe to transmit. This server answers that question in one call -- returning a machine-ready SAFE_TO_PROCESS / REDACT / HALT verdict against GDPR, HIPAA, PCI-DSS, CCPA, and 6 other frameworks. Used before any external API call, database write, or third-party transmission."
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://data-compliance-mcp-production.up.railway.app"
+}

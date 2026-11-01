@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:33.460Z",
+  "server": {
+    "registryName": "goog.workspace-developer/developer-tools",
+    "title": "goog.workspace-developer/developer-tools",
+    "description": "Provides tools for searching Google Workspace documentation and much more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://workspace-developer.goog/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Google Workspace Developers",
+      "version": "unknown"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://workspace-developer.goog/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:02.015Z",
+  "server": {
+    "registryName": "io.github.sugukurukabe/jp-bids",
+    "title": "JP Bids",
+    "description": "Read-only MCP server for searching Japan government procurement bid information from the KKJ portal.",
+    "registryVersion": "0.9.0"
+  },
+  "endpoint": "https://mcp.bid-jp.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.bid-jp.com/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.bid-jp.com/mcp"
+}

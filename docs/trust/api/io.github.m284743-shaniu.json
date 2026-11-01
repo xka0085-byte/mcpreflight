@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:08.268Z",
+  "server": {
+    "registryName": "io.github.m284743/shaniu",
+    "title": "Agent Shaniu (SHANIU)",
+    "description": "First AI-driven community meme coin on BSC. Mint, trade and referral tools for AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bn.shaniu.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "shaniu-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].fills has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].inviter has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].invitee has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bn.shaniu.ai/mcp"
+}

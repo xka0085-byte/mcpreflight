@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:46.192Z",
+  "server": {
+    "registryName": "com.lightningeo/ai-visibility-data",
+    "title": "Lightning · AI Visibility Data",
+    "description": "AI-visibility studies for agents: how ChatGPT, Gemini and Claude answer, any region or industry.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.lightningeo.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lightning-data",
+      "title": "Lightning · Datos de visibilidad IA",
+      "version": "1.0.0",
+      "websiteUrl": "https://lightningeo.com",
+      "icons": [
+        {
+          "src": "https://api.lightningeo.com/icono.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lightningeo.com/mcp"
+}

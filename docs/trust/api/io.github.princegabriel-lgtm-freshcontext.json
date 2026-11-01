@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:27.116Z",
+  "server": {
+    "registryName": "io.github.PrinceGabriel-lgtm/freshcontext",
+    "title": "FreshContext",
+    "description": "Context integrity for AI agents: evaluate freshness, confidence, provenance, and decision readiness.",
+    "registryVersion": "0.5.3"
+  },
+  "endpoint": "https://api.freshcontext.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "freshcontext-mcp",
+      "version": "0.5.3"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].max_length has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.freshcontext.dev/mcp"
+}

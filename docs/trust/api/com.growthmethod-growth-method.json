@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:21.183Z",
+  "server": {
+    "registryName": "com.growthmethod/growth-method",
+    "title": "Growth Method",
+    "description": "Plan, launch and measure growth campaigns with your team, using the marketing tools you connect.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.growthmethod.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://app.growthmethod.com/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.growthmethod.com/mcp"
+}

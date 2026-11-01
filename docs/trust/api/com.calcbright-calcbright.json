@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:19.721Z",
+  "server": {
+    "registryName": "com.calcbright/calcbright",
+    "title": "CalcBright Calculators",
+    "description": "160+ calculators: take-home pay for 166 countries, mortgage, loan, VAT, BMI, dates, units, currency.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://calcbright.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "calcbright",
+      "title": "CalcBright Calculators",
+      "version": "1.0.0",
+      "websiteUrl": "https://calcbright.com"
+    },
+    "toolCount": 167,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].z has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://calcbright.com/mcp"
+}

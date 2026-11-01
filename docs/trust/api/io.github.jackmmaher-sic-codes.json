@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:11.571Z",
+  "server": {
+    "registryName": "io.github.jackmmaher/sic-codes",
+    "title": "SIC Codes UK",
+    "description": "UK SIC code lookup, GICS/ICB mapping, and Companies House search. 731 codes, 5.6M companies.",
+    "registryVersion": "3.0.0"
+  },
+  "endpoint": "https://siccodes.co.uk/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://siccodes.co.uk/api/mcp"
+}

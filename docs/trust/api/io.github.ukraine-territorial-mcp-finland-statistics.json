@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:33.512Z",
+  "server": {
+    "registryName": "io.github.Ukraine-Territorial-MCP/finland-statistics",
+    "title": "Finland Statistics MCP",
+    "description": "Experimental MCP exploring Statistics Finland PxWeb statistical datasets.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.edeputat.com/finland-statistics/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Official Statistics Finland PxWeb data",
+      "name": "finland-statistics",
+      "title": "Finland Statistics",
+      "version": ""
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].path has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].table has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].table has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].selections has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.edeputat.com/finland-statistics/mcp"
+}

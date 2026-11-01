@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:58.247Z",
+  "server": {
+    "registryName": "dev.pdfloom/pdfloom",
+    "title": "PDFLoom",
+    "description": "HTML or URL to PDF with headless Chrome, and invoice/receipt/quote PDFs from JSON.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pdfloom.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pdfloom.dev/mcp"
+}

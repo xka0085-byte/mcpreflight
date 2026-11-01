@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:51.073Z",
+  "server": {
+    "registryName": "io.doply/doply",
+    "title": "Doply",
+    "description": "Check your Google Play closed test on Doply: progress, devices, crashes, screenshots.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.doply.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "doply",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.doply.io/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:30.032Z",
+  "server": {
+    "registryName": "io.github.opedrosoares/mcp-compras",
+    "title": "MCP Compras.gov.br",
+    "description": "Preços, atas, contratos e sanções das APIs públicas de compras do governo brasileiro",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://mcp-compras.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "compras-mcp",
+      "version": "2.14.7"
+    },
+    "toolCount": 100,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "100 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-compras.up.railway.app/mcp"
+}

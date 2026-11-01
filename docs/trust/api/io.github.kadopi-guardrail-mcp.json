@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:00.537Z",
+  "server": {
+    "registryName": "io.github.kadopi/guardrail-mcp",
+    "title": "Guardrail MCP",
+    "description": "Deterministic preflight checks for credentials, fund transfers, writes, and prompt overrides.",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://guardrail-mcp.kadopi.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Guardrail MCP",
+      "version": "0.0.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].content has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://guardrail-mcp.kadopi.workers.dev/mcp"
+}

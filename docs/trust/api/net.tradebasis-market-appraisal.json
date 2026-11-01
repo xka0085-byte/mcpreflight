@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:20.309Z",
+  "server": {
+    "registryName": "net.tradebasis/market-appraisal",
+    "title": "TradeBasis US Market Appraisal",
+    "description": "Free US vehicle averages in USD from matched asking prices. VIN optional; limited public pilot.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tradebasis.net/mcp/appraisal",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tradebasis-appraisal",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tradebasis.net/mcp/appraisal"
+}

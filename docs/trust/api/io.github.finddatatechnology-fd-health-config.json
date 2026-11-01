@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:51.580Z",
+  "server": {
+    "registryName": "io.github.FindDataTechnology/fd-health-config",
+    "title": "io.github.FindDataTechnology/fd-health-config",
+    "description": "finddata 中央库健康巡检配置(总闸/限流)只读 MCP — fd_open_data.public.health_config — 想 7×24 常驻 → 萬星",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://mcp.finddatatech.cloud/fd-health-config/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.finddatatech.cloud/fd-health-config/mcp"
+}

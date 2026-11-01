@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:31.075Z",
+  "server": {
+    "registryName": "io.github.Qumge/speakpen-mcp",
+    "title": "SpeakPen: Your Voice Notes",
+    "description": "Read-only access to your SpeakPen voice notes: search, read transcripts, list recent ideas.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://speakpen.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://speakpen.app/mcp"
+}

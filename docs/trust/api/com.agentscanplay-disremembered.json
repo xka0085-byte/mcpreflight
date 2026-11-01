@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:02.551Z",
+  "server": {
+    "registryName": "com.agentscanplay/disremembered",
+    "title": "Disremembered",
+    "description": "A game world where humans and AI agents play under the same rules, both achieving their goals.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://play.agentscanplay.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "disremembered on Moondial",
+      "version": "0.1.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].actor has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].passphrase has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://play.agentscanplay.com/mcp"
+}

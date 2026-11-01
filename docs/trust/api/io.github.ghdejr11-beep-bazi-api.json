@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:58.454Z",
+  "server": {
+    "registryName": "io.github.ghdejr11-beep/bazi-api",
+    "title": "io.github.ghdejr11-beep/bazi-api",
+    "description": "Deterministic Korean Saju / BaZi Four Pillars MCP. Day Master, five elements, compatibility.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bazi-api.kunstudio.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Saju BaZi Four Pillars Astrology",
+      "version": "1.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].month has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].day has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].gender has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bazi-api.kunstudio.workers.dev/mcp"
+}

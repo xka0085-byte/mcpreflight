@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:49.841Z",
+  "server": {
+    "registryName": "se.digitalk2/digitalk2",
+    "title": "DigitalK2",
+    "description": "K2 annual reports for Swedish limited companies: SIE import, tax, INK2 and filing prep.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.digitalk2.se/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.digitalk2.se/mcp"
+}

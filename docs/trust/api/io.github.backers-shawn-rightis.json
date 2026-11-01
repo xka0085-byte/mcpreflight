@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:01.738Z",
+  "server": {
+    "registryName": "io.github.Backers-Shawn/rightis",
+    "title": "Rightis",
+    "description": "Identity-rights registry lookups before AI generation: is a face, voice or persona registered?",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rightis.org/api/public-mcp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rightis",
+      "version": "2026-09-20"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].rights_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rightis.org/api/public-mcp/mcp"
+}

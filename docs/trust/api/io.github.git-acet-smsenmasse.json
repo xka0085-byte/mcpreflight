@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:03.771Z",
+  "server": {
+    "registryName": "io.github.git-acet/smsenmasse",
+    "title": "SMS en Masse",
+    "description": "Envoyez des SMS et gérez vos campagnes directement depuis vos agents IA.",
+    "registryVersion": "0.9.1"
+  },
+  "endpoint": "https://www.smsenmasse.fr/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.smsenmasse.fr/api/mcp"
+}

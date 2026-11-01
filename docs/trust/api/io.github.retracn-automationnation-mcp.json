@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:06.922Z",
+  "server": {
+    "registryName": "io.github.retracn/automationnation-mcp",
+    "title": "AutomationNation Data Tools",
+    "description": "Agent tools: Google web search, Flights, Hotels, Shopping, News, Jobs, Trends, Maps leads, YouTube",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=automationnation/data-tools-mcp-server",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=automationnation/data-tools-mcp-server"
+}

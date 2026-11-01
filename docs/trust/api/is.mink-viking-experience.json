@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:36.160Z",
+  "server": {
+    "registryName": "is.mink/viking-experience",
+    "title": "Mink Viking Experience",
+    "description": "Real-time booking, 7-currency pricing, and FAQ for Reykjavik's Viking portrait photo studio.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mink.is/wp-json/mink-mcp/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mink-viking-experience",
+      "title": "Mink Viking Experience",
+      "version": "1.0.0",
+      "description": "MCP server for Mink Viking Experience — real-time booking availability, pricing, FAQ, and business info for the private indoor Viking portrait photography studio in Reykjavik, Iceland.",
+      "websiteUrl": "https://mink.is"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].participants has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mink.is/wp-json/mink-mcp/v1/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:53.876Z",
+  "server": {
+    "registryName": "wedding.latido/latido",
+    "title": "Latido — wedding vendors & planning (Hungary)",
+    "description": "Search Hungarian wedding vendors and venues, check a date, estimate a budget, get the checklist.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://latido.wedding/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "latido",
+      "title": "Latido — wedding vendors & planning (Hungary)",
+      "version": "0.5.0",
+      "websiteUrl": "https://latido.wedding"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].vendor_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].contingency_pct has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].depth has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://latido.wedding/mcp"
+}

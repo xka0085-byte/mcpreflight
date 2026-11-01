@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:15.521Z",
+  "server": {
+    "registryName": "com.truoptim/industrial-ai-gateway",
+    "title": "TruOptim Industrial AI Gateway",
+    "description": "Your plant's history for any AI: Ignition and OPC UA, with KPIs and checks on your own edge.",
+    "registryVersion": "2.3.4"
+  },
+  "endpoint": "https://{gateway_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{gateway_host}/mcp"
+}

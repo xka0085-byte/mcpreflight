@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:24.619Z",
+  "server": {
+    "registryName": "io.github.digitalmentes7-maker/gobuy-product-trust",
+    "title": "GoBuy Product Trust",
+    "description": "Marketplace-evidence trust scores for AI agents: a 0-100 Evidence Score with signal breakdown.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.gobuy.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gobuy-product-trust",
+      "version": "1.1.0",
+      "description": "Marketplace-evidence trust scores for AI agents — one call returns a 0–100 evidence index with full signal breakdown."
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gobuy.ai/mcp"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:05.905Z",
+  "server": {
+    "registryName": "online.meal-planner/public-recipes",
+    "title": "Meal Planner — free recipe beta",
+    "description": "Free dinner samples: search ingredients, read recipes, and learn about Plus weekly planning.",
+    "registryVersion": "1.0.0-beta"
+  },
+  "endpoint": "https://www.meal-planner.online/wp-json/ksl-mp/v1/mcp-public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "meal-planner-public-recipes",
+      "version": "1.0.0-beta"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_minutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.meal-planner.online/wp-json/ksl-mp/v1/mcp-public"
+}

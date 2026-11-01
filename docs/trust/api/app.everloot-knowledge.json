@@ -1,0 +1,68 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:57.432Z",
+  "server": {
+    "registryName": "app.everloot/knowledge",
+    "title": "Everloot: WoW Forever data",
+    "description": "WoW: Forever lore and player-observed drops, vendors, quests, professions and talents, with sources.",
+    "registryVersion": "0.8.0"
+  },
+  "endpoint": "https://everloot.app/mcp/public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "everloot-knowledge",
+      "title": "Everloot",
+      "version": "0.8.0",
+      "description": "WoW: Forever knowledge from player reports and game files, with sources, under CC BY-SA 4.0.",
+      "websiteUrl": "https://github.com/Everloot/everloot",
+      "icons": [
+        {
+          "src": "https://everloot.app/icon-64.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "64x64"
+          ]
+        },
+        {
+          "src": "https://everloot.app/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 32,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[30].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://everloot.app/mcp/public"
+}

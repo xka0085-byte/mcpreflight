@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:38.319Z",
+  "server": {
+    "registryName": "social.refract/refract",
+    "title": "Refract",
+    "description": "Draft, approve and schedule social media posts from Claude, ChatGPT, Cursor and other AI apps.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.refract.social",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.refract.social/.well-known/oauth-protected-resource",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.refract.social"
+}

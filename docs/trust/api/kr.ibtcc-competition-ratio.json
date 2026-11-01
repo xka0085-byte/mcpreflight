@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:53.752Z",
+  "server": {
+    "registryName": "kr.ibtcc/competition-ratio",
+    "title": "IBTCC 공기업 경쟁률 조회",
+    "description": "한국 공공기관(공기업) 채용 경쟁률을 기관명으로 조회합니다. 알리오(ALIO) 공시 데이터 기반으로 최근 채용 건별 1차 지원자 수와 1차 경쟁률을 반환합니다.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ibtcc.kr/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ibtcc-competition",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ibtcc.kr/api/mcp"
+}

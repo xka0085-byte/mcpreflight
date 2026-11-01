@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:14.477Z",
+  "server": {
+    "registryName": "io.github.tathagat22/slipstream",
+    "title": "io.github.tathagat22/slipstream",
+    "description": "Shared distillation cache for AI agents — every fetch ~73-89% fewer tokens via a shared cache.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://slipstream-pi.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-typescript server on vercel",
+      "version": "0.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].note_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].note_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://slipstream-pi.vercel.app/api/mcp"
+}

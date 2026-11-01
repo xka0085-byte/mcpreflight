@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:37.714Z",
+  "server": {
+    "registryName": "com.historyofmarket/market-history",
+    "title": "History of Market",
+    "description": "Read-only U.S. stock market history: S&P 500 since 1928, CAPE, drawdowns, index changes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://historyofmarket.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "history-of-market",
+      "title": "History of Market",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://historyofmarket.com/mcp"
+}

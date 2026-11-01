@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:18.070Z",
+  "server": {
+    "registryName": "be.art-deco-belgique/art-deco-belgique",
+    "title": "Art Déco Belgique",
+    "description": "Verified Art Deco buildings of Belgium and Hauts-de-France: search, nearby, architects, routes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://art-deco-belgique.be/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "art-deco-belgique",
+      "title": "Art Déco Belgique",
+      "version": "1.2.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://art-deco-belgique.be/api/mcp"
+}

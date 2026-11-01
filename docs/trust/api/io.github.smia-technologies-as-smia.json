@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:58.683Z",
+  "server": {
+    "registryName": "io.github.Smia-Technologies-AS/smia",
+    "title": "Smia",
+    "description": "Build your own tools from chat: design, test and host them on a shareable MCP server URL.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.smia.io/mcp?src=mcp-registry",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.smia.io/mcp?src=mcp-registry"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:59.298Z",
+  "server": {
+    "registryName": "io.github.lonniev/excalibur-mcp",
+    "title": "io.github.lonniev/excalibur-mcp",
+    "description": "FastMCP server for posting formatted content to X (Twitter) — Tollbooth-monetized, DPYC-native",
+    "registryVersion": "0.43.0"
+  },
+  "endpoint": "https://excalibur-mcp.fastmcp.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://excalibur-mcp.fastmcp.app/mcp"
+}

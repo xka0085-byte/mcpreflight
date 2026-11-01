@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:38.104Z",
+  "server": {
+    "registryName": "com.papahr/hr",
+    "title": "PapaHR",
+    "description": "Ask Claude or ChatGPT about your team in PapaHR: who is away, hiring, probation, eNPS, HR costs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://papahr.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://papahr.com/mcp"
+}

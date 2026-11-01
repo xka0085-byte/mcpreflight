@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:43.750Z",
+  "server": {
+    "registryName": "space.bidsurvivor/board",
+    "title": "BidSurvivor",
+    "description": "An advertising board sold by live auction: two twelve-hour slots a day, first claim free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bidsurvivor.space/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bidsurvivor",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bidsurvivor.space/api/mcp"
+}

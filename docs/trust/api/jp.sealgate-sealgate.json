@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:44.693Z",
+  "server": {
+    "registryName": "jp.sealgate/sealgate",
+    "title": "SealGate",
+    "description": "既存のログインにパスキーを追加する API (日本製)。プロジェクト・API キー・パスキー・監査ログを tool で扱う。管理画面のアカウントでログインしてつなぐ (OAuth)",
+    "registryVersion": "1.4.1"
+  },
+  "endpoint": "https://api.sealgate.jp/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.sealgate.jp/v1/mcp"
+}

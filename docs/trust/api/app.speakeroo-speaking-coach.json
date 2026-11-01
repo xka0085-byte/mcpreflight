@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:48.618Z",
+  "server": {
+    "registryName": "app.speakeroo/speaking-coach",
+    "title": "Speakeroo speaking coach",
+    "description": "AI speaking coach: feedback on speeches from text or audio, plus topics, pronunciation and rubrics.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.speakeroo.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "speakeroo",
+      "title": "Speakeroo speaking coach",
+      "version": "1.0.1",
+      "websiteUrl": "https://speakeroo.app/mcp?utm_source=mcp&utm_medium=analyze_transcript"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].word has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.speakeroo.app/mcp"
+}

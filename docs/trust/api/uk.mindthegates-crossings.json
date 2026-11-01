@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:33.448Z",
+  "server": {
+    "registryName": "uk.mindthegates/crossings",
+    "title": "Mind the Gates — UK level crossings",
+    "description": "Live barrier status and closure forecasts for ~1,600 UK level crossings. Public data, no auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mindthegates.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mind-the-gates",
+      "version": "1.0.0",
+      "title": "Mind the Gates — UK level crossings",
+      "description": "Live barrier status and closure forecasts for every listed UK level crossing — Great Britain from Network Rail's open timetable, movement and signalling feeds, Northern Ireland from Translink's timetable. Free, read-only, no auth.",
+      "websiteUrl": "https://mindthegates.uk"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mindthegates.uk/mcp"
+}

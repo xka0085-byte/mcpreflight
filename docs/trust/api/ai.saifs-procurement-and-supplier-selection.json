@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:29.582Z",
+  "server": {
+    "registryName": "ai.saifs/procurement-and-supplier-selection",
+    "title": "Procurement & Supplier Selection",
+    "description": "Choose and rank suppliers, size orders and classify spend from delivery and purchase data.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://procurement-and-supply-mcp.saifs.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://procurement-and-supply-mcp.saifs.ai/mcp"
+}

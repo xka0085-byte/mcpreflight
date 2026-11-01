@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:22.699Z",
+  "server": {
+    "registryName": "io.github.klmlfl/case-doha-record",
+    "title": "io.github.klmlfl/case-doha-record",
+    "description": "Search 30,000+ decided U.S. DOHA security-clearance decisions, cited to the public record.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.clearancesearchengine.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "case-doha-record",
+      "title": "CASE · DOHA security-clearance record",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].year_from has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].year_to has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.clearancesearchengine.com/api/mcp"
+}

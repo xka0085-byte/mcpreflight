@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:56.061Z",
+  "server": {
+    "registryName": "io.github.ebrunet001/mcp-server-espn",
+    "title": "io.github.ebrunet001/mcp-server-espn",
+    "description": "Real-time ESPN sports data: live scores, standings, boxscores, odds & stats for 25+ leagues",
+    "registryVersion": "0.1.18"
+  },
+  "endpoint": "https://mrbridge--espn-mcp-server.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mrbridge--espn-mcp-server.apify.actor/mcp"
+}

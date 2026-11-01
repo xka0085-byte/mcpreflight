@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:24.143Z",
+  "server": {
+    "registryName": "de.adventskalender-kompass/adventskalender",
+    "title": "Adventskalender-Kompass",
+    "description": "Finde den passenden Adventskalender nach Zielgruppe, Interessen, Alter, Marke und Preisklasse.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://adventskalender-kompass.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "adventskalender-kompass",
+      "title": "Adventskalender-Kompass",
+      "version": "1.0.0",
+      "websiteUrl": "https://adventskalender-kompass.de",
+      "icons": [
+        {
+          "src": "https://adventskalender-kompass.de/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://adventskalender-kompass.de/icons/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://adventskalender-kompass.de/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://adventskalender-kompass.de/mcp"
+}

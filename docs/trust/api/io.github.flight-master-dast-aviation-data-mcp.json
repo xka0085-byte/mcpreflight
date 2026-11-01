@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:33.758Z",
+  "server": {
+    "registryName": "io.github.flight-master-dast/aviation-data-mcp",
+    "title": "航班管家航空数据 MCP | Flight Master Aviation Data MCP",
+    "description": "航班管家 DAST 官方航空数据 MCP，支持 Remote HTTP 与 npm STDIO，提供航班动态、天气、轨迹及延误风险。Official Flight Master MCP.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://fly.huoli.com/mcp/dast_mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fly.huoli.com/mcp/dast_mcp"
+}

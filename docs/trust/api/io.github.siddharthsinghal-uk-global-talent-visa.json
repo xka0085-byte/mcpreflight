@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:23.346Z",
+  "server": {
+    "registryName": "io.github.siddharthsinghal/uk-global-talent-visa",
+    "title": "Global Talent AI — UK Global Talent Visa studio",
+    "description": "UK Global Talent Visa handbook, endorser criteria, cost calculator, draft scoring. Free, no auth.",
+    "registryVersion": "2.3.0"
+  },
+  "endpoint": "https://ukglobaltalentvisa.org/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ukglobaltalentvisa.org/mcp"
+}

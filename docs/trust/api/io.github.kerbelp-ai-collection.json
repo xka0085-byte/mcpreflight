@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:09.749Z",
+  "server": {
+    "registryName": "io.github.kerbelp/ai-collection",
+    "title": "AI Collection",
+    "description": "Discover and compare AI tools: search, browse categories, find alternatives and curated picks.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://thataicollection.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "thataicollection-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://thataicollection.com/mcp"
+}

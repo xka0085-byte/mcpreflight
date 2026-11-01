@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:49.923Z",
+  "server": {
+    "registryName": "io.github.iamalanlui/apipay",
+    "title": "io.github.iamalanlui/apipay",
+    "description": "Prepaid balance for AI agents: one key, 4,900+ tools your agent can run today, caps, receipts.",
+    "registryVersion": "0.4.2"
+  },
+  "endpoint": "https://apifare.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "apifare",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].from has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].to has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].to has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].bytes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apifare.com/mcp"
+}

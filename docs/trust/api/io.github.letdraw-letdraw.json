@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:45.483Z",
+  "server": {
+    "registryName": "io.github.letdraw/letdraw",
+    "title": "LetDraw",
+    "description": "Create, edit, share and export hand-drawn LetDraw diagrams, from code or a prompt.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.letdraw.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.letdraw.com/mcp"
+}

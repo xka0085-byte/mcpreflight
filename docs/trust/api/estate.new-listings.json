@@ -1,0 +1,76 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:27.519Z",
+  "server": {
+    "registryName": "estate.new/listings",
+    "title": "new.estate",
+    "description": "Search real estate listings for sale or rent in many countries, published on new.estate.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://new.estate/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "new.estate",
+      "version": "1.4.0",
+      "title": "new.estate",
+      "description": "Search homes, apartments, plots and commercial property for sale or rent in many countries, with full listing details and a link to every listing.",
+      "websiteUrl": "https://new.estate/en-US/docs/ai-assistants",
+      "icons": [
+        {
+          "src": "https://new.estate/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "1024x1024"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].longitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minPrice has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maxPrice has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minArea has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maxArea has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://new.estate/api/mcp"
+}

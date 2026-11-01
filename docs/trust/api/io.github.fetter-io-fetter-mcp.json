@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:33.213Z",
+  "server": {
+    "registryName": "io.github.fetter-io/fetter-mcp",
+    "title": "Fetter MCP",
+    "description": "Real-time Python package and vulnerability data for AI coding agents.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.fetter.io/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fetter-mcp",
+      "version": "1.0.1"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.fetter.io/mcp"
+}

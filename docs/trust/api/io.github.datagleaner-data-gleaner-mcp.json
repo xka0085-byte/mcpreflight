@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:06.492Z",
+  "server": {
+    "registryName": "io.github.datagleaner/data-gleaner-mcp",
+    "title": "Data Gleaner",
+    "description": "Pay-per-result web data tools: company and YouTube contacts, hotel prices, Weibo and Bilibili.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=datagleaner/website-contact-details-scraper,datagleaner/google-hotels-scraper,datagleaner/weibo-scraper,datagleaner/bilibili-scraper,datagleaner/sitemap-extractor,datagleaner/youtube-channel-contacts,datagleaner/app-developer-email-finder,datagleaner/team-page-contacts,datagleaner/shopify-partner-contacts,datagleaner/researcher-email-finder",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=datagleaner/website-contact-details-scraper,datagleaner/google-hotels-scraper,datagleaner/weibo-scraper,datagleaner/bilibili-scraper,datagleaner/sitemap-extractor,datagleaner/youtube-channel-contacts,datagleaner/app-developer-email-finder,datagleaner/team-page-contacts,datagleaner/shopify-partner-contacts,datagleaner/researcher-email-finder"
+}

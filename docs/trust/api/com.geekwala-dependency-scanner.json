@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:49.868Z",
+  "server": {
+    "registryName": "com.geekwala/dependency-scanner",
+    "title": "GeekWala Dependency Scanner",
+    "description": "Check dependencies for known CVEs with EPSS and CISA KEV context. Read-only; free API token.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.geekwala.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.geekwala.com/mcp"
+}

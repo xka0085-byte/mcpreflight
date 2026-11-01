@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:17.174Z",
+  "server": {
+    "registryName": "io.github.jarmstrong158/cambium-remote",
+    "title": "cambium (remote)",
+    "description": "Cloudflare Worker for read-only recall of cambium knowledge. MCP 2026-07-28, dual-era.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://cambium-remote.{account}.workers.dev/mcp/{token}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cambium-remote.{account}.workers.dev/mcp/{token}"
+}

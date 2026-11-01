@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:06.221Z",
+  "server": {
+    "registryName": "io.github.nirholas/threews-agent",
+    "title": "three.ws Agent Wallet",
+    "description": "Give your AI agent an x402 wallet: discover and pay for services in USDC, or earn from your own.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://three.ws/api/mcp-agent",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://three.ws/api/mcp-agent"
+}

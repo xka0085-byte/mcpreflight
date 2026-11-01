@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:59.828Z",
+  "server": {
+    "registryName": "com.locus-intelligence/reach",
+    "title": "Reach (Google Business Profile)",
+    "description": "Hosted Google Business Profile MCP server: reviews, posts, profile edits, Maps rank. OAuth sign-in.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://reach.locus-intelligence.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reach.locus-intelligence.com/api/mcp"
+}

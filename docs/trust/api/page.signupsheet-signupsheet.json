@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:56.437Z",
+  "server": {
+    "registryName": "page.signupsheet/signupsheet",
+    "title": "SignUpSheet.page",
+    "description": "Free sign-up sheets, date polls and group cards people join from one link. No accounts, no ads.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://signupsheet.page/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "signupsheet-page",
+      "title": "SignUpSheet.page",
+      "version": "1.0.0",
+      "websiteUrl": "https://signupsheet.page",
+      "icons": [
+        {
+          "src": "https://signupsheet.page/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://signupsheet.page/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].occasion has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://signupsheet.page/mcp"
+}

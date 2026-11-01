@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:13.880Z",
+  "server": {
+    "registryName": "io.github.technovision-dev/odoo-claude-connector",
+    "title": "Claude Connector for Odoo",
+    "description": "Permission-aware MCP server for Odoo 18/19. OAuth 2.1; each call runs as one named Odoo user.",
+    "registryVersion": "1.4.3"
+  },
+  "endpoint": "https://{odoo_host}/mcp/v1",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{odoo_host}/mcp/v1"
+}

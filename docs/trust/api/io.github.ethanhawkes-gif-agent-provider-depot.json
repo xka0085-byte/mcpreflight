@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:13.946Z",
+  "server": {
+    "registryName": "io.github.ethanhawkes-gif/agent-provider-depot",
+    "title": "Agent Provider Depot",
+    "description": "Dated picks, sourced pricing, and rescue/eval tools across 305 AI agent infrastructure providers.",
+    "registryVersion": "0.14.0"
+  },
+  "endpoint": "https://getagentdepot.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.getagentdepot/agent-provider-depot",
+      "title": "Agent Provider Depot",
+      "version": "0.17.3"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].policies has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].full has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].op has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].args has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://getagentdepot.com/api/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:18.324Z",
+  "server": {
+    "registryName": "io.tooloracle/suioracle",
+    "title": "io.tooloracle/suioracle",
+    "description": "SUIOracle - 12 Sui tools: objects, modules, validators, gas, Cetus DEX, NFTs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tooloracle.io/sui/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "SuiOracle",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].protocol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].object_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_tvl_usd has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tooloracle.io/sui/mcp/"
+}

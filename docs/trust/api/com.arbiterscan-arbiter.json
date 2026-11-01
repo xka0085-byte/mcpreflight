@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:32.878Z",
+  "server": {
+    "registryName": "com.arbiterscan/arbiter",
+    "title": "Arbiter",
+    "description": "Security checks for apps built with AI: leaked keys, open routes, database rules, each with a fix.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.arbiterscan.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.arbiterscan.com/mcp"
+}

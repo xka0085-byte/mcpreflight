@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:28.508Z",
+  "server": {
+    "registryName": "io.github.ym2629/lavela",
+    "title": "lavela",
+    "description": "Deploy a repo to a live app from chat: servers, Postgres, domain, email, Stripe, security scan.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://console.lavela.dev/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://console.lavela.dev/api/mcp"
+}

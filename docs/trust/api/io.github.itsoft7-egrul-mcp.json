@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:08.948Z",
+  "server": {
+    "registryName": "io.github.itsoft7/egrul-mcp",
+    "title": "io.github.itsoft7/egrul-mcp",
+    "description": "Проверка организаций, ИП и физлиц по данным ЕГРЮЛ/ЕГРИП ФНС: санкции, иноагенты, банкротство.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://egrul.org/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "egrul-org",
+      "version": "1.0.0"
+    },
+    "toolCount": 39,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "39 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://egrul.org/mcp/"
+}

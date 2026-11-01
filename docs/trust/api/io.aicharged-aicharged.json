@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:20.816Z",
+  "server": {
+    "registryName": "io.aicharged/aicharged",
+    "title": "aicharged.io",
+    "description": "214 tools for AI agents over one MCP endpoint: image, video, audio, 3D, data, storage, mail, GPUs.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://aicharged.io/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aicharged.io/api/v1/mcp"
+}

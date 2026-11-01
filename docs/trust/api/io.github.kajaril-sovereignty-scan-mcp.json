@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:03.722Z",
+  "server": {
+    "registryName": "io.github.kajaril/sovereignty-scan-mcp",
+    "title": "Sovereignty Scan",
+    "description": "EU AI Act sovereignty scanning. Provider residency, registration status, audit trail support.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://sovereignty-scan.kajaril.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sovereignty-scan.kajaril.com/mcp"
+}

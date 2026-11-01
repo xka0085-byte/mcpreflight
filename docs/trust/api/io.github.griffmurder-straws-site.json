@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:22.499Z",
+  "server": {
+    "registryName": "io.github.GriffMurder/straws-site",
+    "title": "Straws Soda",
+    "description": "Public read-only MCP for strawssoda.com: menu, hours, and order or contact links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.strawssoda.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "straws-site",
+      "version": "1.0.0",
+      "title": "Straws Soda"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].goal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.strawssoda.com/api/mcp"
+}

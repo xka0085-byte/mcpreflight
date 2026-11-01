@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:54.220Z",
+  "server": {
+    "registryName": "io.github.dvcoolarun/docuqueue-mcp",
+    "title": "DocuQueue MCP",
+    "description": "MCP server for PDF generation, form filling, batch invoices and contracts. MIT, free tier, hosted.",
+    "registryVersion": "0.1.5"
+  },
+  "endpoint": "https://docuqueue.com/mcp/v1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "DocuQueue",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].accept has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].format has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://docuqueue.com/mcp/v1"
+}

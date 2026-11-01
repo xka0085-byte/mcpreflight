@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:00.218Z",
+  "server": {
+    "registryName": "io.github.danfeistar/busybee",
+    "title": "BusyBee — Social Media Data",
+    "description": "Social media data for AI agents: creators, posts, comments, insights, trending across 6 platforms.",
+    "registryVersion": "0.2.4"
+  },
+  "endpoint": "https://lucydomi.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lucydomi.com/mcp"
+}

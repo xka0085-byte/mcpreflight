@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:46.077Z",
+  "server": {
+    "registryName": "dev.workers.deanhiki.klane402/funding",
+    "title": "KLane Perp Funding Rates",
+    "description": "Live perp funding rates across 6 venues (Hyperliquid, Binance, Bybit, Lighter...) and arbitrage.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://klane402.deanhiki.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "klane-funding",
+      "title": "KLane Perp Funding Rates",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].coin has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://klane402.deanhiki.workers.dev/mcp"
+}

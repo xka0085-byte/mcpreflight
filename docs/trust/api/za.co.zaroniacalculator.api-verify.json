@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:32.752Z",
+  "server": {
+    "registryName": "za.co.zaroniacalculator.api/verify",
+    "title": "za.co.zaroniacalculator.api/verify",
+    "description": "Independent ZARONIA coupon verification for SA FRNs & money-market paper, SARB-compounded index.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.zaroniacalculator.co.za/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "zaronia-verify",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].coupon_frequency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].margin_pct has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].expected_coupon_pct has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.zaroniacalculator.co.za/mcp"
+}

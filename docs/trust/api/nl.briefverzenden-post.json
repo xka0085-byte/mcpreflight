@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:34.574Z",
+  "server": {
+    "registryName": "nl.briefverzenden/post",
+    "title": "Briefverzenden — fysieke post",
+    "description": "Verstuur een echte brief per post in 22 landen: lever een PDF aan, wij printen en posten hem.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.briefverzenden.nl/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-typescript server on vercel",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].ontvanger has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].speed has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.briefverzenden.nl/api/mcp"
+}

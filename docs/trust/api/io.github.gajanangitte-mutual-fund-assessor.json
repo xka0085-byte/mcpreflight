@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:49.929Z",
+  "server": {
+    "registryName": "io.github.gajanangitte/mutual-fund-assessor",
+    "title": "Mutual Fund Assessor",
+    "description": "Research Indian mutual funds and manage consent-based portfolio tracking records.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mf-assessor-api.azurewebsites.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mf-assessor-api.azurewebsites.net/mcp"
+}

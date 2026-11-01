@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:31.093Z",
+  "server": {
+    "registryName": "io.github.AceDataCloud/mcp-seedance",
+    "title": "Seedance by Ace Data Cloud",
+    "description": "Generate Seedance videos with Ace Data Cloud; retrieve the original task for finished video.",
+    "registryVersion": "2026.10.19.5"
+  },
+  "endpoint": "https://seedance.mcp.acedata.cloud/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://seedance.mcp.acedata.cloud/mcp"
+}

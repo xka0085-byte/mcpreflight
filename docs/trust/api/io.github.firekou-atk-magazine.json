@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:34.030Z",
+  "server": {
+    "registryName": "io.github.firekou/atk-magazine",
+    "title": "ATK Magazine (sample content)",
+    "description": "[SAMPLE / TEST CONTENT] Search ATK Magazine; articles $0.20 USDC on Base mainnet via x402.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://atk-bazaar-linec-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "atk-magazine",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].articleId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].articleId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://atk-bazaar-linec-production.up.railway.app/mcp"
+}

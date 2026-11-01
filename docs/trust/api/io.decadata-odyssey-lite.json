@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:46.924Z",
+  "server": {
+    "registryName": "io.decadata/odyssey-lite",
+    "title": "DecaData Odyssey Lite",
+    "description": "US point-of-sale sales for ~380 consumer companies: free search and samples, YoY growth for $0.01",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.decadata.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "decadata-odyssey-lite",
+      "title": "DecaData Odyssey Lite",
+      "version": "1.0.0",
+      "websiteUrl": "https://decadata.io"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tier has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].freq has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.decadata.io/mcp"
+}

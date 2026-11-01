@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:22.545Z",
+  "server": {
+    "registryName": "io.wealthnow/mcp",
+    "title": "Wealthnow",
+    "description": "351 read-only tools: stocks since 1926, options, CDS, bonds, private markets, 13F, macro and crypto",
+    "registryVersion": "2.162.3"
+  },
+  "endpoint": "https://mcp.wealthnow.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.wealthnow.io/mcp"
+}

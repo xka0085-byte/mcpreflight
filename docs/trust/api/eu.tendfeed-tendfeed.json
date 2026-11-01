@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:42.276Z",
+  "server": {
+    "registryName": "eu.tendfeed/tendfeed",
+    "title": "eu.tendfeed/tendfeed",
+    "description": "Bid/no-bid verdicts for open EU tenders, from 592,000 real TED contract awards.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://tendfeed.eu/api/mcp/tendfeed",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tendfeed",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sme_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].min_score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tendfeed.eu/api/mcp/tendfeed"
+}

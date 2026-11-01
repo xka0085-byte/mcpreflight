@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:51.731Z",
+  "server": {
+    "registryName": "com.inboxvet/email-verification",
+    "title": "InboxVet",
+    "description": "Verify emails (syntax, MX, SMTP mailbox, catch-all), test email DNS and check Spamhaus blocklists.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://inboxvet.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://inboxvet.com/api/mcp"
+}

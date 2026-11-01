@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:05.439Z",
+  "server": {
+    "registryName": "fr.lesbancs/lesbancs",
+    "title": "Les bancs",
+    "description": "A French address: its catchment schools, nursery to high school, and each school's results. No key.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://lesbancs.fr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lesbancs",
+      "title": "Les bancs",
+      "version": "0.1.0",
+      "websiteUrl": "https://lesbancs.fr"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].sector has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lesbancs.fr/mcp"
+}

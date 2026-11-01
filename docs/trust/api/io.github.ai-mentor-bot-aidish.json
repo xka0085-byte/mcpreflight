@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:18.281Z",
+  "server": {
+    "registryName": "io.github.ai-mentor-bot/aidish",
+    "title": "AIDISH — AIエージェントから受取注文できる飲食店",
+    "description": "Pickup orders at Japanese restaurants for AI agents: find stores, read menus, place orders. No auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aidish-app.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aidish-agent-gateway",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].items has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].customer_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].note has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aidish-app.onrender.com/mcp"
+}

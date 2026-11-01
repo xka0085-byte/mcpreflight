@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:38.301Z",
+  "server": {
+    "registryName": "io.github.Insightwithhari/rbai-scholar",
+    "title": "RBAi Scholar",
+    "description": "Search 11 million biomedical abstracts (PubMed, bioRxiv, medRxiv) by meaning or by exact terms.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://scholar.thedreamlabinnovations.com/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scholar.thedreamlabinnovations.com/v1/mcp"
+}

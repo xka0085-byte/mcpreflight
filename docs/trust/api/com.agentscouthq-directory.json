@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:01.915Z",
+  "server": {
+    "registryName": "com.agentscouthq/directory",
+    "title": "AgentScout",
+    "description": "Read-only search over 2,065+ AI agent tools and 276 MCP servers. Free, no sign-up needed.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.agentscouthq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentscout",
+      "title": "AgentScout directory",
+      "version": "1.0.2"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].pricing has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].open_source has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.agentscouthq.com/mcp"
+}

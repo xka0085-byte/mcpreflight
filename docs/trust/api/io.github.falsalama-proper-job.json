@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:24.671Z",
+  "server": {
+    "registryName": "io.github.falsalama/proper-job",
+    "title": "Proper Job Building Cost Calculator",
+    "description": "Free UK building-cost estimates, US beta estimates and scenario comparisons. No account needed.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://www.proper-job.uk/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "proper-job",
+      "version": "1.0.2",
+      "icons": [
+        {
+          "src": "https://www.proper-job.uk/properjob-plugin-logo.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "1024x1024"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].baseline has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].scenarios has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.proper-job.uk/api/mcp"
+}

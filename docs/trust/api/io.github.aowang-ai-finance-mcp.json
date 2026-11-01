@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:44.392Z",
+  "server": {
+    "registryName": "io.github.aowang-ai/finance-mcp",
+    "title": "Finance MCP",
+    "description": "Hosted MCP server for SEC, FRED, Polymarket, Deribit, OKX, and FMP.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://finance-mcp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "finance-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://finance-mcp.com/mcp"
+}

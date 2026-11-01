@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:32.007Z",
+  "server": {
+    "registryName": "live.alpic.commandhub-lua-58b727e2/commandHub-lua",
+    "title": "My MCP Server",
+    "description": "Description of my MCP server",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://commandhub-lua-58b727e2.alpic.live",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://commandhub-lua-58b727e2.alpic.live"
+}

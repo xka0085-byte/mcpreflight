@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:35.501Z",
+  "server": {
+    "registryName": "io.github.Rengon0x/noesis",
+    "title": "Noesis — Solana On-Chain Intelligence",
+    "description": "Solana on-chain intelligence — token scans, wallet profiling, bundle detection, 19 MCP tools.",
+    "registryVersion": "2.1.1"
+  },
+  "endpoint": "https://noesisapi.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://noesisapi.dev/mcp"
+}

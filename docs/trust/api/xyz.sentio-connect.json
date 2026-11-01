@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:21.972Z",
+  "server": {
+    "registryName": "xyz.sentio/connect",
+    "title": "Sentio Connect",
+    "description": "Track public wallets: token balances, prices, portfolio value, DeFi positions and holding history.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://connect.sentio.xyz/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://connect.sentio.xyz/v1/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:27.887Z",
+  "server": {
+    "registryName": "io.github.omarkhandji-commits/content-data",
+    "title": "Articles, Newsletters & AI Models",
+    "description": "Medium articles, Substack posts, Civitai AI models and HelloFresh recipes with nutrition.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=om_kh/medium-scraper,om_kh/substack-scraper,om_kh/civitai-scraper,om_kh/hellofresh-recipes-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=om_kh/medium-scraper,om_kh/substack-scraper,om_kh/civitai-scraper,om_kh/hellofresh-recipes-scraper"
+}

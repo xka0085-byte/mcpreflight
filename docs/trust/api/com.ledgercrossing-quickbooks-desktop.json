@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:38.597Z",
+  "server": {
+    "registryName": "com.ledgercrossing/quickbooks-desktop",
+    "title": "LedgerCrossing for QuickBooks Desktop",
+    "description": "QuickBooks Desktop MCP server: all 240 qbXML operations for Claude, ChatGPT, Cursor and VS Code",
+    "registryVersion": "1.15.1"
+  },
+  "endpoint": "https://{remote_address}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{remote_address}/mcp"
+}

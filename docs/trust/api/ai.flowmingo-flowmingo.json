@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:17.020Z",
+  "server": {
+    "registryName": "ai.flowmingo/flowmingo",
+    "title": "ai.flowmingo/flowmingo",
+    "description": "Free AI hiring platform: create AI interview sets, invite candidates, read scored reports.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.flowmingo.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.flowmingo.ai/mcp"
+}

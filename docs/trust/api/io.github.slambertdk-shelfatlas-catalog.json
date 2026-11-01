@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:59.063Z",
+  "server": {
+    "registryName": "io.github.SlambertDK/shelfatlas-catalog",
+    "title": "io.github.SlambertDK/shelfatlas-catalog",
+    "description": "Danish grocery catalog as MCP tools: live offers across all major chains, stores, EAN lookup, stock.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.shelfatlas.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ShelfAtlas",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.shelfatlas.com/api/v1/mcp"
+}

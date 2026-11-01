@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:58.231Z",
+  "server": {
+    "registryName": "com.getlinkbunny/placement-checker",
+    "title": "LinkBunny Placement Checker",
+    "description": "Checks whether a public page links to an expected URL; reports anchor, rel and canonical.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.getlinkbunny.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "linkbunny-placement-verifier",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].publishedPageURL has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].expectedDestinationURL has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.getlinkbunny.com/mcp"
+}

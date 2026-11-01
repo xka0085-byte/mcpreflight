@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:21.127Z",
+  "server": {
+    "registryName": "io.github.GriffMurder/orca-site",
+    "title": "Orca Site Guide",
+    "description": "Public read-only Orca guide: product, pricing, docs, and signup links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ops.orcarw.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "orca-site",
+      "version": "1.0.0",
+      "title": "Orca site"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].goal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ops.orcarw.com/api/mcp"
+}

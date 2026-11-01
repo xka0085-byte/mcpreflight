@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:46.656Z",
+  "server": {
+    "registryName": "io.github.api-sketch-2030/tax-validator",
+    "title": "io.github.api-sketch-2030/tax-validator",
+    "description": "Validates Moroccan ICE and IF tax identification numbers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tax-validator.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "moroccan-tax-validator",
+      "version": ""
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].ice has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].if_number has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tax-validator.onrender.com/mcp"
+}

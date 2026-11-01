@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:28.068Z",
+  "server": {
+    "registryName": "live.alpic.clouddj-ce0f8cfd/clouddj",
+    "title": "cloud_dj",
+    "description": "cloud_dj",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://clouddj-ce0f8cfd.alpic.live",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://clouddj-ce0f8cfd.alpic.live"
+}

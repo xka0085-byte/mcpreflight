@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:17.969Z",
+  "server": {
+    "registryName": "xyz.memorybridgeai/memory-bridge",
+    "title": "Memory Bridge",
+    "description": "One memory for all your AI tools: Claude, ChatGPT, Cursor and any MCP client share the same notes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.memorybridgeai.xyz/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.memorybridgeai.xyz/mcp"
+}

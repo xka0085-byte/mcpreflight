@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:44.279Z",
+  "server": {
+    "registryName": "run.pantheon/mcp",
+    "title": "run.pantheon/mcp",
+    "description": "Search your Pantheon contacts, read cross-channel message timelines, and query the AI brain.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.pantheon.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.pantheon.run/mcp"
+}

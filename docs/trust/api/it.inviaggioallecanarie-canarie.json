@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:33.942Z",
+  "server": {
+    "registryName": "it.inviaggioallecanarie/canarie",
+    "title": "In Viaggio alle Canarie",
+    "description": "Canary Islands holiday packages from Italy: live flights, hotels, cars, excursions and prices",
+    "registryVersion": "2.2.0"
+  },
+  "endpoint": "https://inviaggioallecanarie.it/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "inviaggioallecanarie-mcp",
+      "version": "2.2.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].isola has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].stelle_min has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].isola has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].categoria has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].isola has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://inviaggioallecanarie.it/api/mcp"
+}

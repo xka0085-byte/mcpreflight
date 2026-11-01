@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:36.625Z",
+  "server": {
+    "registryName": "io.github.Airpote/avalanche-docs",
+    "title": "Avalanche AVAX MCP",
+    "description": "Search and retrieve Avalanche blockchain documentation for building on AVAX.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://build.avax.network/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "avalanche-mcp",
+      "version": "2.5.0"
+    },
+    "toolCount": 47,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].network has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].network has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].network has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://build.avax.network/api/mcp"
+}

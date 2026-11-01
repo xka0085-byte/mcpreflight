@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:05.364Z",
+  "server": {
+    "registryName": "io.github.topofgames/la-ei-romania",
+    "title": "io.github.topofgames/la-ei-romania",
+    "description": "Romanian classified ads and business directory. Search 30K+ businesses, ads, exchange rates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://laei.ro/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://laei.ro/mcp"
+}

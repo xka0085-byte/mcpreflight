@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:58.284Z",
+  "server": {
+    "registryName": "io.github.neoflintai/sprintflint",
+    "title": "SprintFlint",
+    "description": "Opinionated sprint tracker. Read/update tickets, sprints, velocity from Claude/Cursor/Zed.",
+    "registryVersion": "1.7.1"
+  },
+  "endpoint": "https://mcp.sprintflint.com",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sprintflint",
+      "version": "1.7.1"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.sprintflint.com"
+}

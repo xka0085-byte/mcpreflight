@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:53.233Z",
+  "server": {
+    "registryName": "app.descontinho/descontos-shopee",
+    "title": "Descontinho",
+    "description": "Histórico de preços e quedas reais da Shopee Brasil: diz se uma promoção é de verdade.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://descontinho.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "descontos-shopee",
+      "title": "Descontinho",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limite has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://descontinho.app/api/mcp"
+}

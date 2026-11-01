@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:14.071Z",
+  "server": {
+    "registryName": "pro.publifye/junifye",
+    "title": "Junifye",
+    "description": "Write books, studies & commentaries with your AI — EPUB, print-ready PDF, web reader, ISBN, RTL",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://junifye.publifye.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://junifye.publifye.com/mcp"
+}

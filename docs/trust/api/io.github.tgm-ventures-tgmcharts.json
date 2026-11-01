@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:13.310Z",
+  "server": {
+    "registryName": "io.github.TGM-Ventures/tgmcharts",
+    "title": "TGMCharts",
+    "description": "US stock fundamentals: SEC financial statements, valuation series, summaries, screens, chart images.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://tgmcharts.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tgmcharts",
+      "title": "TGMCharts API",
+      "version": "1.1.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].filters has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tgmcharts.com/api/v1/mcp"
+}

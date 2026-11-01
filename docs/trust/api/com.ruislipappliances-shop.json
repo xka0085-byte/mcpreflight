@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:41.960Z",
+  "server": {
+    "registryName": "com.ruislipappliances/shop",
+    "title": "Ruislip Appliances",
+    "description": "UK appliance shop: live prices, stock and graded deals, delivery dates, enquiries, baskets.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://www.ruislipappliances.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ruislip-appliances-shop",
+      "title": "Ruislip Appliances",
+      "version": "1.0.1",
+      "websiteUrl": "https://www.ruislipappliances.com/",
+      "icons": [
+        {
+          "src": "https://www.ruislipappliances.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].customer has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].delivery has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].max_photos has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.ruislipappliances.com/mcp"
+}

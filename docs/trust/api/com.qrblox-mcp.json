@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:43.359Z",
+  "server": {
+    "registryName": "com.qrblox/mcp",
+    "title": "Qrblox",
+    "description": "Create and track QR codes, audio codes, menus, and scan analytics for a Qrblox merchant.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.qrblox.com/mcp/v1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "qrblox-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].tags has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].challengeType has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.qrblox.com/mcp/v1"
+}

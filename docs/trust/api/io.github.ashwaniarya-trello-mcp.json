@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:56.999Z",
+  "server": {
+    "registryName": "io.github.ashwaniarya/trello-mcp",
+    "title": "Trello MCP",
+    "description": "Trello in Claude Code in 60 seconds. No API key, no hosting. Hosted, OAuth sign-in, 18 tools.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://trello-mcp-production-5e47.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://trello-mcp-production-5e47.up.railway.app/mcp"
+}

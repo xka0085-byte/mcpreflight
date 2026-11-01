@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:04.295Z",
+  "server": {
+    "registryName": "io.github.OlegNickeshin/telegram-business-mcp",
+    "title": "Telegram Business MCP",
+    "description": "Self-hosted Telegram Business MCP: search chats, read files and transcripts, optionally reply.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://{host}/tg-mcp/{secret}",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{host}/tg-mcp/{secret}"
+}

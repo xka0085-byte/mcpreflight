@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:38:55.551Z",
+  "scannedAt": "2026-11-01T03:39:15.609Z",
   "server": {
     "registryName": "ai.projectlaunch/mcp",
     "title": "ai.projectlaunch/mcp",
@@ -10,22 +10,20 @@
   },
   "endpoint": "https://projectlaunch.ai/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "project-launch-ai",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "4 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://projectlaunch.ai/mcp"
 }

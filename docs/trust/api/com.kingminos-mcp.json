@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:23.609Z",
+  "server": {
+    "registryName": "com.kingminos/mcp",
+    "title": "KingMinos",
+    "description": "B2B company and person enrichment for agents. Multiple data providers, pay only for results.",
+    "registryVersion": "2026.10.23"
+  },
+  "endpoint": "https://mcp.kingminos.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.kingminos.com/mcp"
+}

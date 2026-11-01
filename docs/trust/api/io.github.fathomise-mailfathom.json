@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:23.608Z",
+  "server": {
+    "registryName": "io.github.fathomise/mailfathom",
+    "title": "MailFathom",
+    "description": "Security-first, self-hosted email archive with search, cited answers, and sending for AI agents.",
+    "registryVersion": "0.7.0"
+  },
+  "endpoint": "https://{mailfathom_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{mailfathom_host}/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:30:42.619Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/statscan",
+    "title": "Statscan",
+    "description": "Statistics Canada (StatCan) WDS MCP — Canadian official statistics (no auth)",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://gateway.pipeworx.io/statscan/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/statscan/mcp"
+}

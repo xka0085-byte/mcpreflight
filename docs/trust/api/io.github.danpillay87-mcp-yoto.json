@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:04.262Z",
+  "server": {
+    "registryName": "io.github.danpillay87/mcp-yoto",
+    "title": "io.github.danpillay87/mcp-yoto",
+    "description": "MCP server for Yoto: manage cards, tracks, icons and family devices from any MCP client.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp-yoto.danpillay87.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-yoto.danpillay87.workers.dev/mcp"
+}

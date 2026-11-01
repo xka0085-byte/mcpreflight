@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:56.635Z",
+  "server": {
+    "registryName": "kz.tehprof.booking/reservations",
+    "title": "kz.tehprof.booking/reservations",
+    "description": "Remote MCP for TehProf Booking: browse resources & availability, create & cancel reservations.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://booking.tehprof.kz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "TehProf Booking",
+      "title": "TehProf.kz Booking",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].bed_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].resource_class has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://booking.tehprof.kz/mcp"
+}

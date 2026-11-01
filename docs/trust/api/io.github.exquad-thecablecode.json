@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:19.057Z",
+  "server": {
+    "registryName": "io.github.exquad/thecablecode",
+    "title": "The Cable Code",
+    "description": "Decode cables in 66 coding systems; design, rate and check them; find equivalents; size drums.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://thecablecode.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "thecablecode",
+      "version": "1.13.0"
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].lang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].country has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].place has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://thecablecode.com/mcp"
+}

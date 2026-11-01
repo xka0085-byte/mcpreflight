@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:41.394Z",
+  "server": {
+    "registryName": "io.github.Compuute/compuute-scan-api",
+    "title": "Compuute MCP Security Scanner",
+    "description": "Scan any public GitHub MCP-server repo for security issues. 37 MCP-specific L1 rules, 8 languages.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://scan.compuute.se/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "compuute-scan",
+      "version": "1.29.1"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].github_url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scan.compuute.se/mcp/"
+}

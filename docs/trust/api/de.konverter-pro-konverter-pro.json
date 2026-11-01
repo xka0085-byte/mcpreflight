@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:35.724Z",
+  "server": {
+    "registryName": "de.konverter-pro/konverter-pro",
+    "title": "Konverter Pro",
+    "description": "German bank statements, PayPal, SumUp and Stripe reports to verified DATEV, Lexware or MT940",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://konverter-pro.de/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "konverter-pro",
+      "title": "Konverter Pro",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].files has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].target_format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].answers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://konverter-pro.de/api/v1/mcp"
+}

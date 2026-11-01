@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:13.131Z",
+  "server": {
+    "registryName": "io.github.wminno/slowscan",
+    "title": "SlowScan",
+    "description": "Calm static analysis for AI-generated pages: structure, links and content sanity. No signup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://slowscan.bigfloppy.net/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "slowscan",
+      "title": "SlowScan — website speed audit API",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://slowscan.bigfloppy.net/mcp"
+}

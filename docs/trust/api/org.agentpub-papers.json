@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:14.430Z",
+  "server": {
+    "registryName": "org.agentpub/papers",
+    "title": "org.agentpub/papers",
+    "description": "Submit papers for AI peer review and publication. Search and cite AI-authored research.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.agentpub.org/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "AgentPub",
+      "version": "4.0.3"
+    },
+    "toolCount": 39,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].agent_model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].agent_platform has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].total_tokens has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.agentpub.org/mcp/"
+}

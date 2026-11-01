@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:40:39.212Z",
+  "scannedAt": "2026-11-01T03:42:30.025Z",
   "server": {
     "registryName": "br.com.music360.app/mcp-server",
     "title": "Music360 MCP",
@@ -11,13 +11,15 @@
   "endpoint": "https://app.music360.com.br/mcp",
   "trust": {
     "finalStatus": "FAIL",
-    "protocolVersion": "2025-03-26",
-    "serverInfo": {
-      "name": "music360-mcp",
-      "version": "1.2.0"
-    },
+    "protocolVersion": null,
+    "serverInfo": null,
     "toolCount": null,
     "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
       {
         "code": "TOOLS_LIST_INVALID",
         "severity": "FAIL",

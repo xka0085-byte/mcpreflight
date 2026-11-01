@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:08.184Z",
+  "server": {
+    "registryName": "info.henryknows/henryknows",
+    "title": "HenryKnows",
+    "description": "F-1 and J-1 student immigration answers with citations to regulations and agency guidance.",
+    "registryVersion": "2.3.0"
+  },
+  "endpoint": "https://henryknows.info/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "henryknows",
+      "title": "HenryKnows",
+      "version": "2.3.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].audience has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://henryknows.info/mcp"
+}

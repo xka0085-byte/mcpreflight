@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:22.683Z",
+  "server": {
+    "registryName": "tools.ref/ref-tools-mcp",
+    "title": "tools.ref/ref-tools-mcp",
+    "description": "Token-efficient search for coding agents over public and private documentation.",
+    "registryVersion": "3.0.1"
+  },
+  "endpoint": "https://api.ref.tools/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.ref.tools/mcp"
+}

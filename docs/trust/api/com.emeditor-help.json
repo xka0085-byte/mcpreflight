@@ -1,0 +1,43 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:57.080Z",
+  "server": {
+    "registryName": "com.emeditor/help",
+    "title": "com.emeditor/help",
+    "description": "Provides access to EmEditor help pages hosted on https://help.emeditor.com.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://help.emeditor.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "emeditor-help-mcp",
+      "title": "EmEditor Help Pages",
+      "description": "Provides access to EmEditor help pages hosted on https://help.emeditor.com.",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.emeditor.com",
+      "icons": [
+        {
+          "src": "https://help.emeditor.com/en/_static/favicon.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].path has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://help.emeditor.com/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:19.019Z",
+  "server": {
+    "registryName": "com.textforagents/first-call-latency-witness",
+    "title": "First-Call Witness",
+    "description": "Real MCP handshake witness graded per-client, signed expiring receipt.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://textforagents.com/products/first-call-latency-witness/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "first-call-latency-witness",
+      "version": "1.1.5"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].receipt has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/first-call-latency-witness/mcp"
+}

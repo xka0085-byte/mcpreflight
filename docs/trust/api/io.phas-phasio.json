@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:28.033Z",
+  "server": {
+    "registryName": "io.phas/phasio",
+    "title": "Phasio",
+    "description": "Quoting, pricing, production and part data for contract manufacturers (3D printing, CNC).",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://m-api.eu.phas.io/api/manufacturer/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://m-api.eu.phas.io/api/manufacturer/v1/mcp"
+}

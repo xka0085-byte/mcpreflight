@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:21.159Z",
+  "server": {
+    "registryName": "today.solarstorm/solarstorm",
+    "title": "today.solarstorm/solarstorm",
+    "description": "Space weather: Kp index, NOAA 3-day geomagnetic forecast, solar flares, aurora visibility.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.solarstorm.today/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Live Kp index, 3-day geomagnetic forecast, solar flare activity and aurora visibility, powered by NOAA SWPC data.",
+      "name": "solarstorm",
+      "title": "solarstorm.today — live space weather",
+      "version": "1.0.0",
+      "websiteUrl": "https://solarstorm.today"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].latitude has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.solarstorm.today/mcp"
+}

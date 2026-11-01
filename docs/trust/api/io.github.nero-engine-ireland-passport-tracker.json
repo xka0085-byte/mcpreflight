@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:54.243Z",
+  "server": {
+    "registryName": "io.github.Nero-Engine/ireland-passport-tracker",
+    "title": "Ireland Passport Application Status Tracker",
+    "description": "Irish passport application status from the DFA tracker, with alerts on stage or date changes.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=nerolabs/ireland-passport-tracker",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=nerolabs/ireland-passport-tracker"
+}

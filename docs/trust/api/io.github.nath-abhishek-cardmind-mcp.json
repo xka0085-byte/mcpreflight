@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:55.856Z",
+  "server": {
+    "registryName": "io.github.nath-abhishek/cardmind-mcp",
+    "title": "io.github.nath-abhishek/cardmind-mcp",
+    "description": "MTG market data: search 114K+ cards, price signals, AI analysis. Free tier available.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.cardmind.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.cardmind.app/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:03.908Z",
+  "server": {
+    "registryName": "tech.broen/asmi",
+    "title": "ASMI — AI avatars for your site",
+    "description": "Design your site's AI avatar in the ASMI studio; your coding agent ships it into your repo.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://broen.tech/api/asmi/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://broen.tech/api/asmi/mcp"
+}

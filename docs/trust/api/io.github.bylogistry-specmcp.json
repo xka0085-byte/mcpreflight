@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:47.577Z",
+  "server": {
+    "registryName": "io.github.bylogistry/specmcp",
+    "title": "io.github.bylogistry/specmcp",
+    "description": "Live access to gematik Telematikinfrastruktur (TI) specs and certification requirements.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.specmcp.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.specmcp.com/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:40.398Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/jp-jgb-yields-mcp",
+    "title": "Japan JGB Yields MCP",
+    "description": "Ministry of Finance Japanese Government Bond reference yields.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jp-jgb-yields-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jp-jgb-yields-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].years has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jp-jgb-yields-mcp.donniertf.workers.dev/mcp"
+}

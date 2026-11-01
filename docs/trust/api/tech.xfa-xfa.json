@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:13.474Z",
+  "server": {
+    "registryName": "tech.xfa/xfa",
+    "title": "tech.xfa/xfa",
+    "description": "XFA's remote MCP server — query device posture, compliance, policies & CVEs. Read-only.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://mcp.xfa.tech/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.xfa.tech/mcp"
+}

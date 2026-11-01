@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:33.183Z",
+  "server": {
+    "registryName": "com.headedin/florida",
+    "title": "Headed In: Florida trips, water and weather",
+    "description": "Live Florida trip info: boat ramps, NOAA forecasts, red tide, beach flags, bridges, launches, picks.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://headedin.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "headed-in-florida",
+      "title": "Headed In: Florida trips, water and weather",
+      "version": "1.1.0"
+    },
+    "toolCount": 31,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].mood has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].port has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].port has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[27].port has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[29].gear has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://headedin.com/mcp"
+}

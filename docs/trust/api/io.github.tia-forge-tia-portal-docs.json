@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:48.315Z",
+  "server": {
+    "registryName": "io.github.tia-forge/tia-portal-docs",
+    "title": "TIA Portal Docs — Siemens PLC programming docs over MCP",
+    "description": "Search 2800+ official TIA Portal chapters: blocks, instructions, data types, constants.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://tia.hubwiz.com/ai-coding-docs/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tia.hubwiz.com/ai-coding-docs/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:08.567Z",
+  "server": {
+    "registryName": "tech.saasoffers/deals",
+    "title": "SaaSOffers startup deals",
+    "description": "Search 470+ verified startup deals, discounts and credits on SaaS tools, with claim links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://saasoffers.tech/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "saasoffers",
+      "title": "SaaSOffers startup deals",
+      "version": "1.0.0",
+      "websiteUrl": "https://saasoffers.tech"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://saasoffers.tech/api/mcp"
+}

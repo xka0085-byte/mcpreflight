@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:01.903Z",
+  "server": {
+    "registryName": "io.usefulapi/scrapeninja",
+    "title": "ScrapeNinja MCP by usefulapi",
+    "description": "Retrieve or render public pages with ScrapeNinja, using explicit marketplace charge confirmation.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://scrapeninja.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "scrapeninja-mcp",
+      "version": "1.4.0",
+      "title": "ScrapeNinja MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/scrapeninja/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].waitForSelector has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].blockImages has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].blockMedia has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scrapeninja.usefulapi.io/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:17.957Z",
+  "server": {
+    "registryName": "io.github.mangoappstudio/mdedit",
+    "title": "Markdown by mdedit.ai",
+    "description": "Create, edit, review, and explicitly publish Live or Snapshot Markdown Documents in mdedit.ai.",
+    "registryVersion": "0.3.4"
+  },
+  "endpoint": "https://mcp.mdedit.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mdedit.ai/mcp"
+}

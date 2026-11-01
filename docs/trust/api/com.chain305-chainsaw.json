@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:32.125Z",
+  "server": {
+    "registryName": "com.chain305/chainsaw",
+    "title": "Chainsaw package firewall",
+    "description": "Package firewall for agents: route npm, pip and docker installs through Chainsaw.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://chain305.com/chainproxy/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chain305.com/chainproxy/mcp"
+}

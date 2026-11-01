@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:30.521Z",
+  "server": {
+    "registryName": "io.github.alicelabs-llc/marketnow",
+    "title": "MarketNow",
+    "description": "Search 70,510 indexed MCP servers, install-risk scoring and Ed25519-signed Agent Trust Cards.",
+    "registryVersion": "1.16.1"
+  },
+  "endpoint": "https://marketnow.site/api/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "marketnow-mcp",
+      "version": "4.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].skill has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].dry_run has no description"
+      },
+      {
+        "code": "REQUIRED_PROPERTY_UNDEFINED",
+        "severity": "FAIL",
+        "message": "tools[9] requires undeclared property [object Object]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://marketnow.site/api/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:22.787Z",
+  "server": {
+    "registryName": "io.uxjobs/jobs",
+    "title": "UX Jobs",
+    "description": "Search 4,000+ live UX & product-design jobs from jobs.uxjobs.io. Read-only, no auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.uxjobs.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "UX Jobs",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.uxjobs.io/mcp"
+}

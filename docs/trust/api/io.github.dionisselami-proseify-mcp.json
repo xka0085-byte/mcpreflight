@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:03.683Z",
+  "server": {
+    "registryName": "io.github.Dionisselami/proseify-mcp",
+    "title": "Proseify",
+    "description": "MCP book-writing server: 81 classics, genre recipes, drafting pipelines.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.proseify.xyz/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.proseify.xyz/mcp"
+}

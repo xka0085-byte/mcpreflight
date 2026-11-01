@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:48.979Z",
+  "server": {
+    "registryName": "io.github.canalthailexa-lgtm/eletricoleve",
+    "title": "Elétrico Leve",
+    "description": "Brazilian light EVs (e-bikes, scooters, tricycles): specs, prices and Contran 996/2023 status.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://eletricoleve-mcp.gcnovidade.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "eletricoleve",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].potencia_min_w has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].bateria_removivel has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://eletricoleve-mcp.gcnovidade.workers.dev/mcp"
+}

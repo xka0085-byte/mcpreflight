@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:58.820Z",
+  "server": {
+    "registryName": "su.hpt/hptsu-mcp",
+    "title": "su.hpt/hptsu-mcp",
+    "description": "Search hpt.su — Russian/EAEU vehicle compliance documents: type approvals, certificates, VIN lookup.",
+    "registryVersion": "0.4.4"
+  },
+  "endpoint": "https://mcp.hpt.su/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.hpt.su/mcp"
+}

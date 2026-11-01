@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:49.116Z",
+  "server": {
+    "registryName": "io.github.quantumproxies/quanticdata-mcp",
+    "title": "io.github.quantumproxies/quanticdata-mcp",
+    "description": "Live web access for agents: scrape, SERP search, crawl/map, 100+ collectors, datasets, proxies.",
+    "registryVersion": "0.11.5"
+  },
+  "endpoint": "https://api.quanticdata.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.quanticdata.io/mcp"
+}

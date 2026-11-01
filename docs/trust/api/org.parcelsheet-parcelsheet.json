@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:40.624Z",
+  "server": {
+    "registryName": "org.parcelsheet/parcelsheet",
+    "title": "ParcelSheet",
+    "description": "Hawaiʻi parcel facts by TMK or address: zoning, flood, hazards and lot facts, each with its source.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://parcelsheet.org/mcp/directory",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "parcelsheet",
+      "title": "ParcelSheet",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].lon has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_acres has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].max_acres has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://parcelsheet.org/mcp/directory"
+}

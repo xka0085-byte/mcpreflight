@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:11.339Z",
+  "server": {
+    "registryName": "xyz.clearedpay/cleared",
+    "title": "Cleared",
+    "description": "USDC invoicing on Base: send invoices, share pay links, track payments and customers.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.clearedpay.xyz/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.clearedpay.xyz/mcp"
+}

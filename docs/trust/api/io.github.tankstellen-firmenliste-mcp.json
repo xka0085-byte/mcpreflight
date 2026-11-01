@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:11.794Z",
+  "server": {
+    "registryName": "io.github.tankstellen/firmenliste-mcp",
+    "title": "io.github.tankstellen/firmenliste-mcp",
+    "description": "B2B company address data for the DACH region: search 6,400+ industry lists and get price quotes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://firmenliste-mcp.cf-firmenliste.workers.dev",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "firmenliste",
+      "title": "firmenliste.net B2B-Firmenadressen",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].land has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].umkreis_km has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].idListe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].umfang has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].umkreis_km has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://firmenliste-mcp.cf-firmenliste.workers.dev"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:53.112Z",
+  "server": {
+    "registryName": "io.github.nach-dakwale/domaincheckr",
+    "title": "DomainCheckr",
+    "description": "Check domain name availability via RDAP. Single, bulk, and smart suggestions. No API key needed.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://domaincheckr.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mock-mcp-server",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].b has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://domaincheckr.fly.dev/mcp"
+}

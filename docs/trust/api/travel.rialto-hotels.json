@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:32.241Z",
+  "server": {
+    "registryName": "travel.rialto/hotels",
+    "title": "Rialto Travel - Direct Hotel Bookings with VIP Rate Programs",
+    "description": "Hotel direct booking for VIP and corporate rates - upgrades and loyalty eligible, 100K+ hotels",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://rialto.travel/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rialto.travel/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:49.226Z",
+  "server": {
+    "registryName": "kr.co.mlpc/cite-gate",
+    "title": "cite-gate",
+    "description": "Checks that every quote in an AI-written script appears word for word in its source.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.mlpc.co.kr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cite-gate",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].quotes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.mlpc.co.kr/mcp"
+}

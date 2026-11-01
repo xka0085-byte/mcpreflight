@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:56.470Z",
+  "server": {
+    "registryName": "io.github.tlkc888-Jenkins/joy",
+    "title": "Joy Trust Network",
+    "description": "Trust infrastructure for AI agents. Portable reputation (JTS 0-5), agent discovery, vouching.",
+    "registryVersion": "2.40.0"
+  },
+  "endpoint": "https://joy-connect.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "joy",
+      "version": "2.43.0"
+    },
+    "toolCount": 31,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].agent_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].agent_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].priority has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://joy-connect.fly.dev/mcp"
+}

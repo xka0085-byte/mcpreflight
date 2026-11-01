@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:35:58.399Z",
+  "server": {
+    "registryName": "io.github.screenrig/screenrig",
+    "title": "screenRIG: free digital signage for AI agents",
+    "description": "Free digital signage MCP server: publish to TVs, schedule, verify with screenshots. OAuth sign-in.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.screenrig.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.screenrig.ai/mcp"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:10.321Z",
+  "server": {
+    "registryName": "com.botrecipe/relay",
+    "title": "Human Handoff relay",
+    "description": "Hands CAPTCHAs, 2FA codes and approvals from your agent to your human with one tap.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://relay.cloudforbots.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "human-handoff",
+      "title": "Human Handoff relay",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].request_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].request_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://relay.cloudforbots.com/mcp"
+}

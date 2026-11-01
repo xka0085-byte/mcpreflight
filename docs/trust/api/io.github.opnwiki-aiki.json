@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:33.320Z",
+  "server": {
+    "registryName": "io.github.opnwiki/aiki",
+    "title": "AIKI Knowledge Commons",
+    "description": "Authenticated MCP access to the AIKI open knowledge commons.",
+    "registryVersion": "1.1.10"
+  },
+  "endpoint": "https://aiki.wiki/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiki.wiki/mcp"
+}

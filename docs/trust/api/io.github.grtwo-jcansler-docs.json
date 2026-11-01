@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:18.324Z",
+  "server": {
+    "registryName": "io.github.grtwo-jcansler/docs",
+    "title": "GRTwo Docs",
+    "description": "Publish and share Markdown/HTML docs from AI assistants. Requires grtwo.app Pro. OAuth or API key.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://www.grtwo.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.grtwo.app/api/mcp"
+}

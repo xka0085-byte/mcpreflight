@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:27.045Z",
+  "server": {
+    "registryName": "com.stillroach/token-check",
+    "title": "Still Roach token check",
+    "description": "Send the roach in first: Solana token holder checks for agents. Pay per call, no key.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://api.stillroach.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "roach-agent-api",
+      "title": "Still Roach token analysis",
+      "version": "agentapi-0.2.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.stillroach.com/mcp"
+}

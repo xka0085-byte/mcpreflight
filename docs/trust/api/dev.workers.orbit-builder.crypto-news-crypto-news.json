@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:56.038Z",
+  "server": {
+    "registryName": "dev.workers.orbit-builder.crypto-news/crypto-news",
+    "title": "orbit Crypto News",
+    "description": "Deduplicated crypto headlines from 37 RSS sources. Free preview; $0.0008/call via x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://crypto-news.orbit-builder.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "orbit-crypto-news",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].since has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].topics has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].tickers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://crypto-news.orbit-builder.workers.dev/mcp"
+}

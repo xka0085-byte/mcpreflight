@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:16.898Z",
+  "server": {
+    "registryName": "io.github.LinkMarine777/terminal7",
+    "title": "Terminal 7",
+    "description": "Signals, scores and payout data for stonkfun coins on Solana, for bots and AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.terminal7.xyz/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "terminal7",
+      "version": "1"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].min_score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.terminal7.xyz/v1/mcp"
+}

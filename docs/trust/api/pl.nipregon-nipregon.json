@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:04.188Z",
+  "server": {
+    "registryName": "pl.nipregon/nipregon",
+    "title": "pl.nipregon/nipregon",
+    "description": "Polish company registry: 4.4M firms, KRS/REGON data, VAT white list checks, financial statements",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.nipregon.pl/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.nipregon.pl/mcp"
+}

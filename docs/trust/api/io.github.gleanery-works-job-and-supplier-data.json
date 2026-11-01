@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:03.850Z",
+  "server": {
+    "registryName": "io.github.gleanery-works/job-and-supplier-data",
+    "title": "Job Market & EU Supplier Data",
+    "description": "Jobs from 10,000+ company career sites, Germany's Arbeitsagentur, Wellfound startups; EU suppliers.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=gleanery_actors/ats-job-search,gleanery_actors/career-site-jobs-scraper,gleanery_actors/arbeitsagentur-jobs-scraper,gleanery_actors/wellfound-jobs-scraper,gleanery_actors/europages-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=gleanery_actors/ats-job-search,gleanery_actors/career-site-jobs-scraper,gleanery_actors/arbeitsagentur-jobs-scraper,gleanery_actors/wellfound-jobs-scraper,gleanery_actors/europages-scraper"
+}

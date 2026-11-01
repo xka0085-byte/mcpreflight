@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:41.582Z",
+  "server": {
+    "registryName": "io.github.ContentWriterco/leki-mcp",
+    "title": "io.github.ContentWriterco/leki-mcp",
+    "description": "Polish medicines: refunded drug prices, patient co-payment and cheaper substitutes",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://leki.compabase.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "leki-mcp",
+      "version": "0.1.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://leki.compabase.com/mcp"
+}

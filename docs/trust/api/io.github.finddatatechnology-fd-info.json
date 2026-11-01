@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:51.584Z",
+  "server": {
+    "registryName": "io.github.FindDataTechnology/fd-info",
+    "title": "io.github.FindDataTechnology/fd-info",
+    "description": "柏讯信息流索引 MCP：list_since/get_item/search_info/locate_evidence/stream_health 五工具（公告/部… — 想 7×24 常驻 → 萬星",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://mcp.finddatatech.cloud/fd-info/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.finddatatech.cloud/fd-info/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:12.893Z",
+  "server": {
+    "registryName": "io.github.agenticsolutions-hq/openalex-mcp",
+    "title": "OpenAlex MCP Server",
+    "description": "Search OpenAlex papers, authors, institutions and citations. Hosted on Apify; needs an Apify token.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://agentic-solutions--openalex-mcp.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentic-solutions--openalex-mcp.apify.actor/mcp"
+}

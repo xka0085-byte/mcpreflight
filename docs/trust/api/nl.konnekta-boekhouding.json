@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:40.719Z",
+  "server": {
+    "registryName": "nl.konnekta/boekhouding",
+    "title": "Konnekta",
+    "description": "Connect Claude to Dutch accounting software: e-Boekhouden invoices, contacts and ledgers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.konnekta.nl/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.konnekta.nl/mcp"
+}

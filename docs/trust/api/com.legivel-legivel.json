@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:41.378Z",
+  "server": {
+    "registryName": "com.legivel/legivel",
+    "title": "legivel",
+    "description": "Markdown in, typeset PDF out: tables, math, diagrams, contents list. 100 free documents a month.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.legivel.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.legivel.com/mcp"
+}

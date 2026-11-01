@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:31.435Z",
+  "server": {
+    "registryName": "global.signals/signals-mcp",
+    "title": "SIGNALS Loyalty Agent Platform",
+    "description": "63 MCP tools for loyalty programs, rewards, and member operations with HITL approval.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://signals.global/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://signals.global/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:39.566Z",
+  "server": {
+    "registryName": "io.github.AlejandroArnaud/mcp-for-zotero",
+    "title": "MCP for Zotero",
+    "description": "Connect your Zotero reference library to AI assistants via Model Context Protocol.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcpforzotero.alejandroarnaud.dev/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcpforzotero.alejandroarnaud.dev/mcp/"
+}

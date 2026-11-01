@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:11.167Z",
+  "server": {
+    "registryName": "io.github.SupplyGraphAI/supplygraph",
+    "title": "SupplyGraph.AI",
+    "description": "Official MCP: continuous supply-chain risk monitoring and early warning, not a one-off report.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://mcp.supplygraph.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SupplyGraph AI MCP Server",
+      "title": "SupplyGraph.AI",
+      "version": "1.0.0",
+      "description": "Official MCP server for SupplyGraph.AI. Exposes supply-chain agents as tools: company search, tariff calculation, enterprise-change monitoring, and risk prediction. Get an API key from Console → Developer Settings → A2A/MCP Keys and send Authorization: Bearer <key>.",
+      "websiteUrl": "https://supplygraph.ai/resources/mcp"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "9 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.supplygraph.ai/mcp"
+}

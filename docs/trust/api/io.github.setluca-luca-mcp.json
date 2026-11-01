@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:14.959Z",
+  "server": {
+    "registryName": "io.github.setluca/luca-mcp",
+    "title": "io.github.setluca/luca-mcp",
+    "description": "SetLuca DM sales from any MCP client: 208 API tools and 15 task tools for leads, replies, calls.",
+    "registryVersion": "0.6.0"
+  },
+  "endpoint": "https://mcp.setluca.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.setluca.com/mcp"
+}

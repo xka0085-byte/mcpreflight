@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:32.341Z",
+  "server": {
+    "registryName": "io.github.fetchsandbox/mcp",
+    "title": "FetchSandbox",
+    "description": "A deterministic verification engine for agents. Proves a fix: fails on the old code, passes on new.",
+    "registryVersion": "0.7.30"
+  },
+  "endpoint": "https://fetchsandbox.com/mcp/v1",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fetchsandbox",
+      "version": "0.7.30"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].receipt_config has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fetchsandbox.com/mcp/v1"
+}

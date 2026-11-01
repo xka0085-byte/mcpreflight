@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:02.758Z",
+  "server": {
+    "registryName": "io.github.Domera-proptech/mcp",
+    "title": "Domera: Swedish building compliance",
+    "description": "Swedish building compliance: inspections, intervals, legal basis and due dates. Free, read-only.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.domera.se/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "domera",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.domera.se/mcp"
+}

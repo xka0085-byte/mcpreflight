@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:14.846Z",
+  "server": {
+    "registryName": "ai.prefrosh/prefrosh",
+    "title": "prefrosh.ai",
+    "description": "College admissions: admit rates by round, your odds, compare colleges, and a mock admissions game.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://prefrosh.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "prefrosh",
+      "title": "prefrosh.ai",
+      "version": "1.0.0",
+      "websiteUrl": "https://prefrosh.ai",
+      "icons": [
+        {
+          "src": "https://prefrosh.ai/favicon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].schools has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://prefrosh.ai/mcp"
+}

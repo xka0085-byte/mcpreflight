@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:43.718Z",
+  "server": {
+    "registryName": "com.freightsidekick/freight-quotes",
+    "title": "Freight Sidekick",
+    "description": "Instant LTL, partial and truckload freight quotes in the US and Canada, with class and pallet tools",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://mcp.freightsidekick.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.freightsidekick.com/mcp"
+}

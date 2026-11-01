@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:39:04.249Z",
+  "server": {
+    "registryName": "ai.opencancer/opencancer",
+    "title": "OpenCancer",
+    "description": "Cancer patient expert: NCCN-grounded answers with sources, recruiting trials, and expert review.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://opencancer.ai/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "opencancer",
+      "title": "OpenCancer",
+      "version": "2.0.0",
+      "websiteUrl": "https://opencancer.ai/connectors",
+      "icons": [
+        {
+          "src": "https://opencancer.ai/connector-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://opencancer.ai/favicon-192x192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].preferred_destinations has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://opencancer.ai/api/mcp"
+}

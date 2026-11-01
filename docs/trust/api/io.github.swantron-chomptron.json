@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:09.391Z",
+  "server": {
+    "registryName": "io.github.swantron/chomptron",
+    "title": "chomptron",
+    "description": "Generate a recipe from ingredients on hand, with optional dietary restrictions. Free.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://chomptron.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "chomptron",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].dietaryPreferences has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chomptron.com/mcp"
+}

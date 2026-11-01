@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:37.754Z",
+  "server": {
+    "registryName": "io.github.lazymac2x/api-perf-analyzer",
+    "title": "io.github.lazymac2x/api-perf-analyzer",
+    "description": "Cloudflare Workers MCP server: api-perf-analyzer",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.lazy-mac.com/api-perf-analyzer/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "api-perf-analyzer",
+      "version": "1.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].responseTime has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].errorRate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].dataSize has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.lazy-mac.com/api-perf-analyzer/mcp"
+}

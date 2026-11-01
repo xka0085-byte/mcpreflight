@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:38.827Z",
+  "server": {
+    "registryName": "io.github.AliMora83/sa-business-calendar-mcp",
+    "title": "SA Business Calendar",
+    "description": "South African business days, public holidays and SARS EMP201/VAT201 deadlines.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ali-mora--sa-calendar-apify.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ali-mora--sa-calendar-apify.apify.actor/mcp"
+}

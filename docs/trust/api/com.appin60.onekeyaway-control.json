@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:31.703Z",
+  "server": {
+    "registryName": "com.appin60.onekeyaway/control",
+    "title": "OneKeyAway: who controls this contract",
+    "description": "Who can change an EVM contract or Safe: proxy admin, owner, Safe signers, timelock. Free alerts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://onekeyaway.appin60.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "onekeyaway",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].chain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].address has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://onekeyaway.appin60.com/mcp"
+}

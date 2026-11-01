@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:35.982Z",
+  "server": {
+    "registryName": "ca.grocerypulse/grocery-comparison",
+    "title": "GroceryPulse Canada",
+    "description": "Read-only grocery-list comparisons for supported Canadian cities, with dated prices and coverage.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://grocerypulse.ca/api/shopper/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://grocerypulse.ca/api/shopper/mcp"
+}

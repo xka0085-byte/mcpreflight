@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:43.866Z",
+  "server": {
+    "registryName": "eu.zandomeni/legal-content",
+    "title": "SCA Zandomeni — Timișoara",
+    "description": "MCP server SCA Zandomeni (avocat Timișoara): caută ~550 articole juridice RO + date contact.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://lrqkraglvppygtmwwsie.supabase.co/functions/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "zandomeni-mcp",
+      "version": "0.1.0",
+      "title": "SCA Zandomeni — Timișoara"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lrqkraglvppygtmwwsie.supabase.co/functions/v1/mcp"
+}

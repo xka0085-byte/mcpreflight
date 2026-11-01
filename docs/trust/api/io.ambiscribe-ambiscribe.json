@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:19.946Z",
+  "server": {
+    "registryName": "io.ambiscribe/ambiscribe",
+    "title": "io.ambiscribe/ambiscribe",
+    "description": "Read-only MCP access to a documented IT fleet: state, changes, posture. 15 tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.ambiscribe.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ambiscribe.io/mcp"
+}

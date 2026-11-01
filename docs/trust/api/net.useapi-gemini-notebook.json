@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:21.392Z",
+  "server": {
+    "registryName": "net.useapi/gemini-notebook",
+    "title": "Gemini Notebook (NotebookLM) MCP Server by useapi.net (third-party)",
+    "description": "Google Gemini Notebook (NotebookLM): notebooks, sources, cited chat, podcasts, video, slides",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://api.useapi.net/v1/gemini-notebook/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.useapi.net/v1/gemini-notebook/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:43.454Z",
+  "server": {
+    "registryName": "io.github.AndrewVG23/nutrition-mcp",
+    "title": "Nutrition MCP",
+    "description": "USDA FoodData Central nutrition data: search foods, compare macros, and analyze meals.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://docuslide-mcp-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://docuslide-mcp-production.up.railway.app/mcp"
+}

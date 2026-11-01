@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:29.567Z",
+  "server": {
+    "registryName": "io.github.Caplia-Tech/caplia",
+    "title": "Caplia",
+    "description": "MCP server for VC pitch-deck scoring, thesis-fit matching, and deal-flow management.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.venture.caplia.ai/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.venture.caplia.ai/"
+}

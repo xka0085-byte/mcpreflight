@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:09.599Z",
+  "server": {
+    "registryName": "com.regulane/compliance",
+    "title": "Regulane compliance check",
+    "description": "Check code against secure-coding rules mapped to ISO 27001 and the DPDP Act. Free, no account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://regulane.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "regulane",
+      "title": "Regulane compliance",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://regulane.com/api/mcp"
+}

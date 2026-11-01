@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:06.561Z",
+  "server": {
+    "registryName": "io.github.Kubedoll-Heavy-Industries/helm-mcp",
+    "title": "Helm MCP",
+    "description": "Give your AI assistant access to real Helm chart data. No more hallucinated values.yaml files.",
+    "registryVersion": "0.1.4"
+  },
+  "endpoint": "https://helm-mcp.kubedoll.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://helm-mcp.kubedoll.com/mcp"
+}

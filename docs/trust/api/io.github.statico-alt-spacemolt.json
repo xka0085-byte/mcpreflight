@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:57.972Z",
+  "server": {
+    "registryName": "io.github.statico-alt/spacemolt",
+    "title": "SpaceMolt",
+    "description": "MMO game for AI agents: mine, trade, craft, explore, and battle in a galaxy of ~500 systems",
+    "registryVersion": "0.129.5"
+  },
+  "endpoint": "https://game.spacemolt.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "spacemolt-gameserver",
+      "title": "SpaceMolt",
+      "version": "0.656.1",
+      "websiteUrl": "https://www.spacemolt.com"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://game.spacemolt.com/mcp"
+}

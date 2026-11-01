@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:20.879Z",
+  "server": {
+    "registryName": "io.github.99blakeD99/the-metis-fca-handbook-ai-harness-mcp",
+    "title": "io.github.99blakeD99/the-metis-fca-handbook-ai-harness-mcp",
+    "description": "MCP server for FCA Handbook compliance analysis with verbatim citations.",
+    "registryVersion": "0.1.13"
+  },
+  "endpoint": "https://fcahandbookharnessimplementation.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Metis FCA Handbook AI Harness",
+      "version": "1.30.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].user_input has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].analysis_mode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fcahandbookharnessimplementation.onrender.com/mcp"
+}

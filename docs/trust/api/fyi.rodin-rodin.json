@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:24.816Z",
+  "server": {
+    "registryName": "fyi.rodin/rodin",
+    "title": "Rodin",
+    "description": "Find ~5 thinkers whose intellectual fingerprint matches a passage of text.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://rodin.fyi/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rodin",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].text has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rodin.fyi/mcp"
+}

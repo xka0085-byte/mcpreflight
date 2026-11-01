@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:43.460Z",
+  "server": {
+    "registryName": "org.remoteimpact/jobs",
+    "title": "Remote Impact Jobs",
+    "description": "Verified remote jobs at impact organizations: search by area, country eligibility, level and pay.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://remoteimpact.org/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "remote-impact-jobs",
+      "version": "1.0.0",
+      "title": "Remote Impact Jobs",
+      "description": "Structured remote jobs at climate, global health, AI safety and other impact organizations: search by area, the applicant's country, level and pay. Results include source links and recorded verification details.",
+      "websiteUrl": "https://remoteimpact.org/developers/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].job_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].level has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].posted_within_days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://remoteimpact.org/mcp/"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:42.017Z",
+  "server": {
+    "registryName": "net.lnx/qr",
+    "title": "LNX QR codes",
+    "description": "Styled, print-ready QR codes for links, text, email or phone, with frames and custom colors.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://qr.lnx.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "lnx-qr",
+      "version": "1.0.0",
+      "description": "Make a styled, print-ready QR code for a link, text, email address or phone number.",
+      "icons": [
+        {
+          "src": "https://lnx.net/assets/images/lnx-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ],
+      "websiteUrl": "https://lnx.net/qr",
+      "title": "LNX QR codes"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].frame_font has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://qr.lnx.net/mcp"
+}

@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:37.224Z",
+  "server": {
+    "registryName": "com.launchator/launchator",
+    "title": "Launchator",
+    "description": "Search a launch directory of new products, and submit and publish your own listing.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://launchator.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "launchator",
+      "title": "Launchator",
+      "version": "1.0.0",
+      "websiteUrl": "https://launchator.com"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].tags has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://launchator.com/api/mcp"
+}

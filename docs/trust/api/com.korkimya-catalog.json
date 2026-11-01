@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:27.972Z",
+  "server": {
+    "registryName": "com.korkimya/catalog",
+    "title": "KORKİMYA Product Catalog",
+    "description": "Read-only chemical raw material catalogue of KORKİMYA (Türkiye): 358 products, TR/EN.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://korkimya.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "korkimya-catalog",
+      "title": "KORKİMYA Product Catalogue",
+      "version": "1.3.0",
+      "websiteUrl": "https://korkimya.com"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].unit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://korkimya.com/mcp"
+}

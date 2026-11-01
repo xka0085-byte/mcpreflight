@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:41.434Z",
+  "server": {
+    "registryName": "io.github.vassiliylakhonin/agenda-intelligence-md",
+    "title": "Agenda Intelligence MD",
+    "description": "Evidence-readiness MCP server: validate, audit, and score briefs, memos, and evidence packs.",
+    "registryVersion": "1.24.0"
+  },
+  "endpoint": "https://agendamcp.dpdns.org/mcp/agent",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agenda-intelligence-md",
+      "version": "1.23.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].tool has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].input has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].attempt_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].response has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agendamcp.dpdns.org/mcp/agent"
+}

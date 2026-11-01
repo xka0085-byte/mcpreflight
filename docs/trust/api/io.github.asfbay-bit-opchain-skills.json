@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:54.378Z",
+  "server": {
+    "registryName": "io.github.asfbay-bit/opchain-skills",
+    "title": "opchain",
+    "description": "Claude Code / MCP skills for the dev pipeline: discover, spec, design, build, ship, operate.",
+    "registryVersion": "2.0.4"
+  },
+  "endpoint": "https://opchain.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "opchain",
+      "version": "0f3410c"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].skill has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].skill has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://opchain.dev/mcp"
+}

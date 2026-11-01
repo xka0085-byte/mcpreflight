@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:43.982Z",
+  "server": {
+    "registryName": "io.github.VictorCyberDev/tastepolicy",
+    "title": "TastePolicy",
+    "description": "Qloo cultural evidence with ALLOW, ASK and REJECT boundaries for agent preference decisions.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://tastepolicy.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tastepolicy.vercel.app/api/mcp"
+}

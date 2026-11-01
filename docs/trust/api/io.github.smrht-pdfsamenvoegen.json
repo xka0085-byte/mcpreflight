@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:38.436Z",
+  "server": {
+    "registryName": "io.github.smrht/pdfsamenvoegen",
+    "title": "PDF Samenvoegen",
+    "description": "Merge your own PDFs in a confirmed order and get one downloadable PDF.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://pdfsamenvoegen.nl/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pdfsamenvoegen.nl/mcp"
+}

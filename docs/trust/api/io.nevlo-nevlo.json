@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:17.614Z",
+  "server": {
+    "registryName": "io.nevlo/nevlo",
+    "title": "Nevlo",
+    "description": "Read bank accounts, balances and transactions from 10,000+ European banks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nevlo.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://nevlo.io/.well-known/oauth-protected-resource",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nevlo.io/mcp"
+}

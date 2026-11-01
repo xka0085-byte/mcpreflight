@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:52.088Z",
+  "server": {
+    "registryName": "io.github.linxule/mcp-music-studio",
+    "title": "Music Studio",
+    "description": "ABC sheet music + Strudel live coding: songs, videos and live jam sessions in ext-apps widgets.",
+    "registryVersion": "0.13.0"
+  },
+  "endpoint": "https://music-studio.linxule.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Music Studio",
+      "version": "0.13.0",
+      "icons": [
+        {
+          "src": "https://music-studio.linxule.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ],
+      "websiteUrl": "https://music-studio.linxule.com"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://music-studio.linxule.com/mcp"
+}

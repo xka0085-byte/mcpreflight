@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:37.274Z",
+  "server": {
+    "registryName": "it.matricedeldestino/matrice-del-destino",
+    "title": "Matrice del Destino",
+    "description": "Italian destiny-matrix calculators and guides: list, search, and analyze public pages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://matricedeldestino.it/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Matrice del Destino Content MCP",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].path has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://matricedeldestino.it/mcp"
+}

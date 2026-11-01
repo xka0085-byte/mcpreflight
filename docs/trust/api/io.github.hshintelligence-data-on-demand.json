@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:44.907Z",
+  "server": {
+    "registryName": "io.github.hshintelligence/data-on-demand",
+    "title": "HSH Data-on-Demand",
+    "description": "Made-to-order data for AI agents: company intel, B2B contacts, scraping. Pay per call via x402.",
+    "registryVersion": "2.1.1"
+  },
+  "endpoint": "https://api.hshintelligence.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "hsh-dod",
+      "version": "1.0.0"
+    },
+    "toolCount": 28,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].mode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].frequency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].webhook_url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.hshintelligence.com/mcp"
+}

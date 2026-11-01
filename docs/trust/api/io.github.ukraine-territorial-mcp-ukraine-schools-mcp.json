@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:39.431Z",
+  "server": {
+    "registryName": "io.github.Ukraine-Territorial-MCP/ukraine-schools-mcp",
+    "title": "Ukraine Schools MCP",
+    "description": "Ukrainian schools, community search and education budgets. Sources: EDBO, KATOTTG, Open Budget.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.edeputat.com/schools/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ukraine-schools-mcp",
+      "version": ""
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].school_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].community_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].budget_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].year has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.edeputat.com/schools/mcp"
+}

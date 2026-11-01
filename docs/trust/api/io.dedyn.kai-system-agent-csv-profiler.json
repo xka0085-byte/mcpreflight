@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:49.113Z",
+  "server": {
+    "registryName": "io.dedyn.kai-system-agent/csv-profiler",
+    "title": "Kai CSV Profiler and Domain Watch Intake",
+    "description": "Bounded CSV profiling plus review-only host monitoring requests through one remote MCP endpoint.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://kaix402m3.pythonanywhere.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "kai-csv-profiler",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sample_rows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sample_rows has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kaix402m3.pythonanywhere.com/mcp"
+}

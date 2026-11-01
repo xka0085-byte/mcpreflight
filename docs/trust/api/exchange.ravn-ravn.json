@@ -1,0 +1,38 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:45.957Z",
+  "server": {
+    "registryName": "exchange.ravn/ravn",
+    "title": "RAVN",
+    "description": "Cross-chain swap API for native Bitcoin, Solana and EVM chains. No API key, no custody.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://app.ravn.exchange/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ravn",
+      "title": "RAVN",
+      "version": "1.0.3",
+      "description": "Cross-chain swap execution across 21 venues and 18 chains, including native (non-wrapped) Bitcoin as either source or destination. No signup, no API key, 0% protocol fee — same routing engine the app itself uses.",
+      "websiteUrl": "https://ravn.exchange",
+      "icons": [
+        {
+          "src": "https://app.ravn.exchange/ravn-mark.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.ravn.exchange/api/mcp"
+}

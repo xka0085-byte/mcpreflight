@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:37.251Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/au-fx-rates-mcp",
+    "title": "Australia FX Rates (RBA) MCP",
+    "description": "Reserve Bank of Australia AUD exchange rates.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://au-fx-rates-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "au-fx-rates-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].currency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].amount_aud has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].currency has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://au-fx-rates-mcp.donniertf.workers.dev/mcp"
+}

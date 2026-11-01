@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:58.751Z",
+  "server": {
+    "registryName": "io.github.vrassouli/matemcp",
+    "title": "MateMCP",
+    "description": "Your agent hit a limit? Keep working. MateMCP securely connects AI chats to your computer via MCP.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://relay.matemcp.com/mcp/{agent_id}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://relay.matemcp.com/mcp/{agent_id}"
+}

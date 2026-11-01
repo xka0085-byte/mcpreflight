@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:27.028Z",
+  "server": {
+    "registryName": "io.github.sipyourdrink-ltd/bernstein-mcp",
+    "title": "io.github.sipyourdrink-ltd/bernstein-mcp",
+    "description": "Verifies Bernstein run receipts and hash chains; lists the shipped presets and adapters. Read-only.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.bernstein.run/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bernstein",
+      "version": "v3.19.2"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.bernstein.run/mcp"
+}

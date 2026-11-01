@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:31.300Z",
+  "server": {
+    "registryName": "ng.amo/amo-ng",
+    "title": "Amo.ng",
+    "description": "Discover and retrieve published Amo.ng Prompts, Workflows, and Skills.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://amo.ng/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://amo.ng/mcp"
+}

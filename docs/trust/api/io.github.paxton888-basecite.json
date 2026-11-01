@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:49.766Z",
+  "server": {
+    "registryName": "io.github.paxton888/basecite",
+    "title": "io.github.paxton888/basecite",
+    "description": "Tenant-scoped evidence intake and controlled AI context over MCP.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.basecite.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "basecite-mcp",
+      "version": "v1-phase29"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].org_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].upload_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.basecite.com/mcp"
+}

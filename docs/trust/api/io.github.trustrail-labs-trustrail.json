@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:08.307Z",
+  "server": {
+    "registryName": "io.github.trustrail-labs/trustrail",
+    "title": "TrustRail Counterparty Risk",
+    "description": "External counterparty-risk checks and signed receipts for autonomous agents and machine payments.",
+    "registryVersion": "0.4.1"
+  },
+  "endpoint": "https://trustrail-ebon.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://trustrail-ebon.vercel.app/mcp"
+}

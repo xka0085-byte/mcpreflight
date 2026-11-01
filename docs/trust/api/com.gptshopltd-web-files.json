@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:17.057Z",
+  "server": {
+    "registryName": "com.gptshopltd/web-files",
+    "title": "Web Files to Text",
+    "description": "Download files from URL lists, turn PDFs into Markdown and read text from images. Pay per file.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=chris_elder/bulk-file-downloader,chris_elder/pdf-to-markdown,chris_elder/image-to-text-ocr",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=chris_elder/bulk-file-downloader,chris_elder/pdf-to-markdown,chris_elder/image-to-text-ocr"
+}

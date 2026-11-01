@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:02.837Z",
+  "server": {
+    "registryName": "me.identik/electronica",
+    "title": "Identik Firma Electrónica",
+    "description": "Firma electrónica: preparar, enviar y seguir documentos; descargar PDF y constancia. Argentina.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://electronica.identik.me/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "identik-electronica",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].documento_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].documento_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].documento_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].documento_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].pagina has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://electronica.identik.me/api/mcp"
+}

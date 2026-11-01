@@ -1,0 +1,64 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:16.226Z",
+  "server": {
+    "registryName": "com.buildwithgage/gage",
+    "title": "Gage",
+    "description": "Price a building in light-gauge steel framing and start it with the nearest Gage fabricator.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://buildwithgage.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gage",
+      "title": "Gage",
+      "version": "1.1.0",
+      "websiteUrl": "https://buildwithgage.com",
+      "icons": [
+        {
+          "src": "https://buildwithgage.com/gage-icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://buildwithgage.com/gage-icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://buildwithgage.com/gage-icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].design has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].project has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].options has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://buildwithgage.com/mcp"
+}

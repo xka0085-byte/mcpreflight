@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:37.988Z",
+  "server": {
+    "registryName": "nl.scamchecker/scamchecker",
+    "title": "Scamchecker.nl",
+    "description": "Check a suspicious email, SMS, WhatsApp message or link for scam signals (Netherlands, Belgium).",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://scamchecker.nl/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "scamchecker",
+      "title": "Scamchecker.nl",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].text has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].image_base64 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].image_mime has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scamchecker.nl/mcp"
+}

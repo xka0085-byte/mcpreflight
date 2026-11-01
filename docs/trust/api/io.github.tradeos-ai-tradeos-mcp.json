@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:29.540Z",
+  "server": {
+    "registryName": "io.github.TradeOS-AI/tradeos-mcp",
+    "title": "TradeOS",
+    "description": "TradeOS MCP: ticker search, My Agent, chart TA, macro news. npm stdio or HTTP.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://ai.tradeos.xyz/api/agent/mcp/mcp-call",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.tradeos.xyz/api/agent/mcp/mcp-call"
+}

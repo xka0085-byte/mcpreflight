@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:14.127Z",
+  "server": {
+    "registryName": "io.github.365xbusiness/vigo-mcp",
+    "title": "io.github.365xbusiness/vigo-mcp",
+    "description": "AI-powered Hong Kong SFC regulatory intelligence. Bilingual EN/ZH compliance queries.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://lsoatzzwpltpydwyfqqv.supabase.co/functions/v1/vigo-mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "orphicone-vigo",
+      "version": "3.1.0",
+      "description": "OrphicOne VIGO — Hong Kong SFC Regulatory Intelligence with AI RO reasoning, Compliance Checklist, SOP guidance. Bilingual (EN/ZH), 13 licence types, enforcement, VATP, MIC (CF1-CF8), compliance health check, risk assessment."
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].aspect has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://lsoatzzwpltpydwyfqqv.supabase.co/functions/v1/vigo-mcp"
+}

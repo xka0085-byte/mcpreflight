@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:18.094Z",
+  "server": {
+    "registryName": "com.stackgems/catalog",
+    "title": "Stack Gems",
+    "description": "Read-only search of 900+ reviewed developer tools, each with a verdict and caveats. Free/OSS first.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://stackgems.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "stackgems",
+      "title": "Stack Gems catalog",
+      "version": "1.0.0",
+      "websiteUrl": "https://stackgems.com",
+      "description": "Read-only search over Stack Gems developer tool reviews (verdict + honest Catch, free/OSS first)."
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].pricing has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://stackgems.com/api/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:45.573Z",
+  "server": {
+    "registryName": "io.datascoop/datascoop",
+    "title": "DataScoop public data",
+    "description": "Official UK, US and Australia public datasets as filtered CSV, REST API and MCP for AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://datascoop.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "datascoop",
+      "title": "DataScoop public data",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].dataset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://datascoop.io/mcp"
+}

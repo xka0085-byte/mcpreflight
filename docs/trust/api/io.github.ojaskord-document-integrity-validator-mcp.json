@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:05.957Z",
+  "server": {
+    "registryName": "io.github.OjasKord/document-integrity-validator-mcp",
+    "title": "Document Integrity Validator",
+    "description": "AI reasoning checks any document against known international standards before your agent acts on it.",
+    "registryVersion": "1.0.20"
+  },
+  "endpoint": "https://document-integrity-validator-mcp-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "document-integrity-validator-mcp",
+      "version": "1.0.35",
+      "description": "Every trade finance and agentic procurement workflow has a moment where the agent must act on a received document before it can proceed. This server answers that question in one call -- returning a machine-readable PASS / FLAG / FAIL verdict against named international document standards. Used before any payment, fund release, or document submission."
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://document-integrity-validator-mcp-production.up.railway.app/mcp"
+}

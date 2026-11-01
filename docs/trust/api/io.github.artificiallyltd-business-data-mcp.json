@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:54.033Z",
+  "server": {
+    "registryName": "io.github.ArtificiallyLTD/business-data-mcp",
+    "title": "Business Data MCP Server",
+    "description": "Gov contracts, jobs, LinkedIn, YC, company contacts, tech stacks, PDFs and Google Trends for agents",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://artificially--business-data-mcp.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://artificially--business-data-mcp.apify.actor/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:33.191Z",
+  "server": {
+    "registryName": "io.poolparty/main-stage-airtime",
+    "title": "PoolParty Main Stage Airtime",
+    "description": "Inspectable public airtime for agents routing demo media, launch videos, and proof assets.",
+    "registryVersion": "0.20.8"
+  },
+  "endpoint": "https://www.poolparty.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "poolparty",
+      "version": "0.20.21"
+    },
+    "toolCount": 71,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].package has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].package has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.poolparty.io/api/mcp"
+}

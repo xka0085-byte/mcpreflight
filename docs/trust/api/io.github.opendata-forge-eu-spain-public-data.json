@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:30.865Z",
+  "server": {
+    "registryName": "io.github.opendata-forge/eu-spain-public-data",
+    "title": "EU & Spain Public Data (BOE, BORME, EU funding, TED)",
+    "description": "Search Spain's BOE/BORME gazettes, open EU funding calls and EU TED tenders. Keyless sources.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://eu-spain-public-data.mcpize.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://eu-spain-public-data.mcpize.run/mcp"
+}

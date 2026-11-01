@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:53.614Z",
+  "server": {
+    "registryName": "com.einvoicechecker/einvoice",
+    "title": "E-Invoice Checker",
+    "description": "Validate, parse and render EU e-invoices: XRechnung, ZUGFeRD, Factur-X, Peppol BIS 3.0, KSeF.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://einvoicechecker.com/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "einvoicechecker",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].lang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://einvoicechecker.com/v1/mcp"
+}

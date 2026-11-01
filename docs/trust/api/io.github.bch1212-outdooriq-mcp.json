@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:12.709Z",
+  "server": {
+    "registryName": "io.github.bch1212/outdooriq-mcp",
+    "title": "io.github.bch1212/outdooriq-mcp",
+    "description": "Paid MCP for fishing/lake/stocking intelligence — 72k+ US lakes, 293k+ events.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.castiq.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.castiq.net/mcp"
+}

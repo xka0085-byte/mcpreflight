@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:17.923Z",
+  "server": {
+    "registryName": "io.github.tchen6500/bazi-fortune-hub",
+    "title": "BaZi Fortune Hub",
+    "description": "BaZi MCP gateway: 14 tools (6 fortune / 5 forum / 3 meta). API key required. Entertainment only.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://fortunehub.lighttune.com.au/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fortunehub.lighttune.com.au/api/mcp"
+}

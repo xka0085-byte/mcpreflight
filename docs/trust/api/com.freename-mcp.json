@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:41.460Z",
+  "server": {
+    "registryName": "com.freename/mcp",
+    "title": "com.freename/mcp",
+    "description": "Search, register & manage Web2/Web3 domains, edit DNS records, and build & deploy AI websites.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.freename.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.freename.com/mcp"
+}

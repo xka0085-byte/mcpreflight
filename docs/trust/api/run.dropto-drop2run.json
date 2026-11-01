@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:44.304Z",
+  "server": {
+    "registryName": "run.dropto/drop2run",
+    "title": "Drop2Run",
+    "description": "Publishes what an AI made — a page, a markdown or PDF doc, or a whole site — to a live HTTPS link.",
+    "registryVersion": "1.3.1"
+  },
+  "endpoint": "https://mcp.dropto.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.dropto.run/mcp"
+}

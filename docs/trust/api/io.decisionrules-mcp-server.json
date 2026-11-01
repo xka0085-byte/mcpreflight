@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:49.516Z",
+  "server": {
+    "registryName": "io.decisionrules/mcp-server",
+    "title": "io.decisionrules/mcp-server",
+    "description": "Create, manage, and test business rules directly from your AI agent via the DecisionRules platform.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.decisionrules.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.decisionrules.io/mcp"
+}

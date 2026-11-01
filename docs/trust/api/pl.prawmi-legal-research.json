@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:03.765Z",
+  "server": {
+    "registryName": "pl.prawmi/legal-research",
+    "title": "PrawMi",
+    "description": "Polish and EU law: statutes, rulings, UODO/UOKiK/KNF, EU regulations, citation checks. Free tier.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://api.prawmi.pl/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.prawmi.pl/mcp"
+}

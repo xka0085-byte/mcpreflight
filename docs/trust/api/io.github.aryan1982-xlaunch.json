@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:56.929Z",
+  "server": {
+    "registryName": "io.github.Aryan1982/xlaunch",
+    "title": "XLaunch",
+    "description": "Turn a website URL into a launch video with voice-over. Edit by chat, export MP4.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://xlaunch.pro/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://xlaunch.pro/api/mcp"
+}

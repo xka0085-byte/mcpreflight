@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:32.665Z",
+  "server": {
+    "registryName": "io.github.mcfredrick/noogat",
+    "title": "Noogat",
+    "description": "Voice notes that organize themselves. Capture by Siri, AI auto-tags, semantic search retrieves.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://app.noogat.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.noogat.app/mcp"
+}

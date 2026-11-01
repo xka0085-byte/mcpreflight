@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:29.663Z",
+  "server": {
+    "registryName": "io.github.feedbk-ai/create-survey",
+    "title": "io.github.feedbk-ai/create-survey",
+    "description": "Create AI surveys with dynamic follow-up probing directly from your AI assistant.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.feedbk.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "feedbk-survey-builder",
+      "version": "1.28.1"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].message has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].session_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.feedbk.ai/mcp"
+}

@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:19.641Z",
+  "server": {
+    "registryName": "com.fateandstars/tarot-knowledge",
+    "title": "Fate & Stars Tarot Knowledge",
+    "description": "78 tarot card meanings, ranked topic search and nine spreads, with source links.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://fateandstars.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fate-and-stars-tarot-knowledge",
+      "title": "Fate & Stars Tarot Knowledge",
+      "version": "1.0.1",
+      "websiteUrl": "https://fateandstars.com/tarot-mcp"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].card has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].orientation has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].spread has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fateandstars.com/mcp"
+}

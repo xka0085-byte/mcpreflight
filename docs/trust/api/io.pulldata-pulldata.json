@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:31.972Z",
+  "server": {
+    "registryName": "io.pulldata/pulldata",
+    "title": "Pulldata",
+    "description": "Discover and run Pulldata scrapers, track jobs, and retrieve results from your AI client.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pdb.pulldata.io/api/mcp/sse",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pdb.pulldata.io/api/mcp/sse"
+}

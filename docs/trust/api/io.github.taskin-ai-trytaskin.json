@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:16.602Z",
+  "server": {
+    "registryName": "io.github.taskin-ai/trytaskin",
+    "title": "Taskin",
+    "description": "Human capability for AI agents - real-world action and human judgment.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://trytaskin.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "taskin",
+      "title": "Taskin - hire humans",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].need has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].visit_reason has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].goal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://trytaskin.ai/mcp"
+}

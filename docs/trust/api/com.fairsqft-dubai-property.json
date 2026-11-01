@@ -1,0 +1,61 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:17.823Z",
+  "server": {
+    "registryName": "com.fairsqft/dubai-property",
+    "title": "FairSqft Dubai Property Facts",
+    "description": "Dubai home prices, rents, comparables and forecasts from Dubai Land Department open data.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://fairsqft.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fairsqft",
+      "title": "FairSqft: Dubai property facts from DLD data",
+      "version": "0.1.0",
+      "websiteUrl": "https://fairsqft.com/developers/"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].property_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].intent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].months has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].property_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].timeline has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].financing has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fairsqft.com/mcp"
+}

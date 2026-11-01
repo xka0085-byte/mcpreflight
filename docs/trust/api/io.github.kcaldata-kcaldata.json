@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:08.620Z",
+  "server": {
+    "registryName": "io.github.kcaldata/kcaldata",
+    "title": "kcaldata",
+    "description": "Natural-language calorie lookup. Send '2 large eggs', get USDA-sourced nutrition data.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://api.kcaldata.com/mcp-server/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kcaldata",
+      "version": "3.4.4"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.kcaldata.com/mcp-server/mcp"
+}

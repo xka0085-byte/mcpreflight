@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:10.426Z",
+  "server": {
+    "registryName": "com.botrecipe/timer",
+    "title": "Sandbox Timer",
+    "description": "Flags idle agent sandboxes (E2B, Vercel, Daytona, Modal), shows idle cost, returns kill calls.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://timer.cloudforbots.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sandbox-timer",
+      "title": "Sandbox Timer",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sessions has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].idle_minutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].max_lifetime_minutes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].rates_per_hour has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].alert_webhook has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://timer.cloudforbots.com/mcp"
+}

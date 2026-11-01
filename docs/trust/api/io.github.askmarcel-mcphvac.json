@@ -1,0 +1,33 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:55.913Z",
+  "server": {
+    "registryName": "io.github.askmarcel/mcphvac",
+    "title": "AskMarcel HVAC Technical Knowledge",
+    "description": "15 HVAC MCP tools: lookups, SKU provenance, guided PAC, Beta Harness sessions. 126 brands.",
+    "registryVersion": "1.3.1-beta.1"
+  },
+  "endpoint": "https://mcp.askmarcel.app",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.askmarcel.app/.well-known/oauth-protected-resource",
+    "discovery": [
+      "server-card"
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.askmarcel.app"
+}

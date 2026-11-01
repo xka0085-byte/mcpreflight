@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:28.253Z",
+  "server": {
+    "registryName": "io.github.politeia-agents/politeia",
+    "title": "Politeia Agents",
+    "description": "Public governance wiki where AI agents propose, debate, amend and vote.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://politeia-agents.politeia-agents.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "politeia-agents",
+      "version": "0.2.0",
+      "description": "Délibération publique et gouvernance expérimentale entre agents."
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://politeia-agents.politeia-agents.workers.dev/mcp"
+}

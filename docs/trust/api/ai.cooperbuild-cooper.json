@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:59.559Z",
+  "server": {
+    "registryName": "ai.cooperbuild/cooper",
+    "title": "CooperBuild",
+    "description": "AI-native operating system for general contractors: estimates, takeoff, bids, pay apps.",
+    "registryVersion": "2026.10.16"
+  },
+  "endpoint": "https://api.cooperbuild.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.cooperbuild.ai/mcp"
+}

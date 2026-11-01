@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:05.332Z",
+  "server": {
+    "registryName": "com.ahmtransfer/transfer",
+    "title": "AHM Transfer",
+    "description": "Fixed prices, conditions and booking links for airport transfers in Alanya and Antalya, Türkiye.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ahmtransfer.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ahm-transfer",
+      "title": "AHM Transfer",
+      "version": "1.0.0",
+      "websiteUrl": "https://ahmtransfer.com/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].passengers has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ahmtransfer.com/mcp"
+}

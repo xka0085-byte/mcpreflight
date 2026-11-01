@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:58.019Z",
+  "server": {
+    "registryName": "com.bestshopping.it/cashback",
+    "title": "Bestshopping Cashback — IT, DE, FR",
+    "description": "Search eligible retail merchants and prepare cashback links for adult account holders in IT, DE, FR.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://bestshopping.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Bestshopping Cashback — Italia, Deutschland, France",
+      "version": "1.1.2",
+      "websiteUrl": "https://it.bestshopping.com/ai/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bestshopping.ai/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:59.516Z",
+  "server": {
+    "registryName": "pe.iw.around/businesses",
+    "title": "WIPE Around",
+    "description": "Local businesses in Israel: search by trade and town, read prices, services and contacts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://around.iw.pe/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wipe-around",
+      "title": "WIPE Around",
+      "version": "1.0.0",
+      "websiteUrl": "https://around.iw.pe"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://around.iw.pe/mcp"
+}

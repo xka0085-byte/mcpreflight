@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:34.881Z",
+  "server": {
+    "registryName": "com.despromesses/declarations",
+    "title": "DesPromesses",
+    "description": "Déclarations sourcées des candidats à la présidentielle française 2027 (lecture seule).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://despromesses.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "despromesses",
+      "title": "DesPromesses — déclarations des candidats à la présidentielle 2027",
+      "version": "1.0.0",
+      "websiteUrl": "https://despromesses.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://despromesses.com/mcp"
+}

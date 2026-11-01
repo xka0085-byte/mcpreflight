@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:36.443Z",
+  "server": {
+    "registryName": "io.github.RichardXu001/sparehive-advisor",
+    "title": "SpareHive GPU Advisor",
+    "description": "Read-only GPU advisor: model VRAM needs, fit checks and rental prices, with evidence grades.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://sparehive.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sparehive-advisor",
+      "version": "0.1.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].model has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].quant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].gpu has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sparehive.com/mcp"
+}

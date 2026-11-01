@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:07.626Z",
+  "server": {
+    "registryName": "com.plyparts/ply",
+    "title": "ply 3D Printing",
+    "description": "Custom 3D-printed parts: describe a part, upload a 3D file or pick a model, see a live price, order.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.plyparts.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ply 3D Printing",
+      "version": "1.1.0",
+      "title": "ply 3D Printing",
+      "websiteUrl": "https://www.plyparts.com",
+      "icons": [
+        {
+          "src": "https://www.plyparts.com/icon.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].fileName has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.plyparts.com/mcp"
+}

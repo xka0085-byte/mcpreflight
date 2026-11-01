@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:51.505Z",
+  "server": {
+    "registryName": "com.incidentvault.app/incidentvault",
+    "title": "IncidentVault",
+    "description": "Incident, task and follow-up records with role and location limits on every call.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.incidentvault.com/api/mcp/apps/server",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.incidentvault.com/api/mcp/apps/server"
+}

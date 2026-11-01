@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:25.114Z",
+  "server": {
+    "registryName": "io.github.kr-data-api/korea-health-recalls",
+    "title": "Korea Drug & Medical Device Recalls (MFDS 회수·판매중지)",
+    "description": "Recent drug and medical device recalls in South Korea (MFDS): product, company, reason, date",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com?tools=kr-data/korea-health-recalls",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=kr-data/korea-health-recalls"
+}

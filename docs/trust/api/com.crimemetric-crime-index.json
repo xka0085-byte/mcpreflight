@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:07.880Z",
+  "server": {
+    "registryName": "com.crimemetric/crime-index",
+    "title": "CrimeMetric",
+    "description": "Modeled crime rates per resident for U.S. addresses: 16 crime types vs the U.S., with 80% intervals.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.crimemetric.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "crimemetric",
+      "title": "CrimeMetric",
+      "version": "1.0.0",
+      "websiteUrl": "https://crimemetric.com/api"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lat has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].lon has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].bg_geoid has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.crimemetric.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:35.287Z",
+  "server": {
+    "registryName": "io.github.flashdata-dev/flashdata",
+    "title": "Google & YouTube Search, Transcripts and Data - FlashData",
+    "description": "Google & YouTube data: search, news, images, shopping, places, transcripts, captions and downloads.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://data.flashdata.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://data.flashdata.dev/mcp"
+}

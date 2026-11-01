@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:31.451Z",
+  "server": {
+    "registryName": "io.github.opus-pro/opusclip",
+    "title": "OpusClip",
+    "description": "Turn long videos into AI-curated short clips: caption, reframe, thumbnail, schedule, and publish.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp.opus.pro/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.opus.pro/mcp"
+}

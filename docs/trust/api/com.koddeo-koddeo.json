@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:28.125Z",
+  "server": {
+    "registryName": "com.koddeo/koddeo",
+    "title": "Koddeo",
+    "description": "Find community referral codes for 200+ brands, and publish, refresh or boost your own.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://koddeo.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "koddeo",
+      "version": "1.0.0"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].duration has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].plan has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://koddeo.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:09.816Z",
+  "server": {
+    "registryName": "ing.3dpack/load-planning",
+    "title": "3DPACK.ING — Load Planning",
+    "description": "Load planning for containers, trucks & pallets in Claude & ChatGPT, with a 3D load plan in the chat.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://3dpack.ing/mcp?server=load-planning",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://3dpack.ing/mcp?server=load-planning"
+}

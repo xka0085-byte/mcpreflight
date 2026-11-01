@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:37.713Z",
+  "server": {
+    "registryName": "io.github.heyrafi/rafi-mcp",
+    "title": "Rafi",
+    "description": "Manage authorized Rafi leads, reminders, DNC status, and AI voice playbooks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nest-app-775685078591.us-east1.run.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nest-app-775685078591.us-east1.run.app/api/mcp"
+}

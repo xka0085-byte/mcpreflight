@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:49.266Z",
+  "server": {
+    "registryName": "io.github.thunderbid/socketlist-mcp",
+    "title": "Socketlist",
+    "description": "Search a directory of 800+ open-source MCP servers: find, compare and get install configs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://socketlist.pages.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "socketlist",
+      "title": "Socketlist MCP directory",
+      "version": "1.0.0",
+      "websiteUrl": "https://socketlist.pages.dev/mcp-server/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://socketlist.pages.dev/mcp"
+}

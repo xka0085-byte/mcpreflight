@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:18.347Z",
+  "server": {
+    "registryName": "email.echo/deliverability",
+    "title": "echo.email Deliverability Test",
+    "description": "Send a test email, get SPF, DKIM, DMARC, TLS and IPv6 results plus sender rules. No key.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.echo.email/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "echo.email",
+      "title": "echo.email",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].timeout_s has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].report_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.echo.email/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:22.356Z",
+  "server": {
+    "registryName": "io.appsigma/account",
+    "title": "AppSigma Account",
+    "description": "Your AppSigma workspace for agents: tracked apps, keyword positions, competitors, review insights.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://appsigma.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://appsigma.io/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://appsigma.io/mcp"
+}

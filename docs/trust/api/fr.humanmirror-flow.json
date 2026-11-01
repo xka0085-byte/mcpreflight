@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:03.153Z",
+  "server": {
+    "registryName": "fr.humanmirror/flow",
+    "title": "HumanMirror Flow",
+    "description": "Verified 2-3 step AI-agent missions with whole-transaction success-only charging.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://humanmirror.fr/api/flow/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2026-07-28",
+    "serverInfo": {
+      "name": "humanmirror-flow",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].dry_run has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].contract_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].steps has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://humanmirror.fr/api/flow/mcp/"
+}

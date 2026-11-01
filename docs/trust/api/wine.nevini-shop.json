@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:57.611Z",
+  "server": {
+    "registryName": "wine.nevini/shop",
+    "title": "NEVINI Wines",
+    "description": "Search the wines of NEVINI, a Dutch wine importer, and build Shopify carts with a checkout link.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://nevini.wine/api/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nevini",
+      "title": "NEVINI Wines",
+      "version": "1.1.0",
+      "description": "Wine catalog, store information and Shopify carts of NEVINI, a wine importer in Maastricht. Checkout and payment happen on shop.nevini.wine.",
+      "websiteUrl": "https://nevini.wine/",
+      "icons": [
+        {
+          "src": "https://nevini.wine/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].lines has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nevini.wine/api/mcp/"
+}

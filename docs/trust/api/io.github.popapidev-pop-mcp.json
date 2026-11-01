@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:35.274Z",
+  "server": {
+    "registryName": "io.github.popapidev/pop-mcp",
+    "title": "io.github.popapidev/pop-mcp",
+    "description": "Italian e-invoicing (FatturaPA/SdI), Peppol, KSeF, ZUGFeRD, and PDF invoice generation via POP",
+    "registryVersion": "2.1.0"
+  },
+  "endpoint": "https://mcp.popapi.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.popapi.io/mcp"
+}

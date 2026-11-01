@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:35.539Z",
+  "server": {
+    "registryName": "com.panelcompare/panelcompare",
+    "title": "PanelCompare",
+    "description": "SMM panel prices, trust scores and uptime: who is cheapest for each social media service",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://panelcompare.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "panelcompare",
+      "title": "PanelCompare: SMM panel prices and trust",
+      "version": "1.0.0",
+      "websiteUrl": "https://panelcompare.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].minTrust has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://panelcompare.com/mcp"
+}

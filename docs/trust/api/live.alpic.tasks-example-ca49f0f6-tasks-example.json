@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:36.411Z",
+  "server": {
+    "registryName": "live.alpic.tasks-example-ca49f0f6/tasks-example",
+    "title": "Tasks Example",
+    "description": "A test MCP server for task management",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://tasks-example-ca49f0f6.alpic.live",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tasks-example",
+      "version": "0.0.1"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1] has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tasks-example-ca49f0f6.alpic.live"
+}

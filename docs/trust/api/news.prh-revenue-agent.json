@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:32.872Z",
+  "server": {
+    "registryName": "news.prh/revenue-agent",
+    "title": "Revenue Agent — OpenAPI Audit & Change Detection",
+    "description": "Paid OpenAPI audit and API change detection for agents. $0.10 USDC per analysis via x402 on Base.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://agent.prh.news/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "revenue-agent-mcp",
+      "title": "Revenue Agent — OpenAPI Audit & Change Detection",
+      "version": "0.1.1",
+      "description": "Paid OpenAPI audit, API analysis, Swagger analysis, and API contract change validation for agents and developer tools. Detects breaking changes and API drift without claiming general conformance linting. $0.10 USDC per completed analysis via x402 on Base; discovery is free.",
+      "websiteUrl": "https://agent.prh.news"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].before_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].after_url has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.prh.news/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:13.584Z",
+  "server": {
+    "registryName": "io.github.2016judea/small-business-intelligence",
+    "title": "Small Business Intelligence by Brick & Mortar",
+    "description": "Free joined public records for small business and CRE: Twin Cities parcels, sales, licences",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://brickandmortar.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "small-business-intelligence",
+      "version": "0.1.0",
+      "title": "Small Business Intelligence by Brick & Mortar"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].context has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://brickandmortar.dev/mcp"
+}

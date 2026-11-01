@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:12.667Z",
+  "server": {
+    "registryName": "io.github.tylerscomic-lab/econ-calendar-mcp",
+    "title": "Economic Calendar & News Risk",
+    "description": "FOMC/NFP/CPI economic calendar plus prop-firm news-restriction window checks for futures traders.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://econ-calendar-mcp.mcpize.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://econ-calendar-mcp.mcpize.run/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:43.805Z",
+  "server": {
+    "registryName": "com.drmaker3d/shop",
+    "title": "DrMaker3D: custom 3D printing, figures, cookie cutters and gifts",
+    "description": "3D printing studio in Connecticut: instant prices and checkout links for model files, and quotes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://drmaker3d.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "drmaker3d",
+      "title": "DrMaker3D: custom printing, CookieMaker3D and Bakery Manager",
+      "version": "2026-10-26",
+      "websiteUrl": "https://drmaker3d.com",
+      "description": "Instant prices and checkout links for custom 3D prints, plus prices, products, order tracking and quote requests, from a 3D printing studio in Connecticut. Public information about CookieMaker3D Bakery Manager; no access to private bakery records.",
+      "icons": [
+        {
+          "src": "https://drmaker3d.com/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].quantity has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://drmaker3d.com/mcp"
+}

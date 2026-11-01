@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:32.997Z",
+  "server": {
+    "registryName": "io.github.slyaidevelop/frijolito",
+    "title": "io.github.slyaidevelop/frijolito",
+    "description": "Verify Frijolito receipts, read your Frijolito context, and file or follow requests with the team.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://frijolito.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://frijolito.app/api/mcp"
+}

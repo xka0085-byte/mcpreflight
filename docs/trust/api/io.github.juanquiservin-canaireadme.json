@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:52.578Z",
+  "server": {
+    "registryName": "io.github.juanquiservin/canaireadme",
+    "title": "CanAIReadMe",
+    "description": "Can an AI agent understand and act on a business website? Evidence-based facts, gaps and fixes.",
+    "registryVersion": "2.1.1"
+  },
+  "endpoint": "https://canaireadme.netlify.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "canaireadme",
+      "title": "CanAIReadMe",
+      "version": "2.1.1",
+      "websiteUrl": "https://canaireadme.netlify.app",
+      "description": "Tests whether AI agents can understand and act on a business from its public website: structured facts with evidence, and the fixes.",
+      "icons": [
+        {
+          "src": "https://canaireadme.netlify.app/brand/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].access_token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://canaireadme.netlify.app/mcp"
+}

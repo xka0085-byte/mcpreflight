@@ -1,31 +1,29 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:08.523Z",
+  "scannedAt": "2026-11-01T03:55:12.321Z",
   "server": {
     "registryName": "com.see-geo/seegeo",
     "title": "com.see-geo/seegeo",
     "description": "Audit any website for AI visibility: graded report, findings with fixes, AI crawler access check.",
-    "registryVersion": "1.0.1"
+    "registryVersion": "1.0.5"
   },
-  "endpoint": "https://see-geo.com/mcp",
+  "endpoint": "https://see-geo.com/mcp/anonymous",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "seegeo",
+      "version": "1.0.4"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].maxFindings has no description"
       }
     ]
   },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
-  },
-  "verify": "npx @eidonze/mcpreflight schema https://see-geo.com/mcp"
+  "verify": "npx @eidonze/mcpreflight schema https://see-geo.com/mcp/anonymous"
 }

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:52.957Z",
+  "server": {
+    "registryName": "com.commonrig/commonrig",
+    "title": "CommonRig",
+    "description": "Agent operating kit for Claude Code and Codex: rules, hooks, work ledger, protocols and rig doctor.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://commonrig.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "commonrig-store",
+      "version": "0.1.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tier has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].rail has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].bundle has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://commonrig.com/mcp"
+}

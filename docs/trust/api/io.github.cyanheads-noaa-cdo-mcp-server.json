@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:45.194Z",
+  "server": {
+    "registryName": "io.github.cyanheads/noaa-cdo-mcp-server",
+    "title": "io.github.cyanheads/noaa-cdo-mcp-server",
+    "description": "Search NOAA CDO stations and datasets, fetch historical weather observations.",
+    "registryVersion": "0.1.15"
+  },
+  "endpoint": "https://noaa-cdo.caseyjhand.com/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://noaa-cdo.caseyjhand.com/mcp"
+}

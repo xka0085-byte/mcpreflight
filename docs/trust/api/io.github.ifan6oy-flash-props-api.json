@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:49.054Z",
+  "server": {
+    "registryName": "io.github.iFan6oy/flash-props-api",
+    "title": "io.github.iFan6oy/flash-props-api",
+    "description": "Flash Props API: player-prop analysis, projections, evidence, and line movement over REST/MCP.",
+    "registryVersion": "1.4.1"
+  },
+  "endpoint": "https://api.flashodds.live/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "flash-props-api",
+      "version": "1.4.1"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.flashodds.live/mcp"
+}

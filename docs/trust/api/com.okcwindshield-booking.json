@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:58.465Z",
+  "server": {
+    "registryName": "com.okcwindshield/booking",
+    "title": "OKC Windshield — book windshield replacement in Oklahoma City",
+    "description": "Book windshield replacement in Oklahoma City, OK: prices, ZIP coverage, free callback.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://okcwindshield.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "okcwindshield.com-booking",
+      "title": "OKC Windshield — book windshield replacement in Oklahoma City",
+      "version": "1.0.0",
+      "websiteUrl": "https://okcwindshield.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://okcwindshield.com/mcp"
+}

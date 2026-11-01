@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:21.329Z",
+  "server": {
+    "registryName": "ai.achromat/mcp-server",
+    "title": "Achromat MOM",
+    "description": "Recall and calibrate policy-compliant tool-call arguments before execution. Does not run the tool.",
+    "registryVersion": "0.1.4"
+  },
+  "endpoint": "https://mom.achromat.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai.achromat/mom-sandbox",
+      "title": "Achromat Machine Operational Memory (sandbox)",
+      "version": "0.1.0",
+      "websiteUrl": "https://mom.achromat.ai"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mom.achromat.ai/mcp"
+}

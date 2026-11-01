@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:42.867Z",
+  "server": {
+    "registryName": "space.cobrain/cobrain",
+    "title": "Cobrain",
+    "description": "Shared Markdown memory for Claude, ChatGPT, Claude Code and Codex. OAuth, no API keys.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://cobrain.space/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cobrain.space/mcp"
+}

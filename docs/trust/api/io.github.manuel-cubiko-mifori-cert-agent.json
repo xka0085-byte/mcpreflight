@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:20.139Z",
+  "server": {
+    "registryName": "io.github.manuel-cubiko/mifori-cert-agent",
+    "title": "Mifori CertAgent Trust Oracle",
+    "description": "Live AI agent trust oracle: audit synthetic IQ, latency & JSON compliance via x402 or free tokens.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agent.mifori.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mifori-certagent",
+      "title": "Mifori CertAgent",
+      "displayName": "Mifori CertAgent",
+      "version": "1.1.0",
+      "description": "Official Mifori Agent Trust & Multi-Protocol Audit Oracle. Performs live MCP JSON-RPC 2.0 (initialize + tools/list over HTTP/SSE), Google A2A, and Cognitive IQ audits on target AI agents and MCP servers (rejecting static non-agent REST URLs), with optional private mode (public=false), free sandbox telemetry tokens (eval_id='sandbox'), and x402 Base Mainnet settlement.",
+      "homepage": "https://agent.mifori.com",
+      "websiteUrl": "https://agent.mifori.com",
+      "iconUrl": "https://agent.mifori.com/icon.svg",
+      "icons": [
+        {
+          "src": "https://agent.mifori.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.mifori.com/mcp"
+}

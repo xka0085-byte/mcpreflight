@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:32.801Z",
+  "server": {
+    "registryName": "io.github.Rakesh1002/namemyapp",
+    "title": "io.github.Rakesh1002/namemyapp",
+    "description": "Brandable business names with live domain availability + one-click buy URLs.",
+    "registryVersion": "1.1.10"
+  },
+  "endpoint": "https://mcp.namemy.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.namemy.app/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:07.454Z",
+  "server": {
+    "registryName": "com.onchaindiligence/payment-evidence",
+    "title": "OnChainDiligence Payment Evidence",
+    "description": "Inspect payment policy, retrieve and verify receipts, or create post-payment observation receipts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.onchaindiligence.com/public/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "OnChainDiligence",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].action has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].policy has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].receipt_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.onchaindiligence.com/public/mcp"
+}

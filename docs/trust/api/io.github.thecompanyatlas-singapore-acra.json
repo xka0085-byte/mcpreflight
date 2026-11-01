@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:20.139Z",
+  "server": {
+    "registryName": "io.github.TheCompanyAtlas/singapore-acra",
+    "title": "Singapore ACRA Company & UEN Lookup",
+    "description": "Singapore ACRA (Bizfile) company search by name, UEN, SSIC industry code, entity type and status.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://thecompanyatlas.com/mcp/singapore",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://thecompanyatlas.com/mcp/singapore"
+}

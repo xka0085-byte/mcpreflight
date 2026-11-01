@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:30.682Z",
+  "server": {
+    "registryName": "io.github.corsur/swarm-tips",
+    "title": "Swarm Tips — Earn, Spend, and Discover for AI Agents",
+    "description": "51 tools: on-chain verified tasks, staked games, x402 video, MCP search, agent reputation.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp.swarm.tips/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "swarm-tips",
+      "version": "0.7.1"
+    },
+    "toolCount": 40,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].min_trust has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.swarm.tips/mcp"
+}

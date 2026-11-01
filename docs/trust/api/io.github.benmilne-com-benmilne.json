@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:19.981Z",
+  "server": {
+    "registryName": "io.github.benmilne-com/benmilne",
+    "title": "io.github.benmilne-com/benmilne",
+    "description": "Search and read essays by Ben Milne on payments, stablecoins, and company building.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://benmilne.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://benmilne.com/mcp"
+}

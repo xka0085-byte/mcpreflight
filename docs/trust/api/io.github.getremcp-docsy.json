@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:59.883Z",
+  "server": {
+    "registryName": "io.github.getremcp/docsy",
+    "title": "Docsy",
+    "description": "Read versioned developer documentation with original source links using five public MCP tools.",
+    "registryVersion": "1.0.9"
+  },
+  "endpoint": "https://docsy.remcp.site/mcp/registry",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://docsy.remcp.site/mcp/registry"
+}

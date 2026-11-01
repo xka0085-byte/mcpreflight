@@ -1,0 +1,60 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:16.229Z",
+  "server": {
+    "registryName": "au.com.wirelesschoices/plan-finder",
+    "title": "Wireless Choices Plan Finder",
+    "description": "Compare Australian mobile, prepaid, mobile broadband and nbn plans listed on Wireless Choices",
+    "registryVersion": "1.2.29"
+  },
+  "endpoint": "https://mcp.wirelesschoices.com.au/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Wireless Choices Plan Finder",
+      "title": "Wireless Choices",
+      "version": "1.2.29",
+      "websiteUrl": "https://wirelesschoices.com.au/tools/ai-assistants",
+      "icons": [
+        {
+          "src": "https://mcp.wirelesschoices.com.au/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "500x500"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].plan_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].provider_slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].plan_slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].plans has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].plan_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.wirelesschoices.com.au/mcp"
+}

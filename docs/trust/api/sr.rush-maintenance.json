@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:48.299Z",
+  "server": {
+    "registryName": "sr.rush/maintenance",
+    "title": "Rush SR Maintenance",
+    "description": "Rush SR owner's manual: diagnose a symptom, find service intervals and repair procedures.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://maintenance.mcp.rush.sr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rush-sr-maintenance",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].symptom has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].component has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].task has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://maintenance.mcp.rush.sr/mcp"
+}

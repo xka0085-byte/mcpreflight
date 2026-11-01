@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:48.633Z",
+  "server": {
+    "registryName": "sa.arbiter/ahkam",
+    "title": "Ahkam — Saudi court rulings",
+    "description": "Search published Saudi court rulings and get analysis grounded only in the retrieved rulings.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.ahkam.arbiter.sa/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.ahkam.arbiter.sa/.well-known/oauth-protected-resource",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ahkam.arbiter.sa/mcp"
+}

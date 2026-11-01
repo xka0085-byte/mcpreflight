@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:56.133Z",
+  "server": {
+    "registryName": "io.github.ebrunet001/mcp-server-latest-news",
+    "title": "io.github.ebrunet001/mcp-server-latest-news",
+    "description": "Real-time global news, crypto, weather & earthquakes from 27 free APIs. No API keys required.",
+    "registryVersion": "0.1.28"
+  },
+  "endpoint": "https://mrbridge--latest-news-mcp-server.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mrbridge--latest-news-mcp-server.apify.actor/mcp"
+}

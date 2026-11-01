@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:24.294Z",
+  "server": {
+    "registryName": "fyi.reviewtimes/review-times",
+    "title": "Review Times",
+    "description": "Live review times for AI app stores: ChatGPT, Claude, Muse, Grok, Cursor. Check before you submit.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://reviewtimes.fyi/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "reviewtimes",
+      "title": "Review Times",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].store has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reviewtimes.fyi/mcp"
+}

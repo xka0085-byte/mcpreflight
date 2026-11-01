@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:52.255Z",
+  "server": {
+    "registryName": "flights.onward/onward-flights",
+    "title": "Onward Flights",
+    "description": "Search real flights and buy an onward ticket (proof of onward travel), paid in USDC over MPP",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://onward.flights/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "onward-flights",
+      "title": "Onward Flights",
+      "version": "1.0.0",
+      "websiteUrl": "https://onward.flights"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://onward.flights/mcp"
+}

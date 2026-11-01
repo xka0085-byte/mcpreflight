@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:27.365Z",
+  "server": {
+    "registryName": "io.github.bkraad47/ramen",
+    "title": "Ramen: self-hosted MCP for teams",
+    "description": "Multi-zone MCP server for GKE/EKS/AKS: Python tools from git, NeMo guardrails, SSO, autoscaling.",
+    "registryVersion": "0.8.0"
+  },
+  "endpoint": "https://{ramen_edge}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{ramen_edge}/mcp"
+}

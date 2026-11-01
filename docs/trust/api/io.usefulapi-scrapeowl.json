@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:02.276Z",
+  "server": {
+    "registryName": "io.usefulapi/scrapeowl",
+    "title": "ScrapeOwl MCP by usefulapi",
+    "description": "Check ScrapeOwl usage and retrieve, extract or render public pages with confirmed credit usage.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://scrapeowl.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "scrapeowl-mcp",
+      "version": "1.4.0",
+      "title": "ScrapeOwl MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/scrapeowl/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].elements has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].render_js has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].block_resources has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scrapeowl.usefulapi.io/mcp"
+}

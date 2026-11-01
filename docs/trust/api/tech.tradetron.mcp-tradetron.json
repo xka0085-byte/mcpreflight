@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:12.376Z",
+  "server": {
+    "registryName": "tech.tradetron.mcp/tradetron",
+    "title": "Tradetron",
+    "description": "Build, backtest and diagnose algo trading strategies in your own Tradetron account in plain English.",
+    "registryVersion": "0.4.1"
+  },
+  "endpoint": "https://mcp.tradetron.tech/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tradetron.tech/mcp"
+}

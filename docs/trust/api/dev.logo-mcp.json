@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:49.733Z",
+  "server": {
+    "registryName": "dev.logo/mcp",
+    "title": "Official Logo.dev MCP",
+    "description": "Find brands, logos and brandmarks, and manage brand subscriptions and webhooks with Logo.dev.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.logo.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.logo.dev/mcp"
+}

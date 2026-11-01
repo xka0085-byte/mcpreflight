@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:25.784Z",
+  "server": {
+    "registryName": "network.fmcg/fmcg-network",
+    "title": "fmcg.network",
+    "description": "USDA FoodData Central nutrient lookup, FDA recall watch, EU FMCG labelling via remote MCP",
+    "registryVersion": "0.6.1"
+  },
+  "endpoint": "https://mcp.fmcg.network/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "fmcg-network-mcp",
+      "version": "0.6.3"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.fmcg.network/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:59.240Z",
+  "server": {
+    "registryName": "io.github.SosoPkhakadze/reestri-am-company-lookup",
+    "title": "Armenia Company Registry + Beneficial Owners (Reestri)",
+    "description": "Armenia state register lookup with beneficial owners from official BODS declarations.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://reestri--am-company-lookup.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reestri--am-company-lookup.apify.actor/mcp"
+}

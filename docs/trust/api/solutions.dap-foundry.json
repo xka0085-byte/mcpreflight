@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:39.112Z",
+  "server": {
+    "registryName": "solutions.dap/foundry",
+    "title": "DAP Foundry",
+    "description": "Tools that refuse rather than guess: settlement day counts, Unix timestamps, base64, line diffs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://foundry.dap.solutions/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dap-foundry",
+      "title": "DAP Foundry",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].settlement_lag has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].calendar has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].convention has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].acknowledge has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foundry.dap.solutions/mcp"
+}

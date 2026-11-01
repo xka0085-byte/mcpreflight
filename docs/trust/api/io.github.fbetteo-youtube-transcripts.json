@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:26.657Z",
+  "server": {
+    "registryName": "io.github.fbetteo/youtube-transcripts",
+    "title": "YouTube Transcripts",
+    "description": "Transcripts from YouTube videos, whole channels and playlists for AI agents, with bulk ZIP export.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.youtubetranscripts.fbetteo.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "youtube-transcript-agent",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].include_timestamps has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].concatenate_all has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].include_timestamps has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].concatenate_all has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.youtubetranscripts.fbetteo.com/mcp"
+}

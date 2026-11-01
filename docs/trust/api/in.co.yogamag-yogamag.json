@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:55.062Z",
+  "server": {
+    "registryName": "in.co.yogamag/yogamag",
+    "title": "YogaMag",
+    "description": "Read-only yoga library: poses, routines, articles, books, plus birth chart and numerology tools.",
+    "registryVersion": "1.10.0"
+  },
+  "endpoint": "https://yogamag.co.in/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "yogamag-mcp",
+      "title": "YogaMag",
+      "version": "1.10.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].level has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].gender has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://yogamag.co.in/api/mcp"
+}

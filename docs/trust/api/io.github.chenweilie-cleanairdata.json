@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:02.031Z",
+  "server": {
+    "registryName": "io.github.chenweilie/cleanairdata",
+    "title": "CleanAirData",
+    "description": "Historical PM2.5 and Clean Air Score for US cities; copied records name their source city.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://cleanairdata.org/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cleanairdata",
+      "title": "CleanAirData",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].city_a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].city_b has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cleanairdata.org/api/mcp"
+}

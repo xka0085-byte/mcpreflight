@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:31.344Z",
+  "server": {
+    "registryName": "io.github.max-nobug/drugalpha-mcp",
+    "title": "DrugAlpha 创新药投研",
+    "description": "Company/drug identification and published biopharma catalysts. DrugAlpha OAuth account required.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://drugalpha.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://drugalpha.com/mcp"
+}

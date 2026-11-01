@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:49.730Z",
+  "server": {
+    "registryName": "ai.certifikit/coi-tools",
+    "title": "CertifiKit COI tools",
+    "description": "Certificate of insurance tools: build subcontractor insurance requirements, check an ACORD 25.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://certifikit.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "certifikit",
+      "title": "CertifiKit COI tools",
+      "version": "1.0.0",
+      "websiteUrl": "https://certifikit.ai/mcp-server"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://certifikit.ai/mcp"
+}

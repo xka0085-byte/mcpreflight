@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:35.288Z",
+  "server": {
+    "registryName": "guide.counselor/guide-registry",
+    "title": "guide.counselor/guide-registry",
+    "description": "Read-only Bicycle Guide registry: published guides, homes, taxonomy, capability spine. No auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://counselor.guide/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bicycle-guide-registry",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "10 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://counselor.guide/mcp"
+}

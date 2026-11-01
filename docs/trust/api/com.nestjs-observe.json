@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:34.483Z",
+  "server": {
+    "registryName": "com.nestjs/observe",
+    "title": "NestJS Observe",
+    "description": "Production telemetry for NestJS apps: traces, errors, regressions, jobs and alerts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://observe-api.nestjs.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://observe-api.nestjs.com/mcp"
+}

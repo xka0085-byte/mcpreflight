@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:04.328Z",
+  "server": {
+    "registryName": "io.github.pipeworx-io/us-dmv",
+    "title": "US State DMV",
+    "description": "US state DMV data: vehicle and EV registrations, office locators, live wait times",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://gateway.pipeworx.io/us-dmv/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.pipeworx.io/us-dmv/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:40.755Z",
+  "server": {
+    "registryName": "dev.withrobin/robin",
+    "title": "Robin",
+    "description": "Let your agent handle your email, on your terms. Reads what you allow, replies with your OK.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://withrobin.dev/agents/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://withrobin.dev/agents/mcp"
+}

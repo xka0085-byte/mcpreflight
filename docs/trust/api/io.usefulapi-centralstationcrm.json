@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:32.449Z",
+  "server": {
+    "registryName": "io.usefulapi/centralstationcrm",
+    "title": "CentralStationCRM MCP by usefulapi",
+    "description": "Read CentralStationCRM people, companies, deals, tasks; create and update people, companies, deals.",
+    "registryVersion": "1.10.0"
+  },
+  "endpoint": "https://centralstationcrm.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "centralstationcrm-mcp",
+      "version": "1.13.0",
+      "title": "CentralStationCRM MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/centralstationcrm/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 33,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].emails has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[24].phones has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://centralstationcrm.usefulapi.io/mcp"
+}

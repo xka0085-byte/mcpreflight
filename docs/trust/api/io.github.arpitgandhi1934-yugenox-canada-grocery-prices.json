@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:52.697Z",
+  "server": {
+    "registryName": "io.github.ArpitGandhi1934/yugenox-canada-grocery-prices",
+    "title": "Canadian Grocery Prices for AI Agents (Yugenox)",
+    "description": "Canadian grocery prices by postal code: Loblaw banners, Instacart, Costco and Flipp weekly flyers.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper"
+}

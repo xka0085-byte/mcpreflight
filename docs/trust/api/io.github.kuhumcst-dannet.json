@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:31.642Z",
+  "server": {
+    "registryName": "io.github.kuhumcst/dannet",
+    "title": "io.github.kuhumcst/dannet",
+    "description": "DanNet - Danish WordNet with rich lexical relationships and SPARQL access.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://wordnet.dk/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "DanNet",
+      "version": "1.13.1"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wordnet.dk/mcp"
+}

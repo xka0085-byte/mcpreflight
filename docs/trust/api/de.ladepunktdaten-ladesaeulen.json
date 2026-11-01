@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:37.237Z",
+  "server": {
+    "registryName": "de.ladepunktdaten/ladesaeulen",
+    "title": "Ladepunktdaten",
+    "description": "Ladesäulenregister der Bundesnetzagentur: Suche, Regionalstatistik, Änderungen, Export je Region.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.ladepunktdaten.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ladesaeulen-monitor",
+      "title": "Ladesäulen-Monitor",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.ladepunktdaten.de/mcp"
+}

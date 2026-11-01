@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:47.567Z",
+  "server": {
+    "registryName": "space.syntheticuserlab/syntheticuserlab-mcp",
+    "title": "SyntheticUser Lab MCP",
+    "description": "Paid remote MCP for synthetic user testing, UX validation, analytics, checkout, and readiness.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://syntheticuserlab.space/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://syntheticuserlab.space/mcp"
+}

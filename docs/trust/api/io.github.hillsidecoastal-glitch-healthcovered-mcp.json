@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:37.448Z",
+  "server": {
+    "registryName": "io.github.hillsidecoastal-glitch/healthcovered-mcp",
+    "title": "io.github.hillsidecoastal-glitch/healthcovered-mcp",
+    "description": "ACA health insurance eligibility, subsidy checker, and enrollment dates for 2026.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://healthcovered-mcp.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "HealthCovered ACA Assistant",
+      "version": "1.26.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].household_size has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].annual_income has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://healthcovered-mcp.onrender.com/mcp"
+}

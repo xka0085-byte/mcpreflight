@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:38.284Z",
+  "server": {
+    "registryName": "social.cuehq/cuehq",
+    "title": "CueHQ",
+    "description": "Live threads asking for what you sell, with reply drafts in your voice. CueHQ never posts.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.cuehq.social/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.cuehq.social/mcp"
+}

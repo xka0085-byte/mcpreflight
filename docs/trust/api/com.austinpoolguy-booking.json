@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:45.936Z",
+  "server": {
+    "registryName": "com.austinpoolguy/booking",
+    "title": "Austin Pool Guy — book pool service in Austin",
+    "description": "Book pool service in Austin, TX: prices, service area by ZIP, free callback from a local pro.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://austinpoolguy.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "austinpoolguy.com-booking",
+      "title": "Austin Pool Guy — book pool service in Austin",
+      "version": "1.0.0",
+      "websiteUrl": "https://austinpoolguy.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://austinpoolguy.com/mcp"
+}

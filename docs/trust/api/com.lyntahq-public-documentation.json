@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:44:29.975Z",
+  "scannedAt": "2026-11-01T03:50:07.987Z",
   "server": {
     "registryName": "com.lyntahq/public-documentation",
     "title": "Lynta Public Documentation",
@@ -10,22 +10,17 @@
   },
   "endpoint": "https://lyntahq.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
+    "finalStatus": "UNKNOWN",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://lyntahq.com/mcp"
 }

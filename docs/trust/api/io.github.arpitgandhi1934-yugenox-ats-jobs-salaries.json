@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:52.717Z",
+  "server": {
+    "registryName": "io.github.ArpitGandhi1934/yugenox-ats-jobs-salaries",
+    "title": "ATS Job Postings with Salaries (Yugenox)",
+    "description": "Career-site jobs from Workday, Greenhouse, Lever, Ashby, iCIMS and more, with salaries where posted.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/workday-jobs-scraper,yugenox/ats-jobs-search,yugenox/ats-jobs-scraper,yugenox/icims-careers-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=fetch-actor-details,yugenox/workday-jobs-scraper,yugenox/ats-jobs-search,yugenox/ats-jobs-scraper,yugenox/icims-careers-scraper"
+}

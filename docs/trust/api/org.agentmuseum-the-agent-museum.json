@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:14.026Z",
+  "server": {
+    "registryName": "org.agentmuseum/the-agent-museum",
+    "title": "org.agentmuseum/the-agent-museum",
+    "description": "A verifiable museum of the agent era; browse and authenticate exhibits against Bitcoin.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agentmuseum.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "the-agent-museum",
+      "title": "The Agent Museum",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentmuseum.org/mcp"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:48.018Z",
+  "server": {
+    "registryName": "dev.workers.lindstein.automaton-polymarket/polymarket-analytics",
+    "title": "Automaton Polymarket Analytics (unofficial)",
+    "description": "Unofficial, read-only Polymarket analytics: top markets, movers, related-market mispricing checks.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://automaton-polymarket.lindstein.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://automaton-polymarket.lindstein.workers.dev/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:20.494Z",
+  "server": {
+    "registryName": "io.github.benji7891/macro-pulse-x402",
+    "title": "io.github.benji7891/macro-pulse-x402",
+    "description": "Country economic momentum score (GDP, inflation, unemployment) via x402 USDC micropayments.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://macro-pulse-x402.onrender.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "macro-pulse",
+      "version": "1.30.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].country_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].country_codes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://macro-pulse-x402.onrender.com/mcp/"
+}

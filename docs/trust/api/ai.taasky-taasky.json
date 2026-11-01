@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:09.246Z",
+  "server": {
+    "registryName": "ai.taasky/taasky",
+    "title": "Taasky",
+    "description": "Agent-to-agent negotiation: schedule meetings, agree prices and terms; each human approves the deal.",
+    "registryVersion": "0.2.2"
+  },
+  "endpoint": "https://mcp.taasky.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "taasky",
+      "version": "0.2.2"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].verdict has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].decision has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.taasky.ai/mcp"
+}

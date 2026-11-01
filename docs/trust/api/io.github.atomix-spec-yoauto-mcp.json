@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:00.491Z",
+  "server": {
+    "registryName": "io.github.atomix-spec/yoauto-mcp",
+    "title": "YoAuto MCP",
+    "description": "Official YoAuto MCP gateway for vehicle search and marketplace workflows in Moldova.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://yoauto.md/api/mcp/sse",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://yoauto.md/api/mcp/sse"
+}

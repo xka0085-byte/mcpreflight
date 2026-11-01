@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:03.248Z",
+  "server": {
+    "registryName": "in.xavio/storefront",
+    "title": "Xavio Storefront",
+    "description": "Search the public Xavio catalog and create firm checkout quotes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://xavio.in/api/mcp/storefront",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "xavio-storefront",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://xavio.in/api/mcp/storefront"
+}

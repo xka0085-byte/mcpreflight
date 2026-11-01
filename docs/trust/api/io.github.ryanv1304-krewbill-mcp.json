@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:42.027Z",
+  "server": {
+    "registryName": "io.github.RyanV1304/krewbill-mcp",
+    "title": "Krewbill",
+    "description": "Per-client shared AI memory: approved notes that Claude, ChatGPT and Cursor read over MCP.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.krewbill.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.krewbill.com/api/mcp"
+}

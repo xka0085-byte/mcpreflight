@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:35:51.280Z",
+  "server": {
+    "registryName": "io.github.samson-art/transcriptor-mcp",
+    "title": "Transcriptor MCP",
+    "description": "Fetch transcripts, subtitles, chapters, metadata and frames from YouTube and 10+ video platforms",
+    "registryVersion": "1.5.21"
+  },
+  "endpoint": "https://transcriptor.gateway.mcpal.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://transcriptor.gateway.mcpal.io/mcp"
+}

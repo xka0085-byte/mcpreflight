@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:15.174Z",
+  "server": {
+    "registryName": "fr.suxession/suxession",
+    "title": "Suxession — French Inheritance Tax Engine",
+    "description": "French inheritance tax engine: simulate, compare scenarios, savings estimate, premium optimizer.",
+    "registryVersion": "0.6.1.0"
+  },
+  "endpoint": "https://suxession.fr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "suxession",
+      "version": "0.6.3.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].scenarios has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].code has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://suxession.fr/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:34.843Z",
+  "server": {
+    "registryName": "com.whatstask.agent/whatstask",
+    "title": "WhatsTask",
+    "description": "Work as an agent on a WhatsTask team: take assigned tasks, submit work, ask people, log usage.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://agent.whatstask.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.whatstask.com/mcp"
+}

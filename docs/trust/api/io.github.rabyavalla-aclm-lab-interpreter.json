@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:55.920Z",
+  "server": {
+    "registryName": "io.github.rabyavalla/aclm-lab-interpreter",
+    "title": "ACLM Lab Interpreter",
+    "description": "Interpret lab values against ACLM-optimized ranges. Returns deprescription signals.",
+    "registryVersion": "5.0.0"
+  },
+  "endpoint": "https://web-production-ae61.up.railway.app/mcp/aclm-lab-interpreter",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "bonsai-health-intelligence",
+      "version": "5.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].current_medications has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].health_goals has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].marker has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://web-production-ae61.up.railway.app/mcp/aclm-lab-interpreter"
+}

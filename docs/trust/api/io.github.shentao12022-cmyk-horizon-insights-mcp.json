@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:16.342Z",
+  "server": {
+    "registryName": "io.github.shentao12022-cmyk/horizon-insights-mcp",
+    "title": "Horizon Insights MCP",
+    "description": "Market data, financial statements, valuation, research, and news for investment workflows.",
+    "registryVersion": "1.0.34"
+  },
+  "endpoint": "https://vmcp.hzinsights.com/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vmcp.hzinsights.com/mcp/"
+}

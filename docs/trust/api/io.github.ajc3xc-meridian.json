@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:21.689Z",
+  "server": {
+    "registryName": "io.github.ajc3xc/meridian",
+    "title": "io.github.ajc3xc/meridian",
+    "description": "Persistent memory, task coordination, and HITL queue for AI coding sessions.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://usemeridian.us/mcp/sse",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://usemeridian.us/mcp/sse"
+}

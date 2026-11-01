@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:40.677Z",
+  "server": {
+    "registryName": "run.fcapp.cn-hangzhou.legal-api-legal-m-service-nubqrvluix/legal-compliance-api",
+    "title": "GoldLegal Legal Compliance API",
+    "description": "AI legal compliance: contract review, risk scoring, EU/CN AI act, watermark check. 8 MCP tools.",
+    "registryVersion": "4.2.0"
+  },
+  "endpoint": "https://legal-api-legal-m-service-nubqrvluix.cn-hangzhou.fcapp.run/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://legal-api-legal-m-service-nubqrvluix.cn-hangzhou.fcapp.run/mcp"
+}

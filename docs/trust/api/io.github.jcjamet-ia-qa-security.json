@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:51.649Z",
+  "server": {
+    "registryName": "io.github.JcJamet/ia-qa-security",
+    "title": "IA-QA Security — 30 tools",
+    "description": "Agent security: prompt injection, PII & secret scans, TLS/header/CORS audits, MCP checks. Free.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://www.ia-qa.com/mcp/security",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ia-qa-toolbox-security",
+      "version": "1.0.0"
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].assertions has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.ia-qa.com/mcp/security"
+}

@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:35:57.050Z",
+  "server": {
+    "registryName": "io.github.scrape402/scrape402",
+    "title": "io.github.scrape402/scrape402",
+    "description": "Pay-per-call agent tools via x402 (USDC on Base): chat, prices, funding, RNG. No account or keys.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://x402.shizu.me/mcp/rpc",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "scrape402",
+      "title": "scrape402 — pay-per-call agent tools",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].min has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].max_tokens has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].temperature has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402.shizu.me/mcp/rpc"
+}

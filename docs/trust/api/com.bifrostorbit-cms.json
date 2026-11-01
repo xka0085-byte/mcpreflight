@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:00.428Z",
+  "server": {
+    "registryName": "com.bifrostorbit/cms",
+    "title": "CMS Orbit",
+    "description": "Let AI assistants read pages and draft content in CMS Orbit. A person always reviews and publishes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.bifrostorbit.com/cms/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.bifrostorbit.com/cms/mcp"
+}

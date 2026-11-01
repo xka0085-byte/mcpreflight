@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:54.569Z",
+  "server": {
+    "registryName": "ai.clevera/mcp",
+    "title": "Clevera",
+    "description": "Make how-to videos, social clips and help articles from Claude or ChatGPT, and run your help center.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.clevera.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://app.clevera.ai/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.clevera.ai/mcp"
+}

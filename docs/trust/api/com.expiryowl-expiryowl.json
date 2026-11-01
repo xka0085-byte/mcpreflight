@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:11.934Z",
+  "server": {
+    "registryName": "com.expiryowl/expiryowl",
+    "title": "ExpiryOwl",
+    "description": "SSL certificate, domain expiry, DNS and uptime monitoring for web agencies, grouped by client.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://expiryowl.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://expiryowl.com/api/mcp"
+}

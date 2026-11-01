@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:18.606Z",
+  "server": {
+    "registryName": "io.aiven/mcp",
+    "title": "Aiven MCP",
+    "description": "Provision PostgreSQL, manage Apache Kafka, and deploy apps with Aiven - all from your AI assistant.",
+    "registryVersion": "1.18.0"
+  },
+  "endpoint": "https://mcp.aiven.live/mcp?read_only={read_only}&services_scope={services_scope}&allow_secrets={allow_secrets}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.aiven.live/mcp?read_only={read_only}&services_scope={services_scope}&allow_secrets={allow_secrets}"
+}

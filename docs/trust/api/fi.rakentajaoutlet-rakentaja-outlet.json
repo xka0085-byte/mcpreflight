@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:50.143Z",
+  "server": {
+    "registryName": "fi.rakentajaoutlet/rakentaja-outlet",
+    "title": "fi.rakentajaoutlet/rakentaja-outlet",
+    "description": "Finnish e-commerce for electrical & construction supplies. Read-only MCP with 4 tools.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://rakentajaoutlet.fi/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Rakentaja Outlet",
+      "version": "2.14.7"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].in_stock_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].in_stock_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rakentajaoutlet.fi/mcp"
+}

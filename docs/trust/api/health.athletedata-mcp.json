@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:40.737Z",
+  "server": {
+    "registryName": "health.athletedata/mcp",
+    "title": "athletedata",
+    "description": "Your Garmin, Oura, WHOOP, Hevy and 35 more fitness apps, queryable from your own AI.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.athletedata.health/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.athletedata.health/mcp"
+}

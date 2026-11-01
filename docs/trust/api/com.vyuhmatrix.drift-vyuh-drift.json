@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:21.064Z",
+  "server": {
+    "registryName": "com.vyuhmatrix.drift/vyuh-drift",
+    "title": "Vyuh Drift",
+    "description": "Schedule social posts, then check each one really went live, with a result per channel.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://drift.vyuhmatrix.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://drift.vyuhmatrix.com/api/mcp"
+}

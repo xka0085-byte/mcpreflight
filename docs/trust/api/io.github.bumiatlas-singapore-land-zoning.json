@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:26.194Z",
+  "server": {
+    "registryName": "io.github.BumiAtlas/singapore-land-zoning",
+    "title": "Singapore Land Lots & Master Plan Zoning",
+    "description": "Singapore SLA land lots by lot number or coordinates, with URA Master Plan 2025 land use and GPR.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bumiatlas.com/mcp/singapore",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bumiatlas.com/mcp/singapore"
+}

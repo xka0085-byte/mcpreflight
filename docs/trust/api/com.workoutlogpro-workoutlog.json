@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:49.575Z",
+  "server": {
+    "registryName": "com.workoutlogpro/workoutlog",
+    "title": "WorkoutLog Pro",
+    "description": "Workout log your AI fills in: sets from text or notebook photos, daily plans, history and records.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://workoutlogpro.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://workoutlogpro.com/mcp"
+}

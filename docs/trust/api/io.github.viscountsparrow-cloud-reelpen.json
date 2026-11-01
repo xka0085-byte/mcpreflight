@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:52.939Z",
+  "server": {
+    "registryName": "io.github.viscountsparrow-cloud/reelpen",
+    "title": "Reelpen",
+    "description": "Build editable 3D scenes, direct characters and cameras, and export AI video references with MCP.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://beta.reelpen.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://beta.reelpen.ai/mcp"
+}

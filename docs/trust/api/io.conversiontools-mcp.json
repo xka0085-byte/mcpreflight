@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:43.278Z",
+  "server": {
+    "registryName": "io.conversiontools/mcp",
+    "title": "Conversion Tools",
+    "description": "Convert files too big or exotic for a sandbox: 140+ formats, batch, OCR, AI extraction, TTS/STT",
+    "registryVersion": "3.0.2"
+  },
+  "endpoint": "https://mcp.conversiontools.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.conversiontools.io/mcp"
+}

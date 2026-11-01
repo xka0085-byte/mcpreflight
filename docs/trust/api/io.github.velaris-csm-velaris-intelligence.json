@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:41.009Z",
+  "server": {
+    "registryName": "io.github.Velaris-CSM/velaris-intelligence",
+    "title": "Velaris Intelligence",
+    "description": "AI-generated customer success reports for Velaris platform users. Authenticates via OAuth.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gx7rt55cmrb2ilws3nrl5hpvli0lvzxg.lambda-url.eu-west-2.on.aws/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gx7rt55cmrb2ilws3nrl5hpvli0lvzxg.lambda-url.eu-west-2.on.aws/"
+}

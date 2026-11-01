@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:24.187Z",
+  "server": {
+    "registryName": "io.github.upstash/upstash-mcp-server",
+    "title": "Upstash",
+    "description": "Hosted Upstash MCP server: Redis, QStash, Workflow, Vector, Search, Box and Blob, with OAuth.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.upstash.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.upstash.com/mcp"
+}

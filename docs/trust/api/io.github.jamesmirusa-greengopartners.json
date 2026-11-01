@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:20.034Z",
+  "server": {
+    "registryName": "io.github.jamesmirusa/greengopartners",
+    "title": "GreenGo Partners",
+    "description": "Read-only catalog of GreenGo Partners: search AI agents, apps, games, templates and AI news.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://greengopartners.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "greengopartners",
+      "version": "1.0.0",
+      "title": "GreenGo Partners"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].topic has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://greengopartners.com/mcp"
+}

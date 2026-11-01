@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:32.339Z",
+  "server": {
+    "registryName": "io.github.crowdintel-xyz/polymarket-agent-kit",
+    "title": "CrowdIntel — Polymarket Wallet Intelligence",
+    "description": "Polymarket wallet intelligence for AI agents: scored wallets, insider signals, whale flow.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.crowdintel.xyz/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.crowdintel.xyz/mcp"
+}

@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:16.281Z",
+  "server": {
+    "registryName": "io.github.2xe/ask-emil",
+    "title": "Ask Emil – Human Perspective",
+    "description": "Real human in Denmark: lived experience & opinion. Free 1-question pilot. Set a custom User-Agent.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://runup.dk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "human-perspective",
+      "title": "Human perspective (Emil, pilot)",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].question_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].question_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].would_pay has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].comment has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://runup.dk/mcp"
+}

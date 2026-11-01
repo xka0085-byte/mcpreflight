@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:33.383Z",
+  "server": {
+    "registryName": "com.arbling/beacon",
+    "title": "Arbling Beacon",
+    "description": "Read your store's AI traffic: AI agents, AI referrals, crawlers, blog traffic and AI-touched deals.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.arbling.com/mcp/beacon",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "arbling-beacon",
+      "version": "1",
+      "transport": {
+        "type": "http",
+        "url": "/mcp/beacon"
+      },
+      "auth": {
+        "scheme": "bearer",
+        "credential": "beacon read key (secret)"
+      },
+      "protocol_version": "2025-06-18",
+      "tools": [
+        "beacon_ai_traffic",
+        "beacon_b2b_deals",
+        "beacon_checkout_handoffs",
+        "beacon_page_visits",
+        "beacon_who_visits",
+        "beacon_blog_traffic"
+      ]
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.arbling.com/mcp/beacon"
+}

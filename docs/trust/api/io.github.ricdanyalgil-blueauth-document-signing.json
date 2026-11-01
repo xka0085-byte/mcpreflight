@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:12.368Z",
+  "server": {
+    "registryName": "io.github.ricdanyalgil/blueauth-document-signing",
+    "title": "blue·auth Document Signing",
+    "description": "Send AI-created PDFs for signature, track signers, and return verifiable document evidence.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://blueauth.co/api/mcp-server/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://blueauth.co/api/mcp-server/mcp"
+}

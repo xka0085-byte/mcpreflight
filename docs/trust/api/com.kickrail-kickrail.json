@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:22.898Z",
+  "server": {
+    "registryName": "com.kickrail/kickrail",
+    "title": "Kickrail",
+    "description": "Set up and run a Stripe affiliate program: tracking, campaigns, affiliates, codes, Rewardful import.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://kickrail.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kickrail.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:27.261Z",
+  "server": {
+    "registryName": "io.zorevo/zorevo",
+    "title": "Zorevo",
+    "description": "Plan, schedule, analyze and answer comments across social platforms. Requires a paid Zorevo plan.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://app.zorevo.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://app.zorevo.io/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.zorevo.io/mcp"
+}

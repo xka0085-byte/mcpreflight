@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:16.342Z",
+  "server": {
+    "registryName": "com.bullionpricecheck/bullion-price-check",
+    "title": "Bullion Price Check",
+    "description": "Live gold/silver spot, lowest US dealer prices, and melt, scrap, premium and true-cost tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bullionpricecheck.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bullion-price-check",
+      "title": "Bullion Price Check",
+      "version": "1.0.0",
+      "websiteUrl": "https://bullionpricecheck.com/developers/"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].metal has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].quantity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].direction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].weight has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].metal has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bullionpricecheck.com/mcp"
+}

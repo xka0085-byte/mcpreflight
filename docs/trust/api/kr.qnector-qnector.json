@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:54.628Z",
+  "server": {
+    "registryName": "kr.qnector/qnector",
+    "title": "큐넥터",
+    "description": "큐넥터 계정으로 품목·재고·주문·견적·정산을 조회하고, 확인 후에만 변경합니다.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://qnector.kr/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://qnector.kr/mcp"
+}

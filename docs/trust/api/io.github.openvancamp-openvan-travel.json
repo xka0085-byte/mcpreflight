@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:30.809Z",
+  "server": {
+    "registryName": "io.github.openvancamp/openvan-travel",
+    "title": "io.github.openvancamp/openvan-travel",
+    "description": "Vanlife & RV data: roadbooks, fuel, tolls, ferries, visas, holidays, hazards, weather. openvan.camp",
+    "registryVersion": "0.12.0"
+  },
+  "endpoint": "https://mcp.openvan.camp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "openvan-mcp",
+      "version": "0.12.0",
+      "title": "OpenVan.camp Travel",
+      "websiteUrl": "https://openvan.camp",
+      "icons": [
+        {
+          "src": "https://openvan.camp/icon/android-chrome-192x192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        },
+        {
+          "src": "https://openvan.camp/icon/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 32,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.openvan.camp/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:15.934Z",
+  "server": {
+    "registryName": "dk.selskabsinfo/cvr",
+    "title": "SelskabsInfo — Danish company data",
+    "description": "Danish company data from CVR: owners, management, accounts, credit risk, court cases, bankruptcies.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.selskabsinfo.dk",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.selskabsinfo.dk"
+}

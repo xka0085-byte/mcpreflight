@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:27.863Z",
+  "server": {
+    "registryName": "io.github.alexfengrui/gq-readiness-free",
+    "title": "九启高企免费自测",
+    "description": "只读返回九启高企免费自测入口、用途、免责声明和自愿留资边界，不接收企业材料或联系方式。",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://gq.051297.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gq.051297.com/mcp"
+}

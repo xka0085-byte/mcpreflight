@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:22.657Z",
+  "server": {
+    "registryName": "site.chatgpt.super-myna-7255.agent-reserve-protocol/agent-transaction-firewall",
+    "title": "Agent Reserve Protocol Authorization Firewall",
+    "description": "Advisory policy preflight for AI-agent spend requests; never executes payments or accesses wallets.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://agent-reserve-protocol.super-myna-7255.chatgpt.site/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "agent-reserve-protocol",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].vendorStatus has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].receiptStatus has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].perRequestLimit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].dailyRemaining has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-reserve-protocol.super-myna-7255.chatgpt.site/api/mcp"
+}

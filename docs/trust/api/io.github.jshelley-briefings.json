@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:48.646Z",
+  "server": {
+    "registryName": "io.github.jshelley/briefings",
+    "title": "io.github.jshelley/briefings",
+    "description": "Hourly ranked news (AI, markets, sports, world): JSON, e-ink pages, Morning Paper PDF; 25 free/day",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://briefing-service.wholemind.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "briefing-service",
+      "version": "0.2.0",
+      "title": "Briefing Service: hourly ranked news"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].key has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://briefing-service.wholemind.workers.dev/mcp"
+}

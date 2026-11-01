@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:12.399Z",
+  "server": {
+    "registryName": "io.github.bauerpawel/dockyard",
+    "title": "Dockyard",
+    "description": "Search 600+ Docker/Portainer app templates and prepare a local deploy plan.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dockyard.kim1.ovh/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dockyard",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].allow_default_secrets has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dockyard.kim1.ovh/mcp"
+}

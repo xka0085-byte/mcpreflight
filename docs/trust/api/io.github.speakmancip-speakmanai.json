@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:44.354Z",
+  "server": {
+    "registryName": "io.github.speakmancip/speakmanai",
+    "title": "io.github.speakmancip/speakmanai",
+    "description": "Multi-agent AI pipeline that generates professional Solution Architecture Documents.",
+    "registryVersion": "1.0.10"
+  },
+  "endpoint": "https://speakman.ai/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://speakman.ai/mcp"
+}

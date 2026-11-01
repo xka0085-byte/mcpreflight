@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:41.124Z",
+  "server": {
+    "registryName": "com.parseaddr/address-parse",
+    "title": "ParseAddr — Address Parsing & Normalization",
+    "description": "Hosted libpostal: messy free-text postal addresses → structured fields. No 2-4GB self-host.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.parseaddr.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "parseaddr",
+      "version": "1.30.0",
+      "websiteUrl": "https://parseaddr.com"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].address has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.parseaddr.com/mcp"
+}

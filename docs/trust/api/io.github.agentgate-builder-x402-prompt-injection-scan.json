@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:11.913Z",
+  "server": {
+    "registryName": "io.github.agentgate-builder/x402-prompt-injection-scan",
+    "title": "InjectScan",
+    "description": "Prompt-injection scanner for agents: risk score, categories and spans for text, pages, MCP tools",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://injectscan.agentgate.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "injectscan",
+      "title": "InjectScan",
+      "version": "0.1.4"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://injectscan.agentgate.workers.dev/mcp"
+}

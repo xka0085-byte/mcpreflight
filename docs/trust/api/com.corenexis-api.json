@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:01.654Z",
+  "server": {
+    "registryName": "com.corenexis/api",
+    "title": "CoreNexis API",
+    "description": "PDF from HTML or Markdown, OCR, email validation, image conversion and hosting, QR and barcodes.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.corenexis.com/mcp/server",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "corenexis",
+      "version": "1.0.0",
+      "title": "CoreNexis APIs"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.corenexis.com/mcp/server"
+}

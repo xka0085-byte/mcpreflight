@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:59.044Z",
+  "server": {
+    "registryName": "io.github.dailylifeelevation-ai/ukrules-mcp",
+    "title": "UK Rules & Rates",
+    "description": "Sourced, date-aware UK tax and payroll rates, deadlines and UK business checks, with GOV.UK sources.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://ukrules.dailylifeelevation.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ukrules",
+      "version": "0.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].key has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ukrules.dailylifeelevation.workers.dev/mcp"
+}

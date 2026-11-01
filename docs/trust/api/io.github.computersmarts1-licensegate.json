@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:39.594Z",
+  "server": {
+    "registryName": "io.github.Computersmarts1/licensegate",
+    "title": "LicenseGate",
+    "description": "Open-source licence risk checks for AI coding agents and dependency trees.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://licensegate.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Checks software packages and their dependency trees for open-source licence compliance risk.",
+      "name": "LicenseGate",
+      "version": ""
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].ecosystem has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].package has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].version has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].use_case has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://licensegate.onrender.com/mcp"
+}

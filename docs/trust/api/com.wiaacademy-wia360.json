@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:41.172Z",
+  "server": {
+    "registryName": "com.wiaacademy/wia360",
+    "title": "WIA360: AI session probe and match",
+    "description": "Probe an AI session with WIA360 missions and match it to a human WIA360 KYEOL profile.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://wia360-mcp.wiaacademy.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wia360",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].session_ref has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].probe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].variant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].session_ref has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wia360-mcp.wiaacademy.com/mcp"
+}

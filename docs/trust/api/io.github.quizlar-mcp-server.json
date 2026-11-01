@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:51.930Z",
+  "server": {
+    "registryName": "io.github.quizlar/mcp-server",
+    "title": "Quizlar — voice-powered AI flashcards with spaced repetition",
+    "description": "Voice-led, FSRS-scheduled flashcards from YouTube, PDFs, web, or text. Auto-graded quizzes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.quizlar.app/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.quizlar.app/mcp/"
+}

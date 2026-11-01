@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:37.461Z",
+  "server": {
+    "registryName": "io.raute/account",
+    "title": "Raute Account",
+    "description": "Your own Raute delivery day from the assistant: stops, drivers and routes, after you sign in.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.raute.io/api/mcp/account/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.raute.io/api/mcp/account/"
+}

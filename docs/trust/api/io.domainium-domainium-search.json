@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:51.902Z",
+  "server": {
+    "registryName": "io.domainium/domainium-search",
+    "title": "io.domainium/domainium-search",
+    "description": "AI-powered domain & business name generation with real-time availability checks.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://domainium.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "Domainium Name Finder",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].style has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].excludeWords has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://domainium.io/api/mcp"
+}

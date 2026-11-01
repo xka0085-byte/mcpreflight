@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:13.489Z",
+  "server": {
+    "registryName": "insure.travelprotection/travel-insurance",
+    "title": "Travel Protection Insurance",
+    "description": "Quote US travel insurance and get a link to buy it on travelprotection.insure.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.travelprotection.insure/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "travel-protection-insurance",
+      "version": "1.0.0",
+      "title": "Travel Protection Insurance",
+      "websiteUrl": "https://www.travelprotection.insure"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].plan_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.travelprotection.insure/mcp"
+}

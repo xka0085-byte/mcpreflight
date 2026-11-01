@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:10.819Z",
+  "server": {
+    "registryName": "io.github.TRDEFI/liquidity",
+    "title": "TRDEFI Liquidity",
+    "description": "Live non-custodial stablecoin liquidity: open positions, volume, and an on-chain swap quote.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://yield.trdefi.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "trdefi-liquidity",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].direction has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].metric has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://yield.trdefi.com/mcp"
+}

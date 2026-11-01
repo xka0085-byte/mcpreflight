@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:48.787Z",
+  "server": {
+    "registryName": "io.github.Vomo-ai/vomo",
+    "title": "VOMO",
+    "description": "Find and read your VOMO meeting notes and transcripts. OAuth sign-in; read-only access.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.vomo.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.vomo.ai/mcp"
+}

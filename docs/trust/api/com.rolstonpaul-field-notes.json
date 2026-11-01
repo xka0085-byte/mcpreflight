@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:33.998Z",
+  "server": {
+    "registryName": "com.rolstonpaul/field-notes",
+    "title": "Rolston Paul field notes",
+    "description": "Read-only search and reading of the field notes on rolstonpaul.com, quoted word for word with URLs.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://rolstonpaul.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rolstonpaul-field-notes",
+      "title": "Rolston Paul field notes",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rolstonpaul.com/mcp"
+}

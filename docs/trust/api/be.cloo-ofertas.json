@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:42:17.343Z",
+  "server": {
+    "registryName": "be.cloo/ofertas",
+    "title": "cloo.be: ofertas da Shopee e do Mercado Livre",
+    "description": "Ofertas da Shopee e do Mercado Livre com preço verificado: busca, detalhes, em alta e categorias.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://cloo.be/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cloobe-ofertas",
+      "title": "cloo.be: ofertas da Shopee e do Mercado Livre",
+      "version": "1.0.0",
+      "websiteUrl": "https://cloo.be"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].ordem has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].categoria has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].ordem has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cloo.be/mcp"
+}

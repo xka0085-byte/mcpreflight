@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:50.291Z",
+  "server": {
+    "registryName": "ai.chipp/chipp-app-settings",
+    "title": "Chipp Agent settings",
+    "description": "Chipp: the full agent settings writers (update_app, bulk_update_app_settings), branding, auth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.chipp.ai/mcp/app-settings",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chipp.ai/mcp/app-settings"
+}

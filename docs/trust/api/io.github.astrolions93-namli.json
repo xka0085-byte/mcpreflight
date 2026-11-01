@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:55.904Z",
+  "server": {
+    "registryName": "io.github.Astrolions93/namli",
+    "title": "Namli",
+    "description": "Checks if a project, brand or app name already exists: trademarks, domains, web and GitHub.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://namli.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "namli",
+      "title": "Namli",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].pais has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].pais has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].cuantos has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://namli.vercel.app/api/mcp"
+}

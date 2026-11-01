@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:47.520Z",
+  "server": {
+    "registryName": "io.github.thestockgoatballs/clipspeed-mcp",
+    "title": "io.github.thestockgoatballs/clipspeed-mcp",
+    "description": "AI video, images, AI influencers, character swaps and clipping from Claude or ChatGPT.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://api.clipspeed.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.clipspeed.ai/mcp"
+}

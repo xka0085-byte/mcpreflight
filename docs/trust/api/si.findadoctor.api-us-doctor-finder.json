@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:10.280Z",
+  "server": {
+    "registryName": "si.findadoctor.api/us-doctor-finder",
+    "title": "FindADoctor.si",
+    "description": "Find US, New Zealand and France doctors by condition, procedure or place, with sources. No sign-up.",
+    "registryVersion": "2026-10-16.1"
+  },
+  "endpoint": "https://api.findadoctor.si/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "findadoctor-si",
+      "title": "FindADoctor.si",
+      "version": "gw-2026-10-16.1"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].text has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.findadoctor.si/mcp"
+}

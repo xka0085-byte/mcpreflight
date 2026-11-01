@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:16.664Z",
+  "server": {
+    "registryName": "io.github.dev-allflyghts/mcp-server",
+    "title": "ALLFLYGHTS",
+    "description": "Geo-based flight search MCP server. Find more flights between any two places on earth",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.allflyghts.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.allflyghts.com/mcp"
+}

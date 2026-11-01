@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:16.621Z",
+  "server": {
+    "registryName": "io.github.wowcool/agentsafe",
+    "title": "Agent Safe",
+    "description": "Email safety MCP server. Detects phishing, prompt injection, CEO fraud for AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://agentsafe.locationledger.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentsafe.locationledger.com/mcp"
+}

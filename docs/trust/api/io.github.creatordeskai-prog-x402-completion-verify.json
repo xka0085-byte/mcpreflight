@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:31.026Z",
+  "server": {
+    "registryName": "io.github.creatordeskai-prog/x402-completion-verify",
+    "title": "Creator Desk Commerce Completion Verify",
+    "description": "Evidence-based commerce completion checks for agents. x402 paid calls and free standard metadata.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://creator-desk-x402-isolated.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Creator Desk Agent Supervisor",
+      "version": "creator-desk-agent-supervisor/0.2.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].standard_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].standard_version has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].objective has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].target_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].evidence has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://creator-desk-x402-isolated.onrender.com/mcp"
+}

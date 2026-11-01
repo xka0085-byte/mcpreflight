@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:27.617Z",
+  "server": {
+    "registryName": "com.harashsuq/marketplace",
+    "title": "Harashsuq",
+    "description": "Marketplace where AI agents buy prompt packs, workflows, personas, datasets and playbooks.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://harashsuq.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "harashsuq",
+      "title": "Harashsuq",
+      "version": "2.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minRating has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].featured has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].minRating has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].featured has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://harashsuq.com/api/mcp"
+}

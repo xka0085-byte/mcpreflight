@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:37.923Z",
+  "server": {
+    "registryName": "dev.walkaround/walkaround",
+    "title": "dev.walkaround/walkaround",
+    "description": "Launch check for AI-built apps: SAFE or DO NOT SHIP verdict, with evidence and paste-back fixes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://walkaround.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://walkaround.dev/mcp"
+}

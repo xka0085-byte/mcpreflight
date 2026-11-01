@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:54.771Z",
+  "server": {
+    "registryName": "one.aisa/apollo",
+    "title": "AIsa Apollo",
+    "description": "B2B people and company search, enrichment, and the CRM objects behind a pipeline.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.aisa.one/apollo/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.aisa.one/apollo/mcp"
+}

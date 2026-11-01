@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:47.114Z",
+  "server": {
+    "registryName": "io.github.gHost163-wq/devnors-data",
+    "title": "Devnors Data",
+    "description": "一个 API Key 调用法律/企业等官方权威数据，每条出处可回溯。",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://data.devnors.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://data.devnors.com/mcp"
+}

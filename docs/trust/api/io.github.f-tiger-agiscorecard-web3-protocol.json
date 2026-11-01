@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:22.338Z",
+  "server": {
+    "registryName": "io.github.f-tiger/agiscorecard-web3-protocol",
+    "title": "io.github.f-tiger/agiscorecard-web3-protocol",
+    "description": "Read dated x402, ERC-8004 and token-interface profiles with official sources and freshness limits.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://protocol.agiscorecard.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "web3-protocol",
+      "title": "Protocol Ledger",
+      "version": "1.7.0",
+      "websiteUrl": "https://protocol.agiscorecard.com/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://protocol.agiscorecard.com/mcp"
+}

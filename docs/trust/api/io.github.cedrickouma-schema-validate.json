@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:31.798Z",
+  "server": {
+    "registryName": "io.github.CedricKouma/schema-validate",
+    "title": "io.github.CedricKouma/schema-validate",
+    "description": "MCP server (stdio): validate JSON against JSON Schema (draft-07 / 2020-12) via the AgentForge API",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://apim-agentforge-6lfm33.azure-api.net/schema-validate/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apim-agentforge-6lfm33.azure-api.net/schema-validate/mcp"
+}

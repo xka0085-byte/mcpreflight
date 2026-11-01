@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:50.831Z",
+  "server": {
+    "registryName": "io.github.Shirish-Singh/niceform-mcp",
+    "title": "io.github.Shirish-Singh/niceform-mcp",
+    "description": "Create and publish forms, collect responses, summarize and export CSV on niceform.ai.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://www.niceform.ai/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.niceform.ai/api/mcp"
+}

@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:43.780Z",
+  "server": {
+    "registryName": "eu.trenify/trainradar24",
+    "title": "Trainradar24",
+    "description": "Live Polish rail data: boards for every station, delays, PLK disruptions, train punctuality.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://mcp.trenify.eu/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "trainradar24",
+      "title": "Trainradar24",
+      "version": "0.3.0",
+      "websiteUrl": "https://trainradar24.eu"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.trenify.eu/mcp"
+}

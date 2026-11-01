@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:23.727Z",
+  "server": {
+    "registryName": "tools.feedback/mcp",
+    "title": "feedback.tools",
+    "description": "Customer feedback for your AI assistant: CSAT, NPS and CES scores, response search, AI themes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://feedback.tools/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://feedback.tools/mcp"
+}

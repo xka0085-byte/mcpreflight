@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:02.897Z",
+  "server": {
+    "registryName": "io.github.ltvspot/library-of-alexandria",
+    "title": "Library of Alexandria",
+    "description": "Classic books in 25 languages: search, print editions, the free shelf. Read-only, no sign-in.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.libraryofalexandria.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "library-of-alexandria-press",
+      "title": "Library of Alexandria Press",
+      "version": "0.2.0",
+      "description": "Read-only catalogue of classic books in clear modern language, in English and a growing number of languages.",
+      "websiteUrl": "https://libraryofalexandria.com"
+    },
+    "toolCount": 26,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].dedication has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].cover has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.libraryofalexandria.com/mcp"
+}

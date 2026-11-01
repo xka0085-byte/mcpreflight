@@ -1,0 +1,65 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:26.642Z",
+  "server": {
+    "registryName": "io.github.theindianappguy/gita-mahabharata-mcp",
+    "title": "Gita & Mahabharata",
+    "description": "Full Bhagavad Gita (Sanskrit + English) and Ganguli's Mahabharata: search verses and passages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dharma-mcp.iag.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dharma-texts",
+      "title": "Gita & Mahabharata",
+      "version": "1.0.0",
+      "websiteUrl": "https://dharma-mcp.iag.workers.dev",
+      "icons": [
+        {
+          "src": "https://dharma-mcp.iag.workers.dev/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].chapter has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].verse has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].top_k has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].section has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dharma-mcp.iag.workers.dev/mcp"
+}

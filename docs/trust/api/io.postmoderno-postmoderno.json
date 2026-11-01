@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:30.803Z",
+  "server": {
+    "registryName": "io.postmoderno/postmoderno",
+    "title": "postmoderno",
+    "description": "Schedule and publish social posts to Bluesky, Mastodon and X / Twitter by asking your AI agent.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.postmoderno.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.postmoderno.io/mcp"
+}

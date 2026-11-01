@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:23.627Z",
+  "server": {
+    "registryName": "io.github.marcpineault/glacier-planner-calculator",
+    "title": "Glacier Planner: Free Canadian Retirement Calculator",
+    "description": "Free Canadian retirement projections and one what-if from confirmed inputs. No Glacier account.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://planner.glacierfinancial.ca/calculate/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "glacier-planner-first-plan",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].input has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://planner.glacierfinancial.ca/calculate/mcp"
+}

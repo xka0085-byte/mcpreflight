@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:14.574Z",
+  "server": {
+    "registryName": "io.github.Packrift/packrift-mcp",
+    "title": "Packrift MCP",
+    "description": "Find, size, price and order packaging: boxes, mailers, poly bags, tape. Live price and stock.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://mcp.packrift.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Packrift MCP",
+      "version": "1.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.packrift.com/mcp"
+}

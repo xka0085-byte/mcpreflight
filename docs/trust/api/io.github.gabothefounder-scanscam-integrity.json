@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:05.964Z",
+  "server": {
+    "registryName": "io.github.Gabothefounder/scanscam-integrity",
+    "title": "ScanScam Integrity",
+    "description": "Independent agent preflight: verify change, mandates, evidence, and exact execution.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://www.scanscam.ca/api/integrity/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "scanscam-integrity",
+      "version": "1.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].urgency has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].willingness_to_pay has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].budget_per_check has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.scanscam.ca/api/integrity/v1/mcp"
+}

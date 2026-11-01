@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:37.800Z",
+  "server": {
+    "registryName": "io.github.pain2hustle/cloudflare-ops-mcp",
+    "title": "AMH Cloudflare Ops MCP by WT",
+    "description": "The bridge from K2 agents through Wrangler to your master AI - safe, approval-gated Cloudflare ops.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://cfops.nothingunseen.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cfops.nothingunseen.com/mcp"
+}

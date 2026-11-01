@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:50.134Z",
+  "server": {
+    "registryName": "io.github.Farhanyousaf729/postlefy",
+    "title": "Postlefy",
+    "description": "Post to 11 social platforms from Claude or ChatGPT. Your AI writes; Postlefy previews and posts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://postlefy.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://postlefy.com/api/mcp"
+}

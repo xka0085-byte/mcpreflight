@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:13.276Z",
+  "server": {
+    "registryName": "com.brandloupe/brandloupe",
+    "title": "Brandloupe Index",
+    "description": "Weekly data on 600k+ Shopify stores: launches, best sellers, prices, apps and similar stores.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.brandloupe.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.brandloupe.com/api/mcp"
+}

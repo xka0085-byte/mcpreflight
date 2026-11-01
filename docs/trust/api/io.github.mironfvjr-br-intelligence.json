@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:39.151Z",
+  "server": {
+    "registryName": "io.github.Mironfvjr/br-intelligence",
+    "title": "BR Intelligence",
+    "description": "Brazil PTAX, CNPJ/KYB, CEIS-CNEP sanctions, PIX and boleto. Paid x402 MCP API (USDC on Base).",
+    "registryVersion": "1.8.0"
+  },
+  "endpoint": "https://br-intelligence.brverify-api.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "br-intelligence",
+      "version": "1.9.0"
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].value has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://br-intelligence.brverify-api.workers.dev/mcp"
+}

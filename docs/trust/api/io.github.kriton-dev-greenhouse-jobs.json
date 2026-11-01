@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:26.840Z",
+  "server": {
+    "registryName": "io.github.kriton-dev/greenhouse-jobs",
+    "title": "Greenhouse Job Board Scraper — Open Jobs, Live, Any Company",
+    "description": "Get every open job from any company's Greenhouse job board, fetched live",
+    "registryVersion": "1.0.9"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=hermeskd/greenhouse-jobs",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=hermeskd/greenhouse-jobs"
+}

@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:13.344Z",
+  "server": {
+    "registryName": "io.github.metamorphosis-sre/devdrops-property",
+    "title": "io.github.metamorphosis-sre/devdrops-property",
+    "description": "UK property MCP: Land Registry prices, company charges, House Price Index. x402 USDC on Base.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.devdrops.run/api/property/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.devdrops.run/api/property/mcp"
+}

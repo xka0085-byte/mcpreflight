@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:34.508Z",
+  "server": {
+    "registryName": "io.github.jessiemongeon1/sui-kapa",
+    "title": "Sui Knowledge Base (kapa.ai)",
+    "description": "Semantic search across Sui documentation and knowledge sources, powered by kapa.ai",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sui.mcp.kapa.ai",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sui.mcp.kapa.ai"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:27.811Z",
+  "server": {
+    "registryName": "com.shanchuangkj/medicine-data",
+    "title": "MedicineData MCP",
+    "description": "Chinese pharma data MCP: 22 tools covering drugs, trials, deals, patents, sales. Per-row billing.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://medicine.shanchuangkj.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "medical-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "22 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://medicine.shanchuangkj.com/mcp/"
+}

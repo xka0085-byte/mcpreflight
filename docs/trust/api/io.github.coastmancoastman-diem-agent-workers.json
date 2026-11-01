@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:18.598Z",
+  "server": {
+    "registryName": "io.github.coastmancoastman/diem-agent-workers",
+    "title": "DIEM Agent Workers",
+    "description": "Discover privacy-first, bounded Venice-powered micro-work calls with exact x402 USDC prices.",
+    "registryVersion": "0.6.1"
+  },
+  "endpoint": "https://diem-agent-workers.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "diem-agent-workers",
+      "version": "0.6.1"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].worker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].worker has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].input has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://diem-agent-workers.vercel.app/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:55.511Z",
+  "server": {
+    "registryName": "com.insightfulpipe/instagram",
+    "title": "Instagram MCP by InsightfulPipe",
+    "description": "Hosted Instagram MCP server for Claude, ChatGPT and Cursor, with each action switched per account.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://instagram.insightfulmcp.com/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://instagram.insightfulmcp.com/"
+}

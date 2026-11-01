@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:17.958Z",
+  "server": {
+    "registryName": "io.github.LetsFG/letsfg",
+    "title": "LetsFG — Flights & Hotels",
+    "description": "Search and book flights and hotels: hundreds of airlines, plus bookable hotel rates.",
+    "registryVersion": "2026.5.77"
+  },
+  "endpoint": "https://letsfg.co/developers/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://letsfg.co/developers/api/mcp"
+}

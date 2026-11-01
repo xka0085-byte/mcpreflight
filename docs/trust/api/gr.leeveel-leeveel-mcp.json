@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:35.041Z",
+  "server": {
+    "registryName": "gr.leeveel/leeveel-mcp",
+    "title": "Leeveel",
+    "description": "Company facts about Leeveel: general info, ideology, contact details, company and tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.leeveel.gr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "leeveel-company-facts",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.leeveel.gr/mcp"
+}

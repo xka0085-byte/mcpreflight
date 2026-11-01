@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:55.711Z",
+  "server": {
+    "registryName": "io.github.NicolasPrimeau/artel",
+    "title": "Artel",
+    "description": "Self-hosted shared-memory & coordination mesh for AI agent fleets. You host it; agents connect.",
+    "registryVersion": "0.17.1"
+  },
+  "endpoint": "https://{artel_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{artel_host}/mcp"
+}

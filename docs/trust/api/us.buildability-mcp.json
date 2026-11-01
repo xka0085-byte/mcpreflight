@@ -1,0 +1,38 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:42.330Z",
+  "server": {
+    "registryName": "us.buildability/mcp",
+    "title": "Buildability",
+    "description": "Source-cited, address-level answers on zoning, site constraints, permitting and what can be built.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://buildability.us/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "buildability",
+      "title": "Buildability",
+      "version": "2.0.0",
+      "websiteUrl": "https://buildability.us",
+      "icons": [
+        {
+          "src": "https://buildability.us/buildability-mark.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ],
+      "description": "Buildability™ — the Buildability Score for any US parcel: zoning, FEMA flood, USGS seismic, USDA soil, EPA radon, USFS wildfire, and utilities from cited sources. score_address works for ANY US street address with live federal data."
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "12 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://buildability.us/api/mcp"
+}

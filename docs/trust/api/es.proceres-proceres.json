@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:24.172Z",
+  "server": {
+    "registryName": "es.proceres/proceres",
+    "title": "Próceres · escritos judiciales de España: papeleta, demanda y recursos",
+    "description": "Redacta papeleta, demanda y recursos de España con los preceptos del BOE. Sin datos personales.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://proceres.es/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "proceres",
+      "title": "Próceres · escritos judiciales y administrativos",
+      "version": "1.0.0"
+    },
+    "toolCount": 46,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[17].velocidad has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://proceres.es/api/mcp"
+}

@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:14.587Z",
+  "server": {
+    "registryName": "com.mrrledger/mrrledger",
+    "title": "MRR Ledger",
+    "description": "Free, no key: sourced, dated revenue of real AI-agent businesses. Start with search_businesses.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://mrrledger.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mrrledger",
+      "title": "MRR Ledger: AI startup revenue",
+      "version": "1.16.0",
+      "description": "Revenue (MRR/ARR) of AI-agent and AI startup businesses, every figure sourced and dated. Use it for any question about how much an AI company earns.",
+      "websiteUrl": "https://mrrledger.com/for-agents/#mcp"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].format has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mrrledger.com/mcp"
+}

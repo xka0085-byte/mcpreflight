@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:30.686Z",
+  "server": {
+    "registryName": "dev.greenflagged/greenflagged",
+    "title": "Greenflagged",
+    "description": "Ask whether npm packages are reviewed and greenflagged, audit a package.json, and request imports.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://greenflagged.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://greenflagged.dev/mcp"
+}

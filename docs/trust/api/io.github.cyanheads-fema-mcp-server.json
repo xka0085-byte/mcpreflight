@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:44.250Z",
+  "server": {
+    "registryName": "io.github.cyanheads/fema-mcp-server",
+    "title": "io.github.cyanheads/fema-mcp-server",
+    "description": "Query FEMA disaster declarations, public assistance grants, housing aid, and NFIP claims.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://fema.caseyjhand.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fema-mcp-server",
+      "version": "0.5.0",
+      "title": "fema-mcp-server"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fema.caseyjhand.com/mcp"
+}

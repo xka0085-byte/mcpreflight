@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:01.249Z",
+  "server": {
+    "registryName": "in.sambodh-ias/upsc-prep",
+    "title": "Sambodh IAS",
+    "description": "UPSC prep: interactive quizzes, previous-year questions, daily current affairs, cited study search",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.sambodh-ias.in/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Sambodh IAS",
+      "version": "1.30.0",
+      "websiteUrl": "https://sambodh-ias.in"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].num_questions has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].top_k has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.sambodh-ias.in/mcp"
+}

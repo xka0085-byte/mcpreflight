@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:10.253Z",
+  "server": {
+    "registryName": "io.github.barnaby-coder/agencyai-mcp",
+    "title": "AgencyAI Commerce MCP",
+    "description": "AgencyAI's public MCP for service discovery and AI-readiness assessment.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://agencyai-mcp.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agencyai-commerce",
+      "version": "1.1.0",
+      "websiteUrl": "https://agencyai.me",
+      "icons": [
+        {
+          "src": "https://agencyai.me/logo.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].company_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].preferred_times has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].industry has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].employee_count has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agencyai-mcp.vercel.app/mcp"
+}

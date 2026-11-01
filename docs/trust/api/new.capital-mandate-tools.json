@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:28.890Z",
+  "server": {
+    "registryName": "new.capital/mandate-tools",
+    "title": "capital.new mandate draft tools",
+    "description": "Verify Capital Authority Mandate drafts (SHA-256 replay) + v0 schema. Ceremonies stay human.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://capital.new/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "new.capital/mandate-tools",
+      "title": "capital.new mandate draft tools",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://capital.new/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:21:20.144Z",
+  "server": {
+    "registryName": "io.github.marckohlbrugge/sessy",
+    "title": "Sessy — Amazon SES observability",
+    "description": "Read-only Amazon SES observability: search events, inspect bounces, pull delivery stats.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.sessy.do/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.sessy.do/mcp"
+}

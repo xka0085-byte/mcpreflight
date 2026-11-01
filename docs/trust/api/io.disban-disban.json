@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:49.916Z",
+  "server": {
+    "registryName": "io.disban/disban",
+    "title": "Disban",
+    "description": "Check if a signup email is disposable, free, an alias, testing, parked or unknown, with evidence.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://disban.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "disban",
+      "title": "Disban",
+      "version": "1.0.0",
+      "websiteUrl": "https://disban.io"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].inputs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://disban.io/mcp"
+}

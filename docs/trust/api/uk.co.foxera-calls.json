@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:53.276Z",
+  "server": {
+    "registryName": "uk.co.foxera/calls",
+    "title": "FoxEra Calls",
+    "description": "AI cold calling: add leads, preview the cost, run outbound call campaigns, read transcripts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.foxera.co.uk/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.foxera.co.uk/mcp"
+}

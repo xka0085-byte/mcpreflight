@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:17.215Z",
+  "server": {
+    "registryName": "pro.teamwars/esports",
+    "title": "TEAMWARS Esports",
+    "description": "FPS esports data for AI: Valorant player stats, teams, tournaments, prizes from TEAMWARS. CS2 next",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://teamwars.pro/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://teamwars.pro/mcp"
+}

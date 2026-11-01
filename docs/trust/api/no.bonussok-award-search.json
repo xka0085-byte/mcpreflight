@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:42.360Z",
+  "server": {
+    "registryName": "no.bonussok/award-search",
+    "title": "Bonussøk Award Search",
+    "description": "The ultimate SkyTeam EuroBonus award search. Manage alerts. Needs active Bonussøk subscription.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://www.bonussok.no/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.bonussok.no/mcp"
+}

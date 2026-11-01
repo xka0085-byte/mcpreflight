@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:48.847Z",
+  "server": {
+    "registryName": "il.co.bituchon/car-insurance",
+    "title": "ביטוחון: Israeli car data and car-insurance facts",
+    "description": "Israeli car data by plate or model, licence fee, recalls, thefts and car-insurance facts.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://bituchon.co.il/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "il.co.bituchon/car-insurance",
+      "title": "ביטוחון · Israeli car data and car-insurance facts (bituchon.co.il)",
+      "version": "1.1.0",
+      "websiteUrl": "https://bituchon.co.il/developers"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bituchon.co.il/api/mcp"
+}

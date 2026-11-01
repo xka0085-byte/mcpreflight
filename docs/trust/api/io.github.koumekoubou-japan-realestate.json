@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:03.615Z",
+  "server": {
+    "registryName": "io.github.KoumeKoubou/japan-realestate",
+    "title": "Japan Real Estate Market Data",
+    "description": "Japan real estate data: transactions, land prices, vacancy, hazard, zoning & more.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp-server-japan-realestate.x7k9m.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp-server-japan-realestate.x7k9m.workers.dev/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:45.812Z",
+  "server": {
+    "registryName": "ai.bugtape/bugtape-demo",
+    "title": "BugTape demo",
+    "description": "Read-only sample shop with captured bug evidence. No account or key needed.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.bugtape.ai/demo/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bugtape-demo",
+      "version": "0.1.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].projectId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.bugtape.ai/demo/mcp"
+}

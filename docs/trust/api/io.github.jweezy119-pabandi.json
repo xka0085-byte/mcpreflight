@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:58.263Z",
+  "server": {
+    "registryName": "io.github.jweezy119/Pabandi",
+    "title": "PabandiOS",
+    "description": "Trust and settlement for AI agents: portable attestations, escrow, x402/USDC payments on Solana.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://pabandi.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "pabandi-trust",
+      "version": "1.0.0"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].idempotencyKey has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pabandi.onrender.com/mcp"
+}

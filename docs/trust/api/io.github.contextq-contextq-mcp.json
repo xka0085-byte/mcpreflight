@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:29.393Z",
+  "server": {
+    "registryName": "io.github.contextq/contextq-mcp",
+    "title": "io.github.contextq/contextq-mcp",
+    "description": "Persistent memory, hybrid search and a goal graph for AI agents, over stdio or remote HTTP.",
+    "registryVersion": "2.1.1"
+  },
+  "endpoint": "https://app.contextq.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.contextq.dev/mcp"
+}

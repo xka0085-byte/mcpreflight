@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:48.967Z",
+  "server": {
+    "registryName": "io.github.funCapital/viewsbase",
+    "title": "ViewsBase",
+    "description": "Track creator views on TikTok, Reels and Shorts, flag fake views and calculate clipping payouts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://viewsbase.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://viewsbase.com/mcp"
+}

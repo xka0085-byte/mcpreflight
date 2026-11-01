@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:36.017Z",
+  "server": {
+    "registryName": "io.github.fisher-byte/markovo",
+    "title": "Markovo File to Text, Word and Markdown",
+    "description": "Convert files and authorized public HTTPS pages to text, editable Word or Markdown.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://markovo.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://markovo.net/mcp"
+}

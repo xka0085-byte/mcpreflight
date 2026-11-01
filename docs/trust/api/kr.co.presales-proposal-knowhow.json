@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:52.539Z",
+  "server": {
+    "registryName": "kr.co.presales/proposal-knowhow",
+    "title": "PRESALES Proposal Knowhow",
+    "description": "제안서 작성 지침·체크리스트·페이지 템플릿을 사용자 Codex에 연결합니다. 개통 상태는 API 가이드를 확인하세요.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://presales.co.kr/api/presales-knowhow/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://presales.co.kr/api/presales-knowhow/mcp"
+}

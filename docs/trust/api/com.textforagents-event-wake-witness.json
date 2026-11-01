@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:17.791Z",
+  "server": {
+    "registryName": "com.textforagents/event-wake-witness",
+    "title": "Event-wake witness for agent triggers",
+    "description": "Signed receipts + horizon statements proving whether an event-triggered agent actually woke.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://textforagents.com/products/event-wake-witness/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/event-wake-witness/mcp"
+}

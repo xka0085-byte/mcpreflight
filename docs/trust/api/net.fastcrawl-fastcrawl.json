@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:33.357Z",
+  "server": {
+    "registryName": "net.fastcrawl/fastcrawl",
+    "title": "Fastcrawl",
+    "description": "Cloud scraping & crawling API for AI agents. Turn any URL into clean, LLM-ready markdown.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://mcp.fastcrawl.net/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.fastcrawl.net/mcp"
+}

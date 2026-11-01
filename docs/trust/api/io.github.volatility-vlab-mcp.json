@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:55.894Z",
+  "server": {
+    "registryName": "io.github.volatility/vlab-mcp",
+    "title": "V-Lab",
+    "description": "Volatility, SRISK, CRISK, liquidity and climate data from NYU Stern's V-Lab, with model forecasts.",
+    "registryVersion": "0.13.0"
+  },
+  "endpoint": "https://vlab.stern.nyu.edu/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vlab.stern.nyu.edu/mcp"
+}

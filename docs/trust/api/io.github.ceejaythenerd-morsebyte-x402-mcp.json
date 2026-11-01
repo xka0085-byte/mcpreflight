@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:32.421Z",
+  "server": {
+    "registryName": "io.github.Ceejaythenerd/morsebyte-x402-mcp",
+    "title": "MorseByte x402 Edge Data Refinery & Quant Gateway",
+    "description": "Web data refinery, link verifier, AI JSON extractor, and quant regime classifier via HTTP 402.",
+    "registryVersion": "1.1.3"
+  },
+  "endpoint": "https://api.morsebyte.co.za/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "io.github.Ceejaythenerd/morsebyte-x402-mcp",
+      "title": "MorseByte x402 Edge Data Refinery & Autonomous Agent Cloud",
+      "version": "1.3.1",
+      "description": "Machine-payable x402 edge utilities (USDC on Base Mainnet).",
+      "icons": [
+        {
+          "src": "https://api.morsebyte.co.za/icon.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].symbol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].timeframe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].prompt has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].system has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].tier has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.morsebyte.co.za/mcp"
+}

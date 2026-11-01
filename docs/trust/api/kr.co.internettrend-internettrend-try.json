@@ -1,0 +1,59 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:48.029Z",
+  "server": {
+    "registryName": "kr.co.internettrend/internettrend-try",
+    "title": "인터넷트렌드 맛보기 (InternetTrend Try)",
+    "description": "Try InternetTrend without login: Korean search, AI platform and browser shares for completed months.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.gmp.ai/internettrend/try",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "internettrend-try",
+      "title": "인터넷트렌드 맛보기 InternetTrend Try",
+      "version": "1.2.0",
+      "websiteUrl": "https://internettrend.co.kr/mcp",
+      "icons": [
+        {
+          "src": "https://internettrend.co.kr/logo-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://internettrend.co.kr/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        },
+        {
+          "src": "https://internettrend.co.kr/favicon-32.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "32x32"
+          ]
+        }
+      ]
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].skill_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.gmp.ai/internettrend/try"
+}

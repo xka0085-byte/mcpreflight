@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:05.792Z",
+  "server": {
+    "registryName": "com.ai-architectures/mcp",
+    "title": "AI Architectures",
+    "description": "Search ~500 free house plans and have AI-drafted CAD floor plans (DXF, DWG, PDF) drawn and changed.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.ai-architectures.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ai-architectures",
+      "title": "AI Architectures",
+      "version": "1.0.0",
+      "websiteUrl": "https://plans.ai-architectures.com",
+      "icons": [
+        {
+          "src": "https://mcp.ai-architectures.com/ai-architectures-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].drawing_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.ai-architectures.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:23.796Z",
+  "server": {
+    "registryName": "io.aperturex/aperture-wallet-knowledge",
+    "title": "Aperture Wallet Knowledge",
+    "description": "Verified Aperture Wallet product, security, network, release, and Journal knowledge.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aperturex.io/mcp/",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aperturex.io/mcp/"
+}

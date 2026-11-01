@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:57.225Z",
+  "server": {
+    "registryName": "io.github.tlaloc-sh/tlaloc-mcp",
+    "title": "io.github.tlaloc-sh/tlaloc-mcp",
+    "description": "Official Mexican data for AI agents: CURP, RFC, CFDI, postal codes, phone, SPEI/CEP, DOF, geocoding.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.tlaloc.sh/mx/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.tlaloc.sh/mx/mcp"
+}

@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:05.793Z",
+  "server": {
+    "registryName": "dev.workers.x402-bazaar-rank-worker.x402-bazaar-rank/x402-bazaar-rank",
+    "title": "P0 Agent Economy Index",
+    "description": "Paid APIs for agents (x402 index) + SEC filings, wallet risk, OFAC, EVM reads, agent memory, news",
+    "registryVersion": "0.2.7"
+  },
+  "endpoint": "https://x402-bazaar-rank.x402-bazaar-rank-worker.workers.dev/mcp?via=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "x402-bazaar-rank",
+      "title": "P0 Agent Economy Index",
+      "version": "0.2.0"
+    },
+    "toolCount": 44,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[38].keywords has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[38].exclude_domains has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[39].urls has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[40].contracts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[41].contracts has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://x402-bazaar-rank.x402-bazaar-rank-worker.workers.dev/mcp?via=mcp-registry"
+}

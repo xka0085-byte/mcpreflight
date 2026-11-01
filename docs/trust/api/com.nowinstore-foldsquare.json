@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:49.953Z",
+  "server": {
+    "registryName": "com.nowinstore/foldsquare",
+    "title": "Foldsquare",
+    "description": "Build, edit, preview and publish product catalogs and price lists from a merchant's store data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://foldsquare.nowinstore.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foldsquare.nowinstore.com/api/v1/mcp"
+}

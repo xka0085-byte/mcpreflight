@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:58.359Z",
+  "server": {
+    "registryName": "io.github.edisontaimu9-ui/chakudya-mcp-server",
+    "title": "io.github.edisontaimu9-ui/chakudya-mcp-server",
+    "description": "MCP tools for Malawian food search, clinical nutrition calculators, and RAG-backed guidance.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://chakudya-mcp-server.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://chakudya-mcp-server.onrender.com/mcp"
+}

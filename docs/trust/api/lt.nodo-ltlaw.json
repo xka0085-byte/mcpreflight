@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:49.396Z",
+  "server": {
+    "registryName": "lt.nodo/ltlaw",
+    "title": "Lietuvos teisės aktai - point-in-time Lithuanian legislation",
+    "description": "What a Lithuanian act said on one given date, with its validity window and a register URL.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.nodo.lt",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.nodo.lt"
+}

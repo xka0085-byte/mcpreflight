@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:39.503Z",
+  "server": {
+    "registryName": "io.github.andycywu/modelpilot",
+    "title": "ModelPilot Execution Decision Engine",
+    "description": "Policy-aware AI execution, verification, cost, and trajectory evidence for agents.",
+    "registryVersion": "0.9.0"
+  },
+  "endpoint": "https://modelpilot.andycywu.cc/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://modelpilot.andycywu.cc/mcp"
+}

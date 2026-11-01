@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:37.737Z",
+  "server": {
+    "registryName": "ai.askyouraudience/ask-your-audience",
+    "title": "Ask Your Audience",
+    "description": "Test ideas, messages and ads with Human Digital Twins built from real people, in your AI assistant.",
+    "registryVersion": "1.0.4"
+  },
+  "endpoint": "https://mcp.askyouraudience.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.askyouraudience.ai/mcp"
+}

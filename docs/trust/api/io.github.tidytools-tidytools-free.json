@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:52.094Z",
+  "server": {
+    "registryName": "io.github.tidytools/tidytools-free",
+    "title": "TidyTools Free Web Data",
+    "description": "45 free keyless web tools: AI extract, OCR, transcribe, SEO, DNS, contacts. Strict daily limits.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://tools.yukai.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tidytools-free",
+      "version": "1.2.0"
+    },
+    "toolCount": 45,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_chars has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].start_index has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[35].fields has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[36].question has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[39].target_language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tools.yukai.uk/mcp"
+}

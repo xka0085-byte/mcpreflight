@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:38.550Z",
+  "server": {
+    "registryName": "io.github.fmp-projects/fitness-ai-connector",
+    "title": "Fitness AI Connector",
+    "description": "Garmin data in Claude & ChatGPT via the Garmin Health API. OAuth sign-in, no password sharing.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://garmin-mcp-nuqd.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://garmin-mcp-nuqd.onrender.com/mcp"
+}

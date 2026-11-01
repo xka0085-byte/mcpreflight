@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:08.649Z",
+  "server": {
+    "registryName": "tech.p7n/platform7n",
+    "title": "tech.p7n/platform7n",
+    "description": "Connect Claude to your Platform7n workspaces: chat, links, work and decks. One-click OAuth.",
+    "registryVersion": "0.3.3"
+  },
+  "endpoint": "https://api.p7n.tech/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.p7n.tech/mcp"
+}

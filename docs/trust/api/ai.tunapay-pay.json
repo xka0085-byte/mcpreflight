@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:21.572Z",
+  "server": {
+    "registryName": "ai.tunapay/pay",
+    "title": "TunaPay Pay",
+    "description": "Your AI pays with a TunaPay prepaid card. You approve each payment in Telegram or on tunapay.ai.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tunapay.ai/gw/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tunapay.ai/gw/mcp"
+}

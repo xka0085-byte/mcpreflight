@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:11.375Z",
+  "server": {
+    "registryName": "io.github.LKennedyShare/hybriqx-workout-adaptation",
+    "title": "Hybriqx Workout Adaptation",
+    "description": "Advisory workout adaptation via hosted MCP and x402. Python buyer with operator-approved tools.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.hybriqx.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Hybriqx Workout Adaptation",
+      "version": "1.30.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].original_wod has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].available_equipment has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].target_time_domain_mins has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].athlete_notes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.hybriqx.com/mcp/"
+}

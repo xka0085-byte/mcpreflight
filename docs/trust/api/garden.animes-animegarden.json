@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:26.522Z",
+  "server": {
+    "registryName": "garden.animes/animegarden",
+    "title": "Anime Garden",
+    "description": "Anime Garden MCP for anime torrent discovery.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://api.animes.garden/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "animegarden",
+      "version": "0.5.5",
+      "description": "Anime Garden MCP for anime torrent discovery.\nCapabilities:\n- search_resources: search aggregated resources from 動漫花園 (dmhy) / 蜜柑计划 (mikan) / 萌番组 (moe) / ANi with filter conditions, returning metadata such as title, magnet link, fansub, publisher, created timestamp, type, size, and uri.\n- resource_detail: read one resource by URI template animegarden://resources/{provider}/{providerId}.\nRecommended usage for LLM agents:\n1) Call search_resources first to find candidates.\n2) Use search_resources results directly for most tasks; call resource_detail only when full description text or detailed file list is required.\n3) Prefer providerId from search results; provider must be one of [dmhy, moe, mikan, ani].\nNotes:\n- This server focuses on retrieval; it does not download torrents.\n- If a resource is not found, treat it as unavailable or stale upstream data.",
+      "websiteUrl": "https://animes.garden",
+      "icons": [
+        {
+          "src": "https://animes.garden/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.animes.garden/mcp"
+}

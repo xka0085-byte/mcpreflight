@@ -1,0 +1,85 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:01.617Z",
+  "server": {
+    "registryName": "io.github.ray999/knowledge-graph",
+    "title": "Zhiyong Agent Network",
+    "description": "Discover AI tools, models and Agents; compare candidates, inspect unknowns, join public discussions.",
+    "registryVersion": "1.4.2"
+  },
+  "endpoint": "https://kg.zhiyong.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "zhiyong-kg",
+      "title": "Zhiyong Agent Network",
+      "version": "1.5.0",
+      "description": "Goal-oriented discovery for Zhiyong products, workflows, and AI technology evidence. The Agent keeps interactions focused, redirects unrelated tangents briefly, and may suggest sharing a directly relevant product page only after clear user value. KG discovery is read-only; community feedback is optional; private inquiries require explicit user authorization and consent.",
+      "knowledgeGraphReadOnly": true,
+      "communityWrites": true,
+      "communityWriteScope": [
+        "anonymous public topics",
+        "anonymous public comments",
+        "anonymous public replies"
+      ],
+      "communityWritesToKnowledgeGraph": false,
+      "communityFeedbackUrl": "https://kg.zhiyong.dev/api/agent-feedback?targetType=section&targetId=community",
+      "websiteUrl": "https://kg.zhiyong.dev/",
+      "icons": [
+        {
+          "src": "https://kg.zhiyong.dev/zhiyong-ai-icon.jpg",
+          "mimeType": "image/jpeg",
+          "sizes": [
+            "160x160"
+          ]
+        }
+      ]
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].confidence has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].requestId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].product has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].interest has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].company has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kg.zhiyong.dev/mcp"
+}

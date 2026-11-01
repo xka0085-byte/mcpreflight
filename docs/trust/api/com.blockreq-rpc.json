@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:04.529Z",
+  "server": {
+    "registryName": "com.blockreq/rpc",
+    "title": "BlockReq",
+    "description": "Read-only BlockReq docs, network catalog, and JSON-RPC calls across EVM chains",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.blockreq.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "blockreq",
+      "title": "BlockReq",
+      "version": "1.0.0",
+      "description": "Read-only BlockReq docs, network catalog, and JSON-RPC calls on the public trial endpoint, or on the caller's own endpoint with an API key or a signed-in account",
+      "websiteUrl": "https://blockreq.com/docs/build/ai-assistants/"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].method has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.blockreq.com/mcp"
+}

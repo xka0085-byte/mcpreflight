@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:25.872Z",
+  "server": {
+    "registryName": "io.github.pkhaninejad/smartmatch",
+    "title": "Smart Match",
+    "description": "Analyze job listings against your resume, track applications, and generate cover letters.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://smartmatch.wallstrdev.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://smartmatch.wallstrdev.com/api/mcp"
+}

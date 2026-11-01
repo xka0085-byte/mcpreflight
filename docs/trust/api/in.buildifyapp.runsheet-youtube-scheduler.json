@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:57.409Z",
+  "server": {
+    "registryName": "in.buildifyapp.runsheet/youtube-scheduler",
+    "title": "Runsheet YouTube Autopilot",
+    "description": "The YouTube autopilot: plan, write and schedule YouTube videos, and upload from your machine.",
+    "registryVersion": "1.10.1"
+  },
+  "endpoint": "https://runsheet.buildifyapp.in/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://runsheet.buildifyapp.in/api/mcp"
+}

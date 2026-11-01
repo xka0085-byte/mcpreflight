@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:09.418Z",
+  "server": {
+    "registryName": "io.github.grant1493-svg/italy-fuel-prices",
+    "title": "Italy Fuel Prices (official MIMIT data)",
+    "description": "Daily station-level fuel prices for Italy from the official MIMIT feed, via Apify (pay per event).",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=shelly_fen/eu-fuel-prices-official",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=shelly_fen/eu-fuel-prices-official"
+}

@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:03.050Z",
+  "server": {
+    "registryName": "io.github.travelwhiz-ltd/live-times-transit",
+    "title": "Live Times Transit",
+    "description": "Read-only public transit departures, stop search, and city coverage for bus and train users.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://livebustimes.org/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "live-times-transit",
+      "title": "Momego",
+      "version": "2026.7.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].origin_country_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].destination_country_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].mode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].num_results has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://livebustimes.org/api/mcp"
+}

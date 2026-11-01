@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:16.433Z",
+  "server": {
+    "registryName": "fr.registers/registers",
+    "title": "Registers",
+    "description": "French public registers: companies (SIRENE, BODACC) and real estate (cadastre, DVF, DPE, risks).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://registers.fr/api/mcp.php",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://registers.fr/api/mcp.php"
+}

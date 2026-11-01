@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:59.748Z",
+  "server": {
+    "registryName": "io.summit53/mcp-server",
+    "title": "Summit53 Revenue Engine",
+    "description": "Revenue Engine for scoped diagnosis, action planning, execution, and Figure-Eight value evidence.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.summit53.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.summit53.io/mcp"
+}

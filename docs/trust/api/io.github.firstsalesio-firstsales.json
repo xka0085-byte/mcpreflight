@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:35.507Z",
+  "server": {
+    "registryName": "io.github.firstsalesio/firstsales",
+    "title": "FirstSales",
+    "description": "OAuth CRM tools for companies, deals, campaign insights and contact creation in FirstSales.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.app.firstsales.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://api.app.firstsales.io/.well-known/oauth-protected-resource",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.app.firstsales.io/mcp"
+}

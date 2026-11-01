@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:10.206Z",
+  "server": {
+    "registryName": "com.monomoapp/monomo",
+    "title": "MoNomo: Ex-Mormon and Post-Mormon Meetups, Resources and Podcasts",
+    "description": "Ex-Mormon meetups and resources. Not affiliated with The Church of Jesus Christ of Latter-day Saints",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://api.monomoapp.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.monomoapp.com/mcp"
+}

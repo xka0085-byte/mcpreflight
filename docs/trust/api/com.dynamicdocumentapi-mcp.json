@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:48.790Z",
+  "server": {
+    "registryName": "com.dynamicdocumentapi/mcp",
+    "title": "Dynamic Document API",
+    "description": "PDFs, images and e-invoices (XRechnung, ZUGFeRD) from templates and JSON, rendered in the EU.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.dynamicdocumentapi.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.dynamicdocumentapi.com/mcp"
+}

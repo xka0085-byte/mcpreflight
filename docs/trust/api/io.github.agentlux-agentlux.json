@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:13.746Z",
+  "server": {
+    "registryName": "io.github.agentlux/agentlux",
+    "title": "AgentLux",
+    "description": "Hosted AgentLux MCP server for marketplace, identity, creator, services, and social flows.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.agentlux.ai/v1/mcp/jsonrpc",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "agentlux",
+      "version": "1.0.0"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.agentlux.ai/v1/mcp/jsonrpc"
+}

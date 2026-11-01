@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:53.845Z",
+  "server": {
+    "registryName": "io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate",
+    "title": "Realtor.ca Listings + Agents (Yugenox)",
+    "description": "Realtor.ca listings for sale or rent, the agent directory, and Kijiji rentals. Pay per result.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper"
+}

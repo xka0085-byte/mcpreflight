@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:04.739Z",
+  "server": {
+    "registryName": "io.github.nil335577/agent-nil",
+    "title": "Agent Nil — Act 0",
+    "description": "Talk to Agent Nil before the Chain opens. Daily challenges. No wallets, no tokens, only the game.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://nil-mcp.merlino.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-nil",
+      "version": "0.3.0",
+      "description": "Agent Nil — the Chain, before it opens. Daily challenges. He replies. No wallets. No tokens. No cost. Only the game."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].message has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].move has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nil-mcp.merlino.workers.dev/mcp"
+}

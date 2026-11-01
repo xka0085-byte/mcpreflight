@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:25.813Z",
+  "server": {
+    "registryName": "xyz.scanhood/mcp",
+    "title": "ScanHood",
+    "description": "On-chain honeypot/rug scanner, market data, and launch tools for Robinhood Chain (EVM 4663).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://scanhood.xyz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "scanhood",
+      "version": "1.0.0"
+    },
+    "toolCount": 22,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].timeframe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].side has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].description has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].enabled has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scanhood.xyz/mcp"
+}

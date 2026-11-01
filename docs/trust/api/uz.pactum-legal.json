@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:48.855Z",
+  "server": {
+    "registryName": "uz.pactum/legal",
+    "title": "Pactum — legal services in Uzbekistan",
+    "description": "Uzbekistan legal services: find services, read Uzbek law, request a lawyer's quote.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pactum.uz/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pactum",
+      "title": "Pactum — legal services in Uzbekistan",
+      "version": "1.0.0",
+      "websiteUrl": "https://pactum.uz"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].company_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].contact_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].preferred_language has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pactum.uz/mcp"
+}

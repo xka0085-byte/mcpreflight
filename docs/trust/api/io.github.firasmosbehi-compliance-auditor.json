@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:32.188Z",
+  "server": {
+    "registryName": "io.github.firasmosbehi/compliance-auditor",
+    "title": "Compliance Auditor MCP",
+    "description": "City hiring-compliance MCP server with regulation search and full audit risk scoring.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://frayess-mosbehi--compliance-auditor-mcp.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://frayess-mosbehi--compliance-auditor-mcp.apify.actor/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:25.822Z",
+  "server": {
+    "registryName": "network.flint/agent-transaction-control",
+    "title": "network.flint/agent-transaction-control",
+    "description": "Issue Agent Passports and verify agent authority before value moves. Signed verification records.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://flint.network/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "flint-agent-transaction-control",
+      "version": "0.5.0"
+    },
+    "toolCount": 17,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].transaction has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://flint.network/mcp"
+}

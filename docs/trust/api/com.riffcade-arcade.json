@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:25.926Z",
+  "server": {
+    "registryName": "com.riffcade/arcade",
+    "title": "RIFFCADE",
+    "description": "Free, ad-free open-source browser games that open and play right inside the chat.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.riffcade.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ad-safe-arcade",
+      "title": "AGENTPARK",
+      "version": "1.0.0",
+      "websiteUrl": "https://agentpark.co/arcade/",
+      "icons": [
+        {
+          "src": "https://agentpark.co/arcade/icons/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].stars has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.riffcade.com/mcp"
+}

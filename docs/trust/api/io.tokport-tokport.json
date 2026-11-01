@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:06.913Z",
+  "server": {
+    "registryName": "io.tokport/tokport",
+    "title": "TokPort",
+    "description": "Generate images and videos (GPT Image, Seedance, Kling, Wan, Qwen) with one API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://tokport.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tokport-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].input has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].logs has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].timeout has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tokport.io/api/mcp"
+}

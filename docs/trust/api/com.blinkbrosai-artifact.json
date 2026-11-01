@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:04.615Z",
+  "server": {
+    "registryName": "com.blinkbrosai/artifact",
+    "title": "blink artifact",
+    "description": "Publish HTML, docs, slides and dashboards from your AI CLI; edit them live with people.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://artifact.blinkbrosai.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://artifact.blinkbrosai.com/mcp"
+}

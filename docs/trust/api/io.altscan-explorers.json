@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:21.364Z",
+  "server": {
+    "registryName": "io.altscan/explorers",
+    "title": "Altscan explorers",
+    "description": "Keyless, read-only BNB Chain and Ethereum data: transactions by hash, tokens with a lookalike check",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://altscan.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "altscan",
+      "title": "Altscan explorers",
+      "version": "0.1.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].hash has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].address has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://altscan.io/mcp"
+}

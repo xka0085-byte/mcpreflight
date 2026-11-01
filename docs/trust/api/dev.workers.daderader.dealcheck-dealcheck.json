@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:46.047Z",
+  "server": {
+    "registryName": "dev.workers.daderader.dealcheck/dealcheck",
+    "title": "dealcheck: US property deal-check",
+    "description": "Any US address: flood, HUD rent, county tax. Parcel zoning/STR rules: Nashville, Denver, Scottsdale.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://dealcheck.daderader.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ziplot",
+      "title": "Ziplot: US property deal-check",
+      "version": "0.2.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].include has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].include has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dealcheck.daderader.workers.dev/mcp"
+}

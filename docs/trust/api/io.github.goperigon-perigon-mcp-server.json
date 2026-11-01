@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:09.194Z",
+  "server": {
+    "registryName": "io.github.goperigon/perigon-mcp-server",
+    "title": "Perigon",
+    "description": "Official Perigon news API: articles, stories, companies, journalists, monitors, and stats.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.perigon.io/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.perigon.io/v1/mcp"
+}

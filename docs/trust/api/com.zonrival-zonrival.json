@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:47:34.007Z",
+  "scannedAt": "2026-11-01T04:00:18.107Z",
   "server": {
     "registryName": "com.zonrival/zonrival",
     "title": "ZonRival",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://zonrival.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
+    "finalStatus": "FAIL",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://zonrival.com/mcp"
 }

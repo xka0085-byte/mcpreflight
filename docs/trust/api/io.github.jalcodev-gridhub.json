@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:12.082Z",
+  "server": {
+    "registryName": "io.github.jalcodev/gridhub",
+    "title": "GridHub Electricity Market Data",
+    "description": "Live and historical electricity prices and demand for 25 grids; carbon intensity for GB.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://api.grid-hub.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gridhub",
+      "title": "GridHub Electricity Market Data",
+      "version": "v1"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "6 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.grid-hub.app/mcp"
+}

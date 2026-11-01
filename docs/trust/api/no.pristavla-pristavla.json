@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:44.454Z",
+  "server": {
+    "registryName": "no.pristavla/pristavla",
+    "title": "Pristavla – Norwegian prices / norske priser",
+    "description": "Norwegian prices and what they consist of, from open data. Norske priser fra åpne kilder.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pristavla.no/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pristavla",
+      "title": "Pristavla",
+      "version": "1.0.0",
+      "description": "Norske priser og hva de består av, fra åpne kilder. Norwegian prices and what they consist of, from open sources. Vilkår / Terms of use: https://pristavla.no/bruk-tallene/#vilkar",
+      "websiteUrl": "https://pristavla.no/bruk-tallene/#mcp",
+      "icons": [
+        {
+          "src": "https://pristavla.no/static/apple-touch-icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "180x180"
+          ]
+        },
+        {
+          "src": "https://pristavla.no/static/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pristavla.no/mcp"
+}

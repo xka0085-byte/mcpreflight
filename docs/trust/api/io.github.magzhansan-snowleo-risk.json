@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:27.866Z",
+  "server": {
+    "registryName": "io.github.MagzhanSan/snowleo-risk",
+    "title": "Snow Leo Risk & Compliance",
+    "description": "Screen names against OFAC, EU and UN lists; check CVEs, domain DNS and WHOIS, and public tenders",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?actors=snow_leo_data/sanctions-screening-api,snow_leo_data/cve-scraper,snow_leo_data/whois-dns-lookup,snow_leo_data/government-tenders-scraper",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?actors=snow_leo_data/sanctions-screening-api,snow_leo_data/cve-scraper,snow_leo_data/whois-dns-lookup,snow_leo_data/government-tenders-scraper"
+}

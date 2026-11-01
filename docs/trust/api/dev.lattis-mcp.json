@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:47:58.875Z",
+  "scannedAt": "2026-11-01T04:01:40.981Z",
   "server": {
     "registryName": "dev.lattis/mcp",
     "title": "Lattis",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://mcp.lattis.dev/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sitedex",
+      "version": "2.0.0",
+      "description": "Real-time product data for indexed websites — pricing, features, APIs, and how-tos. Semantic search returns raw passages with source URLs so agents can decide for themselves."
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.lattis.dev/mcp"
 }

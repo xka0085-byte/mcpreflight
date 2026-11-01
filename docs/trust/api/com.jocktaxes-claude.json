@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:09.073Z",
+  "server": {
+    "registryName": "com.jocktaxes/claude",
+    "title": "Jock Taxes for Claude",
+    "description": "Pro athlete after-tax salary calculators for MLB, NBA, NFL and NHL, built for Claude.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jocktaxes.com/mcp/claude",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jocktax-claude",
+      "version": ""
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].league has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].team has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].season_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jocktaxes.com/mcp/claude"
+}

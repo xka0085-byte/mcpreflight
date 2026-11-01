@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:48:44.070Z",
+  "server": {
+    "registryName": "space.lanitech.pc/pc-okaidoku-store",
+    "title": "space.lanitech.pc/pc-okaidoku-store",
+    "description": "PCお買い得ストア by lanitech — 法人・個人向けの特価PC・Mac・ディスプレイ・周辺機器カタログ。商品検索・価格確認・カテゴリ一覧（読み取り専用・税込JPY）。",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pc.lanitech.space/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "PCお買い得ストア by lanitech",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pc.lanitech.space/api/mcp"
+}

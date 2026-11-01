@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:38.237Z",
+  "server": {
+    "registryName": "io.github.MikhailSagalaev/openradar",
+    "title": "openradar",
+    "description": "Open base of job vacancies and freelance orders from Russian and international boards and Telegram.",
+    "registryVersion": "0.25.1"
+  },
+  "endpoint": "https://openradar.fun/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "openradar",
+      "title": "openradar",
+      "version": "0.40.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://openradar.fun/mcp"
+}

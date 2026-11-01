@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:26.145Z",
+  "server": {
+    "registryName": "com.haccpbulgaria/haccp",
+    "title": "HACCP Bulgaria",
+    "description": "HACCP food-safety systems for food businesses in Bulgaria: modules, price and an order draft.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://haccpbulgaria.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "haccp-bulgaria",
+      "title": "HACCP Bulgaria",
+      "version": "1.0.0",
+      "websiteUrl": "https://haccpbulgaria.com"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].facility has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].facility has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].company has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].location has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://haccpbulgaria.com/mcp"
+}

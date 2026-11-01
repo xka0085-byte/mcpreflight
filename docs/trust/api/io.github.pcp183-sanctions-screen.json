@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:53.213Z",
+  "server": {
+    "registryName": "io.github.pcp183/sanctions-screen",
+    "title": "Sanctions Screen (OFAC, EU, UK, UN)",
+    "description": "Screen a party vs OFAC, EU and UK sanctions lists before paying. $0.02/call via x402.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://sanctions-screen-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sanctions-screen-production.up.railway.app/mcp"
+}

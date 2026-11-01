@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:42.963Z",
+  "server": {
+    "registryName": "io.github.brkd-h1/mcp-empty-public",
+    "title": "io.github.brkd-h1/mcp-empty-public",
+    "description": "Minimal streamable HTTP MCP server used for owned-account registry connectivity tests.",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://bintool.brkd.no/anything/mcp-empty-public",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bintool.brkd.no/anything/mcp-empty-public"
+}

@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:49.872Z",
+  "server": {
+    "registryName": "io.deepbluealpha/whale-data",
+    "title": "Deep Blue Alpha — Ethereum Whale Data",
+    "description": "Live Ethereum whale flows: token activity, top tokens, latest moves, Whale Sentiment Index.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://deepbluealpha.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "deep-blue-alpha",
+      "title": "Deep Blue Alpha — Ethereum Whale Data",
+      "version": "1.2.0",
+      "websiteUrl": "https://deepbluealpha.io"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].timeframe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].timeframe has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://deepbluealpha.io/mcp"
+}

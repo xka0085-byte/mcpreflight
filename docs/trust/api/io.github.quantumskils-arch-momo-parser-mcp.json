@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:49.835Z",
+  "server": {
+    "registryName": "io.github.quantumskils-arch/momo-parser-mcp",
+    "title": "io.github.quantumskils-arch/momo-parser-mcp",
+    "description": "Parses MTN MoMo and Airtel Money Uganda SMS into structured JSON.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://momo.opportunityradar.africa/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://momo.opportunityradar.africa/mcp"
+}

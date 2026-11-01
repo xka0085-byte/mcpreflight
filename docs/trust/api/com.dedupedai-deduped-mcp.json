@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:23.571Z",
+  "server": {
+    "registryName": "com.dedupedai/deduped-mcp",
+    "title": "Deduped AI use cases",
+    "description": "Hot AI repos. Real use cases. What people build. Step-by-step use cases and agent prompts.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://dedupedai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "deduped",
+      "title": "Deduped AI use cases",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dedupedai.com/mcp"
+}

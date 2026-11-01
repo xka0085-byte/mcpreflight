@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:43.951Z",
+  "server": {
+    "registryName": "io.consentstack/cookie-consent",
+    "title": "ConsentStack",
+    "description": "Set up GDPR and CCPA cookie consent: create a site, publish a banner, scan and categorize trackers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.consentstack.io/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.consentstack.io/api/mcp"
+}

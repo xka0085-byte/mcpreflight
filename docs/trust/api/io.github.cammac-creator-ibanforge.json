@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:51.269Z",
+  "server": {
+    "registryName": "io.github.cammac-creator/ibanforge",
+    "title": "io.github.cammac-creator/ibanforge",
+    "description": "Check the bank behind an IBAN before you pay: bank-code check, BIC with source, bank-level sanctions",
+    "registryVersion": "1.9.0"
+  },
+  "endpoint": "https://api.ibanforge.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ibanforge",
+      "title": "IBANforge",
+      "version": "1.9.0",
+      "description": "Check the bank behind an IBAN before you pay: validation in 89 countries, a bank-code verdict from the national register (DE, AT, BE, SK, CZ, BG, CH, LI), the bank and BIC with their source, SEPA and VoP readiness from the EPC registers where they list the bank, and bank-level sanctions (OFAC, EU, UN). It does not check the payee's name. BIC directory: GLEIF and national registers, refreshed monthly, plus a public copy of the SWIFT directory frozen in January 2018 that still makes up about two thirds of the rows.",
+      "websiteUrl": "https://ibanforge.com",
+      "icons": [
+        {
+          "src": "https://www.ibanforge.com/favicon.ico",
+          "mimeType": "image/vnd.microsoft.icon",
+          "sizes": [
+            "64x64"
+          ]
+        },
+        {
+          "src": "https://api.ibanforge.com/og-image.png",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "1200x630"
+          ]
+        }
+      ]
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.ibanforge.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:52.049Z",
+  "server": {
+    "registryName": "io.github.thisismerlin/yourno2-fpl",
+    "title": "Your No.2: FPL Assistant Manager",
+    "description": "Fantasy Premier League (FPL) assistant: one clear call on captain, transfers and chips.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.fplyourno2.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.fplyourno2.com/mcp"
+}

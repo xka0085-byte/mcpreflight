@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:28.997Z",
+  "server": {
+    "registryName": "io.github.polygraphso/litmus",
+    "title": "io.github.polygraphso/litmus",
+    "description": "Grade MCP servers A to F with the open behavioral litmus. npm: full toolset; hosted: lookups only.",
+    "registryVersion": "0.36.0"
+  },
+  "endpoint": "https://polygraph.so/api/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://polygraph.so/api/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:22.204Z",
+  "server": {
+    "registryName": "io.github.yappmaniac/grocery-price-snapshots",
+    "title": "Yappman Data Supermarket Price Snapshots",
+    "description": "Read-only UK/AU supermarket price index and UK basket snapshots. CC BY 4.0. Not live prices.",
+    "registryVersion": "0.2.5"
+  },
+  "endpoint": "https://yappman-grocery-mcp.blue-bar-ca29.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "yappman-grocery-data",
+      "title": "Yappman Data: grocery shelf prices",
+      "version": "0.2.5"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://yappman-grocery-mcp.blue-bar-ca29.workers.dev/mcp"
+}

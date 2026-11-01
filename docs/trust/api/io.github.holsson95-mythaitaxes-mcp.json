@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:38.993Z",
+  "server": {
+    "registryName": "io.github.holsson95/mythaitaxes-mcp",
+    "title": "io.github.holsson95/mythaitaxes-mcp",
+    "description": "Free Thai personal income tax (PIT) calculator for salaried employees, from mythaitaxes.com.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mythaitaxes-mcp.hannwill999.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mythaitaxes-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maritalStatus has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].numberOfChildren has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mythaitaxes-mcp.hannwill999.workers.dev/mcp"
+}

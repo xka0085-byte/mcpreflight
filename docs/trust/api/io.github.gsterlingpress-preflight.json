@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:04.933Z",
+  "server": {
+    "registryName": "io.github.GSterlingPress/preflight",
+    "title": "PREFLIGHT — URL Routing for AI Agents",
+    "description": "Choose HTTP, browser, machine endpoint, or avoid before an agent visits an unfamiliar URL.",
+    "registryVersion": "0.7.6"
+  },
+  "endpoint": "https://preflight-api-production-01a2.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "PREFLIGHT",
+      "version": "0.7.5"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].route has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].outcome has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].latencyMs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://preflight-api-production-01a2.up.railway.app/mcp"
+}

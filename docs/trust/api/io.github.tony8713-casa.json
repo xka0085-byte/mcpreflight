@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:02.155Z",
+  "server": {
+    "registryName": "io.github.tony8713/casa",
+    "title": "io.github.tony8713/casa",
+    "description": "Private, permanent encrypted storage for AI agents. Paid per call in USDC via x402.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://casa-agents.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mock-mcp-server",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].b has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://casa-agents.fly.dev/mcp"
+}

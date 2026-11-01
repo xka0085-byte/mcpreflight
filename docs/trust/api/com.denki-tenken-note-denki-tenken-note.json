@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:25.674Z",
+  "server": {
+    "registryName": "com.denki-tenken-note/denki-tenken-note",
+    "title": "でんき点検ノート (Denki Tenken Note)",
+    "description": "Electrical safety inspection ledger (Japan): schedules, sites, reports. Bearer API key required.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://denki-tenken-note.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://denki-tenken-note.com/api/mcp"
+}

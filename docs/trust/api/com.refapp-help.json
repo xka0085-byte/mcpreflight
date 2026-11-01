@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:07.828Z",
+  "server": {
+    "registryName": "com.refapp/help",
+    "title": "Refapp Help",
+    "description": "Answers how Refapp works from its help center, with article links. No sign-in, no customer data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://help-mcp.refapp.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "refapp-help",
+      "title": "Refapp help",
+      "version": "0.2.0",
+      "websiteUrl": "https://www.refapp.com"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].status has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].term has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://help-mcp.refapp.com/mcp"
+}

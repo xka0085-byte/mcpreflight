@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:58.696Z",
+  "server": {
+    "registryName": "io.github.neuralaisofficial-lang/apay",
+    "title": "A-Pay Protocol",
+    "description": "Universal HTTP 402 Micropayment Protocol & Autonomous Economic Settlement Engine for AI Agents",
+    "registryVersion": "0.1.8"
+  },
+  "endpoint": "https://apay-network.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "apay-mcp",
+      "version": "0.1.11"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].method has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://apay-network.vercel.app/api/mcp"
+}

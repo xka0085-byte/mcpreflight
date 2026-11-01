@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:17.907Z",
+  "server": {
+    "registryName": "com.send-burg/sendburg",
+    "title": "Sendburg",
+    "description": "Search 250M+ B2B contacts and 25M+ companies; reveal verified work emails and phone numbers.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.send-burg.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.send-burg.com/mcp"
+}

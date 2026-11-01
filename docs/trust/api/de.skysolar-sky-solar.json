@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:42.291Z",
+  "server": {
+    "registryName": "de.skysolar/sky-solar",
+    "title": "Sky Solar",
+    "description": "Solar installer for Munich and Rosenheim: service area, local subsidies, EEG feed-in, solar guide.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://pv.skysolar.de/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sky-solar",
+      "title": "Sky Solar",
+      "version": "1.1.0",
+      "websiteUrl": "https://pv.skysolar.de"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].plan has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].edits has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pv.skysolar.de/mcp/"
+}

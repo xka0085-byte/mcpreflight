@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:58:56.453Z",
+  "server": {
+    "registryName": "com.veladeck/veladeck",
+    "title": "VelaDeck",
+    "description": "AI-driven US equity strategies: catalog, returns, drawdowns, pricing and blog. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://veladeck.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.veladeck/veladeck",
+      "title": "VelaDeck",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://veladeck.com/mcp"
+}

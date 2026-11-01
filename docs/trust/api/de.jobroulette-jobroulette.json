@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:35.648Z",
+  "server": {
+    "registryName": "de.jobroulette/jobroulette",
+    "title": "Jobroulette",
+    "description": "Jobs in Germany, Austria and Switzerland matched to your resume.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.jobroulette.de/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jobroulette",
+      "title": "Jobroulette",
+      "version": "0.1.0",
+      "description": "Jobs in Germany, Austria and Switzerland matched to your resume.",
+      "websiteUrl": "https://jobroulette.de",
+      "icons": [
+        {
+          "src": "https://mcp.jobroulette.de/symbol.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].stelleId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].stelleId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].anschreiben has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].anhang has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.jobroulette.de/mcp"
+}

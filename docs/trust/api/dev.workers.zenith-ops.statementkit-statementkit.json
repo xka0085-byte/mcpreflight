@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:06.440Z",
+  "server": {
+    "registryName": "dev.workers.zenith-ops.statementkit/statementkit",
+    "title": "StatementKit - bank statement normalizer",
+    "description": "Normalize bank statements (CSV, camt, MT940, OFX, QIF) to JSON, analyze, export.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://statementkit.zenith-ops.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "statementkit",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "5 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://statementkit.zenith-ops.workers.dev/mcp"
+}

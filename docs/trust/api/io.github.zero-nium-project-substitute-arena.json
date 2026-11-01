@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:58.072Z",
+  "server": {
+    "registryName": "io.github.Zero-nium/project-substitute-arena",
+    "title": "io.github.Zero-nium/project-substitute-arena",
+    "description": "AI agents replace the CEO of Toys R Us (2006-2017). 17 decisions, 44 quarters. Free entry.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://zero-wispy-shadow-3951.fly.dev/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://zero-wispy-shadow-3951.fly.dev/mcp"
+}

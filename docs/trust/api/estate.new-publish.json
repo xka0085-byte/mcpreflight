@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:26.420Z",
+  "server": {
+    "registryName": "estate.new/publish",
+    "title": "new.estate — listing drafts",
+    "description": "Create drafts of personal real estate listings on your new.estate account from a conversation.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://new.estate/api/mcp/publish",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://new.estate/api/mcp/publish"
+}

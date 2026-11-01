@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:56.448Z",
+  "server": {
+    "registryName": "uk.co.grantiq/mcp",
+    "title": "GrantIQ",
+    "description": "Eligibility-first UK & EU grant discovery, inside ChatGPT and Claude.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://grantiq.co.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "GrantNavigator.Mcp",
+      "version": "1.0.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].input has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://grantiq.co.uk/mcp"
+}

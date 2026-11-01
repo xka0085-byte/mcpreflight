@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:23.630Z",
+  "server": {
+    "registryName": "io.github.TheCompanyAtlas/florida-sunbiz",
+    "title": "Florida Sunbiz Company & Officer Data",
+    "description": "Florida Sunbiz corporation, LLC and non-profit search with officer and registered agent lookup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://thecompanyatlas.com/mcp/florida",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://thecompanyatlas.com/mcp/florida"
+}

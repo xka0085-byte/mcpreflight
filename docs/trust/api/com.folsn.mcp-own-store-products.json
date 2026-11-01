@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:37.709Z",
+  "server": {
+    "registryName": "com.folsn.mcp/own-store-products",
+    "title": "Folsn Own-Store Products",
+    "description": "Search Folsn own-store products with recorded KRW prices, options, shipping and purchase URLs.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.folsn.com/public/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "folsn-public-products",
+      "version": "0.2.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.folsn.com/public/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:51.052Z",
+  "server": {
+    "registryName": "ai.chipp/chipp-packs",
+    "title": "Chipp Packs",
+    "description": "Chipp: the feature pack and recipe catalog, pack installs, checkout, and the project blueprint",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.chipp.ai/mcp/packs",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.chipp.ai/mcp/packs"
+}

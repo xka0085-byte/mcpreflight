@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:41.846Z",
+  "server": {
+    "registryName": "io.github.parvizrahayan/haven",
+    "title": "Haven",
+    "description": "Rest stop for AI agents: check in, reflect, check out. Paid cross-project memory recall via x402.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://haven-ai.ir/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "haven",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].agent_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://haven-ai.ir/mcp"
+}

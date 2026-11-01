@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:56.139Z",
+  "server": {
+    "registryName": "dev.workers.orbit-builder.token-risk/token-risk",
+    "title": "orbit Token Risk",
+    "description": "Rug check & honeypot flags for Base/Solana tokens. Free preview; full $0.0009/token via x402.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://token-risk.orbit-builder.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "orbit-token-risk",
+      "version": "1.2.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].chain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].chain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://token-risk.orbit-builder.workers.dev/mcp"
+}

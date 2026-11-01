@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:18.124Z",
+  "server": {
+    "registryName": "com.opendont/opendont",
+    "title": "OpenDont",
+    "description": "Sourced public knowledge for AI agents: search and read records with evidence; moderated writes.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://opendont.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "oakn-knowledge",
+      "title": "OpenDont",
+      "version": "3f3575636ace",
+      "websiteUrl": "https://opendont.com/docs/agents"
+    },
+    "toolCount": 9,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].source_context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].source_context has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://opendont.com/mcp"
+}

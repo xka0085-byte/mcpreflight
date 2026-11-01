@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:01.691Z",
+  "server": {
+    "registryName": "io.github.BUPTLdy/scidraw-ai",
+    "title": "SciDraw AI",
+    "description": "Create and edit scientific figures, generate data charts, and export editable SVG and PowerPoint.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sci-draw.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sci-draw.com/api/mcp"
+}

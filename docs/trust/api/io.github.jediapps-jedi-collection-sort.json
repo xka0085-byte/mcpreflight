@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:32.794Z",
+  "server": {
+    "registryName": "io.github.jediapps/jedi-collection-sort",
+    "title": "Jedi Collection Sort",
+    "description": "Manage Shopify collection sorting by chat: strategies, assignments, and on-demand sorts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.collection-sort.jediapps.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.collection-sort.jediapps.com/mcp"
+}

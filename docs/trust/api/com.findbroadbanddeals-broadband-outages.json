@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:27.811Z",
+  "server": {
+    "registryName": "com.findbroadbanddeals/broadband-outages",
+    "title": "FindBroadband outages",
+    "description": "Is my broadband down? Live UK provider status and the last 30 days of outages",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.findbroadbanddeals.com/api/mcp/outages",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "findbroadband-outages",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.findbroadbanddeals.com/api/mcp/outages"
+}

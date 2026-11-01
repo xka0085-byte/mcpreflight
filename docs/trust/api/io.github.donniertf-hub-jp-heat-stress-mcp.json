@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:42.586Z",
+  "server": {
+    "registryName": "io.github.donniertf-hub/jp-heat-stress-mcp",
+    "title": "Japan Heat Stress (WBGT) MCP",
+    "description": "Ministry of the Environment WBGT heat-stress forecasts for Japan.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jp-heat-stress-mcp.donniertf.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jp-heat-stress-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].keyword has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jp-heat-stress-mcp.donniertf.workers.dev/mcp"
+}

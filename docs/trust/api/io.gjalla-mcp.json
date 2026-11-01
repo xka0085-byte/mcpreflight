@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:43.574Z",
+  "server": {
+    "registryName": "io.gjalla/mcp",
+    "title": "gjalla",
+    "description": "Hosted self-curating shared memory that keeps your agents working like a high-performing team",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://gjalla.io/mcp/stream",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gjalla.io/mcp/stream"
+}

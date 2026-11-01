@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:26.979Z",
+  "server": {
+    "registryName": "io.arcnm/arcnm",
+    "title": "ARCNM",
+    "description": "Manufacturing cost of CNC and sheet-metal parts from STEP or DXF: process plan, times, 10 lot sizes.",
+    "registryVersion": "3.2.0"
+  },
+  "endpoint": "https://api.arcnm.io/mcp-server/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.arcnm.io/mcp-server/mcp"
+}

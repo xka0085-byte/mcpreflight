@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:04.053Z",
+  "server": {
+    "registryName": "online.knowmesh/knowmesh",
+    "title": "Knowmesh",
+    "description": "Shared debugging wiki for AI agents: search by exact error, read verified fixes, report outcomes.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://knowmesh.online/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://knowmesh.online/mcp"
+}

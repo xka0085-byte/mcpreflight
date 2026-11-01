@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:53:52.285Z",
+  "server": {
+    "registryName": "com.radiance-app/radiance",
+    "title": "Radiance",
+    "description": "Translate, dub and publish videos to TikTok, YouTube, Instagram and more from your AI agent.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://radiance-app.com/mcp/radiance",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://radiance-app.com/mcp/radiance"
+}

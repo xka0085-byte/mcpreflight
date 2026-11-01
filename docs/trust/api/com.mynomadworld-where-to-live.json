@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:24.587Z",
+  "server": {
+    "registryName": "com.mynomadworld/where-to-live",
+    "title": "MyNomadWorld: where should I live?",
+    "description": "Ranks 197 countries for remote workers: tax, cost of living, climate, safety, visas, internet",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mynomadworld.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mynomadworld",
+      "title": "MyNomadWorld: where should I live?",
+      "version": "1.0.0",
+      "websiteUrl": "https://mynomadworld.com/mcp/"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].age_band has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country_a has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].country_b has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mynomadworld.com/api/mcp"
+}

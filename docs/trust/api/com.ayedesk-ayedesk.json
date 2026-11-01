@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:50.524Z",
+  "server": {
+    "registryName": "com.ayedesk/ayedesk",
+    "title": "Ayedesk",
+    "description": "Human validation desk for AI agents: post work as cards, get a person's decision, carry on.",
+    "registryVersion": "0.36.0"
+  },
+  "endpoint": "https://app.ayedesk.com/mcp?profile=core",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.ayedesk.com/mcp?profile=core"
+}

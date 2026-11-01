@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:01.125Z",
+  "server": {
+    "registryName": "io.github.elgorro/aiquila-mcp",
+    "title": "AIquila — Nextcloud MCP Server",
+    "description": "Nextcloud MCP server — 345 tools: files, calendar, contacts, mail, Talk, Deck, photos, maps, notes",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://{hostname}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{hostname}/mcp"
+}

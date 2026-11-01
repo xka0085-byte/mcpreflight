@@ -1,26 +1,31 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:43:14.635Z",
+  "scannedAt": "2026-11-01T03:47:26.113Z",
   "server": {
     "registryName": "com.finalpos.build/final-flows",
-    "title": "Final POS",
-    "description": "Build custom POS, kiosk, self-checkout & in-person payment apps with AI agents on Final POS.",
-    "registryVersion": "1.0.1"
+    "title": "Final POS Flows (direct)",
+    "description": "Flow's direct endpoint for sk_ keys. For all of Final in one server, use com.finalpos/final.",
+    "registryVersion": "1.1.0"
   },
-  "endpoint": "https://build.finalpos.com/api/mcp",
+  "endpoint": "https://flow.finalpos.com/api/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
   },
-  "verify": "npx @eidonze/mcpreflight schema https://build.finalpos.com/api/mcp"
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://flow.finalpos.com/api/mcp"
 }

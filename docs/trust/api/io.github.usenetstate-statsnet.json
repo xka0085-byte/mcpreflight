@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:25.020Z",
+  "server": {
+    "registryName": "io.github.usenetstate/statsnet",
+    "title": "Statsnet",
+    "description": "Background check any company in the world: registration, executives, courts and finances.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://statsnet.co/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "statsnet",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].jurisdiction has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://statsnet.co/mcp"
+}

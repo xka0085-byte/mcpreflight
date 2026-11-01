@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:16.540Z",
+  "server": {
+    "registryName": "io.github.jannegpriv/pkollen",
+    "title": "P-Kollen — Swedish Parking Prices",
+    "description": "Compare parking in Sweden: real total cost incl. caps and free windows, rules, payment apps.",
+    "registryVersion": "0.7.3"
+  },
+  "endpoint": "https://kpfroonouzfcqytubdex.supabase.co/functions/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kpfroonouzfcqytubdex.supabase.co/functions/v1/mcp"
+}

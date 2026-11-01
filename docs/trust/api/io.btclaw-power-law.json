@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:34.521Z",
+  "server": {
+    "registryName": "io.btclaw/power-law",
+    "title": "Bitcoin Power Law (btclaw.io)",
+    "description": "Live Bitcoin power-law data: price vs trend, trend and bands on any date, when BTC reaches a price.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://btclaw.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Live Bitcoin power-law readings: today's price against the trend, trend and band values on any date, and when the trend reaches a price.",
+      "name": "btclaw",
+      "title": "Bitcoin Power Law (btclaw.io)",
+      "version": "1.0.0",
+      "websiteUrl": "https://btclaw.io"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].price_usd has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://btclaw.io/mcp"
+}

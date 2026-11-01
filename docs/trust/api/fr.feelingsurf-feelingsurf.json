@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:00.528Z",
+  "server": {
+    "registryName": "fr.feelingsurf/feelingsurf",
+    "title": "FeelingSurf",
+    "description": "Manage your FeelingSurf traffic exchange account: sites, targeting, templates, sources and proxies.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.feelingsurf.fr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "feelingsurf",
+      "title": "FeelingSurf",
+      "version": "1.1.0"
+    },
+    "toolCount": 34,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].uid has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.feelingsurf.fr/mcp"
+}

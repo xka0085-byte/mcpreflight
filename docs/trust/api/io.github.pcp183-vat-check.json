@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:52.793Z",
+  "server": {
+    "registryName": "io.github.pcp183/vat-check",
+    "title": "VAT Check (EU VIES + UK)",
+    "description": "Verify an EU VAT number live in VIES before invoicing or paying. $0.02/call via x402.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://vat-check-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vat-check-production.up.railway.app/mcp"
+}

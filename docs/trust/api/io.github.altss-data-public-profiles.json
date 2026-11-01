@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:34.388Z",
+  "server": {
+    "registryName": "io.github.altss-data/public-profiles",
+    "title": "Altss Public Profiles",
+    "description": "Search and read bounded published Altss profile summaries with canonical citations. No private data.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://altss.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Altss Public Profiles",
+      "version": "1.0.0",
+      "websiteUrl": "https://altss.com/developers"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://altss.com/mcp"
+}

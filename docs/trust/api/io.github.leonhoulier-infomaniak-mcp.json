@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:45.769Z",
+  "server": {
+    "registryName": "io.github.leonhoulier/infomaniak-mcp",
+    "title": "Infomaniak MCP (unofficial)",
+    "description": "Manage Infomaniak DNS, mail and VPS apps through OAuth, with live official documentation.",
+    "registryVersion": "0.3.6"
+  },
+  "endpoint": "https://infomaniak-mcp.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://infomaniak-mcp.com/mcp"
+}

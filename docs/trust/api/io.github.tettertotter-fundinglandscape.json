@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:19.940Z",
+  "server": {
+    "registryName": "io.github.tettertotter/fundinglandscape",
+    "title": "FundingLandscape",
+    "description": "Search 31,000+ open US grants, federal contracts, and foundations. Checked daily, free tier.",
+    "registryVersion": "2.1.3"
+  },
+  "endpoint": "https://fundinglandscape.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "fundinglandscape",
+      "version": "2.1.0"
+    },
+    "toolCount": 28,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].user_context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].result_position has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].user_context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[22].user_context has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[23].user_context has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fundinglandscape.com/api/mcp"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:50.574Z",
+  "server": {
+    "registryName": "com.coghelm/coghelm",
+    "title": "Coghelm: AI tools for leaders",
+    "description": "Curated AI tools for leaders: recommend and compare tools by job, plus 1:1 and board templates.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://coghelm.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "coghelm",
+      "version": "1.1.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].headline has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://coghelm.com/mcp"
+}

@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:49.319Z",
+  "server": {
+    "registryName": "com.slanglane/dictionary",
+    "title": "SlangLane — Internet English, decoded.",
+    "description": "Sourced internet slang and usage, including labeled non-graphic adult vocabulary.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://slanglane.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "slanglane",
+      "title": "SlangLane — Internet English, decoded.",
+      "version": "1.0.0",
+      "websiteUrl": "https://slanglane.com"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://slanglane.com/mcp"
+}

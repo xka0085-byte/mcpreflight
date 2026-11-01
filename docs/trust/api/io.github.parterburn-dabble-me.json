@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:41.684Z",
+  "server": {
+    "registryName": "io.github.parterburn/dabble-me",
+    "title": "Dabble Me Journal",
+    "description": "Private journal MCP server to search, analyze, and create Dabble Me entries securely via OAuth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dabble.me/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dabble.me/mcp"
+}

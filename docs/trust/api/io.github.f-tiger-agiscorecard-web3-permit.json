@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:21.866Z",
+  "server": {
+    "registryName": "io.github.f-tiger/agiscorecard-web3-permit",
+    "title": "io.github.f-tiger/agiscorecard-web3-permit",
+    "description": "Review declared AI data permissions, expiry and regions; model revenue splits without moving funds.",
+    "registryVersion": "1.7.0"
+  },
+  "endpoint": "https://permit.agiscorecard.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "web3-permit",
+      "title": "Data Permit",
+      "version": "1.7.0",
+      "websiteUrl": "https://permit.agiscorecard.com/"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://permit.agiscorecard.com/mcp"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:05.634Z",
+  "server": {
+    "registryName": "io.github.isaacaskew/venunite-events",
+    "title": "VenuNite Events",
+    "description": "Free US local event search. No signup or API key; 90-day lookahead. Paid commercial and bulk access.",
+    "registryVersion": "0.3.3"
+  },
+  "endpoint": "https://mcp.venunite.com/v1/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "venunite-events",
+      "version": "0.5.0",
+      "websiteUrl": "https://venunite.com/developers/mcp"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.venunite.com/v1/mcp/"
+}

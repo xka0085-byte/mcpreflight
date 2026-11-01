@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:48.538Z",
+  "server": {
+    "registryName": "io.github.srivastsh/muni-mcp",
+    "title": "SF Muni Real-Time Transit",
+    "description": "Real-time SF Muni departures, routes, alerts, vehicle positions, and schedules.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://muni-mcp.srivastsh.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://muni-mcp.srivastsh.workers.dev/mcp"
+}

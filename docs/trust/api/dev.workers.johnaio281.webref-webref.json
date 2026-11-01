@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:48.518Z",
+  "server": {
+    "registryName": "dev.workers.johnaio281.webref/webref",
+    "title": "WebRef (paid)",
+    "description": "Web standards and time reference for agents: HTTP codes, retries, deadlines. Paid via x402.",
+    "registryVersion": "1.8.0"
+  },
+  "endpoint": "https://webref.johnaio281.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "webref",
+      "version": "1.0.0",
+      "title": "WebRef (paid MCP)",
+      "description": "Web standards and time reference for AI agents: HTTP status codes, MIME types, request methods, and deadline arithmetic. Every tool call is paid per call in USDC on Base via x402, or USDC on Tempo via MPP. No signup, no API key, no KYC."
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://webref.johnaio281.workers.dev/mcp"
+}

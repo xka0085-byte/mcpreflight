@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:49.849Z",
+  "server": {
+    "registryName": "uk.co.familyguy/episodes",
+    "title": "familyguy.co.uk episode database",
+    "description": "Lookups over an unofficial Family Guy database: episodes, seasons, characters, cast, crew and facts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://familyguy.co.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "familyguy.co.uk",
+      "title": "Unofficial Family Guy episode database",
+      "version": "1.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].season has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].includeEpisodes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://familyguy.co.uk/mcp"
+}

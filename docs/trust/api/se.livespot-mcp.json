@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:50.155Z",
+  "server": {
+    "registryName": "se.livespot/mcp",
+    "title": "LiveSpot",
+    "description": "Find concerts, theatre, sport and festivals in Sweden. Authless, read-only MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://livespot.se/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "LiveSpot",
+      "version": "1.0.0",
+      "description": "LiveSpot is an independent Swedish event guide. Use it to find concerts, theatre, sport, comedy, festivals, and family events happening in Swedish cities. Covers Stockholm, Göteborg, Malmö, and dozens of other cities."
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "8 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://livespot.se/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:52.816Z",
+  "server": {
+    "registryName": "app.conceptviz/diagrams",
+    "title": "ConceptViz Scientific Diagrams",
+    "description": "Create and revise scientific and educational diagrams with ConceptViz.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://conceptviz.app/api/mcp/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://conceptviz.app/api/mcp/mcp"
+}

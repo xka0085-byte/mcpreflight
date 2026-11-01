@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:05.142Z",
+  "server": {
+    "registryName": "io.github.GaetanGermain/emotion-dictionary",
+    "title": "The Emotion Dictionary",
+    "description": "The Emotion Dictionary's 402 emotions: define a word, resolve a feeling, body maps. CC BY 4.0.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.emotioninside.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "the-emotion-dictionary",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].name_or_slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.emotioninside.org/mcp"
+}

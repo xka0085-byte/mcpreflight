@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:40.145Z",
+  "server": {
+    "registryName": "com.fpv-db/fpv-db",
+    "title": "FPV-DB",
+    "description": "Specs of FPV drone parts and every Betaflight/INAV CLI setting by release; checks a pasted diff",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://fpv-db.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fpv-db",
+      "title": "FPV-DB",
+      "version": "1.0.0",
+      "websiteUrl": "https://fpv-db.com"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].filters has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://fpv-db.com/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:24.548Z",
+  "server": {
+    "registryName": "tools.rivo/mcp",
+    "title": "Rivo Tools",
+    "description": "FiveM and GTA V tools: convert, merge, optimize and build resources, and make AI props and liveries.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.rivo.tools/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.rivo.tools/mcp"
+}

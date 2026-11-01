@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:42.589Z",
+  "server": {
+    "registryName": "org.orivox/website-builder",
+    "title": "Orivox AI Website Builder",
+    "description": "Build, edit, host, and publish websites from AI assistants. Setup: https://mcp.orivox.org/",
+    "registryVersion": "0.1.0-alpha.3"
+  },
+  "endpoint": "https://mcp.orivox.org/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.orivox.org/mcp"
+}

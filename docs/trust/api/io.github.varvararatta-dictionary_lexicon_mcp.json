@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:31.765Z",
+  "server": {
+    "registryName": "io.github.varvararatta/dictionary_lexicon_mcp",
+    "title": "Dictionary Lexicon Mcp",
+    "description": "Discover the true meaning of any English word with our Dictionary Lexicon MCP. Whether you're a",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dictionary-lexicon-mcp.mcpize.run/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dictionary-lexicon-mcp.mcpize.run/mcp"
+}

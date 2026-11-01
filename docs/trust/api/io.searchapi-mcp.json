@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:44.438Z",
+  "server": {
+    "registryName": "io.searchapi/mcp",
+    "title": "io.searchapi/mcp",
+    "description": "Give AI assistants access to real-time search data through SearchApi.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.searchapi.io/mcp?token={api_token}",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.searchapi.io/mcp?token={api_token}"
+}

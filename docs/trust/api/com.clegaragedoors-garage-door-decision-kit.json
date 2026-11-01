@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:46.712Z",
+  "server": {
+    "registryName": "com.clegaragedoors/garage-door-decision-kit",
+    "title": "Garage Door Decision Kit by CLE Garage Doors",
+    "description": "Garage-door quote checks, spring usage, winter planning and verified CLE knowledge search.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.clegaragedoors.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "CLE Garage Door Decision Kit",
+      "version": "0.2.0",
+      "websiteUrl": "https://clegaragedoors.com/tools/garage-door-decision-kit"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].cycles_per_day has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].rated_cycles has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].comparison_rated_cycles has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.clegaragedoors.com/mcp"
+}

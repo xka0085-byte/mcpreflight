@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:37.455Z",
+  "server": {
+    "registryName": "io.github.popnow-ai/popnow-mcp",
+    "title": "PopNow",
+    "description": "AI image, video, music and speech generation: text-to-video, image-to-video, effects and upscaling.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.popnow.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.popnow.ai/mcp"
+}

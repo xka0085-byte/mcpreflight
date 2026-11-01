@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:09.026Z",
+  "server": {
+    "registryName": "dev.reachsocial/social-data",
+    "title": "ReachSocial",
+    "description": "Instagram, X, TikTok, YouTube, Facebook and Reddit data. Approved OAuth or API-key access required.",
+    "registryVersion": "0.3.1"
+  },
+  "endpoint": "https://reachsocial.dev/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reachsocial.dev/mcp/"
+}

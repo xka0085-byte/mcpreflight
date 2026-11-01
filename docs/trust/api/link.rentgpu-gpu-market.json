@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:28.516Z",
+  "server": {
+    "registryName": "link.rentgpu/gpu-market",
+    "title": "rentgpu GPU rental price market data",
+    "description": "Hourly GPU rental prices; coverage updated daily. Free listing, paid queries via x402 on Base.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://rentgpu.link/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rentgpu-gpu-market",
+      "version": "1.30.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].gpu has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].gpu has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].top has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].task has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://rentgpu.link/mcp"
+}

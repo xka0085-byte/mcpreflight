@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:34.268Z",
+  "server": {
+    "registryName": "io.github.ChanghuLiu/opc-ua-nodeset-compatibility-gate",
+    "title": "OPC UA NodeSet Gate",
+    "description": "Deterministic release-compatibility preflight for OPC UA NodeSet2 XML.",
+    "registryVersion": "0.1.3"
+  },
+  "endpoint": "https://nodeset.regevidencehub.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "OPC UA NodeSet Compatibility Gate",
+      "version": "1.30.0",
+      "websiteUrl": "https://regevidencehub.com/about/"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].old_nodeset_xml has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].new_nodeset_xml has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].upload_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].chunk has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].old_upload_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].new_upload_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nodeset.regevidencehub.com/mcp"
+}

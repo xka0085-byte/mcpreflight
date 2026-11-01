@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:40.788Z",
+  "server": {
+    "registryName": "jp.co.roundup-inc/knowledge",
+    "title": "ラウンドナップ Webマーケティング・ナレッジ",
+    "description": "Search Roundup's Japanese SME web marketing insights; return source excerpts and article links.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://roundup-knowledge-mcp.bitter-sea-955b.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "roundup-knowledge-mcp",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_results has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].include_historical has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://roundup-knowledge-mcp.bitter-sea-955b.workers.dev/mcp"
+}

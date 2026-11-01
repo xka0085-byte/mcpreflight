@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:54.776Z",
+  "server": {
+    "registryName": "app.eini/eini",
+    "title": "EINI",
+    "description": "Swiss supermarket deals at 8 chains and official 2027 health insurance premiums, from EINI.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://api.eini.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "eini",
+      "title": "EINI",
+      "version": "1.2.0",
+      "websiteUrl": "https://eini.app"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].accident_cover has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.eini.app/mcp"
+}

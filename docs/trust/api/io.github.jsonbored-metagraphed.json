@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:46.327Z",
+  "server": {
+    "registryName": "io.github.JSONbored/metagraphed",
+    "title": "metagraphed — Bittensor subnet operational registry",
+    "description": "Live operational + integration registry for Bittensor subnets: APIs, schemas, health.",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://api.metagraph.sh/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.metagraph.sh/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:22.061Z",
+  "server": {
+    "registryName": "net.umbhost/umbpanel-mcp",
+    "title": "UmbPanel — UmbHost GreenStack management",
+    "description": "Manage your UmbHost GreenStack hosting: deploys, Cloudflare, databases, SFTP, email and domains.",
+    "registryVersion": "0.3.2"
+  },
+  "endpoint": "https://www.umbpanel.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.umbpanel.io/mcp"
+}

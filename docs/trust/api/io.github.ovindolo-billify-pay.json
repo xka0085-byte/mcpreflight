@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:12.627Z",
+  "server": {
+    "registryName": "io.github.Ovindolo/billify-pay",
+    "title": "Billify payments",
+    "description": "Let agents verify the seller and pay Billify invoices with x402 (USDC on Base).",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://billify.org/mcp/pay",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "billify-pay",
+      "title": "Billify payments",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].decision has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].note has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].reference has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://billify.org/mcp/pay"
+}

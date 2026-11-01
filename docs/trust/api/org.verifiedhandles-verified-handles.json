@@ -1,0 +1,52 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:52.270Z",
+  "server": {
+    "registryName": "org.verifiedhandles/verified-handles",
+    "title": "Verified Handles",
+    "description": "Look up people, organisations and things, and their official social media accounts and identifiers.",
+    "registryVersion": "1.59.1"
+  },
+  "endpoint": "https://verifiedhandles.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "verified-handles",
+      "title": "Verified Handles",
+      "version": "1.84.0",
+      "description": "Verified Handles: public entries and their official social media accounts. Build 427c9343c.",
+      "websiteUrl": "https://verifiedhandles.org/developers/mcp"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].offset has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://verifiedhandles.org/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:23.488Z",
+  "server": {
+    "registryName": "io.github.fainir/betterloop",
+    "title": "Betterloop",
+    "description": "Ranked fixes from real users of your site: rage clicks, dead buttons, JS errors and slow pages.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://betterloopai.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://betterloopai.com/api/mcp"
+}

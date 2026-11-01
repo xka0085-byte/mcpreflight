@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:26.547Z",
+  "server": {
+    "registryName": "io.usefulapi/appointo",
+    "title": "Appointo MCP by usefulapi",
+    "description": "Read Appointo bookings, availability and subscriptions; create, reschedule and cancel bookings.",
+    "registryVersion": "1.11.0"
+  },
+  "endpoint": "https://appointo.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "appointo-mcp",
+      "version": "1.14.0",
+      "title": "Appointo MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/appointo/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].search_term has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://appointo.usefulapi.io/mcp"
+}

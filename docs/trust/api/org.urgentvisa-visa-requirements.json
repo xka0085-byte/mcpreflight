@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:50.635Z",
+  "server": {
+    "registryName": "org.urgentvisa/visa-requirements",
+    "title": "org.urgentvisa/visa-requirements",
+    "description": "Visa requirements, fees, stay limits and extension rules for any passport and destination",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://urgentvisa.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "urgent-visa",
+      "title": "Urgent VISA",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].passport has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].destination has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].passport has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://urgentvisa.org/mcp"
+}

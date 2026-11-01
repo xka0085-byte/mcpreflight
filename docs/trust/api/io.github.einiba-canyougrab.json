@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:02.748Z",
+  "server": {
+    "registryName": "io.github.einiba/canyougrab",
+    "title": "CanYouGrab.it",
+    "description": "Confidence-scored domain availability checking for AI agents via CanYouGrab.it",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://api.canyougrab.it/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "CanYouGrab.it",
+      "version": "1.30.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].domains has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].domain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.canyougrab.it/mcp"
+}

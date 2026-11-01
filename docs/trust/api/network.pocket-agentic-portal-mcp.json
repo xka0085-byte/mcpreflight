@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:29.200Z",
+  "server": {
+    "registryName": "network.pocket/agentic-portal-mcp",
+    "title": "Pocket Network Agentic Marketplace",
+    "description": "Search and call pay-per-request data services, paying in USDC on Base with x402.",
+    "registryVersion": "0.1.2"
+  },
+  "endpoint": "https://agent.pocket.network/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pocket-agentic-portal",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].serviceId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].serviceId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.pocket.network/mcp"
+}

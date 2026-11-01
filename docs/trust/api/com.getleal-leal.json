@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:47:58.894Z",
+  "server": {
+    "registryName": "com.getleal/leal",
+    "title": "Leal",
+    "description": "Design and launch Apple Wallet and Google Wallet loyalty stamp cards for your shop, café or salon.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.getleal.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "leal",
+      "title": "Leal",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.getleal.com"
+    },
+    "toolCount": 15,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].stamps_required has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].description has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.getleal.com/mcp"
+}

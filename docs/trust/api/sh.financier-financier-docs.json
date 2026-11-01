@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:59.017Z",
+  "server": {
+    "registryName": "sh.financier/financier-docs",
+    "title": "Financier docs",
+    "description": "Search and read Financier's developer documentation. No credentials needed.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://financier.sh/mcp/docs",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "financier-docs",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://financier.sh/mcp/docs"
+}

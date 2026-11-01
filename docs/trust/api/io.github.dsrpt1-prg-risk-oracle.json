@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:50.226Z",
+  "server": {
+    "registryName": "io.github.dsrpt1/prg-risk-oracle",
+    "title": "PRG Risk Oracle",
+    "description": "Market regime, 7-dimension risk vectors and payment hazard grades. Abstains when data is thin.",
+    "registryVersion": "0.1.5"
+  },
+  "endpoint": "https://prg-risk-mcp-production.up.railway.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "prg-risk-mcp",
+      "version": "0.1.5"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].scope has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].asset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://prg-risk-mcp-production.up.railway.app/mcp"
+}

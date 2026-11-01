@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:03.384Z",
+  "server": {
+    "registryName": "io.github.reactable-io/reactable",
+    "title": "Reactable Codebase Readiness Assessments",
+    "description": "Scores your code across 12 areas, with findings, fix prompts, and re-assessment in your AI agent",
+    "registryVersion": "3.7.2"
+  },
+  "endpoint": "https://www.reactable.io/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.reactable.io/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:47.185Z",
+  "server": {
+    "registryName": "io.github.JE4NVRG/mepmail",
+    "title": "MepMail",
+    "description": "Transactional email and agent mailboxes: send, broadcasts, domains, Correio inboxes.",
+    "registryVersion": "0.71.1"
+  },
+  "endpoint": "https://api.mepmail.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.mepmail.dev/mcp"
+}

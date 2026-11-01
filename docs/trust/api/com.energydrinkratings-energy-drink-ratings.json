@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:59.963Z",
+  "server": {
+    "registryName": "com.energydrinkratings/energy-drink-ratings",
+    "title": "Energy Drink Ratings",
+    "description": "Label facts (caffeine, sugar, ingredients) and community ratings for 1,000+ energy drinks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://energydrinkratings.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "energydrinkratings",
+      "version": "1.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].fizz has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://energydrinkratings.com/api/mcp"
+}

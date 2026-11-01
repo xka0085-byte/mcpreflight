@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:18.125Z",
+  "server": {
+    "registryName": "io.github.xitoring/mcp-server",
+    "title": "Xitoring",
+    "description": "Connect AI assistants to Xitoring monitoring: servers, uptime, incidents, metrics, SSL, and alerts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.xitoring.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.xitoring.com/mcp"
+}

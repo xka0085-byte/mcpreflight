@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:17.431Z",
+  "server": {
+    "registryName": "io.github.michaeljmoody/courseforge",
+    "title": "CourseForge",
+    "description": "AI-powered LMS course builder: 89 tools, 17 skills, SCORM/xAPI export, agentic UI",
+    "registryVersion": "1.3.0"
+  },
+  "endpoint": "https://caringcourseforge.com/api/mcp/remote",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://caringcourseforge.com/api/mcp/remote"
+}

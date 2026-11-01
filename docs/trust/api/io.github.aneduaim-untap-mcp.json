@@ -1,0 +1,38 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:13:42.236Z",
+  "server": {
+    "registryName": "io.github.aneduaim/untap-mcp",
+    "title": "Untap",
+    "description": "Check UK Delay Repay, UK261 flights and TfL refunds. Save claims and check commutes on request.",
+    "registryVersion": "1.3.3"
+  },
+  "endpoint": "https://untap.money/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "untap",
+      "title": "Untap",
+      "version": "1.3.3",
+      "description": "Untap works out UK refunds and compensation people are owed: train Delay Repay, UK261 and EU261 flight compensation, TfL contactless and Oyster overcharges, and parking-ticket appeal grounds. The check tools run without signing in: describe what happened, check a late train against National Rail records, check a flight, or check TfL journeys, and get the amount, the deadline and a claim pack to submit yourself. They also give step-by-step instructions for submitting a claim on a train operator’s, airline’s or TfL’s own form, and can scan a batch of emails for signs of a claim. Signing in lets you save claims, track them and check saved commutes when asked. Untap does not file claims for you, it is free, and it takes nothing from what you get back.",
+      "websiteUrl": "https://untap.money/connect",
+      "icons": [
+        {
+          "src": "https://untap.money/icon.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "20 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://untap.money/api/mcp"
+}

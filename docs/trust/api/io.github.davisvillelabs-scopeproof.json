@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:09.634Z",
+  "server": {
+    "registryName": "io.github.davisvillelabs/scopeproof",
+    "title": "ScopeProof",
+    "description": "Machine-verifiable authorization checks for autonomous AI agents.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://scopeproof.davisvillelabs.com/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scopeproof.davisvillelabs.com/mcp"
+}

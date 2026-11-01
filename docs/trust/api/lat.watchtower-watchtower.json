@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:57.977Z",
+  "server": {
+    "registryName": "lat.watchtower/watchtower",
+    "title": "Watchtower",
+    "description": "Job alerts for AI agents: describe a role once, get only new postings from 1,500+ tech job boards.",
+    "registryVersion": "0.1.1"
+  },
+  "endpoint": "https://watchtower.lat/mcp?ref=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "watchtower",
+      "version": "0.1.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].watch_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].watch_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://watchtower.lat/mcp?ref=registry"
+}

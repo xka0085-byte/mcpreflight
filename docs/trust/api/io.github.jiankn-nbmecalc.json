@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:40.225Z",
+  "server": {
+    "registryName": "io.github.jiankn/nbmecalc",
+    "title": "NBMEcalc MCP",
+    "description": "Remote MCP server for deterministic educational practice-assessment score conversions.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://nbmecalc-mcp.chenxuanshimo.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "NBMEcalc educational score tools",
+      "version": "1.0.1"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].source has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].score has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].step has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nbmecalc-mcp.chenxuanshimo.workers.dev/mcp"
+}

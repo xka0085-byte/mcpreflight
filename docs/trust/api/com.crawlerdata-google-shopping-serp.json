@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:06.965Z",
+  "server": {
+    "registryName": "com.crawlerdata/google-shopping-serp",
+    "title": "CrawlerData: Google Shopping & SERP",
+    "description": "Google Shopping products and seller prices, plus Google Search, Images, News and Local results.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.crawlerdata.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.crawlerdata.com/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:19.829Z",
+  "server": {
+    "registryName": "io.github.PhoenixClaw01/operational-context",
+    "title": "Phoenix operational_context unpaid canary",
+    "description": "Unpaid qualification-gated operational_context canary. Staging data. No wallet.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/api/mcp/operational-context/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "io.github.PhoenixClaw01/operational-context",
+      "version": "0.1.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].invitee_identity has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].source has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/api/mcp/operational-context/mcp"
+}

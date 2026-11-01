@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:26.930Z",
+  "server": {
+    "registryName": "com.webatola/app-store-trends",
+    "title": "App Store & Google Trends",
+    "description": "App Store top charts, keyword search and rank, app details, and Google Trends trending searches.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://webatola--app-store-trends-mcp-server.apify.actor/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://webatola--app-store-trends-mcp-server.apify.actor/mcp"
+}

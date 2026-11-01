@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:44.889Z",
+  "server": {
+    "registryName": "com.nokycscore/nokycscore",
+    "title": "NoKYC Score",
+    "description": "Search no-KYC exchanges, swaps, wallets and VPNs with privacy and safety grades.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://nokycscore.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nokycscore",
+      "title": "NoKYC Score",
+      "version": "1.0.0",
+      "websiteUrl": "https://nokycscore.com/"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].sort has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nokycscore.com/mcp"
+}

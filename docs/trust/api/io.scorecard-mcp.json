@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:43.805Z",
+  "server": {
+    "registryName": "io.scorecard/mcp",
+    "title": "io.scorecard/mcp",
+    "description": "MCP server providing access to the Scorecard API to evaluate and optimize LLM systems.",
+    "registryVersion": "2.1.1"
+  },
+  "endpoint": "https://mcp.scorecard.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.scorecard.io/mcp"
+}

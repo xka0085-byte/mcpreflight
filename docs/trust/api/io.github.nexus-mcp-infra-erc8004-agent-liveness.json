@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:00.211Z",
+  "server": {
+    "registryName": "io.github.nexus-mcp-infra/erc8004-agent-liveness",
+    "title": "io.github.nexus-mcp-infra/erc8004-agent-liveness",
+    "description": "Checks whether an ERC-8004-registered agent is actually alive right now via a real MCP handshake",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://erc8004-agent-liveness-325572559480.us-central1.run.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://erc8004-agent-liveness-325572559480.us-central1.run.app/mcp"
+}

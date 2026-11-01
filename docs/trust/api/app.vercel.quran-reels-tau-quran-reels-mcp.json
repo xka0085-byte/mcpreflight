@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:58.438Z",
+  "server": {
+    "registryName": "app.vercel.quran-reels-tau/quran-reels-mcp",
+    "title": "Quran Reels MCP",
+    "description": "Free browser-based Quran video maker: vertical reels with 47 reciters and 8 translation languages.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://quran-reels-tau.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "quran-reels",
+      "version": "1.0.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].latitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].longitude has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].surah has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://quran-reels-tau.vercel.app/api/mcp"
+}

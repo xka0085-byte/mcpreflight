@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:28.627Z",
+  "server": {
+    "registryName": "io.github.thekillsquad007/phoenix-labs",
+    "title": "Phoenix Labs",
+    "description": "Restore old video and turn images into clips with sound. Pay from a capped balance, by card or USDC.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://api.phoenixlabs.space/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.phoenixlabs.space/mcp"
+}

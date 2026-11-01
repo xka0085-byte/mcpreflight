@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:56.860Z",
+  "server": {
+    "registryName": "app.fastclips/fastclip",
+    "title": "FastClip",
+    "description": "Clip one chosen moment of a podcast or video into a captioned 9:16 or original-frame MP4.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.fastclip.it/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.fastclip.it/mcp"
+}

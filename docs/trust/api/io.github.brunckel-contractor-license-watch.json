@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:41.360Z",
+  "server": {
+    "registryName": "io.github.brunckel/contractor-license-watch",
+    "title": "Contractor License Watch (OR CCB + WA L&I)",
+    "description": "Oregon CCB and Washington L&I contractor license status, expiry dates, and changes via Apify.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=implementable_antler/contractor-license-watch",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=implementable_antler/contractor-license-watch"
+}

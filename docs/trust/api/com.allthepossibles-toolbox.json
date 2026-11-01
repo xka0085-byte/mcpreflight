@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:18.974Z",
+  "server": {
+    "registryName": "com.allthepossibles/toolbox",
+    "title": "Toolbox",
+    "description": "Small tools for agent builders: AI-writing tells, tools/list token cost, CLAUDE.md lint, and more.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://toolbox.allthepossibles.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "toolbox",
+      "version": "0.1.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].headerName has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].headerValue has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].probe has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://toolbox.allthepossibles.com/mcp"
+}

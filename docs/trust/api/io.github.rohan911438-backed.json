@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:25.772Z",
+  "server": {
+    "registryName": "io.github.rohan911438/backed",
+    "title": "Backed: NEAR solvency checks",
+    "description": "Check if a NEAR protocol holds the tokens it owes, read at one block. Read-only.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://backed-near.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "backed",
+      "title": "Backed: NEAR solvency checks",
+      "version": "0.1.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].target has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].token has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://backed-near.vercel.app/api/mcp"
+}

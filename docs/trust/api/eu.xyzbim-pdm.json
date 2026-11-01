@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:42.889Z",
+  "server": {
+    "registryName": "eu.xyzbim/pdm",
+    "title": "Consulta PDM (Portugal)",
+    "description": "Portuguese municipal master plans (PDM): land category, buildability, index and floors per plot.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pdm.xyzbim.eu/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pdm-xyzbim",
+      "title": "Consulta PDM (pdm.xyzbim.eu)",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pdm.xyzbim.eu/mcp"
+}

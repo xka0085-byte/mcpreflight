@@ -1,0 +1,37 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:24.560Z",
+  "server": {
+    "registryName": "com.capitalsnitch/insider-trading",
+    "title": "CapitalSnitch",
+    "description": "SEC insider trades, Congress trades, 13F funds, earnings and 8-K filings for AI, with SEC links.",
+    "registryVersion": "1.20261025.0"
+  },
+  "endpoint": "https://capitalsnitch.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Public-record market intelligence for AI agents: insider trading (SEC Forms 3/4/5) with clean data, smart cluster screens that flag company-plan batches and score conviction, emerging-vs-crowded insider buying, institutional ownership and fund portfolios (SEC 13F), financials, dilution tracking, instant watchlist alerts, and links to every source filing.",
+      "name": "capitalsnitch",
+      "title": "CapitalSnitch",
+      "version": "0.3.0",
+      "websiteUrl": "https://capitalsnitch.com"
+    },
+    "toolCount": 27,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://capitalsnitch.com/mcp"
+}

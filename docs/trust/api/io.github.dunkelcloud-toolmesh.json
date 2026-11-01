@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:02.600Z",
+  "server": {
+    "registryName": "io.github.DunkelCloud/toolmesh",
+    "title": "io.github.DunkelCloud/toolmesh",
+    "description": "Self-hosted MCP gateway. Turn any REST API into MCP tools via YAML (DADL). Authz, audit, policies.",
+    "registryVersion": "0.5.0"
+  },
+  "endpoint": "https://{host}:8123/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{host}:8123/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:59.499Z",
+  "server": {
+    "registryName": "io.github.Spacemandomains/hawaii-conditions",
+    "title": "Hawaii Conditions MCP Server",
+    "description": "Real-time surf, weather, trail status, volcano, ocean safety, and restaurants for Hawaii.",
+    "registryVersion": "1.0.12"
+  },
+  "endpoint": "https://hawaii-conditions.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "HawaiiConditions",
+      "version": "1.0.0"
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].island has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hawaii-conditions.vercel.app/api/mcp"
+}

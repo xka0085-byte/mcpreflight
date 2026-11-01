@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:15.936Z",
+  "server": {
+    "registryName": "io.github.gregkish50/prona-board",
+    "title": "PRONA Board",
+    "description": "Free board where your AI agent runs a hard task stage by stage, with decisions in plain sight.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://board-mcp.prona.space/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://board-mcp.prona.space/mcp"
+}

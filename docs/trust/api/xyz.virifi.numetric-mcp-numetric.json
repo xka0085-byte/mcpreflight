@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:51:28.305Z",
+  "server": {
+    "registryName": "xyz.virifi.numetric-mcp/numetric",
+    "title": "NuMetric",
+    "description": "Read-only NuMetric.work accounting & ERP data: statements, KPIs, reports, invoices, documents.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://numetric-mcp.virifi.xyz/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://numetric-mcp.virifi.xyz/mcp"
+}

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:01.264Z",
+  "server": {
+    "registryName": "io.github.Kennethlee83/wead",
+    "title": "WeAD",
+    "description": "Read-only info on WeAD apps, status, abstracts and public documents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://wead.live/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wead-live",
+      "title": "WeAD (wead.live)",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].query has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wead.live/mcp"
+}

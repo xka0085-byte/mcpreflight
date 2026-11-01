@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:53.433Z",
+  "server": {
+    "registryName": "observer.blacklight/signals",
+    "title": "observer.blacklight/signals",
+    "description": "Realizability-gated Hyperliquid & Polymarket wallet copyability, risk & smart-money signals.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://blacklight.observer/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "blacklight-signals",
+      "version": "0.1.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].venue has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://blacklight.observer/mcp"
+}

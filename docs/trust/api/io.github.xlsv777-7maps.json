@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:53.935Z",
+  "server": {
+    "registryName": "io.github.XLSV777/7maps",
+    "title": "7Maps",
+    "description": "MCP server map (software, not geography): status, estimated tool risk, changes, tool search.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://7it.co.il/7maps/mcp?via=registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "7maps",
+      "title": "7Maps",
+      "version": "1.2.0",
+      "websiteUrl": "https://7it.co.il/7maps/bot/"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].max_handshake_ms has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].max_tool_list_tokens has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://7it.co.il/7maps/mcp?via=registry"
+}

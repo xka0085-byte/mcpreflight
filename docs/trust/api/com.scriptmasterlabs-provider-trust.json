@@ -1,31 +1,45 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:06.107Z",
+  "scannedAt": "2026-11-01T03:55:06.018Z",
   "server": {
     "registryName": "com.scriptmasterlabs/provider-trust",
-    "title": "Provider Trust — Verify a Source or Provider",
-    "description": "Verify a source or provider before an AI agent trusts it. Evidence only; unknown stays unknown.",
-    "registryVersion": "1.2.0"
+    "title": "SCRIPTMASTERLABS — Provider Trust + CANON",
+    "description": "Provider Trust MCP: verify providers before agents trust them + CANON bulk registry lookup (x402).",
+    "registryVersion": "1.3.1"
   },
-  "endpoint": "https://squeezeos-api.onrender.com/mcp/provider-trust",
+  "endpoint": "https://provider-trust-mcp.onrender.com/mcp",
   "trust": {
     "finalStatus": "PASS",
     "protocolVersion": "2025-06-18",
     "serverInfo": {
-      "description": "Verify a provider before using it.",
       "name": "provider-trust",
       "title": "Provider Trust",
-      "version": "1.0.2"
+      "version": "1.2.0",
+      "description": "Verify a provider or source before an AI agent trusts or uses it.",
+      "icons": [
+        {
+          "src": "https://www.scriptmasterlabs.com/assets/provider-trust-favicon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "64x64"
+          ]
+        }
+      ]
     },
-    "toolCount": 6,
+    "toolCount": 7,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "6 tools passed deterministic schema checks"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].targets has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].hours has no description"
       }
     ]
   },
-  "verify": "npx @eidonze/mcpreflight schema https://squeezeos-api.onrender.com/mcp/provider-trust"
+  "verify": "npx @eidonze/mcpreflight schema https://provider-trust-mcp.onrender.com/mcp"
 }

@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:12.635Z",
+  "server": {
+    "registryName": "com.aipromodesign/apparel-designer",
+    "title": "AI Promo Design",
+    "description": "Design custom t-shirts, hoodies, caps, mugs and totes, price an order, and link to order it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://aipromodesign.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "aipromodesign",
+      "title": "aiPromoDesign",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].lines has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].lines has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aipromodesign.com/api/mcp"
+}

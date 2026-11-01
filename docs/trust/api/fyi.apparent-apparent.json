@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:19.697Z",
+  "server": {
+    "registryName": "fyi.apparent/apparent",
+    "title": "Apparent",
+    "description": "Mobile app analytics in plain words: live activity, reviews and sales, ads, and why a number moved.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.apparent.fyi/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.apparent.fyi/mcp"
+}

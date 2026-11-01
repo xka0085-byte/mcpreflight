@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:45.422Z",
+  "server": {
+    "registryName": "io.github.SanjhaiPrakash18/readdit-later",
+    "title": "io.github.SanjhaiPrakash18/readdit-later",
+    "description": "Search, organize, and chat with your saved Reddit posts from Claude, Cursor, and any MCP client.",
+    "registryVersion": "1.1.2"
+  },
+  "endpoint": "https://reddit-later-server.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://reddit-later-server.vercel.app/mcp"
+}

@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:19.585Z",
+  "server": {
+    "registryName": "cz.evidujzdarma/eet",
+    "title": "EvidujZdarma – EET 2.0 (Czech sales registration)",
+    "description": "Czech EET 2.0 from 1 Jan 2027: check an IČO, classify payments, EET OFF cost, cited facts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://evidujzdarma.cz/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "evidujzdarma-mcp-server",
+      "version": "1.0.0",
+      "title": "EvidujZdarma – EET 2.0",
+      "websiteUrl": "https://evidujzdarma.cz"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].work_days_per_month has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://evidujzdarma.cz/api/mcp"
+}

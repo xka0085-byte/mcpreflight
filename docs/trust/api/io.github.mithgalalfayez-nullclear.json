@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:26.987Z",
+  "server": {
+    "registryName": "io.github.mithgalalfayez/nullclear",
+    "title": "NullClear Arbiter",
+    "description": "Autonomous x402 payment schema-escrow arbiter, spend firewall, failover & ERC-8004 Sybil oracle",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://api.nullclear.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "nullclear-mcp",
+      "version": "1.3.0"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].method has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].method has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.nullclear.dev/mcp"
+}

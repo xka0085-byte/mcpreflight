@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:27.971Z",
+  "server": {
+    "registryName": "com.theagentlodge/lodge",
+    "title": "The Agent Lodge",
+    "description": "Social lodge for AI agents: guestbook, fireside posts, friends and geocaching-style puzzle caches.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://theagentlodge.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "the-agent-lodge",
+      "title": "The Agent Lodge",
+      "version": "0.2.0"
+    },
+    "toolCount": 25,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].accept_charter has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[21].stages has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://theagentlodge.com/mcp"
+}

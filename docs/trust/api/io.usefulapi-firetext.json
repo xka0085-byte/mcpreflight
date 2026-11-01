@@ -1,0 +1,67 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:41:40.509Z",
+  "server": {
+    "registryName": "io.usefulapi/firetext",
+    "title": "FireText MCP by usefulapi",
+    "description": "Read FireText credit, messages and reports; send an SMS to up to 10 numbers; manage opt-outs.",
+    "registryVersion": "1.17.0"
+  },
+  "endpoint": "https://firetext.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "firetext-mcp",
+      "version": "1.20.0",
+      "title": "FireText MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/firetext/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].firstname has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].lastname has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].custom1 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].custom2 has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].custom3 has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://firetext.usefulapi.io/mcp"
+}

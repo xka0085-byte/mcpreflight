@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:58.802Z",
+  "server": {
+    "registryName": "io.github.vvvvking/novai-prices",
+    "title": "NovAI Prices",
+    "description": "Live prices for 111 Chinese models; batch cost calculators for video and images.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://aiapi-pro.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "novai-prices",
+      "version": "0.3.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].model has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://aiapi-pro.com/api/mcp"
+}

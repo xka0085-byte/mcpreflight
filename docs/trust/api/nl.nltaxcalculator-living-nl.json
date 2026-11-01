@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:36.377Z",
+  "server": {
+    "registryName": "nl.nltaxcalculator/living-nl",
+    "title": "Living in the Netherlands",
+    "description": "Living in NL: legal max rent (points), car by plate (RDW), city budget, current fees with sources.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://nltaxcalculator.nl/dutch-tax/api/living/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "nl-living",
+      "title": "Living in the Netherlands (NL Tax Calculator)",
+      "version": "0.2.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nltaxcalculator.nl/dutch-tax/api/living/mcp"
+}

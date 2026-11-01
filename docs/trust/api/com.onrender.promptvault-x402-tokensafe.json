@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:11.123Z",
+  "server": {
+    "registryName": "com.onrender.promptvault-x402/tokensafe",
+    "title": "TokenSafe by PromptVault",
+    "description": "Free token risk check (Base/Solana) + info on paid x402 reports. Not financial advice.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://promptvault-x402.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tokensafe-promptvault",
+      "title": "TokenSafe by PromptVault",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].chain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://promptvault-x402.onrender.com/mcp"
+}

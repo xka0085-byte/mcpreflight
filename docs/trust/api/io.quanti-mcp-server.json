@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:34.458Z",
+  "server": {
+    "registryName": "io.quanti/mcp-server",
+    "title": "io.quanti/mcp-server",
+    "description": "Query BigQuery, Snowflake, Redshift & Azure Synapse with natural language",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ai.quanti.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ai.quanti.io/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:44.073Z",
+  "server": {
+    "registryName": "io.github.provydon/dbmigratepro-migrations",
+    "title": "DBMigratePro Migrations",
+    "description": "Move a database between providers, or convert MySQL to PostgreSQL, with integrity verified.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://dbmigratepro.com/mcp-migrations",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dbmigratepro.com/mcp-migrations"
+}

@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:05.610Z",
+  "server": {
+    "registryName": "io.github.weromon/resale-margin-mcp",
+    "title": "Resale Margin Calculator",
+    "description": "Paid MCP tool for resale fees, net profit, ROI, and break-even price.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://resale-margintest.weromonit0.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "resale-margin-mcp",
+      "version": "1.2.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].purchase_price has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sale_price has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].shipping_cost has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].selling_fee_percent has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://resale-margintest.weromonit0.workers.dev/mcp"
+}

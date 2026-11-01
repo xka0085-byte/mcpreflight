@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:21.910Z",
+  "server": {
+    "registryName": "io.github.ABTdomain/domainkits-mcp",
+    "title": "DomainKits",
+    "description": "Search newly registered, expired, aged, active, deleted and for-sale domains, plus WHOIS and DNS.",
+    "registryVersion": "2.3.2"
+  },
+  "endpoint": "https://api.domainkits.com/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "description": "DomainKits MCP exposes factual domain registration, DNS, availability, trend, market, and user-state data. Fields and source coverage may be incomplete. The server does not execute Skill workflows or provide investment conclusions. Concurrent tool calls are not supported: parallel calls are rejected and return no data. Call tools one at a time and wait for each result before sending the next. When a result says limit_reached, stop calling that tool, show the user its message and links, and do not work around it with other tools.",
+      "name": "domainkits",
+      "title": "DomainKits Data MCP",
+      "version": "2.1.0"
+    },
+    "toolCount": 30,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "30 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.domainkits.com/v1/mcp"
+}

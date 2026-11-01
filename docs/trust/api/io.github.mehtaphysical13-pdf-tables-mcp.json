@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:09.964Z",
+  "server": {
+    "registryName": "io.github.mehtaphysical13/pdf-tables-mcp",
+    "title": "io.github.mehtaphysical13/pdf-tables-mcp",
+    "description": "Reliable PDF table extraction. Pass a URL, get structured JSON tables with citations.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://pdf-tables-mcp.vercel.app/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pdf-tables-mcp.vercel.app/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:41.331Z",
+  "server": {
+    "registryName": "jp.avacast/avacast",
+    "title": "avacast",
+    "description": "写真から作ったアバターをリアルタイムに喋らせる API (日本製)。会話の開始・発話・利用状況を tool で扱う。管理画面のアカウントでログインしてつなぐ (OAuth)",
+    "registryVersion": "1.2.3"
+  },
+  "endpoint": "https://api.avacast.jp/api/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.avacast.jp/api/v1/mcp"
+}

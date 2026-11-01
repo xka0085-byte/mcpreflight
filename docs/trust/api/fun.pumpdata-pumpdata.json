@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:04:19.284Z",
+  "server": {
+    "registryName": "fun.pumpdata/pumpdata",
+    "title": "pumpdata",
+    "description": "Check a pump.fun coin, dev or wallet: deployer record, bundle, PnL. Every pump.fun trade, ever.",
+    "registryVersion": "0.3.2"
+  },
+  "endpoint": "https://pumpdata.fun/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pumpdata.fun",
+      "version": "1"
+    },
+    "toolCount": 13,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pumpdata.fun/mcp"
+}

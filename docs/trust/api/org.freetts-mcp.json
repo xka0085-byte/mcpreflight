@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:26.375Z",
+  "server": {
+    "registryName": "org.freetts/mcp",
+    "title": "FreeTTS",
+    "description": "Text to speech in 149 languages: MP3 links from any assistant. Free without an account.",
+    "registryVersion": "1.0.5"
+  },
+  "endpoint": "https://mcp.freetts.org/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "freetts",
+      "title": "FreeTTS",
+      "version": "1.1.5",
+      "websiteUrl": "https://freetts.org/developers/mcp",
+      "icons": [
+        {
+          "src": "https://mcp.freetts.org/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://mcp.freetts.org/icon-128.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "128x128"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].gender has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.freetts.org/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:44.247Z",
+  "server": {
+    "registryName": "com.dronebundle/mcp",
+    "title": "DroneBundle",
+    "description": "Ask about your drone operation: projects, jobs, flights, pilots, maintenance and safety. Read-only.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.dronebundle.com/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.dronebundle.com/v1/mcp"
+}

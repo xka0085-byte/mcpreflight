@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:08.324Z",
+  "server": {
+    "registryName": "io.github.Blue-Gamma/bluegamma",
+    "title": "BlueGamma - Real-time Interest Rate Data",
+    "description": "Interest rate data and pricing: swap rates and curves, fixings, FX, caps, swaptions for 60+ indices.",
+    "registryVersion": "1.1.1"
+  },
+  "endpoint": "https://mcp.bluegamma.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.bluegamma.io/mcp"
+}

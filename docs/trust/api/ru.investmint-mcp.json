@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:32.576Z",
+  "server": {
+    "registryName": "ru.investmint/mcp",
+    "title": "ru.investmint/mcp",
+    "description": "Russian stock market data: dividends, forecasts, bond coupons, corporate calendar — MOEX",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.investmint.ru/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "investmint",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].action has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.investmint.ru/mcp"
+}

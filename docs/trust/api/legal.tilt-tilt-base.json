@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:00.232Z",
+  "server": {
+    "registryName": "legal.tilt/tilt-base",
+    "title": "Tilt Base",
+    "description": "Tilt Legal's managed legal skills and your organisation's own, for your AI agent.",
+    "registryVersion": "0.11.2"
+  },
+  "endpoint": "https://base.tilt.legal/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://base.tilt.legal/mcp"
+}

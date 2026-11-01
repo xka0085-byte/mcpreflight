@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:05.900Z",
+  "server": {
+    "registryName": "porn.tik-tok/tiktokporn",
+    "title": "porn.tik-tok/tiktokporn",
+    "description": "Search adult porn video (NSFW, 18+): nude clips, creators, hashtags. Read-only, no API key.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://tik-tok.porn/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "tik-tok.porn MCP",
+      "title": "tik-tok.porn",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].per_page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].per_page has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://tik-tok.porn/mcp"
+}

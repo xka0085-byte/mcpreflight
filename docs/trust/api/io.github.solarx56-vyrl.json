@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:42.638Z",
+  "server": {
+    "registryName": "io.github.solarx56/vyrl",
+    "title": "Vyrl",
+    "description": "Inspect and edit media canvases, run existing Flows, and retrieve results. Vyrl MCP token required.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://vyrl.pro/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://vyrl.pro/api/mcp"
+}

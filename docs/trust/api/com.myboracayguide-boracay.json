@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:22.464Z",
+  "server": {
+    "registryName": "com.myboracayguide/boracay",
+    "title": "MyBoracayGuide: Boracay Transfers and Activities",
+    "description": "Live prices and booking links for Boracay airport transfers, flights and activities.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://myboracayguide.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "myboracayguide",
+      "title": "MyBoracayGuide: Boracay Transfers and Activities",
+      "version": "1.0.0",
+      "websiteUrl": "https://myboracayguide.com"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].airport has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].first_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].last_name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://myboracayguide.com/mcp"
+}

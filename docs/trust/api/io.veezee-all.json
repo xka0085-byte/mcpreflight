@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:20.245Z",
+  "server": {
+    "registryName": "io.veezee/all",
+    "title": "io.veezee/all",
+    "description": "Real-time LinkedIn, X (Twitter) and Reddit data for AI agents. Free key, self-minted, no signup.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.veezee.io/all",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.veezee.io/all"
+}

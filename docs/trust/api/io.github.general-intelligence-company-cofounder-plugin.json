@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:09.062Z",
+  "server": {
+    "registryName": "io.github.General-Intelligence-Company/cofounder-plugin",
+    "title": "Cofounder",
+    "description": "Company context and tools for research, CRM, email, social publishing, and roadmaps.",
+    "registryVersion": "0.1.24"
+  },
+  "endpoint": "https://api.cofounder.co/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.cofounder.co/mcp"
+}

@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:29.137Z",
+  "server": {
+    "registryName": "io.banksapi/docs",
+    "title": "BANKSapi Docs",
+    "description": "Search and read the BANKSapi developer docs and OpenAPI specs for Open Banking integrations.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://banksapi.io/docs-mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "banksapi-docs-mcp",
+      "version": "1.26.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].path_or_url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].spec_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].operation_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tag has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://banksapi.io/docs-mcp"
+}

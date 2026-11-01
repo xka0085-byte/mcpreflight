@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:17.565Z",
+  "server": {
+    "registryName": "io.github.coder/coder",
+    "title": "Coder",
+    "description": "Manage Coder workspaces, templates, and cloud development environments",
+    "registryVersion": "2.38.5"
+  },
+  "endpoint": "https://{coder_hostname}/api/experimental/mcp/http",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{coder_hostname}/api/experimental/mcp/http"
+}

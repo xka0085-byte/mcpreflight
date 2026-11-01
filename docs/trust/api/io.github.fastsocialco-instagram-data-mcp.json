@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:49.383Z",
+  "server": {
+    "registryName": "io.github.FastSocialCo/instagram-data-mcp",
+    "title": "Instagram Data",
+    "description": "Read-only public Instagram data: profiles, posts, reels, stories, comments, top-accounts ranking.",
+    "registryVersion": "0.1.8"
+  },
+  "endpoint": "https://data.fastsocial.co/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://data.fastsocial.co/mcp"
+}

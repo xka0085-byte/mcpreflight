@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:30.661Z",
+  "server": {
+    "registryName": "io.powerpointengine/powerpoint-engine",
+    "title": "io.powerpointengine/powerpoint-engine",
+    "description": "Generate, edit, merge, translate and PDF-convert PowerPoint (.pptx) over MCP. 8 tools.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://powerpointengine.io/api/mcp/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://powerpointengine.io/api/mcp/mcp"
+}

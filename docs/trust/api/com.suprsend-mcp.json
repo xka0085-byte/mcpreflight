@@ -1,12 +1,12 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:46:37.289Z",
+  "scannedAt": "2026-11-01T03:56:45.832Z",
   "server": {
     "registryName": "com.suprsend/mcp",
     "title": "SuprSend",
     "description": "Hosted SuprSend MCP server: users, lists, workflows, templates, and notification data.",
-    "registryVersion": "0.3.1"
+    "registryVersion": "0.5.11"
   },
   "endpoint": "https://mcp.suprsend.com/mcp",
   "trust": {
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
   },
   "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.suprsend.com/.well-known/oauth-protected-resource/mcp",
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.suprsend.com/mcp"

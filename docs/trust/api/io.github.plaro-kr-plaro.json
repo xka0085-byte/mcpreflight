@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:27.705Z",
+  "server": {
+    "registryName": "io.github.plaro-kr/plaro",
+    "title": "Plaro",
+    "description": "Agreed client requirements, changes and open questions from Plaro, read by Claude Code and Codex.",
+    "registryVersion": "1.2.1"
+  },
+  "endpoint": "https://plaro.kr/mcp/v1",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://plaro.kr/mcp/v1"
+}

@@ -1,0 +1,53 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:56.954Z",
+  "server": {
+    "registryName": "kr.xdata/xdata-mcp",
+    "title": "XBOSS",
+    "description": "Korean national tax and social insurance filings, invoices and payroll data as MCP tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.xdata.kr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "xboss-mcp",
+      "version": "1.0.0",
+      "supportedEnvScopes": [
+        "production",
+        "real_test"
+      ]
+    },
+    "toolCount": 274,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[158].workplace_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[158].workplace_address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[158].business_registration_no has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[160].workplace_address has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[160].business_registration_no has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.xdata.kr/mcp"
+}

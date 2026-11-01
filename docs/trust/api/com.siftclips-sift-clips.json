@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:34.720Z",
+  "server": {
+    "registryName": "com.siftclips/sift-clips",
+    "title": "Sift Clips",
+    "description": "Search video footage an editor shared with you by what's on screen, what's said or who's in it.",
+    "registryVersion": "1.0.14"
+  },
+  "endpoint": "https://share-api.siftclips.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://share-api.siftclips.com/mcp"
+}

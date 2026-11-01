@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:15.104Z",
+  "server": {
+    "registryName": "io.github.rmzlb/notifyd",
+    "title": "notifyd",
+    "description": "Operate a self-hosted notifyd instance: digest, jobs, retries, suppressions, projects, test sends.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://{notifyd_host}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{notifyd_host}/mcp"
+}

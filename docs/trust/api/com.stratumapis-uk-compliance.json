@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:56:30.944Z",
+  "server": {
+    "registryName": "com.stratumapis/uk-compliance",
+    "title": "Stratum UK compliance checks",
+    "description": "UK sanctions, export controls, Companies House owners, FCA register and property checks.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://stratumapis.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.stratumapis/uk-compliance",
+      "title": "Stratum UK compliance checks",
+      "version": "1.0.0"
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].suite has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://stratumapis.com/mcp"
+}

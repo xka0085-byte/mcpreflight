@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:13.460Z",
+  "server": {
+    "registryName": "io.github.nousdata/kelam",
+    "title": "Kelam Voice Agents",
+    "description": "Place and follow real phone calls and SMS through your Kelam voice agents.",
+    "registryVersion": "0.2.1"
+  },
+  "endpoint": "https://api.kelam.sh/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.kelam.sh/mcp"
+}

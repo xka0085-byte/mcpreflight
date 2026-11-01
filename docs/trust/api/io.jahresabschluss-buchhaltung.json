@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:54.930Z",
+  "server": {
+    "registryName": "io.jahresabschluss/buchhaltung",
+    "title": "Jahresabschluss.io – Buchhaltung & Steuern",
+    "description": "Buchhaltung & Steuern deutscher Firmen per KI-Agent · German bookkeeping, VAT & tax prep via MCP",
+    "registryVersion": "2026.10.2"
+  },
+  "endpoint": "https://api.jahresabschluss.io/functions/v1/bookkeeping-mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.jahresabschluss.io/functions/v1/bookkeeping-mcp"
+}

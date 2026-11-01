@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:35.974Z",
+  "server": {
+    "registryName": "live.alpic.staging.send-email-mcp-04d3fdca/send-email-mcp",
+    "title": "My MCP Serv",
+    "description": "Non functional server (yet)",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://send-email-mcp-04d3fdca.staging.alpic.live",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Resend Email",
+      "version": "1.16.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].sender_email has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].to_emails has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].subject has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].text_content has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].html_content has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://send-email-mcp-04d3fdca.staging.alpic.live"
+}

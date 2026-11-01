@@ -1,0 +1,55 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:20.431Z",
+  "server": {
+    "registryName": "today.nyangi/oneul-nyangi",
+    "title": "오늘냥이 (Oneul Nyangi)",
+    "description": "Real cat photos, diaries, profiles, age and food reference calculators, and breeds.",
+    "registryVersion": "0.7.0"
+  },
+  "endpoint": "https://nyangi.today/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "oneul-nyangi-public",
+      "title": "오늘냥이 공개 MCP",
+      "version": "0.7.0",
+      "websiteUrl": "https://nyangi.today",
+      "icons": [
+        {
+          "src": "https://nyangi.today/icon-192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].facets has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].facets has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].sort has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://nyangi.today/mcp"
+}

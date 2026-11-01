@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:52.091Z",
+  "server": {
+    "registryName": "com.collatiomedia/bettingtipsai",
+    "title": "Betting Tips AI",
+    "description": "Public read-only football and cricket match tips from bettingtipsai.com.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://bettingtipsai.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bettingtipsai",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bettingtipsai.com/api/mcp"
+}

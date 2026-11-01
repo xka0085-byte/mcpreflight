@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:43.882Z",
+  "server": {
+    "registryName": "app.replit.paid-mcp-opportunity-lab--taylorboucher1/base-token-tools",
+    "title": "Paid Base Token Tools",
+    "description": "Base token facts and ERC-20 allowance checks. Per-call USDC on Base; x402 wallet required.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://paid-mcp-opportunity-lab--taylorboucher1.replit.app/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paid-mcp-opportunity-lab",
+      "version": "0.2.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].tokenAddress has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].ownerAddress has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].spenderAddress has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].reported has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://paid-mcp-opportunity-lab--taylorboucher1.replit.app/api/mcp"
+}

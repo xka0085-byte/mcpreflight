@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:59.067Z",
+  "server": {
+    "registryName": "io.github.lookoutstats/lookout-mcp",
+    "title": "Lookout",
+    "description": "Ask about Vercel Web Analytics and Speed Insights across all your projects and boards.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://mcp.lookoutstats.com",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.lookoutstats.com"
+}

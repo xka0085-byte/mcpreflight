@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:42.650Z",
+  "server": {
+    "registryName": "app.scanyoursite/scanyoursite",
+    "title": "ScanYourSite",
+    "description": "Outside-in audit of a live site: leaked keys, headers, TLS, SPF/DMARC, privacy, SEO, with fixes",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://scanyoursite.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://scanyoursite.app/mcp"
+}

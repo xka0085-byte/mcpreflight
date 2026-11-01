@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:56.058Z",
+  "server": {
+    "registryName": "io.github.DataLeadsPRO/company-enrichment",
+    "title": "io.github.DataLeadsPRO/company-enrichment",
+    "description": "Enrich any domain into a full company profile with firmographics and buying signals.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://data.dataleads.pro/mcp/company-enrichment",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Company Enrichment API",
+      "version": "1.30.0"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].url has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].maxTimeout has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].domain has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].maxTimeout has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://data.dataleads.pro/mcp/company-enrichment"
+}

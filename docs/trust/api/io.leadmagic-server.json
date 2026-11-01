@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:00.441Z",
+  "server": {
+    "registryName": "io.leadmagic/server",
+    "title": "LeadMagic",
+    "description": "Research B2B accounts, enrich contacts, and clean and enrich your LeadMagic sheets through OAuth.",
+    "registryVersion": "2.23.5"
+  },
+  "endpoint": "https://mcp.leadmagic.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.leadmagic.io/mcp"
+}

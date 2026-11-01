@@ -1,0 +1,57 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:17.338Z",
+  "server": {
+    "registryName": "io.github.kjagsadvisors/foodchecker",
+    "title": "FoodChecker",
+    "description": "Is this food healthy? A 0-100 score from nutrition, additives and processing (Open Food Facts).",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://foodchecker-ebon.vercel.app/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "foodchecker",
+      "version": "0.1.0",
+      "title": "FoodChecker",
+      "websiteUrl": "https://foodchecker-ebon.vercel.app",
+      "icons": [
+        {
+          "src": "https://foodchecker-ebon.vercel.app/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://foodchecker-ebon.vercel.app/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].product_name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].brand has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://foodchecker-ebon.vercel.app/mcp"
+}

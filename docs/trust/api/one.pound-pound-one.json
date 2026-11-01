@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:46:00.826Z",
+  "server": {
+    "registryName": "one.pound/pound-one",
+    "title": "pound.one",
+    "description": "UK inflation, take-home pay and public spending calculators with sources and shareable results.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pound.one/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "one.pound/pound-one",
+      "title": "pound.one",
+      "version": "1.0.0",
+      "websiteUrl": "https://pound.one/mcp/docs"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].mode has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pound.one/mcp"
+}

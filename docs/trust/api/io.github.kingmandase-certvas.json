@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:00.796Z",
+  "server": {
+    "registryName": "io.github.KingMandase/certvas",
+    "title": "Certvas — African & EM Markets",
+    "description": "License-clean African & EM data as citable agent tools: company fundamentals, tenders (OCDS), macro.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://dataco-mcp.northtide.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://dataco-mcp.northtide.workers.dev/mcp"
+}

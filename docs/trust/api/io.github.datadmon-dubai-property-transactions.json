@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:05.740Z",
+  "server": {
+    "registryName": "io.github.datadmon/dubai-property-transactions",
+    "title": "Dubai DLD Property Transactions (Apify) - registered sales, mortgages, gifts",
+    "description": "Dubai Land Department transactions as JSON: sales, mortgages, gifts, AED, price/sqm. $1/1k",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://mcp.apify.com/?tools=data_daemon/dubai-property-transactions",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com/?tools=data_daemon/dubai-property-transactions"
+}

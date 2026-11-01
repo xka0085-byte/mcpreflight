@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:38.129Z",
+  "server": {
+    "registryName": "io.github.dhardestylewis/homecastr-remote",
+    "title": "Homecastr Remote MCP",
+    "description": "Remote MCP endpoint for U.S. home forecasts, public benchmark data, and permit or zoning readiness.",
+    "registryVersion": "1.14.0"
+  },
+  "endpoint": "https://www.homecastr.com/api/mcp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "homecastr-mcp-server",
+      "version": "1.16.0"
+    },
+    "toolCount": 44,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "44 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.homecastr.com/api/mcp/mcp"
+}

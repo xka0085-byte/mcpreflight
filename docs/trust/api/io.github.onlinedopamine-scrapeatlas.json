@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:11.061Z",
+  "server": {
+    "registryName": "io.github.OnlineDopamine/scrapeatlas",
+    "title": "ScrapeAtlas",
+    "description": "Unified social scraper MCP — profiles, posts, videos across ~40 platforms via Streamable HTTP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.scrapeatlas.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.scrapeatlas.com/mcp"
+}

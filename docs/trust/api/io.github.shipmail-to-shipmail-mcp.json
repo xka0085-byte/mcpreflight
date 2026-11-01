@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:20.709Z",
+  "server": {
+    "registryName": "io.github.shipmail-to/shipmail-mcp",
+    "title": "io.github.shipmail-to/shipmail-mcp",
+    "description": "Modern email for your business. Inboxes, calendars, newsletters and an API for your agents.",
+    "registryVersion": "0.9.9"
+  },
+  "endpoint": "https://shipmail.to/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://shipmail.to/api/mcp"
+}

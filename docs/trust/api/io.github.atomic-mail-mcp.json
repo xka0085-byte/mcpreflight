@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:57.656Z",
+  "server": {
+    "registryName": "io.github.Atomic-Mail/mcp",
+    "title": "Atomic Mail",
+    "description": "Programmable email inbox for AI agents — JMAP, PoW auth, stdio MCP server.",
+    "registryVersion": "0.3.27"
+  },
+  "endpoint": "https://mcp.atomicmail.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.atomicmail.ai/mcp"
+}

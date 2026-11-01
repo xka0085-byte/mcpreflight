@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:08.762Z",
+  "server": {
+    "registryName": "tech.spriteforge/editor",
+    "title": "SpriteForge Editor",
+    "description": "Free pixel and tileset editor, no account: hand-edit sprites, animations and Wang tilesets in chat",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://www.spriteforge.tech/mcp/editor",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "spriteforge-editor",
+      "title": "SpriteForge Editor",
+      "version": "0.1.0"
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].session_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].session_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.spriteforge.tech/mcp/editor"
+}

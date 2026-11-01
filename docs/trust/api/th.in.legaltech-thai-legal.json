@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:16.190Z",
+  "server": {
+    "registryName": "th.in.legaltech/thai-legal",
+    "title": "Thai Legal",
+    "description": "Thai legal search MCP — statutes, gazette, opinions, court cases, with checkable citations.",
+    "registryVersion": "2.68.0"
+  },
+  "endpoint": "https://mcp.legaltech.in.th/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.legaltech.in.th/mcp"
+}

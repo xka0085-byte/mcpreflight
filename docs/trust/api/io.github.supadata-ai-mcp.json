@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:07.846Z",
+  "server": {
+    "registryName": "io.github.supadata-ai/mcp",
+    "title": "Supadata",
+    "description": "Video transcripts, metadata and structured data from YouTube, TikTok, Instagram, X; web scraping.",
+    "registryVersion": "1.3.6"
+  },
+  "endpoint": "https://api.supadata.ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.supadata.ai/mcp"
+}

@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:59.281Z",
+  "server": {
+    "registryName": "io.github.cfgenius145-sketch/cf-exclusion-check",
+    "title": "io.github.cfgenius145-sketch/cf-exclusion-check",
+    "description": "Pay-per-call screening against HHS-OIG LEIE and SAM.gov exclusions.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://exclusions.cfsoft.us/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "CF Exclusion Check",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].items has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://exclusions.cfsoft.us/mcp"
+}

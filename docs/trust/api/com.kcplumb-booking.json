@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:19.837Z",
+  "server": {
+    "registryName": "com.kcplumb/booking",
+    "title": "KC Plumb — book plumber in Kansas City",
+    "description": "Book plumber in Kansas City, MO: prices, service area by ZIP, free callback from a local pro.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://kcplumb.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kcplumb.com-booking",
+      "title": "KC Plumb — book plumber in Kansas City",
+      "version": "1.0.0",
+      "websiteUrl": "https://kcplumb.com/for-ai-assistants"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].zip has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kcplumb.com/mcp"
+}

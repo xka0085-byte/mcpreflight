@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:06.796Z",
+  "server": {
+    "registryName": "com.scriptmasterlabs/mnemos",
+    "title": "SCRIPTMASTERLABS — MNEMOS Options Radar",
+    "description": "Options radar MCP: Astra scorecard, decisions ledger, options scans, gas + arb. x402 USDC on Base.",
+    "registryVersion": "2.0.1"
+  },
+  "endpoint": "https://mnemos-agent.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "scriptmasterlabs-mnemos",
+      "version": "2.0.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].symbol has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].chain has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mnemos-agent.onrender.com/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:58.952Z",
+  "server": {
+    "registryName": "dev.paidfor/paidfor",
+    "title": "paidfor",
+    "description": "Check an x402 seller before paying: verdict, failure rate and evidence from paid calls on Base.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://mcp.paidfor.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "paidfor",
+      "title": "paidfor: x402 seller reliability",
+      "version": "0.4.0",
+      "description": "Helps an agent decide whether to pay an x402 API seller on Base: verdicts, failure rates and evidence from real paid calls, a list of sellers that have never failed, and a feed of recent changes. No account or API key needed.",
+      "websiteUrl": "https://paidfor.dev",
+      "icons": [
+        {
+          "src": "https://paidfor.dev/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.paidfor.dev/mcp"
+}

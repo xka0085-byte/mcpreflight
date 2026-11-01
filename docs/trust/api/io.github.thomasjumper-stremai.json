@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:50.262Z",
+  "server": {
+    "registryName": "io.github.thomasjumper/stremai",
+    "title": "StremAI",
+    "description": "StremAI MCP: shared memory for AI coding agents. Connected agents can recall. OAuth + local stdio.",
+    "registryVersion": "1.2.5"
+  },
+  "endpoint": "https://stremai.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://stremai.com/api/mcp"
+}

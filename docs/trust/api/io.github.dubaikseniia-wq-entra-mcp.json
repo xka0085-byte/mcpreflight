@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:51.731Z",
+  "server": {
+    "registryName": "io.github.dubaikseniia-wq/entra-mcp",
+    "title": "ENTRA Jobs",
+    "description": "Verified AI/tech jobs from company ATSs: search, fit matching, salary stats; employer job posting",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://mcp.entracareers.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "entra",
+      "version": "0.4.0"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].remote_only has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.entracareers.com/mcp"
+}

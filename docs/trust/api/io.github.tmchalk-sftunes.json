@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:12.892Z",
+  "server": {
+    "registryName": "io.github.TMCHALK/sftunes",
+    "title": "io.github.TMCHALK/sftunes",
+    "description": "Hand-made human mixtapes with liner notes. Paid tools $0.01 USDC via x402, 80% to the tapemaker.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sftunes.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sftunes",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tape_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sftunes.com/api/mcp"
+}

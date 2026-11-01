@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:25:57.330Z",
+  "server": {
+    "registryName": "io.github.pencilink/pencil",
+    "title": "Pencil",
+    "description": "Manage tasks, projects, roadmaps, files, meetings, and team workflows with AI tools.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://app.pencil.ink/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.pencil.ink/api/mcp"
+}

@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:32.402Z",
+  "server": {
+    "registryName": "io.github.theluckystrike/exchange-rates",
+    "title": "io.github.theluckystrike/exchange-rates",
+    "description": "Convert currencies on the daily European Central Bank reference rates. No API key, no signup.",
+    "registryVersion": "0.21.1"
+  },
+  "endpoint": "https://mcp.zovo.one/mcp/exchange-rates",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mcp-currency",
+      "version": "0.22.6"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].from has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.zovo.one/mcp/exchange-rates"
+}

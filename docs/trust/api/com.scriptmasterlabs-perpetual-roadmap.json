@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:55:06.569Z",
+  "server": {
+    "registryName": "com.scriptmasterlabs/perpetual-roadmap",
+    "title": "SCRIPTMASTERLABS — Perpetual Roadmap",
+    "description": "AMC/GME 25-session DTW price roadmaps from real market data; paid via x402 USDC on Base.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://perpetual-roadmap-api.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sml-perpetual-roadmap",
+      "title": "SML Perpetual Roadmap",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].symbol has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://perpetual-roadmap-api.onrender.com/mcp"
+}

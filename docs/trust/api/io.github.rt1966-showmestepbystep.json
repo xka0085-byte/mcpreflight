@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:32:29.674Z",
+  "server": {
+    "registryName": "io.github.rt1966/showmestepbystep",
+    "title": "ShowMeStepByStep",
+    "description": "Search, browse, and cite 409 step-by-step how-to tutorials (steps, tools, video credit).",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://www.showmestepbystep.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "showmestepbystep-mcp",
+      "version": "0.1.0",
+      "description": "Show Me Step by Step tutorial corpus exposed as MCP tools. Search, browse, and fetch structured step-by-step how-to tutorials with creator credits, ingredients, tools, and step prose."
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.showmestepbystep.com/api/mcp"
+}

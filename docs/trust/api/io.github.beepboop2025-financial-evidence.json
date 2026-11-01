@@ -1,0 +1,44 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:16.825Z",
+  "server": {
+    "registryName": "io.github.beepboop2025/financial-evidence",
+    "title": "Financial Evidence",
+    "description": "Read-only public financial evidence from LiquiLens, Undertow, Seiche and Palimpsest.",
+    "registryVersion": "0.1.16"
+  },
+  "endpoint": "https://liquilens.in/mcp/financial-evidence",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "financial-evidence",
+      "version": "0.1.8"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].topics has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].topics has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].max_bytes has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].timeout has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://liquilens.in/mcp/financial-evidence"
+}

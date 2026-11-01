@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:44:47.663Z",
+  "server": {
+    "registryName": "com.autocarena/auctions",
+    "title": "Carena Auctions",
+    "description": "Search Copart, IAAI and ADESA vehicles, check your wallet, and prepare bids you confirm on Carena.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://auctions.autocarena.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://auctions.autocarena.com/mcp"
+}

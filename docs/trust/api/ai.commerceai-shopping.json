@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:37:57.697Z",
+  "server": {
+    "registryName": "ai.commerceai/shopping",
+    "title": "CommerceAI",
+    "description": "The E-commerce Marketplace For Every AI Agent. A Governed Catalog Of 600M+ US Products.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://commerceai.ai/mcp/",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://commerceai.ai/mcp/"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:36.466Z",
+  "server": {
+    "registryName": "io.github.henrikthome-arch/epivo-catalog",
+    "title": "Epivo Course Catalog",
+    "description": "Read-only access to Epivo's live course catalogue for AI agents.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.epivo.ai/api/v1/public/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "epivo-catalog",
+      "version": "1.30.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].audience has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].language has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.epivo.ai/api/v1/public/mcp"
+}

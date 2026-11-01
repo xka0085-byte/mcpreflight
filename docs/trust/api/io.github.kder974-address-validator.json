@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:59.671Z",
+  "server": {
+    "registryName": "io.github.Kder974/address-validator",
+    "title": "Address Validator",
+    "description": "Valide une adresse de livraison : normalisation, geocodage, score de livrabilite. x402.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://kder-ai.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "address-validator",
+      "title": "Address Validator API",
+      "version": "1.0.0"
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].address has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kder-ai.com/mcp"
+}

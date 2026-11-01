@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:08:48.982Z",
+  "server": {
+    "registryName": "io.github.FilippoPilo/cortex",
+    "title": "Cortex",
+    "description": "Patent-pending semantic memory for AI agents: quality-gated writes, conflict tracking. Free trial.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://skynetlab-cortex-saas-mcp.cortex-320.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "SKYNETLAB-Cortex",
+      "title": "Cortex",
+      "version": "1.0.0",
+      "websiteUrl": "https://skynetlab-cortex.com",
+      "icons": [
+        {
+          "src": "https://skynetlab-cortex-saas-mcp.cortex-320.workers.dev/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].tags has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://skynetlab-cortex-saas-mcp.cortex-320.workers.dev/mcp"
+}

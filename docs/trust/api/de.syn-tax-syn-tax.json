@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:42.743Z",
+  "server": {
+    "registryName": "de.syn-tax/syn-tax",
+    "title": "syn.tax",
+    "description": "German tax-firm workflows: clients, deadlines, documents, time tracking and DATEV data via OAuth.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://actions.syn-tax.de/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://actions.syn-tax.de/mcp"
+}

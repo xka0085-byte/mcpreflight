@@ -1,0 +1,56 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:31:27.312Z",
+  "server": {
+    "registryName": "io.github.pjtribot-blip/pauline",
+    "title": "Pauline — Crescendo Magazine",
+    "description": "Classical music discovery: 656 composers (women & lesser-known), concerts in Belgium, CD reviews.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://pauline.crescendo-magazine.be/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pauline",
+      "title": "Pauline — Crescendo Magazine",
+      "version": "1.1.0",
+      "websiteUrl": "https://pauline.crescendo-magazine.be"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].periode has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].pays has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].categorie has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limite has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limite has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pauline.crescendo-magazine.be/mcp"
+}

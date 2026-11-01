@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:12:47.043Z",
+  "server": {
+    "registryName": "io.github.Vosikkk/google-analytics-mcp",
+    "title": "Vosik Signals Google Analytics 4",
+    "description": "Read-only Google Analytics 4 MCP server for AI assistants.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://ga4.vosiksignals.win/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://ga4.vosiksignals.win/mcp"
+}

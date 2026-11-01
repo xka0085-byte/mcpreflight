@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:54.881Z",
+  "server": {
+    "registryName": "com.localaipicks/localaipicks",
+    "title": "Local AI Picks",
+    "description": "Find open-weight AI models that fit your hardware, with weight sizes, memory and sources.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://localaipicks.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "localaipicks",
+      "title": "Local AI Picks",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slugs has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://localaipicks.com/mcp"
+}

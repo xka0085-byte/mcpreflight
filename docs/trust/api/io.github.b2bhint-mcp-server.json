@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:58.935Z",
+  "server": {
+    "registryName": "io.github.B2BHint/mcp-server",
+    "title": "B2BHint MCP Server",
+    "description": "Search and resolve companies/officers in B2BHint's global registry data. Requires a paid API key.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://b2bhint.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://b2bhint.com/api/mcp"
+}

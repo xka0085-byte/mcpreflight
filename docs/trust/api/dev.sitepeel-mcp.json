@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:21.840Z",
+  "server": {
+    "registryName": "dev.sitepeel/mcp",
+    "title": "Sitepeel",
+    "description": "DESIGN.md, clone prompts, HTML, screenshots, assets, fonts, colors and tech stack of any website.",
+    "registryVersion": "1.5.0"
+  },
+  "endpoint": "https://sitepeel.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sitepeel.dev/mcp"
+}

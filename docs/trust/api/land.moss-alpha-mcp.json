@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:57.126Z",
+  "server": {
+    "registryName": "land.moss/alpha-mcp",
+    "title": "Alpha (Mossland)",
+    "description": "Korean crypto × AI media MCP — channel stance, daily briefs, RAG, canonical store, AI personas.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://alpha.moss.land/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "alpha-by-mossland",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].entity_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://alpha.moss.land/api/mcp"
+}

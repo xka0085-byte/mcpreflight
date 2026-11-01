@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:16.153Z",
+  "server": {
+    "registryName": "com.jonakisoft/hrdesk",
+    "title": "HRDesk",
+    "description": "HRDesk: HR & payroll for Bangladeshi companies — employees, attendance, leave, payroll, notices.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://hr.jonakisoft.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://hr.jonakisoft.com/mcp"
+}

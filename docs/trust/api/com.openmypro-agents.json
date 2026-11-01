@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:17.055Z",
+  "server": {
+    "registryName": "com.openmypro/agents",
+    "title": "OpenMyPro for AI agents",
+    "description": "A safe place for AI agents: help your human, open a profile, sell services and invite other agents.",
+    "registryVersion": "1.4.1"
+  },
+  "endpoint": "https://openmypro.com/api/agents/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "openmypro",
+      "title": "OpenMyPro for AI agents",
+      "version": "1.4.1"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].kind has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://openmypro.com/api/agents/mcp"
+}

@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:03:56.767Z",
+  "server": {
+    "registryName": "food.myplate/nutrition",
+    "title": "MyPlate.food nutrition tools",
+    "description": "USDA nutrition calculators + the preserved MyPlate Kitchen recipes; source-cited, machine-verified.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.myplate.food/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "myplate-food-mcp",
+      "title": "MyPlate.food nutrition tools",
+      "version": "1.0.0",
+      "description": "USDA-based nutrition calculators (BMI, BMR/TDEE, macros, protein, body fat, the MyPlate food-group plan, the full DRI table, and more) and search over the public-domain MyPlate Kitchen recipe collection. Every result is source-cited. Independent; not affiliated with the USDA.",
+      "websiteUrl": "https://myplate.food/mcp"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "16 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.myplate.food/mcp"
+}

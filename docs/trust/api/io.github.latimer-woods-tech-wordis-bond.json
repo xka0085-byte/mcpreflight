@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:12.892Z",
+  "server": {
+    "registryName": "io.github.Latimer-Woods-Tech/wordis-bond",
+    "title": "Word Is Bond",
+    "description": "Test the voice agents you run: scored transcripts, pass/fail verdicts, latency and WER metrics.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://api.wordis-bond.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wordis-bond",
+      "title": "Word Is Bond",
+      "version": "0.1.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].expected has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].bargeIn has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].name has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.wordis-bond.com/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:17.098Z",
+  "server": {
+    "registryName": "io.github.kindrat86/invisibleexit",
+    "title": "Invisible Exit",
+    "description": "Faceless micro-SaaS system for employed professionals. Build $4K/mo without quitting",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://invisibleexit.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "invisibleexit-mcp",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].idea has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].industry has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://invisibleexit.com/api/mcp"
+}

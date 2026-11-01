@@ -1,0 +1,51 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:26.256Z",
+  "server": {
+    "registryName": "com.haalaan/travel-esim",
+    "title": "haalaan China eSIM",
+    "description": "Browse haalaan China, Hong Kong, Macau and Greater China eSIM plans in USD. Get a checkout link.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://mcp.haalaan.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "haalaan",
+      "version": "0.1.0",
+      "title": "haalaan travel eSIMs",
+      "description": "Travel eSIM plans from haalaan. Returns only destinations currently available."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].destination has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].days has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].need has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].destination has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.haalaan.com/mcp"
+}

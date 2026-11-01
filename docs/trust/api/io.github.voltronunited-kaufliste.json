@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:38:59.360Z",
+  "server": {
+    "registryName": "io.github.voltronunited/kaufliste",
+    "title": "Kaufliste",
+    "description": "Persistent shopping memory for AI assistants. The AI reasons; Kaufliste stores and executes.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://kaufliste.ch/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://kaufliste.ch/mcp"
+}

@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:17:58.015Z",
+  "server": {
+    "registryName": "io.github.getedgehq/edge",
+    "title": "Edge",
+    "description": "Gives your agent the right public skill for each task and loads it on demand.",
+    "registryVersion": "0.6.46"
+  },
+  "endpoint": "https://getedge.cc/mcp?ref=mcp-registry",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "edge",
+      "title": "Edge Skills",
+      "version": "0.5.0"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].request_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://getedge.cc/mcp?ref=mcp-registry"
+}

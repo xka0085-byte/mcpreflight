@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:24:10.260Z",
+  "server": {
+    "registryName": "io.github.me-qr/mcp-server",
+    "title": "ME-QR MCP Server",
+    "description": "Create and manage QR codes on me-qr.com from AI clients like Claude and ChatGPT.",
+    "registryVersion": "1.0.9"
+  },
+  "endpoint": "https://mcp.me-qr.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.me-qr.com/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:46.091Z",
+  "server": {
+    "registryName": "io.github.joleschmidt/palim",
+    "title": "Palim",
+    "description": "Hosted MCP memory: save sessions/decisions once, search from Claude, Cursor, ChatGPT. EU-hosted FTS.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.usepalim.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "palim",
+      "version": "1.0.0",
+      "title": "Palim",
+      "description": "Hosted MCP memory: save sessions and decisions once, search them from Claude, Cursor, ChatGPT, and other MCP clients. EU-hosted. Explicit save + PostgreSQL full-text search.",
+      "websiteUrl": "https://usepalim.com",
+      "icons": [
+        {
+          "src": "https://api.usepalim.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 11,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "11 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.usepalim.com/mcp"
+}

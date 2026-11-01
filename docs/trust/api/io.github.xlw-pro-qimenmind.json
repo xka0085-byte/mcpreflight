@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:20.206Z",
+  "server": {
+    "registryName": "io.github.xlw-pro/qimenmind",
+    "title": "QimenMind Qimen Dunjia Chart",
+    "description": "Cast Qimen Dunjia (奇门遁甲) charts: four pillars, Ju, nine palaces, stars, doors and deities.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.qimenmind.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "qimenmind",
+      "title": "QimenMind Qimen Dunjia Chart",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.qimenmind.com/en"
+    },
+    "toolCount": 2,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].year has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].month has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].day has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].minute has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.qimenmind.com/api/mcp"
+}

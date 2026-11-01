@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:23.344Z",
+  "server": {
+    "registryName": "io.github.koynlabs/koyn-fx",
+    "title": "KOYN FX",
+    "description": "Remote MCP for KOYN FX: account, markets, and TradeLocker tools over OAuth.",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://agent.koynfx.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent.koynfx.com/mcp"
+}

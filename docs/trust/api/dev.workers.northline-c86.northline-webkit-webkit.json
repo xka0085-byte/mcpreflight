@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:55.342Z",
+  "server": {
+    "registryName": "dev.workers.northline-c86.northline-webkit/webkit",
+    "title": "Northline WebKit",
+    "description": "Pay-per-call web tools for agents: URL to markdown, metadata, links, DNS, email/domain checks, RDAP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://northline-webkit.northline-c86.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "northline-webkit",
+      "title": "Northline WebKit",
+      "version": "1.0.0"
+    },
+    "toolCount": 10,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].userAgent has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://northline-webkit.northline-c86.workers.dev/mcp"
+}

@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:15.133Z",
+  "server": {
+    "registryName": "technology.sarmad/public-content",
+    "title": "Sarmad Academy, Products and Guides",
+    "description": "Read-only Persian courses, EEG/QEEG guides, articles and live product prices with source links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://sarmad.technology/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sarmad-public-content",
+      "title": "Sarmad public knowledge",
+      "version": "1.0.0",
+      "websiteUrl": "https://sarmad.technology/ai"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sarmad.technology/mcp"
+}

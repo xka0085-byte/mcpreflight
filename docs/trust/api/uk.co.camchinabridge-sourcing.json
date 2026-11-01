@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:49:40.722Z",
+  "server": {
+    "registryName": "uk.co.camchinabridge/sourcing",
+    "title": "Cambridge China Bridge — China sourcing",
+    "description": "UK import duty, landed cost, anti-dumping and compliance checks for China-sourced goods.",
+    "registryVersion": "1.1.0"
+  },
+  "endpoint": "https://camchinabridge.co.uk/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cambridge-china-bridge",
+      "title": "Cambridge China Bridge",
+      "version": "1.0.0",
+      "websiteUrl": "https://camchinabridge.co.uk"
+    },
+    "toolCount": 16,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].market has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].name has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].hs_code has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].market has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://camchinabridge.co.uk/mcp"
+}

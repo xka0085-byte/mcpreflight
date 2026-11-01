@@ -1,0 +1,50 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:20.534Z",
+  "server": {
+    "registryName": "io.github.PickleCheck/picklecheck",
+    "title": "PickleCheck",
+    "description": "Scam, x402 endpoint and payment checks for AI trading agents on Base. Free calls daily, then x402.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://picklecheck.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "picklecheck",
+      "title": "PickleCheck",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tx_hash has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].receiver has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].exact has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].not_before has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].expected_from has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://picklecheck.onrender.com/mcp"
+}

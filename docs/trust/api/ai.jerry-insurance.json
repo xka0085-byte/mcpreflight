@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:36.771Z",
+  "server": {
+    "registryName": "ai.jerry/insurance",
+    "title": "Jerry Insurance",
+    "description": "Compare US car, home and renters insurance quotes with Jerry. Sign-in required; buy in the app.",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://mcp.jerry.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-mcp",
+      "version": "0.0.1"
+    },
+    "toolCount": 8,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].application has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].confirmation has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.jerry.ai/mcp"
+}

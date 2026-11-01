@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:52.306Z",
+  "server": {
+    "registryName": "io.github.Aramco2025/ait-execution-diagnostic",
+    "title": "AIT Advisory — Enterprise Execution Diagnostic",
+    "description": "AIT Advisory: $2,400 executive diagnostic for organisational friction, decisions and AI workflows.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.aitadvisory.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "AIT Advisory Enterprise Execution",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].friction_signals has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].purchase_method has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.aitadvisory.com/mcp"
+}

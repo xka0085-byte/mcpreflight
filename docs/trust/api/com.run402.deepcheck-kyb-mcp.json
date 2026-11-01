@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:54:44.150Z",
+  "server": {
+    "registryName": "com.run402.deepcheck-kyb/mcp",
+    "title": "DeepCheck KYB v4.0 MCP",
+    "description": "Real-time B2B counterparty KYB, SSL, DNSSEC & DMARC/SPF trust verifier ($1 USDC).",
+    "registryVersion": "4.0.0"
+  },
+  "endpoint": "https://deepcheck-kyb.run402.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "DeepCheck KYB",
+      "version": "4.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].email_or_contact has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].offer_usd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].tier has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://deepcheck-kyb.run402.com/api/mcp"
+}

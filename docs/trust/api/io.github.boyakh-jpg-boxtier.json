@@ -1,0 +1,34 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:38.067Z",
+  "server": {
+    "registryName": "io.github.boyakh-jpg/boxtier",
+    "title": "BoxTier Basketball Receipt",
+    "description": "Create a BoxTier-style PNG receipt from user-provided basketball game results.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://boxtier.kr/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "boxtier",
+      "version": "1.1.1"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].offset has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://boxtier.kr/mcp"
+}

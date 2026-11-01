@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:15:22.487Z",
+  "server": {
+    "registryName": "io.github.cognicore-dev/cognicore-env",
+    "title": "CogniCore",
+    "description": "Memory, reflection and safety for AI agents. Hosted or local, no vector database.",
+    "registryVersion": "0.10.3"
+  },
+  "endpoint": "https://mcp.cognicoree.tech/mcp/stream",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.cognicoree.tech/mcp/stream"
+}

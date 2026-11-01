@@ -1,0 +1,40 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:40.987Z",
+  "server": {
+    "registryName": "com.dougalpaw/pawpulse",
+    "title": "Paw Pulse",
+    "description": "Heartbeat and tokens/sec monitoring for self-hosted LLM servers (Ollama etc.), with down alerts.",
+    "registryVersion": "0.3.0"
+  },
+  "endpoint": "https://pulse.dougalpaw.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pawpulse",
+      "title": "Paw Pulse",
+      "version": "0.3.0",
+      "websiteUrl": "https://pulse.dougalpaw.com",
+      "icons": [
+        {
+          "src": "https://pulse.dougalpaw.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 6,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].public has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pulse.dougalpaw.com/mcp"
+}

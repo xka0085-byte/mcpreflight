@@ -1,0 +1,54 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:38:18.988Z",
+  "server": {
+    "registryName": "ai.funkel/funkel",
+    "title": "Funkel AI",
+    "description": "Run LinkedIn and email outreach: find leads, manage campaigns, and reply to prospects.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.funkel.ai/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "funkel",
+      "title": "Funkel",
+      "version": "1.0.0",
+      "icons": [
+        {
+          "src": "https://funkel.ai/brand/app-icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://funkel.ai/brand/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://funkel.ai/brand/logo.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ],
+      "websiteUrl": "https://funkel.ai"
+    },
+    "toolCount": 51,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[20].enabled has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.funkel.ai/mcp"
+}

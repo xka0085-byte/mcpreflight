@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:51:48.106Z",
+  "server": {
+    "registryName": "com.novicorpus/legal-body",
+    "title": "Novi Corpus",
+    "description": "A legal body for AI agents: a real company, a verified human and spending rules on Arc (testnet).",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.novicorpus.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.novicorpus.com/mcp"
+}

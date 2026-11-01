@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:18:41.664Z",
+  "server": {
+    "registryName": "io.github.hostkey-cloud/mcp-server",
+    "title": "io.github.hostkey-cloud/mcp-server",
+    "description": "MCP server for Hostkey .com (InvAPI): servers, power, order, DNS, S3, billing",
+    "registryVersion": "1.0.8"
+  },
+  "endpoint": "https://mcp.hostkey.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.hostkey.com/mcp"
+}

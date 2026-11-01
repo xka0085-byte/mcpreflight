@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:14:01.277Z",
+  "server": {
+    "registryName": "io.github.atmflow55/datafood-mcp",
+    "title": "io.github.atmflow55/datafood-mcp",
+    "description": "DataFood: 16 data sources (crypto/DeFi/security/news/finance) via one MCP. Bundles save ~92%.",
+    "registryVersion": "6.0.2"
+  },
+  "endpoint": "https://toughlovesec.win/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "datafood",
+      "title": "DataFood — Universal Data API",
+      "version": "6.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].queries has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].user_id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://toughlovesec.win/mcp"
+}

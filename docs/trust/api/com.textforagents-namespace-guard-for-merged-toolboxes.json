@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:57:21.384Z",
+  "server": {
+    "registryName": "com.textforagents/namespace-guard-for-merged-toolboxes",
+    "title": "Namespace guard for merged toolboxes",
+    "description": "Pre-connection collision audit for merged MCP toolboxes, trust-graded, with signed routing receipts.",
+    "registryVersion": "1.0.9"
+  },
+  "endpoint": "https://textforagents.com/products/namespace-guard-for-merged-toolboxes/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "namespace-guard-for-merged-toolboxes",
+      "version": "1.0.9"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].candidate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].toolbox has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].candidate has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].receipts has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].chain_head has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://textforagents.com/products/namespace-guard-for-merged-toolboxes/mcp"
+}

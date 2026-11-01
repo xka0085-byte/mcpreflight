@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:03.835Z",
+  "server": {
+    "registryName": "io.github.KuudoAI/amazon-selling-partner-mcp",
+    "title": "Amazon Seller Central MCP server (Amazon Selling Partner MCP)",
+    "description": "MCP server for the Amazon Selling Partner API: orders, listings, pricing, FBA, and reimbursements.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://{SELLING_PARTNER_HOST}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{SELLING_PARTNER_HOST}/mcp"
+}

@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:45:36.486Z",
+  "server": {
+    "registryName": "com.certarc/certarc",
+    "title": "CertArc",
+    "description": "Free CISM, CISSP, CISA, AAISM and AAIA practice questions, and read-only access to your study.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://certarc.com/mcp/claude",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "certarc",
+      "version": "1.0.0"
+    },
+    "toolCount": 12,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].questionId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].confidence has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].take has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://certarc.com/mcp/claude"
+}

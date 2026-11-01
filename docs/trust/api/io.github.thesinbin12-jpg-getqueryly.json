@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:37:46.231Z",
+  "server": {
+    "registryName": "io.github.thesinbin12-jpg/getqueryly",
+    "title": "GetQueryly — AI Data Analyst",
+    "description": "Upload spreadsheets, get plain-English analysis with real computed charts and quality scores.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://getqueryly.com/mcp/mcp",
+  "trust": {
+    "finalStatus": "FAIL",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "getqueryly",
+      "version": "1.12.4"
+    },
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://getqueryly.com/mcp/mcp"
+}

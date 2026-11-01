@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:16.718Z",
+  "server": {
+    "registryName": "io.github.56zngkrk5c-arch/penny-delivery",
+    "title": "PENNY — Sovereign Music Delivery",
+    "description": "Deliver music to PENNY streaming: DDEX ERN or direct upload. $0.01/stream, 71% to rights holders.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://pennyhq.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "penny-distro",
+      "title": "PENNY — Sovereign Streaming Distro",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].label has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].contentOrigin has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].tracks has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].releaseId has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://pennyhq.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:09.812Z",
+  "server": {
+    "registryName": "ai.tailwind/tailwind-mcp",
+    "title": "Tailwind App",
+    "description": "Tailwind MCP server — list Pinterest accounts and create, schedule, and manage Pinterest posts.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.tailwind.ai",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.tailwind.ai"
+}

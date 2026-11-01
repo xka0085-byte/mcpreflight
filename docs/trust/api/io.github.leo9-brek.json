@@ -1,0 +1,45 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:44.200Z",
+  "server": {
+    "registryName": "io.github.leo9/brek",
+    "title": "Brek - Hotel Wholesale Booking",
+    "description": "Search hotels, compare room offers and public or masked wholesale rates, then continue on Brek.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.brek.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "brek",
+      "title": "Brek.com",
+      "version": "1.0.0",
+      "websiteUrl": "https://www.brek.com/help/connectors",
+      "icons": [
+        {
+          "src": "https://mcp.brek.com/brand/icon.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].availabilityToken has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.brek.com/mcp"
+}

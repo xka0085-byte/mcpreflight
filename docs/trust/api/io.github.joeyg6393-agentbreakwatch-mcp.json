@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:42.103Z",
+  "server": {
+    "registryName": "io.github.joeyg6393/agentbreakwatch-mcp",
+    "title": "AgentBreakWatch",
+    "description": "Audit AI Agent SDKs and MCP servers for breaking changes, schema drift, and migration fixes.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://agentbreakwatch.com/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agentbreakwatch-mcp",
+      "version": "1.2.1",
+      "homepage": "https://agentbreakwatch.com",
+      "description": "Official AgentBreakWatch MCP server. Query live npm and PyPI versions, 90-day release velocity, MCP tools/list schema drift risk, and copy-paste migration diffs across 32 core AI Agent SDKs and 226 MCP servers (258 total packages)."
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agentbreakwatch.com/api/mcp"
+}

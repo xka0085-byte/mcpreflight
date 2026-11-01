@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:26.730Z",
+  "server": {
+    "registryName": "io.autoady.www/mcp",
+    "title": "io.autoady.www/mcp",
+    "description": "Run Meta ads from your AI assistant: briefings, drop diagnosis, winners, budgets, receipts.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://www.autoady.io/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.autoady.io/api/mcp"
+}

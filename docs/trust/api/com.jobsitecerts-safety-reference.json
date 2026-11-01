@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:49:08.607Z",
+  "server": {
+    "registryName": "com.jobsitecerts/safety-reference",
+    "title": "Jobsite Safety Reference (free)",
+    "description": "Free, no-login construction safety tools: OSHA rule text, toolbox talks, 1904 recordability.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jobsitecerts.com/api/mcp/public",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jobsite-mcp",
+      "title": "Jobsite",
+      "version": "1.0.0"
+    },
+    "toolCount": 7,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].death has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].loss_of_consciousness has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jobsitecerts.com/api/mcp/public"
+}

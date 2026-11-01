@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:01:12.438Z",
+  "server": {
+    "registryName": "dev.cotlet/peopleperhour",
+    "title": "PeoplePerHour by Cotlet",
+    "description": "Search projects, freelancers and Offers on PeoplePerHour, read briefs and profiles.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://cotlet.dev/mcp/v1/peopleperhour/connect",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://cotlet.dev/mcp/v1/peopleperhour/connect"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:08.418Z",
+  "server": {
+    "registryName": "info.storiesig/instagram-mcp",
+    "title": "StoriesIG Instagram MCP Server",
+    "description": "View and download public Instagram posts, reels, stories, highlights, followers, comments, no login",
+    "registryVersion": "1.0.3"
+  },
+  "endpoint": "https://api-wh.storiesig.info/instagram/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api-wh.storiesig.info/instagram/mcp"
+}

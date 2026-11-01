@@ -1,0 +1,49 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:40.094Z",
+  "server": {
+    "registryName": "io.github.Mila-Pirate/agent-university-empresas",
+    "title": "io.github.Mila-Pirate/agent-university-empresas",
+    "description": "Brazilian company data & sanctions screening for AI agents. Certified. Pay-per-call x402.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://agent-university-empresas.onrender.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Agent University - Faculty of Brazilian Companies",
+      "version": "4.1.4"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0] has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].cnpj has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].cnpj has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].cnpj has no description"
+      },
+      {
+        "code": "TOOL_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3] has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://agent-university-empresas.onrender.com/mcp"
+}

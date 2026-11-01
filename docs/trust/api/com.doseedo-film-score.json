@@ -1,0 +1,32 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:46:39.923Z",
+  "server": {
+    "registryName": "com.doseedo/film-score",
+    "title": "Doseedo Film Score: spot a video, play your score on AI instruments, mix it to picture",
+    "description": "Score video as an agent: cue sheet from the cut, 50+ AI instruments play your MIDI, mixed to picture",
+    "registryVersion": "0.21.0"
+  },
+  "endpoint": "https://api.doseedo.com/mcp/film",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "doseedo-film-score",
+      "title": "Doseedo Film Score: spot a video, play your score on AI instruments, mix it to picture",
+      "version": "0.21.0",
+      "description": "Score video as an agent: cue sheet from the cut, 50+ AI instruments play your MIDI, mixed to picture",
+      "websiteUrl": "https://doseedo.com/guides/score-a-film-with-an-ai-agent"
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].status has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.doseedo.com/mcp/film"
+}

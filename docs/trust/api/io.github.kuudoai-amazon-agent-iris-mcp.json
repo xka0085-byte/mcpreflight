@@ -1,0 +1,26 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:10:03.748Z",
+  "server": {
+    "registryName": "io.github.KuudoAI/amazon-agent-iris-mcp",
+    "title": "Amazon listing image and video MCP server (Amazon Agent Iris)",
+    "description": "MCP server that creates Amazon listing images and product video from live catalog data.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://{AGENT_IRIS_HOST}/mcp",
+  "trust": {
+    "finalStatus": "UNKNOWN",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://{AGENT_IRIS_HOST}/mcp"
+}

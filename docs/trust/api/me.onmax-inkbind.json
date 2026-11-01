@@ -1,0 +1,46 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:44:05.919Z",
+  "server": {
+    "registryName": "me.onmax/inkbind",
+    "title": "Inkbind",
+    "description": "Turn a story, memoir or recipes from the chat into a printed hardcover or softcover book.",
+    "registryVersion": "1.0.1"
+  },
+  "endpoint": "https://inkbind.onmax.me/mcp/claude",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "inkbind",
+      "title": "Inkbind",
+      "version": "1.0.0",
+      "websiteUrl": "https://inkbind.onmax.me"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].subtitle has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].book_id has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].format has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].speed has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://inkbind.onmax.me/mcp/claude"
+}

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:45:38.753Z",
+  "scannedAt": "2026-11-01T03:53:43.589Z",
   "server": {
     "registryName": "com.qorpiq/mca",
     "title": "QorpIQ: Indian company and director data (MCA)",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://mcp.qorpiq.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "qorpiq-mca",
+      "version": "0.1.2",
+      "title": "QorpIQ: Indian company and director data (MCA)"
+    },
+    "toolCount": 6,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "6 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.qorpiq.com/mcp"
 }

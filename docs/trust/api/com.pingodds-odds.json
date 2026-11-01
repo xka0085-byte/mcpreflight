@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:52:57.330Z",
+  "server": {
+    "registryName": "com.pingodds/odds",
+    "title": "PingOdds",
+    "description": "Live sportsbook odds, line movement and +EV and arbitrage signals from 14 US and Ontario books.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.pingodds.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.pingodds.com/mcp"
+}

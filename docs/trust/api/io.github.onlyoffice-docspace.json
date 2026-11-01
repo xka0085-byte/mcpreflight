@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:11:03.926Z",
+  "server": {
+    "registryName": "io.github.ONLYOFFICE/docspace",
+    "title": "io.github.ONLYOFFICE/docspace",
+    "description": "A room-based collaborative platform",
+    "registryVersion": "3.3.0"
+  },
+  "endpoint": "https://mcp.onlyoffice.com/sse",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.onlyoffice.com/sse"
+}

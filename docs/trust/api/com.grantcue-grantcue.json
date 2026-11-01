@@ -1,0 +1,30 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:48:19.003Z",
+  "server": {
+    "registryName": "com.grantcue/grantcue",
+    "title": "GrantCue",
+    "description": "Search public US grants and foundation profiles from IRS filings. Read-only, no sign-in.",
+    "registryVersion": "2.0.0"
+  },
+  "endpoint": "https://www.grantcue.com/api/v1/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "grantcue",
+      "title": "GrantCue",
+      "version": "2.0.0"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.grantcue.com/api/v1/mcp"
+}

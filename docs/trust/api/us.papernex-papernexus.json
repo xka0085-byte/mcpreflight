@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:50:45.247Z",
+  "server": {
+    "registryName": "us.papernex/papernexus",
+    "title": "Paper Nexus",
+    "description": "Find related scientific papers through their citation network, from OpenAlex and Semantic Scholar.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://papernex.us/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://papernex.us/mcp"
+}

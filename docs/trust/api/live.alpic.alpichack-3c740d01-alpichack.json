@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:26.805Z",
+  "server": {
+    "registryName": "live.alpic.alpichack-3c740d01/alpichack",
+    "title": "BrainFlow",
+    "description": "AI-powered ticket triage and workflow automation",
+    "registryVersion": "0.0.1"
+  },
+  "endpoint": "https://alpichack-3c740d01.alpic.live",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://alpichack-3c740d01.alpic.live"
+}

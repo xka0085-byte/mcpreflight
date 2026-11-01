@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:00:01.892Z",
+  "server": {
+    "registryName": "com.yieldcave/yieldcave",
+    "title": "YieldCave",
+    "description": "Tokenized asset data for agents: treasury yields, stablecoin rates, tokenized stocks, alerts.",
+    "registryVersion": "0.9.1"
+  },
+  "endpoint": "https://mcp.yieldcave.com",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "yieldcave",
+      "version": "0.9.0"
+    },
+    "toolCount": 19,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].kind has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].operator has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[14].id has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.yieldcave.com"
+}

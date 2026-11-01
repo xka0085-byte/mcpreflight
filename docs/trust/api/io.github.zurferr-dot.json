@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:39:40.532Z",
+  "server": {
+    "registryName": "io.github.zurferr/dot",
+    "title": "Dot (getdot.ai): AI Data Analyst",
+    "description": "AI data analyst by getdot.ai. Ask your data warehouse in plain English; get SQL, answers and charts.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://app.getdot.ai/ai/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://app.getdot.ai/ai/mcp"
+}

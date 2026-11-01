@@ -1,26 +1,29 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-10-30T13:48:12.263Z",
+  "scannedAt": "2026-11-01T04:02:29.425Z",
   "server": {
     "registryName": "dev.tatastu/proof",
-    "title": "dev.tatastu/proof",
-    "description": "Stamp content with permanent, verifiable provenance. Hash locally, verify free forever.",
-    "registryVersion": "1.0.0"
+    "title": "Mark",
+    "description": "Mark: stamp files with a signed, timestamped provenance record. Hash locally; verify free.",
+    "registryVersion": "1.1.2"
   },
-  "endpoint": "https://proof.tatastu.dev/mcp",
+  "endpoint": "https://makemark.io/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "mark",
+      "version": "1.2.0"
+    },
+    "toolCount": 9,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].proofId has no description"
       }
     ]
   },
-  "verify": "npx @eidonze/mcpreflight schema https://proof.tatastu.dev/mcp"
+  "verify": "npx @eidonze/mcpreflight schema https://makemark.io/mcp"
 }

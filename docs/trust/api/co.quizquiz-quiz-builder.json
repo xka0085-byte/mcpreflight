@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:43:27.147Z",
+  "server": {
+    "registryName": "co.quizquiz/quiz-builder",
+    "title": "quizquiz.co Quiz Builder",
+    "description": "Turn quiz questions from your chat into a ready-to-play pub quiz on quizquiz.co.",
+    "registryVersion": "0.2.0"
+  },
+  "endpoint": "https://quizquiz-mcp.quizquiz.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://quizquiz-mcp.quizquiz.workers.dev/.well-known/oauth-protected-resource",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://quizquiz-mcp.quizquiz.workers.dev/mcp"
+}

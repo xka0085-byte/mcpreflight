@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:41:41.398Z",
+  "server": {
+    "registryName": "app.runsentinel/sentinel",
+    "title": "Sentinel for Stacks",
+    "description": "Stacks contract monitoring: add a watch in one line, get alerts. Hosted, browser sign-in.",
+    "registryVersion": "0.36.0"
+  },
+  "endpoint": "https://api.runsentinel.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.runsentinel.app/mcp"
+}

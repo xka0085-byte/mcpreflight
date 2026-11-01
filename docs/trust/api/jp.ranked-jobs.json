@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:44.905Z",
+  "server": {
+    "registryName": "jp.ranked/jobs",
+    "title": "Ranked Jobs",
+    "description": "Live Tokyo job listings for foreign professionals: English/visa/salary filters, source links.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://jobs.ranked.jp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "jp.ranked/jobs",
+      "title": "Ranked Jobs",
+      "version": "1.0.0",
+      "websiteUrl": "https://ranked.jp"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].employment_type has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://jobs.ranked.jp/mcp"
+}

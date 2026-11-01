@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:06:31.151Z",
+  "server": {
+    "registryName": "io.github.AddisonHoff/sendsets",
+    "title": "Sendsets",
+    "description": "Cold email API for AI agents: connect mailboxes, warm up, run campaigns and handle replies.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://api.sendsetsapi.com/v1/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.sendsetsapi.com/v1/mcp"
+}

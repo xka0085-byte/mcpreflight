@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:07:04.412Z",
+  "server": {
+    "registryName": "io.github.Beer-of-Satoshi-GmbH/shop",
+    "title": "Beer of Satoshi Shop",
+    "description": "Shop Genesis Lager, alcohol-free Zero preorders and gift cards via native Shopify UCP/MCP.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://beerofsatoshi.com/api/ucp/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "universal-commerce",
+      "version": "0.1.0"
+    },
+    "toolCount": 14,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[10].ask has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://beerofsatoshi.com/api/ucp/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:40:22.207Z",
+  "server": {
+    "registryName": "ai.typebar/typebar",
+    "title": "Typebar (formerly SuperDocs)",
+    "description": "AI document editing: edits the exact section, leaves the rest. 38 MCP tools; agent self-signup.",
+    "registryVersion": "1.4.0"
+  },
+  "endpoint": "https://api.superdocs.app/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://api.superdocs.app/mcp"
+}

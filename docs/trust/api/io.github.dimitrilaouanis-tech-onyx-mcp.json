@@ -1,0 +1,39 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:16:25.299Z",
+  "server": {
+    "registryName": "io.github.dimitrilaouanis-tech/onyx-mcp",
+    "title": "io.github.dimitrilaouanis-tech/onyx-mcp",
+    "description": "Ed25519-signed ground-truth oracle — 63 paid x402 tools live on Base mainnet.",
+    "registryVersion": "0.4.0"
+  },
+  "endpoint": "https://onyx-actions.onrender.com/mcp/",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "onyx-actions",
+      "version": "1.26.0"
+    },
+    "toolCount": 33,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].allowed_merchants has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].allowed_domains has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].purpose has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://onyx-actions.onrender.com/mcp/"
+}

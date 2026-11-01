@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T03:59:25.201Z",
+  "server": {
+    "registryName": "com.watchanyvideo/watch-any-video",
+    "title": "Watch Any Video",
+    "description": "Lets Claude and ChatGPT watch YouTube videos: what is seen and heard, answered with timestamps.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://watchanyvideo.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://watchanyvideo.com/api/mcp"
+}

@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:36:30.351Z",
+  "server": {
+    "registryName": "io.github.singleflo/odoo-assistant",
+    "title": "io.github.singleflo/odoo-assistant",
+    "description": "Odoo virtual employee via MCP: query, create, modify records, workflows, PDFs, and activities.",
+    "registryVersion": "0.3.15"
+  },
+  "endpoint": "https://odoomcp.singleflo.com/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated-verified",
+    "resourceMetadata": "https://odoomcp.singleflo.com/.well-known/oauth-protected-resource/mcp",
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://odoomcp.singleflo.com/mcp"
+}

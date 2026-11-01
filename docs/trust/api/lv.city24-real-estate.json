@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:43:48.781Z",
+  "server": {
+    "registryName": "lv.city24/real-estate",
+    "title": "City24.lv - Real Estate marketplace",
+    "description": "Live Latvia real estate listings with search, geo filters, and property metadata.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://mcp.city24.lv/_mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "city24_mcp",
+      "version": "1.0.0",
+      "description": "Search City24 real estate listings. This server helps users find properties by location, transaction type, property type, price range, indoor area, floor, lot size, and other listing filters. Use the most specific location available, such as street, district, city, or region.",
+      "icons": []
+    },
+    "toolCount": 1,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://mcp.city24.lv/_mcp"
+}

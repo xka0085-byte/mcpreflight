@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:05:20.522Z",
+  "server": {
+    "registryName": "io.amnt/svg",
+    "title": "AMNT SVG",
+    "description": "Text or image to clean, editable SVG from $0.01. Free SVG library + agent search, no key.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://www.amnt.io/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "amnt.io",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].slug has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.amnt.io/api/mcp"
+}

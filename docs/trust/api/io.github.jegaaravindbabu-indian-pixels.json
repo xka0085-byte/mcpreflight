@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:19:30.550Z",
+  "server": {
+    "registryName": "io.github.jegaaravindbabu/indian-pixels",
+    "title": "Indian Pixels",
+    "description": "Generate images, videos, music & lip sync with 200+ AI models (Flux, Veo 3, Kling, Suno)",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.indianpixels.com/api/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.indianpixels.com/api/mcp"
+}

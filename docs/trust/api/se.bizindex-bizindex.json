@@ -1,0 +1,29 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:47:48.353Z",
+  "server": {
+    "registryName": "se.bizindex/bizindex",
+    "title": "Bizindex: svenska aktiebolag",
+    "description": "Check Swedish limited companies (aktiebolag): registry data, their website and the evidence for it.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://bizindex.se/api/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bizindex",
+      "version": "1.0.0"
+    },
+    "toolCount": 3,
+    "findings": [
+      {
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "3 tools passed deterministic schema checks"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://bizindex.se/api/mcp"
+}

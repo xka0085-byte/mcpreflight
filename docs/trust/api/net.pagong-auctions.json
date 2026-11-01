@@ -1,0 +1,35 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:45:10.977Z",
+  "server": {
+    "registryName": "net.pagong/auctions",
+    "title": "파공넷 경공매",
+    "description": "Korean court auctions, Onbid and bankruptcy sales with expected rental yield and market ratio.",
+    "registryVersion": "1.0.0"
+  },
+  "endpoint": "https://www.pagong.net/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pagong",
+      "title": "파공넷 경공매 데이터",
+      "version": "1.0.0"
+    },
+    "toolCount": 5,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].category has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].category has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://www.pagong.net/mcp"
+}

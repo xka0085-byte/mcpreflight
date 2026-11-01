@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:02:00.392Z",
+  "server": {
+    "registryName": "dev.plugandship/plugandship-mcp",
+    "title": "Plug and Ship",
+    "description": "Search MCP servers, agent skills and coding-agent plugins: trending tools and best-of lists.",
+    "registryVersion": "0.1.0"
+  },
+  "endpoint": "https://plugandship.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "plugandship",
+      "version": "0.2.0",
+      "title": "Plug and Ship",
+      "websiteUrl": "https://plugandship.dev/developers"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].limit has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://plugandship.dev/mcp"
+}

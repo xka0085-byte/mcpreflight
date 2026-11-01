@@ -1,0 +1,31 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:40:52.790Z",
+  "server": {
+    "registryName": "io.sparxx/mcp-gateway",
+    "title": "spArxx.io",
+    "description": "Prove you made it first. Blockchain Timestamp creative work via Claude or any MCP-enabled AI Agent.",
+    "registryVersion": "1.0.2"
+  },
+  "endpoint": "https://gateway.sparxx.io/mcp",
+  "trust": {
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
+    "findings": [
+      {
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+      }
+    ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://gateway.sparxx.io/mcp"
+}

@@ -1,0 +1,48 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:09:40.488Z",
+  "server": {
+    "registryName": "io.github.Ipayx-stellar/fx-audit",
+    "title": "iPayX FX Audit",
+    "description": "Forensic FX audit. Detects hidden bank markups in real time. Returns spread bps + audit score 1-10.",
+    "registryVersion": "1.2.0"
+  },
+  "endpoint": "https://wild-bird-a412.ybolduc.workers.dev/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "iPayX FX Audit",
+      "version": "1.2.0",
+      "description": "Forensic FX Audit Engine — Detecting hidden bank fees in real-time",
+      "icon": "https://www.ipayx.ai/mcp-logo-512.png",
+      "build": "hvujzsdwcoweirroubeh_880f33c9-9fed-48a2-b54a-aab868d0dba1_313",
+      "deployedAt": "2026-11-01T04:07:44.597Z"
+    },
+    "toolCount": 4,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].amount has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].currency_from has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].currency_to has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].bank_rate has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://wild-bird-a412.ybolduc.workers.dev/mcp"
+}

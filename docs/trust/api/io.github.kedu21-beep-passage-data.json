@@ -1,0 +1,41 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:20:08.973Z",
+  "server": {
+    "registryName": "io.github.kedu21-beep/passage-data",
+    "title": "Passage Data — cited environmental limits",
+    "description": "Cited US, Canadian, EU limits (discharge, drinking water, soil, air); species status; DwC archives",
+    "registryVersion": "1.13.0"
+  },
+  "endpoint": "https://passage-data.com/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "passage-data-limits",
+      "title": "Passage Data — environmental rules, permits and species, cited to the page",
+      "version": "1.28.0",
+      "websiteUrl": "https://passage-data.com/api/v1/"
+    },
+    "toolCount": 24,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].max_rows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].max_rows has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[5].medium has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://passage-data.com/mcp"
+}

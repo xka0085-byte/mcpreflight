@@ -1,0 +1,47 @@
+{
+  "reportVersion": 1,
+  "generatedBy": "mcpreflight",
+  "scannedAt": "2026-11-01T04:42:05.641Z",
+  "server": {
+    "registryName": "io.usefulapi/sortly",
+    "title": "Sortly MCP by usefulapi",
+    "description": "Search inventory items and folders, low-stock alerts, jobs and purchase orders, and update stock.",
+    "registryVersion": "1.30.0"
+  },
+  "endpoint": "https://sortly.usefulapi.io/mcp",
+  "trust": {
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sortly-mcp",
+      "version": "1.33.0",
+      "title": "Sortly MCP by usefulapi",
+      "websiteUrl": "https://usefulapi.io/sortly/",
+      "icons": [
+        {
+          "src": "https://usefulapi.io/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        },
+        {
+          "src": "https://usefulapi.io/icon-256.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ]
+        }
+      ]
+    },
+    "toolCount": 20,
+    "findings": [
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[19].notes has no description"
+      }
+    ]
+  },
+  "verify": "npx @eidonze/mcpreflight schema https://sortly.usefulapi.io/mcp"
+}
