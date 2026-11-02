@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:46:25.075Z",
+  "scannedAt": "2026-11-02T07:09:52.567Z",
   "server": {
     "registryName": "org.dunamistech/mcptube",
     "title": "MCPTube",
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
   },
   "authGate": {
-    "status": "gated-verified",
-    "resourceMetadata": "https://mcp.mcptube.com/.well-known/oauth-protected-resource/mcp",
+    "status": "gated",
+    "resourceMetadata": null,
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.mcptube.com/mcp"

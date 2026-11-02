@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:18:02.396Z",
+  "scannedAt": "2026-11-02T06:49:33.497Z",
   "server": {
     "registryName": "io.github.giorgio44/gateonai-mcp",
     "title": "GateOnAI",
@@ -10,20 +10,22 @@
   },
   "endpoint": "https://www.gateonai.com/mcp/",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "gateonai",
-      "version": "1.4.2"
-    },
-    "toolCount": 17,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "17 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://www.gateonai.com/mcp/"
 }

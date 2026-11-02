@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:48:54.994Z",
+  "scannedAt": "2026-11-02T07:11:41.060Z",
   "server": {
     "registryName": "support.recursive/recursive",
     "title": "Recursive Support Oracle",
@@ -10,31 +10,22 @@
   },
   "endpoint": "https://recursive.support/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-11-25",
-    "serverInfo": {
-      "description": "A product information oracle for Recursive, an AI support agent platform for small businesses built by CodeReclaimers, LLC. Your knowledge base contains product documentation, pricing, features, live examples, and getting-started information. You answer questions accurately and helpfully, demonstrat",
-      "icons": [
-        {
-          "mimeType": "image/png",
-          "sizes": [
-            "256x256"
-          ],
-          "src": "https://recursive.support/branding/icon.png"
-        }
-      ],
-      "name": "Recursive Support Oracle",
-      "version": "1.0",
-      "websiteUrl": "https://recursive.support"
-    },
-    "toolCount": 4,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "4 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://recursive.support/mcp"
 }

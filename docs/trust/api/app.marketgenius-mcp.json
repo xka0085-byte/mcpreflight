@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:41:16.408Z",
+  "scannedAt": "2026-11-02T06:20:50.561Z",
   "server": {
     "registryName": "app.marketgenius/mcp",
     "title": "Marketgenius",
@@ -10,22 +10,38 @@
   },
   "endpoint": "https://marketgenius.app/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "marketgenius",
+      "title": "Marketgenius",
+      "version": "2026-11-01",
+      "websiteUrl": "https://marketgenius.app",
+      "description": "Marketgenius MCP Server offering our free investment tools as live, interactive React MCP Apps. Directly inside your AI client."
+    },
+    "toolCount": 17,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].sessionId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].sessionId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[12].sessionId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[16].sessionId has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://marketgenius.app/mcp"
 }

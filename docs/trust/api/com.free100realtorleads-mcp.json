@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:47:42.269Z",
+  "scannedAt": "2026-11-02T06:27:57.048Z",
   "server": {
     "registryName": "com.free100realtorleads/mcp",
     "title": "Free100RealtorLeads",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://free100realtorleads.com/api/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "realtorleads",
-      "title": "free100realtorleads.com",
-      "version": "1.0.0",
-      "websiteUrl": "https://free100realtorleads.com"
-    },
-    "toolCount": 3,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "3 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://free100realtorleads.com/api/mcp"
 }

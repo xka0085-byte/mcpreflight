@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:46:33.995Z",
+  "scannedAt": "2026-11-02T06:26:45.090Z",
   "server": {
     "registryName": "com.dishdirectory/dishdirectory",
     "title": "Dish Directory",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://dishdirectory.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "dishdirectory",
+      "title": "Dish Directory",
+      "version": "1"
+    },
+    "toolCount": 9,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "9 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://dishdirectory.com/mcp"
 }

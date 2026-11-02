@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:09:05.142Z",
+  "scannedAt": "2026-11-02T06:43:28.731Z",
   "server": {
     "registryName": "io.github.GaetanGermain/emotion-dictionary",
     "title": "The Emotion Dictionary",
@@ -10,20 +10,22 @@
   },
   "endpoint": "https://mcp.emotioninside.org/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "the-emotion-dictionary",
-      "version": "1.0.0"
-    },
-    "toolCount": 3,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[2].name_or_slug has no description"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.emotioninside.org/mcp"
 }

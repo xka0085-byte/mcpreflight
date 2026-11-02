@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:01:23.118Z",
+  "scannedAt": "2026-11-02T06:38:14.518Z",
   "server": {
     "registryName": "dev.euroref/reference-data",
     "title": "euroref — European government reference data",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://euroref.dev/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "euroref",
-      "title": "euroref — European government reference data",
-      "version": "1.0.0"
-    },
-    "toolCount": 32,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[23].tax has no description"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://euroref.dev/mcp"
 }

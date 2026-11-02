@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:52:18.124Z",
+  "scannedAt": "2026-11-02T06:32:03.250Z",
   "server": {
     "registryName": "com.opendont/opendont",
     "title": "OpenDont",
@@ -10,27 +10,22 @@
   },
   "endpoint": "https://opendont.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "oakn-knowledge",
-      "title": "OpenDont",
-      "version": "3f3575636ace",
-      "websiteUrl": "https://opendont.com/docs/agents"
-    },
-    "toolCount": 9,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[5].source_context has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[6].source_context has no description"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://opendont.com/mcp"
 }

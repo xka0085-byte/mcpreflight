@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:49:28.819Z",
+  "scannedAt": "2026-11-02T06:30:02.692Z",
   "server": {
     "registryName": "com.kundaly/vedic-astrology",
     "title": "Kundaly — Vedic astrology",
@@ -10,15 +10,61 @@
   },
   "endpoint": "https://kundaly.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Kundaly computes Vedic (sidereal, Lahiri) astrology: a person's birth star (nakshatra), Moon sign and ascendant from their birth details, each month's transits read for a birth star and ascendant (classical sources: Phaladīpikā ch. 26, cross-checked with Bṛhat Saṃhitā), today's panchang and the fest",
+      "name": "Kundaly",
+      "title": "Kundaly — Vedic astrology",
+      "version": "1.0",
+      "websiteUrl": "https://kundaly.com"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].birth_date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].birth_place has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].birth_time has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].birth_star has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].ascendant has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1].month has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].date has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[2].birth_star has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].horizon has no description"
       }
     ]
   },

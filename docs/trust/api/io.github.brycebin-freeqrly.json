@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:07:22.844Z",
+  "scannedAt": "2026-11-02T06:42:11.193Z",
   "server": {
     "registryName": "io.github.BryceBin/freeqrly",
     "title": "FreeQrly",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://freeqrly.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2024-11-05",
-    "serverInfo": {
-      "name": "freeqrly-mcp",
-      "title": "FreeQrly QR Generator",
-      "version": "1.1.0"
-    },
-    "toolCount": 1,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "1 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://freeqrly.com/mcp"
 }

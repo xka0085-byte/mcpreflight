@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:36:03.531Z",
+  "scannedAt": "2026-11-02T07:02:59.321Z",
   "server": {
     "registryName": "io.github.semihbugrasezer/seerxo",
     "title": "Seerxo",
@@ -10,29 +10,22 @@
   },
   "endpoint": "https://api.seerxo.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "seerxo",
-      "title": "Seerxo — Etsy SEO Assistant",
-      "version": "1.0.0",
-      "description": "Generate, analyze, and optimize Etsy listings with SEO-focused titles, descriptions, tags, and keyword suggestions.",
-      "websiteUrl": "https://www.seerxo.com",
-      "icons": [
-        {
-          "src": "https://www.seerxo.com/favicon.svg",
-          "mimeType": "image/svg+xml"
-        }
-      ]
-    },
-    "toolCount": 5,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "5 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.seerxo.com/mcp"
 }

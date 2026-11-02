@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:46:36.551Z",
+  "scannedAt": "2026-11-02T06:26:46.909Z",
   "server": {
     "registryName": "com.dockettrail/dockettrail",
     "title": "DocketTrail",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://dockettrail.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "dockettrail",
-      "title": "DocketTrail",
-      "version": "1.0.0",
-      "websiteUrl": "https://dockettrail.com"
-    },
-    "toolCount": 5,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "5 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://dockettrail.com/mcp"
 }

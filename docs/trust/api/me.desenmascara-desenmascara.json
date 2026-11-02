@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:44:00.484Z",
+  "scannedAt": "2026-11-02T07:08:30.630Z",
   "server": {
     "registryName": "me.desenmascara/desenmascara",
     "title": "desenmascara.me",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://desenmascara.me/mcp/v1",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "desenmascara",
-      "title": "desenmascara.me domain assessments",
-      "version": "0.1.0",
-      "websiteUrl": "https://desenmascara.me"
-    },
-    "toolCount": 2,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "2 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://desenmascara.me/mcp/v1"
 }

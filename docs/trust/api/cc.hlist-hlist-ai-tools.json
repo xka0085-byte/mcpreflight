@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:42:41.743Z",
+  "scannedAt": "2026-11-02T06:22:23.159Z",
   "server": {
     "registryName": "cc.hlist/hlist-ai-tools",
     "title": "HList AI Tools",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://hlist.cc/api/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "hlist-ai-tools",
-      "version": "1.0.1",
-      "count": 411
-    },
-    "toolCount": 3,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "3 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://hlist.cc/api/mcp"
 }

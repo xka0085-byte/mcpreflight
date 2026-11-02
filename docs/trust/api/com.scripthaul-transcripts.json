@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:55:03.977Z",
+  "scannedAt": "2026-11-02T06:33:59.696Z",
   "server": {
     "registryName": "com.scripthaul/transcripts",
     "title": "ScriptHaul",
@@ -10,32 +10,22 @@
   },
   "endpoint": "https://scripthaul.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "scripthaul",
-      "title": "ScriptHaul",
-      "version": "1.0.0",
-      "description": "Free YouTube transcripts for agents: single videos in seven formats, channel/playlist listings, and bulk ZIP download links. No API key, no account.",
-      "websiteUrl": "https://scripthaul.com",
-      "icons": [
-        {
-          "src": "https://scripthaul.com/favicon.svg",
-          "mimeType": "image/svg+xml",
-          "sizes": [
-            "any"
-          ]
-        }
-      ]
-    },
-    "toolCount": 4,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "4 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://scripthaul.com/mcp"
 }

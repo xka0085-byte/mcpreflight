@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:49:24.279Z",
+  "scannedAt": "2026-11-02T06:29:56.452Z",
   "server": {
     "registryName": "com.kiprarent/kipra-rent-a-car",
     "title": "Kipra Rent A Car",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://mcp.kiprarent.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "kipra-rent-a-car",
+      "title": "Kipra Rent A Car — North Cyprus car rental / Kıbrıs araç kiralama (live availability & prices)",
+      "version": "1.1.0"
+    },
+    "toolCount": 6,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "6 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.kiprarent.com/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:07:46.023Z",
+  "scannedAt": "2026-11-02T06:42:25.663Z",
   "server": {
     "registryName": "io.github.Crossave/crossave-dazi",
     "title": "Crossave import duty & VAT",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://crossave.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "crossave-dazi",
-      "title": "Crossave — import duty and VAT",
-      "version": "1.1.0",
-      "websiteUrl": "https://crossave.com"
-    },
-    "toolCount": 6,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "6 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://crossave.com/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:10:22.321Z",
+  "scannedAt": "2026-11-02T06:44:19.985Z",
   "server": {
     "registryName": "io.github.LumiRx/5arz-proof-of-human",
     "title": "io.github.LumiRx/5arz-proof-of-human",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://mcp.5arz.com",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "5arz",
-      "title": "5arz Proof-of-Human",
-      "version": "1.0.0"
-    },
-    "toolCount": 9,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "9 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.5arz.com"
 }

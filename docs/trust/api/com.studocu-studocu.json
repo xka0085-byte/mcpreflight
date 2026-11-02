@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:56:33.215Z",
+  "scannedAt": "2026-11-02T06:34:59.701Z",
   "server": {
     "registryName": "com.studocu/studocu",
     "title": "Studocu",
@@ -10,22 +10,57 @@
   },
   "endpoint": "https://agent-os-mcp.alpha.studocu.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "agent-os-service",
+      "version": "0.0.1",
+      "icons": [
+        {
+          "src": "https://agent-os-mcp.alpha.studocu.com/favicon.ico",
+          "mimeType": "image/x-icon",
+          "sizes": [
+            "32x32"
+          ]
+        },
+        {
+          "src": "https://website-assets.studocu.com/img/apple/apple-touch-icon-76x76.png",
+          "sizes": [
+            "76x76"
+          ],
+          "mimeType": "image/png"
+        },
+        {
+          "src": "https://website-assets.studocu.com/img/apple/apple-touch-icon-120x120.png",
+          "sizes": [
+            "120x120"
+          ],
+          "mimeType": "image/png"
+        },
+        {
+          "src": "https://website-assets.studocu.com/img/apple/apple-touch-icon-152x152.png",
+          "sizes": [
+            "152x152"
+          ],
+          "mimeType": "image/png"
+        },
+        {
+          "src": "https://website-assets.studocu.com/img/apple/apple-touch-icon-180x180.png",
+          "sizes": [
+            "180x180"
+          ],
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    "toolCount": 18,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "18 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://agent-os-mcp.alpha.studocu.com/mcp"
 }

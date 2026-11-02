@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:19:50.992Z",
+  "scannedAt": "2026-11-02T06:50:41.826Z",
   "server": {
     "registryName": "io.github.jqy-yo/gptimagehub",
     "title": "GPT Image Hub",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://www.gptimagehub.com/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "gptimagehub",
+      "version": "1.0.0"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].limit has no description"
       }
     ]
   },

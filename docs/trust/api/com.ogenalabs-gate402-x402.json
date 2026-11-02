@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:51:55.967Z",
+  "scannedAt": "2026-11-02T06:31:50.832Z",
   "server": {
     "registryName": "com.ogenalabs/gate402-x402",
     "title": "gate402 merchant checkout",
@@ -10,18 +10,20 @@
   },
   "endpoint": "https://api.ogenalabs.com/api/gate402/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2024-11-05",
-    "serverInfo": {
-      "name": "gate402-x402",
-      "version": "0.2.0"
-    },
-    "toolCount": 2,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "2 tools passed deterministic schema checks"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T03:38:57.796Z",
+  "scannedAt": "2026-11-02T06:18:31.291Z",
   "server": {
     "registryName": "ai.neuralpartners/sasha",
     "title": "Sasha, Neural Partners Chief of Staff",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://www.neuralpartners.ai/api/sasha/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sasha",
+      "title": "Sasha, Neural Partners Chief of Staff",
+      "version": "1.1.0"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://www.neuralpartners.ai/api/sasha/mcp"
 }

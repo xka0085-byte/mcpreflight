@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-01T04:00:53.355Z",
+  "scannedAt": "2026-11-02T06:37:54.480Z",
   "server": {
     "registryName": "dev.afriref/reference-data",
     "title": "Afriref: cited government reference data",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://afriref.dev/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "afriref",
-      "title": "afriref — Pan-African government reference data",
-      "version": "1.0.0"
-    },
-    "toolCount": 34,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[23].tax has no description"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://afriref.dev/mcp"
 }
