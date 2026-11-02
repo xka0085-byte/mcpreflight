@@ -13,6 +13,7 @@ Read-only MCP and x402 preflight: it reads `initialize` + `tools/list` and x402 
 
 ## Seen in use
 
+- [joxo](https://github.com/JoxoAI/joxo) serves an MCP endpoint that is auth-gated by design. Their maintainer read the 0.2.0 source to confirm the check was two plain POSTs with no dependencies, then ran `npx @eidonze/mcpreflight@0.2.0 schema https://joxo.ai/api/mcp` and got `UNKNOWN: MCP initialize returned HTTP 401` against a deliberate OAuth 2.1 gate ([#50](https://github.com/JoxoAI/joxo/issues/50#issuecomment-6193300049)). That report is the reason 0.3.0 classifies an OAuth challenge as `AUTH_GATED`, with the RFC 9728 resource metadata verified, instead of reading as a dead endpoint. They re-checked on 2026-11-01 and closed it: "The endpoint is sign-in only, so no anonymous handshake is expected. Thanks for the AUTH_GATED handling; closing." ([#50](https://github.com/JoxoAI/joxo/issues/50#issuecomment-6561602206)).
 - A maintainer of [cueframe-mcp](https://github.com/cueframe-ai/cueframe-mcp) reran the scan after a fix and reported the result back: `@eidonze/mcpdoctor@0.1.8` (the earlier npm name) now exits 0 on their endpoint, with the anonymous `tools/list` payload down from 1,399,189 to 550,377 bytes — under the scanner's 1 MiB limit ([#11](https://github.com/cueframe-ai/cueframe-mcp/issues/11#issuecomment-6532425615)).
 - Listed in [awesome-mcp-lists](https://github.com/collabnix/awesome-mcp-lists) under MCP Toolkits / Testing Tools ([#226](https://github.com/collabnix/awesome-mcp-lists/pull/226)).
 
@@ -26,13 +27,17 @@ npx @eidonze/mcpreflight schema https://your-mcp-server.example/mcp --json
 
 Exit codes are stable for CI: `0` PASS, `1` FAIL, `2` UNKNOWN/network, `3` usage. Requires Node.js 18+.
 
-Gate a pull request:
+Gate a pull request with the bundled GitHub Action:
 
 ```yaml
-- uses: xka0085-byte/mcpreflight@v1
+- name: MCP trust check
+  uses: xka0085-byte/mcpreflight@v1
   with:
     endpoint: https://your-mcp-server.example/mcp
+    mode: schema
 ```
+
+`mode` is `schema` (MCP handshake plus tool schemas), `inspect` (one-off x402 preflight), `baseline` (record the current 402 challenge shape) or `drift` (fail the job when that shape moves away from the committed baseline). The report is also appended to the job summary, and `steps.<id>.outputs.status` carries the exit code so later steps can branch on it without parsing logs.
 
 Check your endpoint in the browser, free and without signup:
 [check-your-mcp-endpoint](https://xka0085-byte.github.io/mcpreflight/check-your-mcp-endpoint.html)
