@@ -106,6 +106,38 @@ export async function resolve(kind, note = '') {
   }
 }
 
+// 滚动单 issue：同一标题长期只占一个 issue 位，后续内容以评论追加。
+//
+// 存在的理由：cve-watch / protocol-watch / outreach-replies 此前每次事件都
+// `gh issue create` 一条新 issue，一个月堆出 35 条同类噪声，把真正的告警
+// 淹没在列表里，首页观感也变成"这个仓库在刷屏"。
+export async function append(title, body) {
+  const c = ctx();
+  if (!c.ready) {
+    console.error(`[rolling:no-token] ${title}\n${body}`);
+    return { ok: false, reason: 'no-token' };
+  }
+  try {
+    const out = await call(`/repos/${c.repo}/issues?state=open&per_page=100`);
+    const hit = (out || []).find(i => !i.pull_request && i.title === title);
+    if (hit) {
+      await call(`/repos/${c.repo}/issues/${hit.number}/comments`, {
+        method: 'POST',
+        body: JSON.stringify({ body }),
+      });
+      return { ok: true, action: 'appended', number: hit.number };
+    }
+    const created = await call(`/repos/${c.repo}/issues`, {
+      method: 'POST',
+      body: JSON.stringify({ title, body }),
+    });
+    return { ok: true, action: 'created', number: created.number };
+  } catch (e) {
+    console.error(`[rolling:failed] ${title}: ${e.message}`);
+    return { ok: false, reason: e.message };
+  }
+}
+
 export function alertReady() {
   return ctx().ready;
 }

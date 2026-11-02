@@ -61,18 +61,29 @@ for (const [repo, m] of Object.entries(metrics)) {
   }
   let info = {};
   try { info = JSON.parse(i.stdout); } catch { /* empty */ }
-  let lastAuthor = '', lastAt = '';
-  if ((info.c ?? 0) > 0) {
-    const cs = await gh(['api', `repos/${repo}/issues/${num}/comments?per_page=100`, '-q', '[-1:.user.login, -1:.created_at] | join(":")']);
+  // 取评论：此前用 `gh api -q '[-1:.user.login, -1:.created_at] | join(":")'`，
+  // 该 jq 表达式本身是语法错误，gh 每次报错被吞掉，lastAuthor 恒为空，
+  // 于是 244 个仓库里 24 个明明有他人评论的 issue 全被记成"零回复"。
+  // 改为取原始 JSON、在 node 里解析，并按评论总数算最后一页（>100 条时也能取到）。
+  let lastAuthor = '', lastAt = '', otherCount = 0;
+  const total = info.c ?? 0;
+  if (total > 0) {
+    const lastPage = Math.max(1, Math.ceil(total / 100));
+    const cs = await gh(['api', `repos/${repo}/issues/${num}/comments?per_page=100&page=${lastPage}`]);
     if (!cs.err) {
-      const parts = cs.stdout.replace(/["[\]]/g, '').split(',');
-      lastAuthor = (parts[0] ?? '').trim();
-      lastAt = (parts[1] ?? '').trim();
+      let arr = [];
+      try { arr = JSON.parse(cs.stdout); } catch { arr = []; }
+      const others = (Array.isArray(arr) ? arr : []).filter((c) => (c.user?.login ?? '') !== ME);
+      otherCount = others.length;
+      const last = others[others.length - 1];
+      if (last) { lastAuthor = last.user?.login ?? ''; lastAt = last.created_at ?? ''; }
+    } else if (/rate limit/i.test(String(cs.err.message))) {
+      rateLimited = true;
     }
   }
   snapshot[repo] = {
     ...m, state: info.state ?? '?', comments: info.c ?? 0,
-    lastAuthor, lastAt, replied: lastAuthor !== '' && lastAuthor !== ME,
+    lastAuthor, lastAt, otherComments: otherCount, replied: otherCount > 0,
   };
   await sleep(700);
 }
@@ -130,12 +141,22 @@ if (delta.length || prLines.length) {
     else if (d.lastAt && d.lastAt !== (prev[d.repo]?.lastAt ?? '')) parts.push(`activity at ${d.lastAt} (last by ${d.lastAuthor})`);
     return parts.join(' | ');
   });
-  const title = `outreach digest ${new Date().toISOString().slice(0, 10)}: ${replied} new replies, ${closed} newly closed, ${prLines.length} PR updates`;
-  const body = `${delta.length} tracked issue(s) changed since the last snapshot:\n\n${lines.join('\n')}\n\nPR watch:\n${prLines.join('\n') || '(no changes)'}\n\n_snapshot: trust-data/metrics/replies.json_`;
+  // 滚动单 issue：此前每天 `gh issue create` 一条 "outreach digest <日期>"，
+  // 一个月堆了 21 条同类噪声。改为固定标题、有变化就往里追加评论。
+  const stamp = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
+  const headline = `${replied} new replies, ${closed} newly closed, ${prLines.length} PR updates`;
+  const body = `### ${stamp} — ${headline}\n\n${delta.length} tracked issue(s) changed since the last snapshot:\n\n${lines.join('\n')}\n\nPR watch:\n${prLines.join('\n') || '(no changes)'}\n\n_snapshot: trust-data/metrics/replies.json_`;
   const bp = path.join(root, 'trust-data', '.digest.md');
   fs.writeFileSync(bp, body);
-  const r = await gh(['issue', 'create', '-R', 'xka0085-byte/mcpreflight', '-t', title, '--body-file', bp]);
-  console.log('DIGEST-ISSUE', r.stdout || String(r.err?.message ?? '').slice(0, 200));
+  const r = await gh(['issue', 'list', '-R', 'xka0085-byte/mcpreflight', '--state', 'open', '--search', '"outreach activity" in:title', '--json', 'number', '--jq', '.[0].number']);
+  const existing = r.err ? '' : r.stdout.trim();
+  if (existing) {
+    const c = await gh(['issue', 'comment', existing, '-R', 'xka0085-byte/mcpreflight', '--body-file', bp]);
+    console.log('DIGEST-ISSUE', c.err ? String(c.err.message).slice(0, 200) : `appended to #${existing}`);
+  } else {
+    const c = await gh(['issue', 'create', '-R', 'xka0085-byte/mcpreflight', '-t', '[watch] outreach activity', '--body-file', bp]);
+    console.log('DIGEST-ISSUE', c.stdout || String(c.err?.message ?? '').slice(0, 200));
+  }
 }
 
 const byGroup = {};

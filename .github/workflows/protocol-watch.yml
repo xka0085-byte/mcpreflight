@@ -19,19 +19,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/protocol-watch.mjs
-      - name: Open an issue for each new protocol event
+      - name: Append new protocol events to the rolling issue
         env:
-          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           COUNT=$(node -e "const j=require('./trust-data/protocol-events-pending.json');console.log(j.events.length)")
           if [ "$COUNT" -gt 0 ]; then
             node -e "
             const j=require('./trust-data/protocol-events-pending.json');
-            for (const e of j.events) {
-              const title = 'protocol event: ' + e.label + ' ' + e.from + ' -> ' + e.to;
-              const body = 'New release detected by the daily watch.\n\nrepo: ' + e.repo + '\nfrom: ' + e.from + '\nto: ' + e.to + '\ndate: ' + e.date + '\nurl: ' + e.url + '\n\nPer the 48-hour measurement rule, evaluate whether this changes what we measure and whether a signed report or a new dimension should ship this week.';
-              require('child_process').execSync('gh issue create --title ' + JSON.stringify(title) + ' --body ' + JSON.stringify(body), {stdio: 'inherit', env: process.env});
-            }"
+            const lines = j.events.map(e => '- ' + e.label + ': ' + e.from + ' -> ' + e.to + ' (' + e.date + ')' + '\n  repo: ' + e.repo + '\n  url: ' + e.url);
+            require('fs').writeFileSync('protocol-report.md', lines.join('\n\n') + '\n\nPer the 48-hour measurement rule, evaluate whether this changes what we measure and whether a signed report or a new dimension should ship this week.\n');
+            "
+            node scripts/rolling-issue.mjs --title "[watch] protocol release log" --body-file protocol-report.md
           else
             echo "no new protocol events"
           fi
