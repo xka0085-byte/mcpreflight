@@ -4,6 +4,7 @@
 //   x402_inspect(url)  - read-only 402 challenge validation, never pays
 // Protocol: newline-delimited JSON-RPC 2.0 per the MCP stdio transport spec.
 import { spawn } from 'node:child_process';
+import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
 import readline from 'node:readline';
@@ -65,7 +66,15 @@ async function callTool(name, args) {
   throw new Error(`unknown tool: ${name}`);
 }
 
-const serverInfo = { name: 'mcpreflight', version: '0.1.8' };
+const VERSION = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
+  } catch {
+    return '0.0.0';
+  }
+})();
+
+const serverInfo = { name: 'mcpreflight', version: VERSION };
 const write = (msg) => process.stdout.write(JSON.stringify(msg) + '\n');
 
 const rl = readline.createInterface({ input: process.stdin, terminal: false });
