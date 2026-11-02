@@ -1,4 +1,4 @@
-name: MCP Trust Check
+name: MCP Trust Preflight
 description: Preflight an MCP server in CI: checks initialize handshake, tools/list schemas and x402 challenge drift. Read-only, no keys.
 author: Eidonze
 branding:
@@ -38,7 +38,7 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Run MCP Trust Check
+    - name: Run MCP Trust Preflight
       id: preflight
       shell: bash
       env:
@@ -84,7 +84,7 @@ runs:
         echo "status=$status" >> "$GITHUB_OUTPUT"
         if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
           {
-            echo "### MCP Trust Check, mode \`$MODE\`"
+            echo "### MCP Trust Preflight, mode \`$MODE\`"
             echo
             echo '```text'
             cat "$report"
