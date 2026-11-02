@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T06:37:33.916Z",
+  "scannedAt": "2026-11-02T09:34:48.891Z",
   "server": {
     "registryName": "cz.bidoro/bidoro",
     "title": "Bidoro",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://bidoro.cz/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
+    "finalStatus": "FAIL",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://bidoro.cz/mcp"
 }

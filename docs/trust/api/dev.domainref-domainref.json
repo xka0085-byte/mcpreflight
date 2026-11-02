@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T06:38:12.027Z",
+  "scannedAt": "2026-11-02T09:35:31.337Z",
   "server": {
     "registryName": "dev.domainref/domainref",
     "title": "DomainRef - domain and email security check",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://domainref.dev/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "DomainRef",
+      "title": "DomainRef - domain and email security check",
+      "version": "1.0.0"
+    },
+    "toolCount": 2,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "2 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://domainref.dev/mcp"
 }

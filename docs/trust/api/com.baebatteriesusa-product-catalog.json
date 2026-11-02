@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T06:24:52.285Z",
+  "scannedAt": "2026-11-02T09:20:58.214Z",
   "server": {
     "registryName": "com.baebatteriesusa/product-catalog",
     "title": "BAE Batteries USA product catalogue",
@@ -10,19 +10,20 @@
   },
   "endpoint": "https://mcp.baebatteriesusa.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "baebatteriesusa.com",
-      "title": "BAE Batteries USA product catalogue",
-      "version": "0.2.1"
-    },
-    "toolCount": 6,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[3].type has no description"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

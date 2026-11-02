@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T07:10:21.004Z",
+  "scannedAt": "2026-11-02T10:09:47.647Z",
   "server": {
     "registryName": "porn.tik-tok/tiktokporn",
     "title": "porn.tik-tok/tiktokporn",
@@ -10,24 +10,20 @@
   },
   "endpoint": "https://tik-tok.porn/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "tik-tok.porn MCP",
-      "title": "tik-tok.porn",
-      "version": "1.0.0"
-    },
-    "toolCount": 7,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[3].per_page has no description"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
       },
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[4].per_page has no description"
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

@@ -12,7 +12,7 @@
 <main>
 <p><span class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> / report</span></p>
 <h1>Moral Theology Library <span class="pill AUTH_GATED">AUTH-GATED</span></h1>
-<p class="muted">The endpoint answered an anonymous initialize with 401 and a <code>WWW-Authenticate: Bearer</code> header, so it requires authentication by design. This is an auth gate, not a failure — authenticated scans are out of scope.</p>
+<p class="muted">The endpoint answered an anonymous initialize with 401 and a <code>WWW-Authenticate: Bearer</code> header, so it requires authentication by design; its RFC 9728 protected-resource metadata is live, confirming an OAuth authorization server. This is an auth gate, not a failure — authenticated scans are out of scope.</p>
 <p class="muted">Search Grisez and Finnis. Bearer token required.</p>
 <table>
 <tr><th>Registry name</th><td><code>io.github.AndrewVG23/library</code> (v1.0.1)</td></tr>
@@ -20,11 +20,11 @@
 <tr><th>Reported server</th><td>—</td></tr>
 <tr><th>Protocol version</th><td>not negotiated</td></tr>
 <tr><th>Tools exposed</th><td>unknown</td></tr>
-<tr><th>Auth gate</th><td>gated</td></tr>
-<tr><th>Checked at</th><td>2026-11-02T06:41:46.207Z</td></tr>
+<tr><th>Auth gate</th><td>gated-verified</td></tr>
+<tr><th>Checked at</th><td>2026-11-02T09:39:22.112Z</td></tr>
 </table>
 <h2>Findings</h2>
-<ul class="findings"><li><span class="pill INFO">INFO</span> <code>AUTH_GATE_VERIFIED</code> — Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server</li></ul>
+<ul class="findings"><li><span class="pill UNKNOWN">UNKNOWN</span> <code>NO_RESPONSE</code> — Endpoint did not complete MCP initialize + tools/list within timeout</li></ul>
 <h2>Reproduce this report</h2>
 <pre>npx @eidonze/mcpreflight schema https://library-mcp-production-0ea7.up.railway.app/mcp</pre>
 <p>Embed status: <code>&lt;img src="https://xka0085-byte.github.io/mcpreflight/trust/badge/io.github.andrewvg23-library.svg"&gt;</code> · Machine-readable: <a href="https://xka0085-byte.github.io/mcpreflight/trust/api/io.github.andrewvg23-library.json"><code>/api/io.github.andrewvg23-library.json</code></a></p>
