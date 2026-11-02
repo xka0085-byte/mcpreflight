@@ -47,4 +47,25 @@ if (strictLatest && cmp(current, strictLatest) !== 0) {
   console.error(`FAIL version drift: package.json says ${current}, latest release tag is ${strictLatest}`);
   process.exit(1);
 }
+// 短名启动器 packages/mcpreflight 依赖主包的版本必须精确等于主包当前版本。
+// 它用精确版本（不带 ^）是为了让 `npx mcpreflight` 的行为可预期；代价是主包
+// 升级后启动器不会自动跟上，用户装了启动器却仍跑到旧主包。这里把它变成红灯，
+// 而不是等到有人报 bug 才发现。
+const launcherPkgPath = 'packages/mcpreflight/package.json';
+try {
+  const launcher = JSON.parse(readFileSync(launcherPkgPath, 'utf8'));
+  const pinned = launcher.dependencies?.['@eidonze/mcpreflight'];
+  console.log(`launcher ${launcher.name}@${launcher.version} pins @eidonze/mcpreflight to ${pinned}`);
+  if (pinned !== current) {
+    console.error(`FAIL launcher pin drift: ${launcherPkgPath} pins @eidonze/mcpreflight@${pinned}, root package.json is ${current}`);
+    process.exit(1);
+  }
+} catch (e) {
+  if (e.code === 'ENOENT') {
+    console.log('version-check: no launcher package present, skipping pin check');
+  } else {
+    throw e;
+  }
+}
+
 console.log('version-check: PASS');

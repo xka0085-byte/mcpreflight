@@ -11,6 +11,13 @@ Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before 
 
 Read-only MCP and x402 preflight: it reads `initialize` + `tools/list` and x402 payment documents. No API key, no wallet, no payment, no tool calls.
 
+## Seen in use
+
+- A maintainer of [cueframe-mcp](https://github.com/cueframe-ai/cueframe-mcp) reran the scan after a fix and reported the result back: `@eidonze/mcpdoctor@0.1.8` (the earlier npm name) now exits 0 on their endpoint, with the anonymous `tools/list` payload down from 1,399,189 to 550,377 bytes — under the scanner's 1 MiB limit ([#11](https://github.com/cueframe-ai/cueframe-mcp/issues/11#issuecomment-6532425615)).
+- Listed in [awesome-mcp-lists](https://github.com/collabnix/awesome-mcp-lists) under MCP Toolkits / Testing Tools ([#226](https://github.com/collabnix/awesome-mcp-lists/pull/226)).
+
+These are examples of the check being run, not endorsements or a claim that a `PASS` makes a server safe.
+
 ## Start here
 
 ```bash
