@@ -1,6 +1,6 @@
 # mcpreflight
 
-Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before an agent client or buyer depends on an endpoint.
+Read-only checks for MCP tool schemas and x402 payment endpoints. Ships as a CLI, a GitHub Action, and a stdio MCP server that an agent client can call directly. Use it before an agent client or buyer depends on an endpoint.
 
 [![npm](https://img.shields.io/npm/v/@eidonze/mcpreflight?logo=npm)](https://www.npmjs.com/package/@eidonze/mcpreflight)
 [![CI](https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml/badge.svg)](https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml)
@@ -10,6 +10,32 @@ Read-only checks for MCP tool schemas and x402 payment endpoints. Use it before 
 ## What it is
 
 Read-only MCP and x402 preflight: it reads `initialize` + `tools/list` and x402 payment documents. No API key, no wallet, no payment, no tool calls.
+
+This is an endpoint preflight, not a source audit. Tools that read your repository or fuzz a server you launch need a checkout and a start command; this one needs only a URL, so it can check the deployment an agent is about to connect to, including one you do not own.
+
+## Use it as an MCP server
+
+The stdio entry point is `bin/mcpreflight-mcp.mjs`, published as the `mcpreflight-mcp` bin in the same npm package. It implements the MCP lifecycle a client expects: `initialize` returns serverInfo `mcpreflight` with the package version, `notifications/initialized` is accepted, and `tools/list` returns two tools.
+
+| Tool | What it does |
+|---|---|
+| `schema_check` | Runs the read-only preflight against a server URL: `initialize` handshake, `tools/list`, then tool input schema validation. Returns PASS/FAIL/UNKNOWN with findings. Never calls a tool, never reads data. |
+| `x402_inspect` | Reads an HTTP 402 challenge without paying: validates the payment document shape, the `accepts[]` entries and discovery manifests. Never signs or settles. |
+
+Add it to an MCP client:
+
+```json
+{
+  "mcpServers": {
+    "mcpreflight": {
+      "command": "npx",
+      "args": ["-y", "-p", "@eidonze/mcpreflight", "mcpreflight-mcp"]
+    }
+  }
+}
+```
+
+Both tools do the same work as the CLI and return the same findings, so an agent can check an endpoint before it connects to it. Read-only by construction: the transport issues only GET and POST to the URL you pass, holds no key and has no wallet.
 
 ## Seen in use
 
@@ -154,7 +180,7 @@ FAIL NO_402 Expected HTTP 402, received 400
 
 The checks come from failure modes observed while building ReceiptRail: body validation that prevents an x402 challenge, payment documents in multiple headers/body shapes, and vendor hint headers that can hide the real `accepts[]` document.
 
-mcpreflight is not an MCP server. It is an independent, read-only endpoint inspector. It is not affiliated with mcpreflight.dev; verify the npm scope is `@eidonze/mcpreflight`.
+mcpreflight ships as one read-only codebase in three forms: the CLI and the GitHub Action, and a stdio MCP server (`bin/mcpreflight-mcp.mjs`, npm bin `mcpreflight-mcp`) exposing `schema_check` and `x402_inspect`. It is not affiliated with mcpreflight.dev; verify the npm scope is `@eidonze/mcpreflight`.
 
 ## Feedback
 

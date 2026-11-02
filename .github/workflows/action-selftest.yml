@@ -20,5 +20,12 @@ jobs:
         with:
           endpoint: https://mcp.deepwiki.com/mcp
           mode: schema
+          # This job proves the action runs and emits outputs, not that a
+          # third-party endpoint is reachable from a runner. A network blip or
+          # rate limit on deepwiki must not turn the marketplace listing's CI
+          # badge red, so pass/fail is read from the status output instead.
+          fail_on: 'false'
       - name: Echo the status output
-        run: echo "preflight status=${{ steps.check.outputs.status }}"
+        run: |
+          echo "preflight status=${{ steps.check.outputs.status }}"
+          test -n "${{ steps.check.outputs.status }}"
