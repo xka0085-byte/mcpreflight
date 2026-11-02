@@ -13,6 +13,15 @@ Read-only MCP and x402 preflight: it reads `initialize` + `tools/list` and x402 
 
 This is an endpoint preflight, not a source audit. Tools that read your repository or fuzz a server you launch need a checkout and a start command; this one needs only a URL, so it can check the deployment an agent is about to connect to, including one you do not own.
 
+## Check an endpoint you do not own
+
+The same read-only check runs weekly against every remote endpoint listed in the official MCP Registry, and the results are published as pages and as JSON:
+
+- [Trust Directory](https://xka0085-byte.github.io/mcpreflight/trust/) — 35,325 endpoints, one report each: status, protocol version, tool count, findings, and whether credentials are required.
+- [JSON API](https://xka0085-byte.github.io/mcpreflight/trust/api.html) — `/trust/api/{slug}.json` per endpoint, plus batch indexes and a JSON Schema. No key, no signup, no rate limit.
+
+Read the vocabulary before quoting any number: in the 2026-11-02 scan, 20,701 endpoints answered anonymously (`PASS`), 10,236 refused with `401` because they require credentials by design (`AUTH_GATED`), 167 were reachable but invalid (`FAIL`), and 4,221 gave no anonymous handshake (`UNKNOWN`, usually an auth wall we cannot see past). A "dead MCP servers" count taken from this data would be wrong — 41% of the registry cannot be checked without credentials at all.
+
 ## Use it as an MCP server
 
 The stdio entry point is `bin/mcpreflight-mcp.mjs`, published as the `mcpreflight-mcp` bin in the same npm package. It implements the MCP lifecycle a client expects: `initialize` returns serverInfo `mcpreflight` with the package version, `notifications/initialized` is accepted, and `tools/list` returns two tools.

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP endpoint trust JSON API — query one endpoint or all 35k</title>
+<meta name="description" content="Free, key-less JSON for every remote MCP endpoint in the official Registry: status, protocol version, tool count, findings, and whether the endpoint requires credentials. One URL per endpoint plus batch indexes.">
+<link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/trust/api.html">
+<style>:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.AUTH_GATED{background:#ddf4ff;color:#0550ae}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}.facts{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1rem;margin:1rem 0}.facts dt{color:#57606a;font-size:.9rem}.facts dd{margin:0;font-size:.9rem;font-weight:600}.copyrow{display:flex;align-items:center;gap:.5rem;margin:1rem 0 -.6rem}.copylabel{font-size:.85rem;color:#57606a}.copybtn{margin-left:auto;font:inherit;font-size:.8rem;padding:.15rem .7rem;border:1px solid #d8dee4;border-radius:6px;background:#f6f8fa;color:#0969da;cursor:pointer}.copybtn:hover{background:#eef2f6}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th,.facts dt,.copylabel{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}.copybtn{background:#21262d;border-color:#30363d}code{background:transparent}}</style>
+</head>
+<body>
+<main>
+<p><span class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> / JSON API</span></p>
+<h1>Endpoint trust JSON API</h1>
+<p class="muted">Static JSON, no key, no signup, no rate limit. Generated from the weekly read-only scan of 35325 remote endpoints in the official MCP Registry (2026-11-02).</p>
+<dl class="facts">
+<dt>Per endpoint</dt><dd><code>https://xka0085-byte.github.io/mcpreflight/trust/api/{slug}.json</code></dd>
+<dt>All endpoints</dt><dd>15 batch files of 2500 · <a href="https://xka0085-byte.github.io/mcpreflight/trust/api/_endpoints-0001.json">_endpoints-0001.json</a></dd>
+<dt>Totals this run</dt><dd><a href="https://xka0085-byte.github.io/mcpreflight/trust/api/_summary.json">_summary.json</a></dd>
+<dt>Field schema</dt><dd><a href="https://xka0085-byte.github.io/mcpreflight/trust/api/_schema.json">_schema.json</a></dd>
+<dt>Updated</dt><dd>Weekly, alongside the report pages</dd>
+</dl>
+<h2>What the status means</h2>
+<table>
+<tr><th>finalStatus</th><th>Meaning</th><th>Count this run</th></tr>
+<tr><td><span class="pill PASS">PASS</span></td><td>Answered an anonymous <code>initialize</code> and <code>tools/list</code>; every tool input schema passed deterministic checks</td><td>20701</td></tr>
+<tr><td><span class="pill AUTH_GATED">AUTH_GATED</span></td><td>Refused anonymously with 401 — credentials required by design. <b>Not a dead endpoint</b></td><td>10236</td></tr>
+<tr><td><span class="pill FAIL">FAIL</span></td><td>Reached, but the handshake or a tool schema did not validate</td><td>167</td></tr>
+<tr><td><span class="pill UNKNOWN">UNKNOWN</span></td><td>No anonymous handshake within the timeout. Frequently an auth wall we cannot see past, not downtime</td><td>4221</td></tr>
+</table>
+<p class="muted">41% of these endpoints never answered anonymously, so a count of "dead MCP servers" taken from this data would be wrong. Read AUTH_GATED and UNKNOWN as "cannot be checked without credentials", not as failure.</p>
+<h2>Ask about one endpoint</h2>
+<div class="copyrow"><span class="copylabel">curl</span><button class="copybtn" type="button" data-copy="curl -s https://xka0085-byte.github.io/mcpreflight/trust/api/ac.tandem-docs-mcp.json | jq &#39;.trust.finalStatus, .trust.authGate, .trust.toolCount&#39;">Copy</button></div>
+<pre>curl -s https://xka0085-byte.github.io/mcpreflight/trust/api/ac.tandem-docs-mcp.json | jq &#39;.trust.finalStatus, .trust.authGate, .trust.toolCount&#39;</pre>
+<div class="copyrow"><span class="copylabel">jq one-liner over the whole batch</span><button class="copybtn" type="button" data-copy="curl -s https://xka0085-byte.github.io/mcpreflight/trust/api/_endpoints-0001.json | jq -r &#39;.servers[] | select(.status==&quot;AUTH_GATED&quot;) | .url&#39;">Copy</button></div>
+<pre>curl -s https://xka0085-byte.github.io/mcpreflight/trust/api/_endpoints-0001.json | jq -r &#39;.servers[] | select(.status==&quot;AUTH_GATED&quot;) | .url&#39;</pre>
+<div class="copyrow"><span class="copylabel">Agent tool call (fetch then read)</span><button class="copybtn" type="button" data-copy="GET https://xka0085-byte.github.io/mcpreflight/trust/api/{slug}.json">Copy</button></div>
+<pre>GET https://xka0085-byte.github.io/mcpreflight/trust/api/{slug}.json</pre>
+
+<h2>Fields you can rely on</h2>
+<table>
+<tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+<tr><td><code>trust.finalStatus</code></td><td>enum</td><td>PASS · FAIL · AUTH_GATED · UNKNOWN. Stable vocabulary, safe to branch on</td></tr>
+<tr><td><code>trust.protocolVersion</code></td><td>string|null</td><td>As negotiated in <code>initialize</code>; null when no handshake happened</td></tr>
+<tr><td><code>trust.toolCount</code></td><td>integer|null</td><td>Number of tools in <code>tools/list</code></td></tr>
+<tr><td><code>trust.findings[]</code></td><td>array</td><td>Deterministic codes with severity and a plain-language message</td></tr>
+<tr><td><code>authGate</code></td><td>object</td><td>Only on AUTH_GATED: gate status and any RFC 9728 resource metadata found</td></tr>
+<tr><td><code>scannedAt</code></td><td>string</td><td>ISO timestamp. A report is a snapshot, not a live probe — re-run the CLI for the current state</td></tr>
+</table>
+<h2>Limits, stated plainly</h2>
+<ul class="findings">
+<li>Static schema checks say the tool contract is well-formed. They do not say a tool is useful, correct, or safe.</li>
+<li>Authenticated endpoints are out of scope: no token is ever used, so a gated server is reported as gated, never as healthy or dead.</li>
+<li>One snapshot per week. Uptime between scans is not measured — for that, run the CLI or the Action against your own endpoint.</li>
+<li>2 registry names are omitted at maintainer request and do not appear in any file here.</li>
+</ul>
+<p>Reproduce any number above with <code>npx @eidonze/mcpreflight schema &lt;endpoint-url&gt;</code>.</p>
+<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-11-02.</div>
+</main>
+
+</body>
+</html>
