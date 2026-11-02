@@ -1,37 +1,103 @@
-// Regenerate docs/sitemap.xml: site pages + trust index pages + all trust report pages.
+// Regenerate docs sitemaps: a sitemap index + a pages sitemap + paged trust-report sitemaps.
+// Every <url> carries a <lastmod>. Sources of truth, in order:
+//   - trust report pages / trust index pages: per-entry checkedAt from trust-data/scan.json (real scan time)
+//   - site article pages: last commit touching the file (git), cached in trust-data/sitemap-lastmod.json
+//     so shallow CI checkouts (fetch-depth 1) keep the last known real value instead of the checkout time.
 import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
+import { execFileSync } from 'node:child_process';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const scan = JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'scan.json'), 'utf8'));
 const SITE = 'https://xka0085-byte.github.io/mcpreflight';
+const PER_SITEMAP = 10000;
+const DOCS = path.join(root, 'docs');
+const LASTMOD_CACHE = path.join(root, 'trust-data', 'sitemap-lastmod.json');
 
-const urls = [
-  `${SITE}/`,
-  `${SITE}/health.html`,
-  `${SITE}/state-of-mcp-2026-10.html`,
-  `${SITE}/registry-changes.html`,
-  `${SITE}/agent-registry-watch.html`,
-  `${SITE}/how-many-mcp-servers-are-dead.html`,
-  `${SITE}/agent-evidence-sample.html`,
-  `${SITE}/mcp-schema-checker.html`,
-  `${SITE}/x402-endpoint-inspector.html`,
-  `${SITE}/mcp-security-ci.html`,
-  `${SITE}/troubleshooting.html`,
-  `${SITE}/mcp-oauth-diagnostics.html`,
-  `${SITE}/test-remote-mcp-server.html`,
-  `${SITE}/check-your-mcp-endpoint.html`,
-  `${SITE}/corrections.html`,
-  `${SITE}/data-quality-2026-10-21.html`,
-  `${SITE}/trust/`,
+const ymd = (iso) => (typeof iso === 'string' && iso.length >= 10 ? iso.slice(0, 10) : undefined);
+
+// ---- site page lastmod: git commit time (cached for shallow clones) ----
+const cache = fs.existsSync(LASTMOD_CACHE) ? JSON.parse(fs.readFileSync(LASTMOD_CACHE, 'utf8')) : {};
+let shallow = true;
+try {
+  shallow = execFileSync('git', ['rev-parse', '--is-shallow-repository'], { cwd: root, encoding: 'utf8' }).trim() === 'true';
+} catch { /* no git available: fall back to cache */ }
+
+function pageLastmod(relPath) {
+  if (!shallow) {
+    try {
+      const t = execFileSync('git', ['log', '-1', '--format=%cI', '--', relPath], { cwd: root, encoding: 'utf8' }).trim();
+      if (t) { cache[relPath] = t; return ymd(t); }
+    } catch { /* ignore, fall through to cache */ }
+  }
+  if (cache[relPath]) return ymd(cache[relPath]);
+  try { return ymd(fs.statSync(path.join(root, relPath)).mtime.toISOString()); } catch { return undefined; }
+}
+
+// ---- assemble url entries ----
+const pages = [
+  '', 'health.html', 'state-of-mcp-2026-10.html', 'registry-changes.html',
+  'agent-registry-watch.html', 'how-many-mcp-servers-are-dead.html',
+  'agent-evidence-sample.html', 'mcp-schema-checker.html', 'x402-endpoint-inspector.html',
+  'mcp-security-ci.html', 'troubleshooting.html', 'mcp-oauth-diagnostics.html',
+  'test-remote-mcp-server.html', 'check-your-mcp-endpoint.html', 'corrections.html',
+  'data-quality-2026-10-21.html',
 ];
-const total = scan.results.length;
-for (let i = 1; i * 500 < total; i++) urls.push(`${SITE}/trust/index-${i + 1}.html`);
-const excluded = new Set((JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'exclusions.json'), 'utf8')).exclusions ?? []).map((x) => x.name));
-for (const r of scan.results) { if (!excluded.has(r.name)) urls.push(`${SITE}/trust/p/${r.slug}.html`); }
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`;
-fs.writeFileSync(path.join(root, 'docs', 'sitemap.xml'), xml);
-console.log(`sitemap urls: ${urls.length}`);
+const results = scan.results;
+const excluded = new Set(
+  (JSON.parse(fs.readFileSync(path.join(root, 'trust-data', 'exclusions.json'), 'utf8')).exclusions ?? []).map((x) => x.name),
+);
+const kept = results.filter((r) => !excluded.has(r.name));
+const latestScan = ymd(results.reduce((a, r) => (r.checkedAt > a ? r.checkedAt : a), '0000'));
+
+const pageEntries = [];
+for (const p of pages) {
+  const rel = `docs/${p || 'index.html'}`;
+  pageEntries.push({ loc: `${SITE}/${p}`, lastmod: pageLastmod(rel) });
+}
+pageEntries.push({ loc: `${SITE}/trust/`, lastmod: latestScan });
+for (let i = 0; i * 500 < results.length; i++) {
+  const chunk = results.slice(i * 500, (i + 1) * 500);
+  const newest = chunk.reduce((a, r) => (r.checkedAt > a ? r.checkedAt : a), '0000');
+  pageEntries.push({ loc: `${SITE}/trust/index-${i + 1}.html`, lastmod: ymd(newest) });
+}
+
+const trustEntries = kept.map((r) => ({ loc: `${SITE}/trust/p/${r.slug}.html`, lastmod: ymd(r.checkedAt) }));
+
+// ---- write sitemaps ----
+const HEAD = '<?xml version="1.0" encoding="UTF-8"?>';
+const render = (entries) =>
+  `${HEAD}\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  entries.map((e) => `<url><loc>${e.loc}</loc>${e.lastmod ? `<lastmod>${e.lastmod}</lastmod>` : ''}</url>`).join('\n') +
+  `\n</urlset>\n`;
+
+// drop stale paged sitemaps from previous runs before writing new ones
+for (const f of fs.readdirSync(DOCS)) {
+  if (/^sitemap-(pages|trust-\d+)\.xml$/.test(f)) fs.unlinkSync(path.join(DOCS, f));
+}
+
+const children = [];
+function writeChild(name, entries) {
+  fs.writeFileSync(path.join(DOCS, name), render(entries));
+  const newest = entries.reduce((a, e) => (e.lastmod && e.lastmod > a ? e.lastmod : a), '0000-00-00');
+  children.push({ loc: `${SITE}/${name}`, lastmod: newest === '0000-00-00' ? undefined : newest, count: entries.length });
+}
+
+writeChild('sitemap-pages.xml', pageEntries);
+for (let i = 0, n = 1; i < trustEntries.length; i += PER_SITEMAP, n++) {
+  writeChild(`sitemap-trust-${n}.xml`, trustEntries.slice(i, i + PER_SITEMAP));
+}
+
+const index =
+  `${HEAD}\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  children.map((c) => `<sitemap><loc>${c.loc}</loc>${c.lastmod ? `<lastmod>${c.lastmod}</lastmod>` : ''}</sitemap>`).join('\n') +
+  `\n</sitemapindex>\n`;
+fs.writeFileSync(path.join(DOCS, 'sitemap.xml'), index);
+
+if (!shallow) fs.writeFileSync(LASTMOD_CACHE, `${JSON.stringify(cache, null, 2)}\n`);
+
+for (const c of children) console.log(`${c.loc}  urls=${c.count}  lastmod=${c.lastmod}`);
+console.log(`sitemap index children: ${children.length}, total urls: ${pageEntries.length + trustEntries.length}`);
