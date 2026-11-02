@@ -1,0 +1,163 @@
+{
+ "dataset": "mcpreflight x402 census",
+ "version": 1,
+ "page": "https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html",
+ "generatedAt": "2026-11-02T13:21:39.344Z",
+ "sweepDate": "2026-11-02",
+ "definition": {
+  "cohortRule": "registry entry whose title, description or URL matches /x402|http-402/i (case-insensitive); rule fixed 2026-10-15",
+  "method": "read-only anonymous initialize + tools/list, plus inspection of the HTTP 402 payment document shape",
+  "never": [
+   "signs",
+   "pays",
+   "settles",
+   "retries payment",
+   "uses a private key"
+  ],
+  "statusMeaning": {
+   "PASS": "clean anonymous handshake",
+   "AUTH_GATED": "confirmed intentional authentication gate (401 + WWW-Authenticate, or live RFC 9728 metadata)",
+   "UNKNOWN": "no anonymous response",
+   "FAIL": "response received but handshake broke"
+  }
+ },
+ "headline": {
+  "cohort": 1583,
+  "registryEndpoints": 35327,
+  "cohortSharePct": 4.5,
+  "passRatePct": 65.6,
+  "registryPassRatePct": 58.6,
+  "authGatedPct": 1.9,
+  "registryAuthGatedPct": 29,
+  "toolsPublished": 23360,
+  "endpointsPublishingTools": 1039,
+  "sweepDate": "2026-11-02",
+  "checkedAt": "2026-11-02T10:13:28.176Z"
+ },
+ "statusDistribution": {
+  "cohort": {
+   "PASS": 1039,
+   "AUTH_GATED": 30,
+   "UNKNOWN": 507,
+   "FAIL": 7
+  },
+  "registry": {
+   "PASS": 20701,
+   "AUTH_GATED": 10236,
+   "UNKNOWN": 4223,
+   "FAIL": 167
+  }
+ },
+ "findingCodes": {
+  "PROPERTY_DESCRIPTION_MISSING": 16832,
+  "STATIC_SCHEMA_CHECKS_PASSED": 568,
+  "NO_RESPONSE": 507,
+  "AUTH_GATE_DETECTED": 19,
+  "AUTH_GATE_VERIFIED": 11,
+  "TOOLS_LIST_INVALID": 7,
+  "INITIALIZE_RESPONSE_INVALID": 6,
+  "TOOL_DESCRIPTION_MISSING": 5,
+  "NO_TOOLS": 1
+ },
+ "weeklySeries": [
+  {
+   "date": "2026-10-15",
+   "cohort": 293,
+   "pass": 218,
+   "passRate": 74.4,
+   "authGated": 0,
+   "unknown": 74,
+   "fail": 1
+  },
+  {
+   "date": "2026-10-19",
+   "cohort": 293,
+   "pass": 213,
+   "passRate": 72.7,
+   "authGated": 2,
+   "unknown": 77,
+   "fail": 1
+  },
+  {
+   "date": "2026-10-30",
+   "cohort": 293,
+   "pass": 226,
+   "passRate": 77.1,
+   "authGated": 4,
+   "unknown": 62,
+   "fail": 1
+  },
+  {
+   "date": "2026-11-01",
+   "cohort": 1583,
+   "pass": 1059,
+   "passRate": 66.9,
+   "authGated": 19,
+   "unknown": 501,
+   "fail": 4
+  },
+  {
+   "date": "2026-11-02",
+   "cohort": 1583,
+   "pass": 1039,
+   "passRate": 65.6,
+   "authGated": 30,
+   "unknown": 507,
+   "fail": 7
+  }
+ ],
+ "driftSeries": [
+  {
+   "date": "2026-10-17",
+   "cohort": 293,
+   "discoverable": 61,
+   "resources": 509,
+   "real402": 49,
+   "drifted": 0
+  },
+  {
+   "date": "2026-10-19",
+   "cohort": 293,
+   "discoverable": 58,
+   "resources": 505,
+   "real402": 46,
+   "probed": 163,
+   "validChallenges": 58,
+   "withValid": 27,
+   "drifted": 5
+  },
+  {
+   "date": "2026-10-30",
+   "cohort": 293,
+   "discoverable": 59,
+   "resources": 579,
+   "real402": 46,
+   "probed": 170,
+   "validChallenges": 71,
+   "withValid": 30,
+   "drifted": 34
+  },
+  {
+   "date": "2026-11-02",
+   "cohort": 1583,
+   "discoverable": 298,
+   "resources": 2757,
+   "real402": 243,
+   "probed": 897,
+   "validChallenges": 456,
+   "withValid": 164,
+   "drifted": 8
+  }
+ ],
+ "comparability": {
+  "cohortBreak": "2026-11-01",
+  "note": "Rows with different cohort sizes are not strictly comparable: the cohort was 293 endpoints until 2026-10-30 and 1,583 from 2026-11-01 (full-registry filter).",
+  "otherCounts": "External x402 ecosystem percentages usually measure listing/discovery success on a different sample; a listing rate and an anonymous-handshake rate are different quantities."
+ },
+ "files": {
+  "cohort": "data/x402-cohort-latest.csv",
+  "history": "data/x402-history.csv"
+ },
+ "citation": "mcpreflight, \"x402 payments in the MCP Registry: a 1,583-endpoint census\", 2026-11-02, https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html",
+ "license": "MIT"
+}

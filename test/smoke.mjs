@@ -132,6 +132,15 @@ function run(url, ...args) {
     child.on('close', (code) => resolve({ code, stdout, stderr }));
   });
 }
+function runMarkdown(url, ...args) {
+  return new Promise((resolve) => {
+    const child = spawn(process.execPath, [cli, 'inspect', url, '--format=markdown', ...args], { stdio: ['ignore', 'pipe', 'pipe'] });
+    let stdout = ''; let stderr = '';
+    child.stdout.on('data', (chunk) => { stdout += chunk; });
+    child.stderr.on('data', (chunk) => { stderr += chunk; });
+    child.on('close', (code) => resolve({ code, stdout, stderr }));
+  });
+}
 function runSchema(url) {
   return new Promise((resolve) => {
     const child = spawn(process.execPath, [cli, 'schema', url, '--format=json'], { stdio: ['ignore', 'pipe', 'pipe'] });
@@ -154,6 +163,20 @@ try {
   const hintReport = JSON.parse(hint.stdout);
   assert.equal(hintReport.finalStatus, 'PASS', JSON.stringify(hintReport.findings));
   assert.equal(hintReport.x402.accepts.length, 1, 'body accepts[] must win over accept-less header hints');
+  // --x402 narrows the report to the payment layer: no handshake, no discovery probes
+  const x402 = await run(`http://127.0.0.1:${port}/good`, '--x402');
+  assert.equal(x402.code, 0, x402.stderr);
+  const x402Report = JSON.parse(x402.stdout);
+  assert.equal(x402Report.mode, 'read-only x402 subset');
+  assert.equal(x402Report.finalStatus, 'PASS', JSON.stringify(x402Report.findings));
+  assert.ok(x402Report.x402.accepts.length >= 1, '--x402 must keep accepts[]');
+  assert.equal('metadata' in x402Report, false, '--x402 must not run discovery probes');
+  assert.match(x402Report.limitations[0], /Payment layer only/, '--x402 must state its narrow scope');
+  const x402md = await runMarkdown(`http://127.0.0.1:${port}/good`, '--x402');
+  assert.equal(x402md.code, 0, x402md.stderr);
+  assert.match(x402md.stdout, /# x402 challenge/);
+  assert.match(x402md.stdout, /### accepts\[0\]/);
+  assert.doesNotMatch(x402md.stdout, /## MCP handshake/, '--x402 markdown must not show the MCP section');
   const bad400 = await run(`http://127.0.0.1:${port}/bad-400`, '--method=POST');
   assert.equal(bad400.code, 1, bad400.stderr);
   const bad400Report = JSON.parse(bad400.stdout);

@@ -24,6 +24,7 @@ jobs:
           node scripts/history-snapshot.mjs
           node scripts/x402-cohort.mjs
           node scripts/x402-drift.mjs || echo "::warning::x402 drift step failed, weekly data kept"
+          node scripts/x402-dataset.mjs || echo "::warning::x402 dataset page failed, previous weekly data kept"
           node scripts/trust-gen.mjs
           node scripts/gen-sitemap.mjs
           node scripts/scan-stats.mjs

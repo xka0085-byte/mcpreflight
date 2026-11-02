@@ -16,11 +16,14 @@ const help = `mcpreflight ${VERSION}
 Read-only MCP/x402 endpoint diagnostics.
 
 Usage:
-  mcpreflight inspect <url> [--method=GET|POST] [--format=json|markdown]
+  mcpreflight inspect <url> [--method=GET|POST] [--format=json|markdown] [--x402]
   mcpreflight schema <url> [--format=json|markdown]
   mcpreflight baseline <url> [--method=GET|POST] [--baseline=FILE] [--json]
   mcpreflight drift <url> [--method=GET|POST] [--baseline=FILE] [--json]
   mcpreflight --help
+
+--x402 narrows inspect to the payment layer: one request, the 402 challenge and its
+accepts[] entries only, without the MCP handshake or discovery probes.
 
 baseline records the x402 challenge shape your endpoint serves right now. drift re-checks
 the same endpoint and exits 1 when that shape has changed, so CI catches a broken payment
@@ -147,6 +150,19 @@ function markdown(report) {
   report.x402.accepts.forEach((item, i) => lines.push(`### accepts[${i}]`, '', ...Object.entries(item).map(([key, value]) => `- ${key}: ${value ?? 'missing'}`), ''));
   lines.push('## Findings', '', ...(report.findings.length ? report.findings.map((item) => `- **${item.status}** \`${item.code}\`: ${item.message}`) : ['- None']), '', '## Limitations', '', ...report.limitations.map((item) => `- ${item}`));
   if (report.finalStatus === 'PASS') lines.push('', '## Next steps', '', 'Gate CI on this exact check (paste into .github/workflows/x402.yml):', '', '```yaml', '- uses: xka0085-byte/mcpreflight@v1', '  with:', `    endpoint: ${report.endpoint}`, '    mode: inspect', '```', '', 'Weekly re-scan and docs: https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html');
+  return lines.join('\n');
+}
+
+// --x402: the payment layer only. One request, no discovery probes, no MCP handshake.
+function x402markdown(report) {
+  const resource = report.x402.resource;
+  const resourceText = resource === null || resource === undefined ? 'none' : typeof resource === 'object' ? (resource.url ?? resource.resource ?? JSON.stringify(resource)) : resource;
+  const lines = [`# x402 challenge`, '', `- Status: **${report.finalStatus}**`, `- Endpoint: ${report.endpoint}`, `- Method: ${report.method}`, `- HTTP: ${report.http.status}`, `- x402 version: ${report.x402.version ?? 'none'}`, `- Resource: ${resourceText}`, `- Response: ${report.http.elapsedMs} ms / ${report.http.bodyBytes} bytes`, ''];
+  lines.push('## accepts[]', '');
+  if (!report.x402.accepts.length) lines.push('- None parsed', '');
+  report.x402.accepts.forEach((item, index) => lines.push(`### accepts[${index}]`, '', ...Object.entries(item).map(([key, value]) => `- ${key}: ${value ?? 'missing'}`), ''));
+  lines.push('## Findings', '', ...(report.findings.length ? report.findings.map((item) => `- **${item.status}** \`${item.code}\`: ${item.message}`) : ['- None']), '');
+  lines.push('## Scope', '', '- Payment layer only: no MCP handshake, no discovery manifests, no signing, no settlement.', '- Public x402 census and definitions: https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html', '');
   return lines.join('\n');
 }
 
@@ -337,6 +353,7 @@ else {
   const rawUrl = args[1];
   const method = (args.find((arg) => arg.startsWith('--method='))?.split('=')[1] ?? 'GET').toUpperCase();
   const format = args.find((arg) => arg.startsWith('--format='))?.split('=')[1] ?? (args.includes('--json') ? 'json' : 'markdown');
+  const x402Only = args.includes('--x402');
   if (!rawUrl) die('URL is required');
   else if (!['GET', 'POST'].includes(method)) die('--method must be GET or POST');
   else if (!['json', 'markdown'].includes(format)) die('--format must be json or markdown');
@@ -347,8 +364,13 @@ else {
     if (url) try {
       const result = await probe(url, method);
       const report = makeReport(url.toString(), method, result);
-      report.metadata = await Promise.all(['/.well-known/mcp/server.json', '/.well-known/x402'].map((path) => metadata(url, path)));
-      process.stdout.write(format === 'json' ? `${JSON.stringify(report, null, 2)}\n` : markdown(report));
+      if (x402Only) {
+        report.mode = 'read-only x402 subset';
+        report.limitations = ['Payment layer only; no MCP handshake, discovery manifest, signing or settlement was attempted.'];
+      } else {
+        report.metadata = await Promise.all(['/.well-known/mcp/server.json', '/.well-known/x402'].map((path) => metadata(url, path)));
+      }
+      process.stdout.write(format === 'json' ? `${JSON.stringify(report, null, 2)}\n` : x402Only ? x402markdown(report) : markdown(report));
       process.exitCode = report.finalStatus === 'PASS' ? 0 : 1;
     } catch (error) {
       const report = { reportVersion: 1, inspectorVersion: VERSION, mode: 'read-only', checkedAt: new Date().toISOString(), endpoint: url.toString(), finalStatus: 'UNKNOWN', findings: [{ status: 'UNKNOWN', code: 'REQUEST_FAILED', message: redact(error.message) }], limitations: ['The endpoint could not be observed within the timeout/body limit. No payment was attempted.'] };

@@ -12,10 +12,10 @@ Key facts verified by our own scans (complete 2026-11-01 census unless stated):
 - Census scope: 198,345 registry entries across 1,984 cursor pages, 52,765 latest-version active servers, 35,327 of them reachable over HTTP
 - Week-over-week churn against the previous baseline: 50 endpoints that passed then gave no anonymous handshake now (42 UNKNOWN, 8 AUTH_GATED), 181 moved the other way
 - All 217 smithery-registered endpoints failed the anonymous handshake (191 UNKNOWN + 26 AUTH_GATED; registry hygiene finding)
-- 1,583 x402 payment endpoints found in the registry; they pass at 66.9% (1,059 of 1,583) vs the 59.2% baseline from the same sweep (finding 6)
+- 1,583 x402 payment endpoints found in the registry; they pass at 65.6% (1,039 of 1,583) vs the 58.6% baseline from the same sweep (finding 6). This is a clean-anonymous-handshake rate, not a listing or liveness rate, and it is not comparable with directory coverage figures such as the ~80% reported elsewhere (see the dataset page for the definition)
 - AUTH_GATED is a first-class status: 401 + WWW-Authenticate endpoints are classified, not lumped with dead servers
 - Tool: `npx @eidonze/mcpreflight schema <url>` checks MCP handshake and tool schemas without calling tools
-- Tool: `npx @eidonze/mcpreflight inspect <url>` validates x402 payment challenges without paying
+- Tool: `npx @eidonze/mcpreflight inspect <url>` validates x402 payment challenges without paying; add `--x402` to inspect the payment layer alone, one request, no MCP handshake
 
 Guides:
 
@@ -25,6 +25,7 @@ Guides:
 - [Data quality note, 2026-10-21 scan](https://xka0085-byte.github.io/mcpreflight/data-quality-2026-10-21.html): old and new pass rates, the five scanner defects behind the change, and what remains unverified
 - [MCP schema checker](https://xka0085-byte.github.io/mcpreflight/mcp-schema-checker.html): what the schema check validates and how to read results
 - [x402 endpoint inspector](https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html): preflight for 402 payment endpoints
+- [x402 payments in the MCP Registry: census dataset](https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html): the 1,583-endpoint payment slice of the registry sweep, weekly series, status distribution against the registry baseline, definitions and comparability caveats, downloadable CSV/JSON
 - [MCP security CI](https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html): gating MCP servers in CI with GitHub Actions
 - [Troubleshooting](https://xka0085-byte.github.io/mcpreflight/troubleshooting.html): common MCP handshake and tools/list failures with fixes
 - [OAuth diagnostics](https://xka0085-byte.github.io/mcpreflight/mcp-oauth-diagnostics.html): auth-gated servers and current limits
@@ -37,6 +38,7 @@ How to cite, by artifact. Each artifact has a stable URL, so cite the artifact t
 
 - registry reliability and the pass rate: mcpreflight, "State of MCP Servers - October 2026", 2026-11-01, https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html
 - x402 challenge drift and real 402 validity, updated every Monday: mcpreflight x402 challenge drift, https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html
+- how many MCP endpoints advertise x402, and how they compare to the registry baseline: mcpreflight x402 census dataset, 2026-11-02, https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html
 - a single server: mcpreflight Trust Directory, the registry name, scanned date, https://xka0085-byte.github.io/mcpreflight/trust/p/SLUG.html
 - embedded status badge, which now carries both the status and the scan date: https://xka0085-byte.github.io/mcpreflight/trust/badge/SLUG.svg
 

@@ -19,8 +19,9 @@ The same read-only check runs weekly against every remote endpoint listed in the
 
 - [Trust Directory](https://xka0085-byte.github.io/mcpreflight/trust/) — 35,325 endpoints, one report each: status, protocol version, tool count, findings, and whether credentials are required.
 - [JSON API](https://xka0085-byte.github.io/mcpreflight/trust/api.html) — `/trust/api/{slug}.json` per endpoint, plus batch indexes and a JSON Schema. No key, no signup, no rate limit.
+- [x402 census dataset](https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html) — the payment slice of the same sweep: 1,583 of 35,327 endpoints advertise x402 or HTTP-402, with a weekly series, a status distribution against the registry-wide baseline, and downloadable CSV/JSON.
 
-Read the vocabulary before quoting any number: in the 2026-11-02 scan, 20,701 endpoints answered anonymously (`PASS`), 10,236 refused with `401` because they require credentials by design (`AUTH_GATED`), 167 were reachable but invalid (`FAIL`), and 4,221 gave no anonymous handshake (`UNKNOWN`, usually an auth wall we cannot see past). A "dead MCP servers" count taken from this data would be wrong — 41% of the registry cannot be checked without credentials at all.
+Read the vocabulary before quoting any number: in the 2026-11-02 scan, 20,701 endpoints answered anonymously (`PASS`), 10,236 refused with `401` because they require credentials by design (`AUTH_GATED`), 167 were reachable but invalid (`FAIL`), and 4,223 gave no anonymous handshake (`UNKNOWN`, usually an auth wall we cannot see past). A "dead MCP servers" count taken from this data would be wrong — 41% of the registry cannot be checked without credentials at all.
 
 ## Use it as an MCP server
 
@@ -82,6 +83,7 @@ Check your endpoint in the browser, free and without signup:
 - [Public documentation site](https://xka0085-byte.github.io/mcpreflight/)
 - [MCP schema checker](docs/mcp-schema-checker.md)
 - [x402 endpoint inspector](docs/x402-endpoint-inspector.md)
+- [x402 payments in the MCP Registry: census dataset](https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html)
 - [MCP security CI](docs/mcp-security-ci.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [OAuth scope and current limits](docs/mcp-oauth-diagnostics.md)
@@ -98,6 +100,7 @@ Check an x402 endpoint without paying:
 
 ```bash
 npx @eidonze/mcpreflight inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpreflight inspect https://your-api.example/paid --x402   # payment layer only, one request
 ```
 
 Requires Node.js 18+. No API key or wallet is needed.
@@ -125,6 +128,7 @@ The exact same run against a healthy server prints `Status: PASS` and exits 0, s
 |---|---|---|
 | `schema` | MCP `initialize`, `tools/list`, tool names, descriptions, and JSON schemas | Does not call tools or prove runtime behavior |
 | `inspect` | HTTP 402, x402 v1/v2 payment document, `accepts[]`, discovery manifests, latency and response digest | Does not sign, pay, settle, retry, or verify delivery |
+| `inspect --x402` | The payment layer only: one request, the 402 challenge and its `accepts[]` entries, no MCP handshake or discovery probes | Same limits, and it says nothing about the MCP endpoint behind the payment |
 
 Exit codes are stable for automation: `0` PASS, `1` FAIL, `2` UNKNOWN/network error, `3` usage error.
 

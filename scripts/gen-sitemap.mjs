@@ -40,7 +40,7 @@ function pageLastmod(relPath) {
 const pages = [
   '', 'health.html', 'state-of-mcp-2026-10.html', 'registry-changes.html',
   'agent-registry-watch.html', 'how-many-mcp-servers-are-dead.html',
-  'agent-evidence-sample.html', 'mcp-schema-checker.html', 'x402-endpoint-inspector.html',
+  'agent-evidence-sample.html', 'mcp-schema-checker.html', 'x402-endpoint-inspector.html', 'x402-mcp-payments-data.html',
   'mcp-security-ci.html', 'troubleshooting.html', 'mcp-oauth-diagnostics.html',
   'test-remote-mcp-server.html', 'check-your-mcp-endpoint.html', 'corrections.html',
   'data-quality-2026-10-21.html',
