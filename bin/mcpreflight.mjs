@@ -4,7 +4,11 @@ import fs from 'node:fs';
 
 const MAX_BODY = 4 * 1024 * 1024;
 const TIMEOUT = 15_000;
-const VERSION = '0.5.0';
+const VERSION = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
+  } catch { return '0.0.0'; }
+})();
 const DEFAULT_BASELINE = 'mcpreflight-baseline.json';
 
 const help = `mcpreflight ${VERSION}
@@ -299,7 +303,8 @@ ${out.limitations.map((item) => `- ${item}`).join('\n')}
 }
 
 const args = process.argv.slice(2);
-if (args.includes('--help') || args.length === 0) { console.log(help); process.exitCode = args.length ? 0 : 3; }
+if (args.includes('--version') || args.includes('-v')) { console.log(VERSION); process.exitCode = 0; }
+else if (args.includes('--help') || args.length === 0) { console.log(help); process.exitCode = args.length ? 0 : 3; }
 else if (args[0] === 'schema') {
   let url; try { url = new URL(args[1]); if (!['http:', 'https:'].includes(url.protocol)) throw new Error('only http(s) URLs are supported'); } catch (error) { die(error.message); }
   const format = args.includes('--json') || args.includes('--format=json') ? 'json' : 'markdown';
