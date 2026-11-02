@@ -15,6 +15,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Lint the action manifest
+        run: |
+          # The runner refuses to load action.yml if the root is not a mapping,
+          # and an unquoted "CI: checks" in description did exactly that: the
+          # whole workflow failed with "Failed to load ./action.yml" before any
+          # step of the action ran. Catch that class of breakage here.
+          python3 -c 'import yaml' 2>/dev/null || python3 -m pip install --quiet --disable-pip-version-check pyyaml
+          python3 - <<'PY'
+          import sys, yaml
+          d = yaml.safe_load(open('action.yml', encoding='utf-8-sig'))
+          assert isinstance(d, dict), 'action manifest root must be a mapping'
+          for key in ('name', 'description', 'runs'):
+              assert key in d, 'missing %s' % key
+          assert d['runs'].get('using') in ('composite', 'node20', 'node24', 'docker'), 'unexpected runs.using'
+          desc = d['description']
+          assert isinstance(desc, str), 'description must be a string, not a nested mapping'
+          assert len(desc) < 125, 'Marketplace rejects descriptions of 125 characters or more (got %d)' % len(desc)
+          print('manifest ok: %s / %d-char description / runs.using=%s' % (d['name'], len(desc), d['runs']['using']))
+          PY
       - id: check
         uses: ./
         with:
