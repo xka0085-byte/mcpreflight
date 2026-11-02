@@ -20,56 +20,81 @@ inputs:
     required: false
     default: schema
   format:
-    description: Report format
+    description: Report format, markdown or json
     required: false
     default: markdown
+  method:
+    description: HTTP method used for inspect, baseline and drift modes
+    required: false
+    default: POST
   baseline:
     description: Path to the committed x402 challenge baseline used by drift mode
     required: false
     default: mcpreflight-baseline.json
-  fail-on:
+  fail_on:
     description: Fail the job when the report status is FAIL, UNKNOWN or DRIFTED
     required: false
-    default: true
+    default: 'true'
+outputs:
+  status:
+    description: Preflight exit status, 0 PASS, 1 FAIL, 2 UNKNOWN or network, 3 usage
+    value: ${{ steps.preflight.outputs.status }}
 runs:
   using: composite
   steps:
     - name: Run MCP Trust Check
+      id: preflight
       shell: bash
       env:
         ENDPOINT: ${{ inputs.endpoint }}
         MODE: ${{ inputs.mode }}
         FORMAT: ${{ inputs.format }}
+        METHOD: ${{ inputs.method }}
         BASELINE: ${{ inputs.baseline }}
-        FAIL_ON: ${{ inputs.fail-on }}
+        FAIL_ON: ${{ inputs.fail_on }}
       run: |
         set -o pipefail
         if ! command -v node >/dev/null 2>&1; then
-          echo "Node.js >= 18 is required" >&2
+          echo "Node.js >= 18 is required, node was not found on PATH" >&2
+          exit 3
+        fi
+        if ! node -e 'process.exit(Number(process.versions.node.split(".")[0]) >= 18 ? 0 : 1)'; then
+          echo "Node.js >= 18 is required, found $(node -v)" >&2
           exit 3
         fi
         case "$MODE" in
           schema)
-            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" schema "$ENDPOINT" "--format=$FORMAT"
-            status=$?
+            args=(schema "$ENDPOINT" "--format=$FORMAT")
             ;;
           inspect)
-            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" inspect "$ENDPOINT" "--format=$FORMAT"
-            status=$?
+            args=(inspect "$ENDPOINT" "--format=$FORMAT" "--method=$METHOD")
             ;;
           baseline)
-            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" baseline "$ENDPOINT" "--format=$FORMAT" "--baseline=$BASELINE"
-            status=$?
+            args=(baseline "$ENDPOINT" "--format=$FORMAT" "--method=$METHOD" "--baseline=$BASELINE")
             ;;
           drift)
-            node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" drift "$ENDPOINT" "--format=$FORMAT" "--baseline=$BASELINE"
-            status=$?
+            args=(drift "$ENDPOINT" "--format=$FORMAT" "--method=$METHOD" "--baseline=$BASELINE")
             ;;
           *)
-            echo "Unsupported mode: $MODE" >&2
+            echo "Unsupported mode: $MODE. Use schema, inspect, baseline or drift." >&2
             exit 3
             ;;
         esac
+        report="$(mktemp)"
+        set +e
+        node "$GITHUB_ACTION_PATH/bin/mcpreflight.mjs" "${args[@]}" 2>&1 | tee "$report"
+        status="${PIPESTATUS[0]}"
+        set -e
+        echo "status=$status" >> "$GITHUB_OUTPUT"
+        if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+          {
+            echo "### MCP Trust Check, mode \`$MODE\`"
+            echo
+            echo '```text'
+            cat "$report"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+        fi
         if [ "$FAIL_ON" = "true" ] && [ "$status" -ne 0 ]; then
           exit "$status"
         fi
