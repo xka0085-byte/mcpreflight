@@ -1,6 +1,24 @@
 # mcpreflight
 
-Read-only checks for MCP tool schemas and x402 payment endpoints. Ships as a CLI, a GitHub Action, and a stdio MCP server that an agent client can call directly. Use it before an agent client or buyer depends on an endpoint.
+**Point it at any MCP or x402 endpoint and get a verdict in one command. Read-only: no API key, no wallet, no tool calls.**
+
+```bash
+npx -y @eidonze/mcpreflight schema https://your-mcp-server.example/mcp
+```
+
+```text
+Status: PASS | FAIL | UNKNOWN   exit 0 | 1 | 2, so CI can gate on it
+```
+
+Reach for it when an agent client, a buyer, or a CI job is about to depend on an endpoint whose source you cannot read, including endpoints you do not own. It reads only what the endpoint already sends to any anonymous caller: the `initialize` handshake, `tools/list`, and the HTTP 402 / x402 payment document.
+
+| Form | Run it | Use it for |
+|---|---|---|
+| CLI | `npx -y @eidonze/mcpreflight ...` | one-off checks and scripts |
+| GitHub Action | `uses: xka0085-byte/mcpreflight@v1` | fail a PR when a handshake, a tool schema or an x402 challenge drifts |
+| stdio MCP server | `npx -y -p @eidonze/mcpreflight mcpreflight-mcp` | let an agent check an endpoint before it connects |
+
+No install to try it: run the check in the browser, free and without signup: [check-your-mcp-endpoint](https://xka0085-byte.github.io/mcpreflight/check-your-mcp-endpoint.html)
 
 [![npm](https://img.shields.io/npm/v/@eidonze/mcpreflight?logo=npm)](https://www.npmjs.com/package/@eidonze/mcpreflight)
 [![CI](https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml/badge.svg)](https://github.com/xka0085-byte/mcpreflight/actions/workflows/ci.yml)
@@ -57,26 +75,9 @@ These are examples of the check being run, not endorsements or a claim that a `P
 
 ## Start here
 
-```bash
-npx @eidonze/mcpreflight schema https://your-mcp-server.example/mcp --json
-```
-
 Exit codes are stable for CI: `0` PASS, `1` FAIL, `2` UNKNOWN/network, `3` usage. Requires Node.js 18+.
 
-Gate a pull request with the bundled GitHub Action:
-
-```yaml
-- name: MCP trust check
-  uses: xka0085-byte/mcpreflight@v1
-  with:
-    endpoint: https://your-mcp-server.example/mcp
-    mode: schema
-```
-
 `mode` is `schema` (MCP handshake plus tool schemas), `inspect` (one-off x402 preflight), `baseline` (record the current 402 challenge shape) or `drift` (fail the job when that shape moves away from the committed baseline). The report is also appended to the job summary, and `steps.<id>.outputs.status` carries the exit code so later steps can branch on it without parsing logs.
-
-Check your endpoint in the browser, free and without signup:
-[check-your-mcp-endpoint](https://xka0085-byte.github.io/mcpreflight/check-your-mcp-endpoint.html)
 
 ## Find the right guide
 
