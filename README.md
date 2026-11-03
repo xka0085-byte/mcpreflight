@@ -25,6 +25,8 @@ No install to try it: run the check in the browser, free and without signup: [ch
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/xka0085-byte/mcpreflight)
 
+Listed in the official MCP Registry as `io.github.xka0085-byte/mcpreflight` ([browse](https://registry.modelcontextprotocol.io/?q=mcpreflight)) and on the [GitHub Marketplace](https://github.com/marketplace/actions/mcp-trust-preflight).
+
 ## What it is
 
 Read-only MCP and x402 preflight: it reads `initialize` + `tools/list` and x402 payment documents. No API key, no wallet, no payment, no tool calls.
