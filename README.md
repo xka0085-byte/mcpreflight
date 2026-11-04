@@ -15,6 +15,7 @@ Reach for it when an agent client, a buyer, or a CI job is about to depend on an
 | Form | Run it | Use it for |
 |---|---|---|
 | CLI | `npx -y @eidonze/mcpreflight ...` | one-off checks and scripts |
+| Homebrew | `brew install xka0085-byte/mcpreflight/mcpreflight` | a machine-wide `mcpreflight` on PATH, macOS or Linux |
 | GitHub Action | `uses: xka0085-byte/mcpreflight@v1` | fail a PR when a handshake, a tool schema or an x402 challenge drifts |
 | stdio MCP server | `npx -y -p @eidonze/mcpreflight mcpreflight-mcp` | let an agent check an endpoint before it connects |
 
@@ -32,6 +33,18 @@ Listed in the official MCP Registry as `io.github.xka0085-byte/mcpreflight` ([br
 Read-only MCP and x402 preflight: it reads `initialize` + `tools/list` and x402 payment documents. No API key, no wallet, no payment, no tool calls.
 
 This is an endpoint preflight, not a source audit. Tools that read your repository or fuzz a server you launch need a checkout and a start command; this one needs only a URL, so it can check the deployment an agent is about to connect to, including one you do not own.
+
+## Same name, different job
+
+Search "MCP preflight" and you also meet [`kenimo49/mcp-preflight`](https://github.com/kenimo49/mcp-scorecard), now published as `mcp-scorecard`. Both check an MCP server before something depends on it; the input and the findings differ.
+
+| | This repo (`mcpreflight`) | `mcp-scorecard` (kenimo49) |
+|---|---|---|
+| Input | a deployment URL, including one you do not own | a local checkout, a `localhost` URL, or a `pypi:` package |
+| Reads | `initialize`, `tools/list`, and the HTTP 402 / x402 payment document, anonymously | per-turn token footprint, use-case scoping of each tool, security rules, name safety |
+| Answers | will this deployed endpoint answer an agent, and does its payment challenge still hold? | is this server cheap and clear enough for an LLM to use, before you publish it? |
+
+One grades the source you have; the other checks the endpoint you are about to depend on.
 
 ## Check an endpoint you do not own
 
