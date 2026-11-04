@@ -43,6 +43,11 @@ const pages = [
   'agent-evidence-sample.html', 'mcp-schema-checker.html', 'x402-endpoint-inspector.html', 'x402-mcp-payments-data.html',
   'mcp-security-ci.html', 'troubleshooting.html', 'mcp-oauth-diagnostics.html',
   'test-remote-mcp-server.html', 'check-your-mcp-endpoint.html', 'corrections.html',
+  // Symptom pages: one per query a developer types when a remote server misbehaves. They are
+  // regenerated from the census, so they are listed here rather than discovered by crawling.
+  'mcp-server-401-on-initialize.html', 'mcp-server-closes-connection-during-initialize.html',
+  'mcp-tool-never-called-by-model.html', 'mcp-tools-list-invalid-schema.html',
+  'mcp-initialize-response-invalid.html',
   'data-quality-2026-10-21.html',
 ];
 

@@ -564,7 +564,225 @@ function syncOtherPages() {
   console.log(`prose pages: total rules applied ${applied.length}${warn.length > proseWarnMark ? `, anchors not found: ${warn.slice(proseWarnMark).join(' | ')}` : ', all anchors matched'}`);
 }
 syncOtherPages();
+renderSymptomPages();
 
 console.log(
   `mcp state ${sweepDate}: ${total} endpoints, pass ${counts.PASS} (${summary.headline.passPct}%), auth-gated ${counts.AUTH_GATED}, unknown ${counts.UNKNOWN}, fail ${counts.FAIL}; tools ${toolsPublished} on ${toolCounts.length} endpoints; ${ordered.length} finding codes`,
 );
+
+// ---- symptom pages ----
+// One page per query a developer actually types when a remote server misbehaves. Every number
+// below is read from this sweep, so the pages age with the dataset instead of drifting the way
+// hand-written prose does.
+
+function renderSymptomPages() {
+  const esc = (value) => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const endpointsWith = (codes) => codes.reduce((sum, code) => sum + (findingCodes[code]?.endpoints ?? 0), 0);
+  const samplesFor = (codes, limit = 5) => results
+    .filter((entry) => Array.isArray(entry.findings) && entry.findings.some((finding) => codes.includes(String(finding.code))))
+    .filter((entry) => entry.slug)
+    .slice(0, limit);
+
+  const gated = pct(counts.AUTH_GATED, total);
+  const verified = findingCodes.AUTH_GATE_VERIFIED?.endpoints ?? 0;
+  const head = (spec) => spec.head;
+
+  const render = (spec, index) => {
+    const faqLd = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: spec.faq.map(([question, answer]) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+      })),
+    };
+    const samples = samplesFor(spec.codes);
+    const canonical = `https://xka0085-byte.github.io/mcpreflight/${spec.slug}.html`;
+    return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(spec.title)}</title><meta name="description" content="${esc(spec.description)}"><link rel="canonical" href="${canonical}"><script type="application/ld+json">${JSON.stringify(faqLd)}</script></head><body><main>
+<h1>${esc(spec.h1)}</h1>
+<p>${spec.intro()}</p>
+<h2>How common it is</h2>
+<ul>${spec.commonness().map(([label, value]) => `<li>${esc(label)} — <strong>${esc(value)}</strong></li>`).join('')}</ul>
+<h2>What it means</h2>
+<p>${spec.meaning}</p>
+<h2>Check it in one command</h2>
+<pre><code>${esc(spec.command)}</code></pre>
+<p>The check is read-only. It performs the handshake steps and reports which one answered what; it does not authenticate, mutate, or write anything to the server.</p>
+<h2>Three steps</h2>
+<ol>${spec.steps.map((step) => `<li>${step}</li>`).join('')}</ol>
+<h2>Endpoints that showed it in the ${sweepDate} sweep</h2>
+<ul>${samples.length ? samples.map((entry) => `<li><a href="trust/p/${esc(entry.slug)}.html">${esc(entry.name)}</a> — <code>${esc(entry.url)}</code></li>`).join('') : '<li>No endpoint in this sweep carried the finding.</li>'}</ul>
+<p>Numbers, method and caveats: <a href="state-of-mcp-2026-10.html">State of MCP Servers, ${sweepDate}</a>. Machine-readable: <a href="data/mcp-state-summary.json">summary.json</a> · <a href="data/mcp-state-codes.csv">codes.csv</a>.</p>
+<p><a href="troubleshooting.html">All symptoms</a> · <a href="how-many-mcp-servers-are-dead.html">How many MCP servers are dead?</a> · <a href="check-your-mcp-endpoint.html">Check your own endpoint</a> · <a href="index.html">Back to mcpreflight</a></p>
+</main></body></html>
+`;
+  };
+
+  const symptoms = [
+    {
+      slug: 'mcp-server-401-on-initialize',
+      title: 'MCP server returns 401 on initialize — mcpreflight',
+      description: 'Why a remote MCP server answers initialize with 401, how to separate an authentication gate from a broken server, and how much of the public registry behaves this way.',
+      h1: 'My remote MCP server returns 401 on initialize',
+      codes: ['AUTH_GATE_VERIFIED', 'AUTH_GATE_DETECTED'],
+      intro: () => `In the ${sweepDate} sweep of the official MCP Registry, ${n(counts.AUTH_GATED)} of ${n(total)} remote endpoints (${gated}%) answered our read-only probe with a 401 or with a live OAuth discovery document instead of an anonymous handshake. ${n(verified)} of those carry a gate we confirmed against RFC 9728 resource metadata or an actual 401 challenge; the rest are classified from response headers alone.`,
+      commonness: () => [
+        ['Remote endpoints that gate anonymous access', `${n(counts.AUTH_GATED)} of ${n(total)} (${gated}%)`],
+        ['Gate confirmed against live metadata or a 401 challenge', `${n(verified)}`],
+        ['Endpoints that answered nothing at all', `${n(counts.UNKNOWN)} of ${n(total)} (${pct(counts.UNKNOWN, total)}%)`],
+      ],
+      meaning: 'A 401 on <code>initialize</code> is usually the server working as designed: it wants an OAuth token before it will talk to anyone, and the MCP authorization spec expects that token to be discovered from <code>/.well-known/oauth-protected-resource</code>. The failure worth chasing is not the 401 itself but a 401 with no way to obtain a token, or a client that cannot complete the discovery chain. This is why the census keeps <code>AUTH_GATED</code> separate from <code>UNKNOWN</code>: an endpoint that refuses and explains itself is healthy, an endpoint that refuses silently is not.',
+      steps: [
+        'Send a bare <code>POST initialize</code> and read the status line together with the <code>WWW-Authenticate</code> header. A 401 that names a resource metadata URL is a working gate.',
+        'Fetch that metadata document. If it 404s while the server still demands a token, clients have no path to authenticate — publish the document before shipping the gate.',
+        'Re-run the same check with a token against a second endpoint to confirm the tool surface is reachable, not just the front door.',
+      ],
+      command: 'npx @eidonze/mcpreflight schema https://your-server.example.com/mcp',
+      faq: [
+        ['Is a 401 on initialize a bug in my MCP server?', 'Usually not. A 401 with a reachable OAuth protected-resource metadata document is the intended behaviour for a server that requires authorization. It becomes a defect when the metadata is missing or unreachable, because no client can then obtain a token.'],
+        ['Why does a scanner report my server as an unknown rather than auth-gated?', `A server lands in UNKNOWN when it answers nothing at all, and in AUTH_GATED when it refuses with an authentication signal. In the ${sweepDate} sweep ${n(counts.UNKNOWN)} endpoints were unknown and ${n(counts.AUTH_GATED)} were gated, so the distinction is measurable rather than a matter of taste.`],
+      ],
+    },
+    {
+      slug: 'mcp-server-closes-connection-during-initialize',
+      title: 'MCP server closes the connection during initialize — mcpreflight',
+      description: 'What it means when a remote MCP endpoint returns no response to initialize, the transport and header checks that explain it, and how often it happens across the official registry.',
+      h1: 'My MCP server closes the connection during initialize',
+      codes: ['NO_RESPONSE'],
+      intro: () => `In the ${sweepDate} sweep, ${n(endpointsWith(['NO_RESPONSE']))} of ${n(total)} remote endpoints (${pct(endpointsWith(['NO_RESPONSE']), total)}%) returned nothing at all to a well-formed <code>initialize</code>: no JSON-RPC payload, no error, no HTTP status the probe could use. The streamable HTTP transport expects a POST that stays open long enough to answer.`,
+      commonness: () => [
+        ['Endpoints with no response to initialize', `${n(endpointsWith(['NO_RESPONSE']))} of ${n(total)} (${pct(endpointsWith(['NO_RESPONSE']), total)}%)`],
+        ['Endpoints that did complete a clean anonymous handshake', `${n(counts.PASS)} of ${n(total)} (${summary.headline.passPct}%)`],
+        ['Endpoints publishing at least one tool', `${n(summary.headline.endpointsPublishingTools)}`],
+      ],
+      meaning: 'No response is a transport problem before it is an MCP problem. The three causes worth ruling out, in order, are the wrong path for the transport (a <code>/sse</code> listener behind a <code>/mcp</code> URL), a proxy or CDN that buffers or drops the streaming response, and a process that exits while handling the request. Because nothing comes back, a client cannot tell these apart either — which is why the census records it as its own state instead of folding it into failures.',
+      steps: [
+        'Confirm the URL points at the transport you implemented. A streamable HTTP endpoint must accept <code>POST</code> with <code>Accept: application/json, text/event-stream</code>; a stdio-only server has no HTTP surface at all.',
+        'Curl the endpoint from outside your network. If it answers locally but not publicly, the gap is the proxy, the CDN buffering rule, or a firewall dropping long-lived responses.',
+        'Check that the process survives the request: log the exit path and the unhandled rejection handler, since a crash mid-request looks identical to a closed stream from the client side.',
+      ],
+      command: 'npx @eidonze/mcpreflight schema https://your-server.example.com/mcp',
+      faq: [
+        ['Why does my MCP server work locally but return nothing when scanned?', 'The usual cause is the network path rather than the server: a proxy or CDN that buffers or truncates the streaming response, or an edge rule that rejects the POST. Curling the public URL from outside your own network separates the two cases in one step.'],
+        ['Does a no-response endpoint count as a dead MCP server?', `No. It means the probe could not observe a handshake, not that the server is gone. In the ${sweepDate} sweep ${n(endpointsWith(['NO_RESPONSE']))} endpoints landed there, and their reports are published with that wording so the number is not read as a death count.`],
+      ],
+    },
+    {
+      slug: 'mcp-tool-never-called-by-model',
+      title: 'The model never calls my MCP tool — mcpreflight',
+      description: 'Missing tool and property descriptions are the most common reason an LLM ignores an MCP tool. How many endpoints the registry sweep found, and how to fix yours.',
+      h1: 'The model never calls my MCP tool',
+      codes: ['PROPERTY_DESCRIPTION_MISSING', 'TOOL_DESCRIPTION_MISSING'],
+      intro: () => `Descriptions are the only thing a model has to decide whether to call a tool. In the ${sweepDate} sweep, ${n(findingCodes.PROPERTY_DESCRIPTION_MISSING?.endpoints ?? 0)} of the ${n(summary.headline.endpointsPublishingTools)} endpoints that published tools (${pct(findingCodes.PROPERTY_DESCRIPTION_MISSING?.endpoints ?? 0, summary.headline.endpointsPublishingTools)}%) left at least one parameter without a description — ${n(findingCodes.PROPERTY_DESCRIPTION_MISSING?.occurrences ?? 0)} individual properties across those schemas carried no description. Another ${n(findingCodes.TOOL_DESCRIPTION_MISSING?.endpoints ?? 0)} endpoints left a whole tool undescribed. The two counters are separate: a server can be in both, so they do not add up to one population.`,
+      commonness: () => [
+        ['Endpoints publishing tools', `${n(summary.headline.endpointsPublishingTools)}`],
+        ['Endpoints with at least one property missing a description', `${n(findingCodes.PROPERTY_DESCRIPTION_MISSING?.endpoints ?? 0)} (${pct(findingCodes.PROPERTY_DESCRIPTION_MISSING?.endpoints ?? 0, summary.headline.endpointsPublishingTools)}% of those)`],
+        ['Individual properties missing a description', `${n(findingCodes.PROPERTY_DESCRIPTION_MISSING?.occurrences ?? 0)}`],
+        ['Endpoints with a tool that has no description of its own', `${n(findingCodes.TOOL_DESCRIPTION_MISSING?.endpoints ?? 0)} endpoints, ${n(findingCodes.TOOL_DESCRIPTION_MISSING?.occurrences ?? 0)} tools`],
+      ],
+      meaning: 'A tool with no description is still listed, still valid against the schema, and still invisible in practice: the model has to infer the purpose from the name alone. Property descriptions matter more than most servers assume — they are argument-level documentation, and a required string called <code>q</code> with no description is a guess the model will often decline to make. This is the single largest hygiene gap in the public registry, and it is also the cheapest to fix.',
+      steps: [
+        'List every tool and check that each one has a non-empty <code>description</code> that states when to use it, not only what it does.',
+        'Walk each <code>inputSchema.properties</code> entry and describe every property, including the obvious ones — the model does not share your context.',
+        'Re-read a description as if you were the model deciding between two tools. If both readings sound identical, the description is not doing its job.',
+      ],
+      command: 'npx @eidonze/mcpreflight schema https://your-server.example.com/mcp',
+      faq: [
+        ['Why does the model ignore a valid MCP tool?', 'The most common reason is that the tool or its parameters have no description, leaving the model to guess from names alone. Schema validity and discoverability are separate concerns: a tool can pass every structural check and still never be called.'],
+        ['Does the JSON Schema require property descriptions?', 'No, which is exactly why the gap is widespread. The schema stays valid without them, so linting passes while the practical failure — a tool the model never selects — stays invisible until someone measures it.'],
+      ],
+    },
+    {
+      slug: 'mcp-tools-list-invalid-schema',
+      title: 'tools/list fails JSON Schema validation — mcpreflight',
+      description: 'What breaks when a tools/list response fails deterministic JSON Schema checks: non-object inputSchema, required properties that are never defined, and invalid property definitions.',
+      h1: 'My tools/list fails JSON Schema validation',
+      codes: ['TOOLS_LIST_INVALID', 'REQUIRED_PROPERTY_UNDEFINED', 'PROPERTIES_INVALID', 'INPUT_SCHEMA_NOT_OBJECT'],
+      intro: () => `In the ${sweepDate} sweep, ${n(endpointsWith(['TOOLS_LIST_INVALID']))} endpoints returned a <code>tools/list</code> that fails deterministic validation (${pct(endpointsWith(['TOOLS_LIST_INVALID']), total)}% of ${n(total)}), plus smaller clusters with the same root cause: ${n(endpointsWith(['REQUIRED_PROPERTY_UNDEFINED']))} endpoints declare required properties that are never defined, ${n(endpointsWith(['PROPERTIES_INVALID']))} have malformed property definitions, and ${n(endpointsWith(['INPUT_SCHEMA_NOT_OBJECT']))} return an <code>inputSchema</code> that is not an object at all.`,
+      commonness: () => [
+        ['Endpoints whose tools/list fails validation', `${n(endpointsWith(['TOOLS_LIST_INVALID']))} of ${n(total)} (${pct(endpointsWith(['TOOLS_LIST_INVALID']), total)}%)`],
+        ['Endpoints with required properties missing from the schema', `${n(endpointsWith(['REQUIRED_PROPERTY_UNDEFINED']))}`],
+        ['Endpoints with an inputSchema that is not an object', `${n(endpointsWith(['INPUT_SCHEMA_NOT_OBJECT']))}`],
+        ['Endpoints with malformed property definitions', `${n(endpointsWith(['PROPERTIES_INVALID']))}`],
+      ],
+      meaning: 'These are structural defects, not style notes: a client that validates before calling will reject the tool, and one that does not will fail at call time with a worse error. The two failure shapes worth checking first are <code>inputSchema</code> that arrives as something other than an object (often a schema wrapper leaking through), and <code>required</code> that names a key absent from <code>properties</code> — the latter usually comes from a hand-written schema that drifted from the implementation.',
+      steps: [
+        'Print the raw <code>tools/list</code> response rather than a typed view: the defect is in the bytes, and most SDK clients hide it by coercing.',
+        'For each tool, assert that <code>inputSchema.type === "object"</code> and that every entry in <code>required</code> also exists in <code>properties</code>.',
+        'Validate the full response against the MCP schema before release, in the same test that already calls <code>tools/list</code> — the check is cheap and catches the drift at the commit that introduces it.',
+      ],
+      command: 'npx @eidonze/mcpreflight schema https://your-server.example.com/mcp',
+      faq: [
+        ['What does TOOLS_LIST_INVALID mean in this dataset?', 'It means the tools/list response failed the deterministic JSON Schema checks this project runs — not that the server is unreachable. Endpoints in that state completed a handshake and then published a tool surface a validating client can reject.'],
+        ['Why does a schema pass my SDK but fail validation?', 'SDKs typically serialise their own types, so an object that is valid in memory can still serialise into something a strict validator rejects, and some SDKs coerce malformed input on the way out. Validating the raw response is the only check that sees what the client actually receives.'],
+      ],
+    },
+    {
+      slug: 'mcp-initialize-response-invalid',
+      title: 'Invalid initialize response from an MCP server — mcpreflight',
+      description: 'What an invalid initialize response looks like in practice, why clients reject it before any tool is listed, and how many registry endpoints the sweep found in that state.',
+      h1: 'My MCP server returns an invalid initialize response',
+      codes: ['INITIALIZE_RESPONSE_INVALID'],
+      intro: () => `The handshake is all-or-nothing: if <code>initialize</code> returns a payload a client considers malformed, nothing after it is ever reached. In the ${sweepDate} sweep, ${n(endpointsWith(['INITIALIZE_RESPONSE_INVALID']))} of ${n(total)} remote endpoints (${pct(endpointsWith(['INITIALIZE_RESPONSE_INVALID']), total)}%) answered the handshake with a response that violates the expected shape.`,
+      commonness: () => [
+        ['Endpoints with an invalid initialize response', `${n(endpointsWith(['INITIALIZE_RESPONSE_INVALID']))} of ${n(total)} (${pct(endpointsWith(['INITIALIZE_RESPONSE_INVALID']), total)}%)`],
+        ['Endpoints that completed the handshake cleanly', `${n(counts.PASS)} of ${n(total)} (${summary.headline.passPct}%)`],
+        ['Endpoints gated behind authentication', `${n(counts.AUTH_GATED)} (${gated}%)`],
+      ],
+      meaning: 'The usual causes are a <code>protocolVersion</code> the server does not actually speak, a <code>capabilities</code> or <code>serverInfo</code> object with the wrong shape, or a payload wrapped in an extra envelope so the client sees no <code>result</code> where it expects one. Because the failure happens at the first message, the client-side error is often a generic connection closed, which sends people looking at the transport instead of the response body.',
+      steps: [
+        'Capture the exact JSON-RPC body returned by <code>initialize</code> and check for <code>result.protocolVersion</code>, <code>result.capabilities</code> and <code>result.serverInfo</code>.',
+        'Compare the negotiated <code>protocolVersion</code> against the one the client requested. Echoing an unsupported version is a common way to fail a strict client.',
+        'Send <code>notifications/initialized</code> only after a successful response, then confirm <code>tools/list</code> answers — a server that skips the notification often looks invalid from the outside.',
+      ],
+      command: 'npx @eidonze/mcpreflight schema https://your-server.example.com/mcp',
+      faq: [
+        ['Why do I get a generic connection error instead of a schema error?', 'Because the handshake fails on the first message, most clients surface it as a closed connection rather than a validation message. Reading the raw initialize response is the only way to see which field the client rejected.'],
+        ['Is an invalid initialize response the same as a missing one?', `No. In the ${sweepDate} sweep, ${n(endpointsWith(['INITIALIZE_RESPONSE_INVALID']))} endpoints answered with a malformed payload while ${n(endpointsWith(['NO_RESPONSE']))} answered nothing at all — the first is a shape defect, the second a transport one.`],
+      ],
+    },
+  ];
+
+  for (const symptom of symptoms) {
+    fs.writeFileSync(path.join(root, 'docs', `${symptom.slug}.html`), render(symptom));
+  }
+
+  // The index that ties the five pages together, rebuilt from the same counters.
+  const matrixRows = symptoms.map((symptom) => {
+    const affected = endpointsWith(symptom.codes);
+    return `<tr><td><a href="${symptom.slug}.html">${esc(symptom.h1)}</a></td><td>${n(affected)}</td><td>${pct(affected, total)}%</td></tr>`;
+  }).join('');
+  const troubleshootingFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why does my MCP server return 401 on initialize?',
+        acceptedAnswer: { '@type': 'Answer', text: `Usually by design: the server requires OAuth and should publish protected-resource metadata so clients can obtain a token. In the ${sweepDate} sweep ${n(counts.AUTH_GATED)} of ${n(total)} remote endpoints gated anonymous access.` },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why does my MCP server return no response at all?',
+        acceptedAnswer: { '@type': 'Answer', text: `A missing response is a transport problem: the wrong path for the transport, a proxy buffering the stream, or a process that exits mid-request. ${n(endpointsWith(['NO_RESPONSE']))} endpoints in the ${sweepDate} sweep answered nothing.` },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why does the model never call my MCP tool?',
+        acceptedAnswer: { '@type': 'Answer', text: 'The most common cause is a missing tool or property description, which leaves the model to guess from names. Schema validity does not imply discoverability.' },
+      },
+    ],
+  };
+  fs.writeFileSync(path.join(root, 'docs', 'troubleshooting.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Troubleshooting a remote MCP server — mcpreflight</title><meta name="description" content="Five failure modes that account for most broken remote MCP servers, with the ${sweepDate} registry counts behind each one."><link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/troubleshooting.html"><script type="application/ld+json">${JSON.stringify(troubleshootingFaq)}</script></head><body><main>
+<h1>Troubleshooting a remote MCP server</h1>
+<p>Across ${n(total)} remote endpoints in the ${sweepDate} sweep, the failures cluster into five shapes. Each one has its own page with the counts behind it, a read-only check, and the three steps that usually locate the cause.</p>
+<table><thead><tr><th>Symptom</th><th>Endpoints affected</th><th>Share of sweep</th></tr></thead><tbody>${matrixRows}</tbody></table>
+<p>Reading the table: a server can appear in more than one row, and a gated server is not a broken one — the 401 row is the largest because requiring authorization is normal. The rows that indicate real defects are the schema and description ones.</p>
+<p>Start with the check on your own endpoint: <a href="check-your-mcp-endpoint.html">check your MCP endpoint</a>. Full numbers and method: <a href="state-of-mcp-2026-10.html">State of MCP Servers, ${sweepDate}</a>.</p>
+<p><a href="index.html">Back to mcpreflight</a></p>
+</main></body></html>
+`);
+
+  console.log(`symptom pages: ${symptoms.length} written, troubleshooting index rebuilt`);
+}
