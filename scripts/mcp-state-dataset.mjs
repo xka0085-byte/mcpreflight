@@ -207,12 +207,18 @@ const codesCsv = [
 
 fs.mkdirSync(path.join(root, 'docs', 'data'), { recursive: true });
 
-// Read the previous sweep date before overwriting, so the pages can be re-dated without
-// hardcoding last week's literal (which would make a future run non-idempotent).
-const prevSweepDate = (() => {
-  try { return JSON.parse(fs.readFileSync(path.join(root, 'docs', 'data', 'mcp-state-summary.json'), 'utf8')).sweepDate ?? null; }
+// Read the previous summary before overwriting: the pages are re-dated from it, and an
+// unchanged sweep keeps its original generatedAt so a re-run leaves the working tree clean
+// instead of producing a timestamp-only commit every week.
+const prevSummary = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(root, 'docs', 'data', 'mcp-state-summary.json'), 'utf8')); }
   catch { return null; }
 })();
+const prevSweepDate = prevSummary?.sweepDate ?? null;
+if (prevSummary) {
+  const fingerprint = (value) => JSON.stringify({ ...value, generatedAt: '' });
+  if (fingerprint(prevSummary) === fingerprint(summary)) summary.generatedAt = prevSummary.generatedAt;
+}
 
 fs.writeFileSync(path.join(root, 'docs', 'data', 'mcp-state-summary.json'), `${JSON.stringify(summary, null, 1)}\n`);
 fs.writeFileSync(path.join(root, 'docs', 'data', 'mcp-state-codes.csv'), `${codesCsv}\n`);
