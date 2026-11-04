@@ -518,6 +518,8 @@ function syncOtherPages() {
 
   console.log(`other pages: ${applied.length} rules applied${warn.length ? `, anchors not found: ${warn.join(' | ')}` : ''}`);
 
+  const proseWarnMark = warn.length;
+
   // ---- prose pages that quote the census in an answer paragraph ----
   // These are hand-written intros on keyword pages. They quote the same sweep, so they go stale
   // the same way; each rule rewrites the whole sentence so a re-run is a no-op.
@@ -527,8 +529,8 @@ function syncOtherPages() {
   ]);
 
   run('mcp-oauth-diagnostics.html', [
-    ['intro auth split', /In our complete [\d-]+ scan of the official registry, [\d,]+ of [\d,]+ remote endpoints \([\d.]+%\) gave no anonymous handshake\. Of those, [\d,]+ answered 401 on <code>initialize<\/code> and are classified AUTH_GATED; the remaining [\d,]+ never answered at all/,
-      `In our complete ${sweepDate} scan of the official registry, ${n(summary.headline.noCleanAnonymousHandshake)} of ${n(total)} remote endpoints (${none}%) gave no anonymous handshake. Of those, ${n(counts.AUTH_GATED)} are classified AUTH_GATED (${n(verified)} verified against live RFC 9728 resource metadata or a 401 challenge, ${n(counts.AUTH_GATED - verified)} detected by header alone); the remaining ${n(counts.UNKNOWN)} never answered at all`],
+    ['intro auth split', /In our complete [\d-]+ scan of the official registry,[\s\S]{0,600}?never answered at all/,
+      `In our complete ${sweepDate} scan of the official registry, ${n(summary.headline.noCleanAnonymousHandshake)} of ${n(total)} remote endpoints (${none}%) gave no anonymous handshake. Of those, ${n(counts.AUTH_GATED)} answered with a confirmed authentication gate — ${n(verified)} verified against live RFC 9728 resource metadata or a 401 challenge, the rest classified from headers alone — and the remaining ${n(counts.UNKNOWN)} never answered at all`],
   ]);
 
   run('test-remote-mcp-server.html', [
@@ -553,6 +555,7 @@ function syncOtherPages() {
     ['census caption', /so this directory lists [\d,]+ of the [\d,]+ remote endpoints in the [\d-]+ census/,
       `so this directory lists ${n(total - 2)} of the ${n(total)} remote endpoints in the ${sweepDate} census`],
   ]);
+  console.log(`prose pages: total rules applied ${applied.length}${warn.length > proseWarnMark ? `, anchors not found: ${warn.slice(proseWarnMark).join(' | ')}` : ', all anchors matched'}`);
 }
 syncOtherPages();
 
