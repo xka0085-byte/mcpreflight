@@ -1,6 +1,6 @@
-Cross-checked 226 of the 4536 GitHub repos in this list against the official MCP Registry scan (read-only initialize + tools/list, 35,327 endpoints, updated weekly).
+Cross-checked 226 of the 4537 GitHub repos in this list against the official MCP Registry scan (read-only initialize + tools/list, 35,327 endpoints, updated weekly).
 
-84 matched servers currently do not complete a clean anonymous handshake (of which auth-gated by design is possible — the reports show the exact failing step):
+85 matched servers currently do not complete a clean anonymous handshake (of which auth-gated by design is possible — the reports show the exact failing step):
 
 | repo | registry name | status | finding | report |
 |---|---|---|---|---|
@@ -28,6 +28,6 @@ Cross-checked 226 of the 4536 GitHub repos in this list against the official MCP
 | [kojott/mailmcp-dist]() | ai.mailmcp/mailmcp | AUTH_GATED | `AUTH_GATE_VERIFIED` | [report](https://xka0085-byte.github.io/mcpreflight/trust/p/ai.mailmcp-mailmcp.html) |
 | [lettio-eu/mcp]() | eu.lettio/mcp | AUTH_GATED | `AUTH_GATE_DETECTED` | [report](https://xka0085-byte.github.io/mcpreflight/trust/p/eu.lettio-mcp.html) |
 | [multimail-dev/mcp-server]() | dev.multimail/mcp-server | AUTH_GATED | `AUTH_GATE_VERIFIED` | [report](https://xka0085-byte.github.io/mcpreflight/trust/p/dev.multimail-mcp-server.html) |
-| [pingfyr/mcp]() | com.pingfyr/pingfyr | UNKNOWN | `NO_RESPONSE` | [report](https://xka0085-byte.github.io/mcpreflight/trust/p/com.pingfyr-pingfyr.html) |
+| [pingfyr/mcp]() | com.pingfyr/pingfyr | AUTH_GATED | `AUTH_GATE_DETECTED` | [report](https://xka0085-byte.github.io/mcpreflight/trust/p/com.pingfyr-pingfyr.html) |
 
 Reproduce any line: `npx @eidonze/mcpreflight schema <endpoint>` · methodology + limitations: https://xka0085-byte.github.io/mcpreflight/trust/

@@ -1,0 +1,226 @@
+{
+ "dataset": "mcpreflight MCP registry census",
+ "version": 1,
+ "page": "https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html",
+ "generatedAt": "2026-11-04T02:39:07.122Z",
+ "sweepDate": "2026-11-02",
+ "scannedAt": "2026-11-02T10:13:35.080Z",
+ "registry": {
+  "source": "official MCP Registry",
+  "cohortRule": "server listed in the official MCP Registry with a remote HTTP transport that still accepts requests at scan time",
+  "endpoints": 35327
+ },
+ "definition": {
+  "method": "read-only anonymous JSON-RPC probe: initialize, then tools/list",
+  "requests": [
+   "initialize",
+   "tools/list"
+  ],
+  "never": [
+   "authenticates",
+   "calls a tool",
+   "pays",
+   "signs",
+   "reads data"
+  ],
+  "statusMeaning": {
+   "PASS": "clean anonymous handshake and a tools/list that passes static schema checks",
+   "AUTH_GATED": "intentional authentication gate confirmed (401 with WWW-Authenticate, or live RFC 9728 resource metadata)",
+   "UNKNOWN": "no anonymous response within the timeout",
+   "FAIL": "a response arrived but the handshake or the tool schema is invalid"
+  },
+  "passIsNot": "a security audit, a quality ranking, or a claim that a PASS endpoint is safe to connect an agent to"
+ },
+ "headline": {
+  "endpointsInSweep": 35327,
+  "pass": 20701,
+  "passPct": 58.6,
+  "authGated": 10236,
+  "authGatedPct": 29,
+  "unknown": 4223,
+  "unknownPct": 12,
+  "fail": 167,
+  "failPct": 0.5,
+  "noCleanAnonymousHandshake": 14626,
+  "noCleanAnonymousHandshakePct": 41.4,
+  "toolsPublished": 379033,
+  "endpointsPublishingTools": 20722,
+  "medianToolsPerEndpoint": 8,
+  "p90ToolsPerEndpoint": 47,
+  "endpointsWithOver100Tools": 200,
+  "maxToolsOnOneEndpoint": 1862
+ },
+ "statusDistribution": {
+  "PASS": 20701,
+  "AUTH_GATED": 10236,
+  "UNKNOWN": 4223,
+  "FAIL": 167
+ },
+ "protocolDistribution": [
+  {
+   "version": "2025-06-18",
+   "endpoints": 17078,
+   "shareOfAllEndpointsPct": 48.3,
+   "shareOfNegotiatedPct": 82.3,
+   "pass": 17054,
+   "passRatePct": 99.9,
+   "authGated": 0,
+   "unknown": 0,
+   "fail": 24
+  },
+  {
+   "version": null,
+   "endpoints": 14584,
+   "shareOfAllEndpointsPct": 41.3,
+   "shareOfNegotiatedPct": null,
+   "pass": 0,
+   "passRatePct": 0,
+   "authGated": 10236,
+   "unknown": 4223,
+   "fail": 125
+  },
+  {
+   "version": "2025-03-26",
+   "endpoints": 2826,
+   "shareOfAllEndpointsPct": 8,
+   "shareOfNegotiatedPct": 13.6,
+   "pass": 2820,
+   "passRatePct": 99.8,
+   "authGated": 0,
+   "unknown": 0,
+   "fail": 6
+  },
+  {
+   "version": "2024-11-05",
+   "endpoints": 592,
+   "shareOfAllEndpointsPct": 1.7,
+   "shareOfNegotiatedPct": 2.9,
+   "pass": 582,
+   "passRatePct": 98.3,
+   "authGated": 0,
+   "unknown": 0,
+   "fail": 10
+  },
+  {
+   "version": "2025-11-25",
+   "endpoints": 127,
+   "shareOfAllEndpointsPct": 0.4,
+   "shareOfNegotiatedPct": 0.6,
+   "pass": 125,
+   "passRatePct": 98.4,
+   "authGated": 0,
+   "unknown": 0,
+   "fail": 2
+  },
+  {
+   "version": "2026-07-28",
+   "endpoints": 117,
+   "shareOfAllEndpointsPct": 0.3,
+   "shareOfNegotiatedPct": 0.6,
+   "pass": 117,
+   "passRatePct": 100,
+   "authGated": 0,
+   "unknown": 0,
+   "fail": 0
+  },
+  {
+   "version": "2025-11-05",
+   "endpoints": 3,
+   "shareOfAllEndpointsPct": 0,
+   "shareOfNegotiatedPct": 0,
+   "pass": 3,
+   "passRatePct": 100,
+   "authGated": 0,
+   "unknown": 0,
+   "fail": 0
+  }
+ ],
+ "toolCountDistribution": {
+  "0": 11,
+  "1-10": 11620,
+  "11-50": 8358,
+  "51-100": 533,
+  "101-500": 190,
+  "500+": 10
+ },
+ "schemaHygiene": {
+  "endpointsWithAnyWarn": 8435,
+  "endpointsWithAnyWarnPct": 23.9,
+  "endpointsWithSchemaFail": 167,
+  "endpointsMissingPropertyDescriptions": 8421,
+  "endpointsMissingPropertyDescriptionsPct": 23.8,
+  "propertyDescriptionFindings": 219101
+ },
+ "findingCodes": {
+  "PROPERTY_DESCRIPTION_MISSING": {
+   "endpoints": 8421,
+   "occurrences": 219101,
+   "severity": "WARN"
+  },
+  "STATIC_SCHEMA_CHECKS_PASSED": {
+   "endpoints": 12279,
+   "occurrences": 12279,
+   "severity": "INFO"
+  },
+  "AUTH_GATE_VERIFIED": {
+   "endpoints": 7586,
+   "occurrences": 7586,
+   "severity": "INFO"
+  },
+  "NO_RESPONSE": {
+   "endpoints": 4250,
+   "occurrences": 4250,
+   "severity": "UNKNOWN"
+  },
+  "AUTH_GATE_DETECTED": {
+   "endpoints": 2623,
+   "occurrences": 2623,
+   "severity": "INFO"
+  },
+  "TOOLS_LIST_INVALID": {
+   "endpoints": 146,
+   "occurrences": 146,
+   "severity": "FAIL"
+  },
+  "INITIALIZE_RESPONSE_INVALID": {
+   "endpoints": 125,
+   "occurrences": 125,
+   "severity": "FAIL"
+  },
+  "REQUIRED_PROPERTY_UNDEFINED": {
+   "endpoints": 7,
+   "occurrences": 53,
+   "severity": "FAIL"
+  },
+  "TOOL_DESCRIPTION_MISSING": {
+   "endpoints": 15,
+   "occurrences": 53,
+   "severity": "WARN"
+  },
+  "INPUT_SCHEMA_NOT_OBJECT": {
+   "endpoints": 3,
+   "occurrences": 27,
+   "severity": "FAIL"
+  },
+  "PROPERTIES_INVALID": {
+   "endpoints": 6,
+   "occurrences": 17,
+   "severity": "FAIL"
+  },
+  "NO_TOOLS": {
+   "endpoints": 11,
+   "occurrences": 11,
+   "severity": "WARN"
+  }
+ },
+ "comparability": {
+  "occurrencesVsEndpoints": "findingCodes publishes both counters. Use endpoints for \"how many servers are affected\", occurrences for \"how many individual defects\". PROPERTY_DESCRIPTION_MISSING is property-level, so its occurrences exceed the number of endpoints by two orders of magnitude.",
+  "authGateSplit": "Until 0.3.0 an authentication gate was recorded as UNKNOWN, so the combined \"no anonymous handshake\" share (40.4% on 2026-11-01) is not comparable per-status with sweeps from 2026-11-02 on, where AUTH_GATED is counted separately. The combined share is the stable series.",
+  "otherCounts": "Third-party counts of \"remote MCP servers\" range from about 10,700 to 44,464 because each uses a different cohort rule. Compare shares within one dataset, never across datasets."
+ },
+ "files": {
+  "codes": "data/mcp-state-codes.csv"
+ },
+ "citation": "mcpreflight, \"State of MCP Servers: a 35,327-endpoint read-only census of the MCP Registry\", 2026-11-02, https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html",
+ "license": "MIT"
+}
