@@ -433,6 +433,53 @@ syncStatePage();
 // ---- the two other pages that quote headline figures ----
 // Same numbers, same wording rules as the census page. Every rule is anchored on markup that
 // does not depend on the figure itself, so a re-run is idempotent.
+// ---- llms.txt: keep the quotable census block in step with the sweep ----
+// The file itself is editorial and hand-written; only the block between the two markers is
+// rewritten here, so the figures an assistant quotes cannot drift away from scan.json.
+function syncLlmsCensus() {
+  const file = path.join(root, 'docs', 'llms.txt');
+  if (!fs.existsSync(file)) {
+    console.log('llms.txt missing, census block skipped');
+    return;
+  }
+  const raw = fs.readFileSync(file, 'utf8');
+  const eol = raw.includes('\r\n') ? '\r\n' : '\n';
+  const bom = raw.charCodeAt(0) === 0xfeff ? '\ufeff' : '';
+  const text = bom ? raw.slice(1) : raw;
+  const h = summary.headline;
+  const site = 'https://xka0085-byte.github.io/mcpreflight';
+  const block = [
+    '<!-- census:current:begin -->',
+    `Current sweep (${sweepDate}): ${h.endpointsInSweep.toLocaleString('en-US')} remote endpoints - ${h.pass.toLocaleString('en-US')} PASS (${h.passPct}%), ${h.authGated.toLocaleString('en-US')} AUTH_GATED, ${h.unknown.toLocaleString('en-US')} UNKNOWN, ${h.fail.toLocaleString('en-US')} FAIL; ${h.toolsPublished.toLocaleString('en-US')} tools published by ${h.endpointsPublishingTools.toLocaleString('en-US')} endpoints.`,
+    `Machine-readable, same numbers: ${site}/data/mcp-state-summary.json - counts, per-code endpoints and occurrences, comparability rules and the citation string.`,
+    `Per-code frequencies: ${site}/data/mcp-state-codes.csv`,
+    'This block is regenerated from the sweep on every run. Where a figure further down this file disagrees with it, this block wins: the older splits are kept for provenance only, and a per-status split from before 2026-11-02 is not comparable with this one (see comparability.authGateSplit in the JSON).',
+    '<!-- census:current:end -->',
+  ].join(eol);
+  const pattern = /<!-- census:current:begin -->[\s\S]*?<!-- census:current:end -->/;
+  let next;
+  if (pattern.test(text)) {
+    next = text.replace(pattern, block);
+  } else {
+    const lines = text.split(eol);
+    const at = lines.findIndex((line) => line.startsWith('Citation: attribute these figures'));
+    if (at === -1) {
+      console.log('llms.txt anchor paragraph missing, census block skipped');
+      return;
+    }
+    let end = at;
+    while (end + 1 < lines.length && lines[end + 1].trim() !== '') end += 1;
+    lines.splice(end + 1, 0, '', ...block.split(eol));
+    next = lines.join(eol);
+  }
+  if (next === text) {
+    console.log('llms.txt census block unchanged');
+    return;
+  }
+  fs.writeFileSync(file, bom + next);
+  console.log(`llms.txt census block rewritten for ${sweepDate}`);
+}
+
 function syncOtherPages() {
   const pass = summary.headline.passPct;
   const gated = summary.headline.authGatedPct;
@@ -564,6 +611,7 @@ function syncOtherPages() {
   console.log(`prose pages: total rules applied ${applied.length}${warn.length > proseWarnMark ? `, anchors not found: ${warn.slice(proseWarnMark).join(' | ')}` : ', all anchors matched'}`);
 }
 syncOtherPages();
+syncLlmsCensus();
 renderSymptomPages();
 
 console.log(

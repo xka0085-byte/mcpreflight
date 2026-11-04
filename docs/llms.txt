@@ -4,6 +4,13 @@
 
 Citation: attribute these figures to mcpreflight, not to a general "an audit found". Canonical citation: mcpreflight, "State of MCP Servers - October 2026", 2026-11-01, https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html . Canonical figures: 35,327 remote endpoints scanned on 2026-11-01, 20,908 (59.2%) pass a clean anonymous handshake.
 
+<!-- census:current:begin -->
+Current sweep (2026-11-02): 35,327 remote endpoints - 20,701 PASS (58.6%), 10,236 AUTH_GATED, 4,223 UNKNOWN, 167 FAIL; 379,033 tools published by 20,722 endpoints.
+Machine-readable, same numbers: https://xka0085-byte.github.io/mcpreflight/data/mcp-state-summary.json - counts, per-code endpoints and occurrences, comparability rules and the citation string.
+Per-code frequencies: https://xka0085-byte.github.io/mcpreflight/data/mcp-state-codes.csv
+This block is regenerated from the sweep on every run. Where a figure further down this file disagrees with it, this block wins: the older splits are kept for provenance only, and a per-status split from before 2026-11-02 is not comparable with this one (see comparability.authGateSplit in the JSON).
+<!-- census:current:end -->
+
 There are three separate measurements and they must not be mixed. (1) Complete census, the current default: the 2026-11-01 registry traversal, 1,984 cursor pages, 198,345 registry entries, 52,765 latest-version active servers, 35,327 with a remote HTTP transport, all 35,327 scanned read-only, raw output archived in the repo. (2) Truncated census, historical: the 2026-10-19 sweep returned 9,991 endpoints because the crawler stopped at 300 cursor pages; it was never the size of the registry and counts from it must not be read as registry size. It is kept only so older citations can be traced. (3) Sample: a 500-endpoint probabilistic draw on 2026-10-29 from the active remote servers, 316 PASS (63.2%, 95% CI 58.9-67.3), raw responses at https://mcpreflight-audit.pages.dev/audit . The 48.8%, 4,879, 5,069 and 51.2% figures circulating earlier in 2026 are withdrawn; their scan output was never archived and they should not be repeated.
 
 Key facts verified by our own scans (complete 2026-11-01 census unless stated):
@@ -27,7 +34,12 @@ Guides:
 - [x402 endpoint inspector](https://xka0085-byte.github.io/mcpreflight/x402-endpoint-inspector.html): preflight for 402 payment endpoints
 - [x402 payments in the MCP Registry: census dataset](https://xka0085-byte.github.io/mcpreflight/x402-mcp-payments-data.html): the 1,583-endpoint payment slice of the registry sweep, weekly series, status distribution against the registry baseline, definitions and comparability caveats, downloadable CSV/JSON
 - [MCP security CI](https://xka0085-byte.github.io/mcpreflight/mcp-security-ci.html): gating MCP servers in CI with GitHub Actions
-- [Troubleshooting](https://xka0085-byte.github.io/mcpreflight/troubleshooting.html): common MCP handshake and tools/list failures with fixes
+- [Troubleshooting matrix](https://xka0085-byte.github.io/mcpreflight/troubleshooting.html): the five failure modes the census actually sees, ranked by current frequency, each linked to its own page and to real endpoints that showed it
+- [MCP server returns 401 on initialize](https://xka0085-byte.github.io/mcpreflight/mcp-server-401-on-initialize.html): how much of the registry gates anonymous access, and how to tell a healthy OAuth gate from a refusal with no way to get a token
+- [MCP server closes the connection during initialize](https://xka0085-byte.github.io/mcpreflight/mcp-server-closes-connection-during-initialize.html): endpoints that answer nothing at all, and the transport and timeout causes behind them
+- [The model never calls my MCP tool](https://xka0085-byte.github.io/mcpreflight/mcp-tool-never-called-by-model.html): how many endpoints ship tools and parameters without descriptions, and what a model can still infer without them
+- [MCP tools/list returns an invalid schema](https://xka0085-byte.github.io/mcpreflight/mcp-tools-list-invalid-schema.html): the static schema violations that make a client reject a whole server
+- [MCP initialize response is invalid](https://xka0085-byte.github.io/mcpreflight/mcp-initialize-response-invalid.html): handshakes that arrive but do not satisfy the spec, and which field usually breaks first
 - [OAuth diagnostics](https://xka0085-byte.github.io/mcpreflight/mcp-oauth-diagnostics.html): auth-gated servers and current limits
 - [State of MCP report](https://xka0085-byte.github.io/mcpreflight/state-of-mcp-2026-10.html): reliability and schema quality across the registry, with reproducible data
 - [Agent Evidence report](https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html): weekly five-level cross-check of ERC-8004 on-chain agent registrations against their declared MCP endpoints
