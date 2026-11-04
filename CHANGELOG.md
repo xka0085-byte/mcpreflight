@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.2 - entry points that do not lie (2026-11-04)
+
+- `package.json` `homepage` pointed at the sibling `evidence-tools` site, so the npm page sent readers to a different project. It now points at this project's own site (`https://xka0085-byte.github.io/mcpreflight/`).
+- README: added a Homebrew install row (`brew install xka0085-byte/mcpreflight/mcpreflight`, tap `xka0085-byte/homebrew-mcpreflight`) and a "Same name, different job" section that separates this endpoint preflight from `kenimo49/mcp-preflight` (now published as `mcp-scorecard`), which scores a server you have checked out rather than one you are about to connect to.
+- No runtime change: same bins, same exit codes, same read-only behaviour.
+
 ## 0.6.0 - x402 as a data chapter, plus handshake accuracy (2026-11-02)
 
 ### x402 as a data chapter, not a second product
