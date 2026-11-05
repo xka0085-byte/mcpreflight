@@ -179,7 +179,7 @@ jobs:
           format: markdown
 ```
 
-Use `mode: inspect` for an x402 preflight. The action fails on `FAIL` or `UNKNOWN` by default; set `fail-on: false` for an informational check. Looking for it in the Marketplace? Search "MCP Trust Preflight" or "mcp server test", or browse the [mcp-trust-preflight listing](https://github.com/marketplace/actions/mcp-trust-preflight).
+Use `mode: x402` when you only care about the payment layer: one request, the 402 challenge and its `accepts[]`, no handshake, no discovery probes. Use `mode: inspect` for the full report. The action fails on `FAIL` or `UNKNOWN` by default; set `fail-on: false` for an informational check. Looking for it in the Marketplace? Search "MCP Trust Preflight" or "mcp server test", or browse the [mcp-trust-preflight listing](https://github.com/marketplace/actions/mcp-trust-preflight).
 
 ## Starter template
 

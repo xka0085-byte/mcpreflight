@@ -5,7 +5,7 @@ An x402 buyer normally learns that payment is required from an HTTP `402 Payment
 ## Inspect the endpoint without paying
 
 ```bash
-npx @eidonze/mcpreflight@0.1.5 inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpreflight@0.6.2 inspect https://your-api.example/paid --x402 --method=POST --json
 ```
 
 The probe is read-only. It does not sign a payment, contact a facilitator, retry the request, or submit a transaction.
@@ -46,7 +46,7 @@ The probe is read-only. It does not sign a payment, contact a facilitator, retry
 - uses: xka0085-byte/mcpreflight@v1
   with:
     endpoint: https://your-api.example/paid
-    mode: inspect
+    mode: x402
     format: markdown
 ```
 

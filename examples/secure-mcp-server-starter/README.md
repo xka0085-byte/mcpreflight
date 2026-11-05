@@ -14,7 +14,7 @@ The workflow only sends `initialize` and `tools/list`. It does not call tools, s
 For local checks:
 
 ```bash
-npx @eidonze/mcpreflight@0.1.5 schema https://your-mcp-server.example/mcp --json
+npx @eidonze/mcpreflight@0.6.2 schema https://your-mcp-server.example/mcp --json
 ```
 
 Read the [mcpreflight documentation](https://github.com/xka0085-byte/mcpreflight) before using this with a production endpoint.

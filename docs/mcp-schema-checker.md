@@ -5,7 +5,7 @@ When an MCP client cannot select a tool, the failure is often visible before any
 ## Run a read-only check
 
 ```bash
-npx @eidonze/mcpreflight@0.1.5 schema https://your-mcp-server.example/mcp --json
+npx @eidonze/mcpreflight@0.6.2 schema https://your-mcp-server.example/mcp --json
 ```
 
 The command sends only two JSON-RPC requests:

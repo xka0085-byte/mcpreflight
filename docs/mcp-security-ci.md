@@ -23,7 +23,7 @@ jobs:
           fail-on: true
 ```
 
-For an x402 route, use `mode: inspect` and `method` is currently selected by the endpoint action's default behavior. For local code, use the CLI directly.
+For an x402 route, use `mode: x402`; `method` defaults to `POST`. For local code, use the CLI directly.
 
 ## Exit behavior
 

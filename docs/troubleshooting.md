@@ -5,7 +5,7 @@
 The endpoint returned a status other than HTTP 402. Confirm the paid route, HTTP method, and public hostname. A gateway or body-validation middleware may be running before x402.
 
 ```bash
-npx @eidonze/mcpreflight@0.1.5 inspect https://your-api.example/paid --method=POST --json
+npx @eidonze/mcpreflight@0.6.2 inspect https://your-api.example/paid --x402 --method=POST --json
 ```
 
 ## `NO_PAYMENT_DOCUMENT` or `NO_ACCEPTS`

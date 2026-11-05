@@ -10,9 +10,10 @@ inputs:
     required: true
   mode:
     description: >-
-      Inspection mode. schema for the MCP handshake and tool schemas, inspect for a
-      one-off x402 payment preflight, baseline to write the x402 challenge shape to
-      the baseline file, drift to re-check it and fail when the shape changed
+      Inspection mode. schema for the MCP handshake and tool schemas, x402 for the
+      payment layer alone (one request, the 402 challenge and its accepts[]), inspect
+      for the full report, baseline to write the x402 challenge shape to the baseline
+      file, drift to re-check it and fail when the shape changed
     required: false
     default: schema
   format:
@@ -64,6 +65,9 @@ runs:
             ;;
           inspect)
             args=(inspect "$ENDPOINT" "--format=$FORMAT" "--method=$METHOD")
+            ;;
+          x402)
+            args=(inspect "$ENDPOINT" "--x402" "--format=$FORMAT" "--method=$METHOD")
             ;;
           baseline)
             args=(baseline "$ENDPOINT" "--format=$FORMAT" "--method=$METHOD" "--baseline=$BASELINE")
