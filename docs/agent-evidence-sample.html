@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent Evidence sample report — week of 2026-11-02</title>
-<meta name="description" content="Weekly re-verification of ERC-8004 registered agents against their declared off-chain MCP endpoints: 40 unique endpoints (40 tokens sampled), 32 fully consistent. Method, limitations, and timestamps included.">
+<title>Agent Evidence sample report — week of 2026-11-09</title>
+<meta name="description" content="Weekly re-verification of ERC-8004 registered agents against their declared off-chain MCP endpoints: 40 unique endpoints (40 tokens sampled), 40 fully consistent. Method, limitations, and timestamps included.">
 <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/agent-evidence-sample.html">
 <style>
 :root{color-scheme:light dark}
@@ -32,17 +32,17 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 </head>
 <body>
 <main>
-<h1>Agent Evidence — sample report, week of 2026-11-02</h1>
-<p class="muted">On-chain ERC-8004 registrations cross-checked against off-chain MCP endpoints, read-only. An <a href="https://github.com/xka0085-byte/mcpreflight">Agent Trust Infrastructure</a> project. Re-run weekly after the Trust Directory rescan. This run: 2026-11-02.</p>
-<p class="muted">Previous run : 40 endpoints — 23 fully consistent, 3 partially, 14 unverifiable. Samples are re-drawn each week, so week-over-week movement is directional, not paired.</p>
-<p>This report answers one question: does an on-chain ERC-8004 agent registration resolve to the MCP endpoint it claims, right now? This week we cross-checked 40 tokens (40 unique endpoints) read-only: 32 fully consistent, 2 partially consistent, 6 unverifiable. Anonymous handshake only, no tools invoked, every verdict carries a reason and a timestamp, and one open-source command re-runs any single check. This is evidence with limits, not a trust score.</p>
+<h1>Agent Evidence — sample report, week of 2026-11-09</h1>
+<p class="muted">On-chain ERC-8004 registrations cross-checked against off-chain MCP endpoints, read-only. An <a href="https://github.com/xka0085-byte/mcpreflight">Agent Trust Infrastructure</a> project. Re-run weekly after the Trust Directory rescan. This run: 2026-11-09.</p>
+<p class="muted">Previous run : 40 endpoints — 32 fully consistent, 2 partially, 6 unverifiable. Samples are re-drawn each week, so week-over-week movement is directional, not paired.</p>
+<p>This report answers one question: does an on-chain ERC-8004 agent registration resolve to the MCP endpoint it claims, right now? This week we cross-checked 40 tokens (40 unique endpoints) read-only: 40 fully consistent, 0 partially consistent, 0 unverifiable. Anonymous handshake only, no tools invoked, every verdict carries a reason and a timestamp, and one open-source command re-runs any single check. This is evidence with limits, not a trust score.</p>
 
 <div class="kpi">
 <div><b>40</b>tokens sampled</div>
 <div><b>40</b>unique endpoints</div>
-<div><b style="color:#1a7f37">32</b>fully consistent</div>
-<div><b style="color:#9a6700">2</b>partially consistent</div>
-<div><b style="color:#57606a">6</b>unverifiable</div>
+<div><b style="color:#1a7f37">40</b>fully consistent</div>
+<div><b style="color:#9a6700">0</b>partially consistent</div>
+<div><b style="color:#57606a">0</b>unverifiable</div>
 </div>
 
 <h2>Why this report exists</h2>
@@ -56,257 +56,257 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 </div>
 
 <div class="card">
-<b>2. The 8004 ecosystem and the official MCP Registry do not overlap in our sample.</b> 4 exact-URL matches and 4 host-level matches against the <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> (35,327 endpoints). A buyer checking one index gets no information about the other.
+<b>2. The 8004 ecosystem and the official MCP Registry do not overlap in our sample.</b> 0 exact-URL matches and 0 host-level matches against the <a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> (35,327 endpoints). A buyer checking one index gets no information about the other.
 </div>
 
 <div class="card">
-<b>3. A passing handshake is a low bar, and mostly a free-tier bar.</b> 32 of 40 endpoints completed a clean anonymous MCP handshake. 0 of those 32 run on <code>*.vercel.app</code> free-tier subdomains. On-chain identity plus a working endpoint says nothing about who operates the deployment or whether behavior matches claims over time.
+<b>3. A passing handshake is a low bar, and mostly a free-tier bar.</b> 40 of 40 endpoints completed a clean anonymous MCP handshake. 0 of those 40 run on <code>*.vercel.app</code> free-tier subdomains. On-chain identity plus a working endpoint says nothing about who operates the deployment or whether behavior matches claims over time.
 </div>
 
 <div class="card">
-<b>4. Registration files are mostly live — when you can reach them.</b> 38 of 40 registration files were independently re-fetched. IPFS-hosted files behind rate-limited public gateways are marked unverifiable and rest on the index cache.
+<b>4. Registration files are mostly live — when you can reach them.</b> 40 of 40 registration files were independently re-fetched. IPFS-hosted files behind rate-limited public gateways are marked unverifiable and rest on the index cache.
 </div>
 
 <h2>Results, all 40 unique endpoints</h2>
 <table>
 <tr><th>Agent (chain, token)</th><th>Declared MCP endpoint</th><th>Live check (mcpreflight schema, read-only)</th><th>Verdict</th></tr>
 <tr>
-<td><b>Vy Agent Studio</b><br><span class="muted" style="font-size:.8rem">OKX Chain · <a href="https://8004scan.io/agents/196/15218">#15218</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://agent.tanit365.com/mcp</code></td>
-<td>pass · 2 tools · proto 2024-11-05</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (2 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>生活达人服务乐伊呵呵嘻嘻</b><br><span class="muted" style="font-size:.8rem">OKX Chain · <a href="https://8004scan.io/agents/196/15217">#15217</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp.flipearth.com/mcp</code></td>
-<td>pass · 20 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (20 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>PROS</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1150057">#1150057</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/8453/0x8b7dde054be9d180c1be7fae0874697374a49832/mcp</code></td>
+<td><b>Chain Society #413</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22768">#22768</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/413/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>DRV</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1150058">#1150058</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/8453/0x9d0e8f5b25384c7310cb8c6ae32c8fbeb645d083/mcp</code></td>
+<td><b>Chain Society #414</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22767">#22767</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/414/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Nova</b><br><span class="muted" style="font-size:.8rem">chain 42 · <a href="https://8004scan.io/agents/42/12">#12</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://localhost:3000/api/mcp</code></td>
-<td>no clean handshake · timeout</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint did not complete an MCP handshake within the timeout</span></td>
-</tr>
-<tr>
-<td><b>Signalbound #4066</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56096">#56096</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.signalbound.art/mcp</code></td>
-<td>no handshake</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint did not complete an MCP handshake within the timeout</span></td>
-</tr>
-<tr>
-<td><b>Zyfai Yield Agent for 0x1C9bE5ae5981232EFE3c</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1149724">#1149724</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://mcp.zyf.ai/mcp</code></td>
-<td>no handshake</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint did not complete an MCP handshake within the timeout</span></td>
-</tr>
-<tr>
-<td><b>HirePulse</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1149688">#1149688</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://gethirepulse.xyz/mcp</code></td>
-<td>pass · 27 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (27 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>CrawlWitness</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1149679">#1149679</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.crawlwitness.com/mcp</code></td>
-<td>no clean handshake · initialize → HTTP 400</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 400)</span></td>
-</tr>
-<tr>
-<td><b>TrainingZones.io</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1149636">#1149636</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://www.trainingzones.io/api/mcp</code></td>
-<td>pass · 40 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (40 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>BrainChain</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/20423">#20423</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://www.npmjs.com/package/brainchain-mcp</code></td>
-<td>no handshake</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint did not complete an MCP handshake within the timeout</span></td>
-</tr>
-<tr>
-<td><b>proyectoayuda-data-api</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1149589">#1149589</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://anibalb.duckdns.org/x402/mcp-relay</code></td>
+<td><b>Chain Society #634</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22765">#22765</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/634/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>punks.generated.eth</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56084">#56084</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://punks-generated-eth.enspiration-eth.workers.dev/mcp</code></td>
-<td>pass · 14 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (14 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>A4F Bot</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56083">#56083</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://depunks.club/agents/a4f-bot/.well-known/mcp.json</code></td>
-<td>no clean handshake · timeout</td>
-<td><span style="color:#fff;background:#9a6700;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">partially consistent</span><br><span class="muted" style="font-size:.8rem">MCP initialize succeeded but the check did not complete cleanly: INITIALIZE_RESPONSE_INVALID, TOOLS_LIST_INVALID</span></td>
-</tr>
-<tr>
-<td><b>Hookr Pool Watch</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/20323">#20323</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://hookr.fun/api/mcp</code></td>
-<td>pass · 17 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (17 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>HEY Research Lab</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1148006">#1148006</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://heyresearch.xyz/mcp</code></td>
-<td>pass · 14 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (14 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>Fifi</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56080">#56080</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://depunks.club/agents/fifibot/.well-known/mcp.json</code></td>
-<td>no clean handshake · timeout</td>
-<td><span style="color:#fff;background:#9a6700;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">partially consistent</span><br><span class="muted" style="font-size:.8rem">MCP initialize succeeded but the check did not complete cleanly: INITIALIZE_RESPONSE_INVALID, TOOLS_LIST_INVALID</span></td>
-</tr>
-<tr>
-<td><b>PLUME</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56077">#56077</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x4c1746a800d224393fe2470c70a35717ed4ea5f1/mcp</code></td>
+<td><b>Chain Society #829</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22763">#22763</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/829/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>NEAR</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56078">#56078</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x85f17cf997934a597031b2e18a9ab6ebd4b9f6a4/mcp</code></td>
+<td><b>Chain Society #1103</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22761">#22761</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/1103/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>SAFE</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56064">#56064</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x5afe3855358e112b5647b952709e6165e1c1eeee/mcp</code></td>
+<td><b>Chain Society #802</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22760">#22760</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/802/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>EIGEN</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56073">#56073</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xec53bf9167f50cdeb3ae105f56099aaab9061f83/mcp</code></td>
+<td><b>Chain Society #154</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22759">#22759</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/154/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>GNO</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56065">#56065</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x6810e776880c02933d47db1b9fc05908e5386b96/mcp</code></td>
+<td><b>Chain Society #276</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22758">#22758</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/276/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>GIV</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56068">#56068</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x900db999074d9277c5da2a43f252d74366230da0/mcp</code></td>
+<td><b>Chain Society #982</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22757">#22757</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/982/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>AAVE</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56067">#56067</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9/mcp</code></td>
+<td><b>Chain Society #308</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22756">#22756</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/308/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>AVAIL</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56074">#56074</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xeeb4d8400aeefafc1b2953e0094134a887c76bd8/mcp</code></td>
+<td><b>Chain Society #572</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22755">#22755</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/572/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>ZRC</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56076">#56076</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xfd418e42783382e86ae91e445406600ba144d162/mcp</code></td>
+<td><b>Chain Society #484</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22748">#22748</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/484/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>ENS</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56070">#56070</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xc18360217d8f7ab5e7c516566761ea12ce7f9d72/mcp</code></td>
+<td><b>Chain Society #524</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22745">#22745</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/524/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>COW</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56071">#56071</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab/mcp</code></td>
+<td><b>Chain Society #968</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22744">#22744</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/968/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>HOPR</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56075">#56075</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xf5581dfefd8fb0e4aec526be659cfab1f8c781da/mcp</code></td>
+<td><b>Chain Society #1046</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22742">#22742</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/1046/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>RAD</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56062">#56062</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x31c8eacbffdd875c74b94b077895bd78cf1e64a3/mcp</code></td>
+<td><b>Chain Society #1060</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22740">#22740</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/1060/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>SHU</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56072">#56072</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xe485e2f1bab389c08721b291f6b59780fec83fd7/mcp</code></td>
+<td><b>Chain Society #955</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22739">#22739</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/955/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>PNK</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56069">#56069</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d/mcp</code></td>
+<td><b>Chain Society #1089</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22738">#22738</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/1089/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>BZZ</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56061">#56061</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x19062190b1925b5b6689d7073fdfc8c2976ef8cb/mcp</code></td>
+<td><b>Chain Society #893</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22737">#22737</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/893/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>POL</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56063">#56063</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x455e53cbb86018ac2b8092fdcd39d8444affc3f6/mcp</code></td>
+<td><b>Chain Society #948</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22736">#22736</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/948/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>FLUID</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56066">#56066</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0x6f40d4a6237c257fff2db00fa0510deeecd303eb/mcp</code></td>
+<td><b>Chain Society #112</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22734">#22734</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/112/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>xh-agents.agent</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/398699">#398699</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://xhagents.xyz/connector/mcp</code></td>
-<td>pass · 6 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (6 tools listed)</span></td>
-</tr>
-<tr>
-<td><b>egewewe #39</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/20120">#20120</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0xed039d132880edcc7800fb3edb8da822114dae29/39/mcp</code></td>
+<td><b>Chain Society #502</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22733">#22733</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/502/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>BridgePilot</b><br><span class="muted" style="font-size:.8rem">Base · <a href="https://8004scan.io/agents/8453/1143755">#1143755</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://bridgepilot.onrender.com/mcp</code></td>
-<td>pass · 1 tools · proto 2025-06-18</td>
-<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (1 tools listed)</span></td>
+<td><b>Chain Society #151</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22732">#22732</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/151/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>Bella Alpha</b><br><span class="muted" style="font-size:.8rem">BNB Chain · <a href="https://8004scan.io/agents/56/397258">#397258</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.orbit-agents.com/mcp/bella-alpha</code></td>
-<td>no clean handshake · initialize → HTTP 400</td>
-<td><span style="color:#fff;background:#57606a;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">unverifiable</span><br><span class="muted" style="font-size:.8rem">endpoint reachable but requires conditions we do not meet anonymously (initialize returned HTTP 400)</span></td>
+<td><b>Chain Society #818</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22731">#22731</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/818/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
 <tr>
-<td><b>PROS</b><br><span class="muted" style="font-size:.8rem">Ethereum · <a href="https://8004scan.io/agents/1/56004">#56004</a></span></td>
-<td style="max-width:230px;overflow-wrap:anywhere"><code>https://api.alpharc.app/v1/agents/1/0xb197e02499e6502733c6bce2eb39013c39a03147/mcp</code></td>
+<td><b>Chain Society #750</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22730">#22730</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/750/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #296</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22729">#22729</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/296/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #291</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22728">#22728</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/291/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #293</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22726">#22726</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/293/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #722</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22724">#22724</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/722/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #873</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22723">#22723</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/873/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #8</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22722">#22722</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/8/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #858</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22721">#22721</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/858/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #977</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22720">#22720</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/977/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #976</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22719">#22719</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/976/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #696</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22718">#22718</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/696/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #314</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22717">#22717</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/314/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #295</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22716">#22716</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/295/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #288</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22715">#22715</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/288/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #269</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22714">#22714</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/269/mcp</code></td>
+<td>pass · 9 tools · proto 2025-06-18</td>
+<td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
+</tr>
+<tr>
+<td><b>Chain Society #94</b><br><span class="muted" style="font-size:.8rem">IOTA EVM · <a href="https://8004scan.io/agents/4663/22713">#22713</a></span></td>
+<td style="max-width:230px;overflow-wrap:anywhere"><code>https://launch.fomo4nft.com/api/agent/0x42411286529e1da56c7c8c7535737961b2e06955/94/mcp</code></td>
 <td>pass · 9 tools · proto 2025-06-18</td>
 <td><span style="color:#fff;background:#1a7f37;border-radius:6px;padding:.1rem .5rem;font-size:.78rem;white-space:nowrap">fully consistent</span><br><span class="muted" style="font-size:.8rem">registration declares this MCP endpoint; anonymous initialize and tools/list both succeeded (9 tools listed)</span></td>
 </tr>
@@ -314,9 +314,7 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 <p class="muted">Verdict distribution:</p>
 <table>
 <tr><th>Verdict</th><th>Endpoints</th><th></th></tr>
-<tr><td>fully consistent</td><td>32</td><td><div class="bar"><i style="width:80%;background:#1a7f37"></i></div></td></tr>
-<tr><td>unverifiable</td><td>6</td><td><div class="bar"><i style="width:15%;background:#57606a"></i></div></td></tr>
-<tr><td>partially consistent</td><td>2</td><td><div class="bar"><i style="width:5%;background:#9a6700"></i></div></td></tr>
+<tr><td>fully consistent</td><td>40</td><td><div class="bar"><i style="width:100%;background:#1a7f37"></i></div></td></tr>
 </table>
 
 <h2>Method</h2>
@@ -332,7 +330,7 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 <h2>Limitations (read this before quoting us)</h2>
 <ul>
 <li><b>Anonymous checks only.</b> 401 or 402 endpoints are unverifiable, not broken. HTTP 402 means x402 is working as designed.</li>
-<li><b>One point in time.</b> Probes ran 2026-11-02 15:32 to 2026-11-02 15:33 UTC on 2026-11-02.</li>
+<li><b>One point in time.</b> Probes ran 2026-11-09 15:57 to 2026-11-09 15:58 UTC on 2026-11-09.</li>
 <li><b>No behavior beyond the handshake.</b> No tool was invoked. Consistency means the declared endpoint speaks MCP and lists tools, nothing stronger.</li>
 <li><b>Index cache dependency.</b> Registration content for unreachable files rests on 8004scan's cache and is marked accordingly.</li>
 <li><b>Ownership not resolved.</b> We do not verify that the owner address controls the endpoint domain, so "fully consistent" does not mean "operator verified".</li>
@@ -344,7 +342,7 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid #d8dee4;vertic
 <p>This page is the v0 of a weekly loop: sample, verify, publish, diff an agent's declared self against its observed behavior over time. If you maintain an agent directory, a marketplace, or a workflow that consumes 8004 agents and pre-integration evidence would change a decision you make, we would like to hear from you — <a href="https://github.com/xka0085-byte/mcpreflight/issues">open an issue</a>.</p>
 
 <div class="foot">
-Produced by <a href="https://github.com/xka0085-byte/mcpreflight">mcpreflight</a> (Agent Trust Infrastructure) — read-only checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Data sources: 8004scan explorer API, official MCP Registry via the Trust Directory. Collected 2026-11-02. Verdicts describe verification outcomes, not agent trustworthiness. Corrections welcome via issues.
+Produced by <a href="https://github.com/xka0085-byte/mcpreflight">mcpreflight</a> (Agent Trust Infrastructure) — read-only checks for MCP and x402 endpoints. MIT licensed, zero dependencies. Data sources: 8004scan explorer API, official MCP Registry via the Trust Directory. Collected 2026-11-09. Verdicts describe verification outcomes, not agent trustworthiness. Corrections welcome via issues.
 </div>
 </main>
 </body>
