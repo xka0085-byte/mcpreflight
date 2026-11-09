@@ -3,35 +3,228 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Outcomet — MCP trust report (AUTH_GATED)</title>
-<meta name="description" content="Read-only MCP schema trust report for app.outcomet/mcp (https://mcp.outcomet.app/mcp): AUTH_GATED, protocol unknown, unknown tools. Reproducible with mcpreflight.">
+<title>Outcomet — MCP trust report (PASS)</title>
+<meta name="description" content="Read-only MCP schema trust report for app.outcomet/mcp (https://mcp.outcomet.app/mcp): PASS, protocol 2025-06-18, 84 tools. Reproducible with mcpreflight.">
 <link rel="canonical" href="https://xka0085-byte.github.io/mcpreflight/trust/p/app.outcomet-mcp.html">
 <style>:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a2e;background:#fafafc}main{max-width:920px;margin:0 auto;padding:2rem 1.25rem 4rem}a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .6rem}.muted{color:#57606a;font-size:.92rem}.pill{display:inline-block;padding:.1rem .55rem;border-radius:999px;font-size:.8rem;font-weight:600}.PASS{background:#dafbe1;color:#116329}.FAIL{background:#ffebe9;color:#c93c37}.UNKNOWN{background:#e2e5ea;color:#424a53}.AUTH_GATED{background:#ddf4ff;color:#0550ae}.INFO{background:#ddf4ff;color:#0969da}.WARN{background:#fff8c5;color:#7d4e00}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #d8dee4;vertical-align:top}th{color:#57606a;font-weight:600}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}pre{background:#f6f8fa;border:1px solid #d8dee4;border-radius:6px;padding:.8rem;overflow-x:auto;white-space:pre-wrap;word-break:break-all}ul.findings{padding-left:1.2rem}li{margin:.25rem 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #d8dee4;font-size:.85rem;color:#57606a}.pager{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}.facts{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1rem;margin:1rem 0}.facts dt{color:#57606a;font-size:.9rem}.facts dd{margin:0;font-size:.9rem;font-weight:600}.copyrow{display:flex;align-items:center;gap:.5rem;margin:1rem 0 -.6rem}.copylabel{font-size:.85rem;color:#57606a}.copybtn{margin-left:auto;font:inherit;font-size:.8rem;padding:.15rem .7rem;border:1px solid #d8dee4;border-radius:6px;background:#f6f8fa;color:#0969da;cursor:pointer}.copybtn:hover{background:#eef2f6}@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}th,td{border-color:#30363d}.muted,.foot,th,.facts dt,.copylabel{color:#8b949e}pre,.card{background:#161b22;border-color:#30363d}.copybtn{background:#21262d;border-color:#30363d}code{background:transparent}}</style>
 </head>
 <body>
 <main>
 <p><span class="muted"><a href="https://xka0085-byte.github.io/mcpreflight/trust/">Trust Directory</a> / report</span></p>
-<h1>Outcomet <span class="pill AUTH_GATED">AUTH-GATED</span></h1>
+<h1>Outcomet <span class="pill PASS">PASS</span></h1>
 <dl class="facts">
-<dt>Anonymous handshake</dt><dd>Refused with 401 — an OAuth/credential gate, not a dead endpoint</dd>
-<dt>Requires credentials</dt><dd>Yes — by design</dd>
-<dt>Protocol version</dt><dd>not negotiated</dd>
-<dt>Tools exposed</dt><dd>unknown</dd>
-<dt>Checked at</dt><dd>2026-11-02T09:16:56.790Z</dd>
+<dt>Anonymous handshake</dt><dd>Answered initialize without credentials</dd>
+<dt>Requires credentials</dt><dd>No</dd>
+<dt>Protocol version</dt><dd>2025-06-18</dd>
+<dt>Tools exposed</dt><dd>84</dd>
+<dt>Checked at</dt><dd>2026-11-09T09:19:55.535Z</dd>
 </dl>
-<p class="muted">The endpoint answered an anonymous initialize with 401 and a <code>WWW-Authenticate: Bearer</code> header, so it requires authentication by design. This is an auth gate, not a failure — authenticated scans are out of scope.</p>
+
 <p class="muted">Read customer feedback, problems and initiatives in Outcomet, and log new feedback from chat.</p>
 <table>
 <tr><th>Registry name</th><td><code>app.outcomet/mcp</code> (v3.5.0)</td></tr>
 <tr><th>Endpoint</th><td><code>https://mcp.outcomet.app/mcp</code></td></tr>
-<tr><th>Reported server</th><td>—</td></tr>
-<tr><th>Protocol version</th><td>not negotiated</td></tr>
-<tr><th>Tools exposed</th><td>unknown</td></tr>
-<tr><th>Auth gate</th><td>gated</td></tr>
-<tr><th>Checked at</th><td>2026-11-02T09:16:56.790Z</td></tr>
+<tr><th>Reported server</th><td>outcomet-mcp 3.11.1</td></tr>
+<tr><th>Protocol version</th><td>2025-06-18</td></tr>
+<tr><th>Tools exposed</th><td>84</td></tr>
+
+<tr><th>Checked at</th><td>2026-11-09T09:19:55.535Z</td></tr>
 </table>
 <h2>Findings</h2>
-<ul class="findings"><li><span class="pill INFO">INFO</span> <code>AUTH_GATE_VERIFIED</code> — Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server</li></ul>
+<ul class="findings"><li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].expectedRowVersion has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].health has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].owner has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].domain has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[1].tags has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].parentCapabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].owner has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].domain has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[2].tags has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].expectedRowVersion has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].parentCapabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[3].sortOrder has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].expectedRowVersion has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[4].reason has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].sourceCapabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].survivorCapabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].expectedSourceRowVersion has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].expectedSurvivorRowVersion has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].resolvedFields has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[5].dependencyDisposition has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].lifecycle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].lifecycle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].lifecycle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].relationshipTypes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].lifecycle has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].status has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].source has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].feedbackType has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].campaignType has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].websiteUrl has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].vertical has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].companySizeRange has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].lifecycleStatus has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].icpFitState has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].icpFitScore has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].icpFitRationale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[30].notes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].domain has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].websiteUrl has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].vertical has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].companySizeRange has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].lifecycleStatus has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].icpFitState has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].icpFitScore has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].icpFitRationale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[31].notes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].companyId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].domain has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].websiteUrl has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].vertical has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].companySizeRange has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].lifecycleStatus has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].icpFitState has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].icpFitScore has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].icpFitRationale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[32].notes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].roleCategory has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].seniority has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].icpFitState has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].icpFitScore has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].icpFitRationale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[33].notes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].displayName has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].primaryEmail has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].companyId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].roleCategory has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].seniority has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].icpFitState has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].icpFitScore has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].icpFitRationale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[34].notes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].contactId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].displayName has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].primaryEmail has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].companyId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].roleCategory has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].seniority has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].icpFitState has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].icpFitScore has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].icpFitRationale has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[35].notes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].initiativeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[41].idempotencyKey has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].initiativeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].changeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[42].idempotencyKey has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].initiativeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].changeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[43].idempotencyKey has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].initiativeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].problemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].feedbackId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].meaning has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[44].idempotencyKey has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].status has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].sort has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[45].order has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].cursor has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].feedbackId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].demoBatchId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].status has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].source has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].feedbackType has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].evidenceStatus has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].evidenceKind has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].createdSince has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[48].createdUntil has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[51].entityTypes has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[58].idempotencyKey has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[58].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[58].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[58].severity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[58].parentProblemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[59].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[59].status has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[59].severity has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].status has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].sourceProvider has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].sourceId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].sort has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[64].order has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[65].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[66].initiativeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[67].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[67].initiativeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[68].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[68].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[69].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[69].capabilityId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[70].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[70].changeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[71].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[71].changeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[72].workItemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[72].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[72].description has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[72].status has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[73].feedbackId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[73].title has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[73].summary has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[73].type has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[74].feedbackId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[74].status has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[74].resolution has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[75].feedbackId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[75].changeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[75].evidenceIds has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[75].reason has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[76].feedbackId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[76].changeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[77].problemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[77].evidenceId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[77].meaning has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[78].problemId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[78].evidenceId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].query has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].sourceProvider has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].sourceId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].repo has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[79].limit has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[80].changeId has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[83].tierThresholds has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[83].ringThresholds has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[83].cadenceByTier has no description</li></ul>
 <h2>Reproduce this report</h2>
 <div class="copyrow"><span class="copylabel">Shell (one command)</span><button class="copybtn" type="button" data-copy="npx @eidonze/mcpreflight schema https://mcp.outcomet.app/mcp">Copy</button></div>
 <pre>npx @eidonze/mcpreflight schema https://mcp.outcomet.app/mcp</pre>
@@ -41,9 +234,9 @@
 <pre>[![mcpreflight](https://xka0085-byte.github.io/mcpreflight/trust/badge/app.outcomet-mcp.svg)](https://xka0085-byte.github.io/mcpreflight/trust/p/app.outcomet-mcp.html)</pre>
 <div class="copyrow"><span class="copylabel">This report’s public URL</span><button class="copybtn" type="button" data-copy="https://xka0085-byte.github.io/mcpreflight/trust/p/app.outcomet-mcp.html">Copy</button></div>
 <pre>https://xka0085-byte.github.io/mcpreflight/trust/p/app.outcomet-mcp.html</pre>
-<p class="muted">The badge is a static SVG carrying the status and scan date of this run (2026-11-02); it does not update by itself. If the endpoint changes, the JSON is the current artifact and this page is regenerated on the next weekly scan.</p>
-<p>Cite this report as: mcpreflight Trust Directory, <code>app.outcomet/mcp</code>, scanned 2026-11-02. https://xka0085-byte.github.io/mcpreflight/trust/p/app.outcomet-mcp.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
-<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-11-02.</div>
+<p class="muted">The badge is a static SVG carrying the status and scan date of this run (2026-11-09); it does not update by itself. If the endpoint changes, the JSON is the current artifact and this page is regenerated on the next weekly scan.</p>
+<p>Cite this report as: mcpreflight Trust Directory, <code>app.outcomet/mcp</code>, scanned 2026-11-09. https://xka0085-byte.github.io/mcpreflight/trust/p/app.outcomet-mcp.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
+<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-11-09.</div>
 </main>
 <script>document.addEventListener('click',function(e){var b=e.target.closest('.copybtn');if(!b)return;var t=b.dataset.copy;var done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o},1200)};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else{fallback()}function fallback(){var r=document.createRange();r.selectNodeContents(b.nextElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r);done()}});</script>
 </body>

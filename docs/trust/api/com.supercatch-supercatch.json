@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:32:06.083Z",
+  "scannedAt": "2026-11-09T09:34:13.257Z",
   "server": {
     "registryName": "com.supercatch/supercatch",
     "title": "SuperCatch",
@@ -10,22 +10,62 @@
   },
   "endpoint": "https://supercatch.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "com.supercatch/supercatch",
+      "title": "SuperCatch",
+      "version": "1.27.0",
+      "description": "Search SuperCatch trading cards, prices, and stores; sign in to read your orders and watchlist.",
+      "websiteUrl": "https://supercatch.com/ai",
+      "_meta": {
+        "com.empline/mcp-support": {
+          "schema_version": "1.0.0",
+          "server": {
+            "app_id": "com.supercatch/supercatch",
+            "server_name": "SuperCatch",
+            "endpoint": "https://supercatch.com/api/mcp"
+          },
+          "privacy": {
+            "automatic_reporting": false,
+            "raw_tool_inputs": "never_capture",
+            "raw_tool_outputs": "never_capture",
+            "outcome_identity_storage": false,
+            "ranking": "not_derived",
+            "returned_text": "untrusted_data",
+            "fixed_status_means": "owner_claim_with_health_check",
+            "fix_check_kind": "server_transport",
+            "behavior_verified": false
+          },
+          "visibility": "public_directory",
+          "service": {
+            "provider": "koskamo",
+            "mcp_endpoint": "https://koskamo.com/api/mcp",
+            "rest_base": "https://koskamo.com/api/v1/mcp-directory",
+            "lookup_tool": "koskamo_search_mcp_servers",
+            "report_tool": "koskamo_report_mcp_issue",
+            "receipt_tool": "koskamo_get_mcp_issue_status",
+            "reopen_tool": "koskamo_reopen_mcp_issue",
+            "owner_tool": "koskamo_list_mcp_issues",
+            "owner_answer_tool": "koskamo_update_mcp_issue",
+            "changes_tool": "koskamo_list_mcp_directory_changes",
+            "outcomes_tool": "koskamo_report_mcp_outcome",
+            "webhook_audience": "verified_listing_owner",
+            "changes": "observed_listing_and_issue_changes",
+            "outcomes": "explicit_counts_only"
+          },
+          "private_help_path": "/account/support"
+        }
+      }
+    },
+    "toolCount": 82,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "82 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://supercatch.com/mcp"
 }

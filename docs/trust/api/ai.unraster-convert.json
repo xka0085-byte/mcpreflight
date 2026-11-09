@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:15:37.268Z",
+  "scannedAt": "2026-11-09T09:18:42.098Z",
   "server": {
     "registryName": "ai.unraster/convert",
     "title": "unraster Image to PPTX and SVG",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://unraster.ai/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "unraster",
+      "title": "Unraster",
+      "version": "1.0.0",
+      "websiteUrl": "https://unraster.ai/docs/agents"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://unraster.ai/mcp"
 }

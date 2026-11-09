@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:29:26.642Z",
+  "scannedAt": "2026-11-09T09:31:44.938Z",
   "server": {
     "registryName": "com.poisar/public",
     "title": "Poisar Public",
@@ -16,15 +16,53 @@
       "description": "Read-only public metadata server for Poisar discovery.",
       "name": "com.poisar/public",
       "title": "Poisar",
-      "version": "1.0.1",
-      "websiteUrl": "https://poisar.com/agents"
+      "version": "1.0.2",
+      "websiteUrl": "https://poisar.com/agents",
+      "_meta": {
+        "com.empline/mcp-support": {
+          "schema_version": "1.0.0",
+          "server": {
+            "app_id": "com.poisar/public",
+            "server_name": "Poisar",
+            "endpoint": "https://poisar.com/api/mcp"
+          },
+          "privacy": {
+            "automatic_reporting": false,
+            "raw_tool_inputs": "never_capture",
+            "raw_tool_outputs": "never_capture",
+            "outcome_identity_storage": false,
+            "ranking": "not_derived",
+            "returned_text": "untrusted_data",
+            "fixed_status_means": "owner_claim_with_health_check",
+            "fix_check_kind": "server_transport",
+            "behavior_verified": false
+          },
+          "visibility": "public_directory",
+          "service": {
+            "provider": "koskamo",
+            "mcp_endpoint": "https://koskamo.com/api/mcp",
+            "rest_base": "https://koskamo.com/api/v1/mcp-directory",
+            "lookup_tool": "koskamo_search_mcp_servers",
+            "report_tool": "koskamo_report_mcp_issue",
+            "receipt_tool": "koskamo_get_mcp_issue_status",
+            "reopen_tool": "koskamo_reopen_mcp_issue",
+            "owner_tool": "koskamo_list_mcp_issues",
+            "owner_answer_tool": "koskamo_update_mcp_issue",
+            "changes_tool": "koskamo_list_mcp_directory_changes",
+            "outcomes_tool": "koskamo_report_mcp_outcome",
+            "webhook_audience": "verified_listing_owner",
+            "changes": "observed_listing_and_issue_changes",
+            "outcomes": "explicit_counts_only"
+          }
+        }
+      }
     },
-    "toolCount": 2,
+    "toolCount": 3,
     "findings": [
       {
         "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "2 tools passed deterministic schema checks"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
   },

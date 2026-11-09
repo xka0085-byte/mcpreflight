@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:12:42.140Z",
+  "scannedAt": "2026-11-09T09:15:54.765Z",
   "server": {
     "registryName": "ai.bugtape/bugtape-demo",
     "title": "BugTape demo",
@@ -10,15 +10,23 @@
   },
   "endpoint": "https://app.bugtape.ai/demo/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "bugtape-demo",
+      "version": "0.1.0"
+    },
+    "toolCount": 14,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].projectId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].limit has no description"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:14:44.997Z",
+  "scannedAt": "2026-11-09T09:17:53.058Z",
   "server": {
     "registryName": "ai.seomatic/seomatic",
     "title": "SEOmatic",
@@ -10,38 +10,22 @@
   },
   "endpoint": "https://app.seomatic.ai/api/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "seomatic",
-      "title": "SEOmatic",
-      "version": "1.0.0",
-      "websiteUrl": "https://seomatic.ai",
-      "icons": [
-        {
-          "src": "https://app.seomatic.ai/logos/seomatic.svg",
-          "mimeType": "image/svg+xml",
-          "sizes": [
-            "any"
-          ]
-        },
-        {
-          "src": "https://app.seomatic.ai/logos/seomatic-email.png",
-          "mimeType": "image/png",
-          "sizes": [
-            "88x87"
-          ]
-        }
-      ]
-    },
-    "toolCount": 2,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_VERIFIED",
         "severity": "INFO",
-        "message": "2 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://app.seomatic.ai/api/mcp"
 }

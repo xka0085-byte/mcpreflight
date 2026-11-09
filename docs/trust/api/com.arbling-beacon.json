@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:20:35.348Z",
+  "scannedAt": "2026-11-09T09:23:20.681Z",
   "server": {
     "registryName": "com.arbling/beacon",
     "title": "Arbling Beacon",
@@ -10,37 +10,22 @@
   },
   "endpoint": "https://api.arbling.com/mcp/beacon",
   "trust": {
-    "finalStatus": "FAIL",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "arbling-beacon",
-      "version": "1",
-      "transport": {
-        "type": "http",
-        "url": "/mcp/beacon"
-      },
-      "auth": {
-        "scheme": "bearer",
-        "credential": "beacon read key (secret)"
-      },
-      "protocol_version": "2025-06-18",
-      "tools": [
-        "beacon_ai_traffic",
-        "beacon_b2b_deals",
-        "beacon_checkout_handoffs",
-        "beacon_page_visits",
-        "beacon_who_visits",
-        "beacon_blog_traffic"
-      ]
-    },
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "TOOLS_LIST_INVALID",
-        "severity": "FAIL",
-        "message": "tools/list response did not contain result.tools[]"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.arbling.com/mcp/beacon"
 }

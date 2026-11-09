@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:46:43.921Z",
+  "scannedAt": "2026-11-09T09:47:56.173Z",
   "server": {
     "registryName": "io.github.durenzidu/powpow-mcp",
     "title": "io.github.durenzidu/powpow-mcp",
@@ -10,22 +10,38 @@
   },
   "endpoint": "https://global.powpow.online/api/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "powpow-mcp",
+      "version": "0.23.7",
+      "icons": [
+        {
+          "src": "https://global.powpow.online/logo.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ],
+          "theme": "light"
+        },
+        {
+          "src": "https://global.powpow.online/logo-dark.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "256x256"
+          ],
+          "theme": "dark"
+        }
+      ]
+    },
+    "toolCount": 34,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "34 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://global.powpow.online/api/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T10:09:22.763Z",
+  "scannedAt": "2026-11-09T10:09:10.235Z",
   "server": {
     "registryName": "org.machupicchu/wonders-mcp",
     "title": "Wonders MCP",
@@ -11,19 +11,33 @@
   "endpoint": "https://www.machupicchu.org/wp-json/wonders-mcp/v1/jsonrpc",
   "trust": {
     "finalStatus": "FAIL",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "wonders-mcp",
+      "title": "Wonders MCP — Heritage Travel Knowledge Graph",
+      "version": "1.1.3"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "code": "INITIALIZE_RESPONSE_INVALID",
+        "code": "INPUT_SCHEMA_NOT_OBJECT",
         "severity": "FAIL",
-        "message": "Initialize response did not include result.protocolVersion"
+        "message": "tools[0].inputSchema must declare type: object"
       },
       {
-        "code": "TOOLS_LIST_INVALID",
+        "code": "INPUT_SCHEMA_NOT_OBJECT",
         "severity": "FAIL",
-        "message": "tools/list response did not contain result.tools[]"
+        "message": "tools[1].inputSchema must declare type: object"
+      },
+      {
+        "code": "INPUT_SCHEMA_NOT_OBJECT",
+        "severity": "FAIL",
+        "message": "tools[2].inputSchema must declare type: object"
+      },
+      {
+        "code": "INPUT_SCHEMA_NOT_OBJECT",
+        "severity": "FAIL",
+        "message": "tools[3].inputSchema must declare type: object"
       }
     ]
   },

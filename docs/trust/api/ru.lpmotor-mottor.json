@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T10:10:04.667Z",
+  "scannedAt": "2026-11-09T10:09:51.067Z",
   "server": {
     "registryName": "ru.lpmotor/mottor",
     "title": "Mottor",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://api.lpmotor.ru/v3/mcp",
   "trust": {
-    "finalStatus": "FAIL",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "INITIALIZE_RESPONSE_INVALID",
-        "severity": "FAIL",
-        "message": "Initialize response did not include result.protocolVersion"
-      },
-      {
-        "code": "TOOLS_LIST_INVALID",
-        "severity": "FAIL",
-        "message": "tools/list response did not contain result.tools[]"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.lpmotor.ru/v3/mcp"
 }

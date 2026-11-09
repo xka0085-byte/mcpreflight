@@ -17,7 +17,7 @@
 <dt>Requires credentials</dt><dd>No</dd>
 <dt>Protocol version</dt><dd>2025-06-18</dd>
 <dt>Tools exposed</dt><dd>26</dd>
-<dt>Checked at</dt><dd>2026-11-02T09:40:03.764Z</dd>
+<dt>Checked at</dt><dd>2026-11-09T09:41:40.038Z</dd>
 </dl>
 
 <p class="muted">South Africa&#39;s first AI-transactable blinds, shutters and awnings catalogue with live ZAR pricing.</p>
@@ -28,10 +28,38 @@
 <tr><th>Protocol version</th><td>2025-06-18</td></tr>
 <tr><th>Tools exposed</th><td>26</td></tr>
 
-<tr><th>Checked at</th><td>2026-11-02T09:40:03.764Z</td></tr>
+<tr><th>Checked at</th><td>2026-11-09T09:41:40.038Z</td></tr>
 </table>
 <h2>Findings</h2>
-<ul class="findings"><li><span class="pill INFO">INFO</span> <code>STATIC_SCHEMA_CHECKS_PASSED</code> — 26 tools passed deterministic schema checks</li></ul>
+<ul class="findings"><li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[6].colour has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[6].max_width_mm has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[6].max_height_mm has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[7].product_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[8].customer has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[9].cart_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].cart_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].op has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].items has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[10].customer has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[11].cart_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].items has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[12].customer has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[13].checkout_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].checkout_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].customer has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[14].payment_method has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[15].checkout_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[16].checkout_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].order_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[17].customer_email has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].product_id has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[18].colour_name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[21].customer_name has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].primary_concern has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].room has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].location has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].max_budget_zar has no description</li>
+<li><span class="pill WARN">WARN</span> <code>PROPERTY_DESCRIPTION_MISSING</code> — tools[22].aesthetic has no description</li></ul>
 <h2>Reproduce this report</h2>
 <div class="copyrow"><span class="copylabel">Shell (one command)</span><button class="copybtn" type="button" data-copy="npx @eidonze/mcpreflight schema https://shop.customblinds.co.za/mcp">Copy</button></div>
 <pre>npx @eidonze/mcpreflight schema https://shop.customblinds.co.za/mcp</pre>
@@ -41,9 +69,9 @@
 <pre>[![mcpreflight](https://xka0085-byte.github.io/mcpreflight/trust/badge/io.github.customblinds-cb-shop.svg)](https://xka0085-byte.github.io/mcpreflight/trust/p/io.github.customblinds-cb-shop.html)</pre>
 <div class="copyrow"><span class="copylabel">This report’s public URL</span><button class="copybtn" type="button" data-copy="https://xka0085-byte.github.io/mcpreflight/trust/p/io.github.customblinds-cb-shop.html">Copy</button></div>
 <pre>https://xka0085-byte.github.io/mcpreflight/trust/p/io.github.customblinds-cb-shop.html</pre>
-<p class="muted">The badge is a static SVG carrying the status and scan date of this run (2026-11-02); it does not update by itself. If the endpoint changes, the JSON is the current artifact and this page is regenerated on the next weekly scan.</p>
-<p>Cite this report as: mcpreflight Trust Directory, <code>io.github.CustomBlinds/cb-shop</code>, scanned 2026-11-02. https://xka0085-byte.github.io/mcpreflight/trust/p/io.github.customblinds-cb-shop.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
-<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-11-02.</div>
+<p class="muted">The badge is a static SVG carrying the status and scan date of this run (2026-11-09); it does not update by itself. If the endpoint changes, the JSON is the current artifact and this page is regenerated on the next weekly scan.</p>
+<p>Cite this report as: mcpreflight Trust Directory, <code>io.github.CustomBlinds/cb-shop</code>, scanned 2026-11-09. https://xka0085-byte.github.io/mcpreflight/trust/p/io.github.customblinds-cb-shop.html . Any figure quoted from this page should be attributed to mcpreflight rather than to an anonymous audit.</p>
+<div class="foot">Generated by <a href="https://xka0085-byte.github.io/mcpreflight/">mcpreflight</a> — read-only MCP initialize + tools/list. No tools were called, no payments attempted. Static schema checks do not predict model tool selection or prove behavior across all clients. Scanned: 2026-11-09.</div>
 </main>
 <script>document.addEventListener('click',function(e){var b=e.target.closest('.copybtn');if(!b)return;var t=b.dataset.copy;var done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o},1200)};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else{fallback()}function fallback(){var r=document.createRange();r.selectNodeContents(b.nextElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r);done()}});</script>
 </body>

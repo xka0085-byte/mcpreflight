@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:41:50.175Z",
+  "scannedAt": "2026-11-09T09:43:22.133Z",
   "server": {
     "registryName": "io.github.Kromatic-Innovation/krobot",
     "title": "io.github.Kromatic-Innovation/krobot",
@@ -10,22 +10,20 @@
   },
   "endpoint": "https://api.kromatic.com/mcp/krobot",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Krobot",
+      "version": "2.2"
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "5 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.kromatic.com/mcp/krobot"
 }

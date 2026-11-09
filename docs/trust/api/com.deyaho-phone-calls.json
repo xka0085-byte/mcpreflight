@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:22:54.192Z",
+  "scannedAt": "2026-11-09T09:25:36.118Z",
   "server": {
     "registryName": "com.deyaho/phone-calls",
     "title": "Deyaho Phone Calls MCP",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://mcp.deyaho.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "deyaho-phone-calls",
+      "title": "Deyaho Phone Calls MCP",
+      "version": "0.1.10"
+    },
+    "toolCount": 4,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "4 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.deyaho.com/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:13:40.297Z",
+  "scannedAt": "2026-11-09T09:16:52.338Z",
   "server": {
     "registryName": "ai.instantclips/instantclips",
     "title": "InstantClips",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://app.instantclips.ai/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "instantclips",
+      "title": "InstantClips",
+      "version": "0.10.1",
+      "websiteUrl": "https://instantclips.ai"
+    },
+    "toolCount": 15,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[13].reaction has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://app.instantclips.ai/mcp"
 }

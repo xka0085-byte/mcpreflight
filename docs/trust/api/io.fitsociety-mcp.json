@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:38:52.575Z",
+  "scannedAt": "2026-11-09T09:40:45.658Z",
   "server": {
     "registryName": "io.fitsociety/mcp",
     "title": "FITsociety",
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
   },
   "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.fitsociety.io/.well-known/oauth-protected-resource/mcp/v1",
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.fitsociety.io/mcp/v1"

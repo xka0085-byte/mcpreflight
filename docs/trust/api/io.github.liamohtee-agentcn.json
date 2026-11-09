@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:49:29.008Z",
+  "scannedAt": "2026-11-09T09:50:34.513Z",
   "server": {
     "registryName": "io.github.liamohtee/agentcn",
     "title": "ComplianceCN — toys, batteries, cosmetics, food contact: CE, GPSR, UN 38.3, CPC/GCC and more",
@@ -10,15 +10,23 @@
   },
   "endpoint": "https://compliancecn.netlify.app/mcp?src=official_registry",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "compliancecn",
+      "version": "0.3.4"
+    },
+    "toolCount": 11,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].markets has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[9].claim_id has no description"
       }
     ]
   },

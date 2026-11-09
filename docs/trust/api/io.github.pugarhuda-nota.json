@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:42:53.274Z",
+  "scannedAt": "2026-11-09T09:44:21.713Z",
   "server": {
     "registryName": "io.github.PugarHuda/nota",
     "title": "Nota",
@@ -10,20 +10,22 @@
   },
   "endpoint": "https://nota-ryo.vercel.app/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "nota",
-      "version": "0.2.0"
-    },
-    "toolCount": 9,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "9 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://nota-ryo.vercel.app/mcp"
 }

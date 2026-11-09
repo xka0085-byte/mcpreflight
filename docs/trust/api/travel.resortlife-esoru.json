@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T10:11:43.509Z",
+  "scannedAt": "2026-11-09T10:11:06.920Z",
   "server": {
     "registryName": "travel.resortlife/esoru",
     "title": "Esoru by resortlife.travel",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://resortlife.travel/api/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "resortlife",
+      "title": "Resortlife Travel",
+      "version": "0.7.0"
+    },
+    "toolCount": 21,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "21 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://resortlife.travel/api/mcp"
 }

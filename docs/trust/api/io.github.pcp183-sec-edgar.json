@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:53:22.274Z",
+  "scannedAt": "2026-11-09T09:53:56.616Z",
   "server": {
     "registryName": "io.github.pcp183/sec-edgar",
     "title": "SEC EDGAR Company Lookup",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://sec-edgar-production-6cdb.up.railway.app/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sec-edgar",
+      "version": "0.2.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
       }
     ]
   },

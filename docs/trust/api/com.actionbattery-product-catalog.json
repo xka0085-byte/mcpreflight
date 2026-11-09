@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:19:45.304Z",
+  "scannedAt": "2026-11-09T09:22:32.777Z",
   "server": {
     "registryName": "com.actionbattery/product-catalog",
     "title": "Action Battery Wholesalers product catalogue",
@@ -10,20 +10,19 @@
   },
   "endpoint": "https://mcp.actionbattery.com/mcp",
   "trust": {
-    "finalStatus": "FAIL",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "actionbattery.com",
+      "title": "Action Battery Wholesalers product catalogue",
+      "version": "0.2.1"
+    },
+    "toolCount": 6,
     "findings": [
       {
-        "code": "INITIALIZE_RESPONSE_INVALID",
-        "severity": "FAIL",
-        "message": "Initialize response did not include result.protocolVersion"
-      },
-      {
-        "code": "TOOLS_LIST_INVALID",
-        "severity": "FAIL",
-        "message": "tools/list response did not contain result.tools[]"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].type has no description"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:37:39.813Z",
+  "scannedAt": "2026-11-09T09:39:23.599Z",
   "server": {
     "registryName": "fr.symone/symone-moto",
     "title": "SYMONE motorcycle transport",
@@ -14,15 +14,20 @@
     "protocolVersion": "2025-03-26",
     "serverInfo": {
       "name": "symone-moto",
-      "version": "1.3.0",
-      "instructions": "Search motorcycle transport routes in France. Use search_routes to find available trips between French cities, then get_booking_url to hand the user the booking link (booking and payment only happen on symone.fr). All tools are read-only and public, no authentication required. Main route: Paris↔Marseille from 299€. Documentation questions: use the docs MCP server at https://symone.fr/docs/mcp."
+      "version": "1.4.0",
+      "instructions": "SYMONE transports motorcycles in France and Europe. For any route or date, request_quote sends a quote request (demande de devis) for the customer: ask them for their name, e-mail and phone first; they confirm the request from an e-mail and the quote arrives by e-mail. To book a scheduled trip from search_routes, create_checkout returns a continue_url: the customer checks the booking and pays on symone.fr. Payment never goes through the assistant and prices always come from SYMONE. get_quote_request and get_checkout give the status of a request or booking. No authentication required. Documentation questions: use the docs MCP server at https://symone.fr/docs/mcp."
     },
-    "toolCount": 3,
+    "toolCount": 10,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "3 tools passed deterministic schema checks"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].trip_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].discount_code has no description"
       }
     ]
   },

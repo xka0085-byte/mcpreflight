@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:53:20.958Z",
+  "scannedAt": "2026-11-09T09:53:55.280Z",
   "server": {
     "registryName": "io.github.pcp183/export-screen",
     "title": "US Export Control Screening (CSL)",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://export-screen-production.up.railway.app/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "export-screen",
+      "version": "0.2.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "1 tools passed deterministic schema checks"
       }
     ]
   },

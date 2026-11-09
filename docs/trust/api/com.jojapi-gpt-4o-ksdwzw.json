@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-02T09:26:11.755Z",
+  "scannedAt": "2026-11-09T09:28:43.691Z",
   "server": {
     "registryName": "com.jojapi/gpt-4o-ksdwzw",
     "title": "com.jojapi/gpt-4o-ksdwzw",
@@ -10,19 +10,20 @@
   },
   "endpoint": "https://mcp.jojapi.com/gpt-4o-ksdwzw",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "jojapi-gpt-4o-ksdwzw",
-      "title": "GPT-4o API — JoJ API",
-      "version": "1.0.0"
-    },
-    "toolCount": 1,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "1 tools passed deterministic schema checks"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },
