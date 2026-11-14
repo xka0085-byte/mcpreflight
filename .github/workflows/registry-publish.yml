@@ -1,0 +1,85 @@
+name: registry-publish
+
+# 存在理由：npm 发版与官方 MCP Registry 是两套东西。
+# 0.6.1 / 0.6.2 只发了 npm，server.json 的 version 没动，Registry 条目一直停在 0.6.0；
+# 而 LobeHub / Glama 这一类目录站是从 Registry 抓的，于是它们全部显示 0.6.0。
+# 这个 workflow 把「server.json 已改版本」到「Registry 条目更新」这一步补齐，
+# 以后不再依赖人记得手动跑 mcp-publisher。
+#
+# 认证用 GitHub Actions OIDC（github-oidc），不需要 PAT、不需要设备码授权：
+# Registry 按 io.github.<owner>/<repo> 反查本仓库的 OIDC 身份。
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: registry-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: read local server.json version
+        id: local
+        run: |
+          v=$(node -e 'console.log(require("./server.json").version)')
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          echo "local server.json version: $v"
+
+      - name: check registry version
+        id: remote
+        run: |
+          # Registry 是分页的，先按名字精确过滤再取第一个匹配项。
+          curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xka0085-byte%2Fmcpreflight" \
+            -o /tmp/reg.json
+          v=$(node -e '
+            const d=require("/tmp/reg.json");
+            const hit=(d.servers||[]).map(x=>x.server||x)
+              .find(s=>s.name==="io.github.xka0085-byte/mcpreflight");
+            console.log(hit?hit.version:"none");
+          ')
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          echo "registry version: $v"
+
+      - name: skip if already current
+        if: steps.remote.outputs.version == steps.local.outputs.version
+        run: echo "registry already at ${{ steps.local.outputs.version }}, nothing to publish"
+
+      - name: install mcp-publisher
+        if: steps.remote.outputs.version != steps.local.outputs.version
+        run: |
+          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" \
+            | tar -xz mcp-publisher
+          sudo mv mcp-publisher /usr/local/bin/
+          mcp-publisher --help > /dev/null
+
+      - name: validate server.json
+        if: steps.remote.outputs.version != steps.local.outputs.version
+        run: mcp-publisher validate
+
+      - name: login github-oidc + publish
+        if: steps.remote.outputs.version != steps.local.outputs.version
+        run: |
+          mcp-publisher login github-oidc
+          mcp-publisher publish
+
+      - name: verify registry after publish
+        run: |
+          sleep 5
+          curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xka0085-byte%2Fmcpreflight" \
+            -o /tmp/after.json
+          node -e '
+            const d=require("/tmp/after.json");
+            const hit=(d.servers||[]).map(x=>x.server||x)
+              .find(s=>s.name==="io.github.xka0085-byte/mcpreflight");
+            console.log("registry now:", hit?hit.version:"none");
+          '
