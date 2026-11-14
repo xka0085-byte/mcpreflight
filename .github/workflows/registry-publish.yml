@@ -38,8 +38,11 @@ jobs:
       - name: check registry version
         id: remote
         run: |
-          # Registry 是分页的，先按名字精确过滤再取第一个匹配项。
-          curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xka0085-byte%2Fmcpreflight" \
+          # Registry 会把同一 server 的所有版本都列出来（旧版本在前），
+          # 必须带 version=latest 只取 isLatest 那条，否则会误读到旧版本、
+          # 每次运行都以为要重发。
+
+          curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xka0085-byte%2Fmcpreflight&version=latest" \
             -o /tmp/reg.json
           v=$(node -e '
             const d=require("/tmp/reg.json");
@@ -75,7 +78,7 @@ jobs:
       - name: verify registry after publish
         run: |
           sleep 5
-          curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xka0085-byte%2Fmcpreflight" \
+          curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xka0085-byte%2Fmcpreflight&version=latest" \
             -o /tmp/after.json
           node -e '
             const d=require("/tmp/after.json");
