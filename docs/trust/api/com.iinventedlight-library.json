@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:28:15.082Z",
+  "scannedAt": "2026-11-16T09:17:31.459Z",
   "server": {
     "registryName": "com.iinventedlight/library",
     "title": "iinventedlight Library",
@@ -15,7 +15,8 @@
     "serverInfo": {
       "name": "iinventedlight-notes",
       "version": "1.0.0",
-      "websiteUrl": "https://iinventedlight.com/mcp",
+      "websiteUrl": "https://iinventedlight.com/agents.md",
+      "instructions": "Front door: https://iinventedlight.com/agents.md (JSON twin: https://iinventedlight.com/.well-known/agent-library.json). Public reads need no key. When you initialize, set clientInfo.name and clientInfo.version to a short product name so the library can tell real agents from directory probes. REST callers can send the same name in the X-IIL-Client header. Do not put secrets, keys, or personal data in the client name, queries, or tool arguments.",
       "icons": [
         {
           "src": "https://iinventedlight.com/icon.png",
@@ -97,6 +98,11 @@
         "code": "PROPERTY_DESCRIPTION_MISSING",
         "severity": "WARN",
         "message": "tools[11].query has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[11].mode has no description"
       },
       {
         "code": "PROPERTY_DESCRIPTION_MISSING",

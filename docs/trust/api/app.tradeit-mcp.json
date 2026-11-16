@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:20:19.349Z",
+  "scannedAt": "2026-11-16T09:09:56.724Z",
   "server": {
     "registryName": "app.tradeit/mcp",
     "title": "Trade It",
@@ -10,22 +10,45 @@
   },
   "endpoint": "https://mcp.tradeit.app/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Trade It",
+      "title": "Trade It",
+      "version": "1.0.0",
+      "description": "Connect an agent to the user's brokerage accounts across Charles Schwab, Coinbase, ETrade, Kraken, Moomoo, Public, Robinhood, Tastytrade, TradeStation, TradeStation Paper, Webull: read accounts, holdings, and trade history, look up assets, draft stock, crypto, and options orders for review, execute or cancel orders, and create shareable trade links.",
+      "websiteUrl": "https://tradeit.app",
+      "icons": [
+        {
+          "src": "https://images.tradeit.app/site_logos/logo.png",
+          "mimeType": "image/png",
+          "theme": "light"
+        },
+        {
+          "src": "https://images.tradeit.app/site_logos/logo.svg",
+          "mimeType": "image/svg+xml",
+          "theme": "light"
+        },
+        {
+          "src": "https://images.tradeit.app/site_logos/logo_dark.png",
+          "mimeType": "image/png",
+          "theme": "dark"
+        },
+        {
+          "src": "https://images.tradeit.app/site_logos/logo_dark.svg",
+          "mimeType": "image/svg+xml",
+          "theme": "dark"
+        }
+      ]
+    },
+    "toolCount": 9,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].config has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.tradeit.app/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:13.518Z",
+  "scannedAt": "2026-11-16T09:31:04.100Z",
   "server": {
     "registryName": "io.github.Evozim/charge-curve-optimizer-mcp",
     "title": "Execute charge-curve-optimizer-mcp",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://api.m2mcent.com/charge-curve-optimizer-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "charge-curve-optimizer-mcp",
+      "title": "Lithium Battery CC-CV Multi-Stage Fast Charge Curve Optimizer",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].currentSocPct has no description"
       }
     ]
   },

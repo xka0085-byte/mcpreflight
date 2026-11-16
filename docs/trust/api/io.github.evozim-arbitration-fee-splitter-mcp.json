@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:04.856Z",
+  "scannedAt": "2026-11-16T09:30:56.416Z",
   "server": {
     "registryName": "io.github.Evozim/arbitration-fee-splitter-mcp",
     "title": "Execute arbitration-fee-splitter-mcp",
@@ -10,15 +10,39 @@
   },
   "endpoint": "https://api.m2mcent.com/arbitration-fee-splitter-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "arbitration-fee-splitter-mcp",
+      "title": "International Commercial & Web3 Arbitration Fee Splitter",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].disputeAmountUsd has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].arbitrationForum has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].loserPaysRule has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].claimantFaultRatio has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].tribunalMembers has no description"
       }
     ]
   },

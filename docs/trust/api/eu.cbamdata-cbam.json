@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:38:54.930Z",
+  "scannedAt": "2026-11-16T09:27:51.299Z",
   "server": {
     "registryName": "eu.cbamdata/cbam",
     "title": "CBAM Data",
@@ -10,20 +10,22 @@
   },
   "endpoint": "https://cbamdata.eu/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-11-25",
-    "serverInfo": {
-      "name": "eu.cbamdata/cbam",
-      "version": "1.0.0"
-    },
-    "toolCount": 6,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_VERIFIED",
         "severity": "INFO",
-        "message": "6 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://cbamdata.eu/mcp"
 }

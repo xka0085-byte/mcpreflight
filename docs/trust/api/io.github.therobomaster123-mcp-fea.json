@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:44:56.268Z",
+  "scannedAt": "2026-11-16T09:33:54.850Z",
   "server": {
     "registryName": "io.github.TheRoboMaster123/mcp-fea",
     "title": "FEA (finite element analysis)",
@@ -10,22 +10,17 @@
   },
   "endpoint": "https://therobomaster123--mcp-fea-mcp-endpoint.modal.run/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
+    "finalStatus": "UNKNOWN",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://therobomaster123--mcp-fea-mcp-endpoint.modal.run/mcp"
 }

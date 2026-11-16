@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T10:02:31.596Z",
+  "scannedAt": "2026-11-16T09:51:18.937Z",
   "server": {
     "registryName": "io.github.startekenterprises-ai/agent-shield",
     "title": "Agent-Shield",
@@ -10,22 +10,20 @@
   },
   "endpoint": "https://agent-shield.startekenterprises.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "agent-shield",
+      "version": "0.2.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "1 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://agent-shield.startekenterprises.com/mcp"
 }

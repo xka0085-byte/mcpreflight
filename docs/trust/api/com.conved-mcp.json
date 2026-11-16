@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:25:01.705Z",
+  "scannedAt": "2026-11-16T09:14:27.740Z",
   "server": {
     "registryName": "com.conved/mcp",
     "title": "conved.com file converter",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://www.conved.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "conved",
+      "title": "conved.com file converter",
+      "version": "1.5.1",
+      "websiteUrl": "https://www.conved.com/docs#mcp"
+    },
+    "toolCount": 6,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[4].limit has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://www.conved.com/mcp"
 }

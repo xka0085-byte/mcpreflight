@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:16.210Z",
+  "scannedAt": "2026-11-16T09:31:07.437Z",
   "server": {
     "registryName": "io.github.Evozim/computer-vision-damage-mcp",
     "title": "Execute computer-vision-damage-mcp",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://api.m2mcent.com/computer-vision-damage-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "computer-vision-damage-mcp",
+      "title": "Automated Vehicle Collision Damage Severity & Repair Cost Pricer",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].damagedPanel has no description"
       }
     ]
   },

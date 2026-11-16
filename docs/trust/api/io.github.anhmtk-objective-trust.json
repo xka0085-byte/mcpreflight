@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:45:51.394Z",
+  "scannedAt": "2026-11-16T09:34:43.282Z",
   "server": {
     "registryName": "io.github.anhmtk/objective-trust",
     "title": "Objective Trust",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://agentshare.dev/mcp/objective-trust",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "objective-trust",
+      "version": "1.30.0",
+      "websiteUrl": "https://agentshare.dev/docs#objective-trust"
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://agentshare.dev/mcp/objective-trust"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:15.448Z",
+  "scannedAt": "2026-11-16T09:31:05.846Z",
   "server": {
     "registryName": "io.github.Evozim/cloudscale-sim-mcp",
     "title": "Execute cloudscale-sim-mcp",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://api.m2mcent.com/cloudscale-sim-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "cloudscale-sim-mcp",
+      "title": "Cloud Autoscale Queue-Length & Little Law M/M/c Simulator",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].incomingArrivalRateRps has no description"
       }
     ]
   },

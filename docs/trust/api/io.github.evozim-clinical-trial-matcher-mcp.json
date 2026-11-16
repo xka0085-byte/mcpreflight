@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:15.089Z",
+  "scannedAt": "2026-11-16T09:31:06.090Z",
   "server": {
     "registryName": "io.github.Evozim/clinical-trial-matcher-mcp",
     "title": "Execute clinical-trial-matcher-mcp",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://api.m2mcent.com/clinical-trial-matcher-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "clinical-trial-matcher-mcp",
+      "title": "Patient Biomarker & ECOG Criteria Matcher to Clinical Trials",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].patientProfile has no description"
       }
     ]
   },

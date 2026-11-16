@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T10:11:20.430Z",
+  "scannedAt": "2026-11-16T09:59:40.488Z",
   "server": {
     "registryName": "uk.co.fleetkeep/fleetkeep",
     "title": "Fleetkeep",
@@ -10,22 +10,32 @@
   },
   "endpoint": "https://fleetkeep.co.uk/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Fleetkeep",
+      "title": "Fleetkeep fleet records",
+      "version": "1.1.0",
+      "description": "Read-only access to the signed-in Fleetkeep account’s vehicle action brief, vehicle search, and action and reminder details.",
+      "websiteUrl": "https://fleetkeep.co.uk",
+      "icons": [
+        {
+          "src": "https://fleetkeep.co.uk/favicon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://fleetkeep.co.uk/mcp"
 }

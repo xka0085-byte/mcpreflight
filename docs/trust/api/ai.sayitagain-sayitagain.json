@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:17:48.879Z",
+  "scannedAt": "2026-11-16T09:07:00.021Z",
   "server": {
     "registryName": "ai.sayitagain/sayitagain",
     "title": "Say It Again",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://app.sayitagain.ai/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "sayitagain",
+      "title": "Say It Again",
+      "version": "1.1.0"
+    },
+    "toolCount": 25,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "25 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://app.sayitagain.ai/mcp"
 }

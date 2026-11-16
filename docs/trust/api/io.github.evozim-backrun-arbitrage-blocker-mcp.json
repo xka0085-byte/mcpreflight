@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:07.665Z",
+  "scannedAt": "2026-11-16T09:30:59.214Z",
   "server": {
     "registryName": "io.github.Evozim/backrun-arbitrage-blocker-mcp",
     "title": "Execute backrun-arbitrage-blocker-mcp",
@@ -10,15 +10,29 @@
   },
   "endpoint": "https://api.m2mcent.com/backrun-arbitrage-blocker-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "backrun-arbitrage-blocker-mcp",
+      "title": "MEV Backrun Arbitrage Shield & Private Flashblock RPC Bundler",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].txPoolSwap has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].poolReserveIn has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].poolReserveOut has no description"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:24:16.917Z",
+  "scannedAt": "2026-11-16T09:13:44.433Z",
   "server": {
     "registryName": "com.byefine/byefine",
     "title": "ByeFine",
@@ -10,22 +10,38 @@
   },
   "endpoint": "https://byefine.com/api/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "ByeFine",
+      "version": "1.1.0",
+      "title": "ByeFine",
+      "websiteUrl": "https://byefine.com/docs/api",
+      "icons": [
+        {
+          "src": "https://byefine.com/logo-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        },
+        {
+          "src": "https://byefine.com/icon.svg",
+          "mimeType": "image/svg+xml",
+          "sizes": [
+            "any"
+          ]
+        }
+      ]
+    },
+    "toolCount": 10,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "10 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://byefine.com/api/mcp"
 }

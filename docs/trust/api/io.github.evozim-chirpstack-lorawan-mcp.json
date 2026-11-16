@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:14.042Z",
+  "scannedAt": "2026-11-16T09:31:04.997Z",
   "server": {
     "registryName": "io.github.Evozim/chirpstack-lorawan-mcp",
     "title": "Execute chirpstack-lorawan-mcp",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://api.m2mcent.com/chirpstack-lorawan-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "chirpstack-lorawan-mcp",
+      "title": "LoRaWAN Regional Uplink Payload MIC AES-CMAC & Time-on-Air Solver",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].spreadingFactor has no description"
       }
     ]
   },

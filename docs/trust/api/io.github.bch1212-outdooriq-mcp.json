@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:46:10.777Z",
+  "scannedAt": "2026-11-16T09:35:02.640Z",
   "server": {
     "registryName": "io.github.bch1212/outdooriq-mcp",
     "title": "io.github.bch1212/outdooriq-mcp",
@@ -10,17 +10,22 @@
   },
   "endpoint": "https://mcp.castiq.net/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.castiq.net/mcp"
 }

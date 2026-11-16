@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T10:11:42.976Z",
+  "scannedAt": "2026-11-16T10:00:16.150Z",
   "server": {
     "registryName": "uk.slate-hq.registry/ambi",
     "title": "AMBI",
@@ -16,16 +16,18 @@
     "toolCount": null,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "severity": "UNKNOWN",
+        "code": "NO_RESPONSE",
+        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
       }
     ]
   },
   "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
+    "status": "gated-verified",
+    "resourceMetadata": "https://mcp.slate-hq.uk/.well-known/oauth-protected-resource/ambi",
+    "discovery": [
+      "ai-catalog"
+    ]
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.slate-hq.uk/ambi"
 }

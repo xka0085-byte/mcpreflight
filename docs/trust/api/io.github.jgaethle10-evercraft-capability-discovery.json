@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:49:40.487Z",
+  "scannedAt": "2026-11-16T09:38:27.113Z",
   "server": {
     "registryName": "io.github.jgaethle10/evercraft-capability-discovery",
     "title": "Evercraft Capability Discovery",
@@ -10,15 +10,23 @@
   },
   "endpoint": "https://findmypart.base44.app/functions/evercraftCapabilityDiscoveryMcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "Evercraft Capability Discovery",
+      "version": "1.1.0"
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].intent has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[3].intent has no description"
       }
     ]
   },

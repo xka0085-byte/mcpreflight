@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:42:07.419Z",
+  "scannedAt": "2026-11-16T09:30:58.448Z",
   "server": {
     "registryName": "io.github.Evozim/aws-key-revoker-webhook-mcp",
     "title": "Execute aws-key-revoker-webhook-mcp",
@@ -10,15 +10,29 @@
   },
   "endpoint": "https://api.m2mcent.com/aws-key-revoker-webhook-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "aws-key-revoker-webhook-mcp",
+      "title": "AWS IAM Exposed Access Key Rapid Quarantine & Revocation Simulator",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].accessKeyId has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].leakSource has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].simulatedDryRun has no description"
       }
     ]
   },

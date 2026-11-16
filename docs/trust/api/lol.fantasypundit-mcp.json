@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T10:07:34.643Z",
+  "scannedAt": "2026-11-16T09:56:07.697Z",
   "server": {
     "registryName": "lol.fantasypundit/mcp",
     "title": "Fantasy Pundit: FPL Commentary & League Roasts",
@@ -10,22 +10,31 @@
   },
   "endpoint": "https://api.fantasypundit.lol/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fantasy-pundit",
+      "version": "0.9.0",
+      "title": "Fantasy Pundit: FPL Commentary & League Roasts",
+      "websiteUrl": "https://fantasypundit.lol/connect/mcp/",
+      "icons": [
+        {
+          "src": "https://fantasypundit.lol/icons/icon192.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ]
+        }
+      ]
+    },
+    "toolCount": 3,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "3 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.fantasypundit.lol/mcp"
 }

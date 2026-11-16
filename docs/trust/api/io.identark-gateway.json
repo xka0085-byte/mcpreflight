@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T10:04:34.792Z",
+  "scannedAt": "2026-11-16T09:53:13.252Z",
   "server": {
     "registryName": "io.identark/gateway",
     "title": "IdentArk Gateway",
@@ -10,17 +10,22 @@
   },
   "endpoint": "https://api.identark.io/v1/mcp/rpc",
   "trust": {
-    "finalStatus": "UNKNOWN",
+    "finalStatus": "AUTH_GATED",
     "protocolVersion": null,
     "serverInfo": null,
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_DETECTED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.identark.io/v1/mcp/rpc"
 }

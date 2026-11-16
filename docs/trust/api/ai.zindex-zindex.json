@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:18:57.581Z",
+  "scannedAt": "2026-11-16T09:08:06.610Z",
   "server": {
     "registryName": "ai.zindex/zindex",
     "title": "Zindex",
@@ -10,80 +10,22 @@
   },
   "endpoint": "https://api.zindex.ai/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "zindex",
-      "version": "8.30.1+build.3567"
-    },
-    "toolCount": 9,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[0].query has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].knownRevision has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].elements has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[4].baseRevision has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[4].ops has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[5].preview has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[6].compare has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[7].undo has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[8].action has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[8].kind has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[8].expected has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[8].observed has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[8].confidence has no description"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.zindex.ai/mcp"
 }

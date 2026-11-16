@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:41:03.877Z",
+  "scannedAt": "2026-11-16T09:29:51.833Z",
   "server": {
     "registryName": "io.github.Andyxcg/agentshop-reports",
     "title": "agentshop — cross-country economic reports",
@@ -10,21 +10,22 @@
   },
   "endpoint": "https://reportbazaar.app.workbuddy.host/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "agentshop",
-      "title": "agentshop",
-      "version": "1.0.0"
-    },
-    "toolCount": 6,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "6 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://reportbazaar.app.workbuddy.host/mcp"
 }

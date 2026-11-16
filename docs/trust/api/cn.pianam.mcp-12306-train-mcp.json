@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:21:34.619Z",
+  "scannedAt": "2026-11-16T09:11:10.269Z",
   "server": {
     "registryName": "cn.pianam.mcp/12306-train-mcp",
     "title": "China 12306 Train Tickets MCP",
@@ -10,15 +10,18 @@
   },
   "endpoint": "https://mcp.pianam.cn/train-mcp/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "train-mcp",
+      "version": "4.1.3"
+    },
+    "toolCount": 2,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "2 tools passed deterministic schema checks"
       }
     ]
   },

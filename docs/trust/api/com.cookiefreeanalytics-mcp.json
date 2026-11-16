@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:25:02.677Z",
+  "scannedAt": "2026-11-16T09:14:28.255Z",
   "server": {
     "registryName": "com.cookiefreeanalytics/mcp",
     "title": "Cookie Free Analytics",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://www.cookiefreeanalytics.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "cookie-free-analytics",
+      "title": "Cookie Free Analytics",
+      "version": "1.169.1"
+    },
+    "toolCount": 13,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "13 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://www.cookiefreeanalytics.com/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T10:11:53.943Z",
+  "scannedAt": "2026-11-16T10:00:12.203Z",
   "server": {
     "registryName": "wiki.rust/rust-wiki",
     "title": "rust.wiki",
@@ -10,15 +10,25 @@
   },
   "endpoint": "https://rust.wiki/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "rust-wiki",
+      "title": "rust.wiki",
+      "version": "1.0.0",
+      "websiteUrl": "https://rust.wiki/docs"
+    },
+    "toolCount": 177,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[73].page has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[73].per_page has no description"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T10:03:24.173Z",
+  "scannedAt": "2026-11-16T09:52:07.714Z",
   "server": {
     "registryName": "io.github.toasternet/delegaize",
     "title": "DelegAIze",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://callpilotai.cf-innov-ai-tive.de/api/sb/functions/v1/mcp-server",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "callpilotai-mcp",
+      "version": "1.96.0",
+      "toolsSchema": "979b0632"
+    },
+    "toolCount": 922,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "922 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://callpilotai.cf-innov-ai-tive.de/api/sb/functions/v1/mcp-server"
 }

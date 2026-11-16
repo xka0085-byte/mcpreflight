@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:41:58.427Z",
+  "scannedAt": "2026-11-16T09:30:49.850Z",
   "server": {
     "registryName": "io.github.Evozim/4-20ma-analog-converter-mcp",
     "title": "Execute 4-20ma-analog-converter-mcp",
@@ -10,15 +10,34 @@
   },
   "endpoint": "https://api.m2mcent.com/4-20ma-analog-converter-mcp/sse",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "4-20ma-analog-converter-mcp",
+      "title": "Industrial 4-20mA Current Loop & NAMUR NE43 Converter",
+      "version": "2.1.0"
+    },
+    "toolCount": 1,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].currentMa has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].engineeringRange has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].units has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[0].adcBits has no description"
       }
     ]
   },

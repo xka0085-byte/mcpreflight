@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-09T09:24:36.261Z",
+  "scannedAt": "2026-11-16T09:14:03.237Z",
   "server": {
     "registryName": "com.chiefisnext/chief",
     "title": "Chief",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://mcp.chiefisnext.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "chief",
+      "title": "Chief",
+      "version": "5",
+      "websiteUrl": "https://chiefisnext.com"
+    },
+    "toolCount": 17,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "17 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.chiefisnext.com/mcp"
 }
