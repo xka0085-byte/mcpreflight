@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:16:20.458Z",
+  "scannedAt": "2026-11-23T10:30:57.530Z",
   "server": {
     "registryName": "com.fxsocket/mcp",
     "title": "FxSocket",
@@ -10,22 +10,37 @@
   },
   "endpoint": "https://mcp.fxsocket.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "fxsocket",
+      "title": "FxSocket",
+      "version": "1.0.0",
+      "description": "Read-only access to MetaTrader 4, MetaTrader 5 and cTrader accounts connected to FxSocket: balances, positions, trade history, quotes, symbol specs and candles.",
+      "websiteUrl": "https://fxsocket.com/docs/mcp",
+      "icons": [
+        {
+          "src": "https://fxsocket.com/icon-512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 9,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
-        "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[7].limit has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[8].limit has no description"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.fxsocket.com/mcp"
 }

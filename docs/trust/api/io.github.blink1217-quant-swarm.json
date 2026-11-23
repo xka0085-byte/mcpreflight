@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:35:13.580Z",
+  "scannedAt": "2026-11-23T10:44:47.927Z",
   "server": {
     "registryName": "io.github.blink1217/quant-swarm",
     "title": "quant-swarm",
@@ -10,22 +10,32 @@
   },
   "endpoint": "https://swarm-mcp-503318750546.europe-west1.run.app/mcp/data",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "description": "Point-in-time market data assembly from the 1.21 Initiative trading swarm: derived-only technical signals (market.pulse, market.sentiment), operating-area weather research (market.climate), provenance-guarded feature vectors, and an immutable local cache. No provider credentials needed.",
+      "icons": [
+        {
+          "mimeType": "image/png",
+          "sizes": [
+            "192x192"
+          ],
+          "src": "https://1.21initiative.com/icons/icon-192.png"
+        }
+      ],
+      "name": "swarm-data-mcp",
+      "title": "Swarm Data MCP",
+      "version": "1.2.1",
+      "websiteUrl": "https://1.21initiative.com/mcp/"
+    },
+    "toolCount": 16,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "16 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://swarm-mcp-503318750546.europe-west1.run.app/mcp/data"
 }

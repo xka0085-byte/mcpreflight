@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:58:58.193Z",
+  "scannedAt": "2026-11-23T11:02:57.229Z",
   "server": {
     "registryName": "space.manus.signalsprint-mqysbksh/signal-sprint",
     "title": "Signal Sprint",
@@ -10,18 +10,20 @@
   },
   "endpoint": "https://signalsprint-mqysbksh.manus.space/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "signal-sprint-x402",
-      "version": "1.0.0"
-    },
-    "toolCount": 4,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "4 tools passed deterministic schema checks"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

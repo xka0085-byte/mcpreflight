@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:59:57.042Z",
+  "scannedAt": "2026-11-23T11:03:41.153Z",
   "server": {
     "registryName": "uk.co.teas/shop",
     "title": "teas.co.uk",
@@ -10,31 +10,22 @@
   },
   "endpoint": "https://teas.co.uk/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "teas-co-uk",
-      "title": "teas.co.uk",
-      "version": "1.0.2",
-      "websiteUrl": "https://teas.co.uk/ai/",
-      "icons": [
-        {
-          "src": "https://teas.co.uk/ai/logo.png",
-          "mimeType": "image/png",
-          "sizes": [
-            "512x512"
-          ]
-        }
-      ]
-    },
-    "toolCount": 26,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "26 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://teas.co.uk/mcp"
 }

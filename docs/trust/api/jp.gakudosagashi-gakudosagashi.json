@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:55:32.247Z",
+  "scannedAt": "2026-11-23T11:00:13.071Z",
   "server": {
     "registryName": "jp.gakudosagashi/gakudosagashi",
     "title": "学童さがし (Gakudo Sagashi)",
@@ -10,31 +10,22 @@
   },
   "endpoint": "https://gakudosagashi.jp/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "gakudosagashi",
-      "title": "学童さがし",
-      "version": "1.0.0",
-      "websiteUrl": "https://gakudosagashi.jp",
-      "icons": [
-        {
-          "src": "https://gakudosagashi.jp/icons/icon-maskable-512.png",
-          "mimeType": "image/png",
-          "sizes": [
-            "512x512"
-          ]
-        }
-      ]
-    },
-    "toolCount": 5,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "5 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://gakudosagashi.jp/mcp"
 }

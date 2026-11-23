@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:11:35.255Z",
+  "scannedAt": "2026-11-23T10:27:28.044Z",
   "server": {
     "registryName": "co.solidinvoice/mcp",
     "title": "SolidInvoice",
@@ -10,22 +10,22 @@
   },
   "endpoint": "https://solidinvoice.app/_mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-11-25",
+    "serverInfo": {
+      "name": "SolidInvoice",
+      "version": "3.2.0-dev",
+      "description": "MCP server for SolidInvoice",
+      "icons": []
+    },
+    "toolCount": 41,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "41 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://solidinvoice.app/_mcp"
 }

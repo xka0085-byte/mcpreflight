@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:22:49.468Z",
+  "scannedAt": "2026-11-23T10:35:30.292Z",
   "server": {
     "registryName": "com.socialgrowthengineers/mcp",
     "title": "Social Growth Engineers",
@@ -10,22 +10,31 @@
   },
   "endpoint": "https://www.socialgrowthengineers.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "social-growth-engineers",
+      "title": "Social Growth Engineers",
+      "version": "2.0.0",
+      "websiteUrl": "https://www.socialgrowthengineers.com",
+      "icons": [
+        {
+          "src": "https://www.socialgrowthengineers.com/favicon/web-app-manifest-512x512.png",
+          "mimeType": "image/png",
+          "sizes": [
+            "512x512"
+          ]
+        }
+      ]
+    },
+    "toolCount": 18,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "18 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://www.socialgrowthengineers.com/mcp"
 }

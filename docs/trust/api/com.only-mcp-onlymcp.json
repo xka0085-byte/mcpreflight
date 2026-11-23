@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:20:15.746Z",
+  "scannedAt": "2026-11-23T10:33:42.718Z",
   "server": {
     "registryName": "com.only-mcp/onlymcp",
     "title": "OnlyMCP",
@@ -10,22 +10,32 @@
   },
   "endpoint": "https://only-mcp.com/api/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "onlymcp-docs",
+      "title": "OnlyMCP Docs",
+      "version": "0.27.1",
+      "websiteUrl": "https://only-mcp.com",
+      "icons": [
+        {
+          "src": "https://only-mcp.com/brand/connector-512.png",
+          "mimeType": "image/png"
+        },
+        {
+          "src": "https://only-mcp.com/brand/favicon.svg",
+          "mimeType": "image/svg+xml"
+        }
+      ]
+    },
+    "toolCount": 5,
     "findings": [
       {
-        "code": "AUTH_GATE_VERIFIED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
+        "message": "5 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://only-mcp.com/api/mcp"
 }

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:52:20.679Z",
+  "scannedAt": "2026-11-23T10:57:32.807Z",
   "server": {
     "registryName": "io.github.untitledfinancial/dpx",
     "title": "DPX — Settlement & Intelligence for AI Agents",
@@ -10,22 +10,21 @@
   },
   "endpoint": "https://mcp.untitledfinancial.com/mcp",
   "trust": {
-    "finalStatus": "AUTH_GATED",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "dpx",
+      "version": "2.5.0",
+      "description": "DPX cross-border settlement rail — remote MCP interface (x402 enabled)"
+    },
+    "toolCount": 113,
     "findings": [
       {
-        "code": "AUTH_GATE_DETECTED",
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
         "severity": "INFO",
-        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
+        "message": "113 tools passed deterministic schema checks"
       }
     ]
-  },
-  "authGate": {
-    "status": "gated",
-    "resourceMetadata": null,
-    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.untitledfinancial.com/mcp"
 }

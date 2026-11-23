@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:33:13.834Z",
+  "scannedAt": "2026-11-23T10:43:19.898Z",
   "server": {
     "registryName": "io.github.Project-Gifted1/pg1-threat-intel",
     "title": "PG1 Sovereign Threat Intelligence",
@@ -10,15 +10,28 @@
   },
   "endpoint": "https://pg1-ai-agent.vercel.app/api/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "pg1-threat-intel",
+      "version": "1.22.0"
+    },
+    "toolCount": 22,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[6].workload_type has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].indicator has no description"
+      },
+      {
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[15].indicator_type has no description"
       }
     ]
   },

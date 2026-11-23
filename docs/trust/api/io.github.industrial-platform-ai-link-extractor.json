@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:38:06.826Z",
+  "scannedAt": "2026-11-23T10:47:03.552Z",
   "server": {
     "registryName": "io.github.industrial-platform-ai/link-extractor",
     "title": "Link Extractor for AI Agents",
@@ -10,39 +10,22 @@
   },
   "endpoint": "https://mcp.apify.com?tools=industrial_platform/link-intelligence&payment=x402",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "apify-mcp-server",
-      "title": "Apify MCP Server",
-      "version": "0.21.10",
-      "description": "Extract data from any website with thousands of scrapers, crawlers, and automations on Apify Store ⚡",
-      "websiteUrl": "https://mcp.apify.com",
-      "icons": [
-        {
-          "src": "https://mcp.apify.com/images/apify-icon.png",
-          "mimeType": "image/png",
-          "sizes": [
-            "512x512"
-          ]
-        },
-        {
-          "src": "https://mcp.apify.com/images/apify-icon.svg",
-          "mimeType": "image/svg+xml",
-          "sizes": [
-            "any"
-          ]
-        }
-      ]
-    },
-    "toolCount": 5,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_DETECTED",
         "severity": "INFO",
-        "message": "5 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401/403 with WWW-Authenticate Bearer) on anonymous initialize"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://mcp.apify.com?tools=industrial_platform/link-intelligence&payment=x402"
 }

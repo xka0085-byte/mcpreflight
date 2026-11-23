@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:38:35.804Z",
+  "scannedAt": "2026-11-23T10:47:27.823Z",
   "server": {
     "registryName": "io.github.joleschmidt/palim",
     "title": "Palim",
@@ -10,32 +10,22 @@
   },
   "endpoint": "https://api.usepalim.com/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "palim",
-      "version": "1.0.0",
-      "title": "Palim",
-      "description": "Hosted MCP memory: save sessions and decisions once, search them from Claude, Cursor, ChatGPT, and other MCP clients. EU-hosted. Explicit save + keyword search.",
-      "websiteUrl": "https://usepalim.com",
-      "icons": [
-        {
-          "src": "https://api.usepalim.com/icon.svg",
-          "mimeType": "image/svg+xml",
-          "sizes": [
-            "any"
-          ]
-        }
-      ]
-    },
-    "toolCount": 11,
+    "finalStatus": "AUTH_GATED",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "code": "AUTH_GATE_VERIFIED",
         "severity": "INFO",
-        "message": "11 tools passed deterministic schema checks"
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
+  },
+  "authGate": {
+    "status": "gated",
+    "resourceMetadata": null,
+    "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.usepalim.com/mcp"
 }

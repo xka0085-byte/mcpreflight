@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:27:43.949Z",
+  "scannedAt": "2026-11-23T10:39:06.944Z",
   "server": {
     "registryName": "earth.terramcp/terramcp",
     "title": "TerraMCP",
@@ -10,21 +10,20 @@
   },
   "endpoint": "https://terramcp.earth/mcp",
   "trust": {
-    "finalStatus": "PASS",
-    "protocolVersion": "2025-06-18",
-    "serverInfo": {
-      "name": "earth.terramcp/terramcp",
-      "title": "TerraMCP",
-      "description": "A Wrench AI service for environmental source discovery and live UK open-data tools.",
-      "version": "1.0.1",
-      "websiteUrl": "https://terramcp.earth"
-    },
-    "toolCount": 33,
+    "finalStatus": "FAIL",
+    "protocolVersion": null,
+    "serverInfo": null,
+    "toolCount": null,
     "findings": [
       {
-        "code": "STATIC_SCHEMA_CHECKS_PASSED",
-        "severity": "INFO",
-        "message": "33 tools passed deterministic schema checks"
+        "code": "INITIALIZE_RESPONSE_INVALID",
+        "severity": "FAIL",
+        "message": "Initialize response did not include result.protocolVersion"
+      },
+      {
+        "code": "TOOLS_LIST_INVALID",
+        "severity": "FAIL",
+        "message": "tools/list response did not contain result.tools[]"
       }
     ]
   },

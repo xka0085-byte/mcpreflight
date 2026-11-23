@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:17:53.837Z",
+  "scannedAt": "2026-11-23T10:32:03.575Z",
   "server": {
     "registryName": "com.jithox/jithox",
     "title": "Jithox",
@@ -25,45 +25,15 @@
           ]
         }
       ],
-      "description": "Jithox's read-only checks before a payment: one preflight of the payment itself, a changed supplier bank account, an IBAN, Peppol invoice rules and receivers, EU VAT numbers in VIES and Belgian companies in the KBO. No tool on this endpoint sends, posts, pays or delivers anything. Before you pay an invoice, call preflight_payment once. No verdict (an error or 429) means: do not pay.",
-      "version": "1.0.0"
+      "description": "Read-only checks for payments, invoices, VAT and company records, EU sanctions, imports, energy labels, and agent action preflights. Nothing sends, pays, files, or changes an external system.",
+      "version": "1.1.0"
     },
-    "toolCount": 8,
+    "toolCount": 4,
     "findings": [
       {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].issueDate has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].dueDate has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].note has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[1].lines has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[3].lines has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[6].mandate has no description"
-      },
-      {
-        "code": "PROPERTY_DESCRIPTION_MISSING",
-        "severity": "WARN",
-        "message": "tools[6].payment has no description"
+        "code": "STATIC_SCHEMA_CHECKS_PASSED",
+        "severity": "INFO",
+        "message": "4 tools passed deterministic schema checks"
       }
     ]
   },

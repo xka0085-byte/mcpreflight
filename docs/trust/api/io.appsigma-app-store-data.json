@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:29:15.307Z",
+  "scannedAt": "2026-11-23T10:40:03.744Z",
   "server": {
     "registryName": "io.appsigma/app-store-data",
     "title": "AppSigma App Store Data",
@@ -16,15 +16,15 @@
     "toolCount": null,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "AUTH_GATE_VERIFIED",
+        "severity": "INFO",
+        "message": "Endpoint requires authentication (401 with WWW-Authenticate Bearer); RFC 9728 resource metadata is live, confirming an OAuth authorization server"
       }
     ]
   },
   "authGate": {
-    "status": "gated-verified",
-    "resourceMetadata": "https://api.appsigma.io/.well-known/oauth-protected-resource/mcp",
+    "status": "gated",
+    "resourceMetadata": null,
     "discovery": []
   },
   "verify": "npx @eidonze/mcpreflight schema https://api.appsigma.io/mcp"

@@ -1,7 +1,7 @@
 {
   "reportVersion": 1,
   "generatedBy": "mcpreflight",
-  "scannedAt": "2026-11-16T09:56:27.525Z",
+  "scannedAt": "2026-11-23T11:00:58.737Z",
   "server": {
     "registryName": "media.southpow/fact",
     "title": "SouthPow fact API",
@@ -10,15 +10,19 @@
   },
   "endpoint": "https://southpow.media/mcp",
   "trust": {
-    "finalStatus": "UNKNOWN",
-    "protocolVersion": null,
-    "serverInfo": null,
-    "toolCount": null,
+    "finalStatus": "PASS",
+    "protocolVersion": "2025-03-26",
+    "serverInfo": {
+      "name": "southpow-fact",
+      "version": "1.0.0",
+      "description": "AAPL filing fact https://southpow.media/v1/fact?id=AAPL $0.01 USDC Base to 0x5fB2FAeaAbd58Da0eA1E1F64a8C2134c4941eFe5"
+    },
+    "toolCount": 1945,
     "findings": [
       {
-        "severity": "UNKNOWN",
-        "code": "NO_RESPONSE",
-        "message": "Endpoint did not complete MCP initialize + tools/list within timeout"
+        "code": "PROPERTY_DESCRIPTION_MISSING",
+        "severity": "WARN",
+        "message": "tools[1942].query has no description"
       }
     ]
   },
